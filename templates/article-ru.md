@@ -4,9 +4,14 @@ slug: "zameni-na-postoyannyy-slug"
 description: "Краткое описание для карточки блога, одно или два предложения."
 publishedAt: "2026-09-01T10:00:00+03:00"
 author: "Редакция Yotti"
+reviewer: "Имя проверяющего редактора"
+reviewedAt: "2026-08-25"
+reviewAfter: "2026-09-25"
 language: "ru"
 categories:
   - "Travel-tech и сервисы"
+sources:
+  - "https://example.gov/official-source"
 published: false
 ---
 

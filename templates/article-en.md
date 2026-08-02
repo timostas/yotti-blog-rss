@@ -4,9 +4,14 @@ slug: "replace-with-permanent-slug"
 description: "A one- or two-sentence summary used on the blog card."
 publishedAt: "2026-09-01T10:00:00Z"
 author: "Yotti Editorial Team"
+reviewer: "Reviewing editor name"
+reviewedAt: "2026-08-25"
+reviewAfter: "2026-09-25"
 language: "en"
 categories:
   - "Travel tech and services"
+sources:
+  - "https://example.gov/official-source"
 published: false
 ---
 

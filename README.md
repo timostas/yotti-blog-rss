@@ -39,6 +39,9 @@ Workflow `.github/workflows/publish-rss.yml` собирает проект и п
 - `templates/article-ru.md` — шаблон русской статьи;
 - `templates/article-en.md` — шаблон английской статьи;
 - `templates/content-plan.md` — таблица контент-плана на месяц.
+- `templates/country-research.md` — карточка исследования страны;
+- `templates/article-brief.md` — бриф до написания статьи;
+- `docs/editorial-quality-standard.md` — обязательный контроль качества.
 
 Сейчас публикация происходит после изменения файлов в `main`. Будущая дата
 `publishedAt` ещё не откладывает появление статьи в RSS; автоматическое
