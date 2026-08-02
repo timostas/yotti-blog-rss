@@ -7,6 +7,10 @@ author: "Редакция Yotti"
 language: "ru"
 categories:
   - "Travel-tech и сервисы"
+cover:
+  url: "https://timostas.github.io/yotti-blog-rss/assets/covers/rss-without-tilda-test.jpg"
+  type: "image/jpeg"
+  alt: "Схема независимой публикации статьи через RSS"
 published: true
 ---
 

@@ -32,7 +32,11 @@ test("считает русские слова", () => {
 });
 
 test("создаёт Tilda-совместимый RSS с постоянной ссылкой", () => {
-  const article = parseArticle(articleSource());
+  const article = parseArticle(articleSource(`cover:
+  url: "https://timostas.github.io/yotti-blog-rss/assets/covers/test-post.jpg"
+  type: "image/jpeg"
+  alt: "Тестовая обложка"
+`));
   const xml = createFeedXml(config, [article]);
 
   assert.match(xml, /<rss version="2\.0"/);
@@ -40,6 +44,8 @@ test("создаёт Tilda-совместимый RSS с постоянной с
   assert.match(xml, /<title>Тест &amp; проверка<\/title>/);
   assert.match(xml, /<link>https:\/\/timostas\.github\.io\/yotti-blog-rss\/ru\/articles\/test-post\.html<\/link>/);
   assert.match(xml, /<category>TR<\/category>/);
+  assert.match(xml, /<enclosure url="https:\/\/timostas\.github\.io\/yotti-blog-rss\/assets\/covers\/test-post\.jpg" type="image\/jpeg"\/>/);
+  assert.match(xml, /<figure><img alt="Тестовая обложка" src="https:\/\/timostas\.github\.io\/yotti-blog-rss\/assets\/covers\/test-post\.jpg"\/><\/figure>/);
   assert.match(xml, /<description>Краткое &lt;описание&gt;<\/description>/);
   assert.match(xml, /<turbo:content><!\[CDATA\[/);
 });

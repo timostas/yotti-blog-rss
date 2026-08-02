@@ -1,4 +1,4 @@
-import { readFile, readdir, rm, mkdir, writeFile } from "node:fs/promises";
+import { cp, readFile, readdir, rm, mkdir, writeFile } from "node:fs/promises";
 import { dirname, extname, join, resolve } from "node:path";
 import { fileURLToPath } from "node:url";
 import { marked } from "marked";
@@ -6,6 +6,7 @@ import YAML from "yaml";
 
 const ROOT_DIR = resolve(dirname(fileURLToPath(import.meta.url)), "..");
 const ARTICLES_DIR = join(ROOT_DIR, "articles");
+const ASSETS_DIR = join(ROOT_DIR, "assets");
 const OUTPUT_DIR = join(ROOT_DIR, "dist");
 const MIN_WORD_COUNT = 150;
 
@@ -262,6 +263,7 @@ async function build() {
     throw new Error(`Отказ очищать неожиданный каталог: ${OUTPUT_DIR}`);
   }
   await rm(OUTPUT_DIR, { recursive: true, force: true });
+  await cp(ASSETS_DIR, join(OUTPUT_DIR, "assets"), { recursive: true });
   await Promise.all(feedConfigs.map(async (config) => {
     const feedOutputPath = join(OUTPUT_DIR, config.feedPath);
     await mkdir(dirname(feedOutputPath), { recursive: true });

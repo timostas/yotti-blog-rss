@@ -5,6 +5,7 @@ on:
     branches: [main]
     paths:
       - "articles/**"
+      - "assets/**"
       - "scripts/**"
       - "test/**"
       - "feed.config.json"
