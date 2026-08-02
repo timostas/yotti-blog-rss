@@ -50,3 +50,8 @@ Workflow `.github/workflows/publish-rss.yml` собирает проект и п
 Для `published: true` сборка также требует `reviewer`, `reviewedAt`,
 `reviewAfter` и минимум два уникальных HTTPS-источника в `sources`. При
 нарушении любого правила публикация останавливается до исправления статьи.
+
+Workflow `Article review report` ежедневно в 09:15 по Москве проверяет
+`reviewAfter`. Просроченные и приближающиеся сроки отображаются в GitHub Actions
+Summary, но не удаляют статью из RSS. Локально тот же отчёт запускается командой
+`npm run review-report`.
