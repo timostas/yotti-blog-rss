@@ -9,6 +9,7 @@ const config = {
   siteUrl: "https://timostas.github.io/yotti-blog-rss",
   feedPath: "ru/rss.xml",
 };
+const AFTER_PUBLISH = new Date("2026-08-03T00:00:00Z");
 
 function articleSource(overrides = "") {
   const words = Array.from({ length: 150 }, (_, index) => `слово${index + 1}`).join(" ");
@@ -37,7 +38,7 @@ test("создаёт Tilda-совместимый RSS с постоянной с
   type: "image/jpeg"
   alt: "Тестовая обложка"
 `));
-  const xml = createFeedXml(config, [article]);
+  const xml = createFeedXml(config, [article], AFTER_PUBLISH);
 
   assert.match(xml, /<rss version="2\.0"/);
   assert.match(xml, /<item turbo="true">/);
@@ -58,7 +59,7 @@ test("не смешивает русские статьи с английско�
     description: "English feed",
     language: "en",
     feedPath: "en/rss.xml",
-  }, [article]);
+  }, [article], AFTER_PUBLISH);
 
   assert.doesNotMatch(englishXml, /<item/);
   assert.match(englishXml, /<language>en<\/language>/);
@@ -67,4 +68,13 @@ test("не смешивает русские статьи с английско�
 test("не публикует текст короче 150 слов", () => {
   const shortSource = articleSource().replace(/слово\d+(?:\s+|\n)/g, "").replace(/---\n$/, "---\nкороткий текст\n");
   assert.throws(() => parseArticle(shortSource), /требуется не меньше 150/);
+});
+
+test("не публикует статью раньше publishedAt", () => {
+  const article = parseArticle(articleSource());
+  const before = createFeedXml(config, [article], new Date("2026-08-02T14:59:59Z"));
+  const after = createFeedXml(config, [article], new Date("2026-08-02T15:00:00Z"));
+
+  assert.doesNotMatch(before, /<item/);
+  assert.match(after, /<item turbo="true">/);
 });

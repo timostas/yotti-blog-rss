@@ -27,6 +27,10 @@ export function countWords(markdown) {
   return markdown.match(/[\p{L}\p{N}]+(?:[’'-][\p{L}\p{N}]+)*/gu)?.length ?? 0;
 }
 
+export function isPublishable(article, now = new Date()) {
+  return article.published && article.publishedAt.getTime() <= now.getTime();
+}
+
 function requiredString(metadata, field, sourceName) {
   const value = metadata[field];
   if (typeof value !== "string" || value.trim() === "") {
@@ -145,10 +149,10 @@ export function renderArticleBody(article) {
   return marked.parse(article.body, { async: false }).trim();
 }
 
-export function createFeedXml(configInput, articles) {
+export function createFeedXml(configInput, articles, now = new Date()) {
   const config = validateConfig(configInput);
   const publishedArticles = articles
-    .filter((article) => article.published && article.language === config.language)
+    .filter((article) => isPublishable(article, now) && article.language === config.language)
     .sort((a, b) => b.publishedAt.getTime() - a.publishedAt.getTime());
 
   const duplicateSlugs = publishedArticles
@@ -234,6 +238,7 @@ export function createArticleHtml(configInput, article) {
 }
 
 async function build() {
+  const buildTime = new Date();
   const rootConfig = JSON.parse(await readFile(join(ROOT_DIR, "feed.config.json"), "utf8"));
   if (!Array.isArray(rootConfig.feeds) || rootConfig.feeds.length !== 2) {
     throw new Error("feed.config.json: требуется ровно две настройки feeds — ru и en");
@@ -258,7 +263,7 @@ async function build() {
     throw new Error(`Статьи содержат языки без RSS-настройки: ${[...new Set(unknownLanguages)].join(", ")}`);
   }
 
-  const publishedArticles = articles.filter((article) => article.published);
+  const publishedArticles = articles.filter((article) => isPublishable(article, buildTime));
   if (!OUTPUT_DIR.endsWith("/dist")) {
     throw new Error(`Отказ очищать неожиданный каталог: ${OUTPUT_DIR}`);
   }
@@ -267,7 +272,7 @@ async function build() {
   await Promise.all(feedConfigs.map(async (config) => {
     const feedOutputPath = join(OUTPUT_DIR, config.feedPath);
     await mkdir(dirname(feedOutputPath), { recursive: true });
-    await writeFile(feedOutputPath, createFeedXml(config, articles), "utf8");
+    await writeFile(feedOutputPath, createFeedXml(config, articles, buildTime), "utf8");
   }));
   await Promise.all(publishedArticles.map(async (article) => {
     const config = feedConfigs.find((feed) => feed.language === article.language);

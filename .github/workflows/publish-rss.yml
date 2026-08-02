@@ -1,6 +1,8 @@
 name: Build and publish RSS
 
 on:
+  schedule:
+    - cron: "*/30 * * * *"
   push:
     branches: [main]
     paths:
