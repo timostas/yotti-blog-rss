@@ -8,7 +8,8 @@
 npm ci
 npm test
 npm run build
-xmllint --noout dist/rss.xml
+xmllint --noout dist/ru/rss.xml
+xmllint --noout dist/en/rss.xml
 ```
 
 Результат сборки:
@@ -30,5 +31,15 @@ Workflow `.github/workflows/publish-rss.yml` собирает проект и п
    - `https://timostas.github.io/yotti-blog-rss/en/rss.xml`;
 4. указать каждый URL в соответствующем поле RU или EN в `yotti.net/admin/blog`.
 
-Исследование контракта и критерии контрольного импорта находятся в
-`docs/stage-1-rss-contract.md`.
+## Работа редактора
+
+- `docs/editor-guide.md` — публикация статьи от шаблона до Yotti;
+- `docs/content-planning-and-scheduling.md` — рекомендуемый контент-план и
+  схема отложенной публикации;
+- `templates/article-ru.md` — шаблон русской статьи;
+- `templates/article-en.md` — шаблон английской статьи;
+- `templates/content-plan.md` — таблица контент-плана на месяц.
+
+Сейчас публикация происходит после изменения файлов в `main`. Будущая дата
+`publishedAt` ещё не откладывает появление статьи в RSS; автоматическое
+расписание описано как следующий отдельный этап.
