@@ -4,9 +4,15 @@ slug: "independent-english-rss-test"
 description: "A technical post used to verify the independent English publishing flow from Markdown through GitHub and RSS to Yotti."
 publishedAt: "2026-08-02T20:27:00+03:00"
 author: "Yotti Editorial Team"
+reviewer: "Yotti Reviewing Editor"
+reviewedAt: "2026-08-02"
+reviewAfter: "2026-09-02"
 language: "en"
 categories:
   - "Travel tech and services"
+sources:
+  - "https://timostas.github.io/yotti-blog-rss/en/rss.xml"
+  - "https://yotti.net/en/blog/test-independent-english-rss-publication"
 published: true
 ---
 

@@ -39,6 +39,18 @@ function requiredString(metadata, field, sourceName) {
   return value.trim();
 }
 
+function requiredDateOnly(metadata, field, sourceName) {
+  const value = requiredString(metadata, field, sourceName);
+  if (!/^\d{4}-\d{2}-\d{2}$/.test(value)) {
+    throw new Error(`${sourceName}: поле ${field} должно иметь формат YYYY-MM-DD`);
+  }
+  const date = new Date(`${value}T00:00:00Z`);
+  if (Number.isNaN(date.getTime()) || date.toISOString().slice(0, 10) !== value) {
+    throw new Error(`${sourceName}: поле ${field} содержит некорректную дату`);
+  }
+  return value;
+}
+
 function normalizeUrl(value, siteUrl, field, sourceName) {
   let url;
   try {
@@ -96,6 +108,34 @@ export function parseArticle(source, sourceName = "article.md", siteUrl = "https
     throw new Error(`${sourceName}: опубликованная статья содержит ${wordCount} слов; требуется не меньше ${MIN_WORD_COUNT}`);
   }
 
+  let reviewer = null;
+  let reviewedAt = null;
+  let reviewAfter = null;
+  let sources = [];
+  if (published) {
+    reviewer = requiredString(metadata, "reviewer", sourceName);
+    reviewedAt = requiredDateOnly(metadata, "reviewedAt", sourceName);
+    reviewAfter = requiredDateOnly(metadata, "reviewAfter", sourceName);
+    if (reviewAfter <= reviewedAt) {
+      throw new Error(`${sourceName}: reviewAfter должен быть позже reviewedAt`);
+    }
+    if (reviewAfter < date.toISOString().slice(0, 10)) {
+      throw new Error(`${sourceName}: reviewAfter не может быть раньше publishedAt`);
+    }
+    if (!Array.isArray(metadata.sources) || metadata.sources.length < 2) {
+      throw new Error(`${sourceName}: для опубликованной статьи требуется минимум два источника`);
+    }
+    sources = metadata.sources.map((source, index) => {
+      if (typeof source !== "string" || source.trim() === "") {
+        throw new Error(`${sourceName}: sources[${index}] должен быть непустой строкой`);
+      }
+      return normalizeUrl(source.trim(), undefined, `sources[${index}]`, sourceName);
+    });
+    if (new Set(sources).size !== sources.length) {
+      throw new Error(`${sourceName}: sources не должен содержать повторяющиеся URL`);
+    }
+  }
+
   let cover = null;
   if (metadata.cover !== undefined) {
     if (!metadata.cover || typeof metadata.cover !== "object" || Array.isArray(metadata.cover)) {
@@ -124,6 +164,10 @@ export function parseArticle(source, sourceName = "article.md", siteUrl = "https
     body,
     wordCount,
     cover,
+    reviewer,
+    reviewedAt,
+    reviewAfter,
+    sources,
   };
 }
 

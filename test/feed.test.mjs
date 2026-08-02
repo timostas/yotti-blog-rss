@@ -19,9 +19,15 @@ slug: "test-post"
 description: "Краткое <описание>"
 publishedAt: "2026-08-02T18:00:00+03:00"
 author: "Редакция Yotti"
+reviewer: "Проверяющий редактор"
+reviewedAt: "2026-08-01"
+reviewAfter: "2026-09-01"
 language: "ru"
 categories:
   - "TR"
+sources:
+  - "https://example.gov/source-one"
+  - "https://example.gov/source-two"
 published: true
 ${overrides}---
 ${words}
@@ -77,4 +83,19 @@ test("не публикует статью раньше publishedAt", () => {
 
   assert.doesNotMatch(before, /<item/);
   assert.match(after, /<item turbo="true">/);
+});
+
+test("не публикует статью без проверяющего редактора", () => {
+  const source = articleSource().replace('reviewer: "Проверяющий редактор"\n', "");
+  assert.throws(() => parseArticle(source), /поле reviewer обязательно/);
+});
+
+test("не публикует статью без двух источников", () => {
+  const source = articleSource().replace('  - "https://example.gov/source-two"\n', "");
+  assert.throws(() => parseArticle(source), /требуется минимум два источника/);
+});
+
+test("не принимает устаревшую дату перепроверки", () => {
+  const source = articleSource().replace('reviewAfter: "2026-09-01"', 'reviewAfter: "2026-07-31"');
+  assert.throws(() => parseArticle(source), /reviewAfter должен быть позже reviewedAt/);
 });

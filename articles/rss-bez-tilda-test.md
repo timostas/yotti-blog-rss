@@ -4,9 +4,15 @@ slug: "rss-bez-tilda-test"
 description: "Техническая публикация для проверки цепочки Markdown → GitHub → RSS → Yotti без редактора Tilda."
 publishedAt: "2026-08-02T18:00:00+03:00"
 author: "Редакция Yotti"
+reviewer: "Редактор Yotti"
+reviewedAt: "2026-08-02"
+reviewAfter: "2026-09-02"
 language: "ru"
 categories:
   - "Travel-tech и сервисы"
+sources:
+  - "https://timostas.github.io/yotti-blog-rss/ru/rss.xml"
+  - "https://yotti.net/blog/test-rss-bez-tilda-proverka-nezavisimoy-publikatsii"
 cover:
   url: "https://timostas.github.io/yotti-blog-rss/assets/covers/rss-without-tilda-test.jpg"
   type: "image/jpeg"

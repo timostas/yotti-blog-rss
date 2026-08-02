@@ -12,6 +12,7 @@ categories:
   - "Travel tech and services"
 sources:
   - "https://example.gov/official-source"
+  - "https://example.com/second-reliable-source"
 published: false
 ---
 
