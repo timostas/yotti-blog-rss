@@ -1,0 +1,17 @@
+{
+  "name": "yotti-blog-rss",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "node scripts/build-feed.mjs",
+    "test": "node --test"
+  },
+  "engines": {
+    "node": ">=24"
+  },
+  "dependencies": {
+    "marked": "18.0.7",
+    "yaml": "2.9.0"
+  }
+}

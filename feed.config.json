@@ -1,0 +1,17 @@
+{
+  "siteUrl": "https://timostas.github.io/yotti-blog-rss",
+  "feeds": [
+    {
+      "title": "Блог Yotti",
+      "description": "Независимый RSS-поток Yotti Blog на русском языке",
+      "language": "ru",
+      "feedPath": "ru/rss.xml"
+    },
+    {
+      "title": "Yotti Blog",
+      "description": "Independent English RSS feed for Yotti Blog",
+      "language": "en",
+      "feedPath": "en/rss.xml"
+    }
+  ]
+}
