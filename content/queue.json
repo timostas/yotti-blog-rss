@@ -36,6 +36,24 @@
         "ru": "2026-08-14T08:50:00Z",
         "en": "2026-08-14T08:50:00Z"
       }
+    },
+    {
+      "id": "bangkok-night-markets-guide",
+      "topicKey": "thailand-bangkok-night-markets-street-food-route",
+      "status": "scheduled",
+      "locales": ["ru", "en"],
+      "model": { "name": "gpt-5.6-terra", "effort": "low" },
+      "riskReasons": [],
+      "generationAttempts": { "ru": 1, "en": 1 },
+      "qualityRepairAttempts": 0,
+      "scores": { "utility": 90, "originalValue": 92, "factSupport": 88 },
+      "creative": "assets/covers/bangkok-night-markets-guide.png",
+      "creativeConceptKey": "bangkok-blue-hour-wok-street-life",
+      "contentFormat": "culture-food-or-local-experience",
+      "schedule": {
+        "ru": "2026-08-14T09:50:00Z",
+        "en": "2026-08-14T09:50:00Z"
+      }
     }
   ]
 }
