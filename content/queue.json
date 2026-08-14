@@ -12,6 +12,8 @@
       "qualityRepairAttempts": 0,
       "scores": { "utility": 91, "originalValue": 86, "factSupport": 95 },
       "creative": "assets/covers/internet-in-japan-2026.png",
+      "creativeConceptKey": "japan-cinematic-railway-platform",
+      "contentFormat": "connectivity-and-esim",
       "schedule": {
         "ru": "2026-08-14T08:30:00Z",
         "en": "2026-08-14T08:30:00Z"
@@ -28,6 +30,8 @@
       "qualityRepairAttempts": 0,
       "scores": { "utility": 93, "originalValue": 91, "factSupport": 96 },
       "creative": "assets/covers/internet-in-turkey-2026.png",
+      "creativeConceptKey": "turkey-bosphorus-ferry-arrival",
+      "contentFormat": "connectivity-and-esim",
       "schedule": {
         "ru": "2026-08-14T08:50:00Z",
         "en": "2026-08-14T08:50:00Z"
