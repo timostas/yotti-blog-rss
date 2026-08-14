@@ -1,6 +1,7 @@
 import test from "node:test";
 import assert from "node:assert/strict";
 import policy from "../config/editorial-policy.json" with { type: "json" };
+import queue from "../content/queue.json" with { type: "json" };
 import { validateEditorialQueue } from "../scripts/check-editorial-queue.mjs";
 
 function item(overrides = {}) {
@@ -18,6 +19,11 @@ function item(overrides = {}) {
     ...overrides,
   };
 }
+
+test("текущая редакционная очередь проходит политику", () => {
+  const result = validateEditorialQueue(policy, queue);
+  assert.deepEqual(result.errors, []);
+});
 
 test("принимает готовую двуязычную единицу", () => {
   const result = validateEditorialQueue(policy, { schemaVersion: 1, items: [item()] });
