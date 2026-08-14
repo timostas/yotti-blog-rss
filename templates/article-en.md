@@ -16,8 +16,8 @@ sources:
 published: false
 ---
 
-The opening paragraph should explain what happened and why it matters to the
-reader.
+The opening paragraph should answer the reader’s question in a natural editorial
+voice, not as a mechanical list of advice.
 
 Continue with the main article. An automatically published article must contain
 at least 150 words. A practical target is 500–900 words for a news post and
