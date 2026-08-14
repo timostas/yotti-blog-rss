@@ -16,6 +16,22 @@
         "ru": "2026-08-14T08:30:00Z",
         "en": "2026-08-14T08:30:00Z"
       }
+    },
+    {
+      "id": "internet-in-turkey-2026",
+      "topicKey": "turkey-travel-internet-esim-imei-120-days",
+      "status": "scheduled",
+      "locales": ["ru", "en"],
+      "model": { "name": "gpt-5.6-terra", "effort": "medium" },
+      "riskReasons": [],
+      "generationAttempts": { "ru": 1, "en": 1 },
+      "qualityRepairAttempts": 0,
+      "scores": { "utility": 93, "originalValue": 91, "factSupport": 96 },
+      "creative": "assets/covers/internet-in-turkey-2026.png",
+      "schedule": {
+        "ru": "2026-08-14T08:50:00Z",
+        "en": "2026-08-14T08:50:00Z"
+      }
     }
   ]
 }
