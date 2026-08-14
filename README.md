@@ -7,6 +7,7 @@
 ```bash
 npm ci
 npm test
+npm run queue-report
 npm run build
 xmllint --noout dist/ru/rss.xml
 xmllint --noout dist/en/rss.xml
