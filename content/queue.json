@@ -1,4 +1,21 @@
 {
   "schemaVersion": 1,
-  "items": []
+  "items": [
+    {
+      "id": "internet-in-japan-2026",
+      "topicKey": "japan-travel-internet-esim-setup",
+      "status": "scheduled",
+      "locales": ["ru", "en"],
+      "model": { "name": "gpt-5.6-terra", "effort": "medium" },
+      "riskReasons": [],
+      "generationAttempts": { "ru": 1, "en": 1 },
+      "qualityRepairAttempts": 0,
+      "scores": { "utility": 91, "originalValue": 86, "factSupport": 95 },
+      "creative": "assets/covers/internet-in-japan-2026.png",
+      "schedule": {
+        "ru": "2026-08-14T08:40:00Z",
+        "en": "2026-08-14T08:40:00Z"
+      }
+    }
+  ]
 }
