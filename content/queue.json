@@ -94,7 +94,7 @@
     {
       "id": "portugal-first-trip-2026",
       "topicKey": "portugal-first-trip-lisbon-porto-coast",
-      "status": "scheduled",
+      "status": "published",
       "locales": ["ru", "en"],
       "model": { "name": "gpt-5.6-terra", "effort": "low" },
       "riskReasons": [],

@@ -64,5 +64,5 @@ test("блокирует превышение дневного потолка", 
     schedule: { ru: "2026-09-01T07:00:00Z", en: "2026-09-01T10:00:00Z" },
   }));
   const result = validateEditorialQueue(policy, { schemaVersion: 1, items });
-  assert.match(result.errors.join("\n"), /запланировано 6 единиц при лимите 5/);
+  assert.match(result.errors.join("\n"), new RegExp(`запланировано 6 единиц при лимите ${policy.production.targetContentUnitsPerDay}`));
 });
