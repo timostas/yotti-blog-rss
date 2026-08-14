@@ -6,6 +6,7 @@
   },
   "production": {
     "targetContentUnitsPerDay": 5,
+    "rampStartedAt": "2026-08-14",
     "localesPerUnit": ["ru", "en"],
     "maximumPublishedPagesPerDay": 10,
     "publicationGate": "manual_yotti_admin_sync",
