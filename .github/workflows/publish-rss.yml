@@ -39,6 +39,8 @@ jobs:
         run: npm ci
       - name: Run tests
         run: npm test
+      - name: Validate editorial queue
+        run: npm run queue-report
       - name: Build RSS
         run: npm run build
       - name: Configure GitHub Pages
