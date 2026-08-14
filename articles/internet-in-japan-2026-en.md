@@ -2,7 +2,7 @@
 title: "Internet in Japan in 2026: an eSIM setup checklist before you fly"
 slug: "internet-in-japan-2026-en"
 description: "Prepare mobile data for Japan: eSIM setup, public Wi‑Fi limits, offline backups, arrival checks, and emergency contacts."
-publishedAt: "2026-08-14T08:40:00Z"
+publishedAt: "2026-08-14T08:30:00Z"
 author: "Yotti Editorial Team"
 reviewer: "Yotti Reviewing Editor"
 reviewedAt: "2026-08-14"
