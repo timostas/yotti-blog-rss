@@ -1,6 +1,6 @@
 ---
 title: "[ТЕСТ] RSS-контракт: проверка обновления VERSION-1"
-slug: "rss-contract-update-test-20260814"
+slug: "rss-contract-update-test-20260814-link2"
 description: "Техническая временная публикация для проверки обновления записи в RSS-контракте Yotti Blog."
 publishedAt: "2026-08-14T07:43:37+03:00"
 author: "Редакция Yotti"
@@ -18,7 +18,7 @@ published: true
 
 RSS_CONTRACT_TEST_ID: 2026-08-14-A
 
-RSS_CONTRACT_VERSION: VERSION-2
+RSS_CONTRACT_VERSION: VERSION-3-LINK-CHANGE
 
 Эта публикация является технической временной записью и предназначена только для проверки RSS-контракта Yotti Blog. Она не является статьёй для пользователей, новостью, рекомендацией или редакционным материалом. Её нельзя рассматривать как самостоятельный контент о путешествиях, eSIM или сервисах связи.
 
@@ -30,4 +30,4 @@ RSS_CONTRACT_VERSION: VERSION-2
 
 Ожидаемый результат теста — одна русская RSS-запись с указанным slug, двумя контрольными строками в полном содержимом и без соответствующей записи в EN RSS. На этом этапе никаких изменений архитектуры, конфигурации или существующих статей не требуется.
 
-RSS_CONTRACT_UPDATE_MARKER: BODY-UPDATED-2026-08-14
+RSS_CONTRACT_UPDATE_MARKER: LINK-CHANGED-2026-08-14
