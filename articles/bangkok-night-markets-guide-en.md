@@ -2,7 +2,7 @@
 title: "Bangkok night markets: a street-food evening with room to explore"
 slug: "bangkok-night-markets-guide-en"
 description: "Plan an enjoyable Bangkok night-market evening: choose the right district, taste street food at an easy pace, navigate confidently, and build a flexible route."
-publishedAt: "2026-08-14T09:50:00Z"
+publishedAt: "2026-08-14T09:44:00Z"
 author: "Yotti Editorial Team"
 reviewer: "Yotti Reviewing Editor"
 reviewedAt: "2026-08-14"
