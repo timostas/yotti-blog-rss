@@ -4,7 +4,7 @@
     {
       "id": "internet-in-japan-2026",
       "topicKey": "japan-travel-internet-esim-setup",
-      "status": "scheduled",
+      "status": "published",
       "locales": ["ru", "en"],
       "model": { "name": "gpt-5.6-terra", "effort": "medium" },
       "riskReasons": [],
@@ -22,7 +22,7 @@
     {
       "id": "internet-in-turkey-2026",
       "topicKey": "turkey-travel-internet-esim-imei-120-days",
-      "status": "scheduled",
+      "status": "published",
       "locales": ["ru", "en"],
       "model": { "name": "gpt-5.6-terra", "effort": "medium" },
       "riskReasons": [],
@@ -40,7 +40,7 @@
     {
       "id": "bangkok-night-markets-guide",
       "topicKey": "thailand-bangkok-night-markets-street-food-route",
-      "status": "scheduled",
+      "status": "published",
       "locales": ["ru", "en"],
       "model": { "name": "gpt-5.6-sol", "effort": "low" },
       "riskReasons": ["owner_requested_manual_run"],
@@ -58,7 +58,7 @@
     {
       "id": "rome-in-3-days-2026",
       "topicKey": "italy-rome-first-time-three-day-neighbourhood-itinerary",
-      "status": "scheduled",
+      "status": "published",
       "locales": ["ru", "en"],
       "model": { "name": "gpt-5.6-terra", "effort": "low" },
       "riskReasons": [],
@@ -76,7 +76,7 @@
     {
       "id": "georgia-food-route-2026",
       "topicKey": "georgia-food-route-tbilisi-kakheti-local-cuisine",
-      "status": "scheduled",
+      "status": "published",
       "locales": ["ru", "en"],
       "model": { "name": "gpt-5.6-terra", "effort": "low" },
       "riskReasons": [],
@@ -89,6 +89,24 @@
       "schedule": {
         "ru": "2026-08-14T12:00:00Z",
         "en": "2026-08-14T12:00:00Z"
+      }
+    },
+    {
+      "id": "portugal-first-trip-2026",
+      "topicKey": "portugal-first-trip-lisbon-porto-coast",
+      "status": "scheduled",
+      "locales": ["ru", "en"],
+      "model": { "name": "gpt-5.6-terra", "effort": "low" },
+      "riskReasons": [],
+      "generationAttempts": { "ru": 1, "en": 1 },
+      "qualityRepairAttempts": 0,
+      "scores": { "utility": 89, "originalValue": 87, "factSupport": 90 },
+      "creative": "assets/covers/portugal-first-trip-2026.png",
+      "creativeConceptKey": "lisbon-azulejo-tram-atlantic-sunset",
+      "contentFormat": "destination-inspiration",
+      "schedule": {
+        "ru": "2026-08-14T12:30:00Z",
+        "en": "2026-08-14T12:30:00Z"
       }
     }
   ]
