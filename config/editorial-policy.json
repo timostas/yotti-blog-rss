@@ -16,31 +16,75 @@
       { "stage": 4, "days": 48, "contentUnitsPerDay": 5 }
     ]
   },
+  "contentStrategy": {
+    "commercialGoal": "qualified_esim_traffic",
+    "countryRotationWindowUnits": 14,
+    "maximumConnectivityLedUnitsPerFive": 1,
+    "maximumSameRegionInARow": 2,
+    "formats": [
+      { "key": "destination-inspiration", "share": 25 },
+      { "key": "route-or-itinerary", "share": 20 },
+      { "key": "culture-food-or-local-experience", "share": 20 },
+      { "key": "seasonal-trip-ideas", "share": 15 },
+      { "key": "practical-travel-scenario", "share": 10 },
+      { "key": "connectivity-and-esim", "share": 10 }
+    ],
+    "avoidByDefault": [
+      "breaking_news",
+      "visa_or_immigration_rules",
+      "health_or_safety_advice",
+      "live_prices_or_timetables",
+      "legal_or_regulatory_explanations"
+    ],
+    "requiredSearchFeatures": [
+      "direct_answer_near_start",
+      "descriptive_question_headings",
+      "key_takeaways",
+      "short_faq",
+      "natural_country_esim_link"
+    ]
+  },
   "quality": {
     "minimumSources": 2,
-    "targetSources": { "news": 3, "guide": 5 },
-    "minimumCountrySpecificFacts": 5,
+    "targetSources": { "evergreen": 2, "guide": 2 },
+    "minimumCountrySpecificFacts": 3,
     "minimumUtilityScore": 80,
     "minimumOriginalValueScore": 80,
-    "minimumFactSupportScore": 90,
-    "maximumBlockingReviewMinutes": 8,
+    "minimumFactSupportScore": 80,
+    "maximumBlockingReviewMinutes": 4,
     "requireNaturalLocalization": true,
     "rejectMechanicalTranslation": true
   },
+  "creativeStrategy": {
+    "aspectRatio": "16:9",
+    "maximumGenerationAttempts": 1,
+    "conceptRotationWindowUnits": 10,
+    "forbidTextAndThirdPartyLogos": true,
+    "avoidGenericPhoneAsMainSubject": true,
+    "visualArchetypes": [
+      "cinematic-landscape",
+      "street-life",
+      "food-or-craft-detail",
+      "distinctive-architecture",
+      "nature-and-wildlife",
+      "local-human-activity",
+      "transport-as-travel-story",
+      "blue-hour-or-night-scene"
+    ]
+  },
   "modelRouting": {
-    "planningAndRoutineDrafts": { "model": "gpt-5.6-terra", "effort": "medium" },
+    "planningAndRoutineDrafts": { "model": "gpt-5.6-terra", "effort": "low" },
     "metadataAndMechanicalChecks": { "model": "gpt-5.6-luna", "effort": "low" },
-    "highRiskResearchAndFinalAudit": { "model": "gpt-5.6-sol", "effort": "high" },
+    "highRiskResearchAndFinalAudit": { "mode": "exclude_topic_from_daily_flow" },
     "escalateOnlyWhen": [
-      "sources_conflict",
-      "regulated_or_safety_claim",
-      "novel_high_value_topic",
-      "quality_gate_failed_twice"
+      "owner_requested_separate_audit"
     ]
   },
   "budget": {
-    "maximumGenerationAttemptsPerLocale": 2,
+    "maximumGenerationAttemptsPerLocale": 1,
     "maximumQualityRepairAttempts": 1,
+    "maximumResearchSourcesPerUnit": 2,
+    "maximumWebSearchBatchesPerUnit": 1,
     "reuseResearchAcrossLocales": true,
     "batchRelatedTopics": true,
     "stopWhenDailyBudgetUnavailable": true

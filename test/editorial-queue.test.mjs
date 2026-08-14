@@ -10,12 +10,14 @@ function item(overrides = {}) {
     topicKey: "turkey-internet-guide",
     status: "ready",
     locales: ["ru", "en"],
-    model: { name: "gpt-5.6-terra", effort: "medium" },
+    model: { name: "gpt-5.6-terra", effort: "low" },
     riskReasons: [],
     generationAttempts: { ru: 1, en: 1 },
     qualityRepairAttempts: 0,
     scores: { utility: 85, originalValue: 82, factSupport: 95 },
     creative: "assets/covers/internet-in-turkey.jpg",
+    creativeConceptKey: "turkey-street-food-at-blue-hour",
+    contentFormat: "culture-food-or-local-experience",
     ...overrides,
   };
 }
@@ -33,7 +35,7 @@ test("принимает готовую двуязычную единицу", ()
 test("блокирует слабый материал и лишнюю попытку", () => {
   const result = validateEditorialQueue(policy, { schemaVersion: 1, items: [item({
     generationAttempts: { ru: 3, en: 1 },
-    scores: { utility: 70, originalValue: 60, factSupport: 80 },
+    scores: { utility: 70, originalValue: 60, factSupport: 70 },
   })] });
   assert.match(result.errors.join("\n"), /лимит генераций.*недостаточная полезность.*недостаточная оригинальная.*недостаточная поддержка/s);
 });
@@ -45,10 +47,19 @@ test("не разрешает дорогую модель без причины 
   assert.match(result.errors.join("\n"), /Sol выбран без разрешённой причины/);
 });
 
+test("не разрешает повторять концепцию обложки", () => {
+  const result = validateEditorialQueue(policy, { schemaVersion: 1, items: [
+    item(),
+    item({ id: "second-topic", topicKey: "second-topic" }),
+  ] });
+  assert.match(result.errors.join("\n"), /концепция обложки повторяется/);
+});
+
 test("блокирует превышение дневного потолка", () => {
   const items = Array.from({ length: 6 }, (_, index) => item({
     id: `topic-${index}`,
     topicKey: `topic-${index}`,
+    creativeConceptKey: `concept-${index}`,
     status: "scheduled",
     schedule: { ru: "2026-09-01T07:00:00Z", en: "2026-09-01T10:00:00Z" },
   }));

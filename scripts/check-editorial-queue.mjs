@@ -16,6 +16,7 @@ export function validateEditorialQueue(policy, queue) {
   const warnings = [];
   const ids = new Set();
   const topicKeys = new Set();
+  const creativeConceptKeys = new Set();
   const scheduledByDate = new Map();
 
   if (queue.schemaVersion !== 1 || !Array.isArray(queue.items)) {
@@ -43,6 +44,18 @@ export function validateEditorialQueue(policy, queue) {
       topicKeys.add(normalizedTopic);
     }
     if (!ALLOWED_STATUSES.has(item.status)) errors.push(`${label}: неизвестный status`);
+    if (item.status === "ready" || item.status === "scheduled") {
+      if (!policy.contentStrategy.formats.some((format) => format.key === item.contentFormat)) {
+        errors.push(`${label}: неизвестный или отсутствующий contentFormat`);
+      }
+      if (typeof item.creativeConceptKey !== "string" || item.creativeConceptKey.trim() === "") {
+        errors.push(`${label}: creativeConceptKey обязателен`);
+      } else {
+        const normalizedConcept = item.creativeConceptKey.trim().toLowerCase();
+        if (creativeConceptKeys.has(normalizedConcept)) errors.push(`${label}: концепция обложки повторяется`);
+        creativeConceptKeys.add(normalizedConcept);
+      }
+    }
     if (!Array.isArray(item.locales) || item.locales.join(",") !== policy.production.localesPerUnit.join(",")) {
       errors.push(`${label}: locales должны точно соответствовать политике`);
     }
