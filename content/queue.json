@@ -72,6 +72,24 @@
         "ru": "2026-08-14T11:00:00Z",
         "en": "2026-08-14T11:00:00Z"
       }
+    },
+    {
+      "id": "georgia-food-route-2026",
+      "topicKey": "georgia-food-route-tbilisi-kakheti-local-cuisine",
+      "status": "scheduled",
+      "locales": ["ru", "en"],
+      "model": { "name": "gpt-5.6-terra", "effort": "low" },
+      "riskReasons": [],
+      "generationAttempts": { "ru": 1, "en": 1 },
+      "qualityRepairAttempts": 0,
+      "scores": { "utility": 90, "originalValue": 88, "factSupport": 92 },
+      "creative": "assets/covers/georgia-food-route-2026.png",
+      "creativeConceptKey": "tbilisi-market-herbs-walnuts-churchkhela",
+      "contentFormat": "culture-food-or-local-experience",
+      "schedule": {
+        "ru": "2026-08-14T12:00:00Z",
+        "en": "2026-08-14T12:00:00Z"
+      }
     }
   ]
 }
