@@ -31,6 +31,8 @@ Workflow `.github/workflows/publish-rss.yml` собирает проект и п
    - `https://timostas.github.io/yotti-blog-rss/en/rss.xml`;
 4. указать каждый URL в соответствующем поле RU или EN в `yotti.net/admin/blog`.
 
+Подтверждённое поведение импорта и обновления RSS-записей в Yotti зафиксировано в `docs/rss-import-contract.md`.
+
 ## Работа редактора
 
 - `docs/editor-guide.md` — публикация статьи от шаблона до Yotti;
