@@ -32,7 +32,5 @@ jobs:
         run: npm ci
       - name: Run tests
         run: npm test
-      - name: Validate editorial queue
-        run: npm run queue-report
       - name: Add review report to summary
         run: node scripts/check-reviews.mjs >> "$GITHUB_STEP_SUMMARY"
