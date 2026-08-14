@@ -54,6 +54,24 @@
         "ru": "2026-08-14T09:44:00Z",
         "en": "2026-08-14T09:44:00Z"
       }
+    },
+    {
+      "id": "rome-in-3-days-2026",
+      "topicKey": "italy-rome-first-time-three-day-neighbourhood-itinerary",
+      "status": "scheduled",
+      "locales": ["ru", "en"],
+      "model": { "name": "gpt-5.6-terra", "effort": "low" },
+      "riskReasons": [],
+      "generationAttempts": { "ru": 1, "en": 1 },
+      "qualityRepairAttempts": 0,
+      "scores": { "utility": 92, "originalValue": 89, "factSupport": 91 },
+      "creative": "assets/covers/rome-in-3-days-2026.png",
+      "creativeConceptKey": "rome-dawn-fori-imperiali-walking-route",
+      "contentFormat": "route-or-itinerary",
+      "schedule": {
+        "ru": "2026-08-14T11:00:00Z",
+        "en": "2026-08-14T11:00:00Z"
+      }
     }
   ]
 }
