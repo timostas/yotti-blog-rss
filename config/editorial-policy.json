@@ -78,7 +78,8 @@
     "metadataAndMechanicalChecks": { "model": "gpt-5.6-luna", "effort": "low" },
     "highRiskResearchAndFinalAudit": { "mode": "exclude_topic_from_daily_flow" },
     "escalateOnlyWhen": [
-      "owner_requested_separate_audit"
+      "owner_requested_separate_audit",
+      "owner_requested_manual_run"
     ]
   },
   "budget": {
