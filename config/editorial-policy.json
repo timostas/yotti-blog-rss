@@ -1,0 +1,55 @@
+{
+  "schemaVersion": 1,
+  "objective": {
+    "primary": "organic_search_traffic",
+    "horizonDays": 90
+  },
+  "production": {
+    "targetContentUnitsPerDay": 5,
+    "localesPerUnit": ["ru", "en"],
+    "maximumPublishedPagesPerDay": 10,
+    "publicationGate": "manual_yotti_admin_sync",
+    "ramp": [
+      { "stage": 1, "days": 14, "contentUnitsPerDay": 1 },
+      { "stage": 2, "days": 14, "contentUnitsPerDay": 2 },
+      { "stage": 3, "days": 14, "contentUnitsPerDay": 3 },
+      { "stage": 4, "days": 48, "contentUnitsPerDay": 5 }
+    ]
+  },
+  "quality": {
+    "minimumSources": 2,
+    "targetSources": { "news": 3, "guide": 5 },
+    "minimumCountrySpecificFacts": 5,
+    "minimumUtilityScore": 80,
+    "minimumOriginalValueScore": 80,
+    "minimumFactSupportScore": 90,
+    "maximumBlockingReviewMinutes": 8,
+    "requireNaturalLocalization": true,
+    "rejectMechanicalTranslation": true
+  },
+  "modelRouting": {
+    "planningAndRoutineDrafts": { "model": "gpt-5.6-terra", "effort": "medium" },
+    "metadataAndMechanicalChecks": { "model": "gpt-5.6-luna", "effort": "low" },
+    "highRiskResearchAndFinalAudit": { "model": "gpt-5.6-sol", "effort": "high" },
+    "escalateOnlyWhen": [
+      "sources_conflict",
+      "regulated_or_safety_claim",
+      "novel_high_value_topic",
+      "quality_gate_failed_twice"
+    ]
+  },
+  "budget": {
+    "maximumGenerationAttemptsPerLocale": 2,
+    "maximumQualityRepairAttempts": 1,
+    "reuseResearchAcrossLocales": true,
+    "batchRelatedTopics": true,
+    "stopWhenDailyBudgetUnavailable": true
+  },
+  "scaleGate": {
+    "minimumSampleDays": 14,
+    "minimumIndexationRate": 0.7,
+    "maximumCriticalCorrectionRate": 0.05,
+    "minimumOnTimeDeliveryRate": 0.9,
+    "pauseOnDuplicateOrUnsupportedClaim": true
+  }
+}

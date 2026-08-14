@@ -35,6 +35,9 @@ Workflow `.github/workflows/publish-rss.yml` собирает проект и п
 
 ## Работа редактора
 
+- `docs/autonomous-editorial-system.md` — автономный редакционный контур,
+  масштабирование, модели, бюджет и контроль качества;
+- `config/editorial-policy.json` — машиночитаемые цели и ограничения контура;
 - `docs/editor-guide.md` — публикация статьи от шаблона до Yotti;
 - `docs/content-planning-and-scheduling.md` — рекомендуемый контент-план и
   схема отложенной публикации;
