@@ -144,24 +144,29 @@
         "ru": "2026-08-15T10:24:00Z",
         "en": "2026-08-15T10:24:00Z"
       }
+    },
+    {
+      "id": "norway-summer-evening-slow-trip",
+      "topicKey": "norway-bergen-long-summer-evening-slow-travel",
+      "status": "published",
+      "locales": ["ru", "en"],
+      "model": { "name": "gpt-5.6-sol", "effort": "high" },
+      "riskReasons": [],
+      "generationAttempts": { "ru": 1, "en": 1 },
+      "qualityRepairAttempts": 0,
+      "scores": { "utility": 91, "originalValue": 92, "factSupport": 90 },
+      "creative": "assets/covers/norway-summer-evening-slow-trip.png",
+      "creativeConceptKey": "bergen-long-summer-evening-waterfront-solitary-kayak",
+      "contentFormat": "seasonal-trip-ideas",
+      "schedule": {
+        "ru": "2026-08-15T10:41:01Z",
+        "en": "2026-08-15T10:41:01Z"
+      }
     }
   ],
   "plannedPublications": [
     {
       "planOrder": 1,
-      "id": "norway-summer-evening-slow-trip",
-      "countryCode": "NO",
-      "region": "northern-europe",
-      "planKind": "editorial",
-      "contentFormat": "seasonal-trip-ideas",
-      "searchQuery": { "ru": "летнее путешествие по Норвегии", "en": "Norway summer trip ideas" },
-      "workingTitle": { "ru": "Норвегия длинным летним вечером: маршрут, которому не нужен список рекордов", "en": "Norway in the long summer light: a trip without a record-breaking checklist" },
-      "readerPromise": "Как выбрать один город, один фьордовый пейзаж и оставить место для медленного вечера.",
-      "creativeConceptKey": "bergen-long-summer-evening-waterfront-solitary-kayak",
-      "creativeBrief": "Длинный северный вечер у бергенской набережной, отражения домов и один каяк на спокойной воде."
-    },
-    {
-      "planOrder": 2,
       "id": "buy-esim-morocco-medina",
       "countryCode": "MA",
       "region": "north-africa",
@@ -174,7 +179,7 @@
       "creativeBrief": "Узкий проход медины на рассвете, торговец открывает лавку с фонарями, без телефона в кадре."
     },
     {
-      "planOrder": 3,
+      "planOrder": 2,
       "id": "slovenia-two-base-green-route",
       "countryCode": "SI",
       "region": "central-europe",
@@ -187,7 +192,7 @@
       "creativeBrief": "Деревянная лодка на озере Бохинь на рассвете, горы отражаются в неподвижной воде."
     },
     {
-      "planOrder": 4,
+      "planOrder": 3,
       "id": "buy-esim-greece-island-connection",
       "countryCode": "GR",
       "region": "southern-europe",
@@ -200,7 +205,7 @@
       "creativeBrief": "Белый паром входит в небольшую островную гавань, на переднем плане дорожная сумка и морской ветер."
     },
     {
-      "planOrder": 5,
+      "planOrder": 4,
       "id": "lima-market-food-culture-day",
       "countryCode": "PE",
       "region": "south-america",
@@ -213,7 +218,7 @@
       "creativeBrief": "Руки продавца раскладывают перуанские сорта картофеля и кукурузы на рыночном прилавке."
     },
     {
-      "planOrder": 6,
+      "planOrder": 5,
       "id": "buy-esim-vietnam-food-journey",
       "countryCode": "VN",
       "region": "southeast-asia",
@@ -226,7 +231,7 @@
       "creativeBrief": "Пар над утренней кухней Ханоя, свежие травы и металлическая посуда крупным планом."
     },
     {
-      "planOrder": 7,
+      "planOrder": 6,
       "id": "taiwan-tea-town-day-trip",
       "countryCode": "TW",
       "region": "east-asia",
@@ -239,7 +244,7 @@
       "creativeBrief": "Руки разливают улун в горном чайном доме, за окном туман и зелёные склоны."
     },
     {
-      "planOrder": 8,
+      "planOrder": 7,
       "id": "buy-esim-uae-old-new-dubai",
       "countryCode": "AE",
       "region": "middle-east",
@@ -252,7 +257,7 @@
       "creativeBrief": "Деревянная абра пересекает воду, вдали отражаются современные башни в мягком вечернем свете."
     },
     {
-      "planOrder": 9,
+      "planOrder": 8,
       "id": "jordan-petra-beyond-facade",
       "countryCode": "JO",
       "region": "middle-east",
@@ -265,7 +270,7 @@
       "creativeBrief": "Тёплый песчаник каньона, тень и руки местного мастера за работой, без панорамного клише."
     },
     {
-      "planOrder": 10,
+      "planOrder": 9,
       "id": "buy-esim-spain-city-markets",
       "countryCode": "ES",
       "region": "southern-europe",
@@ -278,7 +283,7 @@
       "creativeBrief": "Прилавок с фруктами и керамикой, продавец разговаривает с покупателем в естественном дневном свете."
     },
     {
-      "planOrder": 11,
+      "planOrder": 10,
       "id": "cape-town-three-morning-rituals",
       "countryCode": "ZA",
       "region": "southern-africa",
@@ -291,7 +296,7 @@
       "creativeBrief": "Утро у маленькой пекарни, цветной фасад, свежий хлеб и спокойная жизнь района."
     },
     {
-      "planOrder": 12,
+      "planOrder": 11,
       "id": "buy-esim-egypt-cairo-luxor",
       "countryCode": "EG",
       "region": "north-africa",
@@ -304,7 +309,7 @@
       "creativeBrief": "Рассвет над Нилом, парусная лодка, пальмы и каменные силуэты вдали."
     },
     {
-      "planOrder": 13,
+      "planOrder": 12,
       "id": "new-zealand-south-island-slow-road",
       "countryCode": "NZ",
       "region": "oceania",
@@ -317,7 +322,7 @@
       "creativeBrief": "Один путешественник пересекает подвесной мост в альпийской долине, прохладный утренний свет."
     },
     {
-      "planOrder": 14,
+      "planOrder": 13,
       "id": "buy-esim-brazil-flexible-rio",
       "countryCode": "BR",
       "region": "south-america",
@@ -330,7 +335,7 @@
       "creativeBrief": "Утренний пляж Рио с бегунами и велосипедами, гора растворяется в лёгкой дымке."
     },
     {
-      "planOrder": 15,
+      "planOrder": 14,
       "id": "montreal-shoulder-season-neighbourhoods",
       "countryCode": "CA",
       "region": "north-america",
@@ -343,7 +348,7 @@
       "creativeBrief": "Велосипедист у наружной лестницы и тёплого окна пекарни, первые осенние листья."
     },
     {
-      "planOrder": 16,
+      "planOrder": 15,
       "id": "buy-esim-usa-road-trip",
       "countryCode": "US",
       "region": "north-america",
@@ -356,7 +361,7 @@
       "creativeBrief": "Автомобиль на дороге среди красных скал, человек сверяет бумажную карту у открытого багажника."
     },
     {
-      "planOrder": 17,
+      "planOrder": 16,
       "id": "jaipur-craft-route",
       "countryCode": "IN",
       "region": "south-asia",
@@ -369,7 +374,7 @@
       "creativeBrief": "Мастер наносит деревянный штамп на ткань цвета индиго, руки и фактура крупным планом."
     },
     {
-      "planOrder": 18,
+      "planOrder": 17,
       "id": "buy-esim-france-paris-small-city",
       "countryCode": "FR",
       "region": "western-europe",
@@ -382,7 +387,7 @@
       "creativeBrief": "Утренняя платформа небольшого французского города, чемодан, старые часы и мягкий туман."
     },
     {
-      "planOrder": 19,
+      "planOrder": 18,
       "id": "santiago-valparaiso-choose-rhythm",
       "countryCode": "CL",
       "region": "south-america",
