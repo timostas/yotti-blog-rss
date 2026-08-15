@@ -16,6 +16,11 @@
         "date": "2026-08-14",
         "contentUnitsPerDay": null,
         "reason": "owner-approved one-day unrestricted publication"
+      },
+      {
+        "date": "2026-08-15",
+        "contentUnitsPerDay": 2,
+        "reason": "owner-approved additional manual RU/EN unit while keeping the scheduled evening unit"
       }
     ]
   },
