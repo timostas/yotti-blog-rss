@@ -13,9 +13,9 @@ sources:
   - "https://www.peru.travel/gastronomy/en/peruvian-cuisine/cuisine-of-lima.html"
   - "https://yotti.net/en/esim/peru"
 cover:
-  url: "https://timostas.github.io/yotti-blog-rss/assets/covers/lima-market-food-culture-day.png"
+  url: "https://timostas.github.io/yotti-blog-rss/assets/covers/lima-market-food-culture-day-v2.png"
   type: "image/png"
-  alt: "A vendor arranging Peruvian potatoes and corn at a Lima market stall"
+  alt: "Three friends sharing Peruvian dishes around a long table on a Lima terrace"
 published: true
 ---
 
