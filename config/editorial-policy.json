@@ -5,24 +5,14 @@
     "horizonDays": 90
   },
   "production": {
-    "targetContentUnitsPerDay": 1,
+    "targetContentUnitsPerDay": null,
     "dailyPublicationTime": "18:30",
     "dailyPublicationTimezone": "Europe/Moscow",
     "localesPerUnit": ["ru", "en"],
-    "maximumPublishedPagesPerDay": 2,
+    "maximumPublishedPagesPerDay": null,
+    "frequencyLimitMode": "temporarily_unlimited_by_owner",
     "publicationGate": "manual_yotti_admin_sync",
-    "exceptions": [
-      {
-        "date": "2026-08-14",
-        "contentUnitsPerDay": null,
-        "reason": "owner-approved one-day unrestricted publication"
-      },
-      {
-        "date": "2026-08-15",
-        "contentUnitsPerDay": 2,
-        "reason": "owner-approved additional manual RU/EN unit while keeping the scheduled evening unit"
-      }
-    ]
+    "exceptions": []
   },
   "contentStrategy": {
     "commercialGoal": "qualified_esim_traffic",
@@ -94,7 +84,7 @@
     "maximumWebSearchBatchesPerUnit": 1,
     "reuseResearchAcrossLocales": true,
     "batchRelatedTopics": true,
-    "stopWhenDailyBudgetUnavailable": true
+    "stopWhenDailyBudgetUnavailable": false
   },
   "scaleGate": {
     "minimumSampleDays": 14,

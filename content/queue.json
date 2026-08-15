@@ -130,7 +130,7 @@
     {
       "id": "buy-esim-south-korea-first-days",
       "topicKey": "south-korea-first-days-seoul-travel-esim",
-      "status": "scheduled",
+      "status": "published",
       "locales": ["ru", "en"],
       "model": { "name": "gpt-5.6-sol", "effort": "high" },
       "riskReasons": [],
@@ -141,8 +141,8 @@
       "creativeConceptKey": "seoul-rainy-morning-hanok-modern-street-coffee",
       "contentFormat": "connectivity-and-esim",
       "schedule": {
-        "ru": "2026-08-15T15:30:00Z",
-        "en": "2026-08-15T15:30:00Z"
+        "ru": "2026-08-15T10:24:00Z",
+        "en": "2026-08-15T10:24:00Z"
       }
     }
   ],

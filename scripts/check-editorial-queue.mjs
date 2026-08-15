@@ -90,8 +90,9 @@ export function validateEditorialQueue(policy, queue) {
     }
   }
 
+  const dailyLimit = policy.production.targetContentUnitsPerDay;
   for (const [date, count] of scheduledByDate) {
-    if (count > policy.production.targetContentUnitsPerDay) {
+    if (Number.isInteger(dailyLimit) && dailyLimit > 0 && count > dailyLimit) {
       errors.push(`${date}: запланировано ${count} единиц при лимите ${policy.production.targetContentUnitsPerDay}`);
     }
   }

@@ -2,7 +2,7 @@
 title: "Buy an eSIM for South Korea: staying connected during your first days in Seoul"
 slug: "buy-esim-south-korea-first-days-en"
 description: "How to buy an eSIM for South Korea before your trip, choose data for the way you travel and arrive in Seoul with the practical details already handled."
-publishedAt: "2026-08-15T18:30:00+03:00"
+publishedAt: "2026-08-15T10:24:00Z"
 author: "Yotti Editorial Team"
 reviewer: "Yotti Editor"
 reviewedAt: "2026-08-15"
