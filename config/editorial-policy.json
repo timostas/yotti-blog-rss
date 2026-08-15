@@ -17,7 +17,9 @@
       "publishImmediatelyAfterValidation": true,
       "notifyOwnerWhenReadyForResync": true,
       "versionCoverAssetUrlOnCorrection": true,
-      "resyncBehavior": "update_existing_item_without_duplicate"
+      "resyncBehavior": "update_existing_item_without_duplicate_for_confirmed_text_changes",
+      "existingCoverBehavior": "rss_resync_does_not_refresh_yotti_cover",
+      "coverCorrectionCompletionGate": "verify_yotti_card_or_require_admin_or_importer_fix"
     },
     "exceptions": []
   },
