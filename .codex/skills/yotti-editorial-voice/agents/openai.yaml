@@ -1,4 +1,4 @@
 interface:
   display_name: "Yotti Editorial Voice"
-  short_description: "Write natural bilingual travel journalism for Yotti Blog."
-  default_prompt: "Use $yotti-editorial-voice to write or revise this Yotti Blog article."
+  short_description: "Edit natural bilingual travel journalism for Yotti."
+  default_prompt: "Use $yotti-editorial-voice to draft and human-edit this Yotti Blog article before publication."

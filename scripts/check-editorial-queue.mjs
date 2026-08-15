@@ -11,6 +11,17 @@ function dateKey(value) {
   return Number.isNaN(date.getTime()) ? null : date.toISOString().slice(0, 10);
 }
 
+function requiresHumanEditorialPass(policy, item) {
+  if (item.status === "ready" || item.status === "scheduled") return true;
+  if (item.status !== "published") return false;
+  const enforcementTime = new Date(policy.quality.humanEditorialEnforcementStartedAt).getTime();
+  if (!Number.isFinite(enforcementTime)) return true;
+  return policy.production.localesPerUnit.some((locale) => {
+    const scheduledTime = new Date(item.schedule?.[locale]).getTime();
+    return Number.isFinite(scheduledTime) && scheduledTime >= enforcementTime;
+  });
+}
+
 export function validateEditorialQueue(policy, queue) {
   const errors = [];
   const warnings = [];
@@ -68,6 +79,17 @@ export function validateEditorialQueue(policy, queue) {
     }
     if ((item.qualityRepairAttempts || 0) > policy.budget.maximumQualityRepairAttempts) {
       errors.push(`${label}: превышен лимит автоматических исправлений`);
+    }
+
+    if (requiresHumanEditorialPass(policy, item)) {
+      if (item.editorialStandardVersion !== policy.quality.editorialStandardVersion) {
+        errors.push(`${label}: требуется актуальная версия редакционного стандарта`);
+      }
+      for (const locale of policy.production.localesPerUnit) {
+        if (item.editorialPasses?.[locale] !== policy.quality.requiredHumanEditorialPassesPerLocale) {
+          errors.push(`${label}: требуется отдельный человеческий редакторский проход для ${locale}`);
+        }
+      }
     }
 
     if (item.status === "ready" || item.status === "scheduled") {

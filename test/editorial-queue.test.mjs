@@ -14,6 +14,8 @@ function item(overrides = {}) {
     riskReasons: [],
     generationAttempts: { ru: 1, en: 1 },
     qualityRepairAttempts: 0,
+    editorialStandardVersion: 2,
+    editorialPasses: { ru: 1, en: 1 },
     scores: { utility: 85, originalValue: 82, factSupport: 95 },
     creative: "assets/covers/internet-in-turkey.jpg",
     creativeConceptKey: "turkey-street-food-at-blue-hour",
@@ -53,6 +55,13 @@ test("разрешает Sol для ежедневной редакторско�
     model: { name: "gpt-5.6-sol", effort: "high" },
   })] });
   assert.deepEqual(result.errors, []);
+});
+
+test("блокирует готовый материал без отдельного редакторского прохода", () => {
+  const candidate = item();
+  delete candidate.editorialPasses;
+  const result = validateEditorialQueue(policy, { schemaVersion: 1, items: [candidate] });
+  assert.match(result.errors.join("\n"), /редакторский проход для ru.*редакторский проход для en/s);
 });
 
 test("не разрешает повторять концепцию обложки", () => {

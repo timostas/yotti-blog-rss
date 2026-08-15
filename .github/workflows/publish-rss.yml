@@ -10,6 +10,10 @@ on:
       - "assets/**"
       - "scripts/**"
       - "test/**"
+      - "config/**"
+      - "docs/**"
+      - "templates/**"
+      - ".codex/skills/**"
       - "feed.config.json"
       - "package.json"
       - "package-lock.json"
@@ -30,6 +34,8 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v6
+        with:
+          fetch-depth: 0
       - name: Set up Node.js
         uses: actions/setup-node@v6
         with:
@@ -39,6 +45,11 @@ jobs:
         run: npm ci
       - name: Run tests
         run: npm test
+      - name: Check changed article style
+        if: github.event_name == 'pull_request' || github.event_name == 'push'
+        env:
+          STYLE_BASE_SHA: ${{ github.event.pull_request.base.sha || github.event.before }}
+        run: npm run style-check -- --base "$STYLE_BASE_SHA"
       - name: Build RSS
         run: npm run build
       - name: Configure GitHub Pages
