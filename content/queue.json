@@ -252,24 +252,29 @@
         "ru": "2026-08-15T11:48:49Z",
         "en": "2026-08-15T11:48:49Z"
       }
+    },
+    {
+      "id": "taiwan-tea-town-day-trip",
+      "topicKey": "taiwan-pinglin-single-tea-town-day-trip",
+      "status": "published",
+      "locales": ["ru", "en"],
+      "model": { "name": "gpt-5.6-sol", "effort": "high" },
+      "riskReasons": [],
+      "generationAttempts": { "ru": 1, "en": 1 },
+      "qualityRepairAttempts": 0,
+      "scores": { "utility": 94, "originalValue": 95, "factSupport": 93 },
+      "creative": "assets/covers/taiwan-tea-town-day-trip.png",
+      "creativeConceptKey": "taiwan-mountain-teahouse-hands-pouring-oolong-mist",
+      "contentFormat": "practical-travel-scenario",
+      "schedule": {
+        "ru": "2026-08-15T12:00:58Z",
+        "en": "2026-08-15T12:00:58Z"
+      }
     }
   ],
   "plannedPublications": [
     {
       "planOrder": 1,
-      "id": "taiwan-tea-town-day-trip",
-      "countryCode": "TW",
-      "region": "east-asia",
-      "planKind": "editorial",
-      "contentFormat": "practical-travel-scenario",
-      "searchQuery": { "ru": "чайные города Тайваня из Тайбэя", "en": "Taiwan tea town day trip from Taipei" },
-      "workingTitle": { "ru": "Чайный день за пределами Тайбэя: как выбрать один горный город", "en": "A tea day beyond Taipei: choosing one mountain town instead of rushing through three" },
-      "readerPromise": "Практический выбор одного выезда из Тайбэя с культурой чая, прогулкой и запасом времени.",
-      "creativeConceptKey": "taiwan-mountain-teahouse-hands-pouring-oolong-mist",
-      "creativeBrief": "Руки разливают улун в горном чайном доме, за окном туман и зелёные склоны."
-    },
-    {
-      "planOrder": 2,
       "id": "buy-esim-uae-old-new-dubai",
       "countryCode": "AE",
       "region": "middle-east",
@@ -282,7 +287,7 @@
       "creativeBrief": "Деревянная абра пересекает воду, вдали отражаются современные башни в мягком вечернем свете."
     },
     {
-      "planOrder": 3,
+      "planOrder": 2,
       "id": "jordan-petra-beyond-facade",
       "countryCode": "JO",
       "region": "middle-east",
@@ -295,7 +300,7 @@
       "creativeBrief": "Тёплый песчаник каньона, тень и руки местного мастера за работой, без панорамного клише."
     },
     {
-      "planOrder": 4,
+      "planOrder": 3,
       "id": "buy-esim-spain-city-markets",
       "countryCode": "ES",
       "region": "southern-europe",
@@ -308,7 +313,7 @@
       "creativeBrief": "Прилавок с фруктами и керамикой, продавец разговаривает с покупателем в естественном дневном свете."
     },
     {
-      "planOrder": 5,
+      "planOrder": 4,
       "id": "cape-town-three-morning-rituals",
       "countryCode": "ZA",
       "region": "southern-africa",
@@ -321,7 +326,7 @@
       "creativeBrief": "Утро у маленькой пекарни, цветной фасад, свежий хлеб и спокойная жизнь района."
     },
     {
-      "planOrder": 6,
+      "planOrder": 5,
       "id": "buy-esim-egypt-cairo-luxor",
       "countryCode": "EG",
       "region": "north-africa",
@@ -334,7 +339,7 @@
       "creativeBrief": "Рассвет над Нилом, парусная лодка, пальмы и каменные силуэты вдали."
     },
     {
-      "planOrder": 7,
+      "planOrder": 6,
       "id": "new-zealand-south-island-slow-road",
       "countryCode": "NZ",
       "region": "oceania",
@@ -347,7 +352,7 @@
       "creativeBrief": "Один путешественник пересекает подвесной мост в альпийской долине, прохладный утренний свет."
     },
     {
-      "planOrder": 8,
+      "planOrder": 7,
       "id": "buy-esim-brazil-flexible-rio",
       "countryCode": "BR",
       "region": "south-america",
@@ -360,7 +365,7 @@
       "creativeBrief": "Утренний пляж Рио с бегунами и велосипедами, гора растворяется в лёгкой дымке."
     },
     {
-      "planOrder": 9,
+      "planOrder": 8,
       "id": "montreal-shoulder-season-neighbourhoods",
       "countryCode": "CA",
       "region": "north-america",
@@ -373,7 +378,7 @@
       "creativeBrief": "Велосипедист у наружной лестницы и тёплого окна пекарни, первые осенние листья."
     },
     {
-      "planOrder": 10,
+      "planOrder": 9,
       "id": "buy-esim-usa-road-trip",
       "countryCode": "US",
       "region": "north-america",
@@ -386,7 +391,7 @@
       "creativeBrief": "Автомобиль на дороге среди красных скал, человек сверяет бумажную карту у открытого багажника."
     },
     {
-      "planOrder": 11,
+      "planOrder": 10,
       "id": "jaipur-craft-route",
       "countryCode": "IN",
       "region": "south-asia",
@@ -399,7 +404,7 @@
       "creativeBrief": "Мастер наносит деревянный штамп на ткань цвета индиго, руки и фактура крупным планом."
     },
     {
-      "planOrder": 12,
+      "planOrder": 11,
       "id": "buy-esim-france-paris-small-city",
       "countryCode": "FR",
       "region": "western-europe",
@@ -412,7 +417,7 @@
       "creativeBrief": "Утренняя платформа небольшого французского города, чемодан, старые часы и мягкий туман."
     },
     {
-      "planOrder": 13,
+      "planOrder": 12,
       "id": "santiago-valparaiso-choose-rhythm",
       "countryCode": "CL",
       "region": "south-america",
