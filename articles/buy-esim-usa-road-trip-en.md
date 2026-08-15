@@ -13,7 +13,7 @@ sources:
   - "https://www.nps.gov/aboutus/broadband.htm"
   - "https://yotti.net/en/esim/united-states"
 cover:
-  url: "https://timostas.github.io/yotti-blog-rss/assets/covers/buy-esim-usa-road-trip.png"
+  url: "https://timostas.github.io/yotti-blog-rss/assets/covers/buy-esim-usa-road-trip-v2.png"
   type: "image/png"
   alt: "A traveller holding a paper map beside a car on a red-rock road in the American Southwest"
 published: true

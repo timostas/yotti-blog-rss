@@ -441,12 +441,14 @@
       "editorialStandardVersion": 2,
       "editorialPasses": { "ru": 1, "en": 1 },
       "scores": { "utility": 95, "originalValue": 95, "factSupport": 95 },
-      "creative": "assets/covers/buy-esim-usa-road-trip.png",
+      "creative": "assets/covers/buy-esim-usa-road-trip-v2.png",
       "creativeConceptKey": "american-red-rock-road-front-three-quarter-map-traveller",
       "creativeRevision": {
         "model": "imagegen-built-in",
         "attempts": 1,
-        "reason": "replace-rear-open-trunk-composition"
+        "reason": "replace-rear-open-trunk-composition",
+        "assetVersion": 2,
+        "deliveryReason": "version-source-url-to-bypass-imported-image-cache"
       },
       "contentFormat": "connectivity-and-esim",
       "schedule": {

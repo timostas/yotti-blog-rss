@@ -40,6 +40,7 @@ test("исправления опубликованного материала �
   assert.equal(policy.production.publishedCorrectionFlow.preserveSlugAndFeedLink, true);
   assert.equal(policy.production.publishedCorrectionFlow.publishImmediatelyAfterValidation, true);
   assert.equal(policy.production.publishedCorrectionFlow.notifyOwnerWhenReadyForResync, true);
+  assert.equal(policy.production.publishedCorrectionFlow.versionCoverAssetUrlOnCorrection, true);
   assert.equal(policy.production.publishedCorrectionFlow.resyncBehavior, "update_existing_item_without_duplicate");
 });
 
