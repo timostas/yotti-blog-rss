@@ -36,6 +36,14 @@ test("политика разрешает естественные позы лю
   assert.equal("forbidRearFacingVehicleAsPrimaryComposition" in policy.creativeStrategy, false);
 });
 
+test("плановый режим разрешает одну двуязычную единицу в день", () => {
+  assert.equal(policy.production.targetContentUnitsPerDay, 1);
+  assert.equal(policy.production.maximumPublishedPagesPerDay, 2);
+  assert.equal(policy.production.frequencyLimitMode, "one_bilingual_content_unit_per_day");
+  assert.equal(policy.production.frequencyLimitEffectiveFrom, "2026-08-16");
+  assert.deepEqual(policy.production.localesPerUnit, ["ru", "en"]);
+});
+
 test("исправления опубликованного материала сразу готовятся к повторной синхронизации", () => {
   assert.equal(policy.production.publishedCorrectionFlow.preserveSlugAndFeedLink, true);
   assert.equal(policy.production.publishedCorrectionFlow.publishImmediatelyAfterValidation, true);
