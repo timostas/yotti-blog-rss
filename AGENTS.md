@@ -22,11 +22,12 @@ Before material work, read `README.md`, `config/editorial-policy.json`,
 
 ## Efficiency and quality
 
-- Regular production uses Terra / low. Sol is not part of the scheduled flow.
+- Regular production uses Sol / medium for research, writing and voice; Luna / low is limited to metadata and deterministic checks.
 - Reuse one light research package across RU and EN; avoid risky or volatile topics.
 - Allow one text generation per locale, one short repair and one cover generation.
 - Rotate countries, content formats and cover concepts according to policy.
 - RU and EN must be naturally localized rather than mechanically translated.
+- Use the canonical category for the content format from `config/editorial-taxonomy.json`; do not invent or vary category labels.
 
 After changes report files, result, checks, risks, actual model/effort and only
 the user action that cannot be automated.

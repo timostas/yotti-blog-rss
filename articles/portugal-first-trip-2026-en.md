@@ -8,7 +8,7 @@ reviewer: "Yotti Reviewing Editor"
 reviewedAt: "2026-08-14"
 reviewAfter: "2027-08-14"
 language: "en"
-categories: ["Inspiration and travel", "PT"]
+categories: ["Travel inspiration", "PT"]
 sources:
   - "https://www.visitportugal.com/en/taxonomy/term/578"
   - "https://www.visitportugal.com/en/NR/exeres/026893C2-A486-4211-9FF3-CD145E9163BA"

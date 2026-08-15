@@ -1,6 +1,7 @@
 import test from "node:test";
 import assert from "node:assert/strict";
-import { createFeedXml, countWords, parseArticle } from "../scripts/build-feed.mjs";
+import { createFeedXml, countWords, parseArticle, validateArticleCategories } from "../scripts/build-feed.mjs";
+import taxonomy from "../config/editorial-taxonomy.json" with { type: "json" };
 
 const config = {
   title: "Блог Yotti",
@@ -36,6 +37,15 @@ ${words}
 
 test("считает русские слова", () => {
   assert.equal(countWords("Один, два и travel-tech."), 4);
+});
+
+test("принимает только каноническую тематическую рубрику", () => {
+  const article = parseArticle(articleSource());
+  article.categories = ["Еда и культура", "GE"];
+  assert.doesNotThrow(() => validateArticleCategories(article, taxonomy, "georgia-food-route-2026-ru.md"));
+
+  article.categories = ["Еда и местная культура", "GE"];
+  assert.throws(() => validateArticleCategories(article, taxonomy, "georgia-food-route-2026-ru.md"), /неизвестная рубрика/);
 });
 
 test("создаёт Tilda-совместимый RSS с постоянной ссылкой", () => {

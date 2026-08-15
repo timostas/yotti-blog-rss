@@ -1,0 +1,19 @@
+{
+  "schemaVersion": 1,
+  "rules": {
+    "editorialCategoryCount": 1,
+    "countryCode": "optional_iso_3166_1_alpha_2_uppercase",
+    "legacyCategoriesAllowedOnlyForExistingContractTests": [
+      "Travel-tech и сервисы",
+      "Travel tech and services"
+    ]
+  },
+  "formats": {
+    "destination-inspiration": { "ru": "Идеи для путешествий", "en": "Travel inspiration" },
+    "route-or-itinerary": { "ru": "Маршруты и путешествия", "en": "Itineraries and travel" },
+    "culture-food-or-local-experience": { "ru": "Еда и культура", "en": "Food and culture" },
+    "seasonal-trip-ideas": { "ru": "Идеи для путешествий", "en": "Travel inspiration" },
+    "practical-travel-scenario": { "ru": "Практика поездки", "en": "Practical travel" },
+    "connectivity-and-esim": { "ru": "Интернет в поездке", "en": "Travel connectivity" }
+  }
+}

@@ -70,13 +70,6 @@ export function validateEditorialQueue(policy, queue) {
       errors.push(`${label}: превышен лимит автоматических исправлений`);
     }
 
-    if (item.model?.name === "gpt-5.6-sol") {
-      const reasons = new Set(item.riskReasons || []);
-      if (!policy.modelRouting.escalateOnlyWhen.some((reason) => reasons.has(reason))) {
-        errors.push(`${label}: Sol выбран без разрешённой причины эскалации`);
-      }
-    }
-
     if (item.status === "ready" || item.status === "scheduled") {
       const scores = item.scores || {};
       if (scores.utility < policy.quality.minimumUtilityScore) errors.push(`${label}: недостаточная полезность`);

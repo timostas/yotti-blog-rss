@@ -9,7 +9,6 @@ reviewedAt: "2026-08-14"
 reviewAfter: "2026-11-14"
 language: "ru"
 categories:
-  - "Идеи для путешествий"
   - "Еда и культура"
   - "TH"
 sources:
