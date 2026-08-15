@@ -442,7 +442,12 @@
       "editorialPasses": { "ru": 1, "en": 1 },
       "scores": { "utility": 95, "originalValue": 95, "factSupport": 95 },
       "creative": "assets/covers/buy-esim-usa-road-trip.png",
-      "creativeConceptKey": "american-red-rock-road-paper-map-open-trunk",
+      "creativeConceptKey": "american-red-rock-road-front-three-quarter-map-traveller",
+      "creativeRevision": {
+        "model": "imagegen-built-in",
+        "attempts": 1,
+        "reason": "replace-rear-open-trunk-composition"
+      },
       "contentFormat": "connectivity-and-esim",
       "schedule": {
         "ru": "2026-08-15T15:19:44Z",

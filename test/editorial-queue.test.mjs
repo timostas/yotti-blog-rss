@@ -36,6 +36,13 @@ test("политика разрешает естественные позы лю
   assert.equal("forbidRearFacingVehicleAsPrimaryComposition" in policy.creativeStrategy, false);
 });
 
+test("исправления опубликованного материала сразу готовятся к повторной синхронизации", () => {
+  assert.equal(policy.production.publishedCorrectionFlow.preserveSlugAndFeedLink, true);
+  assert.equal(policy.production.publishedCorrectionFlow.publishImmediatelyAfterValidation, true);
+  assert.equal(policy.production.publishedCorrectionFlow.notifyOwnerWhenReadyForResync, true);
+  assert.equal(policy.production.publishedCorrectionFlow.resyncBehavior, "update_existing_item_without_duplicate");
+});
+
 test("блокирует нарушение чередования ближайшего плана", () => {
   const plannedPublications = structuredClone(queue.plannedPublications.slice(0, 2));
   plannedPublications[1].planKind = plannedPublications[0].planKind;
