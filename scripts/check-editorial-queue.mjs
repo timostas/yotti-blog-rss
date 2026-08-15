@@ -107,6 +107,10 @@ export function validateEditorialQueue(policy, queue) {
       .map((item) => item.creativeConceptKey?.trim().toLowerCase())
       .filter(Boolean));
     const sortedPlan = [...plannedPublications].sort((a, b) => a.planOrder - b.planOrder);
+    const firstPlanKind = sortedPlan[0]?.planKind;
+    if (!new Set(["buy-esim", "editorial"]).has(firstPlanKind)) {
+      errors.push("plannedPublications: первый элемент должен иметь planKind buy-esim или editorial");
+    }
 
     for (const [index, item] of sortedPlan.entries()) {
       const label = item?.id || `plannedPublications[${index}]`;
@@ -128,7 +132,9 @@ export function validateEditorialQueue(policy, queue) {
         countryCodes.add(item.countryCode);
       }
       if (typeof item?.region !== "string" || item.region.trim() === "") errors.push(`${label}: region обязателен`);
-      const expectedKind = expectedOrder % 2 === 1 ? "buy-esim" : "editorial";
+      const expectedKind = index % 2 === 0
+        ? firstPlanKind
+        : firstPlanKind === "buy-esim" ? "editorial" : "buy-esim";
       if (item?.planKind !== expectedKind) errors.push(`${label}: нарушено обязательное чередование buy-esim/editorial`);
       if (!policy.contentStrategy.formats.some((format) => format.key === item?.contentFormat)) {
         errors.push(`${label}: неизвестный contentFormat`);

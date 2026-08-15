@@ -29,9 +29,8 @@ test("текущая редакционная очередь проходит п
 
 test("блокирует нарушение чередования ближайшего плана", () => {
   const plannedPublications = structuredClone(queue.plannedPublications.slice(0, 2));
-  plannedPublications[1].planKind = "buy-esim";
-  plannedPublications[1].contentFormat = "connectivity-and-esim";
-  plannedPublications[1].searchQuery = { ru: "купить есим для Норвегии", en: "buy eSIM for Norway" };
+  plannedPublications[1].planKind = plannedPublications[0].planKind;
+  plannedPublications[1].contentFormat = plannedPublications[0].contentFormat;
   const result = validateEditorialQueue(policy, { schemaVersion: 1, items: [], plannedPublications });
   assert.match(result.errors.join("\n"), /нарушено обязательное чередование/);
 });
