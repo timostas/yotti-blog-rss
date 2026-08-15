@@ -16,22 +16,21 @@ sources:
 published: false
 ---
 
-The opening paragraph should answer the reader’s question in a natural editorial
-voice, not as a mechanical list of advice.
+The opening paragraph should answer the reader’s question in ordinary edited
+English. Do not manufacture a cinematic scene merely to make the opening feel important.
 
 Continue with the main article. An automatically published article must contain
 at least 150 words. A practical target is 500–900 words for a news post and
 900–1,600 words for an in-depth guide.
 
-## First section
+## A specific heading drawn from the material
 
 Explain the main point and support it with useful facts, examples, and context.
 
-## Second section
+## The reader’s next natural question
 
 Describe what the development means for travelers or eSIM users. Keep paragraphs
 short and use lists only when they make the information easier to scan.
 
-## Conclusion
-
-Summarize the result and give the reader a clear next step.
+Do not add a mandatory conclusion, takeaway block or FAQ. End when the subject
+is complete and use service sections only when they improve the article.

@@ -8,6 +8,7 @@
 npm ci
 npm test
 npm run queue-report
+npm run style-check -- articles/<slug>-ru.md articles/<slug>-en.md
 npm run build
 xmllint --noout dist/ru/rss.xml
 xmllint --noout dist/en/rss.xml

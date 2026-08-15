@@ -36,13 +36,20 @@
     ],
     "requiredSearchFeatures": [
       "direct_answer_near_start",
-      "descriptive_question_headings",
-      "key_takeaways",
-      "short_faq",
-      "natural_country_esim_link"
+      "natural_country_esim_link",
+      "plain_spoken_language_title",
+      "independent_human_editorial_pass"
+    ],
+    "optionalSearchFeatures": [
+      "descriptive_headings_when_useful",
+      "key_takeaways_for_comparison_or_complex_action",
+      "short_faq_for_unanswered_real_queries"
     ]
   },
   "quality": {
+    "editorialStandardVersion": 2,
+    "humanEditorialEnforcementStartedAt": "2026-08-15T13:12:27Z",
+    "requiredHumanEditorialPassesPerLocale": 1,
     "minimumSources": 2,
     "targetSources": { "evergreen": 2, "guide": 2 },
     "minimumCountrySpecificFacts": 3,
@@ -72,7 +79,7 @@
   },
   "modelRouting": {
     "planningAndRoutineDrafts": { "model": "gpt-5.6-sol", "effort": "high" },
-    "literaryEditorialPolish": { "model": "gpt-5.6-sol", "effort": "high", "scope": "voice_only_no_new_facts" },
+    "mandatoryHumanEditorialPass": { "model": "gpt-5.6-sol", "effort": "high", "scope": "rewrite_voice_structure_no_new_facts" },
     "metadataAndMechanicalChecks": { "model": "gpt-5.6-luna", "effort": "low" },
     "highRiskResearchAndFinalAudit": { "mode": "exclude_topic_from_daily_flow" },
     "escalateOnlyWhen": []

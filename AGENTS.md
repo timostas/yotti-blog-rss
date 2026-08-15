@@ -22,11 +22,13 @@ Before material work, read `README.md`, `config/editorial-policy.json`,
 
 ## Efficiency and quality
 
-- Regular production uses Sol / high for research, writing and voice; Luna / low is limited to metadata and deterministic checks.
+- Regular production uses Sol / high for research, drafting and a separate human editorial pass; Luna / low is limited to metadata and deterministic checks.
 - Reuse one light research package across RU and EN; avoid risky or volatile topics.
 - Allow one text generation per locale, one short repair and one cover generation.
 - Rotate countries, content formats and cover concepts according to policy.
 - RU and EN must be naturally localized rather than mechanically translated.
+- Read the complete `yotti-editorial-voice` skill for every article and run `npm run style-check -- <RU file> <EN file>` before publication.
+- Do not force key takeaways, question headings, a conclusion or FAQ into every article; use them only when they help the specific reader task.
 - Use the canonical category for the content format from `config/editorial-taxonomy.json`; do not invent or vary category labels.
 
 After changes report files, result, checks, risks, actual model/effort and only
