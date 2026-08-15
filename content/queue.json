@@ -510,21 +510,35 @@
         "ru": "2026-08-15T16:23:50Z",
         "en": "2026-08-15T16:23:50Z"
       }
-    }
-  ],
-  "plannedPublications": [
+    },
     {
-      "planOrder": 1,
       "id": "santiago-valparaiso-choose-rhythm",
+      "topicKey": "chile-santiago-valparaiso-first-trip-base-choice",
+      "status": "published",
+      "locales": ["ru", "en"],
+      "model": { "name": "gpt-5.6-sol", "effort": "high" },
+      "riskReasons": [],
+      "generationAttempts": { "ru": 1, "en": 1 },
+      "qualityRepairAttempts": 0,
+      "editorialStandardVersion": 2,
+      "editorialPasses": { "ru": 1, "en": 1 },
+      "scores": { "utility": 95, "originalValue": 95, "factSupport": 95 },
+      "creative": "assets/covers/santiago-valparaiso-first-trip.png",
+      "creativeConceptKey": "valparaiso-hillside-stairs-mural-painter-pacific-light",
+      "creativeGeneration": { "model": "imagegen-built-in", "attempts": 1 },
+      "contentFormat": "destination-inspiration",
+      "planKind": "editorial",
       "countryCode": "CL",
       "region": "south-america",
-      "planKind": "editorial",
-      "contentFormat": "destination-inspiration",
       "searchQuery": { "ru": "Сантьяго или Вальпараисо где остановиться", "en": "Santiago or Valparaiso where to stay" },
       "workingTitle": { "ru": "Сантьяго или Вальпараисо: где остановиться в первой поездке", "en": "Santiago or Valparaíso: where to stay on a first trip to Chile" },
       "readerPromise": "Сравнение двух баз через ритм, архитектуру и способ проводить день, а не рейтинг городов.",
-      "creativeConceptKey": "valparaiso-hillside-stairs-mural-painter-pacific-light",
-      "creativeBrief": "Художник работает над муралом у лестницы на холме Вальпараисо, вдали светится Тихий океан."
+      "creativeBrief": "Художник работает над муралом у лестницы на холме Вальпараисо, вдали светится Тихий океан.",
+      "schedule": {
+        "ru": "2026-08-15T16:40:40Z",
+        "en": "2026-08-15T16:40:40Z"
+      }
     }
-  ]
+  ],
+  "plannedPublications": []
 }
