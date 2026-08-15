@@ -29,6 +29,13 @@ test("текущая редакционная очередь проходит п
   assert.deepEqual(result.errors, []);
 });
 
+test("политика блокирует закрытые задние ракурсы главных объектов", () => {
+  assert.equal(policy.creativeStrategy.forbidBackFacingPersonAsPrimarySubject, true);
+  assert.equal(policy.creativeStrategy.forbidRearFacingVehicleAsPrimaryComposition, true);
+  assert.ok(policy.creativeStrategy.preferredHumanPresentation.includes("face-visible"));
+  assert.ok(policy.creativeStrategy.preferredVehicleAngles.includes("front-three-quarter"));
+});
+
 test("блокирует нарушение чередования ближайшего плана", () => {
   const plannedPublications = structuredClone(queue.plannedPublications.slice(0, 2));
   plannedPublications[1].planKind = plannedPublications[0].planKind;
