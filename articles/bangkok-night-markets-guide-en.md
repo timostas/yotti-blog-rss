@@ -9,7 +9,6 @@ reviewedAt: "2026-08-14"
 reviewAfter: "2026-11-14"
 language: "en"
 categories:
-  - "Travel inspiration"
   - "Food and culture"
   - "TH"
 sources:

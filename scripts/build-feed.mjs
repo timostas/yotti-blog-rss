@@ -8,6 +8,7 @@ const ROOT_DIR = resolve(dirname(fileURLToPath(import.meta.url)), "..");
 const ARTICLES_DIR = join(ROOT_DIR, "articles");
 const ASSETS_DIR = join(ROOT_DIR, "assets");
 const OUTPUT_DIR = join(ROOT_DIR, "dist");
+const TAXONOMY_PATH = join(ROOT_DIR, "config", "editorial-taxonomy.json");
 const MIN_WORD_COUNT = 150;
 
 export function escapeXml(value) {
@@ -171,6 +172,31 @@ export function parseArticle(source, sourceName = "article.md", siteUrl = "https
   };
 }
 
+export function validateArticleCategories(article, taxonomy, sourceName = "article.md") {
+  if (!taxonomy || taxonomy.schemaVersion !== 1 || !taxonomy.formats || typeof taxonomy.formats !== "object") {
+    throw new Error("config/editorial-taxonomy.json: требуется корректный справочник рубрик");
+  }
+  const localeCategories = new Set(Object.values(taxonomy.formats).map((format) => format?.[article.language]).filter(Boolean));
+  const legacyCategories = new Set(taxonomy.rules?.legacyCategoriesAllowedOnlyForExistingContractTests || []);
+  const isContractTest = /(?:^|[-_])test(?:[-_.]|$)/.test(sourceName);
+  const editorialCategories = article.categories.filter((category) => localeCategories.has(category));
+  const countryCodes = article.categories.filter((category) => /^[A-Z]{2}$/.test(category));
+  const invalidCategories = article.categories.filter((category) => !localeCategories.has(category) && !/^[A-Z]{2}$/.test(category) && !(isContractTest && legacyCategories.has(category)));
+
+  if (invalidCategories.length > 0) {
+    throw new Error(`${sourceName}: неизвестная рубрика: ${invalidCategories.join(", ")}`);
+  }
+  if (isContractTest && article.categories.every((category) => legacyCategories.has(category) || /^[A-Z]{2}$/.test(category))) {
+    return;
+  }
+  if (editorialCategories.length !== taxonomy.rules.editorialCategoryCount) {
+    throw new Error(`${sourceName}: нужна ровно одна каноническая тематическая рубрика для ${article.language}`);
+  }
+  if (countryCodes.length > 1) {
+    throw new Error(`${sourceName}: допускается не более одного кода страны`);
+  }
+}
+
 function validateConfig(config) {
   const sourceName = "feed.config.json";
   const title = requiredString(config, "title", sourceName);
@@ -299,6 +325,8 @@ async function build() {
     const source = await readFile(join(ARTICLES_DIR, name), "utf8");
     return parseArticle(source, name, rootConfig.siteUrl);
   }));
+  const taxonomy = JSON.parse(await readFile(TAXONOMY_PATH, "utf8"));
+  articles.forEach((article, index) => validateArticleCategories(article, taxonomy, articleFiles[index]));
 
   const unknownLanguages = articles
     .map((article) => article.language)

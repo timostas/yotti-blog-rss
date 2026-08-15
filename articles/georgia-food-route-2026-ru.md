@@ -9,7 +9,7 @@ reviewedAt: "2026-08-14"
 reviewAfter: "2027-08-14"
 language: "ru"
 categories:
-  - "Еда и местная культура"
+  - "Еда и культура"
   - "GE"
 sources:
   - "https://georgia.travel/get-a-taste-of-khachapuri"

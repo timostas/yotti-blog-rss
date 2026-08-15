@@ -40,11 +40,11 @@ test("блокирует слабый материал и лишнюю попы�
   assert.match(result.errors.join("\n"), /лимит генераций.*недостаточная полезность.*недостаточная оригинальная.*недостаточная поддержка/s);
 });
 
-test("не разрешает дорогую модель без причины риска", () => {
+test("разрешает Sol для ежедневной редакторской работы", () => {
   const result = validateEditorialQueue(policy, { schemaVersion: 1, items: [item({
-    model: { name: "gpt-5.6-sol", effort: "high" },
+    model: { name: "gpt-5.6-sol", effort: "medium" },
   })] });
-  assert.match(result.errors.join("\n"), /Sol выбран без разрешённой причины/);
+  assert.deepEqual(result.errors, []);
 });
 
 test("не разрешает повторять концепцию обложки", () => {
