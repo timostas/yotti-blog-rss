@@ -348,24 +348,31 @@
         "ru": "2026-08-15T13:54:56Z",
         "en": "2026-08-15T13:54:56Z"
       }
+    },
+    {
+      "id": "buy-esim-egypt-cairo-luxor",
+      "topicKey": "egypt-cairo-luxor-two-city-travel-esim",
+      "status": "published",
+      "locales": ["ru", "en"],
+      "model": { "name": "gpt-5.6-sol", "effort": "high" },
+      "riskReasons": [],
+      "generationAttempts": { "ru": 1, "en": 1 },
+      "qualityRepairAttempts": 0,
+      "editorialStandardVersion": 2,
+      "editorialPasses": { "ru": 1, "en": 1 },
+      "scores": { "utility": 95, "originalValue": 94, "factSupport": 94 },
+      "creative": "assets/covers/buy-esim-egypt-cairo-luxor.png",
+      "creativeConceptKey": "nile-dawn-felucca-palms-stone-shore-silhouette",
+      "contentFormat": "connectivity-and-esim",
+      "schedule": {
+        "ru": "2026-08-15T14:09:55Z",
+        "en": "2026-08-15T14:09:55Z"
+      }
     }
   ],
   "plannedPublications": [
     {
       "planOrder": 1,
-      "id": "buy-esim-egypt-cairo-luxor",
-      "countryCode": "EG",
-      "region": "north-africa",
-      "planKind": "buy-esim",
-      "contentFormat": "connectivity-and-esim",
-      "searchQuery": { "ru": "купить есим для Египта", "en": "buy eSIM for Egypt" },
-      "workingTitle": { "ru": "Купить есим для Египта: связь в путешествии от Каира к Луксору", "en": "Buy an eSIM for Egypt: staying connected from Cairo to Luxor" },
-      "readerPromise": "Связь объединяет два разных ритма поездки без изменчивых расписаний и цен.",
-      "creativeConceptKey": "nile-dawn-felucca-palms-stone-shore-silhouette",
-      "creativeBrief": "Рассвет над Нилом, парусная лодка, пальмы и каменные силуэты вдали."
-    },
-    {
-      "planOrder": 2,
       "id": "new-zealand-south-island-slow-road",
       "countryCode": "NZ",
       "region": "oceania",
@@ -378,7 +385,7 @@
       "creativeBrief": "Один путешественник пересекает подвесной мост в альпийской долине, прохладный утренний свет."
     },
     {
-      "planOrder": 3,
+      "planOrder": 2,
       "id": "buy-esim-brazil-flexible-rio",
       "countryCode": "BR",
       "region": "south-america",
@@ -391,7 +398,7 @@
       "creativeBrief": "Утренний пляж Рио с бегунами и велосипедами, гора растворяется в лёгкой дымке."
     },
     {
-      "planOrder": 4,
+      "planOrder": 3,
       "id": "montreal-shoulder-season-neighbourhoods",
       "countryCode": "CA",
       "region": "north-america",
@@ -404,7 +411,7 @@
       "creativeBrief": "Велосипедист у наружной лестницы и тёплого окна пекарни, первые осенние листья."
     },
     {
-      "planOrder": 5,
+      "planOrder": 4,
       "id": "buy-esim-usa-road-trip",
       "countryCode": "US",
       "region": "north-america",
@@ -417,7 +424,7 @@
       "creativeBrief": "Автомобиль на дороге среди красных скал, человек сверяет бумажную карту у открытого багажника."
     },
     {
-      "planOrder": 6,
+      "planOrder": 5,
       "id": "jaipur-craft-route",
       "countryCode": "IN",
       "region": "south-asia",
@@ -430,7 +437,7 @@
       "creativeBrief": "Мастер наносит деревянный штамп на ткань цвета индиго, руки и фактура крупным планом."
     },
     {
-      "planOrder": 7,
+      "planOrder": 6,
       "id": "buy-esim-france-paris-small-city",
       "countryCode": "FR",
       "region": "western-europe",
@@ -443,7 +450,7 @@
       "creativeBrief": "Утренняя платформа небольшого французского города, чемодан, старые часы и мягкий туман."
     },
     {
-      "planOrder": 8,
+      "planOrder": 7,
       "id": "santiago-valparaiso-choose-rhythm",
       "countryCode": "CL",
       "region": "south-america",
