@@ -482,24 +482,39 @@
         "ru": "2026-08-15T15:30:00Z",
         "en": "2026-08-15T15:30:00Z"
       }
+    },
+    {
+      "id": "buy-esim-france-paris-small-city",
+      "topicKey": "france-paris-dijon-rail-arrival-travel-esim",
+      "status": "published",
+      "locales": ["ru", "en"],
+      "model": { "name": "gpt-5.6-sol", "effort": "high" },
+      "riskReasons": [],
+      "generationAttempts": { "ru": 1, "en": 1 },
+      "qualityRepairAttempts": 0,
+      "editorialStandardVersion": 2,
+      "editorialPasses": { "ru": 1, "en": 1 },
+      "scores": { "utility": 95, "originalValue": 95, "factSupport": 95 },
+      "creative": "assets/covers/buy-esim-france-paris-dijon.png",
+      "creativeConceptKey": "french-small-town-platform-morning-mist-vintage-clock",
+      "creativeGeneration": { "model": "imagegen-built-in", "attempts": 1 },
+      "contentFormat": "connectivity-and-esim",
+      "planKind": "buy-esim",
+      "countryCode": "FR",
+      "region": "western-europe",
+      "searchQuery": { "ru": "купить есим для Франции", "en": "buy eSIM for France" },
+      "workingTitle": { "ru": "Купить есим для Франции: спокойная поездка из Парижа в небольшой город", "en": "Buy an eSIM for France: staying connected from Paris to a smaller city" },
+      "readerPromise": "Связь сопровождает переход от столицы к более тихому месту, жилью и региональным прогулкам.",
+      "creativeBrief": "Утренняя платформа небольшого французского города, чемодан, старые часы и мягкий туман.",
+      "schedule": {
+        "ru": "2026-08-15T16:23:50Z",
+        "en": "2026-08-15T16:23:50Z"
+      }
     }
   ],
   "plannedPublications": [
     {
       "planOrder": 1,
-      "id": "buy-esim-france-paris-small-city",
-      "countryCode": "FR",
-      "region": "western-europe",
-      "planKind": "buy-esim",
-      "contentFormat": "connectivity-and-esim",
-      "searchQuery": { "ru": "купить есим для Франции", "en": "buy eSIM for France" },
-      "workingTitle": { "ru": "Купить есим для Франции: спокойная поездка из Парижа в небольшой город", "en": "Buy an eSIM for France: staying connected from Paris to a smaller city" },
-      "readerPromise": "Связь сопровождает переход от столицы к более тихому месту, жилью и региональным прогулкам.",
-      "creativeConceptKey": "french-small-town-platform-morning-mist-vintage-clock",
-      "creativeBrief": "Утренняя платформа небольшого французского города, чемодан, старые часы и мягкий туман."
-    },
-    {
-      "planOrder": 2,
       "id": "santiago-valparaiso-choose-rhythm",
       "countryCode": "CL",
       "region": "south-america",

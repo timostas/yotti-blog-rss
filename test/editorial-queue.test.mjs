@@ -47,7 +47,24 @@ test("исправления опубликованного материала �
 });
 
 test("блокирует нарушение чередования ближайшего плана", () => {
-  const plannedPublications = structuredClone(queue.plannedPublications.slice(0, 2));
+  const plannedPublications = [
+    {
+      planOrder: 1,
+      id: "first-buy-esim-topic",
+      countryCode: "FR",
+      region: "western-europe",
+      planKind: "buy-esim",
+      contentFormat: "connectivity-and-esim",
+    },
+    {
+      planOrder: 2,
+      id: "second-editorial-topic",
+      countryCode: "CL",
+      region: "south-america",
+      planKind: "editorial",
+      contentFormat: "destination-inspiration",
+    },
+  ];
   plannedPublications[1].planKind = plannedPublications[0].planKind;
   plannedPublications[1].contentFormat = plannedPublications[0].contentFormat;
   const result = validateEditorialQueue(policy, { schemaVersion: 1, items: [], plannedPublications });
