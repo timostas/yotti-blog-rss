@@ -11,6 +11,6 @@ description: Write and revise Yotti Blog RU/EN travel articles in a natural, pro
 4. Localize rather than translate: RU may be warmer and more conversational; EN should read like an edited travel guide.
 5. Keep headings, takeaways, and FAQ specific to the destination. Use lists only when comparison or action requires them.
 6. Remove filler, repeated conclusions, fake certainty, and stacked imperatives.
-7. Apply Sol/medium only as a literary edit: it may improve flow and phrasing but must not add facts, prices, schedules, legal advice, or unsupported claims.
+7. Apply Sol/high for drafting and literary editing: it may improve structure, flow and phrasing but must not add facts, prices, schedules, legal advice, or unsupported claims.
 
 Before delivery, read the article as a magazine service piece: useful, calm, precise, and recognisably human.
