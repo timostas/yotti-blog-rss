@@ -5,12 +5,13 @@
     "horizonDays": 90
   },
   "production": {
-    "targetContentUnitsPerDay": null,
-    "dailyPublicationTime": "18:30",
+    "targetContentUnitsPerDay": 1,
+    "dailyPublicationTime": "12:00",
     "dailyPublicationTimezone": "Europe/Moscow",
     "localesPerUnit": ["ru", "en"],
-    "maximumPublishedPagesPerDay": null,
-    "frequencyLimitMode": "temporarily_unlimited_by_owner",
+    "maximumPublishedPagesPerDay": 2,
+    "frequencyLimitMode": "one_bilingual_content_unit_per_day",
+    "frequencyLimitEffectiveFrom": "2026-08-16",
     "publicationGate": "manual_yotti_admin_sync",
     "publishedCorrectionFlow": {
       "preserveSlugAndFeedLink": true,
