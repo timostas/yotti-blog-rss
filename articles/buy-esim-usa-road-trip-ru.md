@@ -13,7 +13,7 @@ sources:
   - "https://www.nps.gov/aboutus/broadband.htm"
   - "https://yotti.net/esim/united-states"
 cover:
-  url: "https://timostas.github.io/yotti-blog-rss/assets/covers/buy-esim-usa-road-trip.png"
+  url: "https://timostas.github.io/yotti-blog-rss/assets/covers/buy-esim-usa-road-trip-v2.png"
   type: "image/png"
   alt: "Путешественник с бумажной картой стоит у автомобиля на дороге среди красных скал США"
 published: true

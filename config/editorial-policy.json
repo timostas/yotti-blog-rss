@@ -16,6 +16,7 @@
       "preserveSlugAndFeedLink": true,
       "publishImmediatelyAfterValidation": true,
       "notifyOwnerWhenReadyForResync": true,
+      "versionCoverAssetUrlOnCorrection": true,
       "resyncBehavior": "update_existing_item_without_duplicate"
     },
     "exceptions": []
