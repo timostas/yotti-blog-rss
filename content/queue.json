@@ -308,24 +308,31 @@
         "ru": "2026-08-15T12:52:40Z",
         "en": "2026-08-15T12:52:40Z"
       }
+    },
+    {
+      "id": "buy-esim-spain-city-markets",
+      "topicKey": "spain-valencia-city-markets-travel-esim",
+      "status": "published",
+      "locales": ["ru", "en"],
+      "model": { "name": "gpt-5.6-sol", "effort": "high" },
+      "riskReasons": [],
+      "generationAttempts": { "ru": 1, "en": 1 },
+      "qualityRepairAttempts": 0,
+      "editorialStandardVersion": 2,
+      "editorialPasses": { "ru": 1, "en": 1 },
+      "scores": { "utility": 95, "originalValue": 94, "factSupport": 94 },
+      "creative": "assets/covers/buy-esim-spain-city-markets.png",
+      "creativeConceptKey": "valencia-market-fruit-ceramics-vendor-conversation",
+      "contentFormat": "connectivity-and-esim",
+      "schedule": {
+        "ru": "2026-08-15T13:33:33Z",
+        "en": "2026-08-15T13:33:33Z"
+      }
     }
   ],
   "plannedPublications": [
     {
       "planOrder": 1,
-      "id": "buy-esim-spain-city-markets",
-      "countryCode": "ES",
-      "region": "southern-europe",
-      "planKind": "buy-esim",
-      "contentFormat": "connectivity-and-esim",
-      "searchQuery": { "ru": "купить есим для Испании", "en": "buy eSIM for Spain" },
-      "workingTitle": { "ru": "Купить есим для Испании: интернет для поездки по городским рынкам", "en": "Buy an eSIM for Spain: staying connected while exploring city markets" },
-      "readerPromise": "Как находить городские рынки, сохранять адреса и переводить названия продуктов во время поездки.",
-      "creativeConceptKey": "valencia-market-fruit-ceramics-vendor-conversation",
-      "creativeBrief": "Прилавок с фруктами и керамикой, продавец разговаривает с покупателем в естественном дневном свете."
-    },
-    {
-      "planOrder": 2,
       "id": "cape-town-three-morning-rituals",
       "countryCode": "ZA",
       "region": "southern-africa",
@@ -338,7 +345,7 @@
       "creativeBrief": "Утро у маленькой пекарни, цветной фасад, свежий хлеб и спокойная жизнь района."
     },
     {
-      "planOrder": 3,
+      "planOrder": 2,
       "id": "buy-esim-egypt-cairo-luxor",
       "countryCode": "EG",
       "region": "north-africa",
@@ -351,7 +358,7 @@
       "creativeBrief": "Рассвет над Нилом, парусная лодка, пальмы и каменные силуэты вдали."
     },
     {
-      "planOrder": 4,
+      "planOrder": 3,
       "id": "new-zealand-south-island-slow-road",
       "countryCode": "NZ",
       "region": "oceania",
@@ -364,7 +371,7 @@
       "creativeBrief": "Один путешественник пересекает подвесной мост в альпийской долине, прохладный утренний свет."
     },
     {
-      "planOrder": 5,
+      "planOrder": 4,
       "id": "buy-esim-brazil-flexible-rio",
       "countryCode": "BR",
       "region": "south-america",
@@ -377,7 +384,7 @@
       "creativeBrief": "Утренний пляж Рио с бегунами и велосипедами, гора растворяется в лёгкой дымке."
     },
     {
-      "planOrder": 6,
+      "planOrder": 5,
       "id": "montreal-shoulder-season-neighbourhoods",
       "countryCode": "CA",
       "region": "north-america",
@@ -390,7 +397,7 @@
       "creativeBrief": "Велосипедист у наружной лестницы и тёплого окна пекарни, первые осенние листья."
     },
     {
-      "planOrder": 7,
+      "planOrder": 6,
       "id": "buy-esim-usa-road-trip",
       "countryCode": "US",
       "region": "north-america",
@@ -403,7 +410,7 @@
       "creativeBrief": "Автомобиль на дороге среди красных скал, человек сверяет бумажную карту у открытого багажника."
     },
     {
-      "planOrder": 8,
+      "planOrder": 7,
       "id": "jaipur-craft-route",
       "countryCode": "IN",
       "region": "south-asia",
@@ -416,7 +423,7 @@
       "creativeBrief": "Мастер наносит деревянный штамп на ткань цвета индиго, руки и фактура крупным планом."
     },
     {
-      "planOrder": 9,
+      "planOrder": 8,
       "id": "buy-esim-france-paris-small-city",
       "countryCode": "FR",
       "region": "western-europe",
@@ -429,7 +436,7 @@
       "creativeBrief": "Утренняя платформа небольшого французского города, чемодан, старые часы и мягкий туман."
     },
     {
-      "planOrder": 10,
+      "planOrder": 9,
       "id": "santiago-valparaiso-choose-rhythm",
       "countryCode": "CL",
       "region": "south-america",
