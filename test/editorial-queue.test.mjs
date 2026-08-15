@@ -41,7 +41,9 @@ test("исправления опубликованного материала �
   assert.equal(policy.production.publishedCorrectionFlow.publishImmediatelyAfterValidation, true);
   assert.equal(policy.production.publishedCorrectionFlow.notifyOwnerWhenReadyForResync, true);
   assert.equal(policy.production.publishedCorrectionFlow.versionCoverAssetUrlOnCorrection, true);
-  assert.equal(policy.production.publishedCorrectionFlow.resyncBehavior, "update_existing_item_without_duplicate");
+  assert.equal(policy.production.publishedCorrectionFlow.resyncBehavior, "update_existing_item_without_duplicate_for_confirmed_text_changes");
+  assert.equal(policy.production.publishedCorrectionFlow.existingCoverBehavior, "rss_resync_does_not_refresh_yotti_cover");
+  assert.equal(policy.production.publishedCorrectionFlow.coverCorrectionCompletionGate, "verify_yotti_card_or_require_admin_or_importer_fix");
 });
 
 test("блокирует нарушение чередования ближайшего плана", () => {
