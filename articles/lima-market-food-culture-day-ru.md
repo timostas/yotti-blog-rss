@@ -13,9 +13,9 @@ sources:
   - "https://www.peru.travel/gastronomy/en/peruvian-cuisine/cuisine-of-lima.html"
   - "https://yotti.net/esim/peru"
 cover:
-  url: "https://timostas.github.io/yotti-blog-rss/assets/covers/lima-market-food-culture-day.png"
+  url: "https://timostas.github.io/yotti-blog-rss/assets/covers/lima-market-food-culture-day-v2.png"
   type: "image/png"
-  alt: "Продавец раскладывает перуанские сорта картофеля и кукурузы на рыночном прилавке в Лиме"
+  alt: "Трое друзей делятся блюдами перуанской кухни за длинным столом на террасе в Лиме"
 published: true
 ---
 
