@@ -96,6 +96,77 @@ export function validateEditorialQueue(policy, queue) {
     }
   }
 
+  const plannedPublications = queue.plannedPublications ?? [];
+  if (!Array.isArray(plannedPublications)) {
+    errors.push("content/queue.json: plannedPublications должен быть массивом");
+  } else if (plannedPublications.length > 0) {
+    const countryCodes = new Set();
+    const planIds = new Set(ids);
+    const planOrders = new Set();
+    const allCreativeConcepts = new Set(queue.items
+      .map((item) => item.creativeConceptKey?.trim().toLowerCase())
+      .filter(Boolean));
+    const sortedPlan = [...plannedPublications].sort((a, b) => a.planOrder - b.planOrder);
+
+    for (const [index, item] of sortedPlan.entries()) {
+      const label = item?.id || `plannedPublications[${index}]`;
+      const expectedOrder = index + 1;
+      if (!Number.isInteger(item?.planOrder) || item.planOrder < 1 || planOrders.has(item.planOrder)) {
+        errors.push(`${label}: planOrder должен быть уникальным положительным целым числом`);
+      } else {
+        planOrders.add(item.planOrder);
+        if (item.planOrder !== expectedOrder) errors.push(`${label}: план должен иметь непрерывный порядок от 1`);
+      }
+      if (typeof item?.id !== "string" || !/^[a-z0-9]+(?:-[a-z0-9]+)*$/.test(item.id) || planIds.has(item.id)) {
+        errors.push(`${label}: id плана должен быть уникальным slug`);
+      } else {
+        planIds.add(item.id);
+      }
+      if (typeof item?.countryCode !== "string" || !/^[A-Z]{2}$/.test(item.countryCode) || countryCodes.has(item.countryCode)) {
+        errors.push(`${label}: countryCode должен быть уникальным ISO-кодом`);
+      } else {
+        countryCodes.add(item.countryCode);
+      }
+      if (typeof item?.region !== "string" || item.region.trim() === "") errors.push(`${label}: region обязателен`);
+      const expectedKind = expectedOrder % 2 === 1 ? "buy-esim" : "editorial";
+      if (item?.planKind !== expectedKind) errors.push(`${label}: нарушено обязательное чередование buy-esim/editorial`);
+      if (!policy.contentStrategy.formats.some((format) => format.key === item?.contentFormat)) {
+        errors.push(`${label}: неизвестный contentFormat`);
+      }
+      if (item?.planKind === "buy-esim" && item.contentFormat !== "connectivity-and-esim") {
+        errors.push(`${label}: buy-esim должен использовать connectivity-and-esim`);
+      }
+      if (item?.planKind === "editorial" && item.contentFormat === "connectivity-and-esim") {
+        errors.push(`${label}: информационная статья не должна быть connectivity-led`);
+      }
+      if (!item?.searchQuery?.ru?.toLowerCase().startsWith("купить есим для") && item?.planKind === "buy-esim") {
+        errors.push(`${label}: RU-запрос должен начинаться с «купить есим для»`);
+      }
+      if (!item?.searchQuery?.en?.toLowerCase().startsWith("buy esim for") && item?.planKind === "buy-esim") {
+        errors.push(`${label}: EN-запрос должен начинаться с «buy eSIM for»`);
+      }
+      for (const locale of policy.production.localesPerUnit) {
+        if (typeof item?.workingTitle?.[locale] !== "string" || item.workingTitle[locale].trim() === "") {
+          errors.push(`${label}: рабочий заголовок ${locale} обязателен`);
+        }
+      }
+      if (typeof item?.readerPromise !== "string" || item.readerPromise.trim() === "") errors.push(`${label}: readerPromise обязателен`);
+      if (typeof item?.creativeBrief !== "string" || item.creativeBrief.trim() === "") errors.push(`${label}: creativeBrief обязателен`);
+      const creativeKey = item?.creativeConceptKey?.trim().toLowerCase();
+      if (!creativeKey || allCreativeConcepts.has(creativeKey)) {
+        errors.push(`${label}: creativeConceptKey должен быть уникальным относительно очереди и плана`);
+      } else {
+        allCreativeConcepts.add(creativeKey);
+      }
+    }
+
+    for (let index = 2; index < sortedPlan.length; index += 1) {
+      if (sortedPlan[index].region === sortedPlan[index - 1].region && sortedPlan[index].region === sortedPlan[index - 2].region) {
+        errors.push(`${sortedPlan[index].id}: регион повторяется более двух раз подряд`);
+      }
+    }
+  }
+
   return {
     errors,
     warnings,
@@ -103,6 +174,7 @@ export function validateEditorialQueue(policy, queue) {
       total: queue.items.length,
       active: queue.items.filter((item) => ACTIVE_STATUSES.has(item.status)).length,
       scheduled: queue.items.filter((item) => item.status === "scheduled").length,
+      planned: Array.isArray(plannedPublications) ? plannedPublications.length : 0,
     },
   };
 }
@@ -114,6 +186,7 @@ export function renderQueueReport(result) {
     `- Всего: ${result.summary.total ?? 0}`,
     `- В работе: ${result.summary.active ?? 0}`,
     `- Запланировано: ${result.summary.scheduled ?? 0}`,
+    `- В плане публикаций: ${result.summary.planned ?? 0}`,
     `- Ошибок: ${result.errors.length}`,
     `- Предупреждений: ${result.warnings.length}`,
   ];

@@ -27,15 +27,15 @@
   "contentStrategy": {
     "commercialGoal": "qualified_esim_traffic",
     "countryRotationWindowUnits": 14,
-    "maximumConnectivityLedUnitsPerFive": 1,
+    "maximumConnectivityLedUnitsPerFive": 3,
     "maximumSameRegionInARow": 2,
     "formats": [
-      { "key": "destination-inspiration", "share": 25 },
-      { "key": "route-or-itinerary", "share": 20 },
-      { "key": "culture-food-or-local-experience", "share": 20 },
-      { "key": "seasonal-trip-ideas", "share": 15 },
-      { "key": "practical-travel-scenario", "share": 10 },
-      { "key": "connectivity-and-esim", "share": 10 }
+      { "key": "destination-inspiration", "share": 10 },
+      { "key": "route-or-itinerary", "share": 10 },
+      { "key": "culture-food-or-local-experience", "share": 15 },
+      { "key": "seasonal-trip-ideas", "share": 10 },
+      { "key": "practical-travel-scenario", "share": 5 },
+      { "key": "connectivity-and-esim", "share": 50 }
     ],
     "avoidByDefault": [
       "breaking_news",
