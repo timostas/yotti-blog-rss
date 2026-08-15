@@ -42,7 +42,7 @@ test("блокирует слабый материал и лишнюю попы�
 
 test("разрешает Sol для ежедневной редакторской работы", () => {
   const result = validateEditorialQueue(policy, { schemaVersion: 1, items: [item({
-    model: { name: "gpt-5.6-sol", effort: "medium" },
+    model: { name: "gpt-5.6-sol", effort: "high" },
   })] });
   assert.deepEqual(result.errors, []);
 });
