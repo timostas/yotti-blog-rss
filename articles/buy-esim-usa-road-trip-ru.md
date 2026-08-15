@@ -15,7 +15,7 @@ sources:
 cover:
   url: "https://timostas.github.io/yotti-blog-rss/assets/covers/buy-esim-usa-road-trip.png"
   type: "image/png"
-  alt: "Путешественник сверяет бумажную карту у открытого багажника автомобиля на дороге среди красных скал США"
+  alt: "Путешественник с бумажной картой стоит у автомобиля на дороге среди красных скал США"
 published: true
 ---
 

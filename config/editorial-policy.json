@@ -12,6 +12,12 @@
     "maximumPublishedPagesPerDay": null,
     "frequencyLimitMode": "temporarily_unlimited_by_owner",
     "publicationGate": "manual_yotti_admin_sync",
+    "publishedCorrectionFlow": {
+      "preserveSlugAndFeedLink": true,
+      "publishImmediatelyAfterValidation": true,
+      "notifyOwnerWhenReadyForResync": true,
+      "resyncBehavior": "update_existing_item_without_duplicate"
+    },
     "exceptions": []
   },
   "contentStrategy": {

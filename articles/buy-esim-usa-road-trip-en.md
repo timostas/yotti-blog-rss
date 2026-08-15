@@ -15,7 +15,7 @@ sources:
 cover:
   url: "https://timostas.github.io/yotti-blog-rss/assets/covers/buy-esim-usa-road-trip.png"
   type: "image/png"
-  alt: "A traveller checking a paper map at the open boot of a car beside a red-rock road in the American Southwest"
+  alt: "A traveller holding a paper map beside a car on a red-rock road in the American Southwest"
 published: true
 ---
 
