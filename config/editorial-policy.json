@@ -66,6 +66,10 @@
     "conceptRotationWindowUnits": 10,
     "forbidTextAndThirdPartyLogos": true,
     "avoidGenericPhoneAsMainSubject": true,
+    "forbidBackFacingPersonAsPrimarySubject": true,
+    "forbidRearFacingVehicleAsPrimaryComposition": true,
+    "preferredHumanPresentation": ["face-visible", "three-quarter-view", "side-profile"],
+    "preferredVehicleAngles": ["front-three-quarter", "side-three-quarter", "side-profile"],
     "visualArchetypes": [
       "cinematic-landscape",
       "street-life",
