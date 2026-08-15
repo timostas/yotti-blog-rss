@@ -29,11 +29,11 @@ test("текущая редакционная очередь проходит п
   assert.deepEqual(result.errors, []);
 });
 
-test("политика блокирует закрытые задние ракурсы главных объектов", () => {
-  assert.equal(policy.creativeStrategy.forbidBackFacingPersonAsPrimarySubject, true);
-  assert.equal(policy.creativeStrategy.forbidRearFacingVehicleAsPrimaryComposition, true);
-  assert.ok(policy.creativeStrategy.preferredHumanPresentation.includes("face-visible"));
-  assert.ok(policy.creativeStrategy.preferredVehicleAngles.includes("front-three-quarter"));
+test("политика разрешает естественные позы людей и блокирует открытый багажник", () => {
+  assert.equal(policy.creativeStrategy.allowNaturalBackOrThreeQuarterHumanPose, true);
+  assert.equal(policy.creativeStrategy.forbidRearOpenTrunkAsPrimaryVehicleComposition, true);
+  assert.equal("forbidBackFacingPersonAsPrimarySubject" in policy.creativeStrategy, false);
+  assert.equal("forbidRearFacingVehicleAsPrimaryComposition" in policy.creativeStrategy, false);
 });
 
 test("блокирует нарушение чередования ближайшего плана", () => {
