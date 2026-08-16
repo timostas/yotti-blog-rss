@@ -538,6 +538,34 @@
         "ru": "2026-08-15T16:40:40Z",
         "en": "2026-08-15T16:40:40Z"
       }
+    },
+    {
+      "id": "buy-esim-malaysia-kuala-lumpur-george-town",
+      "topicKey": "malaysia-kuala-lumpur-george-town-two-city-travel-esim",
+      "status": "published",
+      "locales": ["ru", "en"],
+      "model": { "name": "gpt-5.6-sol", "effort": "high" },
+      "riskReasons": [],
+      "generationAttempts": { "ru": 1, "en": 1 },
+      "qualityRepairAttempts": 0,
+      "editorialStandardVersion": 2,
+      "editorialPasses": { "ru": 1, "en": 1 },
+      "scores": { "utility": 94, "originalValue": 94, "factSupport": 93 },
+      "creative": "assets/covers/buy-esim-malaysia-kuala-lumpur-george-town.png",
+      "creativeConceptKey": "george-town-rain-morning-trishaw-canopy-shophouses",
+      "creativeGeneration": { "model": "imagegen-built-in", "attempts": 1 },
+      "contentFormat": "connectivity-and-esim",
+      "planKind": "buy-esim",
+      "countryCode": "MY",
+      "region": "southeast-asia",
+      "searchQuery": { "ru": "купить есим для Малайзии", "en": "buy eSIM for Malaysia" },
+      "workingTitle": { "ru": "Купить есим для Малайзии: связь в Куала-Лумпуре и Джорджтауне", "en": "Buy an eSIM for Malaysia: Kuala Lumpur to George Town" },
+      "readerPromise": "Подготовить связь для двух разных прибытий — сначала в Куала-Лумпур, затем в пеший Джорджтаун — без зависимости от постоянной навигации.",
+      "creativeBrief": "После тропического дождя водитель велорикши поправляет навес на тихой улице Джорджтауна с историческими шопхаусами.",
+      "schedule": {
+        "ru": "2026-08-16T09:45:00Z",
+        "en": "2026-08-16T09:45:00Z"
+      }
     }
   ],
   "plannedPublications": []
