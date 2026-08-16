@@ -48,7 +48,9 @@ Workflow `.github/workflows/publish-rss.yml` собирает проект и п
 - `templates/content-plan.md` — таблица контент-плана на месяц.
 - `templates/country-research.md` — карточка исследования страны;
 - `templates/article-brief.md` — бриф до написания статьи;
-- `docs/editorial-quality-standard.md` — обязательный контроль качества.
+- `docs/editorial-quality-standard.md` — обязательный контроль качества;
+- `docs/research/esim-editorial-benchmark-2026-08.md` — сравнительный аудит
+  20 eSIM-продавцов, рабочие диапазоны объёма и метрики публикаций.
 
 Статью можно заранее сохранить в `main` с `published: true` и будущим
 `publishedAt`. До наступления указанного момента она не попадёт ни в RSS, ни в
