@@ -566,6 +566,51 @@
         "ru": "2026-08-16T09:45:00Z",
         "en": "2026-08-16T09:45:00Z"
       }
+    },
+    {
+      "id": "vienna-vineyards-autumn-walk",
+      "topicKey": "austria-vienna-nussdorf-kahlenberg-autumn-vineyard-walk",
+      "status": "published",
+      "locales": ["ru", "en"],
+      "model": { "name": "gpt-5.6-sol", "effort": "high" },
+      "riskReasons": [],
+      "generationAttempts": { "ru": 1, "en": 1 },
+      "qualityRepairAttempts": 0,
+      "editorialStandardVersion": 2,
+      "editorialPasses": { "ru": 1, "en": 1 },
+      "scores": { "utility": 93, "originalValue": 94, "factSupport": 93 },
+      "editorialScorecard": {
+        "ru": {
+          "total": 92,
+          "dimensions": { "intent": 14, "utility": 14, "specificity": 14, "trust": 13, "voice": 13, "structure": 9, "technical": 10, "commercialRestraint": 5 },
+          "weakestDimensions": ["trust-and-evidence", "human-editorial-voice"]
+        },
+        "en": {
+          "total": 92,
+          "dimensions": { "intent": 14, "utility": 14, "specificity": 14, "trust": 13, "voice": 13, "structure": 9, "technical": 10, "commercialRestraint": 5 },
+          "weakestDimensions": ["trust-and-evidence", "human-editorial-voice"]
+        }
+      },
+      "editorialReview": {
+        "titleCandidatesEvaluated": { "ru": 5, "en": 5 },
+        "changeMade": "Leads and endings were rewritten for a direct route answer; promotional and essay-like transitions were removed without adding facts.",
+        "lengthRationale": { "ru": "The focused 11 km route, two shortening choices and offline preparation are fully answered without padding below 900 words." }
+      },
+      "creative": "assets/covers/vienna-vineyards-autumn-walk.png",
+      "creativeConceptKey": "vienna-nussberg-autumn-grape-harvest-city-panorama",
+      "creativeGeneration": { "model": "imagegen-built-in", "attempts": 1 },
+      "contentFormat": "seasonal-trip-ideas",
+      "planKind": "editorial",
+      "countryCode": "AT",
+      "region": "central-europe",
+      "searchQuery": { "ru": "виноградники Вены осенью маршрут", "en": "Vienna vineyards autumn walk" },
+      "workingTitle": { "ru": "Виноградники Вены осенью: прогулка из Нуссдорфа через Каленберг", "en": "An autumn walk through Vienna’s vineyards: Nussdorf and Kahlenberg" },
+      "readerPromise": "Один осенний день на городском маршруте № 1: полный круг через Каленберг, два разумных сокращения и связь только для меняющихся деталей.",
+      "creativeBrief": "Сборщица винограда идёт между осенними лозами на Нуссберге; вдали в мягком утреннем свете видны Дунай и панорама Вены.",
+      "schedule": {
+        "ru": "2026-08-17T09:10:00Z",
+        "en": "2026-08-17T09:10:00Z"
+      }
     }
   ],
   "plannedPublications": []
