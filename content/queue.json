@@ -611,6 +611,54 @@
         "ru": "2026-08-17T09:10:00Z",
         "en": "2026-08-17T09:10:00Z"
       }
+    },
+    {
+      "id": "buy-esim-singapore-kampong-gelam",
+      "topicKey": "singapore-bugis-kampong-gelam-walking-day-travel-esim",
+      "status": "published",
+      "locales": ["ru", "en"],
+      "model": { "name": "gpt-5.6-sol", "effort": "high" },
+      "riskReasons": [],
+      "generationAttempts": { "ru": 1, "en": 1 },
+      "qualityRepairAttempts": 0,
+      "editorialStandardVersion": 2,
+      "editorialPasses": { "ru": 1, "en": 1 },
+      "scores": { "utility": 93, "originalValue": 92, "factSupport": 93 },
+      "editorialScorecard": {
+        "ru": {
+          "total": 92,
+          "dimensions": { "intent": 15, "utility": 14, "specificity": 13, "trust": 13, "voice": 13, "structure": 9, "technical": 10, "commercialRestraint": 5 },
+          "weakestDimensions": ["local-specificity-and-original-value", "trust-and-evidence"]
+        },
+        "en": {
+          "total": 92,
+          "dimensions": { "intent": 15, "utility": 14, "specificity": 13, "trust": 13, "voice": 13, "structure": 9, "technical": 10, "commercialRestraint": 5 },
+          "weakestDimensions": ["local-specificity-and-original-value", "trust-and-evidence"]
+        }
+      },
+      "editorialReview": {
+        "titleCandidatesEvaluated": { "ru": 5, "en": 5 },
+        "changeMade": "Leads and endings were rewritten for a direct setup answer; staged contrasts and decorative closing language were removed without adding facts.",
+        "lengthRationale": {
+          "ru": "The focused setup, offline fallback, Kampong Gelam walk and first-line troubleshooting are fully answered without padding below 900 words.",
+          "en": "The focused setup, offline fallback, Kampong Gelam walk and first-line troubleshooting are fully answered without padding below 900 words."
+        }
+      },
+      "creative": "assets/covers/buy-esim-singapore-kampong-gelam.png",
+      "creativeConceptKey": "kampong-gelam-morning-cafe-shutters-sultan-mosque",
+      "creativeGeneration": { "model": "imagegen-built-in", "attempts": 1 },
+      "contentFormat": "connectivity-and-esim",
+      "planKind": "buy-esim",
+      "countryCode": "SG",
+      "region": "southeast-asia",
+      "searchQuery": { "ru": "купить есим для Сингапура", "en": "buy eSIM for Singapore" },
+      "workingTitle": { "ru": "Купить есим для Сингапура: связь от Бугиса до Кампонг-Глама", "en": "Buy an eSIM for Singapore: staying connected from Bugis to Kampong Gelam" },
+      "readerPromise": "Подготовить связь до вылета и провести первый самостоятельный день между Бугисом и Кампонг-Гламом, используя мобильные данные только для переходов и изменений.",
+      "creativeBrief": "Утром владелец небольшого кафе открывает деревянные ставни шопхауса в Кампонг-Гламе; в глубине улицы виден золотой купол мечети Султана.",
+      "schedule": {
+        "ru": "2026-08-18T09:00:00Z",
+        "en": "2026-08-18T09:00:00Z"
+      }
     }
   ],
   "plannedPublications": []
