@@ -659,6 +659,54 @@
         "ru": "2026-08-18T09:00:00Z",
         "en": "2026-08-18T09:00:00Z"
       }
+    },
+    {
+      "id": "tallinn-kalamaja-seafront-walk",
+      "topicKey": "estonia-tallinn-old-town-kalamaja-noblessner-walking-route",
+      "status": "published",
+      "locales": ["ru", "en"],
+      "model": { "name": "gpt-5.6-sol", "effort": "high" },
+      "riskReasons": [],
+      "generationAttempts": { "ru": 1, "en": 1 },
+      "qualityRepairAttempts": 0,
+      "editorialStandardVersion": 2,
+      "editorialPasses": { "ru": 1, "en": 1 },
+      "scores": { "utility": 93, "originalValue": 94, "factSupport": 93 },
+      "editorialScorecard": {
+        "ru": {
+          "total": 92,
+          "dimensions": { "intent": 14, "utility": 14, "specificity": 14, "trust": 13, "voice": 13, "structure": 9, "technical": 10, "commercialRestraint": 5 },
+          "weakestDimensions": ["trust-and-evidence", "human-editorial-voice"]
+        },
+        "en": {
+          "total": 92,
+          "dimensions": { "intent": 14, "utility": 14, "specificity": 14, "trust": 13, "voice": 13, "structure": 9, "technical": 10, "commercialRestraint": 5 },
+          "weakestDimensions": ["trust-and-evidence", "human-editorial-voice"]
+        }
+      },
+      "editorialReview": {
+        "titleCandidatesEvaluated": { "ru": 5, "en": 5 },
+        "changeMade": "Leads and endings were tightened for a direct half-day route; formulaic transitions and staged contrasts were removed without adding facts.",
+        "lengthRationale": {
+          "ru": "The compact route, two indoor-stop choices, waterfront finish and offline preparation are fully answered without padding below 900 words.",
+          "en": "The compact route, two indoor-stop choices, waterfront finish and offline preparation are fully answered without padding below 900 words."
+        }
+      },
+      "creative": "assets/covers/tallinn-kalamaja-seafront-walk.png",
+      "creativeConceptKey": "tallinn-kalamaja-blue-hour-red-tram-wooden-houses-seafront",
+      "creativeGeneration": { "model": "imagegen-built-in", "attempts": 1 },
+      "contentFormat": "route-or-itinerary",
+      "planKind": "editorial",
+      "countryCode": "EE",
+      "region": "northern-europe",
+      "searchQuery": { "ru": "Каламая Таллин маршрут к морю", "en": "Tallinn Kalamaja walk to seafront" },
+      "workingTitle": { "ru": "Каламая и Ноблесснер: прогулка из Старого города к морю", "en": "Beyond Tallinn Old Town: a walk through Kalamaja to the seafront" },
+      "readerPromise": "Полудневный маршрут от Старого города через Теллискиви и деревянные улицы Каламая к Лётной гавани и Ноблесснеру с одним осмысленным выбором в помещении.",
+      "creativeBrief": "Синий час после дождя в Каламая: красный трамвай проходит мимо деревянных домов, один пешеход идёт в сторону видимого в конце улицы моря.",
+      "schedule": {
+        "ru": "2026-08-19T09:05:00Z",
+        "en": "2026-08-19T09:05:00Z"
+      }
     }
   ],
   "plannedPublications": []
