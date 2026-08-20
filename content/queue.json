@@ -707,6 +707,54 @@
         "ru": "2026-08-19T09:05:00Z",
         "en": "2026-08-19T09:05:00Z"
       }
+    },
+    {
+      "id": "buy-esim-czechia-first-day-prague",
+      "topicKey": "czechia-prague-vinohrady-zizkov-first-day-travel-esim",
+      "status": "published",
+      "locales": ["ru", "en"],
+      "model": { "name": "gpt-5.6-sol", "effort": "high" },
+      "riskReasons": [],
+      "generationAttempts": { "ru": 1, "en": 1 },
+      "qualityRepairAttempts": 1,
+      "editorialStandardVersion": 2,
+      "editorialPasses": { "ru": 1, "en": 1 },
+      "scores": { "utility": 93, "originalValue": 93, "factSupport": 92 },
+      "editorialScorecard": {
+        "ru": {
+          "total": 92,
+          "dimensions": { "intent": 15, "utility": 14, "specificity": 13, "trust": 13, "voice": 13, "structure": 9, "technical": 10, "commercialRestraint": 5 },
+          "weakestDimensions": ["local-specificity-and-original-value", "trust-and-evidence"]
+        },
+        "en": {
+          "total": 92,
+          "dimensions": { "intent": 15, "utility": 14, "specificity": 13, "trust": 13, "voice": 13, "structure": 9, "technical": 10, "commercialRestraint": 5 },
+          "weakestDimensions": ["local-specificity-and-original-value", "trust-and-evidence"]
+        }
+      },
+      "editorialReview": {
+        "titleCandidatesEvaluated": { "ru": 5, "en": 5 },
+        "changeMade": "Leads, headings and endings were rewritten for direct first-day decisions; staged contrasts and decorative summaries were removed without adding facts.",
+        "lengthRationale": {
+          "ru": "The focused setup, offline arrival note, four-kilometre Prague walk and first-line troubleshooting are fully answered without padding below 900 words.",
+          "en": "The setup, offline arrival note, neighbourhood walk and troubleshooting are fully answered in the focused practical range."
+        }
+      },
+      "creative": "assets/covers/buy-esim-czechia-first-day-prague.png",
+      "creativeConceptKey": "prague-vinohrady-courtyard-geraniums-zizkov-tower-arch",
+      "creativeGeneration": { "model": "imagegen-built-in", "attempts": 1 },
+      "contentFormat": "connectivity-and-esim",
+      "planKind": "buy-esim",
+      "countryCode": "CZ",
+      "region": "central-europe",
+      "searchQuery": { "ru": "купить есим для Чехии", "en": "buy eSIM for Czechia" },
+      "workingTitle": { "ru": "Купить есим для Чехии: связь в первый день в Праге", "en": "Buy an eSIM for Czechia: staying connected on your first day in Prague" },
+      "readerPromise": "Подготовить связь до поездки и провести первый день в Праге от прибытия до прогулки по Виноградам и Жижкову без постоянной зависимости от карты.",
+      "creativeBrief": "После короткого дождя жительница Праги поливает красную герань во дворе Виноградов; историческая арка обрамляет Жижковскую телебашню над крышами.",
+      "schedule": {
+        "ru": "2026-08-20T11:55:00Z",
+        "en": "2026-08-20T11:55:00Z"
+      }
     }
   ],
   "plannedPublications": []
