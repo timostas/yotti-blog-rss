@@ -755,6 +755,50 @@
         "ru": "2026-08-20T11:55:00Z",
         "en": "2026-08-20T11:55:00Z"
       }
+    },
+    {
+      "id": "kanazawa-omicho-market-morning",
+      "topicKey": "japan-kanazawa-omicho-working-market-food-morning",
+      "status": "published",
+      "locales": ["ru", "en"],
+      "model": { "name": "gpt-5.6-sol", "effort": "high" },
+      "riskReasons": [],
+      "generationAttempts": { "ru": 1, "en": 1 },
+      "qualityRepairAttempts": 0,
+      "editorialStandardVersion": 2,
+      "editorialPasses": { "ru": 1, "en": 1 },
+      "scores": { "utility": 91, "originalValue": 92, "factSupport": 91 },
+      "editorialScorecard": {
+        "ru": {
+          "total": 91,
+          "dimensions": { "intent": 14, "utility": 14, "specificity": 14, "trust": 13, "voice": 13, "structure": 9, "technical": 9, "commercialRestraint": 5 },
+          "weakestDimensions": ["trust-and-evidence", "human-editorial-voice"]
+        },
+        "en": {
+          "total": 91,
+          "dimensions": { "intent": 14, "utility": 14, "specificity": 14, "trust": 13, "voice": 13, "structure": 9, "technical": 9, "commercialRestraint": 5 },
+          "weakestDimensions": ["trust-and-evidence", "human-editorial-voice"]
+        }
+      },
+      "editorialReview": {
+        "titleCandidatesEvaluated": { "ru": 5, "en": 5 },
+        "changeMade": "Titles, leads, navigation headings and directive phrasing were rewritten for a direct market visit; repeated contrasts and decorative endings were removed without adding facts."
+      },
+      "creative": "assets/covers/kanazawa-omicho-market-morning.png",
+      "creativeConceptKey": "kanazawa-omicho-fishmonger-silver-fish-morning-shopper-diagonal",
+      "creativeGeneration": { "model": "imagegen-built-in", "attempts": 1 },
+      "contentFormat": "culture-food-or-local-experience",
+      "planKind": "editorial",
+      "countryCode": "JP",
+      "region": "east-asia",
+      "searchQuery": { "ru": "рынок Омичо Канадзава как провести утро", "en": "Omicho Market Kanazawa morning guide" },
+      "workingTitle": { "ru": "Рынок Омичо в Канадзаве: как провести утро", "en": "A morning at Omicho Market in Kanazawa" },
+      "readerPromise": "Провести содержательное утро на работающем рынке: осмотреть ряды, выбрать одну дегустацию и понять местную кухню без списка обязательных блюд.",
+      "creativeBrief": "Утренний рынок Омичо: продавец раскладывает серебристую рыбу и овощи на диагональном прилавке, покупательница смотрит на выкладку вполоборота, мягкий свет проходит через крытую галерею.",
+      "schedule": {
+        "ru": "2026-08-21T09:10:00Z",
+        "en": "2026-08-21T09:10:00Z"
+      }
     }
   ],
   "plannedPublications": []
