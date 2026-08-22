@@ -17,6 +17,11 @@ function item(overrides = {}) {
     editorialStandardVersion: 2,
     editorialPasses: { ru: 1, en: 1 },
     scores: { utility: 85, originalValue: 82, factSupport: 95 },
+    intentMap: {
+      primary: { ru: "интернет в Турции", en: "internet in Turkey" },
+      cannibalizationDecision: "new-url: отдельное намерение не занято",
+    },
+    internalContextLinks: ["https://yotti.net/esim/turkey", "https://yotti.net/blog"],
     creative: "assets/covers/internet-in-turkey.jpg",
     creativeConceptKey: "turkey-street-food-at-blue-hour",
     contentFormat: "culture-food-or-local-experience",
@@ -36,11 +41,12 @@ test("политика разрешает естественные позы лю
   assert.equal("forbidRearFacingVehicleAsPrimaryComposition" in policy.creativeStrategy, false);
 });
 
-test("плановый режим разрешает одну двуязычную единицу в день", () => {
-  assert.equal(policy.production.targetContentUnitsPerDay, 1);
-  assert.equal(policy.production.maximumPublishedPagesPerDay, 2);
-  assert.equal(policy.production.frequencyLimitMode, "one_bilingual_content_unit_per_day");
-  assert.equal(policy.production.frequencyLimitEffectiveFrom, "2026-08-16");
+test("ускоренный поисковый цикл разрешает две двуязычные единицы в день", () => {
+  assert.equal(policy.production.targetContentUnitsPerDay, 2);
+  assert.equal(policy.production.maximumPublishedPagesPerDay, 4);
+  assert.equal(policy.production.frequencyLimitMode, "two_bilingual_search_units_per_day_controlled_sprint");
+  assert.equal(policy.production.frequencyLimitEffectiveFrom, "2026-08-22");
+  assert.deepEqual(policy.production.dailyPublicationTimes, ["12:00", "18:30"]);
   assert.deepEqual(policy.production.localesPerUnit, ["ru", "en"]);
 });
 
@@ -66,11 +72,11 @@ test("блокирует нарушение чередования ближай�
     },
     {
       planOrder: 2,
-      id: "second-editorial-topic",
-      countryCode: "CL",
-      region: "south-america",
-      planKind: "editorial",
-      contentFormat: "destination-inspiration",
+      id: "second-search-support-topic",
+      scope: "global",
+      region: "global",
+      planKind: "search-support",
+      contentFormat: "connectivity-and-esim",
     },
   ];
   plannedPublications[1].planKind = plannedPublications[0].planKind;
@@ -104,6 +110,14 @@ test("блокирует готовый материал без отдельно
   delete candidate.editorialPasses;
   const result = validateEditorialQueue(policy, { schemaVersion: 1, items: [candidate] });
   assert.match(result.errors.join("\n"), /редакторский проход для ru.*редакторский проход для en/s);
+});
+
+test("блокирует готовый материал без карты интента и внутренних переходов", () => {
+  const candidate = item();
+  delete candidate.intentMap;
+  delete candidate.internalContextLinks;
+  const result = validateEditorialQueue(policy, { schemaVersion: 1, items: [candidate] });
+  assert.match(result.errors.join("\n"), /intentMap\.primary\.ru.*intentMap\.primary\.en.*cannibalizationDecision.*внутренние ссылки/s);
 });
 
 test("не разрешает повторять концепцию обложки", () => {
