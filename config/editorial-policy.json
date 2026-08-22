@@ -74,7 +74,17 @@
     "requireTroubleshootingDecisionTreeWhenRelevant": true,
     "maximumBlockingReviewMinutes": 4,
     "requireNaturalLocalization": true,
-    "rejectMechanicalTranslation": true
+    "rejectMechanicalTranslation": true,
+    "technicalArticleGates": {
+      "minimumDistinctDecisionBranches": 3,
+      "requireDeviceBranchWhenApplicable": true,
+      "requireSafeFailurePath": true,
+      "requireActionableVerificationStep": true,
+      "requireUniqueReaderOutcome": true,
+      "forbidSharedTemplateSectionsAcrossBatch": ["lead", "faq", "conclusion"],
+      "requireNeighborIntentComparison": true,
+      "requireEvidenceForDeviceOrOperatorClaims": true
+    }
   },
   "creativeStrategy": {
     "aspectRatio": "16:9",
