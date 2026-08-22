@@ -5,13 +5,14 @@
     "horizonDays": 90
   },
   "production": {
-    "targetContentUnitsPerDay": 1,
-    "dailyPublicationTime": "12:00",
+    "targetContentUnitsPerDay": 2,
+    "dailyPublicationTimes": ["12:00", "18:30"],
     "dailyPublicationTimezone": "Europe/Moscow",
     "localesPerUnit": ["ru", "en"],
-    "maximumPublishedPagesPerDay": 2,
-    "frequencyLimitMode": "one_bilingual_content_unit_per_day",
-    "frequencyLimitEffectiveFrom": "2026-08-16",
+    "maximumPublishedPagesPerDay": 4,
+    "frequencyLimitMode": "two_bilingual_search_units_per_day_controlled_sprint",
+    "frequencyLimitEffectiveFrom": "2026-08-22",
+    "accelerationReviewAfterUnits": 20,
     "publicationGate": "manual_yotti_admin_sync",
     "publishedCorrectionFlow": {
       "preserveSlugAndFeedLink": true,
@@ -27,7 +28,7 @@
   "contentStrategy": {
     "commercialGoal": "qualified_esim_traffic",
     "countryRotationWindowUnits": 14,
-    "maximumConnectivityLedUnitsPerFive": 3,
+    "maximumConnectivityLedUnitsPerFive": 5,
     "maximumSameRegionInARow": 2,
     "formats": [
       { "key": "destination-inspiration", "share": 10 },
@@ -66,6 +67,10 @@
     "minimumUtilityScore": 80,
     "minimumOriginalValueScore": 80,
     "minimumFactSupportScore": 80,
+    "minimumInternalContextLinks": 2,
+    "requireIntentMapBeforeDraft": true,
+    "requireQueryCannibalizationCheck": true,
+    "requireTroubleshootingDecisionTreeWhenRelevant": true,
     "maximumBlockingReviewMinutes": 4,
     "requireNaturalLocalization": true,
     "rejectMechanicalTranslation": true
