@@ -803,7 +803,7 @@
   ],
   "plannedPublications": [
     {
-      "planOrder": 1,
+      "planOrder": 5,
       "id": "buy-esim-thailand-island-arrival",
       "countryCode": "TH",
       "region": "southeast-asia",
@@ -817,7 +817,7 @@
       "creativeBrief": "Раннее утро у канала в Таиланде: длиннохвостая лодка везёт корзины с цветами к небольшому рынку, тёплый свет и спокойная вода."
     },
     {
-      "planOrder": 2,
+      "planOrder": 20,
       "id": "install-esim-before-travel",
       "scope": "global",
       "region": "global",
@@ -831,7 +831,7 @@
       "creativeBrief": "Светлый стол у окна перед поездкой: бумажная карта, паспорт и сложенный маршрут, мягкий утренний свет, без телефона как главного объекта."
     },
     {
-      "planOrder": 3,
+      "planOrder": 9,
       "id": "buy-esim-china-first-day",
       "countryCode": "CN",
       "region": "east-asia",
@@ -859,18 +859,18 @@
       "creativeBrief": "Пассажирка в пол-оборота у окна аэропорта смотрит на дождливую взлётную полосу, спокойная реалистичная сцена ожидания без экрана в кадре."
     },
     {
-      "planOrder": 5,
-      "id": "buy-esim-indonesia-bali-beyond",
-      "countryCode": "ID",
-      "region": "southeast-asia",
+      "planOrder": 13,
+      "id": "buy-esim-belarus-minsk-first-days",
+      "countryCode": "BY",
+      "region": "eastern-europe",
       "planKind": "buy-esim",
       "contentFormat": "connectivity-and-esim",
-      "searchQuery": { "ru": "купить есим для Индонезии", "en": "buy eSIM for Indonesia" },
-      "semanticIntent": { "primary": "buy-esim-country", "secondary": ["eSIM Бали", "интернет в Индонезии для туристов", "eSIM для Бали"] },
-      "workingTitle": { "ru": "Купить есим для Индонезии: интернет для Бали и поездки дальше", "en": "Buy an eSIM for Indonesia: staying connected in Bali and beyond" },
-      "readerPromise": "Спланировать интернет для первой базы на Бали и дальнейшей поездки, заранее проверить настройки и не превращать статью в общий гид по острову.",
-      "creativeConceptKey": "indonesia-ferry-deck-volcano-horizon-morning",
-      "creativeBrief": "Палуба небольшого индонезийского парома ранним утром, вдали вулканический силуэт, несколько пассажиров стоят вполоборота у борта."
+      "searchQuery": { "ru": "купить есим для Беларуси", "en": "buy eSIM for Belarus" },
+      "semanticIntent": { "primary": "buy-esim-country", "secondary": ["eSIM Беларусь", "интернет в Беларуси", "eSIM Минск"] },
+      "workingTitle": { "ru": "Купить есим для Беларуси: связь в первые дни в Минске", "en": "Buy an eSIM for Belarus: staying connected in your first days in Minsk" },
+      "readerPromise": "Подготовить связь для прибытия, города и коротких выездов, сохранив основной номер для сообщений и кодов.",
+      "creativeConceptKey": "minsk-morning-tram-wide-avenue-rain-reflection",
+      "creativeBrief": "Раннее утро в Минске после дождя: трамвай на широком проспекте, отражения на мостовой и прохожий в пол-оборота."
     },
     {
       "planOrder": 6,
@@ -888,17 +888,17 @@
     },
     {
       "planOrder": 7,
-      "id": "buy-esim-italy-train-trip",
-      "countryCode": "IT",
-      "region": "southern-europe",
+      "id": "buy-esim-azerbaijan-baku-absheron",
+      "countryCode": "AZ",
+      "region": "caucasus",
       "planKind": "buy-esim",
       "contentFormat": "connectivity-and-esim",
-      "searchQuery": { "ru": "купить есим для Италии", "en": "buy eSIM for Italy" },
-      "semanticIntent": { "primary": "buy-esim-country", "secondary": ["eSIM Италия", "интернет в Италии для туристов", "eSIM Рим Флоренция"] },
-      "workingTitle": { "ru": "Купить есим для Италии: интернет между Римом, Флоренцией и поездом", "en": "Buy an eSIM for Italy: staying connected between Rome, Florence and the train" },
-      "readerPromise": "Подготовить связь для поездки между городами: карты, билеты, жильё и связь с хозяином без неподтверждённых сравнений операторов.",
-      "creativeConceptKey": "italy-regional-train-window-olive-hills-afternoon",
-      "creativeBrief": "Вид из окна регионального поезда на оливковые холмы Италии, в отражении видна пассажирка в профиль, тёплый дневной свет."
+      "searchQuery": { "ru": "купить есим для Азербайджана", "en": "buy eSIM for Azerbaijan" },
+      "semanticIntent": { "primary": "buy-esim-country", "secondary": ["eSIM Азербайджан", "интернет в Азербайджане", "eSIM Баку"] },
+      "workingTitle": { "ru": "Купить есим для Азербайджана: связь в Баку и на Апшероне", "en": "Buy an eSIM for Azerbaijan: staying connected in Baku and on the Absheron Peninsula" },
+      "readerPromise": "Подготовить интернет для первого дня в Баку и короткой поездки по полуострову, с ясной настройкой и запасом для навигации.",
+      "creativeConceptKey": "baku-old-stone-alley-caspian-wind-blue-hour",
+      "creativeBrief": "Синий час в старом Баку: каменная улица, лёгкий ветер с Каспия, прохожая идёт вполоборота, мягкие огни лавок."
     },
     {
       "planOrder": 8,
@@ -915,7 +915,7 @@
       "creativeBrief": "Светлый вокзальный зал с табло вдалеке и небольшим чемоданом у колонны, путешественник идёт боком к платформе, без телефона в кадре."
     },
     {
-      "planOrder": 9,
+      "planOrder": 1,
       "id": "buy-esim-georgia-tbilisi-kakheti",
       "countryCode": "GE",
       "region": "caucasus",
@@ -943,7 +943,7 @@
       "creativeBrief": "Два путешественника за столиком у окна кафе смотрят в бумажную карту и блокнот, естественная совместная подготовка маршрута."
     },
     {
-      "planOrder": 11,
+      "planOrder": 3,
       "id": "buy-esim-kazakhstan-almaty-road",
       "countryCode": "KZ",
       "region": "central-asia",
@@ -971,7 +971,7 @@
       "creativeBrief": "Тихий холл небольшого отеля с естественным светом и табличкой Wi‑Fi в глубине кадра, путешественник сидит боком с папкой документов."
     },
     {
-      "planOrder": 13,
+      "planOrder": 11,
       "id": "buy-esim-japan-city-to-onsen",
       "countryCode": "JP",
       "region": "east-asia",
@@ -985,7 +985,7 @@
       "creativeBrief": "Небольшая японская станция в предвечернем свете, норэн у входа в лавку, путешественник ждёт поезд вполоборота."
     },
     {
-      "planOrder": 14,
+      "planOrder": 2,
       "id": "check-phone-esim-support",
       "scope": "global",
       "region": "global",
@@ -1013,7 +1013,7 @@
       "creativeBrief": "Каменные ступени к сеноту на Юкатане, солнечные лучи через зелень, путешественник спускается вполоборота, свежая документальная композиция."
     },
     {
-      "planOrder": 16,
+      "planOrder": 14,
       "id": "two-esim-and-physical-sim",
       "scope": "global",
       "region": "global",
@@ -1041,7 +1041,7 @@
       "creativeBrief": "Небольшая станция на португальском побережье: азулежу на стене, поезд вдали, поздний мягкий свет и путешественница в профиль."
     },
     {
-      "planOrder": 18,
+      "planOrder": 16,
       "id": "move-esim-to-new-phone",
       "scope": "global",
       "region": "global",
@@ -1069,7 +1069,7 @@
       "creativeBrief": "Утро у арки в индийском городе: рикша проходит сбоку, синий фасад и мягкий свет, живой городской кадр без рекламной постановки."
     },
     {
-      "planOrder": 20,
+      "planOrder": 18,
       "id": "when-travel-esim-starts",
       "scope": "global",
       "region": "global",
