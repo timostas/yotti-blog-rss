@@ -5,30 +5,89 @@
       "id": "mexico-city-first-trip-2026",
       "topicKey": "mexico-city-first-time-historic-center-chapultepec-coyoacan",
       "status": "published",
-      "locales": ["ru", "en"],
-      "model": { "name": "gpt-5.6-sol", "effort": "high" },
-      "riskReasons": ["owner_requested_manual_run"],
-      "generationAttempts": { "ru": 1, "en": 1 },
+      "locales": [
+        "ru",
+        "en"
+      ],
+      "model": {
+        "name": "gpt-5.6-sol",
+        "effort": "high"
+      },
+      "riskReasons": [
+        "owner_requested_manual_run"
+      ],
+      "generationAttempts": {
+        "ru": 1,
+        "en": 1
+      },
       "qualityRepairAttempts": 0,
-      "scores": { "utility": 91, "originalValue": 90, "factSupport": 89 },
+      "scores": {
+        "utility": 91,
+        "originalValue": 90,
+        "factSupport": 89
+      },
       "creative": "assets/covers/mexico-city-first-trip-2026.png",
       "creativeConceptKey": "mexico-city-golden-morning-historic-center-map-coffee-stand",
       "contentFormat": "destination-inspiration",
-      "schedule": { "ru": "2026-08-15T08:24:00Z", "en": "2026-08-15T08:24:00Z" }
+      "schedule": {
+        "ru": "2026-08-15T08:24:00Z",
+        "en": "2026-08-15T08:24:00Z"
+      }
     },
     {
-      "id": "bali-neighbourhoods-2026", "topicKey": "bali-first-trip-choose-area", "status": "published", "locales": ["ru", "en"], "model": { "name": "gpt-5.6-terra", "effort": "low" }, "riskReasons": [], "generationAttempts": { "ru": 1, "en": 1 }, "qualityRepairAttempts": 0, "scores": { "utility": 90, "originalValue": 88, "factSupport": 90 }, "creative": "assets/covers/bali-neighbourhoods-2026.png", "creativeConceptKey": "ubud-morning-rice-terrace-offering-path", "contentFormat": "practical-travel-scenario", "schedule": { "ru": "2026-08-14T16:00:00Z", "en": "2026-08-14T16:00:00Z" }
+      "id": "bali-neighbourhoods-2026",
+      "topicKey": "bali-first-trip-choose-area",
+      "status": "published",
+      "locales": [
+        "ru",
+        "en"
+      ],
+      "model": {
+        "name": "gpt-5.6-terra",
+        "effort": "low"
+      },
+      "riskReasons": [],
+      "generationAttempts": {
+        "ru": 1,
+        "en": 1
+      },
+      "qualityRepairAttempts": 0,
+      "scores": {
+        "utility": 90,
+        "originalValue": 88,
+        "factSupport": 90
+      },
+      "creative": "assets/covers/bali-neighbourhoods-2026.png",
+      "creativeConceptKey": "ubud-morning-rice-terrace-offering-path",
+      "contentFormat": "practical-travel-scenario",
+      "schedule": {
+        "ru": "2026-08-14T16:00:00Z",
+        "en": "2026-08-14T16:00:00Z"
+      }
     },
     {
       "id": "internet-in-japan-2026",
       "topicKey": "japan-travel-internet-esim-setup",
       "status": "published",
-      "locales": ["ru", "en"],
-      "model": { "name": "gpt-5.6-terra", "effort": "medium" },
+      "locales": [
+        "ru",
+        "en"
+      ],
+      "model": {
+        "name": "gpt-5.6-terra",
+        "effort": "medium"
+      },
       "riskReasons": [],
-      "generationAttempts": { "ru": 1, "en": 1 },
+      "generationAttempts": {
+        "ru": 1,
+        "en": 1
+      },
       "qualityRepairAttempts": 0,
-      "scores": { "utility": 91, "originalValue": 86, "factSupport": 95 },
+      "scores": {
+        "utility": 91,
+        "originalValue": 86,
+        "factSupport": 95
+      },
       "creative": "assets/covers/internet-in-japan-2026.png",
       "creativeConceptKey": "japan-cinematic-railway-platform",
       "contentFormat": "connectivity-and-esim",
@@ -41,12 +100,25 @@
       "id": "internet-in-turkey-2026",
       "topicKey": "turkey-travel-internet-esim-imei-120-days",
       "status": "published",
-      "locales": ["ru", "en"],
-      "model": { "name": "gpt-5.6-terra", "effort": "medium" },
+      "locales": [
+        "ru",
+        "en"
+      ],
+      "model": {
+        "name": "gpt-5.6-terra",
+        "effort": "medium"
+      },
       "riskReasons": [],
-      "generationAttempts": { "ru": 1, "en": 1 },
+      "generationAttempts": {
+        "ru": 1,
+        "en": 1
+      },
       "qualityRepairAttempts": 0,
-      "scores": { "utility": 93, "originalValue": 91, "factSupport": 96 },
+      "scores": {
+        "utility": 93,
+        "originalValue": 91,
+        "factSupport": 96
+      },
       "creative": "assets/covers/internet-in-turkey-2026.png",
       "creativeConceptKey": "turkey-bosphorus-ferry-arrival",
       "contentFormat": "connectivity-and-esim",
@@ -59,12 +131,27 @@
       "id": "bangkok-night-markets-guide",
       "topicKey": "thailand-bangkok-night-markets-street-food-route",
       "status": "published",
-      "locales": ["ru", "en"],
-      "model": { "name": "gpt-5.6-sol", "effort": "low" },
-      "riskReasons": ["owner_requested_manual_run"],
-      "generationAttempts": { "ru": 1, "en": 1 },
+      "locales": [
+        "ru",
+        "en"
+      ],
+      "model": {
+        "name": "gpt-5.6-sol",
+        "effort": "low"
+      },
+      "riskReasons": [
+        "owner_requested_manual_run"
+      ],
+      "generationAttempts": {
+        "ru": 1,
+        "en": 1
+      },
       "qualityRepairAttempts": 0,
-      "scores": { "utility": 90, "originalValue": 92, "factSupport": 88 },
+      "scores": {
+        "utility": 90,
+        "originalValue": 92,
+        "factSupport": 88
+      },
       "creative": "assets/covers/bangkok-night-markets-guide.png",
       "creativeConceptKey": "bangkok-blue-hour-wok-street-life",
       "contentFormat": "culture-food-or-local-experience",
@@ -77,12 +164,25 @@
       "id": "rome-in-3-days-2026",
       "topicKey": "italy-rome-first-time-three-day-neighbourhood-itinerary",
       "status": "published",
-      "locales": ["ru", "en"],
-      "model": { "name": "gpt-5.6-terra", "effort": "low" },
+      "locales": [
+        "ru",
+        "en"
+      ],
+      "model": {
+        "name": "gpt-5.6-terra",
+        "effort": "low"
+      },
       "riskReasons": [],
-      "generationAttempts": { "ru": 1, "en": 1 },
+      "generationAttempts": {
+        "ru": 1,
+        "en": 1
+      },
       "qualityRepairAttempts": 0,
-      "scores": { "utility": 92, "originalValue": 89, "factSupport": 91 },
+      "scores": {
+        "utility": 92,
+        "originalValue": 89,
+        "factSupport": 91
+      },
       "creative": "assets/covers/rome-in-3-days-2026.png",
       "creativeConceptKey": "rome-dawn-fori-imperiali-walking-route",
       "contentFormat": "route-or-itinerary",
@@ -95,12 +195,25 @@
       "id": "georgia-food-route-2026",
       "topicKey": "georgia-food-route-tbilisi-kakheti-local-cuisine",
       "status": "published",
-      "locales": ["ru", "en"],
-      "model": { "name": "gpt-5.6-terra", "effort": "low" },
+      "locales": [
+        "ru",
+        "en"
+      ],
+      "model": {
+        "name": "gpt-5.6-terra",
+        "effort": "low"
+      },
       "riskReasons": [],
-      "generationAttempts": { "ru": 1, "en": 1 },
+      "generationAttempts": {
+        "ru": 1,
+        "en": 1
+      },
       "qualityRepairAttempts": 0,
-      "scores": { "utility": 90, "originalValue": 88, "factSupport": 92 },
+      "scores": {
+        "utility": 90,
+        "originalValue": 88,
+        "factSupport": 92
+      },
       "creative": "assets/covers/georgia-food-route-2026.png",
       "creativeConceptKey": "tbilisi-market-herbs-walnuts-churchkhela",
       "contentFormat": "culture-food-or-local-experience",
@@ -113,12 +226,25 @@
       "id": "portugal-first-trip-2026",
       "topicKey": "portugal-first-trip-lisbon-porto-coast",
       "status": "published",
-      "locales": ["ru", "en"],
-      "model": { "name": "gpt-5.6-terra", "effort": "low" },
+      "locales": [
+        "ru",
+        "en"
+      ],
+      "model": {
+        "name": "gpt-5.6-terra",
+        "effort": "low"
+      },
       "riskReasons": [],
-      "generationAttempts": { "ru": 1, "en": 1 },
+      "generationAttempts": {
+        "ru": 1,
+        "en": 1
+      },
       "qualityRepairAttempts": 0,
-      "scores": { "utility": 89, "originalValue": 87, "factSupport": 90 },
+      "scores": {
+        "utility": 89,
+        "originalValue": 87,
+        "factSupport": 90
+      },
       "creative": "assets/covers/portugal-first-trip-2026.png",
       "creativeConceptKey": "lisbon-azulejo-tram-atlantic-sunset",
       "contentFormat": "destination-inspiration",
@@ -131,12 +257,25 @@
       "id": "buy-esim-south-korea-first-days",
       "topicKey": "south-korea-first-days-seoul-travel-esim",
       "status": "published",
-      "locales": ["ru", "en"],
-      "model": { "name": "gpt-5.6-sol", "effort": "high" },
+      "locales": [
+        "ru",
+        "en"
+      ],
+      "model": {
+        "name": "gpt-5.6-sol",
+        "effort": "high"
+      },
       "riskReasons": [],
-      "generationAttempts": { "ru": 1, "en": 1 },
+      "generationAttempts": {
+        "ru": 1,
+        "en": 1
+      },
       "qualityRepairAttempts": 1,
-      "scores": { "utility": 92, "originalValue": 91, "factSupport": 90 },
+      "scores": {
+        "utility": 92,
+        "originalValue": 91,
+        "factSupport": 90
+      },
       "creative": "assets/covers/buy-esim-south-korea-first-days.png",
       "creativeConceptKey": "seoul-rainy-morning-hanok-modern-street-coffee",
       "contentFormat": "connectivity-and-esim",
@@ -149,12 +288,25 @@
       "id": "norway-summer-evening-slow-trip",
       "topicKey": "norway-bergen-long-summer-evening-slow-travel",
       "status": "published",
-      "locales": ["ru", "en"],
-      "model": { "name": "gpt-5.6-sol", "effort": "high" },
+      "locales": [
+        "ru",
+        "en"
+      ],
+      "model": {
+        "name": "gpt-5.6-sol",
+        "effort": "high"
+      },
       "riskReasons": [],
-      "generationAttempts": { "ru": 1, "en": 1 },
+      "generationAttempts": {
+        "ru": 1,
+        "en": 1
+      },
       "qualityRepairAttempts": 0,
-      "scores": { "utility": 91, "originalValue": 92, "factSupport": 90 },
+      "scores": {
+        "utility": 91,
+        "originalValue": 92,
+        "factSupport": 90
+      },
       "creative": "assets/covers/norway-summer-evening-slow-trip.png",
       "creativeConceptKey": "bergen-long-summer-evening-waterfront-solitary-kayak",
       "contentFormat": "seasonal-trip-ideas",
@@ -167,12 +319,25 @@
       "id": "buy-esim-morocco-medina",
       "topicKey": "morocco-marrakech-medina-first-day-travel-esim",
       "status": "published",
-      "locales": ["ru", "en"],
-      "model": { "name": "gpt-5.6-sol", "effort": "high" },
+      "locales": [
+        "ru",
+        "en"
+      ],
+      "model": {
+        "name": "gpt-5.6-sol",
+        "effort": "high"
+      },
       "riskReasons": [],
-      "generationAttempts": { "ru": 1, "en": 1 },
+      "generationAttempts": {
+        "ru": 1,
+        "en": 1
+      },
       "qualityRepairAttempts": 0,
-      "scores": { "utility": 92, "originalValue": 91, "factSupport": 90 },
+      "scores": {
+        "utility": 92,
+        "originalValue": 91,
+        "factSupport": 90
+      },
       "creative": "assets/covers/buy-esim-morocco-medina.png",
       "creativeConceptKey": "marrakech-dawn-medina-lantern-shop-opening",
       "contentFormat": "connectivity-and-esim",
@@ -185,12 +350,25 @@
       "id": "slovenia-two-base-green-route",
       "topicKey": "slovenia-ljubljana-bohinj-two-base-itinerary",
       "status": "published",
-      "locales": ["ru", "en"],
-      "model": { "name": "gpt-5.6-sol", "effort": "high" },
+      "locales": [
+        "ru",
+        "en"
+      ],
+      "model": {
+        "name": "gpt-5.6-sol",
+        "effort": "high"
+      },
       "riskReasons": [],
-      "generationAttempts": { "ru": 1, "en": 1 },
+      "generationAttempts": {
+        "ru": 1,
+        "en": 1
+      },
       "qualityRepairAttempts": 0,
-      "scores": { "utility": 92, "originalValue": 92, "factSupport": 90 },
+      "scores": {
+        "utility": 92,
+        "originalValue": 92,
+        "factSupport": 90
+      },
       "creative": "assets/covers/slovenia-two-base-green-route.png",
       "creativeConceptKey": "bohinj-dawn-wooden-boat-mountain-reflection",
       "contentFormat": "route-or-itinerary",
@@ -203,12 +381,25 @@
       "id": "buy-esim-greece-island-connection",
       "topicKey": "greece-athens-island-ferry-travel-esim",
       "status": "published",
-      "locales": ["ru", "en"],
-      "model": { "name": "gpt-5.6-sol", "effort": "high" },
+      "locales": [
+        "ru",
+        "en"
+      ],
+      "model": {
+        "name": "gpt-5.6-sol",
+        "effort": "high"
+      },
       "riskReasons": [],
-      "generationAttempts": { "ru": 1, "en": 1 },
+      "generationAttempts": {
+        "ru": 1,
+        "en": 1
+      },
       "qualityRepairAttempts": 0,
-      "scores": { "utility": 93, "originalValue": 91, "factSupport": 91 },
+      "scores": {
+        "utility": 93,
+        "originalValue": 91,
+        "factSupport": 91
+      },
       "creative": "assets/covers/buy-esim-greece-island-connection.png",
       "creativeConceptKey": "greek-island-harbour-white-ferry-sea-wind-luggage",
       "contentFormat": "connectivity-and-esim",
@@ -221,12 +412,27 @@
       "id": "lima-market-food-culture-day",
       "topicKey": "peru-lima-market-long-lunch-food-culture",
       "status": "published",
-      "locales": ["ru", "en"],
-      "model": { "name": "gpt-5.6-sol", "effort": "high" },
-      "riskReasons": ["owner_requested_cover_replacement"],
-      "generationAttempts": { "ru": 1, "en": 1 },
+      "locales": [
+        "ru",
+        "en"
+      ],
+      "model": {
+        "name": "gpt-5.6-sol",
+        "effort": "high"
+      },
+      "riskReasons": [
+        "owner_requested_cover_replacement"
+      ],
+      "generationAttempts": {
+        "ru": 1,
+        "en": 1
+      },
       "qualityRepairAttempts": 0,
-      "scores": { "utility": 93, "originalValue": 94, "factSupport": 92 },
+      "scores": {
+        "utility": 93,
+        "originalValue": 94,
+        "factSupport": 92
+      },
       "creative": "assets/covers/lima-market-food-culture-day-v2.png",
       "creativeConceptKey": "lima-terrace-long-lunch-shared-plates-city-light",
       "contentFormat": "culture-food-or-local-experience",
@@ -239,12 +445,25 @@
       "id": "buy-esim-vietnam-food-journey",
       "topicKey": "vietnam-food-led-multiregion-travel-esim",
       "status": "published",
-      "locales": ["ru", "en"],
-      "model": { "name": "gpt-5.6-sol", "effort": "high" },
+      "locales": [
+        "ru",
+        "en"
+      ],
+      "model": {
+        "name": "gpt-5.6-sol",
+        "effort": "high"
+      },
       "riskReasons": [],
-      "generationAttempts": { "ru": 1, "en": 1 },
+      "generationAttempts": {
+        "ru": 1,
+        "en": 1
+      },
       "qualityRepairAttempts": 0,
-      "scores": { "utility": 94, "originalValue": 93, "factSupport": 93 },
+      "scores": {
+        "utility": 94,
+        "originalValue": 93,
+        "factSupport": 93
+      },
       "creative": "assets/covers/buy-esim-vietnam-food-journey.png",
       "creativeConceptKey": "hanoi-morning-kitchen-steam-herbs-metal-bowls",
       "contentFormat": "connectivity-and-esim",
@@ -257,12 +476,25 @@
       "id": "taiwan-tea-town-day-trip",
       "topicKey": "taiwan-pinglin-single-tea-town-day-trip",
       "status": "published",
-      "locales": ["ru", "en"],
-      "model": { "name": "gpt-5.6-sol", "effort": "high" },
+      "locales": [
+        "ru",
+        "en"
+      ],
+      "model": {
+        "name": "gpt-5.6-sol",
+        "effort": "high"
+      },
       "riskReasons": [],
-      "generationAttempts": { "ru": 1, "en": 1 },
+      "generationAttempts": {
+        "ru": 1,
+        "en": 1
+      },
       "qualityRepairAttempts": 0,
-      "scores": { "utility": 94, "originalValue": 95, "factSupport": 93 },
+      "scores": {
+        "utility": 94,
+        "originalValue": 95,
+        "factSupport": 93
+      },
       "creative": "assets/covers/taiwan-tea-town-day-trip.png",
       "creativeConceptKey": "taiwan-mountain-teahouse-hands-pouring-oolong-mist",
       "contentFormat": "practical-travel-scenario",
@@ -275,12 +507,25 @@
       "id": "buy-esim-uae-old-new-dubai",
       "topicKey": "uae-old-modern-dubai-creek-travel-esim",
       "status": "published",
-      "locales": ["ru", "en"],
-      "model": { "name": "gpt-5.6-sol", "effort": "high" },
+      "locales": [
+        "ru",
+        "en"
+      ],
+      "model": {
+        "name": "gpt-5.6-sol",
+        "effort": "high"
+      },
       "riskReasons": [],
-      "generationAttempts": { "ru": 1, "en": 1 },
+      "generationAttempts": {
+        "ru": 1,
+        "en": 1
+      },
       "qualityRepairAttempts": 1,
-      "scores": { "utility": 95, "originalValue": 94, "factSupport": 93 },
+      "scores": {
+        "utility": 95,
+        "originalValue": 94,
+        "factSupport": 93
+      },
       "creative": "assets/covers/buy-esim-uae-old-new-dubai.png",
       "creativeConceptKey": "dubai-creek-wooden-abra-glass-skyline-reflection",
       "contentFormat": "connectivity-and-esim",
@@ -293,14 +538,30 @@
       "id": "jordan-petra-beyond-facade",
       "topicKey": "jordan-petra-city-beyond-treasury-landscape",
       "status": "published",
-      "locales": ["ru", "en"],
-      "model": { "name": "gpt-5.6-sol", "effort": "high" },
+      "locales": [
+        "ru",
+        "en"
+      ],
+      "model": {
+        "name": "gpt-5.6-sol",
+        "effort": "high"
+      },
       "riskReasons": [],
-      "generationAttempts": { "ru": 1, "en": 1 },
+      "generationAttempts": {
+        "ru": 1,
+        "en": 1
+      },
       "qualityRepairAttempts": 1,
       "editorialStandardVersion": 2,
-      "editorialPasses": { "ru": 1, "en": 1 },
-      "scores": { "utility": 94, "originalValue": 95, "factSupport": 94 },
+      "editorialPasses": {
+        "ru": 1,
+        "en": 1
+      },
+      "scores": {
+        "utility": 94,
+        "originalValue": 95,
+        "factSupport": 94
+      },
       "creative": "assets/covers/jordan-petra-beyond-facade.png",
       "creativeConceptKey": "petra-sandstone-canyon-local-craft-shadow-detail",
       "contentFormat": "destination-inspiration",
@@ -313,14 +574,30 @@
       "id": "buy-esim-spain-city-markets",
       "topicKey": "spain-valencia-city-markets-travel-esim",
       "status": "published",
-      "locales": ["ru", "en"],
-      "model": { "name": "gpt-5.6-sol", "effort": "high" },
+      "locales": [
+        "ru",
+        "en"
+      ],
+      "model": {
+        "name": "gpt-5.6-sol",
+        "effort": "high"
+      },
       "riskReasons": [],
-      "generationAttempts": { "ru": 1, "en": 1 },
+      "generationAttempts": {
+        "ru": 1,
+        "en": 1
+      },
       "qualityRepairAttempts": 0,
       "editorialStandardVersion": 2,
-      "editorialPasses": { "ru": 1, "en": 1 },
-      "scores": { "utility": 95, "originalValue": 94, "factSupport": 94 },
+      "editorialPasses": {
+        "ru": 1,
+        "en": 1
+      },
+      "scores": {
+        "utility": 95,
+        "originalValue": 94,
+        "factSupport": 94
+      },
       "creative": "assets/covers/buy-esim-spain-city-markets.png",
       "creativeConceptKey": "valencia-market-fruit-ceramics-vendor-conversation",
       "contentFormat": "connectivity-and-esim",
@@ -333,14 +610,30 @@
       "id": "cape-town-three-morning-rituals",
       "topicKey": "south-africa-cape-town-three-local-mornings",
       "status": "published",
-      "locales": ["ru", "en"],
-      "model": { "name": "gpt-5.6-sol", "effort": "high" },
+      "locales": [
+        "ru",
+        "en"
+      ],
+      "model": {
+        "name": "gpt-5.6-sol",
+        "effort": "high"
+      },
       "riskReasons": [],
-      "generationAttempts": { "ru": 1, "en": 1 },
+      "generationAttempts": {
+        "ru": 1,
+        "en": 1
+      },
       "qualityRepairAttempts": 0,
       "editorialStandardVersion": 2,
-      "editorialPasses": { "ru": 1, "en": 1 },
-      "scores": { "utility": 94, "originalValue": 95, "factSupport": 93 },
+      "editorialPasses": {
+        "ru": 1,
+        "en": 1
+      },
+      "scores": {
+        "utility": 94,
+        "originalValue": 95,
+        "factSupport": 93
+      },
       "creative": "assets/covers/cape-town-three-morning-rituals.png",
       "creativeConceptKey": "cape-town-colourful-doorway-bakery-morning-bread",
       "contentFormat": "culture-food-or-local-experience",
@@ -353,14 +646,30 @@
       "id": "buy-esim-egypt-cairo-luxor",
       "topicKey": "egypt-cairo-luxor-two-city-travel-esim",
       "status": "published",
-      "locales": ["ru", "en"],
-      "model": { "name": "gpt-5.6-sol", "effort": "high" },
+      "locales": [
+        "ru",
+        "en"
+      ],
+      "model": {
+        "name": "gpt-5.6-sol",
+        "effort": "high"
+      },
       "riskReasons": [],
-      "generationAttempts": { "ru": 1, "en": 1 },
+      "generationAttempts": {
+        "ru": 1,
+        "en": 1
+      },
       "qualityRepairAttempts": 0,
       "editorialStandardVersion": 2,
-      "editorialPasses": { "ru": 1, "en": 1 },
-      "scores": { "utility": 95, "originalValue": 94, "factSupport": 94 },
+      "editorialPasses": {
+        "ru": 1,
+        "en": 1
+      },
+      "scores": {
+        "utility": 95,
+        "originalValue": 94,
+        "factSupport": 94
+      },
       "creative": "assets/covers/buy-esim-egypt-cairo-luxor.png",
       "creativeConceptKey": "nile-dawn-felucca-palms-stone-shore-silhouette",
       "contentFormat": "connectivity-and-esim",
@@ -373,14 +682,30 @@
       "id": "new-zealand-south-island-slow-road",
       "topicKey": "new-zealand-christchurch-mackenzie-queenstown-three-base-itinerary",
       "status": "published",
-      "locales": ["ru", "en"],
-      "model": { "name": "gpt-5.6-sol", "effort": "high" },
+      "locales": [
+        "ru",
+        "en"
+      ],
+      "model": {
+        "name": "gpt-5.6-sol",
+        "effort": "high"
+      },
       "riskReasons": [],
-      "generationAttempts": { "ru": 1, "en": 1 },
+      "generationAttempts": {
+        "ru": 1,
+        "en": 1
+      },
       "qualityRepairAttempts": 0,
       "editorialStandardVersion": 2,
-      "editorialPasses": { "ru": 1, "en": 1 },
-      "scores": { "utility": 95, "originalValue": 95, "factSupport": 94 },
+      "editorialPasses": {
+        "ru": 1,
+        "en": 1
+      },
+      "scores": {
+        "utility": 95,
+        "originalValue": 95,
+        "factSupport": 94
+      },
       "creative": "assets/covers/new-zealand-south-island-slow-road.png",
       "creativeConceptKey": "new-zealand-alpine-suspension-bridge-single-hiker",
       "contentFormat": "route-or-itinerary",
@@ -393,14 +718,30 @@
       "id": "buy-esim-brazil-flexible-rio",
       "topicKey": "brazil-rio-first-days-beach-centre-music-travel-esim",
       "status": "published",
-      "locales": ["ru", "en"],
-      "model": { "name": "gpt-5.6-sol", "effort": "high" },
+      "locales": [
+        "ru",
+        "en"
+      ],
+      "model": {
+        "name": "gpt-5.6-sol",
+        "effort": "high"
+      },
       "riskReasons": [],
-      "generationAttempts": { "ru": 1, "en": 1 },
+      "generationAttempts": {
+        "ru": 1,
+        "en": 1
+      },
       "qualityRepairAttempts": 0,
       "editorialStandardVersion": 2,
-      "editorialPasses": { "ru": 1, "en": 1 },
-      "scores": { "utility": 95, "originalValue": 95, "factSupport": 94 },
+      "editorialPasses": {
+        "ru": 1,
+        "en": 1
+      },
+      "scores": {
+        "utility": 95,
+        "originalValue": 95,
+        "factSupport": 94
+      },
       "creative": "assets/covers/buy-esim-brazil-flexible-rio.png",
       "creativeConceptKey": "rio-morning-beach-runners-bicycles-mountain-haze",
       "contentFormat": "connectivity-and-esim",
@@ -413,14 +754,30 @@
       "id": "montreal-shoulder-season-neighbourhoods",
       "topicKey": "canada-montreal-plateau-mile-end-shoulder-season-walk",
       "status": "published",
-      "locales": ["ru", "en"],
-      "model": { "name": "gpt-5.6-sol", "effort": "high" },
+      "locales": [
+        "ru",
+        "en"
+      ],
+      "model": {
+        "name": "gpt-5.6-sol",
+        "effort": "high"
+      },
       "riskReasons": [],
-      "generationAttempts": { "ru": 1, "en": 1 },
+      "generationAttempts": {
+        "ru": 1,
+        "en": 1
+      },
       "qualityRepairAttempts": 0,
       "editorialStandardVersion": 2,
-      "editorialPasses": { "ru": 1, "en": 1 },
-      "scores": { "utility": 95, "originalValue": 95, "factSupport": 94 },
+      "editorialPasses": {
+        "ru": 1,
+        "en": 1
+      },
+      "scores": {
+        "utility": 95,
+        "originalValue": 95,
+        "factSupport": 94
+      },
       "creative": "assets/covers/montreal-shoulder-season-neighbourhoods.png",
       "creativeConceptKey": "montreal-autumn-cyclist-outdoor-staircase-bakery-window",
       "contentFormat": "seasonal-trip-ideas",
@@ -433,14 +790,30 @@
       "id": "buy-esim-usa-road-trip",
       "topicKey": "usa-road-trip-navigation-offline-maps-travel-esim",
       "status": "published",
-      "locales": ["ru", "en"],
-      "model": { "name": "gpt-5.6-sol", "effort": "high" },
+      "locales": [
+        "ru",
+        "en"
+      ],
+      "model": {
+        "name": "gpt-5.6-sol",
+        "effort": "high"
+      },
       "riskReasons": [],
-      "generationAttempts": { "ru": 1, "en": 1 },
+      "generationAttempts": {
+        "ru": 1,
+        "en": 1
+      },
       "qualityRepairAttempts": 0,
       "editorialStandardVersion": 2,
-      "editorialPasses": { "ru": 1, "en": 1 },
-      "scores": { "utility": 95, "originalValue": 95, "factSupport": 95 },
+      "editorialPasses": {
+        "ru": 1,
+        "en": 1
+      },
+      "scores": {
+        "utility": 95,
+        "originalValue": 95,
+        "factSupport": 95
+      },
       "creative": "assets/covers/buy-esim-usa-road-trip-v2.png",
       "creativeConceptKey": "american-red-rock-road-front-three-quarter-map-traveller",
       "creativeRevision": {
@@ -460,22 +833,44 @@
       "id": "jaipur-craft-route",
       "topicKey": "india-jaipur-block-printing-blue-pottery-craft-route",
       "status": "published",
-      "locales": ["ru", "en"],
-      "model": { "name": "gpt-5.6-sol", "effort": "high" },
+      "locales": [
+        "ru",
+        "en"
+      ],
+      "model": {
+        "name": "gpt-5.6-sol",
+        "effort": "high"
+      },
       "riskReasons": [],
-      "generationAttempts": { "ru": 1, "en": 1 },
+      "generationAttempts": {
+        "ru": 1,
+        "en": 1
+      },
       "qualityRepairAttempts": 1,
       "editorialStandardVersion": 2,
-      "editorialPasses": { "ru": 1, "en": 1 },
-      "scores": { "utility": 95, "originalValue": 95, "factSupport": 95 },
+      "editorialPasses": {
+        "ru": 1,
+        "en": 1
+      },
+      "scores": {
+        "utility": 95,
+        "originalValue": 95,
+        "factSupport": 95
+      },
       "creative": "assets/covers/jaipur-craft-route.png",
       "creativeConceptKey": "jaipur-artisan-block-printing-indigo-fabric-hands",
       "contentFormat": "culture-food-or-local-experience",
       "planKind": "editorial",
       "countryCode": "IN",
       "region": "south-asia",
-      "searchQuery": { "ru": "ремесла Джайпура маршрут", "en": "Jaipur craft route block printing pottery" },
-      "workingTitle": { "ru": "Ремесла Джайпура: мастерские набойки и керамики", "en": "Jaipur craft workshops: block printing and pottery" },
+      "searchQuery": {
+        "ru": "ремесла Джайпура маршрут",
+        "en": "Jaipur craft route block printing pottery"
+      },
+      "workingTitle": {
+        "ru": "Ремесла Джайпура: мастерские набойки и керамики",
+        "en": "Jaipur craft workshops: block printing and pottery"
+      },
       "readerPromise": "Где увидеть работу с набойкой и керамикой и как выбирать мастерские без обязательного списка дворцов.",
       "creativeBrief": "Мастер наносит деревянный штамп на ткань цвета индиго, руки и фактура крупным планом.",
       "schedule": {
@@ -487,23 +882,48 @@
       "id": "buy-esim-france-paris-small-city",
       "topicKey": "france-paris-dijon-rail-arrival-travel-esim",
       "status": "published",
-      "locales": ["ru", "en"],
-      "model": { "name": "gpt-5.6-sol", "effort": "high" },
+      "locales": [
+        "ru",
+        "en"
+      ],
+      "model": {
+        "name": "gpt-5.6-sol",
+        "effort": "high"
+      },
       "riskReasons": [],
-      "generationAttempts": { "ru": 1, "en": 1 },
+      "generationAttempts": {
+        "ru": 1,
+        "en": 1
+      },
       "qualityRepairAttempts": 0,
       "editorialStandardVersion": 2,
-      "editorialPasses": { "ru": 1, "en": 1 },
-      "scores": { "utility": 95, "originalValue": 95, "factSupport": 95 },
+      "editorialPasses": {
+        "ru": 1,
+        "en": 1
+      },
+      "scores": {
+        "utility": 95,
+        "originalValue": 95,
+        "factSupport": 95
+      },
       "creative": "assets/covers/buy-esim-france-paris-dijon.png",
       "creativeConceptKey": "french-small-town-platform-morning-mist-vintage-clock",
-      "creativeGeneration": { "model": "imagegen-built-in", "attempts": 1 },
+      "creativeGeneration": {
+        "model": "imagegen-built-in",
+        "attempts": 1
+      },
       "contentFormat": "connectivity-and-esim",
       "planKind": "buy-esim",
       "countryCode": "FR",
       "region": "western-europe",
-      "searchQuery": { "ru": "купить есим для Франции", "en": "buy eSIM for France" },
-      "workingTitle": { "ru": "Купить есим для Франции: спокойная поездка из Парижа в небольшой город", "en": "Buy an eSIM for France: staying connected from Paris to a smaller city" },
+      "searchQuery": {
+        "ru": "купить есим для Франции",
+        "en": "buy eSIM for France"
+      },
+      "workingTitle": {
+        "ru": "Купить есим для Франции: спокойная поездка из Парижа в небольшой город",
+        "en": "Buy an eSIM for France: staying connected from Paris to a smaller city"
+      },
       "readerPromise": "Связь сопровождает переход от столицы к более тихому месту, жилью и региональным прогулкам.",
       "creativeBrief": "Утренняя платформа небольшого французского города, чемодан, старые часы и мягкий туман.",
       "schedule": {
@@ -515,23 +935,48 @@
       "id": "santiago-valparaiso-choose-rhythm",
       "topicKey": "chile-santiago-valparaiso-first-trip-base-choice",
       "status": "published",
-      "locales": ["ru", "en"],
-      "model": { "name": "gpt-5.6-sol", "effort": "high" },
+      "locales": [
+        "ru",
+        "en"
+      ],
+      "model": {
+        "name": "gpt-5.6-sol",
+        "effort": "high"
+      },
       "riskReasons": [],
-      "generationAttempts": { "ru": 1, "en": 1 },
+      "generationAttempts": {
+        "ru": 1,
+        "en": 1
+      },
       "qualityRepairAttempts": 0,
       "editorialStandardVersion": 2,
-      "editorialPasses": { "ru": 1, "en": 1 },
-      "scores": { "utility": 95, "originalValue": 95, "factSupport": 95 },
+      "editorialPasses": {
+        "ru": 1,
+        "en": 1
+      },
+      "scores": {
+        "utility": 95,
+        "originalValue": 95,
+        "factSupport": 95
+      },
       "creative": "assets/covers/santiago-valparaiso-first-trip.png",
       "creativeConceptKey": "valparaiso-hillside-stairs-mural-painter-pacific-light",
-      "creativeGeneration": { "model": "imagegen-built-in", "attempts": 1 },
+      "creativeGeneration": {
+        "model": "imagegen-built-in",
+        "attempts": 1
+      },
       "contentFormat": "destination-inspiration",
       "planKind": "editorial",
       "countryCode": "CL",
       "region": "south-america",
-      "searchQuery": { "ru": "Сантьяго или Вальпараисо где остановиться", "en": "Santiago or Valparaiso where to stay" },
-      "workingTitle": { "ru": "Сантьяго или Вальпараисо: где остановиться в первой поездке", "en": "Santiago or Valparaíso: where to stay on a first trip to Chile" },
+      "searchQuery": {
+        "ru": "Сантьяго или Вальпараисо где остановиться",
+        "en": "Santiago or Valparaiso where to stay"
+      },
+      "workingTitle": {
+        "ru": "Сантьяго или Вальпараисо: где остановиться в первой поездке",
+        "en": "Santiago or Valparaíso: where to stay on a first trip to Chile"
+      },
       "readerPromise": "Сравнение двух баз через ритм, архитектуру и способ проводить день, а не рейтинг городов.",
       "creativeBrief": "Художник работает над муралом у лестницы на холме Вальпараисо, вдали светится Тихий океан.",
       "schedule": {
@@ -543,23 +988,48 @@
       "id": "buy-esim-malaysia-kuala-lumpur-george-town",
       "topicKey": "malaysia-kuala-lumpur-george-town-two-city-travel-esim",
       "status": "published",
-      "locales": ["ru", "en"],
-      "model": { "name": "gpt-5.6-sol", "effort": "high" },
+      "locales": [
+        "ru",
+        "en"
+      ],
+      "model": {
+        "name": "gpt-5.6-sol",
+        "effort": "high"
+      },
       "riskReasons": [],
-      "generationAttempts": { "ru": 1, "en": 1 },
+      "generationAttempts": {
+        "ru": 1,
+        "en": 1
+      },
       "qualityRepairAttempts": 0,
       "editorialStandardVersion": 2,
-      "editorialPasses": { "ru": 1, "en": 1 },
-      "scores": { "utility": 94, "originalValue": 94, "factSupport": 93 },
+      "editorialPasses": {
+        "ru": 1,
+        "en": 1
+      },
+      "scores": {
+        "utility": 94,
+        "originalValue": 94,
+        "factSupport": 93
+      },
       "creative": "assets/covers/buy-esim-malaysia-kuala-lumpur-george-town.png",
       "creativeConceptKey": "george-town-rain-morning-trishaw-canopy-shophouses",
-      "creativeGeneration": { "model": "imagegen-built-in", "attempts": 1 },
+      "creativeGeneration": {
+        "model": "imagegen-built-in",
+        "attempts": 1
+      },
       "contentFormat": "connectivity-and-esim",
       "planKind": "buy-esim",
       "countryCode": "MY",
       "region": "southeast-asia",
-      "searchQuery": { "ru": "купить есим для Малайзии", "en": "buy eSIM for Malaysia" },
-      "workingTitle": { "ru": "Купить есим для Малайзии: связь в Куала-Лумпуре и Джорджтауне", "en": "Buy an eSIM for Malaysia: Kuala Lumpur to George Town" },
+      "searchQuery": {
+        "ru": "купить есим для Малайзии",
+        "en": "buy eSIM for Malaysia"
+      },
+      "workingTitle": {
+        "ru": "Купить есим для Малайзии: связь в Куала-Лумпуре и Джорджтауне",
+        "en": "Buy an eSIM for Malaysia: Kuala Lumpur to George Town"
+      },
       "readerPromise": "Подготовить связь для двух разных прибытий — сначала в Куала-Лумпур, затем в пеший Джорджтаун — без зависимости от постоянной навигации.",
       "creativeBrief": "После тропического дождя водитель велорикши поправляет навес на тихой улице Джорджтауна с историческими шопхаусами.",
       "schedule": {
@@ -571,40 +1041,94 @@
       "id": "vienna-vineyards-autumn-walk",
       "topicKey": "austria-vienna-nussdorf-kahlenberg-autumn-vineyard-walk",
       "status": "published",
-      "locales": ["ru", "en"],
-      "model": { "name": "gpt-5.6-sol", "effort": "high" },
+      "locales": [
+        "ru",
+        "en"
+      ],
+      "model": {
+        "name": "gpt-5.6-sol",
+        "effort": "high"
+      },
       "riskReasons": [],
-      "generationAttempts": { "ru": 1, "en": 1 },
+      "generationAttempts": {
+        "ru": 1,
+        "en": 1
+      },
       "qualityRepairAttempts": 0,
       "editorialStandardVersion": 2,
-      "editorialPasses": { "ru": 1, "en": 1 },
-      "scores": { "utility": 93, "originalValue": 94, "factSupport": 93 },
+      "editorialPasses": {
+        "ru": 1,
+        "en": 1
+      },
+      "scores": {
+        "utility": 93,
+        "originalValue": 94,
+        "factSupport": 93
+      },
       "editorialScorecard": {
         "ru": {
           "total": 92,
-          "dimensions": { "intent": 14, "utility": 14, "specificity": 14, "trust": 13, "voice": 13, "structure": 9, "technical": 10, "commercialRestraint": 5 },
-          "weakestDimensions": ["trust-and-evidence", "human-editorial-voice"]
+          "dimensions": {
+            "intent": 14,
+            "utility": 14,
+            "specificity": 14,
+            "trust": 13,
+            "voice": 13,
+            "structure": 9,
+            "technical": 10,
+            "commercialRestraint": 5
+          },
+          "weakestDimensions": [
+            "trust-and-evidence",
+            "human-editorial-voice"
+          ]
         },
         "en": {
           "total": 92,
-          "dimensions": { "intent": 14, "utility": 14, "specificity": 14, "trust": 13, "voice": 13, "structure": 9, "technical": 10, "commercialRestraint": 5 },
-          "weakestDimensions": ["trust-and-evidence", "human-editorial-voice"]
+          "dimensions": {
+            "intent": 14,
+            "utility": 14,
+            "specificity": 14,
+            "trust": 13,
+            "voice": 13,
+            "structure": 9,
+            "technical": 10,
+            "commercialRestraint": 5
+          },
+          "weakestDimensions": [
+            "trust-and-evidence",
+            "human-editorial-voice"
+          ]
         }
       },
       "editorialReview": {
-        "titleCandidatesEvaluated": { "ru": 5, "en": 5 },
+        "titleCandidatesEvaluated": {
+          "ru": 5,
+          "en": 5
+        },
         "changeMade": "Leads and endings were rewritten for a direct route answer; promotional and essay-like transitions were removed without adding facts.",
-        "lengthRationale": { "ru": "The focused 11 km route, two shortening choices and offline preparation are fully answered without padding below 900 words." }
+        "lengthRationale": {
+          "ru": "The focused 11 km route, two shortening choices and offline preparation are fully answered without padding below 900 words."
+        }
       },
       "creative": "assets/covers/vienna-vineyards-autumn-walk.png",
       "creativeConceptKey": "vienna-nussberg-autumn-grape-harvest-city-panorama",
-      "creativeGeneration": { "model": "imagegen-built-in", "attempts": 1 },
+      "creativeGeneration": {
+        "model": "imagegen-built-in",
+        "attempts": 1
+      },
       "contentFormat": "seasonal-trip-ideas",
       "planKind": "editorial",
       "countryCode": "AT",
       "region": "central-europe",
-      "searchQuery": { "ru": "виноградники Вены осенью маршрут", "en": "Vienna vineyards autumn walk" },
-      "workingTitle": { "ru": "Виноградники Вены осенью: прогулка из Нуссдорфа через Каленберг", "en": "An autumn walk through Vienna’s vineyards: Nussdorf and Kahlenberg" },
+      "searchQuery": {
+        "ru": "виноградники Вены осенью маршрут",
+        "en": "Vienna vineyards autumn walk"
+      },
+      "workingTitle": {
+        "ru": "Виноградники Вены осенью: прогулка из Нуссдорфа через Каленберг",
+        "en": "An autumn walk through Vienna’s vineyards: Nussdorf and Kahlenberg"
+      },
       "readerPromise": "Один осенний день на городском маршруте № 1: полный круг через Каленберг, два разумных сокращения и связь только для меняющихся деталей.",
       "creativeBrief": "Сборщица винограда идёт между осенними лозами на Нуссберге; вдали в мягком утреннем свете видны Дунай и панорама Вены.",
       "schedule": {
@@ -616,28 +1140,71 @@
       "id": "buy-esim-singapore-kampong-gelam",
       "topicKey": "singapore-bugis-kampong-gelam-walking-day-travel-esim",
       "status": "published",
-      "locales": ["ru", "en"],
-      "model": { "name": "gpt-5.6-sol", "effort": "high" },
+      "locales": [
+        "ru",
+        "en"
+      ],
+      "model": {
+        "name": "gpt-5.6-sol",
+        "effort": "high"
+      },
       "riskReasons": [],
-      "generationAttempts": { "ru": 1, "en": 1 },
+      "generationAttempts": {
+        "ru": 1,
+        "en": 1
+      },
       "qualityRepairAttempts": 0,
       "editorialStandardVersion": 2,
-      "editorialPasses": { "ru": 1, "en": 1 },
-      "scores": { "utility": 93, "originalValue": 92, "factSupport": 93 },
+      "editorialPasses": {
+        "ru": 1,
+        "en": 1
+      },
+      "scores": {
+        "utility": 93,
+        "originalValue": 92,
+        "factSupport": 93
+      },
       "editorialScorecard": {
         "ru": {
           "total": 92,
-          "dimensions": { "intent": 15, "utility": 14, "specificity": 13, "trust": 13, "voice": 13, "structure": 9, "technical": 10, "commercialRestraint": 5 },
-          "weakestDimensions": ["local-specificity-and-original-value", "trust-and-evidence"]
+          "dimensions": {
+            "intent": 15,
+            "utility": 14,
+            "specificity": 13,
+            "trust": 13,
+            "voice": 13,
+            "structure": 9,
+            "technical": 10,
+            "commercialRestraint": 5
+          },
+          "weakestDimensions": [
+            "local-specificity-and-original-value",
+            "trust-and-evidence"
+          ]
         },
         "en": {
           "total": 92,
-          "dimensions": { "intent": 15, "utility": 14, "specificity": 13, "trust": 13, "voice": 13, "structure": 9, "technical": 10, "commercialRestraint": 5 },
-          "weakestDimensions": ["local-specificity-and-original-value", "trust-and-evidence"]
+          "dimensions": {
+            "intent": 15,
+            "utility": 14,
+            "specificity": 13,
+            "trust": 13,
+            "voice": 13,
+            "structure": 9,
+            "technical": 10,
+            "commercialRestraint": 5
+          },
+          "weakestDimensions": [
+            "local-specificity-and-original-value",
+            "trust-and-evidence"
+          ]
         }
       },
       "editorialReview": {
-        "titleCandidatesEvaluated": { "ru": 5, "en": 5 },
+        "titleCandidatesEvaluated": {
+          "ru": 5,
+          "en": 5
+        },
         "changeMade": "Leads and endings were rewritten for a direct setup answer; staged contrasts and decorative closing language were removed without adding facts.",
         "lengthRationale": {
           "ru": "The focused setup, offline fallback, Kampong Gelam walk and first-line troubleshooting are fully answered without padding below 900 words.",
@@ -646,13 +1213,22 @@
       },
       "creative": "assets/covers/buy-esim-singapore-kampong-gelam.png",
       "creativeConceptKey": "kampong-gelam-morning-cafe-shutters-sultan-mosque",
-      "creativeGeneration": { "model": "imagegen-built-in", "attempts": 1 },
+      "creativeGeneration": {
+        "model": "imagegen-built-in",
+        "attempts": 1
+      },
       "contentFormat": "connectivity-and-esim",
       "planKind": "buy-esim",
       "countryCode": "SG",
       "region": "southeast-asia",
-      "searchQuery": { "ru": "купить есим для Сингапура", "en": "buy eSIM for Singapore" },
-      "workingTitle": { "ru": "Купить есим для Сингапура: связь от Бугиса до Кампонг-Глама", "en": "Buy an eSIM for Singapore: staying connected from Bugis to Kampong Gelam" },
+      "searchQuery": {
+        "ru": "купить есим для Сингапура",
+        "en": "buy eSIM for Singapore"
+      },
+      "workingTitle": {
+        "ru": "Купить есим для Сингапура: связь от Бугиса до Кампонг-Глама",
+        "en": "Buy an eSIM for Singapore: staying connected from Bugis to Kampong Gelam"
+      },
       "readerPromise": "Подготовить связь до вылета и провести первый самостоятельный день между Бугисом и Кампонг-Гламом, используя мобильные данные только для переходов и изменений.",
       "creativeBrief": "Утром владелец небольшого кафе открывает деревянные ставни шопхауса в Кампонг-Гламе; в глубине улицы виден золотой купол мечети Султана.",
       "schedule": {
@@ -664,28 +1240,71 @@
       "id": "tallinn-kalamaja-seafront-walk",
       "topicKey": "estonia-tallinn-old-town-kalamaja-noblessner-walking-route",
       "status": "published",
-      "locales": ["ru", "en"],
-      "model": { "name": "gpt-5.6-sol", "effort": "high" },
+      "locales": [
+        "ru",
+        "en"
+      ],
+      "model": {
+        "name": "gpt-5.6-sol",
+        "effort": "high"
+      },
       "riskReasons": [],
-      "generationAttempts": { "ru": 1, "en": 1 },
+      "generationAttempts": {
+        "ru": 1,
+        "en": 1
+      },
       "qualityRepairAttempts": 0,
       "editorialStandardVersion": 2,
-      "editorialPasses": { "ru": 1, "en": 1 },
-      "scores": { "utility": 93, "originalValue": 94, "factSupport": 93 },
+      "editorialPasses": {
+        "ru": 1,
+        "en": 1
+      },
+      "scores": {
+        "utility": 93,
+        "originalValue": 94,
+        "factSupport": 93
+      },
       "editorialScorecard": {
         "ru": {
           "total": 92,
-          "dimensions": { "intent": 14, "utility": 14, "specificity": 14, "trust": 13, "voice": 13, "structure": 9, "technical": 10, "commercialRestraint": 5 },
-          "weakestDimensions": ["trust-and-evidence", "human-editorial-voice"]
+          "dimensions": {
+            "intent": 14,
+            "utility": 14,
+            "specificity": 14,
+            "trust": 13,
+            "voice": 13,
+            "structure": 9,
+            "technical": 10,
+            "commercialRestraint": 5
+          },
+          "weakestDimensions": [
+            "trust-and-evidence",
+            "human-editorial-voice"
+          ]
         },
         "en": {
           "total": 92,
-          "dimensions": { "intent": 14, "utility": 14, "specificity": 14, "trust": 13, "voice": 13, "structure": 9, "technical": 10, "commercialRestraint": 5 },
-          "weakestDimensions": ["trust-and-evidence", "human-editorial-voice"]
+          "dimensions": {
+            "intent": 14,
+            "utility": 14,
+            "specificity": 14,
+            "trust": 13,
+            "voice": 13,
+            "structure": 9,
+            "technical": 10,
+            "commercialRestraint": 5
+          },
+          "weakestDimensions": [
+            "trust-and-evidence",
+            "human-editorial-voice"
+          ]
         }
       },
       "editorialReview": {
-        "titleCandidatesEvaluated": { "ru": 5, "en": 5 },
+        "titleCandidatesEvaluated": {
+          "ru": 5,
+          "en": 5
+        },
         "changeMade": "Leads and endings were tightened for a direct half-day route; formulaic transitions and staged contrasts were removed without adding facts.",
         "lengthRationale": {
           "ru": "The compact route, two indoor-stop choices, waterfront finish and offline preparation are fully answered without padding below 900 words.",
@@ -694,13 +1313,22 @@
       },
       "creative": "assets/covers/tallinn-kalamaja-seafront-walk.png",
       "creativeConceptKey": "tallinn-kalamaja-blue-hour-red-tram-wooden-houses-seafront",
-      "creativeGeneration": { "model": "imagegen-built-in", "attempts": 1 },
+      "creativeGeneration": {
+        "model": "imagegen-built-in",
+        "attempts": 1
+      },
       "contentFormat": "route-or-itinerary",
       "planKind": "editorial",
       "countryCode": "EE",
       "region": "northern-europe",
-      "searchQuery": { "ru": "Каламая Таллин маршрут к морю", "en": "Tallinn Kalamaja walk to seafront" },
-      "workingTitle": { "ru": "Каламая и Ноблесснер: прогулка из Старого города к морю", "en": "Beyond Tallinn Old Town: a walk through Kalamaja to the seafront" },
+      "searchQuery": {
+        "ru": "Каламая Таллин маршрут к морю",
+        "en": "Tallinn Kalamaja walk to seafront"
+      },
+      "workingTitle": {
+        "ru": "Каламая и Ноблесснер: прогулка из Старого города к морю",
+        "en": "Beyond Tallinn Old Town: a walk through Kalamaja to the seafront"
+      },
       "readerPromise": "Полудневный маршрут от Старого города через Теллискиви и деревянные улицы Каламая к Лётной гавани и Ноблесснеру с одним осмысленным выбором в помещении.",
       "creativeBrief": "Синий час после дождя в Каламая: красный трамвай проходит мимо деревянных домов, один пешеход идёт в сторону видимого в конце улицы моря.",
       "schedule": {
@@ -712,28 +1340,71 @@
       "id": "buy-esim-czechia-first-day-prague",
       "topicKey": "czechia-prague-vinohrady-zizkov-first-day-travel-esim",
       "status": "published",
-      "locales": ["ru", "en"],
-      "model": { "name": "gpt-5.6-sol", "effort": "high" },
+      "locales": [
+        "ru",
+        "en"
+      ],
+      "model": {
+        "name": "gpt-5.6-sol",
+        "effort": "high"
+      },
       "riskReasons": [],
-      "generationAttempts": { "ru": 1, "en": 1 },
+      "generationAttempts": {
+        "ru": 1,
+        "en": 1
+      },
       "qualityRepairAttempts": 1,
       "editorialStandardVersion": 2,
-      "editorialPasses": { "ru": 1, "en": 1 },
-      "scores": { "utility": 93, "originalValue": 93, "factSupport": 92 },
+      "editorialPasses": {
+        "ru": 1,
+        "en": 1
+      },
+      "scores": {
+        "utility": 93,
+        "originalValue": 93,
+        "factSupport": 92
+      },
       "editorialScorecard": {
         "ru": {
           "total": 92,
-          "dimensions": { "intent": 15, "utility": 14, "specificity": 13, "trust": 13, "voice": 13, "structure": 9, "technical": 10, "commercialRestraint": 5 },
-          "weakestDimensions": ["local-specificity-and-original-value", "trust-and-evidence"]
+          "dimensions": {
+            "intent": 15,
+            "utility": 14,
+            "specificity": 13,
+            "trust": 13,
+            "voice": 13,
+            "structure": 9,
+            "technical": 10,
+            "commercialRestraint": 5
+          },
+          "weakestDimensions": [
+            "local-specificity-and-original-value",
+            "trust-and-evidence"
+          ]
         },
         "en": {
           "total": 92,
-          "dimensions": { "intent": 15, "utility": 14, "specificity": 13, "trust": 13, "voice": 13, "structure": 9, "technical": 10, "commercialRestraint": 5 },
-          "weakestDimensions": ["local-specificity-and-original-value", "trust-and-evidence"]
+          "dimensions": {
+            "intent": 15,
+            "utility": 14,
+            "specificity": 13,
+            "trust": 13,
+            "voice": 13,
+            "structure": 9,
+            "technical": 10,
+            "commercialRestraint": 5
+          },
+          "weakestDimensions": [
+            "local-specificity-and-original-value",
+            "trust-and-evidence"
+          ]
         }
       },
       "editorialReview": {
-        "titleCandidatesEvaluated": { "ru": 5, "en": 5 },
+        "titleCandidatesEvaluated": {
+          "ru": 5,
+          "en": 5
+        },
         "changeMade": "Leads, headings and endings were rewritten for direct first-day decisions; staged contrasts and decorative summaries were removed without adding facts.",
         "lengthRationale": {
           "ru": "The focused setup, offline arrival note, four-kilometre Prague walk and first-line troubleshooting are fully answered without padding below 900 words.",
@@ -742,13 +1413,22 @@
       },
       "creative": "assets/covers/buy-esim-czechia-first-day-prague.png",
       "creativeConceptKey": "prague-vinohrady-courtyard-geraniums-zizkov-tower-arch",
-      "creativeGeneration": { "model": "imagegen-built-in", "attempts": 1 },
+      "creativeGeneration": {
+        "model": "imagegen-built-in",
+        "attempts": 1
+      },
       "contentFormat": "connectivity-and-esim",
       "planKind": "buy-esim",
       "countryCode": "CZ",
       "region": "central-europe",
-      "searchQuery": { "ru": "купить есим для Чехии", "en": "buy eSIM for Czechia" },
-      "workingTitle": { "ru": "Купить есим для Чехии: связь в первый день в Праге", "en": "Buy an eSIM for Czechia: staying connected on your first day in Prague" },
+      "searchQuery": {
+        "ru": "купить есим для Чехии",
+        "en": "buy eSIM for Czechia"
+      },
+      "workingTitle": {
+        "ru": "Купить есим для Чехии: связь в первый день в Праге",
+        "en": "Buy an eSIM for Czechia: staying connected on your first day in Prague"
+      },
       "readerPromise": "Подготовить связь до поездки и провести первый день в Праге от прибытия до прогулки по Виноградам и Жижкову без постоянной зависимости от карты.",
       "creativeBrief": "После короткого дождя жительница Праги поливает красную герань во дворе Виноградов; историческая арка обрамляет Жижковскую телебашню над крышами.",
       "schedule": {
@@ -760,39 +1440,91 @@
       "id": "kanazawa-omicho-market-morning",
       "topicKey": "japan-kanazawa-omicho-working-market-food-morning",
       "status": "published",
-      "locales": ["ru", "en"],
-      "model": { "name": "gpt-5.6-sol", "effort": "high" },
+      "locales": [
+        "ru",
+        "en"
+      ],
+      "model": {
+        "name": "gpt-5.6-sol",
+        "effort": "high"
+      },
       "riskReasons": [],
-      "generationAttempts": { "ru": 1, "en": 1 },
+      "generationAttempts": {
+        "ru": 1,
+        "en": 1
+      },
       "qualityRepairAttempts": 0,
       "editorialStandardVersion": 2,
-      "editorialPasses": { "ru": 1, "en": 1 },
-      "scores": { "utility": 91, "originalValue": 92, "factSupport": 91 },
+      "editorialPasses": {
+        "ru": 1,
+        "en": 1
+      },
+      "scores": {
+        "utility": 91,
+        "originalValue": 92,
+        "factSupport": 91
+      },
       "editorialScorecard": {
         "ru": {
           "total": 91,
-          "dimensions": { "intent": 14, "utility": 14, "specificity": 14, "trust": 13, "voice": 13, "structure": 9, "technical": 9, "commercialRestraint": 5 },
-          "weakestDimensions": ["trust-and-evidence", "human-editorial-voice"]
+          "dimensions": {
+            "intent": 14,
+            "utility": 14,
+            "specificity": 14,
+            "trust": 13,
+            "voice": 13,
+            "structure": 9,
+            "technical": 9,
+            "commercialRestraint": 5
+          },
+          "weakestDimensions": [
+            "trust-and-evidence",
+            "human-editorial-voice"
+          ]
         },
         "en": {
           "total": 91,
-          "dimensions": { "intent": 14, "utility": 14, "specificity": 14, "trust": 13, "voice": 13, "structure": 9, "technical": 9, "commercialRestraint": 5 },
-          "weakestDimensions": ["trust-and-evidence", "human-editorial-voice"]
+          "dimensions": {
+            "intent": 14,
+            "utility": 14,
+            "specificity": 14,
+            "trust": 13,
+            "voice": 13,
+            "structure": 9,
+            "technical": 9,
+            "commercialRestraint": 5
+          },
+          "weakestDimensions": [
+            "trust-and-evidence",
+            "human-editorial-voice"
+          ]
         }
       },
       "editorialReview": {
-        "titleCandidatesEvaluated": { "ru": 5, "en": 5 },
+        "titleCandidatesEvaluated": {
+          "ru": 5,
+          "en": 5
+        },
         "changeMade": "Titles, leads, navigation headings and directive phrasing were rewritten for a direct market visit; repeated contrasts and decorative endings were removed without adding facts."
       },
       "creative": "assets/covers/kanazawa-omicho-market-morning.png",
       "creativeConceptKey": "kanazawa-omicho-fishmonger-silver-fish-morning-shopper-diagonal",
-      "creativeGeneration": { "model": "imagegen-built-in", "attempts": 1 },
+      "creativeGeneration": {
+        "model": "imagegen-built-in",
+        "attempts": 1
+      },
       "contentFormat": "culture-food-or-local-experience",
       "planKind": "editorial",
       "countryCode": "JP",
       "region": "east-asia",
-      "searchQuery": { "ru": "рынок Омичо Канадзава как провести утро", "en": "Omicho Market Kanazawa morning guide" },
-      "workingTitle": { "ru": "Рынок Омичо в Канадзаве: как провести утро", "en": "A morning at Omicho Market in Kanazawa" },
+      "searchQuery": {
+        "ru": "рынок Омичо Канадзава как провести утро",
+        "en": "Omicho Market Kanazawa morning guide"
+      },
+      "workingTitle": {
+        "ru": "Рынок Омичо в Канадзаве: как провести утро",
+        "en": "A morning at Omicho Market in Kanazawa"
+      },
       "readerPromise": "Провести содержательное утро на работающем рынке: осмотреть ряды, выбрать одну дегустацию и понять местную кухню без списка обязательных блюд.",
       "creativeBrief": "Утренний рынок Омичо: продавец раскладывает серебристую рыбу и овощи на диагональном прилавке, покупательница смотрит на выкладку вполоборота, мягкий свет проходит через крытую галерею.",
       "schedule": {
@@ -803,284 +1535,544 @@
   ],
   "plannedPublications": [
     {
-      "planOrder": 5,
-      "id": "buy-esim-thailand-island-arrival",
-      "countryCode": "TH",
-      "region": "southeast-asia",
-      "planKind": "buy-esim",
+      "planOrder": 1,
+      "id": "esim-phone-compatibility",
+      "scope": "global",
+      "region": "global",
+      "planKind": "search-support",
       "contentFormat": "connectivity-and-esim",
-      "searchQuery": { "ru": "купить есим для Таиланда", "en": "buy eSIM for Thailand" },
-      "semanticIntent": { "primary": "buy-esim-country", "secondary": ["eSIM Таиланд для туристов", "интернет в Таиланде", "как подключить eSIM в Таиланде"] },
-      "workingTitle": { "ru": "Купить есим для Таиланда: как подготовить интернет до прилёта", "en": "Buy an eSIM for Thailand: getting your data ready before you land" },
-      "readerPromise": "Выбрать объём данных для города и островов, установить профиль заранее и проверить первые настройки без обещаний о покрытии в каждой точке.",
-      "creativeConceptKey": "thailand-longtail-boat-morning-market-flowers-water",
-      "creativeBrief": "Раннее утро у канала в Таиланде: длиннохвостая лодка везёт корзины с цветами к небольшому рынку, тёплый свет и спокойная вода."
+      "searchQuery": {
+        "ru": "какие телефоны поддерживают есим",
+        "en": "which phones support eSIM"
+      },
+      "semanticIntent": {
+        "primary": "device-compatibility",
+        "secondary": [
+          "какие телефоны поддерживают есим",
+          "which phones support eSIM",
+          "eSIM для путешествий"
+        ]
+      },
+      "workingTitle": {
+        "ru": "Какие телефоны поддерживают есим",
+        "en": "Which phones support eSIM"
+      },
+      "readerPromise": "Пошагово разобраться в задаче до поездки, не удаляя профиль и не рискуя основной SIM-картой.",
+      "creativeConceptKey": "phone-compatibility-map",
+      "creativeBrief": "Документальная travel-сцена с маршрутом, предметами поездки и человеком в естественной позе; без телефона крупным планом и без текста."
     },
     {
-      "planOrder": 20,
+      "planOrder": 2,
       "id": "install-esim-before-travel",
       "scope": "global",
       "region": "global",
       "planKind": "search-support",
       "contentFormat": "connectivity-and-esim",
-      "searchQuery": { "ru": "как установить есим перед поездкой", "en": "how to install an eSIM before travel" },
-      "semanticIntent": { "primary": "install-esim-before-travel", "secondary": ["как установить есим на айфон", "как установить eSIM на Android", "когда активируется eSIM"] },
-      "workingTitle": { "ru": "Как установить есим до поездки и не включить её раньше времени", "en": "How to install an eSIM before a trip without starting it too early" },
-      "readerPromise": "Разобраться, что можно сделать дома, чем установка отличается от активации и какие параметры безопасно проверить на iPhone и Android.",
-      "creativeConceptKey": "travel-desk-passport-printed-map-window-morning",
-      "creativeBrief": "Светлый стол у окна перед поездкой: бумажная карта, паспорт и сложенный маршрут, мягкий утренний свет, без телефона как главного объекта."
+      "searchQuery": {
+        "ru": "как установить есим перед поездкой",
+        "en": "how to install an eSIM before travel"
+      },
+      "semanticIntent": {
+        "primary": "install-before-travel",
+        "secondary": [
+          "как установить есим перед поездкой",
+          "how to install an eSIM before travel",
+          "eSIM для путешествий"
+        ]
+      },
+      "workingTitle": {
+        "ru": "Как установить есим перед поездкой",
+        "en": "How to install an eSIM before travel"
+      },
+      "readerPromise": "Пошагово разобраться в задаче до поездки, не удаляя профиль и не рискуя основной SIM-картой.",
+      "creativeConceptKey": "passport-map-window",
+      "creativeBrief": "Документальная travel-сцена с маршрутом, предметами поездки и человеком в естественной позе; без телефона крупным планом и без текста."
     },
     {
-      "planOrder": 9,
-      "id": "buy-esim-china-first-day",
-      "countryCode": "CN",
-      "region": "east-asia",
-      "planKind": "buy-esim",
-      "contentFormat": "connectivity-and-esim",
-      "searchQuery": { "ru": "купить есим для Китая", "en": "buy eSIM for China" },
-      "semanticIntent": { "primary": "buy-esim-country", "secondary": ["eSIM Китай для туристов", "интернет в Китае", "eSIM Китай VPN"] },
-      "workingTitle": { "ru": "Купить есим для Китая: что подготовить для первого дня в Пекине", "en": "Buy an eSIM for China: what to prepare for your first day in Beijing" },
-      "readerPromise": "Подготовить связь до поездки, не смешивая настройку eSIM с непроверенными обещаниями о доступе к отдельным сервисам.",
-      "creativeConceptKey": "beijing-dawn-hutong-bicycle-steam-breakfast-stall",
-      "creativeBrief": "Рассвет в пекинском хутуне: велосипед у стены, пар от завтрака у небольшой лавки, человек проходит вполоборота, документальная атмосфера."
-    },
-    {
-      "planOrder": 4,
+      "planOrder": 3,
       "id": "esim-installed-no-network",
       "scope": "global",
       "region": "global",
       "planKind": "search-support",
       "contentFormat": "connectivity-and-esim",
-      "searchQuery": { "ru": "есим установлена но нет сети", "en": "eSIM installed but no network" },
-      "semanticIntent": { "primary": "esim-installed-no-network", "secondary": ["eSIM не работает за границей", "нет интернета после установки eSIM", "eSIM сеть не найдена"] },
-      "workingTitle": { "ru": "Есим установлена, но сети нет: что проверить по порядку", "en": "Your eSIM is installed but there is no network: what to check first" },
-      "readerPromise": "Отделить проблему установки от регистрации в сети и мобильных данных, чтобы не удалить профиль до безопасной диагностики.",
-      "creativeConceptKey": "airport-window-rain-runway-traveler-profile-seat",
-      "creativeBrief": "Пассажирка в пол-оборота у окна аэропорта смотрит на дождливую взлётную полосу, спокойная реалистичная сцена ожидания без экрана в кадре."
+      "searchQuery": {
+        "ru": "есим установлена но нет сети",
+        "en": "eSIM installed but no network"
+      },
+      "semanticIntent": {
+        "primary": "no-network",
+        "secondary": [
+          "есим установлена но нет сети",
+          "eSIM installed but no network",
+          "eSIM для путешествий"
+        ]
+      },
+      "workingTitle": {
+        "ru": "Есим установлена но нет сети",
+        "en": "ESIM installed but no network"
+      },
+      "readerPromise": "Пошагово разобраться в задаче до поездки, не удаляя профиль и не рискуя основной SIM-картой.",
+      "creativeConceptKey": "airport-window-rain",
+      "creativeBrief": "Документальная travel-сцена с маршрутом, предметами поездки и человеком в естественной позе; без телефона крупным планом и без текста."
     },
     {
-      "planOrder": 13,
-      "id": "buy-esim-belarus-minsk-first-days",
-      "countryCode": "BY",
-      "region": "eastern-europe",
-      "planKind": "buy-esim",
+      "planOrder": 4,
+      "id": "esim-internet-not-working",
+      "scope": "global",
+      "region": "global",
+      "planKind": "search-support",
       "contentFormat": "connectivity-and-esim",
-      "searchQuery": { "ru": "купить есим для Беларуси", "en": "buy eSIM for Belarus" },
-      "semanticIntent": { "primary": "buy-esim-country", "secondary": ["eSIM Беларусь", "интернет в Беларуси", "eSIM Минск"] },
-      "workingTitle": { "ru": "Купить есим для Беларуси: связь в первые дни в Минске", "en": "Buy an eSIM for Belarus: staying connected in your first days in Minsk" },
-      "readerPromise": "Подготовить связь для прибытия, города и коротких выездов, сохранив основной номер для сообщений и кодов.",
-      "creativeConceptKey": "minsk-morning-tram-wide-avenue-rain-reflection",
-      "creativeBrief": "Раннее утро в Минске после дождя: трамвай на широком проспекте, отражения на мостовой и прохожий в пол-оборота."
+      "searchQuery": {
+        "ru": "есим не работает интернет",
+        "en": "eSIM internet not working"
+      },
+      "semanticIntent": {
+        "primary": "internet-troubleshooting",
+        "secondary": [
+          "есим не работает интернет",
+          "eSIM internet not working",
+          "eSIM для путешествий"
+        ]
+      },
+      "workingTitle": {
+        "ru": "Есим не работает интернет",
+        "en": "ESIM internet not working"
+      },
+      "readerPromise": "Пошагово разобраться в задаче до поездки, не удаляя профиль и не рискуя основной SIM-картой.",
+      "creativeConceptKey": "hotel-window-diagnostics",
+      "creativeBrief": "Документальная travel-сцена с маршрутом, предметами поездки и человеком в естественной позе; без телефона крупным планом и без текста."
+    },
+    {
+      "planOrder": 5,
+      "id": "activate-travel-esim",
+      "scope": "global",
+      "region": "global",
+      "planKind": "search-support",
+      "contentFormat": "connectivity-and-esim",
+      "searchQuery": {
+        "ru": "как активировать есим",
+        "en": "how to activate a travel eSIM"
+      },
+      "semanticIntent": {
+        "primary": "activation-steps",
+        "secondary": [
+          "как активировать есим",
+          "how to activate a travel eSIM",
+          "eSIM для путешествий"
+        ]
+      },
+      "workingTitle": {
+        "ru": "Как активировать есим",
+        "en": "How to activate a travel eSIM"
+      },
+      "readerPromise": "Пошагово разобраться в задаче до поездки, не удаляя профиль и не рискуя основной SIM-картой.",
+      "creativeConceptKey": "departure-board-checklist",
+      "creativeBrief": "Документальная travel-сцена с маршрутом, предметами поездки и человеком в естественной позе; без телефона крупным планом и без текста."
     },
     {
       "planOrder": 6,
-      "id": "how-many-gb-travel-esim",
-      "scope": "global",
-      "region": "global",
-      "planKind": "search-support",
-      "contentFormat": "connectivity-and-esim",
-      "searchQuery": { "ru": "сколько гигабайт нужно для есим в поездке", "en": "how many GB do I need for travel eSIM" },
-      "semanticIntent": { "primary": "travel-esim-data-allowance", "secondary": ["сколько интернета нужно в поездке", "eSIM 5 ГБ на сколько дней", "трафик для путешествия"] },
-      "workingTitle": { "ru": "Сколько гигабайт нужно для есим в поездке: выбрать объём без переплаты", "en": "How many GB do you need for a travel eSIM? Choose a plan without overbuying" },
-      "readerPromise": "Оценить трафик по реальным задачам: карты, сообщения, фото, видео и раздача интернета, с запасом на непредвиденный день.",
-      "creativeConceptKey": "train-window-paper-itinerary-mountain-light",
-      "creativeBrief": "Бумажный маршрут лежит у окна поезда, за стеклом проходят горы в мягком дневном свете, ощущение дороги и планирования."
-    },
-    {
-      "planOrder": 7,
-      "id": "buy-esim-azerbaijan-baku-absheron",
-      "countryCode": "AZ",
-      "region": "caucasus",
-      "planKind": "buy-esim",
-      "contentFormat": "connectivity-and-esim",
-      "searchQuery": { "ru": "купить есим для Азербайджана", "en": "buy eSIM for Azerbaijan" },
-      "semanticIntent": { "primary": "buy-esim-country", "secondary": ["eSIM Азербайджан", "интернет в Азербайджане", "eSIM Баку"] },
-      "workingTitle": { "ru": "Купить есим для Азербайджана: связь в Баку и на Апшероне", "en": "Buy an eSIM for Azerbaijan: staying connected in Baku and on the Absheron Peninsula" },
-      "readerPromise": "Подготовить интернет для первого дня в Баку и короткой поездки по полуострову, с ясной настройкой и запасом для навигации.",
-      "creativeConceptKey": "baku-old-stone-alley-caspian-wind-blue-hour",
-      "creativeBrief": "Синий час в старом Баку: каменная улица, лёгкий ветер с Каспия, прохожая идёт вполоборота, мягкие огни лавок."
-    },
-    {
-      "planOrder": 8,
-      "id": "esim-vs-roaming-travel",
-      "scope": "global",
-      "region": "global",
-      "planKind": "search-support",
-      "contentFormat": "connectivity-and-esim",
-      "searchQuery": { "ru": "есим или роуминг что выбрать в поездке", "en": "eSIM vs roaming for travel" },
-      "semanticIntent": { "primary": "esim-vs-roaming-travel", "secondary": ["роуминг или eSIM", "интернет за границей", "что выгоднее eSIM или роуминг"] },
-      "workingTitle": { "ru": "Есим или роуминг: что выбрать для поездки", "en": "eSIM or roaming: which is better for your trip?" },
-      "readerPromise": "Сравнить варианты по тому, что действительно меняет решение: сохранение основного номера, данные, звонки, настройка и резервный сценарий.",
-      "creativeConceptKey": "departure-board-suitcase-sunlit-station-hall",
-      "creativeBrief": "Светлый вокзальный зал с табло вдалеке и небольшим чемоданом у колонны, путешественник идёт боком к платформе, без телефона в кадре."
-    },
-    {
-      "planOrder": 1,
-      "id": "buy-esim-georgia-tbilisi-kakheti",
-      "countryCode": "GE",
-      "region": "caucasus",
-      "planKind": "buy-esim",
-      "contentFormat": "connectivity-and-esim",
-      "searchQuery": { "ru": "купить есим для Грузии", "en": "buy eSIM for Georgia" },
-      "semanticIntent": { "primary": "buy-esim-country", "secondary": ["eSIM Грузия", "интернет в Грузии", "eSIM Тбилиси"] },
-      "workingTitle": { "ru": "Купить есим для Грузии: связь в Тбилиси и по дороге в Кахетию", "en": "Buy an eSIM for Georgia: staying connected in Tbilisi and on the road to Kakheti" },
-      "readerPromise": "Настроить связь для города и короткой поездки по винодельческому региону, сохранив обычный номер для сообщений и кодов.",
-      "creativeConceptKey": "kakheti-vineyard-road-blue-mountains-woman-side-profile",
-      "creativeBrief": "Дорога между виноградниками Кахетии в голубой час, горы на горизонте, путешественница стоит вполоборота у каменной стены."
-    },
-    {
-      "planOrder": 10,
-      "id": "esim-hotspot-and-primary-number",
-      "scope": "global",
-      "region": "global",
-      "planKind": "search-support",
-      "contentFormat": "connectivity-and-esim",
-      "searchQuery": { "ru": "можно ли раздавать интернет с есим", "en": "can you use hotspot with eSIM" },
-      "semanticIntent": { "primary": "esim-hotspot-and-primary-number", "secondary": ["раздача интернета eSIM", "eSIM и обычная SIM одновременно", "как оставить основной номер при eSIM"] },
-      "workingTitle": { "ru": "Можно ли раздавать интернет с есим и оставить основной номер", "en": "Can you use a hotspot with an eSIM and keep your main number?" },
-      "readerPromise": "Понять, как разделить голосовую линию и мобильные данные, какие ограничения бывают у тарифа и что проверить до совместной поездки.",
-      "creativeConceptKey": "family-cafe-window-map-notebook-sharing-route",
-      "creativeBrief": "Два путешественника за столиком у окна кафе смотрят в бумажную карту и блокнот, естественная совместная подготовка маршрута."
-    },
-    {
-      "planOrder": 3,
-      "id": "buy-esim-kazakhstan-almaty-road",
-      "countryCode": "KZ",
-      "region": "central-asia",
-      "planKind": "buy-esim",
-      "contentFormat": "connectivity-and-esim",
-      "searchQuery": { "ru": "купить есим для Казахстана", "en": "buy eSIM for Kazakhstan" },
-      "semanticIntent": { "primary": "buy-esim-country", "secondary": ["eSIM Казахстан", "интернет в Казахстане", "eSIM Алматы"] },
-      "workingTitle": { "ru": "Купить есим для Казахстана: связь в Алматы и перед поездкой к горам", "en": "Buy an eSIM for Kazakhstan: staying connected in Almaty and before a mountain day trip" },
-      "readerPromise": "Подготовить интернет для города и выезда из него, с понятной последовательностью установки и резервом для карт и связи с водителем.",
-      "creativeConceptKey": "almaty-mountain-road-apple-stall-clear-morning",
-      "creativeBrief": "Утренняя улица Алматы: прилавок с яблоками на переднем плане, в конце проспекта видны горы, чистый реалистичный городской свет."
-    },
-    {
-      "planOrder": 12,
-      "id": "esim-profile-wont-install",
-      "scope": "global",
-      "region": "global",
-      "planKind": "search-support",
-      "contentFormat": "connectivity-and-esim",
-      "searchQuery": { "ru": "есим не устанавливается что делать", "en": "eSIM will not install what to do" },
-      "semanticIntent": { "primary": "esim-profile-installation-failure", "secondary": ["ошибка установки eSIM", "не сканируется QR код eSIM", "eSIM cannot be added"] },
-      "workingTitle": { "ru": "Есим не устанавливается: как проверить QR-код, устройство и соединение", "en": "Your eSIM will not install: check the QR code, device and connection" },
-      "readerPromise": "Разобрать безопасный порядок проверки, не тратить попытки установки и понять, когда нужен новый код или поддержка.",
-      "creativeConceptKey": "quiet-hotel-lobby-wifi-sign-traveler-side-view",
-      "creativeBrief": "Тихий холл небольшого отеля с естественным светом и табличкой Wi‑Fi в глубине кадра, путешественник сидит боком с папкой документов."
-    },
-    {
-      "planOrder": 11,
-      "id": "buy-esim-japan-city-to-onsen",
-      "countryCode": "JP",
-      "region": "east-asia",
-      "planKind": "buy-esim",
-      "contentFormat": "connectivity-and-esim",
-      "searchQuery": { "ru": "купить есим для Японии", "en": "buy eSIM for Japan" },
-      "semanticIntent": { "primary": "buy-esim-country", "secondary": ["eSIM Япония", "интернет в Японии для туристов", "eSIM Токио"] },
-      "workingTitle": { "ru": "Купить есим для Японии: связь в Токио и в поездке за город", "en": "Buy an eSIM for Japan: staying connected in Tokyo and beyond the city" },
-      "readerPromise": "Отделить намерение покупки от уже опубликованной инструкции по настройке: выбрать пакет по маршруту и подготовиться к первому подключению.",
-      "creativeConceptKey": "japan-rural-platform-norens-evening-traveler-profile",
-      "creativeBrief": "Небольшая японская станция в предвечернем свете, норэн у входа в лавку, путешественник ждёт поезд вполоборота."
-    },
-    {
-      "planOrder": 2,
-      "id": "check-phone-esim-support",
-      "scope": "global",
-      "region": "global",
-      "planKind": "search-support",
-      "contentFormat": "connectivity-and-esim",
-      "searchQuery": { "ru": "как проверить поддерживает ли телефон есим", "en": "how to check if a phone supports eSIM" },
-      "semanticIntent": { "primary": "check-phone-esim-support", "secondary": ["поддерживает ли айфон eSIM", "поддерживает ли Android eSIM", "где найти EID"] },
-      "workingTitle": { "ru": "Как проверить, поддерживает ли телефон есим", "en": "How to check whether your phone supports eSIM" },
-      "readerPromise": "Проверить совместимость до оплаты: модель, региональная версия, наличие EID и ограничения оператора без неполных списков устройств.",
-      "creativeConceptKey": "travel-store-counter-device-boxes-soft-daylight",
-      "creativeBrief": "Светлый стол в магазине техники: коробки смартфонов и дорожный блокнот, руки человека сравнивают небольшие карточки с характеристиками."
-    },
-    {
-      "planOrder": 15,
-      "id": "buy-esim-mexico-yucatan-arrival",
-      "countryCode": "MX",
-      "region": "north-america",
-      "planKind": "buy-esim",
-      "contentFormat": "connectivity-and-esim",
-      "searchQuery": { "ru": "купить есим для Мексики", "en": "buy eSIM for Mexico" },
-      "semanticIntent": { "primary": "buy-esim-country", "secondary": ["eSIM Мексика", "интернет в Мексике", "eSIM Канкун"] },
-      "workingTitle": { "ru": "Купить есим для Мексики: интернет в первый день на Юкатане", "en": "Buy an eSIM for Mexico: getting online on your first day in Yucatán" },
-      "readerPromise": "Подготовить связь для прилёта, дороги до жилья и самостоятельных выездов, не дублируя существующую статью о Мехико.",
-      "creativeConceptKey": "yucatan-cenote-stone-steps-sunlight-traveler-side",
-      "creativeBrief": "Каменные ступени к сеноту на Юкатане, солнечные лучи через зелень, путешественник спускается вполоборота, свежая документальная композиция."
-    },
-    {
-      "planOrder": 14,
-      "id": "two-esim-and-physical-sim",
-      "scope": "global",
-      "region": "global",
-      "planKind": "search-support",
-      "contentFormat": "connectivity-and-esim",
-      "searchQuery": { "ru": "можно ли пользоваться двумя есим одновременно", "en": "can you use two eSIMs at once" },
-      "semanticIntent": { "primary": "two-esim-and-physical-sim", "secondary": ["две eSIM на iPhone", "eSIM и SIM одновременно", "сколько eSIM можно хранить"] },
-      "workingTitle": { "ru": "Можно ли пользоваться двумя есим одновременно", "en": "Can you use two eSIMs at the same time?" },
-      "readerPromise": "Объяснить разницу между сохранёнными и активными профилями, работой с физической SIM и настройкой основной линии без привязки к одной модели.",
-      "creativeConceptKey": "railway-seat-two-travelers-window-reflection-notes",
-      "creativeBrief": "Два путешественника сидят в поезде у окна, в отражении видны лица вполоборота и бумажные заметки на столике, спокойный дневной свет."
-    },
-    {
-      "planOrder": 17,
-      "id": "buy-esim-portugal-lisbon-coast",
-      "countryCode": "PT",
-      "region": "western-europe",
-      "planKind": "buy-esim",
-      "contentFormat": "connectivity-and-esim",
-      "searchQuery": { "ru": "купить есим для Португалии", "en": "buy eSIM for Portugal" },
-      "semanticIntent": { "primary": "buy-esim-country", "secondary": ["eSIM Португалия", "интернет в Португалии", "eSIM Лиссабон"] },
-      "workingTitle": { "ru": "Купить есим для Португалии: связь в Лиссабоне и на побережье", "en": "Buy an eSIM for Portugal: staying connected in Lisbon and on the coast" },
-      "readerPromise": "Подготовить интернет для города и коротких выездов к океану, не повторяя существующий общий материал о первой поездке в Португалию.",
-      "creativeConceptKey": "portugal-coastal-train-azulejo-platform-late-afternoon",
-      "creativeBrief": "Небольшая станция на португальском побережье: азулежу на стене, поезд вдали, поздний мягкий свет и путешественница в профиль."
-    },
-    {
-      "planOrder": 16,
-      "id": "move-esim-to-new-phone",
-      "scope": "global",
-      "region": "global",
-      "planKind": "search-support",
-      "contentFormat": "connectivity-and-esim",
-      "searchQuery": { "ru": "как перенести есим на новый телефон", "en": "how to transfer eSIM to a new phone" },
-      "semanticIntent": { "primary": "move-esim-to-new-phone", "secondary": ["перенос eSIM iPhone", "как перенести eSIM Android", "можно ли установить eSIM повторно"] },
-      "workingTitle": { "ru": "Как перенести есим на новый телефон и не потерять доступ к связи", "en": "How to move an eSIM to a new phone without losing your connection" },
-      "readerPromise": "Понять, чем перенос операторской линии отличается от туристического профиля, когда не удалять старую eSIM и какие данные сохранить заранее.",
-      "creativeConceptKey": "home-desk-travel-pouch-old-new-device-boxes",
-      "creativeBrief": "Домашний стол перед поездкой: дорожный чехол, две нейтральные коробки устройств и записанная от руки памятка, тёплый естественный свет."
-    },
-    {
-      "planOrder": 19,
-      "id": "buy-esim-india-delhi-jaipur",
-      "countryCode": "IN",
-      "region": "south-asia",
-      "planKind": "buy-esim",
-      "contentFormat": "connectivity-and-esim",
-      "searchQuery": { "ru": "купить есим для Индии", "en": "buy eSIM for India" },
-      "semanticIntent": { "primary": "buy-esim-country", "secondary": ["eSIM Индия", "интернет в Индии для туристов", "eSIM Дели"] },
-      "workingTitle": { "ru": "Купить есим для Индии: связь между Дели и Джайпуром", "en": "Buy an eSIM for India: staying connected between Delhi and Jaipur" },
-      "readerPromise": "Подготовить связь для первой поездки между двумя городами, карт, бронирований и связи с водителем без спорных обещаний о покрытии.",
-      "creativeConceptKey": "india-blue-city-arch-morning-rickshaw-side-view",
-      "creativeBrief": "Утро у арки в индийском городе: рикша проходит сбоку, синий фасад и мягкий свет, живой городской кадр без рекламной постановки."
-    },
-    {
-      "planOrder": 18,
       "id": "when-travel-esim-starts",
       "scope": "global",
       "region": "global",
       "planKind": "search-support",
       "contentFormat": "connectivity-and-esim",
-      "searchQuery": { "ru": "когда активируется есим для путешествий", "en": "when does a travel eSIM activate" },
-      "semanticIntent": { "primary": "when-travel-esim-starts", "secondary": ["срок действия eSIM", "активация eSIM после установки", "можно ли установить eSIM заранее"] },
-      "workingTitle": { "ru": "Когда активируется есим для путешествий: установка, сеть и срок действия", "en": "When does a travel eSIM activate? Installation, network and validity" },
-      "readerPromise": "Разделить покупку, установку, первое подключение и начало срока пакета, показав, почему условия зависят от конкретного тарифа.",
-      "creativeConceptKey": "sunrise-departure-gate-paper-ticket-coffee-shadow",
-      "creativeBrief": "Раннее утро у выхода на посадку: бумажный посадочный талон и чашка кофе на столике, солнечная тень от окна, без телефона в кадре."
+      "searchQuery": {
+        "ru": "когда активируется есим для путешествий",
+        "en": "when does a travel eSIM activate"
+      },
+      "semanticIntent": {
+        "primary": "activation-timing",
+        "secondary": [
+          "когда активируется есим для путешествий",
+          "when does a travel eSIM activate",
+          "eSIM для путешествий"
+        ]
+      },
+      "workingTitle": {
+        "ru": "Когда активируется есим для путешествий",
+        "en": "When does a travel eSIM activate"
+      },
+      "readerPromise": "Пошагово разобраться в задаче до поездки, не удаляя профиль и не рискуя основной SIM-картой.",
+      "creativeConceptKey": "sunrise-departure-gate",
+      "creativeBrief": "Документальная travel-сцена с маршрутом, предметами поездки и человеком в естественной позе; без телефона крупным планом и без текста."
+    },
+    {
+      "planOrder": 7,
+      "id": "travel-esim-data-allowance",
+      "scope": "global",
+      "region": "global",
+      "planKind": "search-support",
+      "contentFormat": "connectivity-and-esim",
+      "searchQuery": {
+        "ru": "сколько гигабайт нужно для есим в поездке",
+        "en": "how much data do I need for a travel eSIM"
+      },
+      "semanticIntent": {
+        "primary": "data-planning",
+        "secondary": [
+          "сколько гигабайт нужно для есим в поездке",
+          "how much data do I need for a travel eSIM",
+          "eSIM для путешествий"
+        ]
+      },
+      "workingTitle": {
+        "ru": "Сколько гигабайт нужно для есим в поездке",
+        "en": "How much data do I need for a travel eSIM"
+      },
+      "readerPromise": "Пошагово разобраться в задаче до поездки, не удаляя профиль и не рискуя основной SIM-картой.",
+      "creativeConceptKey": "train-window-itinerary",
+      "creativeBrief": "Документальная travel-сцена с маршрутом, предметами поездки и человеком в естественной позе; без телефона крупным планом и без текста."
+    },
+    {
+      "planOrder": 8,
+      "id": "esim-hotspot",
+      "scope": "global",
+      "region": "global",
+      "planKind": "search-support",
+      "contentFormat": "connectivity-and-esim",
+      "searchQuery": {
+        "ru": "можно ли раздавать интернет с есим",
+        "en": "can you use hotspot with eSIM"
+      },
+      "semanticIntent": {
+        "primary": "hotspot",
+        "secondary": [
+          "можно ли раздавать интернет с есим",
+          "can you use hotspot with eSIM",
+          "eSIM для путешествий"
+        ]
+      },
+      "workingTitle": {
+        "ru": "Можно ли раздавать интернет с есим",
+        "en": "Can you use hotspot with eSIM"
+      },
+      "readerPromise": "Пошагово разобраться в задаче до поездки, не удаляя профиль и не рискуя основной SIM-картой.",
+      "creativeConceptKey": "cafe-map-sharing",
+      "creativeBrief": "Документальная travel-сцена с маршрутом, предметами поездки и человеком в естественной позе; без телефона крупным планом и без текста."
+    },
+    {
+      "planOrder": 9,
+      "id": "two-esim-at-once",
+      "scope": "global",
+      "region": "global",
+      "planKind": "search-support",
+      "contentFormat": "connectivity-and-esim",
+      "searchQuery": {
+        "ru": "можно ли пользоваться двумя есим одновременно",
+        "en": "can you use two eSIMs at once"
+      },
+      "semanticIntent": {
+        "primary": "dual-esim",
+        "secondary": [
+          "можно ли пользоваться двумя есим одновременно",
+          "can you use two eSIMs at once",
+          "eSIM для путешествий"
+        ]
+      },
+      "workingTitle": {
+        "ru": "Можно ли пользоваться двумя есим одновременно",
+        "en": "Can you use two eSIMs at once"
+      },
+      "readerPromise": "Пошагово разобраться в задаче до поездки, не удаляя профиль и не рискуя основной SIM-картой.",
+      "creativeConceptKey": "railway-seat-notes",
+      "creativeBrief": "Документальная travel-сцена с маршрутом, предметами поездки и человеком в естественной позе; без телефона крупным планом и без текста."
+    },
+    {
+      "planOrder": 10,
+      "id": "move-esim-new-phone",
+      "scope": "global",
+      "region": "global",
+      "planKind": "search-support",
+      "contentFormat": "connectivity-and-esim",
+      "searchQuery": {
+        "ru": "как перенести есим на новый телефон",
+        "en": "how to transfer an eSIM to a new phone"
+      },
+      "semanticIntent": {
+        "primary": "transfer-device",
+        "secondary": [
+          "как перенести есим на новый телефон",
+          "how to transfer an eSIM to a new phone",
+          "eSIM для путешествий"
+        ]
+      },
+      "workingTitle": {
+        "ru": "Как перенести есим на новый телефон",
+        "en": "How to transfer an eSIM to a new phone"
+      },
+      "readerPromise": "Пошагово разобраться в задаче до поездки, не удаляя профиль и не рискуя основной SIM-картой.",
+      "creativeConceptKey": "home-desk-travel-pouch",
+      "creativeBrief": "Документальная travel-сцена с маршрутом, предметами поездки и человеком в естественной позе; без телефона крупным планом и без текста."
+    },
+    {
+      "planOrder": 11,
+      "id": "esim-will-not-install",
+      "scope": "global",
+      "region": "global",
+      "planKind": "search-support",
+      "contentFormat": "connectivity-and-esim",
+      "searchQuery": {
+        "ru": "есим не устанавливается что делать",
+        "en": "eSIM will not install what to do"
+      },
+      "semanticIntent": {
+        "primary": "installation-failure",
+        "secondary": [
+          "есим не устанавливается что делать",
+          "eSIM will not install what to do",
+          "eSIM для путешествий"
+        ]
+      },
+      "workingTitle": {
+        "ru": "Есим не устанавливается что делать",
+        "en": "ESIM will not install what to do"
+      },
+      "readerPromise": "Пошагово разобраться в задаче до поездки, не удаляя профиль и не рискуя основной SIM-картой.",
+      "creativeConceptKey": "quiet-hotel-lobby",
+      "creativeBrief": "Документальная travel-сцена с маршрутом, предметами поездки и человеком в естественной позе; без телефона крупным планом и без текста."
+    },
+    {
+      "planOrder": 12,
+      "id": "check-esim-support",
+      "scope": "global",
+      "region": "global",
+      "planKind": "search-support",
+      "contentFormat": "connectivity-and-esim",
+      "searchQuery": {
+        "ru": "как проверить поддерживает ли телефон есим",
+        "en": "how to check if a phone supports eSIM"
+      },
+      "semanticIntent": {
+        "primary": "compatibility-check",
+        "secondary": [
+          "как проверить поддерживает ли телефон есим",
+          "how to check if a phone supports eSIM",
+          "eSIM для путешествий"
+        ]
+      },
+      "workingTitle": {
+        "ru": "Как проверить поддерживает ли телефон есим",
+        "en": "How to check if a phone supports eSIM"
+      },
+      "readerPromise": "Пошагово разобраться в задаче до поездки, не удаляя профиль и не рискуя основной SIM-картой.",
+      "creativeConceptKey": "travel-store-counter",
+      "creativeBrief": "Документальная travel-сцена с маршрутом, предметами поездки и человеком в естественной позе; без телефона крупным планом и без текста."
+    },
+    {
+      "planOrder": 13,
+      "id": "esim-sms-not-working",
+      "scope": "global",
+      "region": "global",
+      "planKind": "search-support",
+      "contentFormat": "connectivity-and-esim",
+      "searchQuery": {
+        "ru": "на есим не приходят смс",
+        "en": "SMS not working on eSIM"
+      },
+      "semanticIntent": {
+        "primary": "sms-and-calls",
+        "secondary": [
+          "на есим не приходят смс",
+          "SMS not working on eSIM",
+          "eSIM для путешествий"
+        ]
+      },
+      "workingTitle": {
+        "ru": "На есим не приходят смс",
+        "en": "SMS not working on eSIM"
+      },
+      "readerPromise": "Пошагово разобраться в задаче до поездки, не удаляя профиль и не рискуя основной SIM-картой.",
+      "creativeConceptKey": "station-ticket-counter",
+      "creativeBrief": "Документальная travel-сцена с маршрутом, предметами поездки и человеком в естественной позе; без телефона крупным планом и без текста."
+    },
+    {
+      "planOrder": 14,
+      "id": "esim-apn-settings",
+      "scope": "global",
+      "region": "global",
+      "planKind": "search-support",
+      "contentFormat": "connectivity-and-esim",
+      "searchQuery": {
+        "ru": "как настроить apn для есим",
+        "en": "how to set APN for eSIM"
+      },
+      "semanticIntent": {
+        "primary": "apn-settings",
+        "secondary": [
+          "как настроить apn для есим",
+          "how to set APN for eSIM",
+          "eSIM для путешествий"
+        ]
+      },
+      "workingTitle": {
+        "ru": "Как настроить apn для есим",
+        "en": "How to set APN for eSIM"
+      },
+      "readerPromise": "Пошагово разобраться в задаче до поездки, не удаляя профиль и не рискуя основной SIM-картой.",
+      "creativeConceptKey": "coastal-road-notebook",
+      "creativeBrief": "Документальная travel-сцена с маршрутом, предметами поездки и человеком в естественной позе; без телефона крупным планом и без текста."
+    },
+    {
+      "planOrder": 15,
+      "id": "esim-not-connecting-abroad",
+      "scope": "global",
+      "region": "global",
+      "planKind": "search-support",
+      "contentFormat": "connectivity-and-esim",
+      "searchQuery": {
+        "ru": "есим не подключается за границей",
+        "en": "eSIM not connecting abroad"
+      },
+      "semanticIntent": {
+        "primary": "abroad-connection",
+        "secondary": [
+          "есим не подключается за границей",
+          "eSIM not connecting abroad",
+          "eSIM для путешествий"
+        ]
+      },
+      "workingTitle": {
+        "ru": "Есим не подключается за границей",
+        "en": "ESIM not connecting abroad"
+      },
+      "readerPromise": "Пошагово разобраться в задаче до поездки, не удаляя профиль и не рискуя основной SIM-картой.",
+      "creativeConceptKey": "mountain-border-road",
+      "creativeBrief": "Документальная travel-сцена с маршрутом, предметами поездки и человеком в естественной позе; без телефона крупным планом и без текста."
+    },
+    {
+      "planOrder": 16,
+      "id": "esim-or-roaming",
+      "scope": "global",
+      "region": "global",
+      "planKind": "search-support",
+      "contentFormat": "connectivity-and-esim",
+      "searchQuery": {
+        "ru": "есим или роуминг что выбрать",
+        "en": "eSIM vs roaming"
+      },
+      "semanticIntent": {
+        "primary": "roaming-comparison",
+        "secondary": [
+          "есим или роуминг что выбрать",
+          "eSIM vs roaming",
+          "eSIM для путешествий"
+        ]
+      },
+      "workingTitle": {
+        "ru": "Есим или роуминг что выбрать",
+        "en": "ESIM vs roaming"
+      },
+      "readerPromise": "Пошагово разобраться в задаче до поездки, не удаляя профиль и не рискуя основной SIM-картой.",
+      "creativeConceptKey": "departure-hall-suitcase",
+      "creativeBrief": "Документальная travel-сцена с маршрутом, предметами поездки и человеком в естественной позе; без телефона крупным планом и без текста."
+    },
+    {
+      "planOrder": 17,
+      "id": "choose-travel-esim",
+      "scope": "global",
+      "region": "global",
+      "planKind": "search-support",
+      "contentFormat": "connectivity-and-esim",
+      "searchQuery": {
+        "ru": "как выбрать есим для путешествий",
+        "en": "how to choose a travel eSIM"
+      },
+      "semanticIntent": {
+        "primary": "plan-selection",
+        "secondary": [
+          "как выбрать есим для путешествий",
+          "how to choose a travel eSIM",
+          "eSIM для путешествий"
+        ]
+      },
+      "workingTitle": {
+        "ru": "Как выбрать есим для путешествий",
+        "en": "How to choose a travel eSIM"
+      },
+      "readerPromise": "Пошагово разобраться в задаче до поездки, не удаляя профиль и не рискуя основной SIM-картой.",
+      "creativeConceptKey": "market-stall-route-notes",
+      "creativeBrief": "Документальная travel-сцена с маршрутом, предметами поездки и человеком в естественной позе; без телефона крупным планом и без текста."
+    },
+    {
+      "planOrder": 18,
+      "id": "keep-main-number-esim",
+      "scope": "global",
+      "region": "global",
+      "planKind": "search-support",
+      "contentFormat": "connectivity-and-esim",
+      "searchQuery": {
+        "ru": "как оставить основной номер при есим",
+        "en": "how to keep your main number with an eSIM"
+      },
+      "semanticIntent": {
+        "primary": "dual-line",
+        "secondary": [
+          "как оставить основной номер при есим",
+          "how to keep your main number with an eSIM",
+          "eSIM для путешествий"
+        ]
+      },
+      "workingTitle": {
+        "ru": "Как оставить основной номер при есим",
+        "en": "How to keep your main number with an eSIM"
+      },
+      "readerPromise": "Пошагово разобраться в задаче до поездки, не удаляя профиль и не рискуя основной SIM-картой.",
+      "creativeConceptKey": "hotel-desk-two-lines",
+      "creativeBrief": "Документальная travel-сцена с маршрутом, предметами поездки и человеком в естественной позе; без телефона крупным планом и без текста."
+    },
+    {
+      "planOrder": 19,
+      "id": "esim-data-ran-out",
+      "scope": "global",
+      "region": "global",
+      "planKind": "search-support",
+      "contentFormat": "connectivity-and-esim",
+      "searchQuery": {
+        "ru": "что делать если закончился интернет на есим",
+        "en": "what to do when travel eSIM data runs out"
+      },
+      "semanticIntent": {
+        "primary": "data-renewal",
+        "secondary": [
+          "что делать если закончился интернет на есим",
+          "what to do when travel eSIM data runs out",
+          "eSIM для путешествий"
+        ]
+      },
+      "workingTitle": {
+        "ru": "Что делать если закончился интернет на есим",
+        "en": "What to do when travel eSIM data runs out"
+      },
+      "readerPromise": "Пошагово разобраться в задаче до поездки, не удаляя профиль и не рискуя основной SIM-картой.",
+      "creativeConceptKey": "roadside-cafe-map",
+      "creativeBrief": "Документальная travel-сцена с маршрутом, предметами поездки и человеком в естественной позе; без телефона крупным планом и без текста."
+    },
+    {
+      "planOrder": 20,
+      "id": "esim-qr-code-error",
+      "scope": "global",
+      "region": "global",
+      "planKind": "search-support",
+      "contentFormat": "connectivity-and-esim",
+      "searchQuery": {
+        "ru": "ошибка qr-кода есим что делать",
+        "en": "eSIM QR code error what to do"
+      },
+      "semanticIntent": {
+        "primary": "qr-troubleshooting",
+        "secondary": [
+          "ошибка qr-кода есим что делать",
+          "eSIM QR code error what to do",
+          "eSIM для путешествий"
+        ]
+      },
+      "workingTitle": {
+        "ru": "Ошибка qr-кода есим что делать",
+        "en": "ESIM QR code error what to do"
+      },
+      "readerPromise": "Пошагово разобраться в задаче до поездки, не удаляя профиль и не рискуя основной SIM-картой.",
+      "creativeConceptKey": "museum-ticket-desk",
+      "creativeBrief": "Документальная travel-сцена с маршрутом, предметами поездки и человеком в естественной позе; без телефона крупным планом и без текста."
     }
   ]
 }

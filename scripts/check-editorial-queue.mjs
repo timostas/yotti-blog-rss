@@ -148,6 +148,9 @@ export function validateEditorialQueue(policy, queue) {
       .filter(Boolean));
     const sortedPlan = [...plannedPublications].sort((a, b) => a.planOrder - b.planOrder);
     const firstPlanKind = sortedPlan[0]?.planKind;
+    const technicalFirstQueue = policy.contentStrategy.allowTechnicalFirstQueue === true
+      && sortedPlan.length > 0
+      && sortedPlan.every((plan) => plan?.planKind === "search-support");
     if (!new Set(["buy-esim", "search-support"]).has(firstPlanKind)) {
       errors.push("plannedPublications: первый элемент должен иметь planKind buy-esim или search-support");
     }
@@ -176,10 +179,12 @@ export function validateEditorialQueue(policy, queue) {
         errors.push(`${label}: search-support должен иметь scope global и не содержать countryCode`);
       }
       if (typeof item?.region !== "string" || item.region.trim() === "") errors.push(`${label}: region обязателен`);
-      const expectedKind = index % 2 === 0
-        ? firstPlanKind
-        : firstPlanKind === "buy-esim" ? "search-support" : "buy-esim";
-      if (item?.planKind !== expectedKind) errors.push(`${label}: нарушено обязательное чередование buy-esim/search-support`);
+      if (!technicalFirstQueue) {
+        const expectedKind = index % 2 === 0
+          ? firstPlanKind
+          : firstPlanKind === "buy-esim" ? "search-support" : "buy-esim";
+        if (item?.planKind !== expectedKind) errors.push(`${label}: нарушено обязательное чередование buy-esim/search-support`);
+      }
       if (!policy.contentStrategy.formats.some((format) => format.key === item?.contentFormat)) {
         errors.push(`${label}: неизвестный contentFormat`);
       }
@@ -216,9 +221,11 @@ export function validateEditorialQueue(policy, queue) {
       }
     }
 
-    for (let index = 2; index < sortedPlan.length; index += 1) {
-      if (sortedPlan[index].region === sortedPlan[index - 1].region && sortedPlan[index].region === sortedPlan[index - 2].region) {
-        errors.push(`${sortedPlan[index].id}: регион повторяется более двух раз подряд`);
+    if (!technicalFirstQueue) {
+      for (let index = 2; index < sortedPlan.length; index += 1) {
+        if (sortedPlan[index].region === sortedPlan[index - 1].region && sortedPlan[index].region === sortedPlan[index - 2].region) {
+          errors.push(`${sortedPlan[index].id}: регион повторяется более двух раз подряд`);
+        }
       }
     }
   }
