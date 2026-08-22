@@ -41,12 +41,12 @@ test("политика разрешает естественные позы лю
   assert.equal("forbidRearFacingVehicleAsPrimaryComposition" in policy.creativeStrategy, false);
 });
 
-test("ускоренный поисковый цикл разрешает две двуязычные единицы в день", () => {
-  assert.equal(policy.production.targetContentUnitsPerDay, 2);
-  assert.equal(policy.production.maximumPublishedPagesPerDay, 4);
-  assert.equal(policy.production.frequencyLimitMode, "two_bilingual_search_units_per_day_controlled_sprint");
+test("technical-first поток разрешает четыре слота и ручные выпуски без потолка", () => {
+  assert.equal(policy.production.targetContentUnitsPerDay, null);
+  assert.equal(policy.production.maximumPublishedPagesPerDay, null);
+  assert.equal(policy.production.frequencyLimitMode, "unlimited_owner_manual_with_four_scheduled_daily_slots");
   assert.equal(policy.production.frequencyLimitEffectiveFrom, "2026-08-22");
-  assert.deepEqual(policy.production.dailyPublicationTimes, ["12:00", "18:30"]);
+  assert.deepEqual(policy.production.dailyPublicationTimes, ["10:00", "10:30", "20:00", "20:30"]);
   assert.deepEqual(policy.production.localesPerUnit, ["ru", "en"]);
 });
 
