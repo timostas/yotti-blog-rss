@@ -2151,65 +2151,72 @@
         ],
         "editorialChange": "После отдельного прохода разведены формулировки и заголовки RU/EN, упрощены окончания и сохранено различие между установкой, активацией и сетью."
       }
+    },
+    {
+      "id": "esim-sms-not-working",
+      "topicKey": "sms-and-calls",
+      "status": "published",
+      "locales": [
+        "ru",
+        "en"
+      ],
+      "model": {
+        "name": "gpt-5",
+        "effort": "high"
+      },
+      "riskReasons": [
+        "owner_requested_manual_run",
+        "owner_approved_skip_of_duplicate_predecessor"
+      ],
+      "generationAttempts": {
+        "ru": 1,
+        "en": 1
+      },
+      "qualityRepairAttempts": 0,
+      "scores": {
+        "utility": 95,
+        "originalValue": 92,
+        "factSupport": 94
+      },
+      "editorialStandardVersion": 2,
+      "editorialPasses": {
+        "ru": 1,
+        "en": 1
+      },
+      "intentMap": {
+        "primary": {
+          "ru": "на есим не приходят смс",
+          "en": "SMS not working on eSIM"
+        },
+        "cannibalizationDecision": "Новый URL диагностирует получение SMS и наличие номера; статьи о двух активных есим и сохранении основного номера отвечают на настройку линий, а не на сбой сообщений."
+      },
+      "internalContextLinks": [
+        "https://yotti.net/",
+        "https://yotti.net/blog/tag/%D0%98%D0%BD%D1%82%D0%B5%D1%80%D0%BD%D0%B5%D1%82%20%D0%B2%20%D0%BF%D0%BE%D0%B5%D0%B7%D0%B4%D0%BA%D0%B5"
+      ],
+      "creative": "assets/covers/esim-sms-not-working.png",
+      "creativeConceptKey": "station-ticket-counter",
+      "contentFormat": "connectivity-and-esim",
+      "schedule": {
+        "ru": "2026-08-22T21:58:00Z",
+        "en": "2026-08-22T21:58:00Z"
+      },
+      "qualityNotes": {
+        "localeTotals": {
+          "ru": 95,
+          "en": 95
+        },
+        "weakestDimensions": [
+          "local_specificity_and_original_value",
+          "trust_and_evidence"
+        ],
+        "editorialChange": "После отдельного прохода RU и EN получили разные навигационные структуры; уточнена роль подписей линий, убран универсальный финальный вывод и сохранено разделение SMS и интернет-сообщений."
+      }
     }
   ],
   "plannedPublications": [
     {
       "planOrder": 1,
-      "id": "check-esim-support",
-      "scope": "global",
-      "region": "global",
-      "planKind": "search-support",
-      "contentFormat": "connectivity-and-esim",
-      "searchQuery": {
-        "ru": "как проверить поддерживает ли телефон есим",
-        "en": "how to check if a phone supports eSIM"
-      },
-      "semanticIntent": {
-        "primary": "compatibility-check",
-        "secondary": [
-          "как проверить поддерживает ли телефон есим",
-          "how to check if a phone supports eSIM",
-          "eSIM для путешествий"
-        ]
-      },
-      "workingTitle": {
-        "ru": "Как проверить поддерживает ли телефон есим",
-        "en": "How to check if a phone supports eSIM"
-      },
-      "readerPromise": "Пошагово разобраться в задаче до поездки, не удаляя профиль и не рискуя основной SIM-картой.",
-      "creativeConceptKey": "travel-store-counter",
-      "creativeBrief": "Документальная travel-сцена с маршрутом, предметами поездки и человеком в естественной позе; без телефона крупным планом и без текста."
-    },
-    {
-      "planOrder": 2,
-      "id": "esim-sms-not-working",
-      "scope": "global",
-      "region": "global",
-      "planKind": "search-support",
-      "contentFormat": "connectivity-and-esim",
-      "searchQuery": {
-        "ru": "на есим не приходят смс",
-        "en": "SMS not working on eSIM"
-      },
-      "semanticIntent": {
-        "primary": "sms-and-calls",
-        "secondary": [
-          "на есим не приходят смс",
-          "SMS not working on eSIM",
-          "eSIM для путешествий"
-        ]
-      },
-      "workingTitle": {
-        "ru": "На есим не приходят смс",
-        "en": "SMS not working on eSIM"
-      },
-      "readerPromise": "Пошагово разобраться в задаче до поездки, не удаляя профиль и не рискуя основной SIM-картой.",
-      "creativeConceptKey": "station-ticket-counter",
-      "creativeBrief": "Документальная travel-сцена с маршрутом, предметами поездки и человеком в естественной позе; без телефона крупным планом и без текста."
-    },
-    {
-      "planOrder": 3,
       "id": "esim-apn-settings",
       "scope": "global",
       "region": "global",
@@ -2236,7 +2243,7 @@
       "creativeBrief": "Документальная travel-сцена с маршрутом, предметами поездки и человеком в естественной позе; без телефона крупным планом и без текста."
     },
     {
-      "planOrder": 4,
+      "planOrder": 2,
       "id": "esim-not-connecting-abroad",
       "scope": "global",
       "region": "global",
@@ -2263,7 +2270,7 @@
       "creativeBrief": "Документальная travel-сцена с маршрутом, предметами поездки и человеком в естественной позе; без телефона крупным планом и без текста."
     },
     {
-      "planOrder": 5,
+      "planOrder": 3,
       "id": "esim-or-roaming",
       "scope": "global",
       "region": "global",
@@ -2290,7 +2297,7 @@
       "creativeBrief": "Документальная travel-сцена с маршрутом, предметами поездки и человеком в естественной позе; без телефона крупным планом и без текста."
     },
     {
-      "planOrder": 6,
+      "planOrder": 4,
       "id": "choose-travel-esim",
       "scope": "global",
       "region": "global",
@@ -2317,7 +2324,7 @@
       "creativeBrief": "Документальная travel-сцена с маршрутом, предметами поездки и человеком в естественной позе; без телефона крупным планом и без текста."
     },
     {
-      "planOrder": 7,
+      "planOrder": 5,
       "id": "keep-main-number-esim",
       "scope": "global",
       "region": "global",
@@ -2344,7 +2351,7 @@
       "creativeBrief": "Документальная travel-сцена с маршрутом, предметами поездки и человеком в естественной позе; без телефона крупным планом и без текста."
     },
     {
-      "planOrder": 8,
+      "planOrder": 6,
       "id": "esim-data-ran-out",
       "scope": "global",
       "region": "global",
@@ -2371,7 +2378,7 @@
       "creativeBrief": "Документальная travel-сцена с маршрутом, предметами поездки и человеком в естественной позе; без телефона крупным планом и без текста."
     },
     {
-      "planOrder": 9,
+      "planOrder": 7,
       "id": "esim-qr-code-error",
       "scope": "global",
       "region": "global",
