@@ -65,6 +65,66 @@ function normalizeUrl(value, siteUrl, field, sourceName) {
   return url.toString();
 }
 
+function optionalIsoDate(metadata, field, sourceName) {
+  if (metadata[field] === undefined) return null;
+  const value = requiredString(metadata, field, sourceName);
+  const date = new Date(value);
+  if (Number.isNaN(date.getTime()) || date.toISOString() !== value) {
+    throw new Error(`${sourceName}: поле ${field} должно быть датой в ISO 8601 с UTC`);
+  }
+  return date;
+}
+
+function parseEditorialMetadata(metadata, article, sourceName) {
+  if (metadata.editorial === undefined) return null;
+  if (!metadata.editorial || typeof metadata.editorial !== "object" || Array.isArray(metadata.editorial)) {
+    throw new Error(`${sourceName}: editorial должен быть объектом`);
+  }
+
+  const authorUrl = normalizeUrl(requiredString(metadata.editorial, "authorUrl", sourceName), undefined, "editorial.authorUrl", sourceName);
+  const modifiedAt = optionalIsoDate(metadata.editorial, "modifiedAt", sourceName);
+  if (modifiedAt && modifiedAt.getTime() < article.publishedAt.getTime()) {
+    throw new Error(`${sourceName}: editorial.modifiedAt не может быть раньше publishedAt`);
+  }
+
+  const alternate = metadata.editorial.alternate;
+  let alternateLink = null;
+  if (alternate !== undefined) {
+    if (!alternate || typeof alternate !== "object" || Array.isArray(alternate)) {
+      throw new Error(`${sourceName}: editorial.alternate должен быть объектом`);
+    }
+    const language = requiredString(alternate, "language", sourceName);
+    if (!/^[a-z]{2}$/.test(language) || language === article.language) {
+      throw new Error(`${sourceName}: editorial.alternate.language должен быть другим двухбуквенным кодом языка`);
+    }
+    alternateLink = {
+      language,
+      url: normalizeUrl(requiredString(alternate, "url", sourceName), undefined, "editorial.alternate.url", sourceName),
+    };
+  }
+
+  const imageTitle = requiredString(metadata.editorial, "imageTitle", sourceName);
+  const imageDescription = requiredString(metadata.editorial, "imageDescription", sourceName);
+  const sourceNotes = metadata.editorial.sourceNotes;
+  if (!Array.isArray(sourceNotes) || sourceNotes.length < 2) {
+    throw new Error(`${sourceName}: editorial.sourceNotes должен содержать минимум два источника`);
+  }
+  const normalizedSources = sourceNotes.map((source, index) => {
+    if (!source || typeof source !== "object" || Array.isArray(source)) {
+      throw new Error(`${sourceName}: editorial.sourceNotes[${index}] должен быть объектом`);
+    }
+    return {
+      title: requiredString(source, "title", sourceName),
+      url: normalizeUrl(requiredString(source, "url", sourceName), undefined, `editorial.sourceNotes[${index}].url`, sourceName),
+    };
+  });
+  if (new Set(normalizedSources.map((source) => source.url)).size !== normalizedSources.length) {
+    throw new Error(`${sourceName}: editorial.sourceNotes не должен содержать повторяющиеся URL`);
+  }
+
+  return { authorUrl, modifiedAt, alternate: alternateLink, imageTitle, imageDescription, sourceNotes: normalizedSources };
+}
+
 export function parseArticle(source, sourceName = "article.md", siteUrl = "https://example.com") {
   const normalized = source.replaceAll("\r\n", "\n");
   const match = normalized.match(/^---\n([\s\S]*?)\n---\n([\s\S]+)$/);
@@ -153,7 +213,7 @@ export function parseArticle(source, sourceName = "article.md", siteUrl = "https
     };
   }
 
-  return {
+  const article = {
     title,
     slug,
     description,
@@ -170,6 +230,8 @@ export function parseArticle(source, sourceName = "article.md", siteUrl = "https
     reviewAfter,
     sources,
   };
+  article.editorial = parseEditorialMetadata(metadata, article, sourceName);
+  return article;
 }
 
 export function validateArticleCategories(article, taxonomy, sourceName = "article.md") {
@@ -219,6 +281,36 @@ export function renderArticleBody(article) {
   return marked.parse(article.body, { async: false }).trim();
 }
 
+function formatEditorialDate(date, language) {
+  return new Intl.DateTimeFormat(language === "ru" ? "ru-RU" : "en-GB", {
+    day: "numeric",
+    month: "long",
+    year: "numeric",
+    timeZone: "UTC",
+  }).format(date);
+}
+
+function renderEditorialMeta(article) {
+  if (!article.editorial) return "";
+  const { authorUrl, modifiedAt, sourceNotes } = article.editorial;
+  const ru = article.language === "ru";
+  const authorLabel = ru ? "Автор" : "Author";
+  const publishedLabel = ru ? "Опубликовано" : "Published";
+  const updatedLabel = ru ? "Обновлено" : "Updated";
+  const sourcesHeading = ru ? "Источники и редакционная проверка" : "Sources and editorial review";
+  const sourceLead = ru
+    ? "Материал подготовлен редакцией Yotti по официальной документации."
+    : "This guide was prepared by the Yotti editorial team using official documentation.";
+  const updated = modifiedAt
+    ? `<br><strong>${updatedLabel}:</strong> <time datetime="${escapeXml(modifiedAt.toISOString())}">${escapeXml(formatEditorialDate(modifiedAt, article.language))}</time>`
+    : "";
+  const sources = sourceNotes
+    .map((source) => `<li><a href="${escapeXml(source.url)}">${escapeXml(source.title)}</a></li>`)
+    .join("");
+
+  return `<aside><p><strong>${authorLabel}:</strong> <a href="${escapeXml(authorUrl)}">${escapeXml(article.author)}</a><br><strong>${publishedLabel}:</strong> <time datetime="${escapeXml(article.publishedAt.toISOString())}">${escapeXml(formatEditorialDate(article.publishedAt, article.language))}</time>${updated}</p></aside><section><h2>${sourcesHeading}</h2><p>${sourceLead}</p><ul>${sources}</ul></section>`;
+}
+
 export function createFeedXml(configInput, articles, now = new Date()) {
   const config = validateConfig(configInput);
   const publishedArticles = articles
@@ -244,7 +336,21 @@ export function createFeedXml(configInput, articles, now = new Date()) {
     const coverFigure = article.cover
       ? `<figure><img alt="${escapeXml(article.cover.alt)}" src="${escapeXml(article.cover.url)}"/></figure>`
       : "";
-    const content = `<header><h1>${escapeXml(article.title)}</h1></header>${coverFigure}${renderArticleBody(article)}`;
+    const content = `<header><h1>${escapeXml(article.title)}</h1></header>${coverFigure}${renderEditorialMeta(article)}${renderArticleBody(article)}`;
+    const richMetadata = article.editorial ? [
+      `      <dc:creator>${escapeXml(article.author)}</dc:creator>`,
+      `      <dc:publisher>Yotti</dc:publisher>`,
+      `      <dc:date>${article.publishedAt.toISOString()}</dc:date>`,
+      `      <dc:language>${escapeXml(article.language)}</dc:language>`,
+      `      <dc:rights>© Yotti</dc:rights>`,
+      `      <content:encoded>${asCdata(content)}</content:encoded>`,
+      article.editorial.modifiedAt ? `      <dcterms:modified>${article.editorial.modifiedAt.toISOString()}</dcterms:modified>` : "",
+      article.editorial.modifiedAt ? `      <atom:updated>${article.editorial.modifiedAt.toISOString()}</atom:updated>` : "",
+      article.editorial.alternate ? `      <atom:link rel="alternate" hreflang="${escapeXml(article.editorial.alternate.language)}" href="${escapeXml(article.editorial.alternate.url)}"/>` : "",
+      article.cover ? `      <media:content url="${escapeXml(article.cover.url)}" type="${escapeXml(article.cover.type)}" medium="image"><media:title type="plain">${escapeXml(article.editorial.imageTitle)}</media:title><media:description type="plain">${escapeXml(article.editorial.imageDescription)}</media:description><media:credit role="author">${escapeXml(article.author)}</media:credit></media:content>` : "",
+      article.cover ? `      <media:thumbnail url="${escapeXml(article.cover.url)}"><media:title type="plain">${escapeXml(article.editorial.imageTitle)}</media:title><media:description type="plain">${escapeXml(article.editorial.imageDescription)}</media:description></media:thumbnail>` : "",
+      `      <media:keywords>${escapeXml(article.categories.join(", "))}</media:keywords>`,
+    ].filter(Boolean) : [];
 
     return [
       '    <item turbo="true">',
@@ -256,6 +362,7 @@ export function createFeedXml(configInput, articles, now = new Date()) {
       categories,
       enclosure.trimStart(),
       `      <description>${escapeXml(article.description)}</description>`,
+      ...richMetadata,
       `      <turbo:content>${asCdata(content)}</turbo:content>`,
       "    </item>",
     ].filter(Boolean).join("\n");
@@ -263,12 +370,13 @@ export function createFeedXml(configInput, articles, now = new Date()) {
 
   return [
     '<?xml version="1.0" encoding="utf-8"?>',
-    '<rss version="2.0" xmlns:yandex="http://news.yandex.ru" xmlns:turbo="http://turbo.yandex.ru" xmlns:media="http://search.yahoo.com/mrss/">',
+    '<rss version="2.0" xmlns:yandex="http://news.yandex.ru" xmlns:turbo="http://turbo.yandex.ru" xmlns:media="http://search.yahoo.com/mrss/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:atom="http://www.w3.org/2005/Atom">',
     "  <channel>",
     `    <title>${escapeXml(config.title)}</title>`,
     `    <link>${escapeXml(config.siteUrl)}</link>`,
     `    <description>${escapeXml(config.description)}</description>`,
     `    <language>${escapeXml(config.language)}</language>`,
+    `    <atom:link href="${escapeXml(new URL(config.feedPath, `${config.siteUrl}/`).toString())}" rel="self" type="application/rss+xml"/>`,
     lastBuildDate ? `    <lastBuildDate>${lastBuildDate}</lastBuildDate>` : "",
     items,
     "  </channel>",
@@ -292,12 +400,15 @@ export function createArticleHtml(configInput, article) {
     '  <meta name="viewport" content="width=device-width, initial-scale=1">',
     `  <title>${escapeXml(article.title)}</title>`,
     `  <meta name="description" content="${escapeXml(article.description)}">`,
+    `  <meta property="article:published_time" content="${escapeXml(article.publishedAt.toISOString())}">`,
+    article.editorial?.modifiedAt ? `  <meta property="article:modified_time" content="${escapeXml(article.editorial.modifiedAt.toISOString())}">` : "",
+    article.editorial?.alternate ? `  <link rel="alternate" hreflang="${escapeXml(article.editorial.alternate.language)}" href="${escapeXml(article.editorial.alternate.url)}">` : "",
     `  <link rel="canonical" href="${escapeXml(canonicalUrl)}">`,
     "</head>",
     "<body>",
     "<main>",
     `  <h1>${escapeXml(article.title)}</h1>`,
-    `  <p><time datetime="${escapeXml(article.publishedAt.toISOString())}">${escapeXml(article.publishedAt.toISOString())}</time> · ${escapeXml(article.author)}</p>`,
+    renderEditorialMeta(article) || `  <p><time datetime="${escapeXml(article.publishedAt.toISOString())}">${escapeXml(article.publishedAt.toISOString())}</time> · ${escapeXml(article.author)}</p>`,
     cover,
     renderArticleBody(article),
     "</main>",

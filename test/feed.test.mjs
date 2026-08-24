@@ -57,6 +57,7 @@ test("создаёт Tilda-совместимый RSS с постоянной с
   const xml = createFeedXml(config, [article], AFTER_PUBLISH);
 
   assert.match(xml, /<rss version="2\.0"/);
+  assert.match(xml, /<atom:link href="https:\/\/timostas\.github\.io\/yotti-blog-rss\/ru\/rss\.xml" rel="self" type="application\/rss\+xml"\/>/);
   assert.match(xml, /<item turbo="true">/);
   assert.match(xml, /<title>Тест &amp; проверка<\/title>/);
   assert.match(xml, /<link>https:\/\/timostas\.github\.io\/yotti-blog-rss\/ru\/articles\/test-post\.html<\/link>/);
@@ -65,6 +66,36 @@ test("создаёт Tilda-совместимый RSS с постоянной с
   assert.match(xml, /<figure><img alt="Тестовая обложка" src="https:\/\/timostas\.github\.io\/yotti-blog-rss\/assets\/covers\/test-post\.jpg"\/><\/figure>/);
   assert.match(xml, /<description>Краткое &lt;описание&gt;<\/description>/);
   assert.match(xml, /<turbo:content><!\[CDATA\[/);
+});
+
+test("добавляет расширенные совместимые метаданные только для статьи-пилота", () => {
+  const article = parseArticle(articleSource(`cover:
+  url: "https://timostas.github.io/yotti-blog-rss/assets/covers/test-post.jpg"
+  type: "image/jpeg"
+  alt: "Тестовая обложка"
+editorial:
+  authorUrl: "https://yotti.net/about"
+  modifiedAt: "2026-08-03T12:00:00.000Z"
+  imageTitle: "Обложка тестовой статьи"
+  imageDescription: "Тестовое описание обложки"
+  alternate:
+    language: "en"
+    url: "https://yotti.net/en/blog/test-post"
+  sourceNotes:
+    - title: "Первичный источник"
+      url: "https://example.gov/source-one"
+    - title: "Второй источник"
+      url: "https://example.gov/source-two"
+`));
+  const xml = createFeedXml(config, [article], AFTER_PUBLISH);
+
+  assert.match(xml, /xmlns:content=/);
+  assert.match(xml, /<dc:creator>Редакция Yotti<\/dc:creator>/);
+  assert.match(xml, /<dcterms:modified>2026-08-03T12:00:00\.000Z<\/dcterms:modified>/);
+  assert.match(xml, /<atom:link rel="alternate" hreflang="en" href="https:\/\/yotti\.net\/en\/blog\/test-post"\/>/);
+  assert.match(xml, /<media:description type="plain">Тестовое описание обложки<\/media:description>/);
+  assert.match(xml, /<content:encoded><!\[CDATA\[/);
+  assert.match(xml, /Источники и редакционная проверка/);
 });
 
 test("не смешивает русские статьи с английской лентой", () => {
