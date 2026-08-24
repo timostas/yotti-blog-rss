@@ -10,7 +10,7 @@ reviewAfter: "2027-02-23"
 language: "en"
 categories: ["Travel connectivity"]
 sources:
-  - "https://yotti.net/how-it-works"
+  - "https://yotti.net/en/how-it-works"
   - "https://support.apple.com/en-ie/guide/iphone/iph3dd5f213/ios"
   - "https://support.google.com/pixelphone/answer/2819524?hl=en"
 cover:
@@ -56,7 +56,7 @@ Use Wi-Fi to open the account and choose a top-up for the existing eSIM when the
 
 Wait for a clear active status. Re-scanning the old QR code is unsafe because activation codes may be single-use. Deleting the profile also removes useful diagnostic state and may make reconnection harder.
 
-Current options are available in the [Yotti catalogue](https://yotti.net/catalog), while the [setup page](https://yotti.net/how-it-works) shows how to select the travel line. Save the order number and a screenshot of the balance until service is back.
+Current options are available in the [Yotti catalogue](https://yotti.net/en/catalog), while the [setup page](https://yotti.net/en/how-it-works) shows how to select the travel line. Save the order number and a screenshot of the balance until service is back.
 
 ## Use one page to confirm the renewed plan
 

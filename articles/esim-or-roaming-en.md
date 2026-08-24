@@ -11,7 +11,7 @@ language: "en"
 categories: ["Travel connectivity"]
 sources:
   - "https://support.apple.com/en-us/118227"
-  - "https://yotti.net/catalog"
+  - "https://yotti.net/en/catalog"
 cover:
   url: "https://timostas.github.io/yotti-blog-rss/assets/covers/esim-or-roaming.png"
   type: "image/png"
@@ -21,7 +21,7 @@ published: true
 
 Use home-carrier roaming when you value a familiar number and minimal setup more than a separate data plan. Choose a travel eSIM when you want a defined allowance, validity period and country list for mobile data. Neither route is automatically cheaper, so compare the actual offers for the whole journey.
 
-Start with the four details that can change the answer: destination coverage, expected data use, the need for conventional calls and texts, and your phone's dual-SIM support. Yotti lists current travel plans in its [eSIM catalogue](https://yotti.net/catalog). Your carrier's app or contract is the right place to check roaming charges and triggers.
+Start with the four details that can change the answer: destination coverage, expected data use, the need for conventional calls and texts, and your phone's dual-SIM support. Yotti lists current travel plans in its [eSIM catalogue](https://yotti.net/en/catalog). Your carrier's app or contract is the right place to check roaming charges and triggers.
 
 ## The difference behind the two names
 
@@ -65,4 +65,4 @@ Read the service description for voice and messaging. A data-only plan has no or
 
 Label the plans clearly, perhaps “Home” and “Trip”, then select the travel eSIM as the cellular-data line. Enable data roaming only on the plan whose instructions require it. If predictable billing matters, turn off automatic cellular-data switching so the phone cannot quietly fall back to the home plan.
 
-Yotti's [setup guide](https://yotti.net/how-it-works) shows the relevant iPhone and Android menus. Save the terms and a screenshot of the finished line settings before departure. If the phone connects through the wrong plan later, those two records make the source of the traffic much easier to identify.
+Yotti's [setup guide](https://yotti.net/en/how-it-works) shows the relevant iPhone and Android menus. Save the terms and a screenshot of the finished line settings before departure. If the phone connects through the wrong plan later, those two records make the source of the traffic much easier to identify.

@@ -1,5 +1,5 @@
 ---
-title: "Slovenia without constant hotel changes: two calm bases for a first trip"
+title: "A Slovenia itinerary with two bases: Ljubljana and Lake Bohinj"
 slug: "slovenia-two-base-green-route-en"
 description: "A Slovenia itinerary built around two bases: Ljubljana for city days and Lake Bohinj for a slower stay in the Julian Alps."
 publishedAt: "2026-08-15T10:54:45Z"
@@ -11,7 +11,7 @@ language: "en"
 categories: ["Itineraries and travel", "SI"]
 sources:
   - "https://www.slovenia.info/en/places-to-go/regions/alpine-slovenia/bohinj"
-  - "https://yotti.net/esim/slovenia"
+  - "https://yotti.net/en/esim/slovenia"
 cover:
   url: "https://timostas.github.io/yotti-blog-rss/assets/covers/slovenia-two-base-green-route.png"
   type: "image/png"
@@ -19,9 +19,9 @@ cover:
 published: true
 ---
 
-A first Slovenia itinerary does not need a different hotel every night. Use Ljubljana as your city base, then move once to the Lake Bohinj area for the Julian Alps. The contrast is the trip: riverside streets and café tables first, quiet water and weather-led days afterwards. Leave the third base off the plan unless it solves a real need. The time you save is better spent on a forest path, a market morning, or a second coffee somewhere you already recognise.
+Divide a first Slovenia trip between two bases. Spend two or three days in Ljubljana, then move to Lake Bohinj for walks in the Julian Alps. This reduces hotel changes and lets you choose lake activities according to the weather.
 
-## Key takeaways
+## How to divide the trip between two bases
 
 - Split the trip into an urban stay and an Alpine stay rather than collecting overnight stops.
 - Give Ljubljana at least one day with no excursion; the capital deserves to be more than a transport hub.
@@ -67,13 +67,13 @@ Do not ask which lake is “better”. Ask what you want each place to do. Stay 
 
 Save two possible lake days before leaving: one active and one gentle. The active version might be a longer walk; the gentler one can stay near the shore, a village, and an unhurried lunch. Do not commit emotionally to a particular summit before checking conditions. In the mountains, a backup plan is simply part of a sound itinerary.
 
-For maps, accommodation messages, and current information, a [Yotti eSIM for Slovenia](https://yotti.net/esim/slovenia) can keep both bases connected. Install it before departure if your phone supports eSIM, and check the live data allowance, validity, and plan terms before buying. Keep offline maps and saved addresses too: connectivity supports a route, but it should not be the route’s only safety net.
+For maps, accommodation messages, and current information, a [Yotti eSIM for Slovenia](https://yotti.net/en/esim/slovenia) can keep both bases connected. Install it before departure if your phone supports eSIM, and check the live data allowance, validity, and plan terms before buying. Keep offline maps and saved addresses too: connectivity supports a route, but it should not be the route’s only safety net.
 
-## Final thought
+## A workable route
 
 A strong Slovenia itinerary is defined by its change of rhythm rather than its number of pins. Ljubljana introduces the country through city life; Bohinj does it through water, forest, and mountains. Two bases provide enough contrast and preserve a rare luxury: waking up without having to leave again.
 
-## Frequently asked questions
+## Questions about Ljubljana and Bohinj
 
 ### Should my second base be Bled or Bohinj?
 

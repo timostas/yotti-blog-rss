@@ -21,7 +21,7 @@ published: true
 
 Your home number can remain available for calls and verification texts while a travel eSIM supplies mobile data. The safe configuration assigns voice and SMS to the home line, data to the trip line, and blocks automatic data fallback to the home SIM. The phone must support the relevant two-line combination.
 
-Keeping a line switched on does not make its roaming free. Check the home carrier's terms for incoming calls and outgoing messages before departure. The separate [Yotti eSIM](https://yotti.net/catalog) covers data according to its own plan rather than changing those charges.
+Keeping a line switched on does not make its roaming free. Check the home carrier's terms for incoming calls and outgoing messages before departure. The separate [Yotti eSIM](https://yotti.net/en/catalog) covers data according to its own plan rather than changing those charges.
 
 ## Work out whether the two profiles can be active
 
@@ -57,6 +57,6 @@ iMessage, FaceTime and RCS combine account settings, phone numbers and internet 
 
 ## Verify the routing after landing
 
-Open the SIM settings after landing and confirm that both named lines appear. Turn off Wi-Fi, load one lightweight page and inspect which plan records the data. Yotti's [installation page](https://yotti.net/how-it-works) shows the corresponding menus and the required roaming setting for its travel profile.
+Open the SIM settings after landing and confirm that both named lines appear. Turn off Wi-Fi, load one lightweight page and inspect which plan records the data. Yotti's [installation page](https://yotti.net/en/how-it-works) shows the corresponding menus and the required roaming setting for its travel profile.
 
 If the home line recorded data, switch its cellular data off immediately and save screenshots of the line selection and usage record. Do not erase either eSIM. Keeping the profiles and timestamps intact gives the home carrier enough context to investigate the session without creating a new installation problem.

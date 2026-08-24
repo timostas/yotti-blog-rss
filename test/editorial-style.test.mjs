@@ -35,3 +35,36 @@ test("блокирует повторяющиеся английские кон�
   });
   assert.match(result.errors.join("\n"), /not X but Y.*3/);
 });
+
+test("блокирует латинское eSIM в русской статье", () => {
+  const result = analyzeEditorialStyle({
+    language: "ru",
+    title: "Как выбрать eSIM для поездки",
+    body: "Проверьте совместимость телефона до покупки.",
+  });
+  assert.match(result.errors.join("\n"), /используйте написание «есим»/);
+});
+
+test("блокирует русское написание в английской статье", () => {
+  const result = analyzeEditorialStyle({
+    language: "en",
+    title: "How to choose an eSIM for travel",
+    body: "Check whether your phone supports есим before paying.",
+  });
+  assert.match(result.errors.join("\n"), /используйте написание “eSIM”/);
+});
+
+test("блокирует внутреннюю ссылку на неверную локаль", () => {
+  const ru = analyzeEditorialStyle({
+    language: "ru",
+    title: "Как выбрать есим для поездки",
+    body: "Откройте https://yotti.net/en/catalog перед оплатой.",
+  });
+  const en = analyzeEditorialStyle({
+    language: "en",
+    title: "How to choose an eSIM for travel",
+    body: "Open https://yotti.net/catalog before paying.",
+  });
+  assert.match(ru.errors.join("\n"), /русская статья.*английскую страницу/);
+  assert.match(en.errors.join("\n"), /английская статья.*русскую страницу/);
+});

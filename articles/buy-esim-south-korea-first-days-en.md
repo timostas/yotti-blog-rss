@@ -10,7 +10,7 @@ reviewAfter: "2027-08-15"
 language: "en"
 categories: ["Travel connectivity", "KR"]
 sources:
-  - "https://yotti.net/plans/kr"
+  - "https://yotti.net/en/esim/south-korea"
   - "https://english.visitkorea.or.kr/svc/contents/infoHtmlView.do?menuSn=219&vcontsId=194514"
 cover:
   url: "https://timostas.github.io/yotti-blog-rss/assets/covers/buy-esim-south-korea-first-days.png"
@@ -19,9 +19,9 @@ cover:
 published: true
 ---
 
-Buy an eSIM for South Korea before you fly, install it while you still have reliable Wi‑Fi, then make it your data line when you arrive. That leaves your first Seoul morning free for the useful choices: whether to go straight to your hotel, follow a map towards Gyeongbokgung, or take an unplanned turn through the lanes between hanok roofs. For a short trip, the right plan is rarely the biggest one. It is the one that covers maps, messages, bookings and the occasional change of mind without becoming another thing to manage.
+Buy and install a South Korea eSIM over reliable Wi-Fi before departure. After landing, enable the line, select it for mobile data and turn on roaming for that eSIM. Choose the allowance from the length of the trip and the way you use your phone: maps, messages and bookings consume far less than video, work calls or laptop tethering. Keep the accommodation address and airport route available offline.
 
-## Key takeaways
+## Decisions to make before purchase
 
 - Check eSIM compatibility for your exact phone model before paying.
 - Install the profile before departure, but choose it for mobile data only when you are ready to use it in South Korea.
@@ -69,7 +69,7 @@ Gyeongbokgung is one of Seoul’s most recognisable landmarks, and its surroundi
 
 Once the setup is done, you do not need to keep the map open. Save a few anchors, put the phone away and walk more slowly. The value of a travel eSIM is not that it makes every moment digital; it is that it leaves you confident enough to let Seoul be physical and immediate.
 
-## Frequently asked questions
+## Setup and use after arrival
 
 ### When should I install an eSIM for South Korea?
 

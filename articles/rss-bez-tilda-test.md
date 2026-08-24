@@ -17,7 +17,7 @@ cover:
   url: "https://timostas.github.io/yotti-blog-rss/assets/covers/rss-without-tilda-test.jpg"
   type: "image/jpeg"
   alt: "Схема независимой публикации статьи через RSS"
-published: true
+published: false
 ---
 
 Эта публикация создана специально для первой проверки независимого RSS-потока Yotti Blog. Она не является новостью или пользовательской инструкцией. Её задача — показать, что статья, сохранённая в Markdown, может пройти автоматическую сборку, попасть в XML-ленту и затем корректно отобразиться на основном сайте Yotti без участия редактора Tilda.

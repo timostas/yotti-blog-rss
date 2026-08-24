@@ -11,7 +11,7 @@ language: "en"
 categories: ["Travel connectivity"]
 sources:
   - "https://support.apple.com/en-us/118227"
-  - "https://yotti.net/catalog"
+  - "https://yotti.net/en/catalog"
 cover:
   url: "https://timostas.github.io/yotti-blog-rss/assets/covers/choose-travel-esim.png"
   type: "image/png"
@@ -21,7 +21,7 @@ published: true
 
 Choose a travel eSIM by matching a plan to the full route and the days when you need service. Then check likely data use, phone compatibility, activation rules and whether the plan includes anything beyond mobile internet. This sequence prevents a generous-looking bundle from failing at a border or expiring before the flight home.
 
-The [Yotti catalogue](https://yotti.net/catalog) lets you begin with a destination and compare the plans currently offered for it. Keep a copy of the selected plan page when you buy; the wording attached to that order matters more than a general description of eSIM technology.
+The [Yotti catalogue](https://yotti.net/en/catalog) lets you begin with a destination and compare the plans currently offered for it. Keep a copy of the selected plan page when you buy; the wording attached to that order matters more than a general description of eSIM technology.
 
 ## Map every place where you expect a connection
 
@@ -55,6 +55,6 @@ An incompatible phone cannot be made compatible by scanning a QR code. Avoid tes
 
 ## Keep the five plan answers with the order
 
-Before paying, make sure one record shows the country list, data allowance, validity, activation event and hotspot terms. Keep Yotti's [installation guide](https://yotti.net/how-it-works) nearby so you know which actions happen before departure and which wait until arrival.
+Before paying, make sure one record shows the country list, data allowance, validity, activation event and hotspot terms. Keep Yotti's [installation guide](https://yotti.net/en/how-it-works) nearby so you know which actions happen before departure and which wait until arrival.
 
 Missing information is a reason to ask a specific question or choose another plan. Save the answer with the order confirmation. If service later behaves differently from the plan page, the support team can work from an exact product and a dated set of terms instead of a remembered headline.

@@ -20,9 +20,9 @@ cover:
 published: true
 ---
 
-For a first trip to Portugal, do not try to cover the whole country. Lisbon and Porto make a clear foundation: they offer two distinct city experiences, while the coast or Douro Valley can be one deliberate addition. Portugal’s official tourism site likewise recommends Lisbon and Porto for a short two- or three-day visit. With more time, resist adding a new city every day; leave space for a walk, a museum, or the Atlantic.
+Lisbon and Porto make a practical foundation for a first trip to Portugal. If you have extra time, choose one extension: Sintra, the coast or the Douro Valley. Portugal’s official tourism site also includes both cities in a short itinerary; on a longer trip, use spare days for neighbourhoods, museums and the Atlantic rather than adding a new overnight stop each day.
 
-## Key takeaways
+## How to divide the itinerary
 
 - Lisbon works best in walkable neighbourhood blocks: Baixa and Chiado, Alfama, then Belém or a flexible day.
 - Porto rewards a slower pace around the historic centre, Ribeira, and the Douro.
@@ -63,11 +63,11 @@ For children or anyone avoiding steep climbs, reduce the number of Lisbon distri
 
 Save offline maps, accommodation details, and tickets. For navigation and accommodation messages, you can install a [Yotti Portugal eSIM](https://yotti.net/en/esim/portugal) before departure if your phone supports eSIM; check live plan conditions and validity on the destination page.
 
-## Final thought
+## A workable first-trip plan
 
 A first Portugal trip works best as two cities and one personal emphasis. Lisbon sets the rhythm, Porto adds the Douro and a northern character, and one open day keeps the itinerary from becoming a race.
 
-## Frequently asked questions
+## Portugal itinerary questions
 
 ### Which is better for a first visit: Lisbon or Porto?
 

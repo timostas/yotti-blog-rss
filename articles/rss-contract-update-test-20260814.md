@@ -13,7 +13,7 @@ categories:
 sources:
   - "https://timostas.github.io/yotti-blog-rss/ru/rss.xml"
   - "https://github.com/timostas/yotti-blog-rss"
-published: true
+published: false
 ---
 
 RSS_CONTRACT_TEST_ID: 2026-08-14-A
