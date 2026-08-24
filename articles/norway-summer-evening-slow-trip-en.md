@@ -1,5 +1,5 @@
 ---
-title: "Norway in the long summer light: a trip without a record-breaking checklist"
+title: "A summer trip to Norway: Bergen and one fjord day"
 slug: "norway-summer-evening-slow-trip-en"
 description: "A gentler idea for a Norway summer trip: Bergen, one fjord day, and an unplanned evening by the water."
 publishedAt: "2026-08-15T10:41:01Z"
@@ -11,7 +11,7 @@ language: "en"
 categories: ["Travel inspiration", "NO"]
 sources:
   - "https://www.visitnorway.com/places-to-go/fjord-norway/bergen/"
-  - "https://yotti.net/plans/region/EU-42_5_30"
+  - "https://yotti.net/en/plans/region/EU-42_5_30"
 cover:
   url: "https://timostas.github.io/yotti-blog-rss/assets/covers/norway-summer-evening-slow-trip.png"
   type: "image/png"
@@ -19,9 +19,9 @@ cover:
 published: true
 ---
 
-A Norway summer trip does not need a new fjord on every day. For a first, slower visit, make Bergen your base, choose one day shaped by a fjord landscape, and leave one evening deliberately unbooked. The country then has room to arrive in smaller ways: rain shining on cobbles, coffee beside the harbour, and pale light lingering over the water.
+For a first summer trip to Norway, stay in Bergen and reserve one day for a fjord excursion. The compact centre is easy to explore on foot, while an unbooked evening gives you room for changing weather and the long summer light. This plan also avoids moving hotels every day.
 
-## Key takeaways
+## A practical Bergen-based plan
 
 - Bergen is a strong starting point because its compact centre is easy to explore on foot.
 - Bryggen and the mountains around the city offer history, water, and steep terrain without a constant change of hotels.
@@ -52,13 +52,13 @@ If you want nature without a physical challenge, choose a walk with simple logis
 
 Summer in Bergen can still be changeable. A light waterproof layer, shoes that work on wet cobbles, and a little spare time are more useful than an outfit designed for one picture. Save an offline map, your accommodation address, and booking details, so the route home remains easy after a day by the water.
 
-Connectivity is not the story here; it is quiet support for a map, a message to your host, or a last-minute check of local arrangements. If your trip continues across Europe, look at the [Yotti Europe regional eSIM](https://yotti.net/plans/region/EU-42_5_30) before departure. Confirm that Norway is included in the current coverage list and review the live validity and plan conditions before buying.
+Connectivity is not the story here; it is quiet support for a map, a message to your host, or a last-minute check of local arrangements. If your trip continues across Europe, look at the [Yotti Europe regional eSIM](https://yotti.net/en/plans/region/EU-42_5_30) before departure. Confirm that Norway is included in the current coverage list and review the live validity and plan conditions before buying.
 
 ## Leave space for your own Bergen
 
 The Norway evening you remember may not happen at a famous viewpoint. It may be a window table, a ferry in the distance, wet planks on a pier, or one kayak crossing still water. You cannot schedule that moment. You can simply avoid taking all of its time away with an overfilled itinerary.
 
-## Frequently asked questions
+## Questions about Bergen and the fjords
 
 ### Is Bergen plus one fjord day enough for a first Norway trip?
 

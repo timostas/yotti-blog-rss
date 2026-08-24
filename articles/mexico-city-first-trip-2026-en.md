@@ -1,5 +1,5 @@
 ---
-title: "Mexico City for first-time visitors: how to feel the city, not just tick it off"
+title: "What to see in Mexico City on a first trip"
 slug: "mexico-city-first-trip-2026-en"
 description: "A calmer first-time Mexico City plan built around the Historic Center, Chapultepec and Coyoacán — without trying to see the whole city in a few days."
 publishedAt: "2026-08-15T08:24:00Z"
@@ -11,7 +11,7 @@ language: "en"
 categories: ["Travel inspiration", "MX"]
 sources:
   - "https://mexicocity.cdmx.gob.mx/e/guias-completas-de-rutas-de-la-ciudad-de-mexico/?lang=en"
-  - "https://yotti.net/esim/mexico"
+  - "https://yotti.net/en/esim/mexico"
 cover:
   url: "https://timostas.github.io/yotti-blog-rss/assets/covers/mexico-city-first-trip-2026.png"
   type: "image/png"
@@ -19,9 +19,9 @@ cover:
 published: true
 ---
 
-Mexico City can make a first-time visitor over-plan before the plane has even landed. A map fills up quickly with museums, markets, neighbourhoods and famous names, and suddenly every day looks like a race. A better first trip has three distinct moods instead: the Historic Center, the breathing room of Chapultepec and the slower streets of Coyoacán. Leave space between them for a coffee, an unplanned corner and the ordinary life of the city. That is how a huge capital starts to feel personal rather than overwhelming.
+For a first trip to Mexico City, focus on three distinct areas: the Historic Center, Chapultepec and Coyoacán. Give each one a day or a substantial part of a day. This keeps cross-city travel manageable and leaves enough time for museums, walks and meals without building an hour-by-hour schedule.
 
-## Key takeaways
+## How to divide your time
 
 - Use the Historic Center as an introduction, not a checklist of monuments.
 - Treat Chapultepec as a change of pace between fuller city days.
@@ -59,11 +59,11 @@ This is not an attempt to define the “essential” Mexico City. It avoids a mo
 
 ## What should you prepare before the trip?
 
-Save offline maps, your accommodation address, booking confirmations and a handful of places you may want to revisit. Connection is most useful when it helps you orient yourself, message your host or adjust a plan without turning every walk into a ratings search. If your phone supports it, you can arrange [a Mexico eSIM from Yotti](https://yotti.net/esim/mexico) before departure; check the current package terms on the destination page.
+Save offline maps, your accommodation address, booking confirmations and a handful of places you may want to revisit. Connection is most useful when it helps you orient yourself, message your host or adjust a plan without turning every walk into a ratings search. If your phone supports it, you can arrange [a Mexico eSIM from Yotti](https://yotti.net/en/esim/mexico) before departure; check the current package terms on the destination page.
 
 The most useful preparation is keeping the plan editable. Mexico City responds less to “How do I see everything?” than to “What kind of day do I want here today?” Choose a base, allow yourself to return to one neighbourhood twice and leave enough room for the city between the named stops.
 
-## Frequently asked questions
+## First-trip questions
 
 ### How many days are enough for a first trip to Mexico City?
 

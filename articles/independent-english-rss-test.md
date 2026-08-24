@@ -13,7 +13,7 @@ categories:
 sources:
   - "https://timostas.github.io/yotti-blog-rss/en/rss.xml"
   - "https://yotti.net/en/blog/test-independent-english-rss-publication"
-published: true
+published: false
 ---
 
 This publication was created specifically to verify the independent English RSS feed for Yotti Blog. It is not a customer announcement or a product guide. Its purpose is to confirm that an English article stored as Markdown can be built automatically on GitHub, added to the correct XML feed, and imported into the English section of Yotti without appearing in the Russian feed.

@@ -1,7 +1,7 @@
 ---
-title: "Buy an eSIM for Morocco before your trip: navigating your first day in the medina"
+title: "Buy an eSIM for Morocco: setup before a first day in Marrakech"
 slug: "buy-esim-morocco-medina-en"
-description: "Why buying an eSIM for Morocco before you fly makes a first arrival at a Marrakech riad calmer, simpler, and easier to navigate."
+description: "Choose and install a Morocco eSIM before departure, save the riad address offline and connect after landing for maps and host messages."
 publishedAt: "2026-08-15T10:48:27Z"
 author: "Yotti Editorial Team"
 reviewer: "Yotti Reviewing Editor"
@@ -19,9 +19,9 @@ cover:
 published: true
 ---
 
-Buy an eSIM for Morocco before you fly if your first address is a riad in Marrakech’s medina. On arrival, the useful things are small: a message from your host, a map for the last few turns, and a calm way to confirm that you are near the right door. Install your eSIM before departure, save the accommodation details offline, and let connectivity support the first day rather than become its main errand.
+Install a Morocco eSIM over reliable Wi-Fi before departure if your first address is a riad in Marrakech’s medina. Save the address and the host’s directions offline. After landing, select the eSIM for mobile data and enable roaming on that line. A map will usually bring you close, but the final turns may still depend on the riad’s own instructions because small entrances are not always pinned precisely.
 
-## Key takeaways
+## What to have ready before arrival
 
 - A pre-installed eSIM is more useful in the medina than trying to solve connectivity after landing.
 - Check eSIM compatibility first, then choose data for your actual trip rather than automatically taking the largest plan.
@@ -66,11 +66,11 @@ For a week of maps, messages, and occasional photos, you may need less than you 
 
 If you need internet for work, video calls, or a laptop hotspot, do not try to predict usage perfectly. Pick a validity period that suits the trip and check whether top-ups are available under the current plan terms. The point is not to squeeze every megabyte; it is to have maps when they matter and avoid paying for data you will not use.
 
-## Final thought
+## A connected first day
 
 An eSIM for Morocco is particularly helpful when you are staying in the medina: it makes the journey from arrival to riad feel calmer and leaves more attention for the city itself. Prepare the profile and offline details before you fly, then use your phone as a helpful tool rather than a reason to look away from Marrakech.
 
-## Frequently asked questions
+## Setup and navigation questions
 
 ### Can I buy an eSIM for Morocco after landing?
 

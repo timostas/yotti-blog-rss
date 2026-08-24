@@ -11,7 +11,7 @@ language: "en"
 categories: ["Travel connectivity", "GR"]
 sources:
   - "https://www.visitgreece.gr/el/transportation/by-sea/"
-  - "https://yotti.net/esim/greece"
+  - "https://yotti.net/en/esim/greece"
 cover:
   url: "https://timostas.github.io/yotti-blog-rss/assets/covers/buy-esim-greece-island-connection.png"
   type: "image/png"
@@ -21,7 +21,7 @@ published: true
 
 Buy an eSIM for Greece before departure when your itinerary starts in Athens and continues to an island. In the city, data helps with accommodation and maps; on transfer day, it keeps the ticket, port details, and operator messages within reach; after the ferry arrives, it helps you contact your island host. Set the eSIM up at home, keep essential documents offline, and use connectivity as the bridge between two very different stages of the trip.
 
-## Key takeaways
+## What to prepare for Athens and the island
 
 - Choose an eSIM for the full Athens-and-island itinerary, not only the first city days.
 - Save your ticket, departure port, island address, and host contact outside your inbox.
@@ -39,7 +39,7 @@ Visit Greece explains that Aegean and Saronic islands, as well as Crete, are com
 
 Begin with the total length of the trip. A short plan that covers a few capital days may expire at the least convenient moment, just as you are changing accommodation. Estimate data from actual behaviour. Maps and messages are modest users; video calls, streaming, and automatic photo uploads are not.
 
-The [Yotti eSIM for Greece](https://yotti.net/esim/greece) page offers plans by validity and data allowance. Before buying, confirm that your exact phone model supports eSIM and review the current plan terms and top-up options. A travel eSIM supplies mobile data; it may not include a number for ordinary calls or SMS, so move accommodation conversations to a messenger before the journey.
+The [Yotti eSIM for Greece](https://yotti.net/en/esim/greece) page offers plans by validity and data allowance. Before buying, confirm that your exact phone model supports eSIM and review the current plan terms and top-up options. A travel eSIM supplies mobile data; it may not include a number for ordinary calls or SMS, so move accommodation conversations to a messenger before the journey.
 
 If Greece is one stop on a wider European trip, compare country and regional plans. A Greece-only option is straightforward for a single-country holiday. A regional plan makes sense when you are genuinely crossing another border after the island, rather than buying theoretical coverage you may never use.
 
@@ -76,11 +76,11 @@ For maps, messages, restaurant searches, and occasional photos, validity often m
 
 Remote work, video calls, or hotspot use call for a different margin. Confirm that tethering is allowed under the selected plan, and do not assume every cove will support the same working session. Coverage depends on local networks, terrain, and exact location. Offline files remain useful even with a generous package.
 
-## Final thought
+## One plan for both parts of the trip
 
 Buying an eSIM for Greece prepares one practical thread through the whole journey, from an Athens address to an apartment door on the island. Configure it before departure, save the critical details offline, and treat the port as a separate item to verify. Your phone can then absorb changes without becoming the centre of the trip.
 
-## Frequently asked questions
+## Questions to settle before purchase
 
 ### Can one eSIM work in Athens and on a Greek island?
 

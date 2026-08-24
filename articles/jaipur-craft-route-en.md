@@ -70,7 +70,7 @@ A third major demonstration will usually weaken the day. Keep any backup as a sh
 
 Mobile data is useful for messaging a host, checking the route and arranging transport. A [Yotti eSIM for India](https://yotti.net/en/esim/india) can be installed on reliable Wi-Fi before departure; check phone compatibility first and keep both workshop addresses offline. Connectivity makes a change of plan easier, but the confirmed time and full address should not exist only in a chat thread.
 
-## Frequently asked questions
+## Workshop and buying questions
 
 ### Do I need to visit both Sanganer and Bagru?
 

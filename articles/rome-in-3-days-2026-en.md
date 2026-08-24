@@ -23,9 +23,9 @@ cover:
 published: true
 ---
 
-Three days in Rome are enough for a memorable first visit if you organise them by neighbourhood rather than trying to collect every landmark. Use one day for Ancient Rome and the historic centre, one for the Vatican area, the Tiber, and Trastevere, then keep a flexible day for Villa Borghese and the part of the city that interests you most. This reduces cross-city backtracking and leaves time for a square, a coffee, or an unexpected street. Rome’s official tourism site also publishes a 72-hour itinerary; this version keeps the same useful geography while making room for your own priorities.
+Divide a three-day Rome itinerary by area. Spend the first day in Ancient Rome and the historic centre, the second around the Vatican, the Tiber and Trastevere, and the third at Villa Borghese plus one neighbourhood that matches your interests. This reduces cross-city backtracking. Rome’s official tourism site uses similar geography in its 72-hour itinerary.
 
-## Key takeaways
+## The three-day route at a glance
 
 - Choose one or two non-negotiable sights per day; treat everything else as an option.
 - Keep each day walkable by grouping nearby places together.
@@ -66,7 +66,7 @@ Avoid making your first hour in Rome depend on finding Wi‑Fi. Download an offl
 
 For maps, accommodation messages, and navigation, you can install a [Yotti Italy eSIM](https://yotti.net/en/esim/italy) before departure if your phone supports eSIM. Select a package and confirm the validity period on the live destination page rather than relying on information quoted elsewhere.
 
-## Frequently asked questions
+## Questions about three days in Rome
 
 ### Is three days enough for Rome?
 
@@ -84,6 +84,6 @@ Do not put the Colosseum, the Vatican, and Villa Borghese into one day. Keep to 
 
 Swap one walking block for a museum or a longer lunch instead of rebuilding the whole itinerary. You can move the missed walk to the following day and remove a lower-priority stop.
 
-## A simple final rule
+## Keeping the route manageable
 
 Rome in three days is not a race against a guidebook. Pick three areas, choose one essential experience for each day, and leave room to wander. Before flying, save critical details offline and recheck only the live information that genuinely affects the trip.

@@ -1,5 +1,5 @@
 ---
-title: "Internet in Japan in 2026: an eSIM setup checklist before you fly"
+title: "Internet in Japan in 2026: how to set up an eSIM before travel"
 slug: "internet-in-japan-2026-en"
 description: "Prepare mobile data for Japan: eSIM setup, public Wi‑Fi limits, offline backups, arrival checks, and emergency contacts."
 publishedAt: "2026-08-14T08:30:00Z"
@@ -92,6 +92,6 @@ In Japan, call **110** for police and **119** for fire or ambulance services. JN
 
 A data-only travel eSIM cannot place a normal voice call by itself. Keep a fallback for emergencies: your primary voice line, a companion’s phone, hotel staff, or a public telephone. Save a screenshot of the numbers and your insurance details so they remain available when mobile data is not.
 
-## The practical setup
+## A working setup for the trip
 
 A resilient Japan setup has five parts: an unlocked compatible phone, an eSIM installed before departure, the correct data-line and roaming settings, protection against unintended home-SIM roaming, and offline backups. Use public Wi‑Fi to conserve data or recover from a problem, not as the foundation of every journey. Check the live plan conditions before purchase, and confirm that your setup guide and emergency contacts open without a connection before boarding.

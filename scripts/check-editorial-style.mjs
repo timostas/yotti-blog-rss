@@ -65,6 +65,22 @@ export function analyzeEditorialStyle({ title, language, body }) {
 
   const errors = [];
   const warnings = [];
+  const visibleText = `${title}\n${body}`;
+  if (language === "ru" && /\beSIM\b/u.test(visibleText)) {
+    errors.push("в русской статье используйте написание «есим», а не «eSIM»");
+  }
+  if (language === "en" && /есим/iu.test(visibleText)) {
+    errors.push("в английской статье используйте написание “eSIM”, а не «есим»");
+  }
+  if (language === "ru" && /https:\/\/(?:www\.)?yotti\.net\/en\//iu.test(body)) {
+    errors.push("русская статья ведёт на английскую страницу Yotti");
+  }
+  if (
+    language === "en" &&
+    /https:\/\/(?:www\.)?yotti\.net\/(?:esim\/|catalog(?:\b|\/)|how-it-works(?:\b|\/))/iu.test(body)
+  ) {
+    errors.push("английская статья ведёт на русскую страницу Yotti");
+  }
   for (const pattern of rules.title) {
     if (pattern.test(title)) errors.push(`заголовок содержит машинную или неестественную формулу: «${title}»`);
   }
