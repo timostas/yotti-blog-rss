@@ -66,6 +66,12 @@ test("создаёт Tilda-совместимый RSS с постоянной с
   assert.match(xml, /<figure><img alt="Тестовая обложка" src="https:\/\/timostas\.github\.io\/yotti-blog-rss\/assets\/covers\/test-post\.jpg"\/><\/figure>/);
   assert.match(xml, /<description>Краткое &lt;описание&gt;<\/description>/);
   assert.match(xml, /<turbo:content><!\[CDATA\[/);
+  assert.match(xml, /<strong>Автор:<\/strong> <a href="https:\/\/yotti\.net\/about">Редакция Yotti<\/a>/);
+  assert.match(xml, /Опубликовано: <time datetime="2026-08-02T15:00:00\.000Z">2 августа 2026 г\.<\/time>/);
+  assert.match(xml, /Проверено редакцией: <time datetime="2026-08-01T00:00:00\.000Z">1 августа 2026 г\.<\/time>/);
+  assert.match(xml, /<h2>Источники<\/h2>/);
+  assert.match(xml, /<a href="https:\/\/example\.gov\/source-one">example\.gov<\/a>/);
+  assert.ok(xml.indexOf("слово150") < xml.indexOf("<h2>Источники</h2>"));
 });
 
 test("добавляет расширенные совместимые метаданные только для статьи-пилота", () => {
@@ -95,7 +101,18 @@ editorial:
   assert.match(xml, /<atom:link rel="alternate" hreflang="en" href="https:\/\/yotti\.net\/en\/blog\/test-post"\/>/);
   assert.match(xml, /<media:description type="plain">Тестовое описание обложки<\/media:description>/);
   assert.match(xml, /<content:encoded><!\[CDATA\[/);
-  assert.match(xml, /Источники и редакционная проверка/);
+  assert.match(xml, /<h2>Источники<\/h2>/);
+  assert.match(xml, /<a href="https:\/\/example\.gov\/source-one">Первичный источник<\/a>/);
+});
+
+test("локализует видимые редакционные блоки для английской статьи", () => {
+  const article = parseArticle(articleSource().replace('language: "ru"', 'language: "en"').replace('author: "Редакция Yotti"', 'author: "Yotti Editorial Team"'));
+  const xml = createFeedXml({ ...config, language: "en", feedPath: "en/rss.xml" }, [article], AFTER_PUBLISH);
+
+  assert.match(xml, /<strong>Author:<\/strong> <a href="https:\/\/yotti\.net\/en\/about">Yotti Editorial Team<\/a>/);
+  assert.match(xml, /Published: <time/);
+  assert.match(xml, /Editorially reviewed: <time/);
+  assert.match(xml, /<h2>Sources<\/h2>/);
 });
 
 test("не смешивает русские статьи с английской лентой", () => {

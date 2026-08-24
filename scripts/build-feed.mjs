@@ -290,25 +290,47 @@ function formatEditorialDate(date, language) {
   }).format(date);
 }
 
-function renderEditorialMeta(article) {
-  if (!article.editorial) return "";
-  const { authorUrl, modifiedAt, sourceNotes } = article.editorial;
+function sourceLabel(sourceUrl) {
+  const hostname = new URL(sourceUrl).hostname.replace(/^www\./, "");
+  const knownSources = new Map([
+    ["yotti.net", "Yotti"],
+    ["support.apple.com", "Apple Support"],
+    ["support.google.com", "Google Help"],
+    ["apple.com", "Apple"],
+    ["google.com", "Google"],
+    ["samsung.com", "Samsung"],
+    ["gsma.com", "GSMA"],
+  ]);
+  return knownSources.get(hostname) ?? hostname;
+}
+
+function articleSourceNotes(article) {
+  if (article.editorial?.sourceNotes) return article.editorial.sourceNotes;
+  return article.sources.map((url) => ({ title: sourceLabel(url), url }));
+}
+
+function renderEditorialByline(article) {
   const ru = article.language === "ru";
+  const authorUrl = article.editorial?.authorUrl ?? (ru ? "https://yotti.net/about" : "https://yotti.net/en/about");
   const authorLabel = ru ? "Автор" : "Author";
   const publishedLabel = ru ? "Опубликовано" : "Published";
-  const updatedLabel = ru ? "Обновлено" : "Updated";
-  const sourcesHeading = ru ? "Источники и редакционная проверка" : "Sources and editorial review";
+  const reviewedLabel = ru ? "Проверено редакцией" : "Editorially reviewed";
+  const reviewedAt = new Date(`${article.reviewedAt}T00:00:00.000Z`);
+
+  return `<aside><p><strong>${authorLabel}:</strong> <a href="${escapeXml(authorUrl)}">${escapeXml(article.author)}</a><br>${publishedLabel}: <time datetime="${escapeXml(article.publishedAt.toISOString())}">${escapeXml(formatEditorialDate(article.publishedAt, article.language))}</time> · ${reviewedLabel}: <time datetime="${escapeXml(reviewedAt.toISOString())}">${escapeXml(formatEditorialDate(reviewedAt, article.language))}</time></p></aside>`;
+}
+
+function renderEditorialSources(article) {
+  const ru = article.language === "ru";
+  const sourcesHeading = ru ? "Источники" : "Sources";
   const sourceLead = ru
-    ? "Материал подготовлен редакцией Yotti по официальной документации."
-    : "This guide was prepared by the Yotti editorial team using official documentation.";
-  const updated = modifiedAt
-    ? `<br><strong>${updatedLabel}:</strong> <time datetime="${escapeXml(modifiedAt.toISOString())}">${escapeXml(formatEditorialDate(modifiedAt, article.language))}</time>`
-    : "";
-  const sources = sourceNotes
+    ? "Факты и рекомендации сверены по следующим материалам:"
+    : "Facts and recommendations were checked against the following references:";
+  const sources = articleSourceNotes(article)
     .map((source) => `<li><a href="${escapeXml(source.url)}">${escapeXml(source.title)}</a></li>`)
     .join("");
 
-  return `<aside><p><strong>${authorLabel}:</strong> <a href="${escapeXml(authorUrl)}">${escapeXml(article.author)}</a><br><strong>${publishedLabel}:</strong> <time datetime="${escapeXml(article.publishedAt.toISOString())}">${escapeXml(formatEditorialDate(article.publishedAt, article.language))}</time>${updated}</p></aside><section><h2>${sourcesHeading}</h2><p>${sourceLead}</p><ul>${sources}</ul></section>`;
+  return `<section><h2>${sourcesHeading}</h2><p>${sourceLead}</p><ul>${sources}</ul></section>`;
 }
 
 export function createFeedXml(configInput, articles, now = new Date()) {
@@ -336,7 +358,7 @@ export function createFeedXml(configInput, articles, now = new Date()) {
     const coverFigure = article.cover
       ? `<figure><img alt="${escapeXml(article.cover.alt)}" src="${escapeXml(article.cover.url)}"/></figure>`
       : "";
-    const content = `<header><h1>${escapeXml(article.title)}</h1></header>${coverFigure}${renderEditorialMeta(article)}${renderArticleBody(article)}`;
+    const content = `<header><h1>${escapeXml(article.title)}</h1></header>${coverFigure}${renderEditorialByline(article)}${renderArticleBody(article)}${renderEditorialSources(article)}`;
     const richMetadata = article.editorial ? [
       `      <dc:creator>${escapeXml(article.author)}</dc:creator>`,
       `      <dc:publisher>Yotti</dc:publisher>`,
@@ -408,9 +430,10 @@ export function createArticleHtml(configInput, article) {
     "<body>",
     "<main>",
     `  <h1>${escapeXml(article.title)}</h1>`,
-    renderEditorialMeta(article) || `  <p><time datetime="${escapeXml(article.publishedAt.toISOString())}">${escapeXml(article.publishedAt.toISOString())}</time> · ${escapeXml(article.author)}</p>`,
+    renderEditorialByline(article),
     cover,
     renderArticleBody(article),
+    renderEditorialSources(article),
     "</main>",
     "</body>",
     "</html>",
