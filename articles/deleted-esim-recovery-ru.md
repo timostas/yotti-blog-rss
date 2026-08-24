@@ -12,6 +12,19 @@ categories: ["Интернет в поездке"]
 sources:
   - "https://support.apple.com/en-us/102421"
   - "https://support.google.com/pixelphone/answer/9449293?hl=en"
+editorial:
+  authorUrl: "https://yotti.net/about"
+  modifiedAt: "2026-08-24T15:00:00.000Z"
+  imageTitle: "Как восстановить связь после удаления есим"
+  imageDescription: "Путешественница уточняет детали подключения у сотрудницы гостиницы в дождливое утро"
+  alternate:
+    language: "en"
+    url: "https://yotti.net/en/blog/deleted-an-esim-by-mistake-how-to-get-connected-again"
+  sourceNotes:
+    - title: "Apple Support: удаление есим и действия после удаления"
+      url: "https://support.apple.com/en-us/102421"
+    - title: "Google Pixel Help: управление и удаление есим"
+      url: "https://support.google.com/pixelphone/answer/9449293?hl=en"
 cover:
   url: "https://timostas.github.io/yotti-blog-rss/assets/covers/deleted-esim-recovery.png"
   type: "image/png"
