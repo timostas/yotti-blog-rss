@@ -2583,7 +2583,240 @@
         ],
         "editorialChange": "После отдельного прохода сохранены три самостоятельные ветки решения, устройство-различия оставлены только для счётчиков, а финал превращён в проверяемый безопасный путь к поддержке."
       }
+    },
+    {
+      "id": "esim-slow-internet",
+      "topicKey": "slow-mobile-data",
+      "status": "published",
+      "locales": ["ru", "en"],
+      "model": { "name": "gpt-5", "effort": "high" },
+      "riskReasons": ["daily_recovery_after_empty_queue", "query_cannibalization_checked"],
+      "generationAttempts": { "ru": 1, "en": 1 },
+      "qualityRepairAttempts": 0,
+      "scores": { "utility": 95, "originalValue": 93, "factSupport": 95 },
+      "editorialStandardVersion": 2,
+      "editorialPasses": { "ru": 1, "en": 1 },
+      "intentMap": {
+        "primary": { "ru": "есим медленно работает", "en": "eSIM slow internet" },
+        "neighborIntents": ["esim-internet-not-working", "esim-data-ran-out", "esim-5g-not-working"],
+        "uniqueReaderOutcome": "Читатель отделяет слабый сигнал, загрузку сети, ограничение пакета, VPN и настройки телефона без переустановки профиля.",
+        "cannibalizationDecision": "Статья отвечает только на деградацию работающей передачи данных; существующий материал о неработающем интернете начинается с полного отсутствия трафика, а статья об исчерпанном пакете — с подтверждённого нулевого остатка."
+      },
+      "internalContextLinks": ["https://yotti.net/", "https://yotti.net/blog/tag/%D0%98%D0%BD%D1%82%D0%B5%D1%80%D0%BD%D0%B5%D1%82%20%D0%B2%20%D0%BF%D0%BE%D0%B5%D0%B7%D0%B4%D0%BA%D0%B5"],
+      "creative": "assets/covers/esim-slow-internet.png",
+      "creativeConceptKey": "lisbon-blue-hour-map-cafe",
+      "contentFormat": "connectivity-and-esim",
+      "schedule": { "ru": "2026-08-24T07:00:00Z", "en": "2026-08-24T07:00:00Z" },
+      "qualityNotes": {
+        "localeTotals": { "ru": 95, "en": 95 },
+        "weakestDimensions": ["local_specificity_and_original_value", "commercial_restraint"],
+        "editorialChange": "После отдельного прохода убраны повторные выводы, тест скорости ограничен, а 5G, VPN и тариф разведены в разные проверяемые причины.",
+        "lengthDecision": "RU короче 900 слов: сфокусированная диагностика полностью закрывает задачу без повторения общей статьи о неработающем интернете."
+      }
+    },
+    {
+      "id": "deleted-esim-recovery",
+      "topicKey": "accidental-profile-deletion",
+      "status": "published",
+      "locales": ["ru", "en"],
+      "model": { "name": "gpt-5", "effort": "high" },
+      "riskReasons": ["daily_recovery_after_empty_queue", "query_cannibalization_checked"],
+      "generationAttempts": { "ru": 1, "en": 1 },
+      "qualityRepairAttempts": 0,
+      "scores": { "utility": 96, "originalValue": 94, "factSupport": 96 },
+      "editorialStandardVersion": 2,
+      "editorialPasses": { "ru": 1, "en": 1 },
+      "intentMap": {
+        "primary": { "ru": "удалил есим как восстановить", "en": "deleted eSIM how to recover" },
+        "neighborIntents": ["esim-will-not-install", "move-esim-new-phone", "activate-travel-esim"],
+        "uniqueReaderOutcome": "Читатель отличает выключенную линию от стёртого профиля, сохраняет заказ и получает допустимый способ повторной установки у поставщика.",
+        "cannibalizationDecision": "Новый URL начинается после подтверждённого удаления; статьи об установке и переносе рассматривают профиль, который ещё доступен или штатно переносится."
+      },
+      "internalContextLinks": ["https://yotti.net/", "https://yotti.net/blog/tag/%D0%98%D0%BD%D1%82%D0%B5%D1%80%D0%BD%D0%B5%D1%82%20%D0%B2%20%D0%BF%D0%BE%D0%B5%D0%B7%D0%B4%D0%BA%D0%B5"],
+      "creative": "assets/covers/deleted-esim-recovery.png",
+      "creativeConceptKey": "scandinavian-rain-hotel-reception",
+      "contentFormat": "connectivity-and-esim",
+      "schedule": { "ru": "2026-08-24T07:30:00Z", "en": "2026-08-24T07:30:00Z" },
+      "qualityNotes": {
+        "localeTotals": { "ru": 96, "en": 95 },
+        "weakestDimensions": ["local_specificity_and_original_value", "human_editorial_voice"],
+        "editorialChange": "После отдельного прохода восстановление построено от состояния заказа, исключены обещания повторного QR-кода и разведены действия iPhone и Android.",
+        "lengthDecision": "RU короче 900 слов: статья заканчивается после полного безопасного пути восстановления и не повторяет инструкцию по обычной установке."
+      }
+    },
+    {
+      "id": "esim-5g-not-working",
+      "topicKey": "5g-eligibility-and-settings",
+      "status": "published",
+      "locales": ["ru", "en"],
+      "model": { "name": "gpt-5", "effort": "high" },
+      "riskReasons": ["daily_recovery_after_empty_queue", "query_cannibalization_checked"],
+      "generationAttempts": { "ru": 1, "en": 1 },
+      "qualityRepairAttempts": 0,
+      "scores": { "utility": 94, "originalValue": 92, "factSupport": 96 },
+      "editorialStandardVersion": 2,
+      "editorialPasses": { "ru": 1, "en": 1 },
+      "intentMap": {
+        "primary": { "ru": "есим не подключается к 5g", "en": "eSIM not connecting to 5G" },
+        "neighborIntents": ["esim-phone-compatibility", "esim-slow-internet", "esim-installed-no-network"],
+        "uniqueReaderOutcome": "Читатель проверяет четыре условия 5G и понимает, когда LTE является нормальным результатом, а когда нужен запрос провайдеру.",
+        "cannibalizationDecision": "Статья отвечает на отсутствие конкретного поколения сети при работающем подключении; совместимость телефона, отсутствие любой сети и общая скорость остаются отдельными интентами."
+      },
+      "internalContextLinks": ["https://yotti.net/", "https://yotti.net/blog/tag/%D0%98%D0%BD%D1%82%D0%B5%D1%80%D0%BD%D0%B5%D1%82%20%D0%B2%20%D0%BF%D0%BE%D0%B5%D0%B7%D0%B4%D0%BA%D0%B5"],
+      "creative": "assets/covers/esim-5g-not-working.png",
+      "creativeConceptKey": "tokyo-elevated-platform-paper-map",
+      "contentFormat": "connectivity-and-esim",
+      "schedule": { "ru": "2026-08-24T17:00:00Z", "en": "2026-08-24T17:00:00Z" },
+      "qualityNotes": {
+        "localeTotals": { "ru": 94, "en": 94 },
+        "weakestDimensions": ["local_specificity_and_original_value", "commercial_restraint"],
+        "editorialChange": "После отдельного прохода убрана погоня за значком 5G, добавлена граница обещаний плана и сохранены только подтверждённые различия iPhone и Pixel.",
+        "lengthDecision": "RU и EN короче 900 слов: узкий вопрос 5G закрыт четырьмя условиями, настройками двух платформ и проверяемым обращением без общего сетевого справочника."
+      }
+    },
+    {
+      "id": "esim-vpn",
+      "topicKey": "vpn-over-travel-esim",
+      "status": "published",
+      "locales": ["ru", "en"],
+      "model": { "name": "gpt-5", "effort": "high" },
+      "riskReasons": ["daily_recovery_after_empty_queue", "query_cannibalization_checked"],
+      "generationAttempts": { "ru": 1, "en": 1 },
+      "qualityRepairAttempts": 0,
+      "scores": { "utility": 95, "originalValue": 94, "factSupport": 95 },
+      "editorialStandardVersion": 2,
+      "editorialPasses": { "ru": 1, "en": 1 },
+      "intentMap": {
+        "primary": { "ru": "работает ли vpn с есим", "en": "does VPN work with eSIM" },
+        "neighborIntents": ["esim-internet-not-working", "esim-slow-internet", "esim-hotspot"],
+        "uniqueReaderOutcome": "Читатель отделяет мобильное соединение от VPN, проверяет скорость и приложения одним контролируемым тестом и понимает границы защиты hotspot-трафика.",
+        "cannibalizationDecision": "Существующие статьи упоминают отключение VPN как один диагностический шаг; новый URL отвечает на самостоятельный вопрос совместимости, IP-маршрута, расхода и раздачи."
+      },
+      "internalContextLinks": ["https://yotti.net/", "https://yotti.net/blog/tag/%D0%98%D0%BD%D1%82%D0%B5%D1%80%D0%BD%D0%B5%D1%82%20%D0%B2%20%D0%BF%D0%BE%D0%B5%D0%B7%D0%B4%D0%BA%D0%B5"],
+      "creative": "assets/covers/esim-vpn.png",
+      "creativeConceptKey": "barcelona-courtyard-laptop-work",
+      "contentFormat": "connectivity-and-esim",
+      "schedule": { "ru": "2026-08-24T17:30:00Z", "en": "2026-08-24T17:30:00Z" },
+      "qualityNotes": {
+        "localeTotals": { "ru": 95, "en": 95 },
+        "weakestDimensions": ["local_specificity_and_original_value", "trust_and_evidence"],
+        "editorialChange": "После отдельного прохода VPN описан без кибербезопасностных обещаний, добавлена проверка hotspot и убраны повторяющиеся универсальные рекомендации.",
+        "lengthDecision": "RU и EN короче 900 слов: материал ограничен взаимодействием VPN и есим и не превращён в общий справочник по VPN."
+      }
     }
   ],
-  "plannedPublications": []
+  "plannedPublications": [
+    {
+      "planOrder": 1,
+      "id": "esim-data-roaming-setting",
+      "scope": "global",
+      "region": "global",
+      "planKind": "search-support",
+      "contentFormat": "connectivity-and-esim",
+      "searchQuery": { "ru": "нужно ли включать роуминг для есим", "en": "should data roaming be on for travel eSIM" },
+      "semanticIntent": { "primary": "travel-esim-data-roaming", "secondary": ["роуминг данных есим", "travel eSIM roaming setting"] },
+      "workingTitle": { "ru": "Нужно ли включать роуминг данных для есим", "en": "Should data roaming be on for a travel eSIM?" },
+      "readerPromise": "Объяснить, почему travel-профилю часто нужен roaming, и включить его только на нужной линии без риска для домашней SIM.",
+      "creativeConceptKey": "ferry-deck-two-route-cards",
+      "creativeBrief": "Пассажир на открытой палубе парома сверяет две бумажные карточки маршрута; телефон не главный объект."
+    },
+    {
+      "planOrder": 2,
+      "id": "esim-uses-more-data",
+      "scope": "global",
+      "region": "global",
+      "planKind": "search-support",
+      "contentFormat": "connectivity-and-esim",
+      "searchQuery": { "ru": "есим расходует больше интернета", "en": "does eSIM use more data" },
+      "semanticIntent": { "primary": "data-consumption-myth", "secondary": ["расход трафика есим", "eSIM data usage"] },
+      "workingTitle": { "ru": "Расходует ли есим больше интернета", "en": "Does an eSIM use more data?" },
+      "readerPromise": "Отделить формат SIM от расхода приложений, системных обновлений, VPN и точки доступа.",
+      "creativeConceptKey": "laundromat-travel-data-notes",
+      "creativeBrief": "Путешественник ждёт стирку и отмечает расходы в блокноте; спокойная бытовая travel-сцена без экрана крупным планом."
+    },
+    {
+      "planOrder": 3,
+      "id": "esim-ip-location",
+      "scope": "global",
+      "region": "global",
+      "planKind": "search-support",
+      "contentFormat": "connectivity-and-esim",
+      "searchQuery": { "ru": "есим показывает другую страну", "en": "eSIM IP address shows another country" },
+      "semanticIntent": { "primary": "ip-geolocation", "secondary": ["геолокация есим", "travel eSIM IP location"] },
+      "workingTitle": { "ru": "Почему есим показывает другую страну по IP", "en": "Why an eSIM can show a different IP country" },
+      "readerPromise": "Объяснить международный маршрут трафика, отличить IP от GPS и выбрать безопасную проверку приложений.",
+      "creativeConceptKey": "border-town-postcards-map",
+      "creativeBrief": "Стол в небольшом приграничном кафе с картой и открытками, человек в естественном ракурсе."
+    },
+    {
+      "planOrder": 4,
+      "id": "esim-or-pocket-wifi",
+      "scope": "global",
+      "region": "global",
+      "planKind": "search-support",
+      "contentFormat": "connectivity-and-esim",
+      "searchQuery": { "ru": "есим или карманный вай фай", "en": "eSIM vs pocket WiFi" },
+      "semanticIntent": { "primary": "portable-router-comparison", "secondary": ["eSIM или роутер", "travel eSIM or pocket WiFi"] },
+      "workingTitle": { "ru": "Есим или карманный Wi-Fi: что взять в поездку", "en": "eSIM or pocket WiFi: which works better for a trip?" },
+      "readerPromise": "Сравнить два способа связи по числу устройств, зарядке, совместному маршруту и отказоустойчивости.",
+      "creativeConceptKey": "mountain-guesthouse-shared-table",
+      "creativeBrief": "Несколько путешественников планируют маршрут за общим столом в горном гостевом доме, без демонстрации гаджетов."
+    },
+    {
+      "planOrder": 5,
+      "id": "esim-for-cruise",
+      "scope": "global",
+      "region": "global",
+      "planKind": "search-support",
+      "contentFormat": "connectivity-and-esim",
+      "searchQuery": { "ru": "есим для круиза", "en": "eSIM for a cruise" },
+      "semanticIntent": { "primary": "cruise-connectivity-boundary", "secondary": ["интернет в морском круизе", "travel eSIM at sea"] },
+      "workingTitle": { "ru": "Работает ли есим в морском круизе", "en": "Does an eSIM work on a cruise?" },
+      "readerPromise": "Разделить связь в портах, у берега, в открытом море и судовой Wi-Fi без обещаний покрытия.",
+      "creativeConceptKey": "harbor-promenade-ship-side-view",
+      "creativeBrief": "Путешественник на набережной смотрит на круизное судно сбоку; широкий портовый пейзаж."
+    },
+    {
+      "planOrder": 6,
+      "id": "esim-for-layover",
+      "scope": "global",
+      "region": "global",
+      "planKind": "search-support",
+      "contentFormat": "connectivity-and-esim",
+      "searchQuery": { "ru": "есим для пересадки", "en": "eSIM for a layover" },
+      "semanticIntent": { "primary": "airport-transit-connectivity", "secondary": ["интернет при пересадке", "travel eSIM airport transit"] },
+      "workingTitle": { "ru": "Нужна ли есим для пересадки", "en": "Do you need an eSIM for a layover?" },
+      "readerPromise": "Выбрать между Wi-Fi, региональным пакетом и отдельной страной по длительности и выходу из аэропорта.",
+      "creativeConceptKey": "airport-window-paper-itinerary",
+      "creativeBrief": "Пассажир у большого окна читает бумажный маршрут пересадки; без очередного телефонного крупного плана."
+    },
+    {
+      "planOrder": 7,
+      "id": "esim-on-tablet",
+      "scope": "global",
+      "region": "global",
+      "planKind": "search-support",
+      "contentFormat": "connectivity-and-esim",
+      "searchQuery": { "ru": "есим для планшета", "en": "eSIM for tablet" },
+      "semanticIntent": { "primary": "tablet-esim", "secondary": ["есим на айпад", "travel eSIM on iPad"] },
+      "workingTitle": { "ru": "Как пользоваться есим на планшете", "en": "How to use a travel eSIM on a tablet" },
+      "readerPromise": "Проверить cellular-модель, совместимость профиля и отличие планшета от раздачи со смартфона.",
+      "creativeConceptKey": "museum-courtyard-sketching-tablet",
+      "creativeBrief": "Путешественник делает зарисовку во дворе музея, планшет показан как инструмент, а не интерфейс."
+    },
+    {
+      "planOrder": 8,
+      "id": "esim-profile-reuse",
+      "scope": "global",
+      "region": "global",
+      "planKind": "search-support",
+      "contentFormat": "connectivity-and-esim",
+      "searchQuery": { "ru": "можно ли использовать есим повторно", "en": "can you reuse an eSIM" },
+      "semanticIntent": { "primary": "profile-reuse-next-trip", "secondary": ["повторное использование есим", "reuse travel eSIM profile"] },
+      "workingTitle": { "ru": "Можно ли использовать есим в следующей поездке", "en": "Can you reuse an eSIM on your next trip?" },
+      "readerPromise": "Разделить профиль, пакет, пополнение и новый QR-код и не удалять пригодную линию раньше времени.",
+      "creativeConceptKey": "home-shelf-travel-keepsakes",
+      "creativeBrief": "Человек разбирает дорожные заметки и сувениры после поездки, готовясь к следующей; тёплая домашняя сцена."
+    }
+  ]
 }

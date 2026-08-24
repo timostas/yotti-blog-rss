@@ -44,6 +44,8 @@ test("политика разрешает естественные позы лю
 test("technical-first поток разрешает четыре слота и ручные выпуски без потолка", () => {
   assert.equal(policy.production.targetContentUnitsPerDay, null);
   assert.equal(policy.production.maximumPublishedPagesPerDay, null);
+  assert.equal(policy.production.scheduledContentUnitsPerDay, 4);
+  assert.equal(policy.production.scheduledPagesPerDay, 8);
   assert.equal(policy.production.frequencyLimitMode, "unlimited_owner_manual_with_four_scheduled_daily_slots");
   assert.equal(policy.production.frequencyLimitEffectiveFrom, "2026-08-22");
   assert.deepEqual(policy.production.dailyPublicationTimes, ["10:00", "10:30", "20:00", "20:30"]);
