@@ -87,6 +87,29 @@ test("блокирует нарушение чередования ближай�
   assert.match(result.errors.join("\n"), /нарушено обязательное чередование/);
 });
 
+test("блокирует избыток технических тем в смешанной очереди", () => {
+  const plannedPublications = Array.from({ length: 5 }, (_, index) => ({
+    planOrder: index + 1,
+    id: `mixed-topic-${index + 1}`,
+    scope: "global",
+    region: "global",
+    planKind: "search-support",
+    contentFormat: "connectivity-and-esim",
+    searchQuery: { ru: "есим в поездке", en: "travel eSIM" },
+    semanticIntent: { primary: `intent-${index + 1}`, secondary: ["one", "two"] },
+    workingTitle: { ru: `Тема ${index + 1}`, en: `Topic ${index + 1}` },
+    readerPromise: "Проверяемая польза.",
+    creativeConceptKey: `mixed-concept-${index + 1}`,
+    creativeBrief: "Самостоятельный сюжет обложки.",
+  }));
+  plannedPublications[0].planKind = "editorial";
+  plannedPublications[0].countryCode = "NO";
+  plannedPublications[0].scope = undefined;
+  plannedPublications[0].contentFormat = "seasonal-trip-ideas";
+  const result = validateEditorialQueue(policy, { schemaVersion: 1, items: [], plannedPublications });
+  assert.match(result.errors.join("\n"), /материалов о связи 4 при максимуме 2/);
+});
+
 test("принимает готовую двуязычную единицу", () => {
   const result = validateEditorialQueue(policy, { schemaVersion: 1, items: [item()] });
   assert.deepEqual(result.errors, []);

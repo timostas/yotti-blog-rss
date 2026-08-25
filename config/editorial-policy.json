@@ -30,8 +30,8 @@
   "contentStrategy": {
     "commercialGoal": "qualified_esim_traffic",
     "countryRotationWindowUnits": 14,
-    "maximumConnectivityLedUnitsPerFive": null,
-    "allowTechnicalFirstQueue": true,
+    "maximumConnectivityLedUnitsPerFive": 2,
+    "allowTechnicalFirstQueue": false,
     "maximumSameRegionInARow": 2,
     "formats": [
       { "key": "destination-inspiration", "share": 10 },

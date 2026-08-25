@@ -147,13 +147,8 @@ export function validateEditorialQueue(policy, queue) {
       .map((item) => item.creativeConceptKey?.trim().toLowerCase())
       .filter(Boolean));
     const sortedPlan = [...plannedPublications].sort((a, b) => a.planOrder - b.planOrder);
-    const firstPlanKind = sortedPlan[0]?.planKind;
-    const technicalFirstQueue = policy.contentStrategy.allowTechnicalFirstQueue === true
-      && sortedPlan.length > 0
-      && sortedPlan.every((plan) => plan?.planKind === "search-support");
-    if (!new Set(["buy-esim", "search-support"]).has(firstPlanKind)) {
-      errors.push("plannedPublications: первый элемент должен иметь planKind buy-esim или search-support");
-    }
+    const technicalOnlyQueue = sortedPlan.length > 0
+      && sortedPlan.every((plan) => new Set(["buy-esim", "search-support"]).has(plan?.planKind));
 
     for (const [index, item] of sortedPlan.entries()) {
       const label = item?.id || `plannedPublications[${index}]`;
@@ -169,17 +164,20 @@ export function validateEditorialQueue(policy, queue) {
       } else {
         planIds.add(item.id);
       }
-      if (item?.planKind === "buy-esim") {
+      if (item?.planKind === "buy-esim" || item?.planKind === "editorial") {
         if (typeof item?.countryCode !== "string" || !/^[A-Z]{2}$/.test(item.countryCode) || countryCodes.has(item.countryCode)) {
-          errors.push(`${label}: countryCode должен быть уникальным ISO-кодом для buy-esim`);
+          errors.push(`${label}: countryCode должен быть уникальным ISO-кодом для страновой темы`);
         } else {
           countryCodes.add(item.countryCode);
         }
-      } else if (item?.scope !== "global" || item?.countryCode !== undefined) {
+      } else if (item?.planKind === "search-support" && (item?.scope !== "global" || item?.countryCode !== undefined)) {
         errors.push(`${label}: search-support должен иметь scope global и не содержать countryCode`);
+      } else if (!new Set(["buy-esim", "search-support", "editorial"]).has(item?.planKind)) {
+        errors.push(`${label}: planKind должен быть buy-esim, search-support или editorial`);
       }
       if (typeof item?.region !== "string" || item.region.trim() === "") errors.push(`${label}: region обязателен`);
-      if (!technicalFirstQueue) {
+      if (technicalOnlyQueue) {
+        const firstPlanKind = sortedPlan[0]?.planKind;
         const expectedKind = index % 2 === 0
           ? firstPlanKind
           : firstPlanKind === "buy-esim" ? "search-support" : "buy-esim";
@@ -221,10 +219,18 @@ export function validateEditorialQueue(policy, queue) {
       }
     }
 
-    if (!technicalFirstQueue) {
-      for (let index = 2; index < sortedPlan.length; index += 1) {
-        if (sortedPlan[index].region === sortedPlan[index - 1].region && sortedPlan[index].region === sortedPlan[index - 2].region) {
-          errors.push(`${sortedPlan[index].id}: регион повторяется более двух раз подряд`);
+    for (let index = 2; index < sortedPlan.length; index += 1) {
+      if (sortedPlan[index].region === sortedPlan[index - 1].region && sortedPlan[index].region === sortedPlan[index - 2].region) {
+        errors.push(`${sortedPlan[index].id}: регион повторяется более двух раз подряд`);
+      }
+    }
+    const maximumConnectivity = policy.contentStrategy.maximumConnectivityLedUnitsPerFive;
+    if (Number.isInteger(maximumConnectivity)) {
+      for (let index = 0; index <= sortedPlan.length - 5; index += 1) {
+        const count = sortedPlan.slice(index, index + 5)
+          .filter((item) => item.contentFormat === "connectivity-and-esim").length;
+        if (count > maximumConnectivity) {
+          errors.push(`plannedPublications ${index + 1}-${index + 5}: материалов о связи ${count} при максимуме ${maximumConnectivity}`);
         }
       }
     }

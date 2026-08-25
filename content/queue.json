@@ -2835,60 +2835,524 @@
   ],
   "plannedPublications": [
     {
-      "planOrder": 1,
+      "id": "norway-summer-fjord-evening",
+      "countryCode": "NO",
+      "region": "northern-europe",
+      "planKind": "editorial",
+      "contentFormat": "seasonal-trip-ideas",
+      "searchQuery": {
+        "ru": "Норвегия летом маршрут",
+        "en": "Norway summer itinerary"
+      },
+      "semanticIntent": {
+        "primary": "slow-norway-summer-route",
+        "secondary": [
+          "Норвегия летом маршрут",
+          "Norway summer itinerary"
+        ]
+      },
+      "workingTitle": {
+        "ru": "Норвегия летом: как построить поездку вокруг одного фьорда и долгого вечера",
+        "en": "Norway in summer: a trip built around one fjord and a long evening"
+      },
+      "readerPromise": "Выбрать одну базу, короткие выезды и ритм долгого северного дня без гонки за списком достопримечательностей.",
+      "creativeConceptKey": "bergen-fjord-long-evening-kayak",
+      "creativeBrief": "Тихая вода у фьорда в долгом вечернем свете, один каяк и далёкие дома на склоне.",
+      "planOrder": 1
+    },
+    {
+      "planOrder": 2,
       "id": "esim-for-cruise",
       "scope": "global",
       "region": "global",
       "planKind": "search-support",
       "contentFormat": "connectivity-and-esim",
-      "searchQuery": { "ru": "есим для круиза", "en": "eSIM for a cruise" },
-      "semanticIntent": { "primary": "cruise-connectivity-boundary", "secondary": ["интернет в морском круизе", "travel eSIM at sea"] },
-      "workingTitle": { "ru": "Работает ли есим в морском круизе", "en": "Does an eSIM work on a cruise?" },
+      "searchQuery": {
+        "ru": "есим для круиза",
+        "en": "eSIM for a cruise"
+      },
+      "semanticIntent": {
+        "primary": "cruise-connectivity-boundary",
+        "secondary": [
+          "интернет в морском круизе",
+          "travel eSIM at sea"
+        ]
+      },
+      "workingTitle": {
+        "ru": "Работает ли есим в морском круизе",
+        "en": "Does an eSIM work on a cruise?"
+      },
       "readerPromise": "Разделить связь в портах, у берега, в открытом море и судовой Wi-Fi без обещаний покрытия.",
       "creativeConceptKey": "harbor-promenade-ship-side-view",
       "creativeBrief": "Путешественник на набережной смотрит на круизное судно сбоку; широкий портовый пейзаж."
     },
     {
-      "planOrder": 2,
+      "id": "slovenia-two-bases-first-trip",
+      "countryCode": "SI",
+      "region": "central-europe",
+      "planKind": "editorial",
+      "contentFormat": "route-or-itinerary",
+      "searchQuery": {
+        "ru": "маршрут по Словении на неделю",
+        "en": "one week Slovenia itinerary"
+      },
+      "semanticIntent": {
+        "primary": "slovenia-two-base-route",
+        "secondary": [
+          "маршрут по Словении на неделю",
+          "one week Slovenia itinerary"
+        ]
+      },
+      "workingTitle": {
+        "ru": "Неделя в Словении без смены отеля через день: Любляна, Бохинь и короткие выезды",
+        "en": "One week in Slovenia without changing hotels every day"
+      },
+      "readerPromise": "Собрать маршрут из двух баз с городом, озером и короткими поездками вместо ежедневных сборов.",
+      "creativeConceptKey": "bohinj-wooden-boat-morning",
+      "creativeBrief": "Деревянная лодка на озере Бохинь утром, горы отражаются в спокойной воде.",
+      "planOrder": 3
+    },
+    {
+      "id": "lima-first-two-days-food",
+      "countryCode": "PE",
+      "region": "south-america",
+      "planKind": "editorial",
+      "contentFormat": "culture-food-or-local-experience",
+      "searchQuery": {
+        "ru": "что попробовать в Лиме",
+        "en": "what to eat in Lima"
+      },
+      "semanticIntent": {
+        "primary": "lima-first-food-route",
+        "secondary": [
+          "что попробовать в Лиме",
+          "what to eat in Lima"
+        ]
+      },
+      "workingTitle": {
+        "ru": "Что попробовать в Лиме за первые два дня: рынок, севиче и один долгий обед",
+        "en": "What to eat in Lima in your first two days"
+      },
+      "readerPromise": "Понять, с чего начать знакомство с перуанской едой и как связать блюда с живыми районами города.",
+      "creativeConceptKey": "lima-market-corn-potatoes-hands",
+      "creativeBrief": "Руки продавца раскладывают перуанскую кукурузу и картофель на утреннем рынке.",
+      "planOrder": 4
+    },
+    {
+      "planOrder": 5,
       "id": "esim-for-layover",
       "scope": "global",
       "region": "global",
       "planKind": "search-support",
       "contentFormat": "connectivity-and-esim",
-      "searchQuery": { "ru": "есим для пересадки", "en": "eSIM for a layover" },
-      "semanticIntent": { "primary": "airport-transit-connectivity", "secondary": ["интернет при пересадке", "travel eSIM airport transit"] },
-      "workingTitle": { "ru": "Нужна ли есим для пересадки", "en": "Do you need an eSIM for a layover?" },
+      "searchQuery": {
+        "ru": "есим для пересадки",
+        "en": "eSIM for a layover"
+      },
+      "semanticIntent": {
+        "primary": "airport-transit-connectivity",
+        "secondary": [
+          "интернет при пересадке",
+          "travel eSIM airport transit"
+        ]
+      },
+      "workingTitle": {
+        "ru": "Нужна ли есим для пересадки",
+        "en": "Do you need an eSIM for a layover?"
+      },
       "readerPromise": "Выбрать между Wi-Fi, региональным пакетом и отдельной страной по длительности и выходу из аэропорта.",
       "creativeConceptKey": "airport-window-paper-itinerary",
       "creativeBrief": "Пассажир у большого окна читает бумажный маршрут пересадки; без очередного телефонного крупного плана."
     },
     {
-      "planOrder": 3,
+      "id": "taiwan-tea-day-from-taipei",
+      "countryCode": "TW",
+      "region": "east-asia",
+      "planKind": "editorial",
+      "contentFormat": "practical-travel-scenario",
+      "searchQuery": {
+        "ru": "чайные места Тайваня из Тайбэя",
+        "en": "Taiwan tea day trip from Taipei"
+      },
+      "semanticIntent": {
+        "primary": "taipei-tea-day-trip",
+        "secondary": [
+          "чайные места Тайваня из Тайбэя",
+          "Taiwan tea day trip from Taipei"
+        ]
+      },
+      "workingTitle": {
+        "ru": "За чаем из Тайбэя: куда поехать на один день, если не хочется менять отель",
+        "en": "A tea day trip from Taipei without changing hotels"
+      },
+      "readerPromise": "Выбрать один чайный город, выстроить спокойный день и вернуться в Тайбэй к вечеру.",
+      "creativeConceptKey": "taiwan-tea-hillside-steam",
+      "creativeBrief": "Чайные кусты на склоне после дождя, пар над чашками в небольшой чайной.",
+      "planOrder": 6
+    },
+    {
+      "id": "petra-beyond-treasury",
+      "countryCode": "JO",
+      "region": "middle-east",
+      "planKind": "editorial",
+      "contentFormat": "destination-inspiration",
+      "searchQuery": {
+        "ru": "что посмотреть в Петре кроме Сокровищницы",
+        "en": "what to see in Petra beyond the Treasury"
+      },
+      "semanticIntent": {
+        "primary": "petra-beyond-treasury",
+        "secondary": [
+          "что посмотреть в Петре кроме Сокровищницы",
+          "what to see in Petra beyond the Treasury"
+        ]
+      },
+      "workingTitle": {
+        "ru": "Петра без спешки: что увидеть помимо Сокровищницы",
+        "en": "Petra without rushing: what to see beyond the Treasury"
+      },
+      "readerPromise": "Спланировать день в Петре так, чтобы после Сокровищницы осталось время на тропы, свет и паузы.",
+      "creativeConceptKey": "petra-siq-sunlit-walker",
+      "creativeBrief": "Путешественник в профиль идёт по Сику, на каменных стенах мягкий дневной свет.",
+      "planOrder": 7
+    },
+    {
+      "planOrder": 8,
       "id": "esim-on-tablet",
       "scope": "global",
       "region": "global",
       "planKind": "search-support",
       "contentFormat": "connectivity-and-esim",
-      "searchQuery": { "ru": "есим для планшета", "en": "eSIM for tablet" },
-      "semanticIntent": { "primary": "tablet-esim", "secondary": ["есим на айпад", "travel eSIM on iPad"] },
-      "workingTitle": { "ru": "Как пользоваться есим на планшете", "en": "How to use a travel eSIM on a tablet" },
+      "searchQuery": {
+        "ru": "есим для планшета",
+        "en": "eSIM for tablet"
+      },
+      "semanticIntent": {
+        "primary": "tablet-esim",
+        "secondary": [
+          "есим на айпад",
+          "travel eSIM on iPad"
+        ]
+      },
+      "workingTitle": {
+        "ru": "Как пользоваться есим на планшете",
+        "en": "How to use a travel eSIM on a tablet"
+      },
       "readerPromise": "Проверить cellular-модель, совместимость профиля и отличие планшета от раздачи со смартфона.",
       "creativeConceptKey": "museum-courtyard-sketching-tablet",
       "creativeBrief": "Путешественник делает зарисовку во дворе музея, планшет показан как инструмент, а не интерфейс."
     },
     {
-      "planOrder": 4,
+      "id": "cape-town-first-trip-neighbourhoods",
+      "countryCode": "ZA",
+      "region": "southern-africa",
+      "planKind": "editorial",
+      "contentFormat": "practical-travel-scenario",
+      "searchQuery": {
+        "ru": "в каком районе остановиться в Кейптауне",
+        "en": "where to stay in Cape Town first trip"
+      },
+      "semanticIntent": {
+        "primary": "cape-town-neighbourhood-choice",
+        "secondary": [
+          "в каком районе остановиться в Кейптауне",
+          "where to stay in Cape Town first trip"
+        ]
+      },
+      "workingTitle": {
+        "ru": "Кейптаун между горой и океаном: как выбрать район для первой поездки",
+        "en": "Cape Town between the mountain and the ocean: choosing your first base"
+      },
+      "readerPromise": "Сравнить ритм районов по прогулкам, утрам и коротким поездкам, а не по абстрактному рейтингу.",
+      "creativeConceptKey": "cape-town-table-mountain-market-morning",
+      "creativeBrief": "Утренний городской рынок, вдали Столовая гора; люди в естественном движении.",
+      "planOrder": 9
+    },
+    {
+      "id": "new-zealand-south-island-three-bases",
+      "countryCode": "NZ",
+      "region": "oceania",
+      "planKind": "editorial",
+      "contentFormat": "route-or-itinerary",
+      "searchQuery": {
+        "ru": "маршрут по Южному острову Новой Зеландии",
+        "en": "South Island New Zealand itinerary"
+      },
+      "semanticIntent": {
+        "primary": "south-island-three-bases",
+        "secondary": [
+          "маршрут по Южному острову Новой Зеландии",
+          "South Island New Zealand itinerary"
+        ]
+      },
+      "workingTitle": {
+        "ru": "Южный остров Новой Зеландии: маршрут с тремя базами вместо ежедневных переездов",
+        "en": "New Zealand South Island with three bases instead of daily hotel changes"
+      },
+      "readerPromise": "Выбрать три остановки и увидеть горы, озёра и побережье без превращения поездки в гонку.",
+      "creativeConceptKey": "new-zealand-lake-road-morning",
+      "creativeBrief": "Дорога вдоль озера на рассвете, небольшая машина видна сбоку на дальнем плане.",
+      "planOrder": 10
+    },
+    {
+      "planOrder": 11,
       "id": "esim-profile-reuse",
       "scope": "global",
       "region": "global",
       "planKind": "search-support",
       "contentFormat": "connectivity-and-esim",
-      "searchQuery": { "ru": "можно ли использовать есим повторно", "en": "can you reuse an eSIM" },
-      "semanticIntent": { "primary": "profile-reuse-next-trip", "secondary": ["повторное использование есим", "reuse travel eSIM profile"] },
-      "workingTitle": { "ru": "Можно ли использовать есим в следующей поездке", "en": "Can you reuse an eSIM on your next trip?" },
+      "searchQuery": {
+        "ru": "можно ли использовать есим повторно",
+        "en": "can you reuse an eSIM"
+      },
+      "semanticIntent": {
+        "primary": "profile-reuse-next-trip",
+        "secondary": [
+          "повторное использование есим",
+          "reuse travel eSIM profile"
+        ]
+      },
+      "workingTitle": {
+        "ru": "Можно ли использовать есим в следующей поездке",
+        "en": "Can you reuse an eSIM on your next trip?"
+      },
       "readerPromise": "Разделить профиль, пакет, пополнение и новый QR-код и не удалять пригодную линию раньше времени.",
       "creativeConceptKey": "home-shelf-travel-keepsakes",
       "creativeBrief": "Человек разбирает дорожные заметки и сувениры после поездки, готовясь к следующей; тёплая домашняя сцена."
+    },
+    {
+      "id": "montreal-shoulder-season-walks",
+      "countryCode": "CA",
+      "region": "north-america",
+      "planKind": "editorial",
+      "contentFormat": "seasonal-trip-ideas",
+      "searchQuery": {
+        "ru": "Монреаль в межсезонье",
+        "en": "Montreal shoulder season trip"
+      },
+      "semanticIntent": {
+        "primary": "montreal-shoulder-season",
+        "secondary": [
+          "Монреаль в межсезонье",
+          "Montreal shoulder season trip"
+        ]
+      },
+      "workingTitle": {
+        "ru": "Монреаль в межсезонье: районы для прогулок, пекарни и тёплые паузы",
+        "en": "Montreal in shoulder season: walks, bakeries and warm pauses"
+      },
+      "readerPromise": "Провести несколько дней в городе через районы и короткие остановки, когда погода меняется быстрее планов.",
+      "creativeConceptKey": "montreal-staircases-bakery-autumn",
+      "creativeBrief": "Уличные лестницы Монреаля и свет из пекарни в прохладное утро.",
+      "planOrder": 12
+    },
+    {
+      "id": "jaipur-craft-route-2026",
+      "countryCode": "IN",
+      "region": "south-asia",
+      "planKind": "editorial",
+      "contentFormat": "culture-food-or-local-experience",
+      "searchQuery": {
+        "ru": "ремесла Джайпура маршрут",
+        "en": "Jaipur crafts itinerary"
+      },
+      "semanticIntent": {
+        "primary": "jaipur-craft-route-2026",
+        "secondary": [
+          "ремесла Джайпура маршрут",
+          "Jaipur crafts itinerary"
+        ]
+      },
+      "workingTitle": {
+        "ru": "Джайпур руками мастеров: маршрут через набойку, керамику и рынки",
+        "en": "Jaipur through its makers: block printing, pottery and markets"
+      },
+      "readerPromise": "Увидеть ремесленные районы города через мастерские и разговор с вещами, а не через список сувениров.",
+      "creativeConceptKey": "jaipur-block-printing-indigo-hands",
+      "creativeBrief": "Руки мастера печатают орнамент индиго на ткани; без постановочного телефона.",
+      "planOrder": 13
+    },
+    {
+      "id": "santiago-or-valparaiso-first-trip",
+      "countryCode": "CL",
+      "region": "south-america",
+      "planKind": "editorial",
+      "contentFormat": "destination-inspiration",
+      "searchQuery": {
+        "ru": "Сантьяго или Вальпараисо где остановиться",
+        "en": "Santiago or Valparaiso where to stay"
+      },
+      "semanticIntent": {
+        "primary": "santiago-valparaiso-choice",
+        "secondary": [
+          "Сантьяго или Вальпараисо где остановиться",
+          "Santiago or Valparaiso where to stay"
+        ]
+      },
+      "workingTitle": {
+        "ru": "Сантьяго или Вальпараисо: где остановиться в первую поездку в Чили",
+        "en": "Santiago or Valparaiso: where to base your first trip to Chile"
+      },
+      "readerPromise": "Выбрать город по желаемому ритму поездки и не пытаться превратить два разных места в один обязательный маршрут.",
+      "creativeConceptKey": "valparaiso-hillside-funicular-evening",
+      "creativeBrief": "Фуникулёр Вальпараисо на склоне вечером, городские огни и морской воздух.",
+      "planOrder": 14
+    },
+    {
+      "id": "cartagena-first-day-rhythm",
+      "countryCode": "CO",
+      "region": "south-america",
+      "planKind": "editorial",
+      "contentFormat": "practical-travel-scenario",
+      "searchQuery": {
+        "ru": "что делать в Картахене за один день",
+        "en": "Cartagena first day itinerary"
+      },
+      "semanticIntent": {
+        "primary": "cartagena-first-day-rhythm",
+        "secondary": [
+          "что делать в Картахене за один день",
+          "Cartagena first day itinerary"
+        ]
+      },
+      "workingTitle": {
+        "ru": "Картахена в первый день: как пережить жару и увидеть город не только из отеля",
+        "en": "Your first day in Cartagena: seeing the city without fighting the heat"
+      },
+      "readerPromise": "Собрать день вокруг прохладного утра, длинного обеда и вечерней прогулки по стенам старого города.",
+      "creativeConceptKey": "cartagena-yellow-wall-bicycle-morning",
+      "creativeBrief": "Жёлтая стена старого города, велосипедист в профиль и мягкое утреннее солнце.",
+      "planOrder": 15
+    },
+    {
+      "id": "tallinn-food-beyond-old-town",
+      "countryCode": "EE",
+      "region": "northern-europe",
+      "planKind": "editorial",
+      "contentFormat": "culture-food-or-local-experience",
+      "searchQuery": {
+        "ru": "что попробовать в Таллине",
+        "en": "what to eat in Tallinn"
+      },
+      "semanticIntent": {
+        "primary": "tallinn-food-route",
+        "secondary": [
+          "что попробовать в Таллине",
+          "what to eat in Tallinn"
+        ]
+      },
+      "workingTitle": {
+        "ru": "Таллин за столом: что попробовать в Старом городе и за его пределами",
+        "en": "Tallinn at the table: what to try beyond the Old Town"
+      },
+      "readerPromise": "Соединить привычные блюда, современную кухню и районы, в которые стоит выйти за пределы туристических улиц.",
+      "creativeConceptKey": "tallinn-market-rye-bread-flowers",
+      "creativeBrief": "Ржаной хлеб, цветы и руки продавца на городском рынке Таллина.",
+      "planOrder": 16
+    },
+    {
+      "id": "kenya-nairobi-coast-route",
+      "countryCode": "KE",
+      "region": "east-africa",
+      "planKind": "editorial",
+      "contentFormat": "route-or-itinerary",
+      "searchQuery": {
+        "ru": "маршрут по Кении Найроби побережье",
+        "en": "Kenya Nairobi coast itinerary"
+      },
+      "semanticIntent": {
+        "primary": "kenya-city-coast-route",
+        "secondary": [
+          "маршрут по Кении Найроби побережье",
+          "Kenya Nairobi coast itinerary"
+        ]
+      },
+      "workingTitle": {
+        "ru": "Кения без лишних перелётов: как соединить Найроби и побережье",
+        "en": "Kenya without extra flights: connecting Nairobi and the coast"
+      },
+      "readerPromise": "Построить первую поездку вокруг двух контрастных баз и оставить время на адаптацию между ними.",
+      "creativeConceptKey": "kenya-train-window-coast-light",
+      "creativeBrief": "Свет в окне поезда, уходящего к побережью; пейзаж и пассажир в пол-оборота.",
+      "planOrder": 17
+    },
+    {
+      "id": "buenos-aires-neighbourhood-days",
+      "countryCode": "AR",
+      "region": "south-america",
+      "planKind": "editorial",
+      "contentFormat": "culture-food-or-local-experience",
+      "searchQuery": {
+        "ru": "районы Буэнос-Айреса для туриста",
+        "en": "Buenos Aires neighbourhoods for first trip"
+      },
+      "semanticIntent": {
+        "primary": "buenos-aires-neighbourhood-rhythm",
+        "secondary": [
+          "районы Буэнос-Айреса для туриста",
+          "Buenos Aires neighbourhoods for first trip"
+        ]
+      },
+      "workingTitle": {
+        "ru": "Буэнос-Айрес по районам: кофе, книжные и вечерние прогулки",
+        "en": "Buenos Aires by neighbourhood: coffee, bookshops and evening walks"
+      },
+      "readerPromise": "Понять разные ритмы Палермо, Реколеты и Сан-Тельмо через обычный городской день.",
+      "creativeConceptKey": "buenos-aires-bookshop-cafe-window",
+      "creativeBrief": "Окно книжного магазина и столик в кафе, вечерний городской свет.",
+      "planOrder": 18
+    },
+    {
+      "id": "albania-september-city-or-coast",
+      "countryCode": "AL",
+      "region": "southern-europe",
+      "planKind": "editorial",
+      "contentFormat": "seasonal-trip-ideas",
+      "searchQuery": {
+        "ru": "Албания в сентябре куда поехать",
+        "en": "Albania in September where to go"
+      },
+      "semanticIntent": {
+        "primary": "albania-september-choice",
+        "secondary": [
+          "Албания в сентябре куда поехать",
+          "Albania in September where to go"
+        ]
+      },
+      "workingTitle": {
+        "ru": "Албания в сентябре: как выбрать между Тираной и побережьем",
+        "en": "Albania in September: choosing between Tirana and the coast"
+      },
+      "readerPromise": "Выбрать основу поездки по погоде, времени и желанию двигаться, а не пытаться объехать всю страну за несколько дней.",
+      "creativeConceptKey": "albanian-riviera-terrace-evening",
+      "creativeBrief": "Терраса над Адриатикой в вечернем свете, человек сидит вполоборота у края кадра.",
+      "planOrder": 19
+    },
+    {
+      "id": "samarkand-bukhara-first-trip",
+      "countryCode": "UZ",
+      "region": "central-asia",
+      "planKind": "editorial",
+      "contentFormat": "route-or-itinerary",
+      "searchQuery": {
+        "ru": "Самарканд Бухара маршрут",
+        "en": "Samarkand Bukhara itinerary"
+      },
+      "semanticIntent": {
+        "primary": "samarkand-bukhara-first-route",
+        "secondary": [
+          "Самарканд Бухара маршрут",
+          "Samarkand Bukhara itinerary"
+        ]
+      },
+      "workingTitle": {
+        "ru": "Самарканд и Бухара: как построить первую поездку без спешки",
+        "en": "Samarkand and Bukhara: a first trip without rushing"
+      },
+      "readerPromise": "Распределить дни между двумя городами, чтобы архитектура, рынки и вечерние улицы не превратились в чек-лист.",
+      "creativeConceptKey": "bukhara-ark-blue-hour-walk",
+      "creativeBrief": "Вечерняя прогулка у стен Арка в Бухаре, тёплый свет и люди в естественном движении.",
+      "planOrder": 20
     }
   ]
 }
