@@ -7,6 +7,7 @@ const ASSET_SETS = [
   { directory: "yotti-global-20260829-two-sim-roles-ig-v1", slides: 5 },
   { directory: "yotti-global-20260830-pre-purchase-checks-ig-v1", slides: 5 },
   { directory: "yotti-night-arrival-story-ig-v1", slides: 4 },
+  { directory: "yotti-flight-disruption-story-ig-v1", slides: 4 },
 ];
 
 function jpegDimensions(bytes) {
