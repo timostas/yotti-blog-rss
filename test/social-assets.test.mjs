@@ -3,8 +3,11 @@ import { readdir, readFile, stat } from "node:fs/promises";
 import { join, resolve } from "node:path";
 import test from "node:test";
 
-const ASSET_DIR = resolve("assets/social-assets/yotti-global-20260829-two-sim-roles-ig-v1");
 const EXPECTED = ["slide-01.jpg", "slide-02.jpg", "slide-03.jpg", "slide-04.jpg", "slide-05.jpg"];
+const ASSET_DIRS = [
+  "yotti-global-20260829-two-sim-roles-ig-v1",
+  "yotti-global-20260830-pre-purchase-checks-ig-v1",
+].map((directory) => resolve("assets/social-assets", directory));
 
 function jpegDimensions(bytes) {
   assert.equal(bytes[0], 0xff, "JPEG SOI byte 1");
@@ -23,12 +26,14 @@ function jpegDimensions(bytes) {
   throw new Error("JPEG SOF dimensions not found");
 }
 
-test("Instagram social assets are exactly five bounded 1080x1350 JPEG files", async () => {
-  assert.deepEqual((await readdir(ASSET_DIR)).sort(), EXPECTED);
-  for (const filename of EXPECTED) {
-    const path = join(ASSET_DIR, filename);
-    const [bytes, metadata] = await Promise.all([readFile(path), stat(path)]);
-    assert.deepEqual(jpegDimensions(bytes), { width: 1080, height: 1350 }, filename);
-    assert.ok(metadata.size > 0 && metadata.size <= 1_000_000, `${filename}: file size must be 1..1000000 bytes`);
+test("Instagram social asset sets are exactly five bounded 1080x1350 JPEG files", async () => {
+  for (const assetDir of ASSET_DIRS) {
+    assert.deepEqual((await readdir(assetDir)).sort(), EXPECTED, assetDir);
+    for (const filename of EXPECTED) {
+      const path = join(assetDir, filename);
+      const [bytes, metadata] = await Promise.all([readFile(path), stat(path)]);
+      assert.deepEqual(jpegDimensions(bytes), { width: 1080, height: 1350 }, path);
+      assert.ok(metadata.size > 0 && metadata.size <= 1_000_000, `${path}: file size must be 1..1000000 bytes`);
+    }
   }
 });
