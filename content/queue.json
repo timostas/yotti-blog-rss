@@ -3107,64 +3107,268 @@
         "titleCandidatesEvaluated": { "ru": 5, "en": 5 },
         "lengthDecision": "Обе локали короче 900 слов: базовый интервал, четыре причины, четыре результата и аппаратный stop-path полностью отвечают на узкий диагностический вопрос."
       }
+    },
+    {
+      "id": "esim-on-laptop",
+      "topicKey": "cellular-laptop-esim",
+      "status": "published",
+      "locales": ["ru", "en"],
+      "model": { "name": "gpt-5.6-sol", "effort": "high" },
+      "riskReasons": ["automation_technical_first_four", "query_cannibalization_checked"],
+      "generationAttempts": { "ru": 1, "en": 1 },
+      "qualityRepairAttempts": 0,
+      "scores": { "utility": 96, "originalValue": 94, "factSupport": 96 },
+      "editorialStandardVersion": 2,
+      "editorialPasses": { "ru": 1, "en": 1 },
+      "intentMap": {
+        "primary": { "ru": "есим для ноутбука", "en": "eSIM for laptop" },
+        "neighborIntents": ["esim-on-tablet", "esim-hotspot", "esim-or-pocket-wifi"],
+        "uniqueReaderOutcome": "Читатель проверяет встроенный сотовый модем и системное меню профилей, получает подтверждение поставщика для Windows и выбирает прямое подключение или точку доступа без пробного расходования кода.",
+        "cannibalizationDecision": "Планшетная статья проверяет iPad и Android tablet, hotspot настраивает раздачу с телефона, а pocket Wi-Fi сравнивает отдельный роутер; новый URL отвечает только на аппаратный и провайдерский gate встроенной есим в ноутбуке."
+      },
+      "internalContextLinks": ["https://yotti.net/catalog", "https://yotti.net/how-it-works"],
+      "researchSources": ["https://support.microsoft.com/en-us/windows/experience/connectivity-networking/use-an-esim-to-get-a-cellular-data-connection-on-your-windows-pc", "https://support.microsoft.com/en-us/windows/experience/connectivity-networking/cellular-settings-in-windows"],
+      "creative": "assets/covers/esim-on-laptop.png",
+      "creativeConceptKey": "library-terrace-laptop-city-rooftops",
+      "creativeGeneration": { "model": "imagegen-built-in", "attempts": 1 },
+      "contentFormat": "connectivity-and-esim",
+      "schedule": { "ru": "2026-08-30T07:00:00Z", "en": "2026-08-30T07:00:00Z" },
+      "editorialScorecard": {
+        "ru": { "total": 94, "dimensions": { "intent": 15, "utility": 15, "specificity": 12, "trust": 14, "voice": 14, "structure": 9, "technical": 10, "commercialRestraint": 5 } },
+        "en": { "total": 95, "dimensions": { "intent": 15, "utility": 15, "specificity": 13, "trust": 14, "voice": 14, "structure": 9, "technical": 10, "commercialRestraint": 5 } }
+      },
+      "qualityNotes": {
+        "localeTotals": { "ru": 94, "en": 95 },
+        "weakestDimensions": ["local_specificity_and_original_value", "structure_and_readability"],
+        "editorialChange": "После отдельного прохода RU построен от меню Windows и четырёх результатов теста, EN — от конфигурации устройства и рабочего сценария; англицизмы в RU заменены, а неподтверждённая совместимость смартфонных планов исключена.",
+        "titleCandidatesEvaluated": { "ru": 5, "en": 5 },
+        "lengthDecision": "Обе локали короче 900 слов: три аппаратных результата, проверка поставщика, четыре исхода соединения и безопасная точка доступа полностью закрывают узкий ноутбучный интент."
+      }
+    },
+    {
+      "id": "does-esim-have-phone-number",
+      "topicKey": "data-only-vs-numbered-esim",
+      "status": "published",
+      "locales": ["ru", "en"],
+      "model": { "name": "gpt-5.6-sol", "effort": "high" },
+      "riskReasons": ["automation_technical_first_four", "query_cannibalization_checked"],
+      "generationAttempts": { "ru": 1, "en": 1 },
+      "qualityRepairAttempts": 0,
+      "scores": { "utility": 96, "originalValue": 93, "factSupport": 96 },
+      "editorialStandardVersion": 2,
+      "editorialPasses": { "ru": 1, "en": 1 },
+      "intentMap": {
+        "primary": { "ru": "есть ли номер телефона у есим", "en": "does an eSIM have a phone number" },
+        "neighborIntents": ["esim-sms-not-working", "esim-with-whatsapp", "keep-main-number-esim"],
+        "uniqueReaderOutcome": "Читатель отличает data-only план от numbered voice/SMS услуги, не принимает EID, ICCID или подпись линии за номер и сохраняет домашнюю линию для проверочных сообщений.",
+        "cannibalizationDecision": "SMS-статья диагностирует сбой уже заявленной услуги, WhatsApp отвечает на интернет-аккаунт, а сохранение основного номера настраивает две линии; новый URL классифицирует функции плана до покупки и установки."
+      },
+      "internalContextLinks": ["https://yotti.net/catalog", "https://yotti.net/how-it-works"],
+      "researchSources": ["https://support.apple.com/guide/iphone/use-dual-sim-iph9c5776d3c/ios", "https://support.microsoft.com/en-us/windows/experience/connectivity-networking/use-an-esim-to-get-a-cellular-data-connection-on-your-windows-pc"],
+      "creative": "assets/covers/does-esim-have-phone-number.png",
+      "creativeConceptKey": "old-town-post-office-travel-notebook",
+      "creativeGeneration": { "model": "imagegen-built-in", "attempts": 1 },
+      "contentFormat": "connectivity-and-esim",
+      "schedule": { "ru": "2026-08-30T07:30:00Z", "en": "2026-08-30T07:30:00Z" },
+      "editorialScorecard": {
+        "ru": { "total": 93, "dimensions": { "intent": 15, "utility": 15, "specificity": 11, "trust": 14, "voice": 14, "structure": 9, "technical": 10, "commercialRestraint": 5 } },
+        "en": { "total": 94, "dimensions": { "intent": 15, "utility": 15, "specificity": 12, "trust": 14, "voice": 14, "structure": 9, "technical": 10, "commercialRestraint": 5 } }
+      },
+      "qualityNotes": {
+        "localeTotals": { "ru": 93, "en": 94 },
+        "weakestDimensions": ["local_specificity_and_original_value", "structure_and_readability"],
+        "editorialChange": "После отдельного прохода идентификаторы и услуги разведены до четырёх проверяемых случаев, RU очищен от ненужных англицизмов, а EN получил самостоятельный блок выбора numbered-плана без повторения структуры WhatsApp-статьи.",
+        "titleCandidatesEvaluated": { "ru": 5, "en": 5 },
+        "lengthDecision": "Обе локали короче 900 слов: четыре типа данных в настройках, четыре случая тарифного описания и отдельный тест домашней линии дают полный ответ без общего справочника о двух SIM."
+      }
+    },
+    {
+      "id": "esim-qr-code-safety",
+      "topicKey": "activation-code-confidentiality",
+      "status": "published",
+      "locales": ["ru", "en"],
+      "model": { "name": "gpt-5.6-sol", "effort": "high" },
+      "riskReasons": ["automation_technical_first_four", "query_cannibalization_checked"],
+      "generationAttempts": { "ru": 1, "en": 1 },
+      "qualityRepairAttempts": 0,
+      "scores": { "utility": 96, "originalValue": 95, "factSupport": 96 },
+      "editorialStandardVersion": 2,
+      "editorialPasses": { "ru": 1, "en": 1 },
+      "intentMap": {
+        "primary": { "ru": "безопасно ли показывать QR-код есим", "en": "is it safe to share an eSIM QR code" },
+        "neighborIntents": ["esim-will-not-install", "deleted-esim-recovery", "install-esim-before-travel"],
+        "uniqueReaderOutcome": "Читатель хранит QR как данные активации, выбирает безопасную ветку до установки, после утечки или после успешной загрузки и не расходует код тестом на втором устройстве.",
+        "cannibalizationDecision": "Сбой установки ищет место ошибки, восстановление начинается после удаления профиля, а предвыездная статья даёт общий порядок; новый URL отвечает только на конфиденциальность, утечку и жизненный цикл активационного кода."
+      },
+      "internalContextLinks": ["https://yotti.net/catalog", "https://yotti.net/how-it-works"],
+      "researchSources": ["https://support.apple.com/en-us/118669", "https://support.microsoft.com/en-us/windows/experience/connectivity-networking/use-an-esim-to-get-a-cellular-data-connection-on-your-windows-pc"],
+      "creative": "assets/covers/esim-qr-code-safety.png",
+      "creativeConceptKey": "hotel-safe-envelope-passport-wallet",
+      "creativeGeneration": { "model": "imagegen-built-in", "attempts": 1 },
+      "contentFormat": "connectivity-and-esim",
+      "schedule": { "ru": "2026-08-30T17:00:00Z", "en": "2026-08-30T17:00:00Z" },
+      "editorialScorecard": {
+        "ru": { "total": 94, "dimensions": { "intent": 15, "utility": 15, "specificity": 13, "trust": 14, "voice": 14, "structure": 9, "technical": 9, "commercialRestraint": 5 } },
+        "en": { "total": 95, "dimensions": { "intent": 15, "utility": 15, "specificity": 13, "trust": 14, "voice": 14, "structure": 10, "technical": 9, "commercialRestraint": 5 } }
+      },
+      "qualityNotes": {
+        "localeTotals": { "ru": 94, "en": 95 },
+        "weakestDimensions": ["technical_publication_quality", "structure_and_readability"],
+        "editorialChange": "После отдельного прохода категоричное обещание кражи заменено проверяемыми состояниями поставщика, утечка отделена от ошибки установки, а RU и EN получили разный порядок действий без универсального FAQ.",
+        "titleCandidatesEvaluated": { "ru": 5, "en": 5 },
+        "lengthDecision": "Обе локали короче 900 слов: приватное хранение, случайная отправка, отказ кода, установленный профиль и безопасный fallback полностью закрывают один security-интент."
+      }
+    },
+    {
+      "id": "esim-on-locked-phone",
+      "topicKey": "carrier-lock-esim-boundary",
+      "status": "published",
+      "locales": ["ru", "en"],
+      "model": { "name": "gpt-5.6-sol", "effort": "high" },
+      "riskReasons": ["automation_technical_first_four", "query_cannibalization_checked"],
+      "generationAttempts": { "ru": 1, "en": 1 },
+      "qualityRepairAttempts": 0,
+      "scores": { "utility": 96, "originalValue": 94, "factSupport": 96 },
+      "editorialStandardVersion": 2,
+      "editorialPasses": { "ru": 1, "en": 1 },
+      "intentMap": {
+        "primary": { "ru": "работает ли есим на заблокированном оператором телефоне", "en": "does eSIM work on a carrier-locked phone" },
+        "neighborIntents": ["esim-phone-compatibility", "choose-travel-esim", "esim-or-roaming"],
+        "uniqueReaderOutcome": "Читатель отдельно подтверждает carrier lock на iPhone или Pixel, обращается к владельцу ограничения за unlock и не тратит travel-код до официального статуса.",
+        "cannibalizationDecision": "Совместимость телефона проверяет аппаратную поддержку и регион модели, выбор плана охватывает предпокупочные параметры, а eSIM-vs-roaming сравнивает способы связи; новый URL ограничен владельцем lock, официальным unlock и чтением ошибки после него."
+      },
+      "internalContextLinks": ["https://yotti.net/catalog", "https://yotti.net/how-it-works"],
+      "researchSources": ["https://support.apple.com/en-us/109316", "https://support.google.com/pixelphone/answer/7107188?hl=en"],
+      "creative": "assets/covers/esim-on-locked-phone.png",
+      "creativeConceptKey": "repair-shop-window-travel-bag",
+      "creativeGeneration": { "model": "imagegen-built-in", "attempts": 1 },
+      "contentFormat": "connectivity-and-esim",
+      "schedule": { "ru": "2026-08-30T17:30:00Z", "en": "2026-08-30T17:30:00Z" },
+      "editorialScorecard": {
+        "ru": { "total": 94, "dimensions": { "intent": 15, "utility": 15, "specificity": 12, "trust": 14, "voice": 14, "structure": 9, "technical": 10, "commercialRestraint": 5 } },
+        "en": { "total": 95, "dimensions": { "intent": 15, "utility": 15, "specificity": 13, "trust": 14, "voice": 14, "structure": 9, "technical": 10, "commercialRestraint": 5 } }
+      },
+      "qualityNotes": {
+        "localeTotals": { "ru": 94, "en": 95 },
+        "weakestDimensions": ["local_specificity_and_original_value", "structure_and_readability"],
+        "editorialChange": "После отдельного прохода аппаратная совместимость вынесена за границы статьи, iPhone и Pixel разделены только по реальной проверке статуса, а сброс и неофициальные коды заменены официальным владельцем ограничения и безопасным резервом.",
+        "titleCandidatesEvaluated": { "ru": 5, "en": 5 },
+        "lengthDecision": "Обе локали короче 900 слов: источник телефона, две платформенные проверки, четыре результата активации и официальный unlock дают полный ответ без повторения общей совместимости."
+      }
     }
   ],
   "plannedPublications": [
     {
       "planOrder": 1,
-      "id": "esim-on-laptop",
+      "id": "esim-without-physical-sim",
       "scope": "global",
       "region": "global",
       "planKind": "search-support",
       "contentFormat": "connectivity-and-esim",
-      "searchQuery": { "ru": "есим для ноутбука", "en": "eSIM for laptop" },
-      "semanticIntent": { "primary": "cellular-laptop-esim", "secondary": ["ноутбук с есим в поездке", "travel eSIM on a cellular laptop"] },
-      "workingTitle": { "ru": "Можно ли пользоваться есим на ноутбуке", "en": "Can you use an eSIM on a laptop?" },
-      "readerPromise": "Проверить наличие встроенного сотового модема, поддержку профиля и выбрать между прямым подключением и hotspot.",
-      "creativeConceptKey": "library-terrace-laptop-city-rooftops",
-      "creativeBrief": "Путешественник работает за ноутбуком на террасе библиотеки с видом на крыши; экран не читается, логотипов нет."
+      "searchQuery": { "ru": "работает ли есим без физической сим карты", "en": "does eSIM work without a physical SIM" },
+      "semanticIntent": { "primary": "esim-independent-of-physical-sim", "secondary": ["телефон только с есим в поездке", "use eSIM with no SIM card inserted"] },
+      "workingTitle": { "ru": "Работает ли есим без физической сим-карты", "en": "Does an eSIM work without a physical SIM?" },
+      "readerPromise": "Отделить цифровой профиль от физического слота, проверить совместимость и подготовить резервный доступ к заказу до поездки.",
+      "creativeConceptKey": "mountain-cabin-empty-card-tray-map",
+      "creativeBrief": "Путешественник собирает маршрут у окна горной хижины; рядом закрытый пустой футляр для SIM и бумажная карта, без крупного плана телефона."
     },
     {
       "planOrder": 2,
-      "id": "does-esim-have-phone-number",
+      "id": "esim-signal-vs-physical-sim",
       "scope": "global",
       "region": "global",
       "planKind": "search-support",
       "contentFormat": "connectivity-and-esim",
-      "searchQuery": { "ru": "есть ли номер телефона у есим", "en": "does an eSIM have a phone number" },
-      "semanticIntent": { "primary": "data-only-vs-numbered-esim", "secondary": ["есим только для интернета", "data-only eSIM phone number"] },
-      "workingTitle": { "ru": "Есть ли у есим номер телефона", "en": "Does an eSIM have a phone number?" },
-      "readerPromise": "Определить по описанию плана, доступны ли обычные звонки и SMS, и не спутать технический идентификатор профиля с номером.",
-      "creativeConceptKey": "old-town-post-office-travel-notebook",
-      "creativeBrief": "Путешественник заполняет открытку у старого почтового отделения; тема связи передана без телефонного интерфейса."
+      "searchQuery": { "ru": "у есим хуже сигнал чем у обычной сим", "en": "does eSIM have worse signal than physical SIM" },
+      "semanticIntent": { "primary": "esim-form-factor-signal-comparison", "secondary": ["есим и качество связи", "eSIM reception compared with SIM card"] },
+      "workingTitle": { "ru": "Влияет ли есим на качество сигнала", "en": "Does eSIM affect signal strength?" },
+      "readerPromise": "Отделить формат профиля от сети, диапазонов, покрытия и настроек телефона, затем провести сравнимый тест без переустановки.",
+      "creativeConceptKey": "coastal-cliff-weather-station-traveller",
+      "creativeBrief": "Путешественник у небольшой метеостанции на прибрежной тропе смотрит на далёкий город; сюжет о радиосвязи без экранов и логотипов."
     },
     {
       "planOrder": 3,
-      "id": "esim-qr-code-safety",
+      "id": "esim-on-smartwatch",
       "scope": "global",
       "region": "global",
       "planKind": "search-support",
       "contentFormat": "connectivity-and-esim",
-      "searchQuery": { "ru": "безопасно ли показывать qr код есим", "en": "is it safe to share an eSIM QR code" },
-      "semanticIntent": { "primary": "activation-code-confidentiality", "secondary": ["защита qr кода есим", "protect eSIM activation code"] },
-      "workingTitle": { "ru": "Почему QR-код есим нельзя передавать другим", "en": "Why you should not share an eSIM QR code" },
-      "readerPromise": "Понять роль кода активации, безопасно хранить заказ и действовать через поставщика при утечке без пробной повторной установки.",
-      "creativeConceptKey": "hotel-safe-envelope-passport-wallet",
-      "creativeBrief": "Запечатанный дорожный конверт рядом с паспортной обложкой и кошельком у гостиничного сейфа; никаких читаемых кодов."
+      "searchQuery": { "ru": "есим для умных часов", "en": "eSIM for smartwatch" },
+      "semanticIntent": { "primary": "smartwatch-esim-plan-compatibility", "secondary": ["туристическая есим на часах", "travel eSIM on cellular watch"] },
+      "workingTitle": { "ru": "Можно ли установить туристическую есим на умные часы", "en": "Can you use a travel eSIM on a smartwatch?" },
+      "readerPromise": "Различить cellular-модель, операторский companion-план и самостоятельный профиль, не покупать телефонный travel-план по одному признаку eSIM.",
+      "creativeConceptKey": "forest-trail-runner-water-stop",
+      "creativeBrief": "Бегун делает паузу у лесного питьевого фонтанчика и сверяет бумажный маршрут; часы видны естественно, но не становятся рекламным крупным планом."
     },
     {
       "planOrder": 4,
-      "id": "esim-on-locked-phone",
+      "id": "esim-in-airplane-mode",
       "scope": "global",
       "region": "global",
       "planKind": "search-support",
       "contentFormat": "connectivity-and-esim",
-      "searchQuery": { "ru": "работает ли есим на заблокированном оператором телефоне", "en": "does eSIM work on a carrier-locked phone" },
-      "semanticIntent": { "primary": "carrier-lock-esim-boundary", "secondary": ["есим и блокировка оператора", "travel eSIM on locked phone"] },
-      "workingTitle": { "ru": "Работает ли туристическая есим на заблокированном телефоне", "en": "Does a travel eSIM work on a carrier-locked phone?" },
-      "readerPromise": "Отдельно проверить поддержку eSIM и блокировку оператора до покупки, не принимая наличие меню eSIM за разрешение стороннего профиля.",
-      "creativeConceptKey": "repair-shop-window-travel-bag",
-      "creativeBrief": "Путешественник беседует с мастером у окна сервисной мастерской, рядом закрытая дорожная сумка; телефон не крупным планом."
+      "searchQuery": { "ru": "работает ли есим в авиарежиме", "en": "does eSIM work in airplane mode" },
+      "semanticIntent": { "primary": "airplane-mode-esim-radio-boundary", "secondary": ["есим и вай фай в самолёте", "eSIM after turning off airplane mode"] },
+      "workingTitle": { "ru": "Что происходит с есим в авиарежиме", "en": "What happens to an eSIM in Airplane Mode?" },
+      "readerPromise": "Понять разницу между установленным профилем, выключенной сотовой радиосвязью и отдельно включённым Wi-Fi, затем безопасно вернуть travel-линию после посадки.",
+      "creativeConceptKey": "night-train-cabin-reading-light-window",
+      "creativeBrief": "Ночная поездка в купе: путешественник читает бумажный маршрут у окна под локальным светом, за стеклом огни; без самолётного клише и интерфейсов."
+    },
+    {
+      "planOrder": 5,
+      "id": "esim-wifi-calling",
+      "scope": "global",
+      "region": "global",
+      "planKind": "search-support",
+      "contentFormat": "connectivity-and-esim",
+      "searchQuery": { "ru": "работают ли звонки по wifi с есим", "en": "does Wi-Fi Calling work with eSIM" },
+      "semanticIntent": { "primary": "wifi-calling-esim-operator-dependency", "secondary": ["звонки домашнего номера через интернет есим", "Wi-Fi Calling over travel eSIM data"] },
+      "workingTitle": { "ru": "Работают ли звонки по Wi-Fi с есим", "en": "Does Wi-Fi Calling work with an eSIM?" },
+      "readerPromise": "Проверить поддержку у устройства и домашнего оператора, отделить обычный Wi-Fi от мобильных данных второй линии и избежать обещаний бесплатных звонков.",
+      "creativeConceptKey": "alpine-guesthouse-window-evening-call",
+      "creativeBrief": "Путешественник разговаривает у окна альпийского гостевого дома вечером; на столе ключ и бумажная карта, телефон не показан экраном."
+    },
+    {
+      "planOrder": 6,
+      "id": "esim-with-imessage-facetime",
+      "scope": "global",
+      "region": "global",
+      "planKind": "search-support",
+      "contentFormat": "connectivity-and-esim",
+      "searchQuery": { "ru": "работают ли imessage и facetime с туристической есим", "en": "do iMessage and FaceTime work with travel eSIM" },
+      "semanticIntent": { "primary": "apple-messaging-identity-over-travel-data", "secondary": ["аймесседж с есим только для интернета", "keep iMessage number with data-only eSIM"] },
+      "workingTitle": { "ru": "Как пользоваться iMessage и FaceTime с туристической есим", "en": "How to use iMessage and FaceTime with a travel eSIM" },
+      "readerPromise": "Сохранить Apple-идентичность и домашний номер, назначить туристическую линию для данных и понять, когда активация номера требует оператора.",
+      "creativeConceptKey": "mediterranean-ferry-deck-family-message",
+      "creativeBrief": "Путешественница отправляет сообщение семье с открытой палубы небольшого парома; лицо вполоборота, море и берег важнее устройства."
+    },
+    {
+      "planOrder": 7,
+      "id": "lost-phone-with-esim",
+      "scope": "global",
+      "region": "global",
+      "planKind": "search-support",
+      "contentFormat": "connectivity-and-esim",
+      "searchQuery": { "ru": "потерял телефон с есим что делать", "en": "lost phone with eSIM what to do" },
+      "semanticIntent": { "primary": "lost-device-esim-response", "secondary": ["заблокировать есим на потерянном телефоне", "secure travel eSIM after phone loss"] },
+      "workingTitle": { "ru": "Что делать, если потерян телефон с есим", "en": "What to do if you lose a phone with an eSIM" },
+      "readerPromise": "Сначала защитить устройство и аккаунты, затем связаться с операторами и поставщиком, не удаляя удалённо данные до проверки доступа и резервов.",
+      "creativeConceptKey": "station-lost-property-desk-travel-bag",
+      "creativeBrief": "Путешественник у стойки находок на железнодорожном вокзале раскладывает билет и ключи; тревога читается по ситуации, без крупного плана телефона."
+    },
+    {
+      "planOrder": 8,
+      "id": "erase-phone-with-esim-before-sale",
+      "scope": "global",
+      "region": "global",
+      "planKind": "search-support",
+      "contentFormat": "connectivity-and-esim",
+      "searchQuery": { "ru": "как удалить есим перед продажей телефона", "en": "how to remove eSIM before selling phone" },
+      "semanticIntent": { "primary": "device-handover-esim-erasure", "secondary": ["стереть есим перед передачей телефона", "factory reset eSIM before trade-in"] },
+      "workingTitle": { "ru": "Как удалить есим перед продажей телефона", "en": "How to remove an eSIM before selling a phone" },
+      "readerPromise": "Разделить перенос действующего номера, удаление профиля и полный сброс устройства, подтвердив новую связь до необратимого стирания.",
+      "creativeConceptKey": "minimal-repair-counter-device-handover",
+      "creativeBrief": "Аккуратная передача упакованного устройства через деревянную стойку сервисного центра; руки, чек и дорожный чехол без логотипов и экранов."
     }
   ]
 }
