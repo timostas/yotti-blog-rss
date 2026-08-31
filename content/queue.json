@@ -1674,6 +1674,13 @@
         "ru": 1,
         "en": 1
       },
+      "seoRefresh": {
+        "reviewedAt": "2026-08-31",
+        "reason": "search_console_impressions_and_cluster_linking",
+        "model": { "name": "gpt-5.6-sol", "effort": "high" },
+        "editorialPasses": { "ru": 1, "en": 1 },
+        "preserved": ["slug", "title", "publishedAt", "cover", "sources"]
+      },
       "intentMap": {
         "primary": {
           "ru": "есим установлена но нет сети",
@@ -1682,8 +1689,8 @@
         "cannibalizationDecision": "Новый URL закрывает самостоятельный интент no-network; соседние технические темы не повторяет."
       },
       "internalContextLinks": [
-        "https://yotti.net/",
-        "https://yotti.net/blog/tag/%D0%98%D0%BD%D1%82%D0%B5%D1%80%D0%BD%D0%B5%D1%82%20%D0%B2%20%D0%BF%D0%BE%D0%B5%D0%B7%D0%B4%D0%BA%D0%B5"
+        "https://yotti.net/blog/esim-vidit-set-no-internet-ne-rabotaet-gde-iskat-prichinu",
+        "https://yotti.net/blog/apn-dlya-esim-kogda-i-kak-ego-nastraivat"
       ],
       "creative": "assets/covers/esim-installed-no-network.png",
       "creativeConceptKey": "airport-window-rain",
@@ -1786,6 +1793,13 @@
         "ru": 1,
         "en": 1
       },
+      "seoRefresh": {
+        "reviewedAt": "2026-08-31",
+        "reason": "search_console_impressions_and_cluster_linking",
+        "model": { "name": "gpt-5.6-sol", "effort": "high" },
+        "editorialPasses": { "ru": 1, "en": 1 },
+        "preserved": ["slug", "title", "publishedAt", "cover", "sources"]
+      },
       "intentMap": {
         "primary": {
           "ru": "как активировать есим",
@@ -1794,8 +1808,8 @@
         "cannibalizationDecision": "Новый URL закрывает самостоятельный интент activation-steps; соседние технические темы не повторяет."
       },
       "internalContextLinks": [
-        "https://yotti.net/",
-        "https://yotti.net/blog/tag/%D0%98%D0%BD%D1%82%D0%B5%D1%80%D0%BD%D0%B5%D1%82%20%D0%B2%20%D0%BF%D0%BE%D0%B5%D0%B7%D0%B4%D0%BA%D0%B5"
+        "https://yotti.net/blog/kak-ustanovit-esim-pered-poezdkoy-i-ne-zapustit-paket-ranshe-vremeni",
+        "https://yotti.net/blog/esim-ustanovlena-no-seti-net-chto-proverit-po-poryadku"
       ],
       "creative": "assets/covers/activate-travel-esim.png",
       "creativeConceptKey": "departure-board-checklist",
@@ -1842,6 +1856,13 @@
         "ru": 1,
         "en": 1
       },
+      "seoRefresh": {
+        "reviewedAt": "2026-08-31",
+        "reason": "search_console_impressions_and_cluster_linking",
+        "model": { "name": "gpt-5.6-sol", "effort": "high" },
+        "editorialPasses": { "ru": 1, "en": 1 },
+        "preserved": ["slug", "title", "publishedAt", "cover", "sources"]
+      },
       "intentMap": {
         "primary": {
           "ru": "когда активируется есим для путешествий",
@@ -1850,8 +1871,8 @@
         "cannibalizationDecision": "Новый URL закрывает самостоятельный интент activation-timing; соседние технические темы не повторяет."
       },
       "internalContextLinks": [
-        "https://yotti.net/",
-        "https://yotti.net/blog/tag/%D0%98%D0%BD%D1%82%D0%B5%D1%80%D0%BD%D0%B5%D1%82%20%D0%B2%20%D0%BF%D0%BE%D0%B5%D0%B7%D0%B4%D0%BA%D0%B5"
+        "https://yotti.net/blog/kak-ustanovit-esim-pered-poezdkoy-i-ne-zapustit-paket-ranshe-vremeni",
+        "https://yotti.net/blog/kak-aktivirovat-esim-ot-qr-koda-do-pervoy-proverki-interneta"
       ],
       "creative": "assets/covers/when-travel-esim-starts.png",
       "creativeConceptKey": "sunrise-departure-gate",
@@ -1898,6 +1919,13 @@
         "ru": 1,
         "en": 1
       },
+      "seoRefresh": {
+        "reviewedAt": "2026-08-31",
+        "reason": "search_console_impressions_and_cluster_linking",
+        "model": { "name": "gpt-5.6-sol", "effort": "high" },
+        "editorialPasses": { "ru": 1, "en": 1 },
+        "preserved": ["slug", "title", "publishedAt", "cover", "sources"]
+      },
       "intentMap": {
         "primary": {
           "ru": "сколько гигабайт нужно для есим в поездке",
@@ -1906,8 +1934,8 @@
         "cannibalizationDecision": "Новый URL закрывает самостоятельный интент data-planning; соседние технические темы не повторяет."
       },
       "internalContextLinks": [
-        "https://yotti.net/",
-        "https://yotti.net/blog/tag/%D0%98%D0%BD%D1%82%D0%B5%D1%80%D0%BD%D0%B5%D1%82%20%D0%B2%20%D0%BF%D0%BE%D0%B5%D0%B7%D0%B4%D0%BA%D0%B5"
+        "https://yotti.net/blog/mozhno-li-razdavat-internet-s-esim-na-noutbuk-i-drugie-ustroystva",
+        "https://yotti.net/blog/zakonchilsya-internet-na-esim-kak-vernut-svyaz-bez-pereustanovki"
       ],
       "creative": "assets/covers/travel-esim-data-allowance.png",
       "creativeConceptKey": "train-window-itinerary",
@@ -2122,6 +2150,13 @@
         "ru": 1,
         "en": 1
       },
+      "seoRefresh": {
+        "reviewedAt": "2026-08-31",
+        "reason": "search_console_impressions_and_cluster_linking",
+        "model": { "name": "gpt-5.6-sol", "effort": "high" },
+        "editorialPasses": { "ru": 1, "en": 1 },
+        "preserved": ["slug", "title", "publishedAt", "cover", "sources"]
+      },
       "intentMap": {
         "primary": {
           "ru": "есим не устанавливается что делать",
@@ -2130,8 +2165,8 @@
         "cannibalizationDecision": "Новый URL отвечает только на сбой до завершения установки; совместимость устройства, активация, отсутствие сети и передача данных остаются отдельными интентами."
       },
       "internalContextLinks": [
-        "https://yotti.net/",
-        "https://yotti.net/blog/tag/%D0%98%D0%BD%D1%82%D0%B5%D1%80%D0%BD%D0%B5%D1%82%20%D0%B2%20%D0%BF%D0%BE%D0%B5%D0%B7%D0%B4%D0%BA%D0%B5"
+        "https://yotti.net/blog/kakie-telefony-podderzhivayut-esim-kak-ne-oshibitsya-s-modelyu",
+        "https://yotti.net/blog/kak-aktivirovat-esim-ot-qr-koda-do-pervoy-proverki-interneta"
       ],
       "creative": "assets/covers/esim-will-not-install.png",
       "creativeConceptKey": "quiet-hotel-lobby",
@@ -2183,6 +2218,13 @@
         "ru": 1,
         "en": 1
       },
+      "seoRefresh": {
+        "reviewedAt": "2026-08-31",
+        "reason": "search_console_impressions_and_cluster_linking",
+        "model": { "name": "gpt-5.6-sol", "effort": "high" },
+        "editorialPasses": { "ru": 1, "en": 1 },
+        "preserved": ["slug", "title", "publishedAt", "cover", "sources"]
+      },
       "intentMap": {
         "primary": {
           "ru": "на есим не приходят смс",
@@ -2191,8 +2233,8 @@
         "cannibalizationDecision": "Новый URL диагностирует получение SMS и наличие номера; статьи о двух активных есим и сохранении основного номера отвечают на настройку линий, а не на сбой сообщений."
       },
       "internalContextLinks": [
-        "https://yotti.net/",
-        "https://yotti.net/blog/tag/%D0%98%D0%BD%D1%82%D0%B5%D1%80%D0%BD%D0%B5%D1%82%20%D0%B2%20%D0%BF%D0%BE%D0%B5%D0%B7%D0%B4%D0%BA%D0%B5"
+        "https://yotti.net/blog/kak-sohranit-osnovnoy-nomer-s-turisticheskoy-esim",
+        "https://yotti.net/blog/mozhno-li-polzovatsya-dvumya-esim-odnovremenno"
       ],
       "creative": "assets/covers/esim-sms-not-working.png",
       "creativeConceptKey": "station-ticket-counter",
@@ -2243,6 +2285,13 @@
         "ru": 1,
         "en": 1
       },
+      "seoRefresh": {
+        "reviewedAt": "2026-08-31",
+        "reason": "search_console_impressions_and_cluster_linking",
+        "model": { "name": "gpt-5.6-sol", "effort": "high" },
+        "editorialPasses": { "ru": 1, "en": 1 },
+        "preserved": ["slug", "title", "publishedAt", "cover", "sources"]
+      },
       "intentMap": {
         "primary": {
           "ru": "как настроить apn для есим",
@@ -2251,8 +2300,8 @@
         "cannibalizationDecision": "Новый URL отвечает только на ручную настройку APN, выбор полей, проверку и откат; ранее опубликованная статья о неработающем интернете сохраняет роль общей диагностики и не повторяет пошаговую настройку точки доступа."
       },
       "internalContextLinks": [
-        "https://yotti.net/",
-        "https://yotti.net/blog/tag/%D0%98%D0%BD%D1%82%D0%B5%D1%80%D0%BD%D0%B5%D1%82%20%D0%B2%20%D0%BF%D0%BE%D0%B5%D0%B7%D0%B4%D0%BA%D0%B5"
+        "https://yotti.net/blog/esim-ustanovlena-no-seti-net-chto-proverit-po-poryadku",
+        "https://yotti.net/blog/esim-vidit-set-no-internet-ne-rabotaet-gde-iskat-prichinu"
       ],
       "creative": "assets/covers/esim-apn-settings.png",
       "creativeConceptKey": "coastal-road-notebook",
@@ -2716,13 +2765,20 @@
       "scores": { "utility": 96, "originalValue": 93, "factSupport": 96 },
       "editorialStandardVersion": 2,
       "editorialPasses": { "ru": 1, "en": 1 },
+      "seoRefresh": {
+        "reviewedAt": "2026-08-31",
+        "reason": "search_console_impressions_and_cluster_linking",
+        "model": { "name": "gpt-5.6-sol", "effort": "high" },
+        "editorialPasses": { "ru": 1, "en": 1 },
+        "preserved": ["slug", "title", "publishedAt", "cover", "sources"]
+      },
       "intentMap": {
         "primary": { "ru": "нужно ли включать роуминг для есим", "en": "should data roaming be on for travel eSIM" },
         "neighborIntents": ["keep-main-number-esim", "esim-installed-no-network", "esim-or-roaming"],
         "uniqueReaderOutcome": "Читатель включает roaming только у travel-линии, сохраняет домашнюю SIM вне передачи данных и проверяет результат без удаления профиля.",
         "cannibalizationDecision": "Новый URL отвечает на один переключатель и выбор линии; статьи об отсутствии сети, сохранении номера и сравнении с домашним роумингом решают другие задачи."
       },
-      "internalContextLinks": ["https://yotti.net/catalog", "https://yotti.net/how-it-works"],
+      "internalContextLinks": ["https://yotti.net/blog/esim-vidit-set-no-internet-ne-rabotaet-gde-iskat-prichinu", "https://yotti.net/blog/apn-dlya-esim-kogda-i-kak-ego-nastraivat"],
       "creative": "assets/covers/esim-data-roaming-setting.png",
       "creativeConceptKey": "ferry-deck-two-route-cards",
       "creativeGeneration": { "model": "imagegen-built-in", "attempts": 1 },

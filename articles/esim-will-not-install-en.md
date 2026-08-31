@@ -1,7 +1,7 @@
 ---
 title: "eSIM will not install: what to check before trying again"
 slug: "esim-will-not-install-en"
-description: "Find where an eSIM installation stopped, troubleshoot the QR code safely and collect the right details before contacting support."
+description: "eSIM won't install? Check for an existing profile, then diagnose a missing eSIM menu, unread QR code, rejected code or stalled download."
 publishedAt: "2026-08-22T21:20:00Z"
 author: "Yotti Editorial Team"
 reviewer: "Yotti Editor"
@@ -82,4 +82,4 @@ A short, precise report is usually more useful than a long account of every tap.
 - the IMEI or EID only when official support requests it;
 - checks already completed, such as another Wi-Fi network, a restart and a second look at the SIM list.
 
-Keep the main SIM and the original order email while the case is reviewed. Do not erase a line that has appeared, and do not buy a replacement plan after a single failed screen. Ask the provider to confirm whether the profile is still available for download. That answer determines whether to retry on the same phone, use another installation method or request a replacement code.
+Keep the main SIM and the original order email while the case is reviewed. Do not erase a line that has appeared, and do not buy a replacement plan after a single failed screen. Ask the provider to confirm whether the profile is still available for download. That answer determines whether to retry on the same phone, use another installation method or request a replacement code. If the Add eSIM command never appeared, return to the [phone compatibility check](https://yotti.net/en/blog/which-phones-support-esim-how-to-check-before-you-buy). If the profile is already visible, continue with the separate [activation and connection test](https://yotti.net/en/blog/how-to-activate-an-esim-and-confirm-it-is-working).

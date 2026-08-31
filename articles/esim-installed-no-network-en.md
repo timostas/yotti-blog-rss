@@ -1,7 +1,7 @@
 ---
 title: "eSIM installed but no network: a safe troubleshooting order"
 slug: "esim-installed-no-network-en"
-description: "What to check when an eSIM profile appears in settings but cannot register on a local network, without erasing the profile."
+description: "eSIM installed but showing no network? Check the active line, destination, validity and carrier registration in a safe order without deleting the profile."
 publishedAt: "2026-08-22T09:30:00Z"
 author: "Yotti Editorial Team"
 reviewer: "Yotti Editor"
@@ -57,5 +57,4 @@ Apple advises checking that both plans appear, that the carrier supports the ser
 
 Prepare the order number, country, exact phone model, time of the first attempt and screenshots of the line list and error. Do not include the full activation QR code. State that you have enabled the line, cycled airplane mode, restarted and returned network selection to automatic.
 
-Once a carrier name and signal bars appear, stop changing networks. If webpages still fail, move to data-line, roaming and APN checks. That is a separate troubleshooting path covered under [Travel connectivity](https://yotti.net/en/blog/tag/Travel%20connectivity).
-
+Once a carrier name and signal bars appear, stop changing networks. If webpages still fail, follow the separate diagnosis for an [eSIM with signal but no internet](https://yotti.net/en/blog/esim-has-signal-but-no-internet-what-to-check). Only move to the [APN guide](https://yotti.net/en/blog/esim-apn-settings-when-and-how-to-change-them) when the order or provider gives an exact value to use.

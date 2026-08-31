@@ -1,7 +1,7 @@
 ---
 title: "How much data do you need for a travel eSIM?"
 slug: "travel-esim-data-allowance-en"
-description: "Estimate travel eSIM data for maps, messages, photos, video and hotspot use, then add a sensible reserve without overbuying."
+description: "A week of maps and messages may need only a few GB; video and hotspot use need much more. Estimate a travel eSIM allowance from your real routine."
 publishedAt: "2026-08-22T10:10:00Z"
 author: "Yotti Editorial Team"
 reviewer: "Yotti Editor"
@@ -51,5 +51,4 @@ For several countries, confirm whether one regional plan covers the route. Separ
 
 Download maps, pause app updates and cloud photo backup on mobile data, and lower streaming quality. Both iPhone and Android allow cellular access to be disabled per app. Before tethering a laptop, mark the connection as metered and pause cloud synchronisation.
 
-Use the provider account for remaining allowance as well as the phone counter; rounding can differ. If consumption jumps, per-app statistics usually reveal why. Setup and hotspot guidance is available under [Travel connectivity](https://yotti.net/en/blog/tag/Travel%20connectivity).
-
+Use the provider account for remaining allowance as well as the phone counter; rounding can differ. If consumption jumps, per-app statistics usually reveal why. Before sharing the connection with a computer, check the practical limits in [using hotspot with an eSIM](https://yotti.net/en/blog/can-you-use-hotspot-with-an-esim). If the package reaches zero despite the estimate, follow the recovery steps for a [travel eSIM that has run out of data](https://yotti.net/en/blog/travel-esim-data-ran-out-how-to-get-back-online-safely).

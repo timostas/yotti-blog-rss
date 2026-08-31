@@ -1,7 +1,7 @@
 ---
 title: "When does a travel eSIM start? Installation, activation and validity"
 slug: "when-travel-esim-starts-en"
-description: "Understand which event starts a travel eSIM plan and how purchase, profile installation, line activation and first network use differ."
+description: "A travel eSIM may start at installation or first network use. Check the plan's exact trigger before scanning the QR code or enabling the line."
 publishedAt: "2026-08-22T10:00:00Z"
 author: "Yotti Editorial Team"
 reviewer: "Yotti Editor"
@@ -57,5 +57,4 @@ Before departure, find exact answers to:
 
 If the terms are unclear, ask support before scanning. “Can I install early?” is ambiguous; ask whether downloading the profile starts validity for that specific order.
 
-Deleting the profile does not normally pause an active package and can prevent another installation. Setup and first-connection guidance is available under [Travel connectivity](https://yotti.net/en/blog/tag/Travel%20connectivity).
-
+Deleting the profile does not normally pause an active package and can prevent another installation. Use the preparation guide to [install an eSIM before travel without starting it too early](https://yotti.net/en/blog/how-to-install-an-esim-before-travel-without-starting-it-too-early). After arrival, the [activation and connection check](https://yotti.net/en/blog/how-to-activate-an-esim-and-confirm-it-is-working) shows how to confirm that the line is actually carrying mobile data.
