@@ -50,7 +50,11 @@ test("смешанный поток разрешает четыре слота �
   assert.equal(policy.production.frequencyLimitEffectiveFrom, "2026-08-22");
   assert.deepEqual(policy.production.dailyPublicationTimes, ["10:00", "10:30", "20:00", "20:30"]);
   assert.deepEqual(policy.production.localesPerUnit, ["ru", "en"]);
-  assert.deepEqual(policy.contentStrategy.connectivityRotation, { windowUnits: 4, maximumUnits: 1 });
+  assert.deepEqual(policy.contentStrategy.connectivityRotation, {
+    windowUnits: 4,
+    maximumUnits: 1,
+    effectiveFrom: "2026-08-31T00:00:00+03:00",
+  });
   assert.equal(policy.contentStrategy.allowTechnicalFirstQueue, false);
 });
 
@@ -85,6 +89,21 @@ test("блокирует больше одной connectivity-единицы в 
     plannedPublications[index].searchQuery = { ru: "купить есим для страны", en: "buy eSIM for country" };
   }
   const result = validateEditorialQueue(policy, { schemaVersion: 1, items: [], plannedPublications });
+  assert.match(result.errors.join("\n"), /материалов о связи 2 при максимуме 1/);
+});
+
+test("блокирует обход ротации через прямые scheduled-публикации", () => {
+  const items = Array.from({ length: 4 }, (_, index) => item({
+    id: `scheduled-topic-${index + 1}`,
+    topicKey: `scheduled-topic-${index + 1}`,
+    creativeConceptKey: `scheduled-concept-${index + 1}`,
+    status: "scheduled",
+    contentFormat: index === 0 || index === 3 ? "connectivity-and-esim" : "route-or-itinerary",
+    schedule: Object.fromEntries(
+      ["ru", "en"].map((locale) => [locale, `2026-09-01T${String(7 + index).padStart(2, "0")}:00:00Z`]),
+    ),
+  }));
+  const result = validateEditorialQueue(policy, { schemaVersion: 1, items, plannedPublications: [], reservePublications: [] });
   assert.match(result.errors.join("\n"), /материалов о связи 2 при максимуме 1/);
 });
 
