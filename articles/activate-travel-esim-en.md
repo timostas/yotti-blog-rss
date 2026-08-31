@@ -1,7 +1,7 @@
 ---
 title: "How to activate an eSIM and confirm it is working"
 slug: "activate-travel-esim-en"
-description: "Add an eSIM profile, choose it for mobile data and run a meaningful connection test after arrival without confusing installation with plan validity."
+description: "Activate an eSIM by adding the profile, enabling the line and selecting it for mobile data, then test the connection with Wi-Fi switched off."
 publishedAt: "2026-08-22T09:50:00Z"
 author: "Yotti Editorial Team"
 reviewer: "Yotti Editor"
@@ -53,5 +53,4 @@ The provider account may show a second status and remaining allowance. Check it 
 
 Do not scan the same QR code on several phones, erase a visible profile or copy an APN from an unrelated guide. Do not enable home-line roaming simply because the travel line has not connected yet.
 
-Record the exact error and the steps already taken. If the code is reported as used, support needs to trace the existing download rather than watch another attempt. Related fault paths are collected under [Travel connectivity](https://yotti.net/en/blog/tag/Travel%20connectivity).
-
+Record the exact error and the steps already taken. If the code is reported as used, support needs to trace the existing download rather than watch another attempt. Before departure, the separate [early-installation guide](https://yotti.net/en/blog/how-to-install-an-esim-before-travel-without-starting-it-too-early) helps protect a plan whose validity trigger is unclear. After arrival, use the [no-network troubleshooting order](https://yotti.net/en/blog/esim-installed-but-no-network-a-safe-troubleshooting-order) when the phone cannot register with a carrier.

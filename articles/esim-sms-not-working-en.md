@@ -1,7 +1,7 @@
 ---
 title: "SMS not working on eSIM: what to check first"
 slug: "esim-sms-not-working-en"
-description: "Work out whether an eSIM can receive SMS, keep a home number available for codes and troubleshoot a numbered mobile line safely."
+description: "SMS not working on eSIM? Check whether the plan is data-only, which number received the code and whether the correct line has network service."
 publishedAt: "2026-08-22T21:58:00Z"
 author: "Yotti Editorial Team"
 reviewer: "Yotti Editor"
@@ -78,4 +78,4 @@ This sequence also protects the home SIM. It can remain available for codes whil
 
 If a numbered eSIM has network service but receives no ordinary test message, give the provider the order number, exact phone model, current country, visible carrier and approximate test time. State separately whether calls, outgoing SMS and mobile data work. That pattern is more useful than a screenshot of the Messages inbox.
 
-Do not erase the eSIM while the provider checks it. Crop QR codes, one-time passwords and complete device identifiers from screenshots. Keep the profile installed until support has finished examining the line. Related guidance for assigning two SIMs is available under [Travel connectivity](https://yotti.net/en/blog/tag/Travel%20connectivity).
+Do not erase the eSIM while the provider checks it. Crop QR codes, one-time passwords and complete device identifiers from screenshots. Keep the profile installed until support has finished examining the line. If the missing code belongs to your usual number, use the separate guide to [keeping your home number active with a travel eSIM](https://yotti.net/en/blog/how-to-keep-your-home-number-while-using-a-travel-esim). The practical limits of running two digital profiles are covered in [using two eSIMs at the same time](https://yotti.net/en/blog/can-you-use-two-esims-at-the-same-time).

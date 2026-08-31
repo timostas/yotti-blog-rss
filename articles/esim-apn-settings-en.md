@@ -1,7 +1,7 @@
 ---
 title: "eSIM APN settings: when and how to change them"
 slug: "esim-apn-settings-en"
-description: "Find the APN for a travel eSIM on iPhone or Android, enter only the fields your provider supplies and test the connection safely."
+description: "Change an eSIM APN only when the provider gives an exact value. Find the setting on iPhone or Android, enter it safely and test mobile data."
 publishedAt: "2026-08-22T22:10:48Z"
 author: "Yotti Editorial Team"
 reviewer: "Yotti Editor"
@@ -95,4 +95,4 @@ A reset of every network setting is a much larger step. It can remove saved netw
 
 Send the provider the order number, phone model, country, network name shown on screen and the exact APN you entered. Say whether a 4G or 5G indicator appears, which SIM is selected for data, and what happens with Wi-Fi disabled. A cropped APN screenshot can help; the eSIM QR code, passwords, one-time codes and full EID should remain private.
 
-If support confirms that the plan uses an automatic APN, restore the original setting and move on to the broader connection checks. Choosing a data line, network registration and allowance issues are covered separately under [Travel connectivity](https://yotti.net/en/blog/tag/Travel%20connectivity). For a [Yotti eSIM](https://yotti.net/en/), always use the APN attached to the current order rather than a value copied from another destination or plan.
+If support confirms that the plan uses an automatic APN, restore the original setting. No carrier name or signal belongs to the [installed eSIM with no network](https://yotti.net/en/blog/esim-installed-but-no-network-a-safe-troubleshooting-order) path; signal with failed webpages belongs to the broader [eSIM internet diagnosis](https://yotti.net/en/blog/esim-has-signal-but-no-internet-what-to-check). For a [Yotti eSIM](https://yotti.net/en/), always use the APN attached to the current order rather than a value copied from another destination or plan.
