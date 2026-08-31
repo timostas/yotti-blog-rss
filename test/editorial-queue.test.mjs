@@ -41,7 +41,7 @@ test("политика разрешает естественные позы лю
   assert.equal("forbidRearFacingVehicleAsPrimaryComposition" in policy.creativeStrategy, false);
 });
 
-test("technical-first поток разрешает четыре слота и ручные выпуски без потолка", () => {
+test("смешанный поток разрешает четыре слота и не более одной connectivity-единицы", () => {
   assert.equal(policy.production.targetContentUnitsPerDay, null);
   assert.equal(policy.production.maximumPublishedPagesPerDay, null);
   assert.equal(policy.production.scheduledContentUnitsPerDay, 4);
@@ -50,6 +50,8 @@ test("technical-first поток разрешает четыре слота и �
   assert.equal(policy.production.frequencyLimitEffectiveFrom, "2026-08-22");
   assert.deepEqual(policy.production.dailyPublicationTimes, ["10:00", "10:30", "20:00", "20:30"]);
   assert.deepEqual(policy.production.localesPerUnit, ["ru", "en"]);
+  assert.deepEqual(policy.contentStrategy.connectivityRotation, { windowUnits: 4, maximumUnits: 1 });
+  assert.equal(policy.contentStrategy.allowTechnicalFirstQueue, false);
 });
 
 test("исправления опубликованного материала сразу готовятся к повторной синхронизации", () => {
@@ -62,29 +64,28 @@ test("исправления опубликованного материала �
   assert.equal(policy.production.publishedCorrectionFlow.coverCorrectionCompletionGate, "verify_yotti_card_or_require_admin_or_importer_fix");
 });
 
-test("блокирует нарушение чередования ближайшего плана", () => {
-  const plannedPublications = [
-    {
-      planOrder: 1,
-      id: "first-buy-esim-topic",
-      countryCode: "FR",
-      region: "western-europe",
-      planKind: "buy-esim",
-      contentFormat: "connectivity-and-esim",
-    },
-    {
-      planOrder: 2,
-      id: "second-search-support-topic",
-      scope: "global",
-      region: "global",
-      planKind: "search-support",
-      contentFormat: "connectivity-and-esim",
-    },
-  ];
-  plannedPublications[1].planKind = plannedPublications[0].planKind;
-  plannedPublications[1].contentFormat = plannedPublications[0].contentFormat;
+test("блокирует больше одной connectivity-единицы в любом окне из четырёх", () => {
+  const plannedPublications = Array.from({ length: 4 }, (_, index) => ({
+    planOrder: index + 1,
+    id: `editorial-topic-${index + 1}`,
+    countryCode: ["HR", "DK", "OM", "CH"][index],
+    region: ["southern-europe", "northern-europe", "middle-east", "central-europe"][index],
+    planKind: "editorial",
+    contentFormat: "route-or-itinerary",
+    searchQuery: { ru: `маршрут ${index + 1}`, en: `itinerary ${index + 1}` },
+    semanticIntent: { primary: `intent-${index + 1}`, secondary: ["one", "two"] },
+    workingTitle: { ru: `Тема ${index + 1}`, en: `Topic ${index + 1}` },
+    readerPromise: "Самостоятельная читательская польза.",
+    creativeConceptKey: `rotation-concept-${index + 1}`,
+    creativeBrief: "Самостоятельный сюжет обложки.",
+  }));
+  for (const index of [0, 3]) {
+    plannedPublications[index].planKind = "buy-esim";
+    plannedPublications[index].contentFormat = "connectivity-and-esim";
+    plannedPublications[index].searchQuery = { ru: "купить есим для страны", en: "buy eSIM for country" };
+  }
   const result = validateEditorialQueue(policy, { schemaVersion: 1, items: [], plannedPublications });
-  assert.match(result.errors.join("\n"), /нарушено обязательное чередование/);
+  assert.match(result.errors.join("\n"), /материалов о связи 2 при максимуме 1/);
 });
 
 test("принимает готовую двуязычную единицу", () => {

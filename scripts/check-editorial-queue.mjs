@@ -147,13 +147,6 @@ export function validateEditorialQueue(policy, queue) {
       .map((item) => item.creativeConceptKey?.trim().toLowerCase())
       .filter(Boolean));
     const sortedPlan = [...plannedPublications].sort((a, b) => a.planOrder - b.planOrder);
-    const firstPlanKind = sortedPlan[0]?.planKind;
-    const technicalFirstQueue = policy.contentStrategy.allowTechnicalFirstQueue === true
-      && sortedPlan.length > 0
-      && sortedPlan.every((plan) => plan?.planKind === "search-support");
-    if (!new Set(["buy-esim", "search-support"]).has(firstPlanKind)) {
-      errors.push("plannedPublications: первый элемент должен иметь planKind buy-esim или search-support");
-    }
 
     for (const [index, item] of sortedPlan.entries()) {
       const label = item?.id || `plannedPublications[${index}]`;
@@ -169,22 +162,18 @@ export function validateEditorialQueue(policy, queue) {
       } else {
         planIds.add(item.id);
       }
-      if (item?.planKind === "buy-esim") {
+      if (item?.planKind === "buy-esim" || item?.planKind === "editorial") {
         if (typeof item?.countryCode !== "string" || !/^[A-Z]{2}$/.test(item.countryCode) || countryCodes.has(item.countryCode)) {
-          errors.push(`${label}: countryCode должен быть уникальным ISO-кодом для buy-esim`);
+          errors.push(`${label}: countryCode должен быть уникальным ISO-кодом для страновой темы`);
         } else {
           countryCodes.add(item.countryCode);
         }
-      } else if (item?.scope !== "global" || item?.countryCode !== undefined) {
+      } else if (item?.planKind === "search-support" && (item?.scope !== "global" || item?.countryCode !== undefined)) {
         errors.push(`${label}: search-support должен иметь scope global и не содержать countryCode`);
+      } else if (!new Set(["buy-esim", "search-support", "editorial"]).has(item?.planKind)) {
+        errors.push(`${label}: planKind должен быть buy-esim, search-support или editorial`);
       }
       if (typeof item?.region !== "string" || item.region.trim() === "") errors.push(`${label}: region обязателен`);
-      if (!technicalFirstQueue) {
-        const expectedKind = index % 2 === 0
-          ? firstPlanKind
-          : firstPlanKind === "buy-esim" ? "search-support" : "buy-esim";
-        if (item?.planKind !== expectedKind) errors.push(`${label}: нарушено обязательное чередование buy-esim/search-support`);
-      }
       if (!policy.contentStrategy.formats.some((format) => format.key === item?.contentFormat)) {
         errors.push(`${label}: неизвестный contentFormat`);
       }
@@ -193,6 +182,9 @@ export function validateEditorialQueue(policy, queue) {
       }
       if (item?.planKind === "search-support" && item.contentFormat !== "connectivity-and-esim") {
         errors.push(`${label}: search-support должен использовать connectivity-and-esim`);
+      }
+      if (item?.planKind === "editorial" && item.contentFormat === "connectivity-and-esim") {
+        errors.push(`${label}: editorial должен использовать туристический или lifestyle-формат`);
       }
       if (!item?.searchQuery?.ru?.toLowerCase().startsWith("купить есим для") && item?.planKind === "buy-esim") {
         errors.push(`${label}: RU-запрос должен начинаться с «купить есим для»`);
@@ -221,11 +213,47 @@ export function validateEditorialQueue(policy, queue) {
       }
     }
 
-    if (!technicalFirstQueue) {
-      for (let index = 2; index < sortedPlan.length; index += 1) {
-        if (sortedPlan[index].region === sortedPlan[index - 1].region && sortedPlan[index].region === sortedPlan[index - 2].region) {
-          errors.push(`${sortedPlan[index].id}: регион повторяется более двух раз подряд`);
+    for (let index = 2; index < sortedPlan.length; index += 1) {
+      if (sortedPlan[index].region === sortedPlan[index - 1].region && sortedPlan[index].region === sortedPlan[index - 2].region) {
+        errors.push(`${sortedPlan[index].id}: регион повторяется более двух раз подряд`);
+      }
+    }
+
+    const connectivityRotation = policy.contentStrategy.connectivityRotation;
+    if (connectivityRotation && Number.isInteger(connectivityRotation.windowUnits) && Number.isInteger(connectivityRotation.maximumUnits)) {
+      for (let index = 0; index <= sortedPlan.length - connectivityRotation.windowUnits; index += 1) {
+        const window = sortedPlan.slice(index, index + connectivityRotation.windowUnits);
+        const connectivityCount = window.filter((item) => item.contentFormat === "connectivity-and-esim").length;
+        if (connectivityCount > connectivityRotation.maximumUnits) {
+          errors.push(`plannedPublications ${index + 1}-${index + connectivityRotation.windowUnits}: материалов о связи ${connectivityCount} при максимуме ${connectivityRotation.maximumUnits}`);
         }
+      }
+    }
+  }
+
+  const reservePublications = queue.reservePublications ?? [];
+  if (!Array.isArray(reservePublications)) {
+    errors.push("content/queue.json: reservePublications должен быть массивом");
+  } else {
+    const unavailableIds = new Set([
+      ...ids,
+      ...(Array.isArray(plannedPublications) ? plannedPublications.map((item) => item?.id).filter(Boolean) : []),
+    ]);
+    const reserveIds = new Set();
+    for (const [index, item] of reservePublications.entries()) {
+      const label = item?.id || `reservePublications[${index}]`;
+      if (typeof item?.id !== "string" || !/^[a-z0-9]+(?:-[a-z0-9]+)*$/.test(item.id)) {
+        errors.push(`${label}: id резерва должен быть постоянным slug`);
+      } else if (unavailableIds.has(item.id) || reserveIds.has(item.id)) {
+        errors.push(`${label}: id резерва должен быть уникальным и отсутствовать в активной очереди`);
+      } else {
+        reserveIds.add(item.id);
+      }
+      if (item?.contentFormat !== "connectivity-and-esim") {
+        errors.push(`${label}: технический резерв должен использовать connectivity-and-esim`);
+      }
+      if (item?.planKind !== "search-support") {
+        errors.push(`${label}: технический резерв должен иметь planKind search-support`);
       }
     }
   }
@@ -238,6 +266,7 @@ export function validateEditorialQueue(policy, queue) {
       active: queue.items.filter((item) => ACTIVE_STATUSES.has(item.status)).length,
       scheduled: queue.items.filter((item) => item.status === "scheduled").length,
       planned: Array.isArray(plannedPublications) ? plannedPublications.length : 0,
+      reserved: Array.isArray(reservePublications) ? reservePublications.length : 0,
     },
   };
 }
@@ -250,6 +279,7 @@ export function renderQueueReport(result) {
     `- В работе: ${result.summary.active ?? 0}`,
     `- Запланировано: ${result.summary.scheduled ?? 0}`,
     `- В плане публикаций: ${result.summary.planned ?? 0}`,
+    `- В резерве: ${result.summary.reserved ?? 0}`,
     `- Ошибок: ${result.errors.length}`,
     `- Предупреждений: ${result.warnings.length}`,
   ];
