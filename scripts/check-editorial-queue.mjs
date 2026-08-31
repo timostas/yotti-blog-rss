@@ -219,16 +219,6 @@ export function validateEditorialQueue(policy, queue) {
       }
     }
 
-    const connectivityRotation = policy.contentStrategy.connectivityRotation;
-    if (connectivityRotation && Number.isInteger(connectivityRotation.windowUnits) && Number.isInteger(connectivityRotation.maximumUnits)) {
-      for (let index = 0; index <= sortedPlan.length - connectivityRotation.windowUnits; index += 1) {
-        const window = sortedPlan.slice(index, index + connectivityRotation.windowUnits);
-        const connectivityCount = window.filter((item) => item.contentFormat === "connectivity-and-esim").length;
-        if (connectivityCount > connectivityRotation.maximumUnits) {
-          errors.push(`plannedPublications ${index + 1}-${index + connectivityRotation.windowUnits}: материалов о связи ${connectivityCount} при максимуме ${connectivityRotation.maximumUnits}`);
-        }
-      }
-    }
   }
 
   const reservePublications = queue.reservePublications ?? [];
@@ -254,6 +244,36 @@ export function validateEditorialQueue(policy, queue) {
       }
       if (item?.planKind !== "search-support") {
         errors.push(`${label}: технический резерв должен иметь planKind search-support`);
+      }
+    }
+  }
+
+  const connectivityRotation = policy.contentStrategy.connectivityRotation;
+  if (connectivityRotation && Number.isInteger(connectivityRotation.windowUnits) && Number.isInteger(connectivityRotation.maximumUnits)) {
+    const effectiveFrom = new Date(connectivityRotation.effectiveFrom).getTime();
+    if (!Number.isFinite(effectiveFrom)) {
+      errors.push("contentStrategy.connectivityRotation.effectiveFrom должен быть корректной датой");
+    } else {
+      const releasedUnits = queue.items
+        .filter((item) => item.status === "published" || item.status === "scheduled")
+        .map((item) => {
+          const timestamps = policy.production.localesPerUnit
+            .map((locale) => new Date(item.schedule?.[locale]).getTime())
+            .filter(Number.isFinite);
+          return { ...item, rotationTimestamp: timestamps.length ? Math.min(...timestamps) : Number.NaN };
+        })
+        .filter((item) => Number.isFinite(item.rotationTimestamp) && item.rotationTimestamp >= effectiveFrom)
+        .sort((a, b) => a.rotationTimestamp - b.rotationTimestamp);
+      const plannedUnits = Array.isArray(plannedPublications)
+        ? [...plannedPublications].sort((a, b) => a.planOrder - b.planOrder)
+        : [];
+      const rotationSequence = [...releasedUnits, ...plannedUnits];
+      for (let index = 0; index <= rotationSequence.length - connectivityRotation.windowUnits; index += 1) {
+        const window = rotationSequence.slice(index, index + connectivityRotation.windowUnits);
+        const connectivityCount = window.filter((item) => item.contentFormat === "connectivity-and-esim").length;
+        if (connectivityCount > connectivityRotation.maximumUnits) {
+          errors.push(`публикации ${index + 1}-${index + connectivityRotation.windowUnits} после ${connectivityRotation.effectiveFrom}: материалов о связи ${connectivityCount} при максимуме ${connectivityRotation.maximumUnits}`);
+        }
       }
     }
   }

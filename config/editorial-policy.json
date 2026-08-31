@@ -32,7 +32,8 @@
     "countryRotationWindowUnits": 14,
     "connectivityRotation": {
       "windowUnits": 4,
-      "maximumUnits": 1
+      "maximumUnits": 1,
+      "effectiveFrom": "2026-08-31T00:00:00+03:00"
     },
     "allowTechnicalFirstQueue": false,
     "maximumSameRegionInARow": 2,
