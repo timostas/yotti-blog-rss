@@ -3311,67 +3311,159 @@
         "titleCandidatesEvaluated": { "ru": 5, "en": 5 },
         "lengthDecision": "Обе локали короче 900 слов: источник телефона, две платформенные проверки, четыре результата активации и официальный unlock дают полный ответ без повторения общей совместимости."
       }
+    },
+    {
+      "id": "croatia-split-one-island-base",
+      "topicKey": "croatia-split-hvar-two-base-week",
+      "status": "scheduled",
+      "locales": ["ru", "en"],
+      "model": { "name": "gpt-5.6-sol", "effort": "high" },
+      "riskReasons": ["daily_rotation_resume", "query_cannibalization_checked"],
+      "generationAttempts": { "ru": 1, "en": 1 },
+      "qualityRepairAttempts": 0,
+      "scores": { "utility": 95, "originalValue": 94, "factSupport": 94 },
+      "editorialStandardVersion": 2,
+      "editorialPasses": { "ru": 1, "en": 1 },
+      "intentMap": {
+        "primary": { "ru": "маршрут по Хорватии Сплит и Хвар на неделю", "en": "one week Croatia itinerary Split and Hvar" },
+        "neighborIntents": ["croatia-general-inspiration", "island-hopping", "buy-esim-croatia"],
+        "uniqueReaderOutcome": "Читатель распределяет неделю между Сплитом и одной базой на Хваре, выбирает островной город по логистике и оставляет резерв на паром и погоду.",
+        "cannibalizationDecision": "В архиве нет отдельного маршрута по Хорватии; материал отвечает на двухбазовую неделю и сознательно не превращается в общий гид по островам или статью о связи."
+      },
+      "internalContextLinks": ["https://yotti.net/esim/croatia", "https://yotti.net/blog/tag/%D0%9C%D0%B0%D1%80%D1%88%D1%80%D1%83%D1%82%D1%8B%20%D0%B8%20%D0%BF%D1%83%D1%82%D0%B5%D1%88%D0%B5%D1%81%D1%82%D0%B2%D0%B8%D1%8F"],
+      "researchSources": ["https://visithvar.hr/", "https://yotti.net/esim/croatia"],
+      "creative": "assets/covers/croatia-split-one-island-base.png",
+      "creativeConceptKey": "split-stone-lane-ferry-harbour-morning",
+      "creativeGeneration": { "model": "imagegen-built-in", "attempts": 1 },
+      "contentFormat": "route-or-itinerary",
+      "schedule": { "ru": "2026-09-01T10:00:00Z", "en": "2026-09-01T10:00:00Z" },
+      "editorialScorecard": {
+        "ru": { "total": 93, "dimensions": { "intent": 15, "utility": 15, "specificity": 13, "trust": 14, "voice": 14, "structure": 9, "technical": 8, "commercialRestraint": 5 } },
+        "en": { "total": 94, "dimensions": { "intent": 15, "utility": 15, "specificity": 13, "trust": 14, "voice": 14, "structure": 9, "technical": 9, "commercialRestraint": 5 } }
+      },
+      "qualityNotes": {
+        "localeTotals": { "ru": 93, "en": 94 },
+        "weakestDimensions": ["technical_publication_quality", "structure_and_readability"],
+        "editorialChange": "Рабочая формула про гонку по островам заменена прямым заголовком, а маршрут построен вокруг решения о двух базах, различий Хвар-Тауна, Старого Града и Елсы и реального паромного резерва.",
+        "titleCandidatesEvaluated": { "ru": 5, "en": 5 },
+        "lengthDecision": "RU 779 и EN 916 слов: маршрут закрывает семь дней, выбор островной базы, транспорт и запас на погоду без общего каталога достопримечательностей."
+      }
+    },
+    {
+      "id": "copenhagen-long-weekend-neighbourhoods",
+      "topicKey": "copenhagen-harbour-bakeries-neighbourhood-weekend",
+      "status": "scheduled",
+      "locales": ["ru", "en"],
+      "model": { "name": "gpt-5.6-sol", "effort": "high" },
+      "riskReasons": ["daily_rotation_resume", "query_cannibalization_checked"],
+      "generationAttempts": { "ru": 1, "en": 1 },
+      "qualityRepairAttempts": 0,
+      "scores": { "utility": 95, "originalValue": 95, "factSupport": 95 },
+      "editorialStandardVersion": 2,
+      "editorialPasses": { "ru": 1, "en": 1 },
+      "intentMap": {
+        "primary": { "ru": "Копенгаген на три дня гавань районы и пекарни", "en": "three days in Copenhagen harbour neighbourhoods bakeries" },
+        "neighborIntents": ["copenhagen-attractions", "denmark-food-guide", "copenhagen-harbour-circle"],
+        "uniqueReaderOutcome": "Читатель собирает три дня из центра, одного жилого района и сокращённого участка Harbour Circle, не расходуя поездку на очереди у популярных пекарен.",
+        "cannibalizationDecision": "В архиве нет отдельного гида по Копенгагену; материал соединяет еду и городскую географию, не конкурируя с общими маршрутами по Дании или техническими страницами."
+      },
+      "internalContextLinks": ["https://yotti.net/esim/denmark", "https://yotti.net/blog/tag/%D0%95%D0%B4%D0%B0%20%D0%B8%20%D0%BA%D1%83%D0%BB%D1%8C%D1%82%D1%83%D1%80%D0%B0"],
+      "researchSources": ["https://www.visitcopenhagen.com/copenhagen/areas/neighborhoods/area-guide-the-harbour-circle", "https://www.visitcopenhagen.com/copenhagen/eat-drink/coffee-and-bakeries/best-bakeries-and-pastry-shops", "https://yotti.net/esim/denmark"],
+      "creative": "assets/covers/copenhagen-long-weekend-neighbourhoods.png",
+      "creativeConceptKey": "copenhagen-bakery-window-bicycles-rain",
+      "creativeGeneration": { "model": "imagegen-built-in", "attempts": 1 },
+      "contentFormat": "culture-food-or-local-experience",
+      "schedule": { "ru": "2026-09-01T10:30:00Z", "en": "2026-09-01T10:30:00Z" },
+      "editorialScorecard": {
+        "ru": { "total": 94, "dimensions": { "intent": 15, "utility": 15, "specificity": 14, "trust": 14, "voice": 14, "structure": 9, "technical": 8, "commercialRestraint": 5 } },
+        "en": { "total": 95, "dimensions": { "intent": 15, "utility": 15, "specificity": 14, "trust": 14, "voice": 14, "structure": 9, "technical": 9, "commercialRestraint": 5 } }
+      },
+      "qualityNotes": {
+        "localeTotals": { "ru": 94, "en": 95 },
+        "weakestDimensions": ["technical_publication_quality", "structure_and_readability"],
+        "editorialChange": "Вместо списка заведений статья получила трёхдневный городской ритм: район выбирается раньше пекарни, а 13-километровый Harbour Circle сокращается мостами и водным автобусом.",
+        "titleCandidatesEvaluated": { "ru": 5, "en": 5 },
+        "lengthDecision": "RU 720 и EN 801 слово: объём соответствует короткому city break и сохраняет конкретику по районам, воде, погоде и велосипедному движению."
+      }
+    },
+    {
+      "id": "oman-muscat-nizwa-two-bases",
+      "topicKey": "oman-muscat-nizwa-first-week-two-bases",
+      "status": "scheduled",
+      "locales": ["ru", "en"],
+      "model": { "name": "gpt-5.6-sol", "effort": "high" },
+      "riskReasons": ["daily_rotation_resume", "query_cannibalization_checked"],
+      "generationAttempts": { "ru": 1, "en": 1 },
+      "qualityRepairAttempts": 0,
+      "scores": { "utility": 95, "originalValue": 94, "factSupport": 95 },
+      "editorialStandardVersion": 2,
+      "editorialPasses": { "ru": 1, "en": 1 },
+      "intentMap": {
+        "primary": { "ru": "маршрут по Оману Маскат и Низва на неделю", "en": "first Oman itinerary Muscat and Nizwa one week" },
+        "neighborIntents": ["oman-road-trip", "muscat-city-guide", "nizwa-day-trip"],
+        "uniqueReaderOutcome": "Читатель распределяет первую неделю между Маскатом и Низвой, выбирает один внутренний выезд и заранее решает вопрос последней ночи перед рейсом.",
+        "cannibalizationDecision": "В архиве нет маршрута по Оману; новый URL ограничен первой неделей и двумя базами, не обещает полный road trip и не повторяет страновой eSIM-интент."
+      },
+      "internalContextLinks": ["https://yotti.net/esim/oman", "https://yotti.net/blog/tag/%D0%9C%D0%B0%D1%80%D1%88%D1%80%D1%83%D1%82%D1%8B%20%D0%B8%20%D0%BF%D1%83%D1%82%D0%B5%D1%88%D0%B5%D1%81%D1%82%D0%B2%D0%B8%D1%8F"],
+      "researchSources": ["https://experienceoman.om/destinations/muscat/", "https://experienceoman.om/destinations/al-dakhiliyah/", "https://yotti.net/esim/oman"],
+      "creative": "assets/covers/oman-muscat-nizwa-two-bases.png",
+      "creativeConceptKey": "nizwa-date-market-courtyard-morning",
+      "creativeGeneration": { "model": "imagegen-built-in", "attempts": 1 },
+      "contentFormat": "route-or-itinerary",
+      "schedule": { "ru": "2026-09-01T17:00:00Z", "en": "2026-09-01T17:00:00Z" },
+      "editorialScorecard": {
+        "ru": { "total": 93, "dimensions": { "intent": 15, "utility": 15, "specificity": 13, "trust": 14, "voice": 14, "structure": 9, "technical": 8, "commercialRestraint": 5 } },
+        "en": { "total": 94, "dimensions": { "intent": 15, "utility": 15, "specificity": 13, "trust": 14, "voice": 14, "structure": 9, "technical": 9, "commercialRestraint": 5 } }
+      },
+      "qualityNotes": {
+        "localeTotals": { "ru": 93, "en": 94 },
+        "weakestDimensions": ["technical_publication_quality", "structure_and_readability"],
+        "editorialChange": "Абстрактные спокойные базы заменены конкретным недельным решением: вытянутый Маскат, световой день для переезда, выбор только одного направления из Низвы и безопасная последняя ночь.",
+        "titleCandidatesEvaluated": { "ru": 5, "en": 5 },
+        "lengthDecision": "RU 716 и EN 775 слов: две базы, городской ритм, дорога, внутренняя развилка и вылет закрыты без энциклопедического перечисления Омана."
+      }
+    },
+    {
+      "id": "buy-esim-cyprus-two-coasts",
+      "topicKey": "cyprus-esim-larnaca-paphos-coast-route",
+      "status": "scheduled",
+      "locales": ["ru", "en"],
+      "model": { "name": "gpt-5.6-sol", "effort": "high" },
+      "riskReasons": ["daily_rotation_resume", "query_cannibalization_checked", "commercial_intent_checked"],
+      "generationAttempts": { "ru": 1, "en": 1 },
+      "qualityRepairAttempts": 0,
+      "scores": { "utility": 96, "originalValue": 94, "factSupport": 95 },
+      "editorialStandardVersion": 2,
+      "editorialPasses": { "ru": 1, "en": 1 },
+      "intentMap": {
+        "primary": { "ru": "купить есим для Кипра", "en": "buy eSIM for Cyprus" },
+        "neighborIntents": ["install-esim-before-travel", "travel-esim-data-allowance", "cyprus-city-guide"],
+        "uniqueReaderOutcome": "Читатель выбирает пакет по реальному маршруту Ларнака-Пафос, устанавливает профиль до вылета и защищает оба участка поездки офлайн-данными.",
+        "cannibalizationDecision": "Общие инструкции отвечают на установку и объём данных без страны; новый URL связывает коммерческий запрос только с кипрским маршрутом, двумя городами и прибрежной логистикой."
+      },
+      "internalContextLinks": ["https://yotti.net/esim/cyprus", "https://yotti.net/blog/kak-ustanovit-esim-pered-poezdkoy-i-ne-zapustit-paket-ranshe-vremeni", "https://yotti.net/blog/skolko-interneta-nuzhno-dlya-puteshestviya-kak-vybrat-paket-esim"],
+      "researchSources": ["https://www.visitcyprus.com/discover-cyprus/regions-cities/", "https://yotti.net/esim/cyprus"],
+      "creative": "assets/covers/buy-esim-cyprus-two-coasts.png",
+      "creativeConceptKey": "cyprus-harbour-bus-map-limestone-morning",
+      "creativeGeneration": { "model": "imagegen-built-in", "attempts": 1 },
+      "contentFormat": "connectivity-and-esim",
+      "schedule": { "ru": "2026-09-01T17:30:00Z", "en": "2026-09-01T17:30:00Z" },
+      "editorialScorecard": {
+        "ru": { "total": 95, "dimensions": { "intent": 15, "utility": 15, "specificity": 14, "trust": 14, "voice": 13, "structure": 9, "technical": 10, "commercialRestraint": 5 } },
+        "en": { "total": 95, "dimensions": { "intent": 15, "utility": 15, "specificity": 14, "trust": 14, "voice": 14, "structure": 9, "technical": 9, "commercialRestraint": 5 } }
+      },
+      "qualityNotes": {
+        "localeTotals": { "ru": 95, "en": 95 },
+        "weakestDimensions": ["voice_and_naturalness", "technical_publication_quality"],
+        "editorialChange": "Коммерческий ключ сохранён один раз в заголовке и прямом ответе; остальной текст работает как маршрутная инструкция с расчётом данных, безопасной установкой и отдельным офлайн-набором для двух частей Кипра.",
+        "titleCandidatesEvaluated": { "ru": 5, "en": 5 },
+        "lengthDecision": "RU 773 и EN 891 слово: коммерческий выбор, установка, dual-SIM, проверка после прилёта и маршрутный запас покрыты без повторения общего справочника есим."
+      }
     }
   ],
   "plannedPublications": [
     {
       "planOrder": 1,
-      "id": "croatia-split-one-island-base",
-      "countryCode": "HR",
-      "region": "southern-europe",
-      "planKind": "editorial",
-      "contentFormat": "route-or-itinerary",
-      "searchQuery": { "ru": "маршрут по Хорватии Сплит и острова", "en": "Croatia Split and islands itinerary" },
-      "semanticIntent": { "primary": "croatia-split-one-island-base", "secondary": ["Хорватия без частых переездов", "Croatia itinerary without island hopping"] },
-      "workingTitle": { "ru": "Неделя в Хорватии без гонки по островам: Сплит и одна островная база", "en": "A week in Croatia without racing between islands: Split and one island base" },
-      "readerPromise": "Собрать неделю вокруг двух баз, сократить переезды и оставить время на старый город, море и обычную островную жизнь.",
-      "creativeConceptKey": "split-stone-lane-ferry-harbour-morning",
-      "creativeBrief": "Каменная улица Сплита выходит к тихой гавани ранним утром; небольшой паром сбоку, люди идут к рынку."
-    },
-    {
-      "planOrder": 2,
-      "id": "copenhagen-long-weekend-neighbourhoods",
-      "countryCode": "DK",
-      "region": "northern-europe",
-      "planKind": "editorial",
-      "contentFormat": "culture-food-or-local-experience",
-      "searchQuery": { "ru": "Копенгаген на выходные что посмотреть", "en": "Copenhagen long weekend itinerary" },
-      "semanticIntent": { "primary": "copenhagen-harbour-bakeries-neighbourhoods", "secondary": ["районы Копенгагена для прогулок", "Copenhagen neighbourhood weekend"] },
-      "workingTitle": { "ru": "Копенгаген за длинные выходные: гавань, пекарни и районы за пределами центра", "en": "A long weekend in Copenhagen: harbour walks, bakeries and life beyond the centre" },
-      "readerPromise": "Распределить три дня между водой, жилыми кварталами и гастрономическими остановками без бесконечного списка достопримечательностей.",
-      "creativeConceptKey": "copenhagen-bakery-window-bicycles-rain",
-      "creativeBrief": "Тёплый свет небольшой пекарни, велосипеды у окна и мокрая после дождя улица жилого Копенгагена."
-    },
-    {
-      "planOrder": 3,
-      "id": "oman-muscat-nizwa-two-bases",
-      "countryCode": "OM",
-      "region": "middle-east",
-      "planKind": "editorial",
-      "contentFormat": "route-or-itinerary",
-      "searchQuery": { "ru": "маршрут по Оману Маскат Низва", "en": "Oman Muscat Nizwa itinerary" },
-      "semanticIntent": { "primary": "oman-muscat-nizwa-two-base-route", "secondary": ["Оман первая поездка маршрут", "first trip to Oman itinerary"] },
-      "workingTitle": { "ru": "Оман в первой поездке: Маскат и Низва как две спокойные базы", "en": "A first trip to Oman: Muscat and Nizwa as two unhurried bases" },
-      "readerPromise": "Соединить море, старые кварталы и внутренние районы страны двумя базами вместо ежедневной смены жилья.",
-      "creativeConceptKey": "nizwa-date-market-courtyard-morning",
-      "creativeBrief": "Утренний двор рынка в Низве: корзины с финиками, каменные арки и продавец в естественном движении."
-    },
-    {
-      "planOrder": 4,
-      "id": "buy-esim-cyprus-two-coasts",
-      "countryCode": "CY",
-      "region": "eastern-mediterranean",
-      "planKind": "buy-esim",
-      "contentFormat": "connectivity-and-esim",
-      "searchQuery": { "ru": "купить есим для Кипра", "en": "buy eSIM for Cyprus" },
-      "semanticIntent": { "primary": "cyprus-esim-two-coast-trip", "secondary": ["есим Кипр интернет", "Cyprus travel eSIM"] },
-      "workingTitle": { "ru": "Купить есим для Кипра: связь в поездке между городом и побережьем", "en": "Buy an eSIM for Cyprus: staying connected between town and coast" },
-      "readerPromise": "Показать выбор и подготовку связи через реальный маршрут с заселением, навигацией и поездками между побережьем и городом.",
-      "creativeConceptKey": "cyprus-harbour-bus-map-limestone-morning",
-      "creativeBrief": "Утренняя известняковая набережная Кипра, местный автобус сбоку и сложенная бумажная карта на скамье."
-    },
-    {
-      "planOrder": 5,
       "id": "switzerland-lucerne-bern-base-choice",
       "countryCode": "CH",
       "region": "central-europe",
@@ -3385,7 +3477,7 @@
       "creativeBrief": "Набережная Люцерна ранней осенью, спокойное озеро, человек читает карту на скамье вполоборота."
     },
     {
-      "planOrder": 6,
+      "planOrder": 2,
       "id": "angkor-one-day-without-rush",
       "countryCode": "KH",
       "region": "southeast-asia",
@@ -3399,7 +3491,7 @@
       "creativeBrief": "Мягкий утренний свет в каменном коридоре Ангкора; велосипед стоит сбоку у стены, без толпы и постановочной позы."
     },
     {
-      "planOrder": 7,
+      "planOrder": 3,
       "id": "tunis-carthage-sidi-bou-said-day",
       "countryCode": "TN",
       "region": "north-africa",
@@ -3413,7 +3505,7 @@
       "creativeBrief": "Белая улица Сиди-Бу-Саида, синяя дверь и полоска моря в конце переулка; полуденная тень и местные прохожие."
     },
     {
-      "planOrder": 8,
+      "planOrder": 4,
       "id": "buy-esim-qatar-doha-stopover",
       "countryCode": "QA",
       "region": "middle-east",
@@ -3427,7 +3519,7 @@
       "creativeBrief": "Традиционная лодка доу сбоку у набережной Дохи в синий час; городские огни отражаются в воде."
     },
     {
-      "planOrder": 9,
+      "planOrder": 5,
       "id": "ireland-galway-west-coast-base",
       "countryCode": "IE",
       "region": "western-europe",
@@ -3441,7 +3533,7 @@
       "creativeBrief": "Дождливый вечер у набережной Голуэя, отражения в мостовой и тёплый свет из окна небольшого паба."
     },
     {
-      "planOrder": 10,
+      "planOrder": 6,
       "id": "philippines-manila-or-cebu-first-base",
       "countryCode": "PH",
       "region": "southeast-asia",
@@ -3455,7 +3547,7 @@
       "creativeBrief": "Утренняя гавань Себу, яркий джипни виден сбоку на средней дистанции, пассажиры идут к причалу."
     },
     {
-      "planOrder": 11,
+      "planOrder": 7,
       "id": "melbourne-markets-laneways-neighbourhoods",
       "countryCode": "AU",
       "region": "oceania",
@@ -3469,7 +3561,7 @@
       "creativeBrief": "Цветочный прилавок у крытого рынка, за мокрым стеклом проходит трамвай; живой городской кадр без постановки."
     },
     {
-      "planOrder": 12,
+      "planOrder": 8,
       "id": "buy-esim-nepal-kathmandu-pokhara",
       "countryCode": "NP",
       "region": "south-asia",
