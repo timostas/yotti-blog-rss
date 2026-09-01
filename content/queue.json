@@ -3315,7 +3315,7 @@
     {
       "id": "croatia-split-one-island-base",
       "topicKey": "croatia-split-hvar-two-base-week",
-      "status": "scheduled",
+      "status": "published",
       "locales": ["ru", "en"],
       "model": { "name": "gpt-5.6-sol", "effort": "high" },
       "riskReasons": ["daily_rotation_resume", "query_cannibalization_checked"],
@@ -3352,7 +3352,7 @@
     {
       "id": "copenhagen-long-weekend-neighbourhoods",
       "topicKey": "copenhagen-harbour-bakeries-neighbourhood-weekend",
-      "status": "scheduled",
+      "status": "published",
       "locales": ["ru", "en"],
       "model": { "name": "gpt-5.6-sol", "effort": "high" },
       "riskReasons": ["daily_rotation_resume", "query_cannibalization_checked"],
@@ -3389,7 +3389,7 @@
     {
       "id": "oman-muscat-nizwa-two-bases",
       "topicKey": "oman-muscat-nizwa-first-week-two-bases",
-      "status": "scheduled",
+      "status": "published",
       "locales": ["ru", "en"],
       "model": { "name": "gpt-5.6-sol", "effort": "high" },
       "riskReasons": ["daily_rotation_resume", "query_cannibalization_checked"],
@@ -3426,7 +3426,7 @@
     {
       "id": "buy-esim-cyprus-two-coasts",
       "topicKey": "cyprus-esim-larnaca-paphos-coast-route",
-      "status": "scheduled",
+      "status": "published",
       "locales": ["ru", "en"],
       "model": { "name": "gpt-5.6-sol", "effort": "high" },
       "riskReasons": ["daily_rotation_resume", "query_cannibalization_checked", "commercial_intent_checked"],
