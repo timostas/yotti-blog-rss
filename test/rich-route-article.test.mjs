@@ -47,7 +47,8 @@ for (const relativePath of ARTICLE_FILES) {
     assert.match(html, /new-zealand-road-map-(?:ru|en)-static-v5\.webp/);
     assert.match(html, /new-zealand-route-plan-(?:ru|en)-v5\.webp/);
     assert.match(html, /new-zealand-booking-plan-(?:ru|en)-v5\.webp/);
-    assert.match(html, /assets\/interactive\/new-zealand-south-island-map-(?:ru|en)-v5\.html/);
+    assert.equal((html.match(/https:\/\/www\.yotti\.net\/(?:en\/)?blog\/new-zealand\/[^\"]+#:~:text=/g) || []).length, 5);
+    assert.doesNotMatch(html, /timostas\.github\.io\/yotti-blog-rss\/assets\/interactive/);
     assert.match(html, /width="1200" height="900"/);
     assert.match(html, /width="1440" height="870"/);
     assert.match(html, /width="1440" height="760"/);
