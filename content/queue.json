@@ -688,23 +688,72 @@
       ],
       "model": {
         "name": "gpt-5.6-sol",
-        "effort": "high"
+        "effort": "xhigh"
       },
-      "riskReasons": [],
+      "riskReasons": [
+        "indexed_url_content_update_owner_approved",
+        "animated_route_map_import_pilot"
+      ],
       "generationAttempts": {
         "ru": 1,
         "en": 1
       },
-      "qualityRepairAttempts": 0,
+      "qualityRepairAttempts": 1,
       "editorialStandardVersion": 2,
       "editorialPasses": {
         "ru": 1,
         "en": 1
       },
       "scores": {
-        "utility": 95,
-        "originalValue": 95,
-        "factSupport": 94
+        "utility": 96,
+        "originalValue": 96,
+        "factSupport": 95
+      },
+      "intentMap": {
+        "primary": {
+          "ru": "маршрут по Южному острову Новой Зеландии от Крайстчерча до Куинстауна",
+          "en": "South Island road trip from Christchurch to Queenstown"
+        },
+        "neighborIntents": [
+          "new-zealand-country-guide",
+          "aoraki-mount-cook-guide",
+          "queenstown-guide"
+        ],
+        "uniqueReaderOutcome": "Читатель собирает девятидневный односторонний маршрут с тремя базами, выбирает между Текапо и Твайзелом и сохраняет погодный резерв для Аораки.",
+        "cannibalizationDecision": "Обновляется существующий проиндексированный URL; отдельная страница с тем же маршрутом не создаётся. Заголовок, slug и исходная дата публикации сохранены по решению владельца."
+      },
+      "internalContextLinks": [
+        "https://yotti.net/esim/new-zealand",
+        "https://yotti.net/how-it-works"
+      ],
+      "enhancedGuide": {
+        "decisionSpine": "Девять дней распределяются между тремя базами, чтобы оставить только два больших переезда и сохранить один погодный резерв для Аораки/Маунт-Кук.",
+        "routeStops": [
+          "Christchurch",
+          "Lake Tekapo or Twizel",
+          "Aoraki/Mount Cook",
+          "Queenstown"
+        ],
+        "readerJobs": [
+          "распределить восемь ночей между тремя базами",
+          "выбрать между Текапо и Твайзелом",
+          "определить две даты переездов",
+          "сохранить погодный резерв для Аораки",
+          "разделить обязательные бронирования и гибкие решения",
+          "подготовить офлайн-навигацию и связь",
+          "проверить состояние дорог и троп перед выездом"
+        ],
+        "informationModules": [
+          "route-map",
+          "route-table",
+          "timeline",
+          "decision-box"
+        ],
+        "authoritativeSourceCount": 6,
+        "volatileClaimSourceMapComplete": true,
+        "animatedVisual": true,
+        "visualFallback": "Полная таблица по девяти дням повторяет базы, ночёвки и роль каждого отрезка; SVG также полностью виден без CSS-анимации.",
+        "reducedMotionPlan": "Анимация линии и точек включается только при prefers-reduced-motion: no-preference; статичная карта остаётся полной при остальных настройках."
       },
       "creative": "assets/covers/new-zealand-south-island-slow-road.png",
       "creativeConceptKey": "new-zealand-alpine-suspension-bridge-single-hiker",
@@ -712,6 +761,17 @@
       "schedule": {
         "ru": "2026-08-15T14:27:04Z",
         "en": "2026-08-15T14:27:04Z"
+      },
+      "qualityNotes": {
+        "localeTotals": {
+          "ru": 93,
+          "en": 94
+        },
+        "weakestDimensions": [
+          "technical_publication_quality_pending_yotti_import_check",
+          "human_editorial_voice_ru"
+        ],
+        "editorialChange": "Материал пересобран вокруг девятидневного решения: добавлены карта и текстовый резерв, таблица по дням, выбор Текапо/Твайзел, погодный сценарий, границы маршрута и проверяемые официальные источники; RU и EN отредактированы независимо."
       }
     },
     {
