@@ -90,6 +90,38 @@
       "forbidSharedTemplateSectionsAcrossBatch": ["lead", "faq", "conclusion"],
       "requireNeighborIntentComparison": true,
       "requireEvidenceForDeviceOrOperatorClaims": true
+    },
+    "enhancedRouteGuideGates": {
+      "effectiveFrom": "2026-09-03T00:00:00+03:00",
+      "applicableFormats": [
+        "route-or-itinerary"
+      ],
+      "requireReaderDecisionSpine": true,
+      "requireRouteSummaryNearStart": true,
+      "minimumDistinctRouteStops": 3,
+      "minimumDistinctReaderJobs": 5,
+      "minimumInlineInformationModulesExcludingCover": 3,
+      "allowedInlineInformationModules": [
+        "route-map",
+        "route-table",
+        "timeline",
+        "budget-or-data-table",
+        "decision-box",
+        "captioned-image"
+      ],
+      "requireRouteTable": true,
+      "animatedMapMode": "pilot_only_until_yotti_import_is_verified",
+      "requireStaticSemanticFallbackForAnimatedVisual": true,
+      "requireReducedMotionForAnimatedVisual": true,
+      "minimumPrimaryOrAuthoritativeSources": 4,
+      "requireClaimLevelSourceMapForVolatileFacts": true,
+      "requireDatedSourceReview": true,
+      "faqMode": "residual_questions_only",
+      "targetWordRangePerLocale": [
+        1800,
+        3000
+      ],
+      "wordRangeIsPlanningBudgetNotRankingTarget": true
     }
   },
   "creativeStrategy": {
@@ -114,6 +146,7 @@
   "modelRouting": {
     "planningAndRoutineDrafts": { "model": "gpt-5.6-sol", "effort": "high" },
     "mandatoryHumanEditorialPass": { "model": "gpt-5.6-sol", "effort": "high", "scope": "rewrite_voice_structure_no_new_facts" },
+    "enhancedRouteGuide": { "model": "gpt-5.6-sol", "effort": "xhigh", "scope": "route_research_decision_spine_independent_localization_and_final_audit" },
     "metadataAndMechanicalChecks": { "model": "gpt-5.6-luna", "effort": "low" },
     "highRiskResearchAndFinalAudit": { "mode": "exclude_topic_from_daily_flow" },
     "escalateOnlyWhen": []
@@ -122,7 +155,9 @@
     "maximumGenerationAttemptsPerLocale": 1,
     "maximumQualityRepairAttempts": 1,
     "maximumResearchSourcesPerUnit": 2,
+    "enhancedRouteGuideMaximumResearchSourcesPerUnit": 8,
     "maximumWebSearchBatchesPerUnit": 1,
+    "enhancedRouteGuideMaximumWebSearchBatchesPerUnit": 2,
     "reuseResearchAcrossLocales": true,
     "batchRelatedTopics": true,
     "stopWhenDailyBudgetUnavailable": false

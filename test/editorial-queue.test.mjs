@@ -127,6 +127,31 @@ test("разрешает Sol для ежедневной редакторско�
   assert.deepEqual(result.errors, []);
 });
 
+test("блокирует маршрутный гид без усиленного брифа", () => {
+  const result = validateEditorialQueue(policy, { schemaVersion: 1, items: [item({
+    contentFormat: "route-or-itinerary",
+  })] });
+  assert.match(result.errors.join("\n"), /обязателен enhancedGuide/);
+});
+
+test("принимает маршрутный гид с решением, модулями и источниками", () => {
+  const result = validateEditorialQueue(policy, { schemaVersion: 1, items: [item({
+    contentFormat: "route-or-itinerary",
+    enhancedGuide: {
+      decisionSpine: "Маршрут для первой поездки с тремя базами и минимумом переездов.",
+      routeStops: ["Город A", "Город B", "Город C"],
+      readerJobs: ["выбрать базы", "распределить ночи", "проверить переезды", "спланировать связь", "подготовить запасной путь"],
+      informationModules: ["route-table", "route-map", "budget-or-data-table"],
+      authoritativeSourceCount: 4,
+      volatileClaimSourceMapComplete: true,
+      animatedVisual: true,
+      visualFallback: "Таблица маршрута и статичная схема.",
+      reducedMotionPlan: "Все точки и линия показаны без движения.",
+    },
+  })] });
+  assert.deepEqual(result.errors, []);
+});
+
 test("блокирует готовый материал без отдельного редакторского прохода", () => {
   const candidate = item();
   delete candidate.editorialPasses;

@@ -22,6 +22,59 @@ function requiresHumanEditorialPass(policy, item) {
   });
 }
 
+function validateEnhancedRouteGuide(policy, item, label, errors) {
+  const gate = policy.quality.enhancedRouteGuideGates;
+  if (!gate?.applicableFormats?.includes(item.contentFormat)) return;
+
+  const guide = item.enhancedGuide;
+  if (!guide || typeof guide !== "object" || Array.isArray(guide)) {
+    errors.push(`${label}: для route-or-itinerary обязателен enhancedGuide`);
+    return;
+  }
+  if (typeof guide.decisionSpine !== "string" || guide.decisionSpine.trim() === "") {
+    errors.push(`${label}: enhancedGuide.decisionSpine обязателен`);
+  }
+  const routeStops = Array.isArray(guide.routeStops)
+    ? new Set(guide.routeStops.filter((value) => typeof value === "string" && value.trim() !== ""))
+    : new Set();
+  if (routeStops.size < gate.minimumDistinctRouteStops) {
+    errors.push(`${label}: требуется минимум ${gate.minimumDistinctRouteStops} разные остановки маршрута`);
+  }
+  const readerJobs = Array.isArray(guide.readerJobs)
+    ? new Set(guide.readerJobs.filter((value) => typeof value === "string" && value.trim() !== ""))
+    : new Set();
+  if (readerJobs.size < gate.minimumDistinctReaderJobs) {
+    errors.push(`${label}: требуется минимум ${gate.minimumDistinctReaderJobs} разные читательские задачи`);
+  }
+  const modules = Array.isArray(guide.informationModules)
+    ? [...new Set(guide.informationModules.filter((value) => typeof value === "string" && value.trim() !== ""))]
+    : [];
+  if (modules.length < gate.minimumInlineInformationModulesExcludingCover) {
+    errors.push(`${label}: недостаточно информационных модулей маршрута`);
+  }
+  const unknownModules = modules.filter((value) => !gate.allowedInlineInformationModules.includes(value));
+  if (unknownModules.length > 0) {
+    errors.push(`${label}: неизвестные информационные модули: ${unknownModules.join(", ")}`);
+  }
+  if (gate.requireRouteTable && !modules.includes("route-table")) {
+    errors.push(`${label}: среди информационных модулей обязательна route-table`);
+  }
+  if (!Number.isInteger(guide.authoritativeSourceCount) || guide.authoritativeSourceCount < gate.minimumPrimaryOrAuthoritativeSources) {
+    errors.push(`${label}: требуется минимум ${gate.minimumPrimaryOrAuthoritativeSources} первичных или авторитетных источника`);
+  }
+  if (gate.requireClaimLevelSourceMapForVolatileFacts && guide.volatileClaimSourceMapComplete !== true) {
+    errors.push(`${label}: изменчивые факты должны быть сопоставлены с источниками`);
+  }
+  if (guide.animatedVisual === true) {
+    if (typeof guide.visualFallback !== "string" || guide.visualFallback.trim() === "") {
+      errors.push(`${label}: для анимации обязателен статичный или текстовый резерв`);
+    }
+    if (typeof guide.reducedMotionPlan !== "string" || guide.reducedMotionPlan.trim() === "") {
+      errors.push(`${label}: для анимации обязателен reduced-motion план`);
+    }
+  }
+}
+
 export function validateEditorialQueue(policy, queue) {
   const errors = [];
   const warnings = [];
@@ -115,6 +168,7 @@ export function validateEditorialQueue(policy, queue) {
           errors.push(`${label}: требуется минимум ${policy.quality.minimumInternalContextLinks} уникальные внутренние ссылки`);
         }
       }
+      validateEnhancedRouteGuide(policy, item, label, errors);
     }
 
     if (item.status === "scheduled") {
