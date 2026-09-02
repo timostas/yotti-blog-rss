@@ -3459,67 +3459,187 @@
         "titleCandidatesEvaluated": { "ru": 5, "en": 5 },
         "lengthDecision": "RU 773 и EN 891 слово: коммерческий выбор, установка, dual-SIM, проверка после прилёта и маршрутный запас покрыты без повторения общего справочника есим."
       }
+    },
+    {
+      "id": "switzerland-lucerne-bern-base-choice",
+      "topicKey": "switzerland-lucerne-bern-base-choice",
+      "status": "scheduled",
+      "locales": ["ru", "en"],
+      "model": { "name": "gpt-5.6-sol", "effort": "high" },
+      "riskReasons": ["daily_mixed_rotation", "query_cannibalization_checked"],
+      "generationAttempts": { "ru": 1, "en": 1 },
+      "qualityRepairAttempts": 0,
+      "scores": { "utility": 95, "originalValue": 94, "factSupport": 94 },
+      "editorialStandardVersion": 2,
+      "editorialPasses": { "ru": 1, "en": 1 },
+      "countryCode": "CH",
+      "region": "central-europe",
+      "planKind": "editorial",
+      "searchQuery": { "ru": "Люцерн или Берн где остановиться", "en": "Lucerne or Bern where to stay" },
+      "workingTitle": { "ru": "Люцерн или Берн: где остановиться в первой поездке по Швейцарии", "en": "Lucerne or Bern: where to stay on a first trip to Switzerland" },
+      "intentMap": {
+        "primary": { "ru": "Люцерн или Берн где остановиться", "en": "Lucerne or Bern where to stay" },
+        "neighborIntents": ["switzerland-first-trip", "lucerne-day-trips", "bern-city-guide"],
+        "uniqueReaderOutcome": "Читатель выбирает одну базу по реальным дневным выездам, погодному запасу и характеру возвращения вечером, не переезжая между двумя городами ради одной ночи.",
+        "cannibalizationDecision": "В архиве нет сравнения Люцерна и Берна; новый URL отвечает на выбор базы, не подменяет страновой гид, отдельный городской материал или коммерческий интент есим."
+      },
+      "readerPromise": "Сравнить два города по прогулкам, железнодорожным выездам и ритму вечера, чтобы выбрать удобную базу без абстрактного рейтинга.",
+      "internalContextLinks": ["https://yotti.net/esim/switzerland", "https://yotti.net/blog/tag/%D0%9F%D1%80%D0%B0%D0%BA%D1%82%D0%B8%D0%BA%D0%B0%20%D0%BF%D0%BE%D0%B5%D0%B7%D0%B4%D0%BA%D0%B8"],
+      "researchSources": ["https://www.myswitzerland.com/en-gb/destinations/", "https://yotti.net/esim/switzerland"],
+      "creative": "assets/covers/switzerland-lucerne-bern-base-choice.png",
+      "creativeConceptKey": "lucerne-lake-promenade-autumn-bench",
+      "creativeBrief": "Набережная Люцерна ранней осенью, спокойное озеро, путешественница читает бумажную карту на скамье вполоборота.",
+      "creativeGeneration": { "model": "imagegen-built-in", "attempts": 1 },
+      "contentFormat": "practical-travel-scenario",
+      "schedule": { "ru": "2026-09-02T07:00:00Z", "en": "2026-09-02T07:00:00Z" },
+      "editorialScorecard": {
+        "ru": { "total": 94, "dimensions": { "intent": 15, "utility": 15, "specificity": 13, "trust": 13, "voice": 14, "structure": 9, "technical": 10, "commercialRestraint": 5 } },
+        "en": { "total": 95, "dimensions": { "intent": 15, "utility": 15, "specificity": 13, "trust": 13, "voice": 15, "structure": 9, "technical": 10, "commercialRestraint": 5 } }
+      },
+      "qualityNotes": {
+        "localeTotals": { "ru": 94, "en": 95 },
+        "weakestDimensions": ["local_specificity_and_original_value", "trust_and_evidence"],
+        "editorialChange": "После отдельного прохода сравнение перестроено вокруг списка реальных выездов и вечернего ритма; убран рейтинг городов, сокращены директивы и оставлена одна ясная развилка Люцерн-Берн.",
+        "titleCandidatesEvaluated": { "ru": 5, "en": 5 },
+        "lengthDecision": "RU 641 и EN 785 слов: выбор базы, размещение, погодный запас и офлайн-подготовка закрыты без общего путеводителя по Швейцарии."
+      }
+    },
+    {
+      "id": "angkor-one-day-without-rush",
+      "topicKey": "angkor-one-day-with-pauses",
+      "status": "scheduled",
+      "locales": ["ru", "en"],
+      "model": { "name": "gpt-5.6-sol", "effort": "high" },
+      "riskReasons": ["daily_mixed_rotation", "query_cannibalization_checked"],
+      "generationAttempts": { "ru": 1, "en": 1 },
+      "qualityRepairAttempts": 1,
+      "scores": { "utility": 95, "originalValue": 95, "factSupport": 96 },
+      "editorialStandardVersion": 2,
+      "editorialPasses": { "ru": 1, "en": 1 },
+      "countryCode": "KH",
+      "region": "southeast-asia",
+      "planKind": "editorial",
+      "searchQuery": { "ru": "Ангкор за один день маршрут", "en": "Angkor one day itinerary" },
+      "workingTitle": { "ru": "Ангкор за один день: маршрут без гонки по храмам", "en": "One day at Angkor: a three-temple route with time to stop" },
+      "intentMap": {
+        "primary": { "ru": "Ангкор за один день маршрут", "en": "Angkor one day itinerary" },
+        "neighborIntents": ["angkor-temple-list", "siem-reap-three-days", "angkor-sunrise-guide"],
+        "uniqueReaderOutcome": "Читатель собирает один день из Ангкор-Вата, Байона и Та-Прома, учитывает расстояния и паузы и не превращает археологический парк в список быстрых остановок.",
+        "cannibalizationDecision": "В архиве нет маршрута по Ангкору; новый URL решает задачу одного дня и трёх разных пространств, не конкурируя с общим гидом по Сиемреапу или перечнем храмов."
+      },
+      "readerPromise": "Выбрать три разных храмовых пространства, оставить паузы на жару и свет и не считать успех по числу остановок.",
+      "internalContextLinks": ["https://yotti.net/esim/cambodia", "https://yotti.net/blog/tag/%D0%98%D0%B4%D0%B5%D0%B8%20%D0%B4%D0%BB%D1%8F%20%D0%BF%D1%83%D1%82%D0%B5%D1%88%D0%B5%D1%81%D1%82%D0%B2%D0%B8%D0%B9"],
+      "researchSources": ["https://whc.unesco.org/en/list/668", "https://yotti.net/esim/cambodia"],
+      "creative": "assets/covers/angkor-one-day-without-rush.png",
+      "creativeConceptKey": "angkor-stone-corridor-morning-light-bicycle",
+      "creativeBrief": "Мягкий утренний свет в каменном коридоре Ангкора; велосипед стоит сбоку у стены, архитектура и лес доминируют.",
+      "creativeGeneration": { "model": "imagegen-built-in", "attempts": 1 },
+      "contentFormat": "destination-inspiration",
+      "schedule": { "ru": "2026-09-02T07:30:00Z", "en": "2026-09-02T07:30:00Z" },
+      "editorialScorecard": {
+        "ru": { "total": 95, "dimensions": { "intent": 15, "utility": 15, "specificity": 14, "trust": 14, "voice": 14, "structure": 9, "technical": 9, "commercialRestraint": 5 } },
+        "en": { "total": 95, "dimensions": { "intent": 15, "utility": 15, "specificity": 14, "trust": 14, "voice": 14, "structure": 9, "technical": 9, "commercialRestraint": 5 } }
+      },
+      "qualityNotes": {
+        "localeTotals": { "ru": 95, "en": 95 },
+        "weakestDimensions": ["technical_publication_quality", "structure_and_readability"],
+        "editorialChange": "После отдельного прохода рассвет оставлен опцией, три храма получили разные читательские функции, а повторяющиеся призывы и декоративный финал заменены практическими решениями о паузах и транспорте; одна короткая правка конкретизировала GPT-подобный заголовок через Ангкор-Тхом и Байон.",
+        "titleCandidatesEvaluated": { "ru": 5, "en": 5 },
+        "lengthDecision": "RU 625 и EN 700 слов: три храма, транспорт, паузы, рассвет и безопасная подготовка полностью закрывают однодневный маршрут без энциклопедии Ангкора."
+      }
+    },
+    {
+      "id": "tunis-carthage-sidi-bou-said-day",
+      "topicKey": "tunis-carthage-sidi-bou-said-day",
+      "status": "scheduled",
+      "locales": ["ru", "en"],
+      "model": { "name": "gpt-5.6-sol", "effort": "high" },
+      "riskReasons": ["daily_mixed_rotation", "query_cannibalization_checked"],
+      "generationAttempts": { "ru": 1, "en": 1 },
+      "qualityRepairAttempts": 0,
+      "scores": { "utility": 95, "originalValue": 95, "factSupport": 95 },
+      "editorialStandardVersion": 2,
+      "editorialPasses": { "ru": 1, "en": 1 },
+      "countryCode": "TN",
+      "region": "north-africa",
+      "planKind": "editorial",
+      "searchQuery": { "ru": "Тунис Карфаген Сиди-Бу-Саид маршрут", "en": "Tunis Carthage Sidi Bou Said itinerary" },
+      "workingTitle": { "ru": "Тунис, Карфаген и Сиди-Бу-Саид за один день", "en": "Tunis, Carthage and Sidi Bou Said in one day" },
+      "intentMap": {
+        "primary": { "ru": "Тунис Карфаген Сиди-Бу-Саид маршрут", "en": "Tunis Carthage Sidi Bou Said itinerary" },
+        "neighborIntents": ["tunis-medina-guide", "carthage-archaeological-sites", "sidi-bou-said-day-trip"],
+        "uniqueReaderOutcome": "Читатель связывает утро в медине, один осмысленный участок Карфагена и вечер в Сиди-Бу-Саиде, сохраняя транспортные якоря и время на еду.",
+        "cannibalizationDecision": "В архиве нет маршрута столичного региона Туниса; новый URL объединяет три части одного дня и не подменяет отдельный археологический или гастрономический справочник."
+      },
+      "readerPromise": "Связать три разных места в один день и заранее решить, где идти, где смотреть руины и где оставить длинную паузу у моря.",
+      "internalContextLinks": ["https://yotti.net/esim/tunisia", "https://yotti.net/blog/tag/%D0%95%D0%B4%D0%B0%20%D0%B8%20%D0%BA%D1%83%D0%BB%D1%8C%D1%82%D1%83%D1%80%D0%B0"],
+      "researchSources": ["https://www.discovertunisia.com/en/discover/around-carthage-and-sidi-bou-said", "https://yotti.net/esim/tunisia"],
+      "creative": "assets/covers/tunis-carthage-sidi-bou-said-day.png",
+      "creativeConceptKey": "sidi-bou-said-blue-door-sea-shadow",
+      "creativeBrief": "Белая улица Сиди-Бу-Саида, синяя дверь, полоска моря и два местных прохожих в естественном движении.",
+      "creativeGeneration": { "model": "imagegen-built-in", "attempts": 1 },
+      "contentFormat": "culture-food-or-local-experience",
+      "schedule": { "ru": "2026-09-02T17:00:00Z", "en": "2026-09-02T17:00:00Z" },
+      "editorialScorecard": {
+        "ru": { "total": 95, "dimensions": { "intent": 15, "utility": 15, "specificity": 14, "trust": 14, "voice": 14, "structure": 9, "technical": 9, "commercialRestraint": 5 } },
+        "en": { "total": 95, "dimensions": { "intent": 15, "utility": 15, "specificity": 14, "trust": 14, "voice": 14, "structure": 9, "technical": 9, "commercialRestraint": 5 } }
+      },
+      "qualityNotes": {
+        "localeTotals": { "ru": 95, "en": 95 },
+        "weakestDimensions": ["technical_publication_quality", "structure_and_readability"],
+        "editorialChange": "После отдельного прохода день получил три транспортных якоря, Карфаген сокращён до одной осознанной развилки, а еда встроена в ритм медины и Сиди-Бу-Саида без списка обязательных заведений.",
+        "titleCandidatesEvaluated": { "ru": 5, "en": 5 },
+        "lengthDecision": "RU 569 и EN 652 слова: маршрут, транспорт, археологический выбор и две уместные гастрономические остановки закрыты без каталога достопримечательностей."
+      }
+    },
+    {
+      "id": "buy-esim-qatar-doha-stopover",
+      "topicKey": "qatar-esim-doha-stopover",
+      "status": "scheduled",
+      "locales": ["ru", "en"],
+      "model": { "name": "gpt-5.6-sol", "effort": "high" },
+      "riskReasons": ["daily_mixed_rotation", "query_cannibalization_checked", "commercial_intent_checked"],
+      "generationAttempts": { "ru": 1, "en": 1 },
+      "qualityRepairAttempts": 1,
+      "scores": { "utility": 96, "originalValue": 95, "factSupport": 96 },
+      "editorialStandardVersion": 2,
+      "editorialPasses": { "ru": 1, "en": 1 },
+      "countryCode": "QA",
+      "region": "middle-east",
+      "planKind": "buy-esim",
+      "searchQuery": { "ru": "купить есим для Катара", "en": "buy eSIM for Qatar" },
+      "workingTitle": { "ru": "Купить есим для Катара: интернет во время остановки в Дохе", "en": "Buy an eSIM for Qatar: mobile data on a Doha stopover" },
+      "intentMap": {
+        "primary": { "ru": "купить есим для Катара", "en": "buy eSIM for Qatar" },
+        "neighborIntents": ["esim-for-layover", "install-esim-before-travel", "travel-esim-data-allowance"],
+        "uniqueReaderOutcome": "Читатель считает полезное окно остановки, решает, нужен ли мобильный план для выхода в Доху, устанавливает линию заранее и сохраняет безопасный путь обратно к рейсу.",
+        "cannibalizationDecision": "Общая статья о пересадке выбирает тип связи без страны, установка описывает загрузку профиля, а объём данных — расчёт пакета; новый URL ограничен коммерческим запросом по Катару и маршрутом аэропорт-Доха-аэропорт."
+      },
+      "readerPromise": "Разобрать связь для короткой остановки: когда хватает аэропорта, когда нужен городской мобильный интернет и как проверить линию без удаления профиля.",
+      "internalContextLinks": ["https://yotti.net/esim/qatar", "https://yotti.net/blog/kak-ustanovit-esim-pered-poezdkoy-i-ne-zapustit-paket-ranshe-vremeni", "https://yotti.net/blog/skolko-interneta-nuzhno-dlya-puteshestviya-kak-vybrat-paket-esim"],
+      "researchSources": ["https://visitqatar.com/intl-en/qatar-stopover", "https://yotti.net/esim/qatar"],
+      "creative": "assets/covers/buy-esim-qatar-doha-stopover.png",
+      "creativeConceptKey": "doha-corniche-dhow-blue-hour-side-view",
+      "creativeBrief": "Деревянная лодка доу сбоку у набережной Дохи в синий час; путешественник читает бумажный маршрут, городские огни отражаются в воде.",
+      "creativeGeneration": { "model": "imagegen-built-in", "attempts": 1 },
+      "contentFormat": "connectivity-and-esim",
+      "schedule": { "ru": "2026-09-02T17:30:00Z", "en": "2026-09-02T17:30:00Z" },
+      "editorialScorecard": {
+        "ru": { "total": 96, "dimensions": { "intent": 15, "utility": 15, "specificity": 14, "trust": 14, "voice": 14, "structure": 9, "technical": 10, "commercialRestraint": 5 } },
+        "en": { "total": 96, "dimensions": { "intent": 15, "utility": 15, "specificity": 14, "trust": 14, "voice": 14, "structure": 9, "technical": 10, "commercialRestraint": 5 } }
+      },
+      "qualityNotes": {
+        "localeTotals": { "ru": 96, "en": 96 },
+        "weakestDimensions": ["structure_and_readability", "trust_and_evidence"],
+        "editorialChange": "После отдельного прохода коммерческий ключ оставлен в прямом ответе, сценарии разделены по фактическому выходу из аэропорта, а диагностика получила четыре результата и безопасный путь к поддержке без удаления профиля; одна короткая правка восстановила канонический EN-URL установки и удалила недоступную соседнюю ссылку.",
+        "titleCandidatesEvaluated": { "ru": 5, "en": 5 },
+        "lengthDecision": "RU 683 и EN 792 слова: выбор пакета, установка, четыре диагностические ветки и офлайн-возврат к рейсу закрыты без повторения общего гайда по пересадкам."
+      }
     }
   ],
   "plannedPublications": [
     {
       "planOrder": 1,
-      "id": "switzerland-lucerne-bern-base-choice",
-      "countryCode": "CH",
-      "region": "central-europe",
-      "planKind": "editorial",
-      "contentFormat": "practical-travel-scenario",
-      "searchQuery": { "ru": "Люцерн или Берн где остановиться", "en": "Lucerne or Bern where to stay" },
-      "semanticIntent": { "primary": "switzerland-lucerne-bern-base-choice", "secondary": ["где жить в Швейцарии туристу", "best base for first Switzerland trip"] },
-      "workingTitle": { "ru": "Люцерн или Берн: какую базу выбрать для первой поездки по Швейцарии", "en": "Lucerne or Bern: choosing a base for your first Switzerland trip" },
-      "readerPromise": "Сравнить два города по прогулкам, железнодорожным выездам и ритму вечера, чтобы выбрать удобную базу, а не абстрактного победителя.",
-      "creativeConceptKey": "lucerne-lake-promenade-autumn-bench",
-      "creativeBrief": "Набережная Люцерна ранней осенью, спокойное озеро, человек читает карту на скамье вполоборота."
-    },
-    {
-      "planOrder": 2,
-      "id": "angkor-one-day-without-rush",
-      "countryCode": "KH",
-      "region": "southeast-asia",
-      "planKind": "editorial",
-      "contentFormat": "destination-inspiration",
-      "searchQuery": { "ru": "Ангкор за один день маршрут", "en": "Angkor one day itinerary" },
-      "semanticIntent": { "primary": "angkor-one-day-with-pauses", "secondary": ["что посмотреть в Ангкоре за день", "Angkor temples without rushing"] },
-      "workingTitle": { "ru": "Один день в Ангкоре без марафона по храмам", "en": "One day at Angkor without turning the temples into a marathon" },
-      "readerPromise": "Выбрать несколько разных храмовых пространств, оставить паузы на жару и свет и не превращать день в соревнование по количеству остановок.",
-      "creativeConceptKey": "angkor-stone-corridor-morning-light-bicycle",
-      "creativeBrief": "Мягкий утренний свет в каменном коридоре Ангкора; велосипед стоит сбоку у стены, без толпы и постановочной позы."
-    },
-    {
-      "planOrder": 3,
-      "id": "tunis-carthage-sidi-bou-said-day",
-      "countryCode": "TN",
-      "region": "north-africa",
-      "planKind": "editorial",
-      "contentFormat": "culture-food-or-local-experience",
-      "searchQuery": { "ru": "Тунис Карфаген Сиди-Бу-Саид маршрут", "en": "Tunis Carthage Sidi Bou Said itinerary" },
-      "semanticIntent": { "primary": "tunis-carthage-sidi-bou-said-day", "secondary": ["что посмотреть рядом с Тунисом", "day trip from Tunis to Carthage"] },
-      "workingTitle": { "ru": "Тунис, Карфаген и Сиди-Бу-Саид: один день между рынком, руинами и морем", "en": "Tunis, Carthage and Sidi Bou Said: a day between the market, ruins and sea" },
-      "readerPromise": "Связать три очень разных места в один осмысленный день и понять, где нужна прогулка, а где — время просто посидеть у воды.",
-      "creativeConceptKey": "sidi-bou-said-blue-door-sea-shadow",
-      "creativeBrief": "Белая улица Сиди-Бу-Саида, синяя дверь и полоска моря в конце переулка; полуденная тень и местные прохожие."
-    },
-    {
-      "planOrder": 4,
-      "id": "buy-esim-qatar-doha-stopover",
-      "countryCode": "QA",
-      "region": "middle-east",
-      "planKind": "buy-esim",
-      "contentFormat": "connectivity-and-esim",
-      "searchQuery": { "ru": "купить есим для Катара", "en": "buy eSIM for Qatar" },
-      "semanticIntent": { "primary": "qatar-esim-doha-stopover", "secondary": ["есим Катар интернет", "Doha stopover eSIM"] },
-      "workingTitle": { "ru": "Купить есим для Катара: интернет во время остановки в Дохе", "en": "Buy an eSIM for Qatar: internet for a stopover in Doha" },
-      "readerPromise": "Разобрать связь для короткой остановки: когда достаточно аэропорта, а когда мобильный интернет нужен для города, транспорта и возвращения к рейсу.",
-      "creativeConceptKey": "doha-corniche-dhow-blue-hour-side-view",
-      "creativeBrief": "Традиционная лодка доу сбоку у набережной Дохи в синий час; городские огни отражаются в воде."
-    },
-    {
-      "planOrder": 5,
       "id": "ireland-galway-west-coast-base",
       "countryCode": "IE",
       "region": "western-europe",
@@ -3533,7 +3653,7 @@
       "creativeBrief": "Дождливый вечер у набережной Голуэя, отражения в мостовой и тёплый свет из окна небольшого паба."
     },
     {
-      "planOrder": 6,
+      "planOrder": 2,
       "id": "philippines-manila-or-cebu-first-base",
       "countryCode": "PH",
       "region": "southeast-asia",
@@ -3547,7 +3667,7 @@
       "creativeBrief": "Утренняя гавань Себу, яркий джипни виден сбоку на средней дистанции, пассажиры идут к причалу."
     },
     {
-      "planOrder": 7,
+      "planOrder": 3,
       "id": "melbourne-markets-laneways-neighbourhoods",
       "countryCode": "AU",
       "region": "oceania",
@@ -3561,7 +3681,7 @@
       "creativeBrief": "Цветочный прилавок у крытого рынка, за мокрым стеклом проходит трамвай; живой городской кадр без постановки."
     },
     {
-      "planOrder": 8,
+      "planOrder": 4,
       "id": "buy-esim-nepal-kathmandu-pokhara",
       "countryCode": "NP",
       "region": "south-asia",
