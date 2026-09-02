@@ -746,31 +746,35 @@
         ],
         "informationModules": [
           "route-map",
-          "route-table",
+          "route-summary-cards",
           "decision-box",
           "captioned-image"
         ],
         "authoritativeSourceCount": 6,
         "volatileClaimSourceMapComplete": true,
         "animatedVisual": true,
-        "visualFallback": "Полная таблица по девяти дням повторяет базы, ночёвки и роль каждого отрезка; SVG полностью виден без CSS-анимации, а смысл статьи сохраняется при удалении всех стилей и SVG.",
-        "reducedMotionPlan": "Анимация линии и точек включается только при prefers-reduced-motion: no-preference; статичная карта остаётся полной при остальных настройках."
+        "visualFallback": "Три текстовые маршрутные карточки повторяют все базы, ночёвки и роль каждого отрезка; первый и последний кадры WebP показывают полную карту.",
+        "reducedMotionPlan": "Статичный WebP передаётся через picture/source для prefers-reduced-motion: reduce; анимированный WebP делает один мягкий цикл и останавливается на полной карте."
       },
       "visualRevision": {
-        "version": 2,
-        "reason": "owner_rejected_text_wall_and_weak_visual_hierarchy",
+        "version": 3,
+        "reason": "public_yotti_import_stripped_css_svg_and_table_wrappers",
         "referenceFunctions": [
           "narrow_editorial_column",
-          "animated_map_with_semantic_fallback",
+          "animated_webp_map_with_text_fallback",
           "visual_break_every_one_or_two_sections",
-          "compact_route_tables",
+          "rss_safe_route_summary_cards",
           "decision_callouts",
           "contextual_captions"
         ],
         "inlineAssets": [
           "assets/inline/new-zealand-christchurch-avon-v2.webp",
           "assets/inline/new-zealand-lake-pukaki-v2.webp",
-          "assets/inline/new-zealand-queenstown-waterfront-v2.webp"
+          "assets/inline/new-zealand-queenstown-waterfront-v2.webp",
+          "assets/inline/new-zealand-route-map-ru-v3.webp",
+          "assets/inline/new-zealand-route-map-en-v3.webp",
+          "assets/inline/new-zealand-route-map-ru-static-v3.webp",
+          "assets/inline/new-zealand-route-map-en-static-v3.webp"
         ],
         "copyrightBoundary": "Функции визуального ритма воспроизведены в самостоятельной системе Yotti; чужие исходники, изображения, цвета и фирменное оформление не копировались."
       },
@@ -787,10 +791,10 @@
           "en": 96
         },
         "weakestDimensions": [
-          "rss_component_preservation_pending_yotti_import_check",
-          "public_mobile_visual_rhythm_pending_yotti_import_check"
+          "picture_source_preservation_pending_yotti_resync",
+          "animated_webp_playback_pending_yotti_resync"
         ],
-        "editorialChange": "Материал заново собран как насыщенный журнальный маршрут: карта переработана для мобильной ширины, добавлены три контекстные фотографии с подписями, сводка, оглавление, две компактные таблицы, карточки выбора и callout-блоки. URL, заголовок и исходный publishedAt сохранены; RU и EN отредактированы независимо."
+        "editorialChange": "После проверки публичного импорта удалены конструкции, которые Yotti очищает: CSS, SVG, details, div/section/aside и сырые таблицы. Маршрут передаётся конечным анимированным WebP и полным текстовым дублем; сравнения и сводки оформлены RSS-устойчивыми карточками на основе blockquote. Исправлены склейки слов. URL, заголовок и исходный publishedAt сохранены."
       }
     },
     {

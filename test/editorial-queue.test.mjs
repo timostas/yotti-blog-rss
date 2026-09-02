@@ -141,15 +141,30 @@ test("принимает маршрутный гид с решением, мод
       decisionSpine: "Маршрут для первой поездки с тремя базами и минимумом переездов.",
       routeStops: ["Город A", "Город B", "Город C"],
       readerJobs: ["выбрать базы", "распределить ночи", "проверить переезды", "спланировать связь", "подготовить запасной путь"],
-      informationModules: ["route-table", "route-map", "budget-or-data-table"],
+      informationModules: ["route-summary-cards", "route-map", "budget-or-data-table"],
       authoritativeSourceCount: 4,
       volatileClaimSourceMapComplete: true,
       animatedVisual: true,
-      visualFallback: "Таблица маршрута и статичная схема.",
-      reducedMotionPlan: "Все точки и линия показаны без движения.",
+      visualFallback: "Текстовые карточки маршрута и первый полный кадр схемы.",
+      reducedMotionPlan: "Статичный WebP передаётся через picture/source, а движение ограничено одним циклом.",
     },
   })] });
   assert.deepEqual(result.errors, []);
+});
+
+test("блокирует маршрутный гид без RSS-устойчивых карточек маршрута", () => {
+  const result = validateEditorialQueue(policy, { schemaVersion: 1, items: [item({
+    contentFormat: "route-or-itinerary",
+    enhancedGuide: {
+      decisionSpine: "Маршрут для первой поездки с тремя базами и минимумом переездов.",
+      routeStops: ["Город A", "Город B", "Город C"],
+      readerJobs: ["выбрать базы", "распределить ночи", "проверить переезды", "спланировать связь", "подготовить запасной путь"],
+      informationModules: ["route-table", "route-map", "captioned-image"],
+      authoritativeSourceCount: 4,
+      volatileClaimSourceMapComplete: true,
+    },
+  })] });
+  assert.match(result.errors.join("\n"), /route-summary-cards/);
 });
 
 test("блокирует готовый материал без отдельного редакторского прохода", () => {

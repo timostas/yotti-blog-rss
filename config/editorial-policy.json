@@ -104,13 +104,18 @@
       "allowedInlineInformationModules": [
         "route-map",
         "route-table",
+        "route-summary-cards",
         "timeline",
         "budget-or-data-table",
         "decision-box",
         "captioned-image"
       ],
-      "requireRouteTable": true,
-      "animatedMapMode": "pilot_only_until_yotti_import_is_verified",
+      "requiredRouteSummaryModules": [
+        "route-summary-cards"
+      ],
+      "forbidRawTablesInYottiRssBody": true,
+      "animatedMapMode": "animated_webp_img_with_text_fallback",
+      "requireFiniteAnimatedRaster": true,
       "requireStaticSemanticFallbackForAnimatedVisual": true,
       "requireReducedMotionForAnimatedVisual": true,
       "minimumPrimaryOrAuthoritativeSources": 4,
