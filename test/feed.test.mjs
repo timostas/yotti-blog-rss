@@ -1,6 +1,6 @@
 import test from "node:test";
 import assert from "node:assert/strict";
-import { createFeedXml, countWords, parseArticle, validateArticleCategories } from "../scripts/build-feed.mjs";
+import { createArticleHtml, createFeedXml, countWords, parseArticle, validateArticleCategories } from "../scripts/build-feed.mjs";
 import taxonomy from "../config/editorial-taxonomy.json" with { type: "json" };
 
 const config = {
@@ -37,6 +37,13 @@ ${words}
 
 test("считает русские слова", () => {
   assert.equal(countWords("Один, два и travel-tech."), 4);
+});
+
+test("не считает CSS, SVG и HTML-атрибуты редакционными словами", () => {
+  const body = `<style>.route-card { background: warm; }</style>
+<svg><title>Подпись карты</title><path d="M 0 0"/></svg>
+<p class="route-card" aria-label="Служебная подпись">Три настоящих слова</p>`;
+  assert.equal(countWords(body), 3);
 });
 
 test("принимает только каноническую тематическую рубрику", () => {
@@ -113,6 +120,20 @@ test("локализует видимые редакционные блоки д
   assert.match(xml, /Published: <time/);
   assert.match(xml, /Editorially reviewed: <time/);
   assert.match(xml, /<h2>Sources<\/h2>/);
+});
+
+test("оформляет техническую HTML-страницу как полноценную статью", () => {
+  const article = parseArticle(articleSource(`cover:
+  url: "https://timostas.github.io/yotti-blog-rss/assets/covers/test-post.jpg"
+  type: "image/jpeg"
+  alt: "Тестовая обложка"
+`));
+  const html = createArticleHtml(config, article);
+
+  assert.match(html, /<meta property="og:image"/);
+  assert.match(html, /<style>/);
+  assert.match(html, /main\{width:min\(100% - 32px,760px\)/);
+  assert.match(html, /<figure class="article-cover">/);
 });
 
 test("не смешивает русские статьи с английской лентой", () => {

@@ -53,6 +53,8 @@ Workflow `.github/workflows/publish-rss.yml` собирает проект и п
   20 eSIM-продавцов, рабочие диапазоны объёма и метрики публикаций.
 - `docs/research/zwitchy-guides-analysis-2026-09.md` — разбор 122 материалов
   Zwitchy Guides и правила усиленных маршрутных гидов Yotti.
+- `docs/rss-rich-article-visual-standard.md` — визуальный ритм, карты,
+  фотографии, таблицы и двухслойная совместимость длинных RSS-статей.
 
 Статью можно заранее сохранить в `main` с `published: true` и будущим
 `publishedAt`. До наступления указанного момента она не попадёт ни в RSS, ни в
