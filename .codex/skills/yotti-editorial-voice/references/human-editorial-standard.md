@@ -27,6 +27,18 @@ Human prose selects rather than exhausts. It uses the rhythm the material needs:
 
 Human editing also leaves some sentences plain. “За Сокровищницей маршрут продолжается к театру и Царским гробницам” is better service journalism than a metaphor about doors, chapters, or final points.
 
+## Decision spine
+
+Before drafting a substantial guide, write one sentence that states who the
+piece is for, what decision it helps make, and the main trade-off. Every major
+section must then do a different job: make a choice, support it, describe a
+route leg, name a limitation, or provide a fallback. Delete sections that only
+repeat the destination mood or restate the lead.
+
+For a route guide, alternate places with movement and decisions. Do not write a
+sequence of identical city portraits. State why each stop is a base, what the
+reader does there, and what changes on the next leg.
+
 ## Titles
 
 Write a title as a real editor would name the piece to a colleague. Prefer a recognisable question, route, place, or decision. Search wording may appear naturally, but never force an awkward noun chain.
@@ -68,6 +80,21 @@ Use headings as navigation. “Что находится за Сокровищн
 Key takeaways help comparison and complex instructions. FAQ helps when real follow-up questions remain. Neither is mandatory. Do not repeat the article in a conclusion merely to satisfy a template. A closing paragraph may finish the final section naturally.
 
 SEO value comes from answering the query clearly, naming relevant places, supporting facts, and satisfying the reader. Repeating a query or imposing the same SERP-shaped layout on every article reduces editorial quality.
+
+## Visual writing
+
+An information visual must answer a question that prose alone answers less
+quickly. A route map shows order and geography; a table shows stops, nights and
+connections; a timeline shows sequence. The surrounding text must still carry
+the complete answer.
+
+Write alt text for what is visibly important. Write a caption for the editorial
+observation the reader should take from the image. Do not make the caption a
+second alt, a slogan, or a generic travel compliment.
+
+Animated maps require a static or text fallback, an accessible name and reduced
+motion. Until the Yotti importer is verified, treat animation as a pilot rather
+than a default promise.
 
 ## Final read
 

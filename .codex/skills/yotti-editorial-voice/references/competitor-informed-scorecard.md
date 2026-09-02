@@ -21,6 +21,10 @@ Stop publication regardless of score when any item is true:
 - the article competes with an existing Yotti URL for the same primary intent
   without an explicit update-or-new-URL decision.
 
+For an enhanced route guide, also stop when the route summary is absent, major
+sections repeat the same function, fewer than four authoritative sources support
+the decisions, or an animated visual has no complete semantic fallback.
+
 ## Weighted review
 
 Score the actual page, not the effort that produced it.
@@ -120,9 +124,17 @@ versa.
   photographs, costs and observed limitations;
 - aloSIM and Nomad: a clear travel or device scenario;
 - Ubigi: comparison and troubleshooting depth.
+- Zwitchy Trip routes: an explicit decision spine, early route summary,
+  alternating place/transfer sections, information-rich captions, accessible
+  route visual, dated sources and contextual related reading.
 
 Borrow the editorial function, never the wording, heading sequence, scenario,
 or page template.
+
+For `route-or-itinerary`, use the enhanced gate in
+`config/editorial-policy.json`. Its 1,800–3,000-word range is a production budget,
+not a score. A shorter route can still pass when the brief proves that every
+reader job is complete.
 
 ## Market patterns to reject
 

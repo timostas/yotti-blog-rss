@@ -51,6 +51,8 @@ Workflow `.github/workflows/publish-rss.yml` собирает проект и п
 - `docs/editorial-quality-standard.md` — обязательный контроль качества;
 - `docs/research/esim-editorial-benchmark-2026-08.md` — сравнительный аудит
   20 eSIM-продавцов, рабочие диапазоны объёма и метрики публикаций.
+- `docs/research/zwitchy-guides-analysis-2026-09.md` — разбор 122 материалов
+  Zwitchy Guides и правила усиленных маршрутных гидов Yotti.
 
 Статью можно заранее сохранить в `main` с `published: true` и будущим
 `publishedAt`. До наступления указанного момента она не попадёт ни в RSS, ни в
