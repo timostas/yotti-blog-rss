@@ -25,7 +25,12 @@ export function asCdata(value) {
 }
 
 export function countWords(markdown) {
-  return markdown.match(/[\p{L}\p{N}]+(?:[’'-][\p{L}\p{N}]+)*/gu)?.length ?? 0;
+  const visibleText = String(markdown)
+    .replace(/<style\b[^>]*>[\s\S]*?<\/style>/gi, " ")
+    .replace(/<script\b[^>]*>[\s\S]*?<\/script>/gi, " ")
+    .replace(/<svg\b[^>]*>[\s\S]*?<\/svg>/gi, " ")
+    .replace(/<[^>]+>/g, " ");
+  return visibleText.match(/[\p{L}\p{N}]+(?:[’'-][\p{L}\p{N}]+)*/gu)?.length ?? 0;
 }
 
 export function isPublishable(article, now = new Date()) {
@@ -411,7 +416,7 @@ export function createArticleHtml(configInput, article) {
   const config = validateConfig(configInput);
   const canonicalUrl = articleUrl(config, article);
   const cover = article.cover
-    ? `<p><img src="${escapeXml(article.cover.url)}" alt="${escapeXml(article.cover.alt)}" width="1200" height="675"></p>`
+    ? `<figure class="article-cover"><img src="${escapeXml(article.cover.url)}" alt="${escapeXml(article.cover.alt)}" width="1200" height="675"></figure>`
     : "";
 
   return [
@@ -426,6 +431,18 @@ export function createArticleHtml(configInput, article) {
     article.editorial?.modifiedAt ? `  <meta property="article:modified_time" content="${escapeXml(article.editorial.modifiedAt.toISOString())}">` : "",
     article.editorial?.alternate ? `  <link rel="alternate" hreflang="${escapeXml(article.editorial.alternate.language)}" href="${escapeXml(article.editorial.alternate.url)}">` : "",
     `  <link rel="canonical" href="${escapeXml(canonicalUrl)}">`,
+    article.cover ? `  <meta property="og:image" content="${escapeXml(article.cover.url)}">` : "",
+    "  <style>",
+    "    :root{color-scheme:light;--page:#f8f6f1;--paper:#fff;--ink:#1c2926;--muted:#68736f;--rule:#dbe2df;--coral:#df6047;--pine:#246b63}",
+    "    *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--page);color:var(--ink);font-family:Inter,ui-sans-serif,-apple-system,BlinkMacSystemFont,\"Segoe UI\",sans-serif;font-size:18px;line-height:1.68;text-rendering:optimizeLegibility}",
+    "    main{width:min(100% - 32px,760px);margin:0 auto;padding:64px 0 96px}h1{margin:0 0 20px;font-size:clamp(2.25rem,7vw,4rem);line-height:1.02;letter-spacing:-.045em}h2{margin:64px 0 18px;font-size:clamp(1.55rem,4vw,2.1rem);line-height:1.18;letter-spacing:-.025em}h3{margin:34px 0 12px;font-size:1.2rem;line-height:1.3}p{margin:0 0 1.25em}a{color:#175f58;text-decoration-thickness:.08em;text-underline-offset:.18em}ul,ol{padding-left:1.25em}li+li{margin-top:.45em}",
+    "    img,svg{max-width:100%;height:auto}.article-cover{margin:32px 0 44px}.article-cover img,main>figure img,.yotti-photo img{display:block;width:100%;border-radius:24px}figcaption{margin:.75rem auto 0;max-width:92%;color:var(--muted);font-size:.88rem;line-height:1.5;text-align:center;font-style:italic}",
+    "    aside{margin:28px 0;padding:18px 22px;border-left:4px solid var(--coral);border-radius:0 16px 16px 0;background:#f0f4f1;color:#43504c}aside p:last-child{margin-bottom:0}",
+    "    table{width:100%;border-collapse:separate;border-spacing:0;margin:26px 0;border:1px solid var(--rule);border-radius:18px;overflow:hidden;background:var(--paper);font-size:.9rem;line-height:1.45}th,td{padding:14px 16px;text-align:left;vertical-align:top;border-bottom:1px solid var(--rule)}th{background:#edf3ef;font-weight:700}tr:last-child td{border-bottom:0}",
+    "    .yotti-table-scroll{overflow-x:auto;margin:28px 0;border-radius:18px}.yotti-table-scroll table{margin:0;min-width:620px}.yotti-route-feature>p:first-of-type{font-size:1.16rem;line-height:1.58;color:#35423e}.yotti-photo{margin:44px 0}.yotti-route-map{margin:40px 0}.yotti-toc{margin:30px 0}.yotti-choice-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px;margin:28px 0}.yotti-choice-card{padding:22px;border:1px solid var(--rule);border-radius:20px;background:var(--paper)}",
+    "    @media(max-width:640px){body{font-size:17px}main{width:min(100% - 24px,760px);padding:36px 0 64px}h2{margin-top:48px}.yotti-choice-grid{grid-template-columns:1fr}.article-cover,.yotti-photo,.yotti-route-map{margin-left:-2px;margin-right:-2px}th,td{padding:12px 13px}}",
+    "    @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important}}",
+    "  </style>",
     "</head>",
     "<body>",
     "<main>",
