@@ -56,8 +56,11 @@ function validateEnhancedRouteGuide(policy, item, label, errors) {
   if (unknownModules.length > 0) {
     errors.push(`${label}: неизвестные информационные модули: ${unknownModules.join(", ")}`);
   }
-  if (gate.requireRouteTable && !modules.includes("route-table")) {
-    errors.push(`${label}: среди информационных модулей обязательна route-table`);
+  const requiredRouteSummaryModules = Array.isArray(gate.requiredRouteSummaryModules)
+    ? gate.requiredRouteSummaryModules
+    : [];
+  if (requiredRouteSummaryModules.length > 0 && !requiredRouteSummaryModules.some((value) => modules.includes(value))) {
+    errors.push(`${label}: требуется один из модулей сводки маршрута: ${requiredRouteSummaryModules.join(", ")}`);
   }
   if (!Number.isInteger(guide.authoritativeSourceCount) || guide.authoritativeSourceCount < gate.minimumPrimaryOrAuthoritativeSources) {
     errors.push(`${label}: требуется минимум ${gate.minimumPrimaryOrAuthoritativeSources} первичных или авторитетных источника`);
