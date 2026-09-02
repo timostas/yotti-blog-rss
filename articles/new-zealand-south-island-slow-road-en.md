@@ -18,7 +18,7 @@ sources:
   - "https://yotti.net/en/esim/new-zealand"
 editorial:
   authorUrl: "https://yotti.net/en/about"
-  modifiedAt: "2026-09-02T19:30:00.000Z"
+  modifiedAt: "2026-09-02T20:21:02.000Z"
   imageTitle: "A slower South Island road trip"
   imageDescription: "A traveller crossing a suspension bridge in a South Island alpine valley"
   alternate:
@@ -51,7 +51,7 @@ This plan leaves out Milford Sound, the West Coast glaciers and any heroic attem
 <figure class="yotti-route-map">
   <picture>
     <source media="(prefers-reduced-motion: reduce)" srcset="https://timostas.github.io/yotti-blog-rss/assets/inline/new-zealand-road-map-en-static-v5.webp">
-    <img src="https://timostas.github.io/yotti-blog-rss/assets/inline/new-zealand-road-map-en-animated-v5.webp" width="1200" height="900" alt="Road map from Christchurch through Tekapo and Twizel to Queenstown with a separate Aoraki drive">
+    <img src="https://timostas.github.io/yotti-blog-rss/assets/inline/new-zealand-road-map-en-animated-v6.webp" width="1200" height="900" alt="Road map from Christchurch through Tekapo and Twizel to Queenstown with a separate Aoraki drive">
   </picture>
   <figcaption>The line follows the road from Christchurch through Tekapo and Twizel to Queenstown. The green branch marks the return day trip to Aoraki. Map data: OpenStreetMap; route: OSRM.</figcaption>
 </figure>

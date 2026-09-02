@@ -209,14 +209,16 @@ def save_map_assets(base: Image.Image, main: list[tuple[int, int]], branch: list
     frames = [draw_map(base, main, branch, locale, ratio, 0.0) for ratio in ratios]
     frames += [draw_map(base, main, branch, locale, 1.0, ratio) for ratio in (0.18, 0.42, 0.68, 1.0)]
     durations = [320] + [190] * (len(frames) - 2) + [2600]
-    animated_path = INLINE / f"new-zealand-road-map-{locale}-animated-v5.webp"
+    animated_path = INLINE / f"new-zealand-road-map-{locale}-animated-v6.webp"
     frames[0].save(
         animated_path,
         "WEBP",
         save_all=True,
         append_images=frames[1:],
         duration=durations,
-        loop=3,
+        # WebP loop=0 means continuous playback. The RSS article supplies the
+        # static v5 map through prefers-reduced-motion for readers who opt out.
+        loop=0,
         quality=62,
         method=6,
         minimize_size=True,
