@@ -18,7 +18,7 @@ sources:
   - "https://yotti.net/en/esim/new-zealand"
 editorial:
   authorUrl: "https://yotti.net/en/about"
-  modifiedAt: "2026-09-02T16:30:00.000Z"
+  modifiedAt: "2026-09-02T19:30:00.000Z"
   imageTitle: "A slower South Island road trip"
   imageDescription: "A traveller crossing a suspension bridge in a South Island alpine valley"
   alternate:
@@ -38,8 +38,8 @@ editorial:
     - title: "Yotti: eSIM for New Zealand"
       url: "https://yotti.net/en/esim/new-zealand"
 cover:
-  url: "https://timostas.github.io/yotti-blog-rss/assets/covers/new-zealand-south-island-slow-road.png"
-  type: "image/png"
+  url: "https://timostas.github.io/yotti-blog-rss/assets/covers/new-zealand-south-island-slow-road-v5.webp"
+  type: "image/webp"
   alt: "A traveller crossing a suspension bridge in an alpine valley on New Zealand's South Island"
 published: true
 ---
@@ -50,18 +50,20 @@ This plan leaves out Milford Sound, the West Coast glaciers and any heroic attem
 
 <figure class="yotti-route-map">
   <picture>
-    <source media="(prefers-reduced-motion: reduce)" srcset="https://timostas.github.io/yotti-blog-rss/assets/inline/new-zealand-route-map-en-static-v4.webp">
-    <img src="https://timostas.github.io/yotti-blog-rss/assets/inline/new-zealand-route-map-en-v4.webp" width="1200" height="1500" alt="Animated route overview from Christchurch via Tekapo or Twizel to Queenstown, with a day trip to Aoraki">
+    <source media="(prefers-reduced-motion: reduce)" srcset="https://timostas.github.io/yotti-blog-rss/assets/inline/new-zealand-road-map-en-static-v5.webp">
+    <img src="https://timostas.github.io/yotti-blog-rss/assets/inline/new-zealand-road-map-en-animated-v5.webp" width="1200" height="900" alt="Road map from Christchurch through Tekapo and Twizel to Queenstown with a separate Aoraki drive">
   </picture>
-  <figcaption>The main drive runs from Christchurch to the Mackenzie lakes and on to Queenstown. Aoraki is a day trip, so you return to the same room.</figcaption>
+  <figcaption>The line follows the road from Christchurch through Tekapo and Twizel to Queenstown. The green branch marks the return day trip to Aoraki. Map data: OpenStreetMap; route: OSRM.</figcaption>
 </figure>
+
+[Open the interactive map with selectable route stops](https://timostas.github.io/yotti-blog-rss/assets/interactive/new-zealand-south-island-map-en-v5.html). Each place name leads to its matching section in the article.
 
 ## Nine days, three bases
 
 Spend the first two nights in Christchurch. Drive to the Mackenzie Basin on day three and stay for three nights in either Tekapo or Twizel. Day six is the second hotel move, this time to Queenstown. After three nights there, day nine is departure day.
 
 <figure class="yotti-information-graphic">
-  <img src="https://timostas.github.io/yotti-blog-rss/assets/inline/new-zealand-route-plan-en-v4.webp" width="1200" height="1580" alt="Nine-day plan with two days in Christchurch, three days in Tekapo or Twizel and four calendar days in Queenstown">
+  <img src="https://timostas.github.io/yotti-blog-rss/assets/inline/new-zealand-route-plan-en-v5.webp" width="1440" height="870" alt="Nine-day plan with two days in Christchurch, three days in Tekapo or Twizel and four calendar days in Queenstown">
   <figcaption>The eight nights follow a 2 + 3 + 3 pattern. Day nine ends with the flight and does not add another overnight stop.</figcaption>
 </figure>
 
@@ -70,7 +72,7 @@ This pace is particularly comfortable for a solo driver, a family, or anyone arr
 Choose another itinerary if Milford Sound, Franz Josef or several multi-day walks are already essential. Those places deserve more time, not a rushed detour. A South Island driving day often grows beyond the number on the navigation screen: coffee, roadworks, viewpoints and simple fatigue all count.
 
 <figure class="yotti-photo">
-  <img src="https://timostas.github.io/yotti-blog-rss/assets/inline/new-zealand-christchurch-avon-v2.webp" width="1536" height="1024" loading="lazy" alt="The Ōtākaro Avon River, a bridge and city buildings in central Christchurch early in the morning">
+  <img src="https://timostas.github.io/yotti-blog-rss/assets/inline/new-zealand-christchurch-avon-v5.webp" width="1440" height="960" loading="lazy" alt="The Ōtākaro Avon River, a bridge and city buildings in central Christchurch early in the morning">
   <figcaption>Christchurch offers a proper night's sleep after the flight and an easy place to settle into left-hand driving.</figcaption>
 </figure>
 
@@ -103,7 +105,7 @@ Keep the fourth and fifth mornings free of equally important bookings. Read the 
 It is useful to buy breakfast food and a simple picnic before the mountain day. A café will not always be nearby when hunger arrives, and an alpine outing rarely follows the minute-by-minute plan made at home. Carry a warm layer even on a bright morning. Wind beside the lakes can make the day feel very different from the hotel car park.
 
 <figure class="yotti-photo">
-  <img src="https://timostas.github.io/yotti-blog-rss/assets/inline/new-zealand-lake-pukaki-v2.webp" width="1536" height="1024" loading="lazy" alt="Lake Pukaki with the snow-covered Southern Alps and Aoraki in the distance">
+  <img src="https://timostas.github.io/yotti-blog-rss/assets/inline/new-zealand-lake-pukaki-v5.webp" width="1440" height="960" loading="lazy" alt="Lake Pukaki with the snow-covered Southern Alps and Aoraki in the distance">
   <figcaption>Lake Pukaki lies on the road to Aoraki. It is an easy place to spend longer than the itinerary expected.</figcaption>
 </figure>
 
@@ -128,7 +130,7 @@ Keep the first Queenstown evening clear. Once checked in, walk by Lake Whakatipu
 Parking can be awkward in the centre, so look beyond the view when choosing a hotel. A place where the car can stay while you walk to dinner may be more useful than another panorama. If you stay farther out, decide how the evening return will work before everyone is hungry.
 
 <figure class="yotti-photo">
-  <img src="https://timostas.github.io/yotti-blog-rss/assets/inline/new-zealand-queenstown-waterfront-v2.webp" width="1536" height="1024" loading="lazy" alt="Queenstown waterfront in the evening, Lake Whakatipu and the Remarkables beyond">
+  <img src="https://timostas.github.io/yotti-blog-rss/assets/inline/new-zealand-queenstown-waterfront-v5.webp" width="1440" height="960" loading="lazy" alt="Queenstown waterfront in the evening, Lake Whakatipu and the Remarkables beyond">
   <figcaption>The first Queenstown evening needs no ticket or deadline. A walk by the lake is enough after the road.</figcaption>
 </figure>
 
@@ -147,7 +149,7 @@ Fix the expensive framework at home: arrival in Christchurch, departure from Que
 Leave departure times, lunch stops, the Aoraki day and shorter walks open. Those choices depend on weather and energy, and none of them needs an expensive commitment.
 
 <figure class="yotti-information-graphic">
-  <img src="https://timostas.github.io/yotti-blog-rss/assets/inline/new-zealand-booking-plan-en-v4.webp" width="1200" height="1500" alt="Booking plan showing what to arrange before the trip and which decisions to leave until the journey">
+  <img src="https://timostas.github.io/yotti-blog-rss/assets/inline/new-zealand-booking-plan-en-v5.webp" width="1440" height="760" alt="Booking plan showing what to arrange before the trip and which decisions to leave until the journey">
   <figcaption>Book the costly, scarce pieces first. Leave weather-dependent choices and roadside stops movable.</figcaption>
 </figure>
 

@@ -18,7 +18,7 @@ sources:
   - "https://yotti.net/esim/new-zealand"
 editorial:
   authorUrl: "https://yotti.net/about"
-  modifiedAt: "2026-09-02T16:30:00.000Z"
+  modifiedAt: "2026-09-02T19:30:00.000Z"
   imageTitle: "Маршрут по Южному острову Новой Зеландии"
   imageDescription: "Путешественник идёт по подвесному мосту в альпийской долине Южного острова"
   alternate:
@@ -38,8 +38,8 @@ editorial:
     - title: "Yotti: есим для Новой Зеландии"
       url: "https://yotti.net/esim/new-zealand"
 cover:
-  url: "https://timostas.github.io/yotti-blog-rss/assets/covers/new-zealand-south-island-slow-road.png"
-  type: "image/png"
+  url: "https://timostas.github.io/yotti-blog-rss/assets/covers/new-zealand-south-island-slow-road-v5.webp"
+  type: "image/webp"
   alt: "Путешественник идёт по подвесному мосту в альпийской долине Южного острова Новой Зеландии"
 published: true
 ---
@@ -50,18 +50,20 @@ published: true
 
 <figure class="yotti-route-map">
   <picture>
-    <source media="(prefers-reduced-motion: reduce)" srcset="https://timostas.github.io/yotti-blog-rss/assets/inline/new-zealand-route-map-ru-static-v4.webp">
-    <img src="https://timostas.github.io/yotti-blog-rss/assets/inline/new-zealand-route-map-ru-v4.webp" width="1200" height="1500" alt="Анимированная схема маршрута от Крайстчерча через Текапо или Твайзел до Куинстауна с поездкой в Аораки">
+    <source media="(prefers-reduced-motion: reduce)" srcset="https://timostas.github.io/yotti-blog-rss/assets/inline/new-zealand-road-map-ru-static-v5.webp">
+    <img src="https://timostas.github.io/yotti-blog-rss/assets/inline/new-zealand-road-map-ru-animated-v5.webp" width="1200" height="900" alt="Карта автомобильного маршрута от Крайстчерча через Текапо и Твайзел до Куинстауна с отдельной дорогой в Аораки">
   </picture>
-  <figcaption>Основная дорога идёт от Крайстчерча к озёрам Маккензи и дальше в Куинстаун. Аораки — отдельная поездка на день с возвращением в тот же номер.</figcaption>
+  <figcaption>Линия повторяет автомобильную дорогу: Крайстчерч — Текапо — Твайзел — Куинстаун. Зелёная ветка показывает поездку в Аораки и обратно. Данные карты — OpenStreetMap, маршрут — OSRM.</figcaption>
 </figure>
+
+[Открыть интерактивную карту с активными точками маршрута](https://timostas.github.io/yotti-blog-rss/assets/interactive/new-zealand-south-island-map-ru-v5.html). Названия городов ведут к соответствующим разделам статьи.
 
 ## Девять дней и три базы
 
 Первые две ночи остаются Крайстчерчу. На третий день вы переезжаете к озёрам Маккензи и живёте там три ночи — в Текапо или Твайзеле. Шестой день занимает дорога в Куинстаун, где проходят последние три ночи. На девятый день — вылет.
 
 <figure class="yotti-information-graphic">
-  <img src="https://timostas.github.io/yotti-blog-rss/assets/inline/new-zealand-route-plan-ru-v4.webp" width="1200" height="1580" alt="План девятидневного маршрута: два дня в Крайстчерче, три дня в Текапо или Твайзеле и четыре календарных дня в Куинстауне">
+  <img src="https://timostas.github.io/yotti-blog-rss/assets/inline/new-zealand-route-plan-ru-v5.webp" width="1440" height="870" alt="План девятидневного маршрута: два дня в Крайстчерче, три дня в Текапо или Твайзеле и четыре календарных дня в Куинстауне">
   <figcaption>Восемь ночей распределены по схеме 2 + 3 + 3. Девятый день заканчивается вылетом и не добавляет ещё одну ночёвку.</figcaption>
 </figure>
 
@@ -72,7 +74,7 @@ published: true
 Маршрут не подойдёт тем, для кого обязательны Милфорд-Саунд, ледники западного побережья или несколько многодневных треков. Их лучше вынести в отдельную поездку либо добавить ещё хотя бы несколько дней. Навигатор часто занижает реальную продолжительность дня: к чистому времени движения добавятся остановки, погода и усталость.
 
 <figure class="yotti-photo">
-  <img src="https://timostas.github.io/yotti-blog-rss/assets/inline/new-zealand-christchurch-avon-v2.webp" width="1536" height="1024" loading="lazy" alt="Река Эйвон, мост и городские здания в центре Крайстчерча ранним утром">
+  <img src="https://timostas.github.io/yotti-blog-rss/assets/inline/new-zealand-christchurch-avon-v5.webp" width="1440" height="960" loading="lazy" alt="Река Эйвон, мост и городские здания в центре Крайстчерча ранним утром">
   <figcaption>Крайстчерч даёт время выспаться после перелёта и спокойно привыкнуть к левостороннему движению.</figcaption>
 </figure>
 
@@ -111,7 +113,7 @@ published: true
 В Маккензи полезно заранее купить продукты для простого завтрака и взять с собой перекус. До ближайшего кафе может оказаться далеко, а горный день редко идёт по минутам. Термос и тёплый слой одежды пригодятся даже в ясное утро: у воды и на открытых участках ветер ощущается совсем иначе, чем возле жилья.
 
 <figure class="yotti-photo">
-  <img src="https://timostas.github.io/yotti-blog-rss/assets/inline/new-zealand-lake-pukaki-v2.webp" width="1536" height="1024" loading="lazy" alt="Озеро Пукаки и заснеженные Южные Альпы с Аораки вдали">
+  <img src="https://timostas.github.io/yotti-blog-rss/assets/inline/new-zealand-lake-pukaki-v5.webp" width="1440" height="960" loading="lazy" alt="Озеро Пукаки и заснеженные Южные Альпы с Аораки вдали">
   <figcaption>Озеро Пукаки встречается по дороге в Аораки. Здесь легко задержаться дольше, чем вы планировали дома.</figcaption>
 </figure>
 
@@ -136,7 +138,7 @@ published: true
 С парковкой в центре может быть хлопотно. При выборе гостиницы проверьте, можно ли оставить машину и выйти пешком к набережной. Если жильё находится дальше, заранее выясните, как вы будете возвращаться после ужина и понадобится ли каждый раз искать новое место для автомобиля.
 
 <figure class="yotti-photo">
-  <img src="https://timostas.github.io/yotti-blog-rss/assets/inline/new-zealand-queenstown-waterfront-v2.webp" width="1536" height="1024" loading="lazy" alt="Набережная Куинстауна вечером, озеро Уакатипу и горы Ремаркаблс">
+  <img src="https://timostas.github.io/yotti-blog-rss/assets/inline/new-zealand-queenstown-waterfront-v5.webp" width="1440" height="960" loading="lazy" alt="Набережная Куинстауна вечером, озеро Уакатипу и горы Ремаркаблс">
   <figcaption>Первый вечер в Куинстауне лучше оставить без билетов и дедлайнов: прогулки у озера после дороги вполне достаточно.</figcaption>
 </figure>
 
@@ -155,7 +157,7 @@ published: true
 Точное время выезда, остановки на обед, день поездки в Аораки и небольшие прогулки лучше решать на месте. Такой запас свободы позволяет реагировать на погоду, не теряя дорогих бронирований.
 
 <figure class="yotti-information-graphic">
-  <img src="https://timostas.github.io/yotti-blog-rss/assets/inline/new-zealand-booking-plan-ru-v4.webp" width="1200" height="1500" alt="Схема бронирований: что зафиксировать до поездки и какие решения оставить на время путешествия">
+  <img src="https://timostas.github.io/yotti-blog-rss/assets/inline/new-zealand-booking-plan-ru-v5.webp" width="1440" height="760" alt="Схема бронирований: что зафиксировать до поездки и какие решения оставить на время путешествия">
   <figcaption>Дорогие и редкие вещи бронируем заранее. Всё, что зависит от дороги и облаков, оставляем подвижным.</figcaption>
 </figure>
 
