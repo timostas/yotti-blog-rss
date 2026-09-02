@@ -105,15 +105,20 @@
         "route-map",
         "route-table",
         "route-summary-cards",
+        "route-plan-graphic",
+        "booking-plan-graphic",
         "timeline",
         "budget-or-data-table",
         "decision-box",
         "captioned-image"
       ],
       "requiredRouteSummaryModules": [
-        "route-summary-cards"
+        "route-plan-graphic"
       ],
       "forbidRawTablesInYottiRssBody": true,
+      "minimumInformationGraphicWidth": 1200,
+      "requirePortraitInformationGraphicsForMultiColumnData": true,
+      "requireTextEquivalentForInformationGraphics": true,
       "animatedMapMode": "animated_webp_img_with_text_fallback",
       "requireFiniteAnimatedRaster": true,
       "requireStaticSemanticFallbackForAnimatedVisual": true,

@@ -16,8 +16,14 @@ const PHOTO_ASSETS = [
   "assets/inline/new-zealand-queenstown-waterfront-v2.webp",
 ];
 const MAP_ASSETS = [
-  ["assets/inline/new-zealand-route-map-ru-v3.webp", "assets/inline/new-zealand-route-map-ru-static-v3.webp"],
-  ["assets/inline/new-zealand-route-map-en-v3.webp", "assets/inline/new-zealand-route-map-en-static-v3.webp"],
+  ["assets/inline/new-zealand-route-map-ru-v4.webp", "assets/inline/new-zealand-route-map-ru-static-v4.webp"],
+  ["assets/inline/new-zealand-route-map-en-v4.webp", "assets/inline/new-zealand-route-map-en-static-v4.webp"],
+];
+const INFORMATION_GRAPHICS = [
+  "assets/inline/new-zealand-route-plan-ru-v4.webp",
+  "assets/inline/new-zealand-route-plan-en-v4.webp",
+  "assets/inline/new-zealand-booking-plan-ru-v4.webp",
+  "assets/inline/new-zealand-booking-plan-en-v4.webp",
 ];
 
 for (const relativePath of ARTICLE_FILES) {
@@ -28,14 +34,17 @@ for (const relativePath of ARTICLE_FILES) {
 
     assert.ok(article.wordCount >= 1800 && article.wordCount <= 3000, `wordCount=${article.wordCount}`);
     assert.equal((html.match(/class="yotti-photo"/g) || []).length, 3);
-    assert.ok((html.match(/<blockquote>/g) || []).length >= 8, "ожидаются маршрутные и редакционные карточки");
+    assert.equal((html.match(/class="yotti-information-graphic"/g) || []).length, 2);
     assert.match(html, /class="yotti-route-map"/);
     assert.match(html, /<picture>/);
     assert.match(html, /<source media="\(prefers-reduced-motion: reduce\)"/);
-    assert.match(html, /new-zealand-route-map-(?:ru|en)-v3\.webp/);
+    assert.match(html, /new-zealand-route-map-(?:ru|en)-v4\.webp/);
+    assert.match(html, /new-zealand-route-plan-(?:ru|en)-v4\.webp/);
+    assert.match(html, /new-zealand-booking-plan-(?:ru|en)-v4\.webp/);
     assert.doesNotMatch(html, /<(?:style|svg|table|details|div|section|aside)\b/i);
     assert.doesNotMatch(source, /<\/(?:strong|em|a|span|p|li|h[1-6]|figcaption)>[\p{L}\p{N}]/u);
     assert.doesNotMatch(source, /(?:днейот|базыбез|переездамежду|резервдля|daysfrom|baseswith|drivesbetween|bufferfor)/i);
+    assert.doesNotMatch(source, /(?:день назначает погода|финал без списка достижений|одной длинной дорогой|зачем оставить время за|human scale|achievement list)/i);
   });
 }
 
@@ -55,7 +64,16 @@ test("карта передаётся как конечный анимирова
     assert.ok(animChunk >= 0, `${animatedPath}: отсутствует ANIM chunk`);
     assert.ok(animated.readUInt16LE(animChunk + 12) > 0, `${animatedPath}: бесконечный цикл запрещён`);
     assert.equal(still.indexOf(Buffer.from("ANIM")), -1, `${staticPath}: резерв должен быть статичным`);
-    assert.ok(animated.length < 250 * 1024, `${animatedPath}: ${animated.length} bytes`);
+    assert.ok(animated.length < 300 * 1024, `${animatedPath}: ${animated.length} bytes`);
     assert.ok(still.length < 100 * 1024, `${staticPath}: ${still.length} bytes`);
+  }
+});
+
+test("вертикальные инфографики оптимизированы для мобильной статьи", async () => {
+  for (const relativePath of INFORMATION_GRAPHICS) {
+    const file = await stat(join(ROOT, relativePath));
+    const bytes = await readFile(join(ROOT, relativePath));
+    assert.ok(file.size < 200 * 1024, `${relativePath}: ${file.size} bytes`);
+    assert.equal(bytes.indexOf(Buffer.from("ANIM")), -1, `${relativePath}: инфографика должна быть статичной`);
   }
 });

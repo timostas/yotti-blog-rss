@@ -693,7 +693,8 @@
       "riskReasons": [
         "indexed_url_content_update_owner_approved",
         "animated_route_map_import_pilot",
-        "rss_rich_visual_components_require_public_import_verification"
+        "rss_rich_visual_components_require_public_import_verification",
+        "yotti_last_successful_sync_predates_v3_deploy"
       ],
       "generationAttempts": {
         "ru": 1,
@@ -701,6 +702,7 @@
       },
       "qualityRepairAttempts": 1,
       "editorialStandardVersion": 2,
+      "ownerCorrectionRounds": 2,
       "editorialPasses": {
         "ru": 1,
         "en": 1
@@ -746,35 +748,39 @@
         ],
         "informationModules": [
           "route-map",
-          "route-summary-cards",
-          "decision-box",
+          "route-plan-graphic",
+          "booking-plan-graphic",
           "captioned-image"
         ],
         "authoritativeSourceCount": 6,
         "volatileClaimSourceMapComplete": true,
         "animatedVisual": true,
-        "visualFallback": "Три текстовые маршрутные карточки повторяют все базы, ночёвки и роль каждого отрезка; первый и последний кадры WebP показывают полную карту.",
-        "reducedMotionPlan": "Статичный WebP передаётся через picture/source для prefers-reduced-motion: reduce; анимированный WebP делает один мягкий цикл и останавливается на полной карте."
+        "visualFallback": "План маршрута и бронирований полностью повторён обычными абзацами; первый и последний кадры WebP показывают полную карту.",
+        "reducedMotionPlan": "Вертикальный статичный WebP передаётся через picture/source для prefers-reduced-motion: reduce; анимированный WebP делает один мягкий цикл и останавливается на полной карте."
       },
       "visualRevision": {
-        "version": 3,
-        "reason": "public_yotti_import_stripped_css_svg_and_table_wrappers",
+        "version": 4,
+        "reason": "owner_rejected_machine_style_and_mobile_table_render;_v3_was_not_synced_after_deploy",
         "referenceFunctions": [
           "narrow_editorial_column",
-          "animated_webp_map_with_text_fallback",
+          "portrait_animated_webp_map_with_text_fallback",
           "visual_break_every_one_or_two_sections",
-          "rss_safe_route_summary_cards",
-          "decision_callouts",
+          "portrait_route_plan_graphic",
+          "portrait_booking_plan_graphic",
           "contextual_captions"
         ],
         "inlineAssets": [
           "assets/inline/new-zealand-christchurch-avon-v2.webp",
           "assets/inline/new-zealand-lake-pukaki-v2.webp",
           "assets/inline/new-zealand-queenstown-waterfront-v2.webp",
-          "assets/inline/new-zealand-route-map-ru-v3.webp",
-          "assets/inline/new-zealand-route-map-en-v3.webp",
-          "assets/inline/new-zealand-route-map-ru-static-v3.webp",
-          "assets/inline/new-zealand-route-map-en-static-v3.webp"
+          "assets/inline/new-zealand-route-map-ru-v4.webp",
+          "assets/inline/new-zealand-route-map-en-v4.webp",
+          "assets/inline/new-zealand-route-map-ru-static-v4.webp",
+          "assets/inline/new-zealand-route-map-en-static-v4.webp",
+          "assets/inline/new-zealand-route-plan-ru-v4.webp",
+          "assets/inline/new-zealand-route-plan-en-v4.webp",
+          "assets/inline/new-zealand-booking-plan-ru-v4.webp",
+          "assets/inline/new-zealand-booking-plan-en-v4.webp"
         ],
         "copyrightBoundary": "Функции визуального ритма воспроизведены в самостоятельной системе Yotti; чужие исходники, изображения, цвета и фирменное оформление не копировались."
       },
@@ -791,10 +797,10 @@
           "en": 96
         },
         "weakestDimensions": [
-          "picture_source_preservation_pending_yotti_resync",
-          "animated_webp_playback_pending_yotti_resync"
+          "yotti_post_deploy_resync_pending",
+          "animated_webp_playback_pending_public_yotti_verification"
         ],
-        "editorialChange": "После проверки публичного импорта удалены конструкции, которые Yotti очищает: CSS, SVG, details, div/section/aside и сырые таблицы. Маршрут передаётся конечным анимированным WebP и полным текстовым дублем; сравнения и сводки оформлены RSS-устойчивыми карточками на основе blockquote. Исправлены склейки слов. URL, заголовок и исходный publishedAt сохранены."
+        "editorialChange": "Текст полностью переписан после отклонения машинописного слога и искусственных заголовков. Таблицы и многоколоночные блоки заменены самостоятельными вертикальными инфографиками; вся информация продублирована обычным индексируемым текстом. Карта пересобрана в вертикальном конечном WebP. Последняя подтверждённая синхронизация Yotti была в 14:06 UTC, а версия 3 появилась в RSS в 14:50 UTC, поэтому она не могла попасть в показанные страницы. URL, заголовок и исходный publishedAt сохранены."
       }
     },
     {
