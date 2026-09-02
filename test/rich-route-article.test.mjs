@@ -16,8 +16,8 @@ const PHOTO_ASSETS = [
   "assets/inline/new-zealand-queenstown-waterfront-v5.webp",
 ];
 const MAP_ASSETS = [
-  ["assets/inline/new-zealand-road-map-ru-animated-v5.webp", "assets/inline/new-zealand-road-map-ru-static-v5.webp"],
-  ["assets/inline/new-zealand-road-map-en-animated-v5.webp", "assets/inline/new-zealand-road-map-en-static-v5.webp"],
+  ["assets/inline/new-zealand-road-map-ru-animated-v6.webp", "assets/inline/new-zealand-road-map-ru-static-v5.webp"],
+  ["assets/inline/new-zealand-road-map-en-animated-v6.webp", "assets/inline/new-zealand-road-map-en-static-v5.webp"],
 ];
 const INFORMATION_GRAPHICS = [
   "assets/inline/new-zealand-route-plan-ru-v5.webp",
@@ -43,7 +43,7 @@ for (const relativePath of ARTICLE_FILES) {
     assert.match(html, /class="yotti-route-map"/);
     assert.match(html, /<picture>/);
     assert.match(html, /<source media="\(prefers-reduced-motion: reduce\)"/);
-    assert.match(html, /new-zealand-road-map-(?:ru|en)-animated-v5\.webp/);
+    assert.match(html, /new-zealand-road-map-(?:ru|en)-animated-v6\.webp/);
     assert.match(html, /new-zealand-road-map-(?:ru|en)-static-v5\.webp/);
     assert.match(html, /new-zealand-route-plan-(?:ru|en)-v5\.webp/);
     assert.match(html, /new-zealand-booking-plan-(?:ru|en)-v5\.webp/);
@@ -65,7 +65,7 @@ test("контекстные фотографии оптимизированы �
   }
 });
 
-test("карта передаётся как компактный дорожный WebP с конечным повтором", async () => {
+test("карта передаётся как компактный дорожный WebP с бесконечным повтором", async () => {
   for (const [animatedPath, staticPath] of MAP_ASSETS) {
     const animated = await readFile(join(ROOT, animatedPath));
     const still = await readFile(join(ROOT, staticPath));
@@ -73,7 +73,7 @@ test("карта передаётся как компактный дорожны
 
     assert.ok(animChunk >= 0, `${animatedPath}: отсутствует ANIM chunk`);
     const loops = animated.readUInt16LE(animChunk + 12);
-    assert.ok(loops > 0 && loops <= 3, `${animatedPath}: loops=${loops}`);
+    assert.equal(loops, 0, `${animatedPath}: loops=${loops}`);
     assert.equal(still.indexOf(Buffer.from("ANIM")), -1, `${staticPath}: резерв должен быть статичным`);
     assert.ok(animated.length < 300 * 1024, `${animatedPath}: ${animated.length} bytes`);
     assert.ok(still.length < 100 * 1024, `${staticPath}: ${still.length} bytes`);
@@ -108,7 +108,7 @@ test("медиабюджет статьи не превышает 1,2 МБ", asy
   for (const locale of ["ru", "en"]) {
     const paths = [
       COVER_ASSET,
-      `assets/inline/new-zealand-road-map-${locale}-animated-v5.webp`,
+      `assets/inline/new-zealand-road-map-${locale}-animated-v6.webp`,
       `assets/inline/new-zealand-route-plan-${locale}-v5.webp`,
       `assets/inline/new-zealand-booking-plan-${locale}-v5.webp`,
       ...PHOTO_ASSETS,

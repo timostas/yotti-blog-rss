@@ -18,7 +18,7 @@ sources:
   - "https://yotti.net/esim/new-zealand"
 editorial:
   authorUrl: "https://yotti.net/about"
-  modifiedAt: "2026-09-02T19:30:00.000Z"
+  modifiedAt: "2026-09-02T20:21:02.000Z"
   imageTitle: "Маршрут по Южному острову Новой Зеландии"
   imageDescription: "Путешественник идёт по подвесному мосту в альпийской долине Южного острова"
   alternate:
@@ -51,7 +51,7 @@ published: true
 <figure class="yotti-route-map">
   <picture>
     <source media="(prefers-reduced-motion: reduce)" srcset="https://timostas.github.io/yotti-blog-rss/assets/inline/new-zealand-road-map-ru-static-v5.webp">
-    <img src="https://timostas.github.io/yotti-blog-rss/assets/inline/new-zealand-road-map-ru-animated-v5.webp" width="1200" height="900" alt="Карта автомобильного маршрута от Крайстчерча через Текапо и Твайзел до Куинстауна с отдельной дорогой в Аораки">
+    <img src="https://timostas.github.io/yotti-blog-rss/assets/inline/new-zealand-road-map-ru-animated-v6.webp" width="1200" height="900" alt="Карта автомобильного маршрута от Крайстчерча через Текапо и Твайзел до Куинстауна с отдельной дорогой в Аораки">
   </picture>
   <figcaption>Линия повторяет автомобильную дорогу: Крайстчерч — Текапо — Твайзел — Куинстаун. Зелёная ветка показывает поездку в Аораки и обратно. Данные карты — OpenStreetMap, маршрут — OSRM.</figcaption>
 </figure>
