@@ -18,7 +18,7 @@ sources:
   - "https://yotti.net/en/esim/new-zealand"
 editorial:
   authorUrl: "https://yotti.net/en/about"
-  modifiedAt: "2026-09-02T20:21:02.000Z"
+  modifiedAt: "2026-09-02T20:58:14.000Z"
   imageTitle: "A slower South Island road trip"
   imageDescription: "A traveller crossing a suspension bridge in a South Island alpine valley"
   alternate:
@@ -56,7 +56,7 @@ This plan leaves out Milford Sound, the West Coast glaciers and any heroic attem
   <figcaption>The line follows the road from Christchurch through Tekapo and Twizel to Queenstown. The green branch marks the return day trip to Aoraki. Map data: OpenStreetMap; route: OSRM.</figcaption>
 </figure>
 
-[Open the interactive map with selectable route stops](https://timostas.github.io/yotti-blog-rss/assets/interactive/new-zealand-south-island-map-en-v5.html). Each place name leads to its matching section in the article.
+Jump to a stop: [Christchurch](https://www.yotti.net/en/blog/new-zealand/a-slower-south-island-road-trip-from-christchurch-to-queenstown#:~:text=Two%20nights%20in%20Christchurch), [Tekapo](https://www.yotti.net/en/blog/new-zealand/a-slower-south-island-road-trip-from-christchurch-to-queenstown#:~:text=Tekapo%20or%20Twizel), [Twizel](https://www.yotti.net/en/blog/new-zealand/a-slower-south-island-road-trip-from-christchurch-to-queenstown#:~:text=Tekapo%20or%20Twizel), [Aoraki](https://www.yotti.net/en/blog/new-zealand/a-slower-south-island-road-trip-from-christchurch-to-queenstown#:~:text=Aoraki%3A%20a%20full%20day%20at%20Mount%20Cook), [Queenstown](https://www.yotti.net/en/blog/new-zealand/a-slower-south-island-road-trip-from-christchurch-to-queenstown#:~:text=Two%20full%20days%20in%20Queenstown).
 
 ## Nine days, three bases
 
@@ -109,7 +109,7 @@ It is useful to buy breakfast food and a simple picnic before the mountain day. 
   <figcaption>Lake Pukaki lies on the road to Aoraki. It is an easy place to spend longer than the itinerary expected.</figcaption>
 </figure>
 
-## A day at Aoraki
+## Aoraki: a full day at Mount Cook
 
 Do not put Aoraki/Mount Cook between one hotel check-out and the next check-in. The drive along Lake Pukaki deserves pauses of its own, and conditions in the alpine valley may change the plan before you arrive.
 

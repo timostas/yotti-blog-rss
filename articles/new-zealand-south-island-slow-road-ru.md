@@ -18,7 +18,7 @@ sources:
   - "https://yotti.net/esim/new-zealand"
 editorial:
   authorUrl: "https://yotti.net/about"
-  modifiedAt: "2026-09-02T20:21:02.000Z"
+  modifiedAt: "2026-09-02T20:58:14.000Z"
   imageTitle: "Маршрут по Южному острову Новой Зеландии"
   imageDescription: "Путешественник идёт по подвесному мосту в альпийской долине Южного острова"
   alternate:
@@ -56,7 +56,7 @@ published: true
   <figcaption>Линия повторяет автомобильную дорогу: Крайстчерч — Текапо — Твайзел — Куинстаун. Зелёная ветка показывает поездку в Аораки и обратно. Данные карты — OpenStreetMap, маршрут — OSRM.</figcaption>
 </figure>
 
-[Открыть интерактивную карту с активными точками маршрута](https://timostas.github.io/yotti-blog-rss/assets/interactive/new-zealand-south-island-map-ru-v5.html). Названия городов ведут к соответствующим разделам статьи.
+Перейти к остановке: [Крайстчерч](https://www.yotti.net/blog/new-zealand/marshrut-po-yuzhnomu-ostrovu-novoy-zelandii-kraystcherch-tekapo-i-kuinstaun#:~:text=%D0%9A%D1%80%D0%B0%D0%B9%D1%81%D1%82%D1%87%D0%B5%D1%80%D1%87%3A%20%D0%BF%D0%B5%D1%80%D0%B2%D1%8B%D0%B5%20%D0%B4%D0%B2%D0%B5%20%D0%BD%D0%BE%D1%87%D0%B8), [Текапо](https://www.yotti.net/blog/new-zealand/marshrut-po-yuzhnomu-ostrovu-novoy-zelandii-kraystcherch-tekapo-i-kuinstaun#:~:text=%D0%A2%D0%B5%D0%BA%D0%B0%D0%BF%D0%BE%20%D0%B8%D0%BB%D0%B8%20%D0%A2%D0%B2%D0%B0%D0%B9%D0%B7%D0%B5%D0%BB), [Твайзел](https://www.yotti.net/blog/new-zealand/marshrut-po-yuzhnomu-ostrovu-novoy-zelandii-kraystcherch-tekapo-i-kuinstaun#:~:text=%D0%A2%D0%B5%D0%BA%D0%B0%D0%BF%D0%BE%20%D0%B8%D0%BB%D0%B8%20%D0%A2%D0%B2%D0%B0%D0%B9%D0%B7%D0%B5%D0%BB), [Аораки](https://www.yotti.net/blog/new-zealand/marshrut-po-yuzhnomu-ostrovu-novoy-zelandii-kraystcherch-tekapo-i-kuinstaun#:~:text=%D0%90%D0%BE%D1%80%D0%B0%D0%BA%D0%B8%3A%20%D0%B4%D0%B5%D0%BD%D1%8C%20%D1%83%20%D0%BF%D0%BE%D0%B4%D0%BD%D0%BE%D0%B6%D0%B8%D1%8F%20%D0%9C%D0%B0%D1%83%D0%BD%D1%82-%D0%9A%D1%83%D0%BA%D0%B0), [Куинстаун](https://www.yotti.net/blog/new-zealand/marshrut-po-yuzhnomu-ostrovu-novoy-zelandii-kraystcherch-tekapo-i-kuinstaun#:~:text=%D0%94%D0%B2%D0%B0%20%D0%B4%D0%BD%D1%8F%20%D0%B2%20%D0%9A%D1%83%D0%B8%D0%BD%D1%81%D1%82%D0%B0%D1%83%D0%BD%D0%B5).
 
 ## Девять дней и три базы
 
@@ -117,7 +117,7 @@ published: true
   <figcaption>Озеро Пукаки встречается по дороге в Аораки. Здесь легко задержаться дольше, чем вы планировали дома.</figcaption>
 </figure>
 
-## День в Аораки
+## Аораки: день у подножия Маунт-Кука
 
 Поездку в Аораки/Маунт-Кук не стоит совмещать с переездом в следующий отель. Дорога вдоль Пукаки сама по себе заслуживает остановок, а погода в альпийской долине может изменить планы уже утром.
 

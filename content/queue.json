@@ -760,13 +760,13 @@
         "reducedMotionPlan": "Статичный WebP передаётся через picture/source для prefers-reduced-motion: reduce; основной WebP непрерывно повторяет спокойный цикл с длинной паузой на полной карте. Интерактивная HTML-карта отключает движение через prefers-reduced-motion."
       },
       "visualRevision": {
-        "version": 6,
-        "reason": "owner_requested_continuously_looping_route_animation_after_v5_stopped",
+        "version": 7,
+        "reason": "owner_requested_removal_of_personal_github_link_and_same_article_city_navigation",
         "referenceFunctions": [
           "narrow_editorial_column",
           "real_openstreetmap_basemap_with_osrm_road_geometry",
           "continuously_looping_animated_webp_with_static_fallback",
-          "linked_keyboard_accessible_interactive_map",
+          "same_article_city_links_without_public_infrastructure_hostname",
           "visual_break_every_one_or_two_sections",
           "compact_4_3_route_plan_graphic",
           "compact_booking_plan_graphic",
@@ -784,9 +784,7 @@
           "assets/inline/new-zealand-route-plan-ru-v5.webp",
           "assets/inline/new-zealand-route-plan-en-v5.webp",
           "assets/inline/new-zealand-booking-plan-ru-v5.webp",
-          "assets/inline/new-zealand-booking-plan-en-v5.webp",
-          "assets/interactive/new-zealand-south-island-map-ru-v5.html",
-          "assets/interactive/new-zealand-south-island-map-en-v5.html"
+          "assets/inline/new-zealand-booking-plan-en-v5.webp"
         ],
         "copyrightBoundary": "Функции визуального ритма воспроизведены в самостоятельной системе Yotti; чужие исходники, изображения, цвета и фирменное оформление не копировались."
       },
@@ -804,10 +802,9 @@
         },
         "weakestDimensions": [
           "yotti_post_deploy_resync_pending",
-          "yotti_saved_cover_may_remain_legacy_png_until_admin_or_importer_refresh",
-          "safe_in_article_interactive_map_embedding_requires_yotti_site_support"
+          "native_in_article_clickable_map_requires_yotti_site_component"
         ],
-        "editorialChange": "Версия 6 сохраняет человеческий текст, URL, заголовок и исходный publishedAt. Карта OpenStreetMap с дорожной геометрией OSRM теперь непрерывно повторяет спокойный цикл с длинной паузой на полностью прорисованном маршруте; для prefers-reduced-motion остаётся статичный WebP, а отдельная интерактивная карта даёт активные точки и ссылки к разделам. Компактные инфографики 4:3–16:9, оптимизированная WebP-обложка и фотографии сохраняют суммарный медиабюджет ниже 1,2 МБ."
+        "editorialChange": "Версия 7 сохраняет текст, URL, заголовок и исходный publishedAt. Публичная ссылка на личный GitHub Pages удалена; под картой находятся пять ссылок внутри yotti.net на соответствующие разделы RU/EN-статьи. Анимированный WebP остаётся непрерывно зацикленным, а настоящие адаптивные точки поверх карты зафиксированы как задача нативного компонента Yotti, поскольку текущий импортёр удаляет активную разметку."
       }
     },
     {
