@@ -141,7 +141,7 @@ test("принимает маршрутный гид с решением, мод
       decisionSpine: "Маршрут для первой поездки с тремя базами и минимумом переездов.",
       routeStops: ["Город A", "Город B", "Город C"],
       readerJobs: ["выбрать базы", "распределить ночи", "проверить переезды", "спланировать связь", "подготовить запасной путь"],
-      informationModules: ["route-summary-cards", "route-map", "budget-or-data-table"],
+      informationModules: ["route-plan-graphic", "route-map", "booking-plan-graphic"],
       authoritativeSourceCount: 4,
       volatileClaimSourceMapComplete: true,
       animatedVisual: true,
@@ -152,7 +152,7 @@ test("принимает маршрутный гид с решением, мод
   assert.deepEqual(result.errors, []);
 });
 
-test("блокирует маршрутный гид без RSS-устойчивых карточек маршрута", () => {
+test("блокирует маршрутный гид без мобильной инфографики маршрута", () => {
   const result = validateEditorialQueue(policy, { schemaVersion: 1, items: [item({
     contentFormat: "route-or-itinerary",
     enhancedGuide: {
@@ -164,7 +164,7 @@ test("блокирует маршрутный гид без RSS-устойчив
       volatileClaimSourceMapComplete: true,
     },
   })] });
-  assert.match(result.errors.join("\n"), /route-summary-cards/);
+  assert.match(result.errors.join("\n"), /route-plan-graphic/);
 });
 
 test("блокирует готовый материал без отдельного редакторского прохода", () => {
