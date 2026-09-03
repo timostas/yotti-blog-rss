@@ -16,6 +16,16 @@ sources:
 published: false
 ---
 
+<!--
+Visual gate for every new article: one local WebP cover plus exactly six unique
+inline WebP files inside figure elements. Use yotti-photo,
+yotti-information-graphic and, for routes only, yotti-route-map. Every img needs
+its real width/height, unique alt text, decoding="async" and a figcaption; only
+the first inline visual may omit loading="lazy". Take the role mix from
+config/editorial-policy.json and keep the cover-plus-inline payload at or below
+1.2 MB. Raw tables are forbidden. Run npm run visual-check before publishing.
+-->
+
 The opening paragraph should answer the reader’s question in ordinary edited
 English. Do not manufacture a cinematic scene merely to make the opening feel important.
 

@@ -9,6 +9,7 @@ npm ci
 npm test
 npm run queue-report
 npm run style-check -- articles/<slug>-ru.md articles/<slug>-en.md
+npm run visual-check
 npm run build
 xmllint --noout dist/ru/rss.xml
 xmllint --noout dist/en/rss.xml
@@ -63,6 +64,13 @@ Workflow `.github/workflows/publish-rss.yml` собирает проект и п
 Для `published: true` сборка также требует `reviewer`, `reviewedAt`,
 `reviewAfter` и минимум два уникальных HTTPS-источника в `sources`. При
 нарушении любого правила публикация останавливается до исправления статьи.
+
+Для всех новых длинных статей с 3 сентября 2026 года CI дополнительно требует
+ровно семь разных локальных WebP: обложку и шесть встроенных материалов. Их
+состав зависит от формата статьи; обязательны реальные размеры, уникальные alt,
+подписи, адаптивные пропорции и общий бюджет загрузки до 1,2 МБ. Правила и
+публичная проверка после синхронизации описаны в
+`docs/rss-rich-article-visual-standard.md`.
 
 Workflow `Article review report` ежедневно в 09:15 по Москве проверяет
 `reviewAfter`. Просроченные и приближающиеся сроки отображаются в GitHub Actions
