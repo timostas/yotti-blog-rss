@@ -8,6 +8,7 @@
     "queue-report": "node scripts/check-editorial-queue.mjs",
     "review-report": "node scripts/check-reviews.mjs",
     "style-check": "node scripts/check-editorial-style.mjs",
+    "visual-check": "node scripts/check-article-visuals.mjs",
     "test": "node --test"
   },
   "engines": {

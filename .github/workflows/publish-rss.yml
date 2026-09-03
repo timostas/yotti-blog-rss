@@ -45,6 +45,8 @@ jobs:
         run: npm ci
       - name: Run tests
         run: npm test
+      - name: Check article visuals and media budget
+        run: npm run visual-check
       - name: Check changed article style
         if: github.event_name == 'pull_request' || github.event_name == 'push'
         env:
