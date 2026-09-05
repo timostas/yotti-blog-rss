@@ -28,7 +28,14 @@ function futureReadyArticle() {
 test("универсальный визуальный шлюз проверяет обе эталонные локали", async () => {
   const report = await checkRepositoryVisuals({ rootDir: ROOT });
   assert.deepEqual(report.errors, []);
-  assert.equal(report.checked.length, 2);
+  assert.ok(report.checked.length >= 2);
+  assert.deepEqual(
+    report.checked.filter((item) => item.reference).map((item) => item.sourceName).sort(),
+    [
+      "articles/new-zealand-south-island-slow-road-en.md",
+      "articles/new-zealand-south-island-slow-road-ru.md",
+    ],
+  );
   assert.ok(report.checked.every((item) => item.totalImages === 7));
   assert.ok(report.checked.every((item) => item.totalBytes < gate.maximumTotalImageBytesIncludingCover));
 });
