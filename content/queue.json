@@ -3867,67 +3867,495 @@
       "schedule": { "ru": "2026-09-05T15:30:00Z", "en": "2026-09-05T15:30:00Z" },
       "editorialScorecard": { "ru": { "total": 96, "dimensions": { "intent": 15, "utility": 15, "specificity": 14, "trust": 14, "voice": 14, "structure": 9, "technical": 10, "commercialRestraint": 5 } }, "en": { "total": 96, "dimensions": { "intent": 15, "utility": 15, "specificity": 14, "trust": 14, "voice": 14, "structure": 9, "technical": 10, "commercialRestraint": 5 } } },
       "qualityNotes": { "localeTotals": { "ru": 96, "en": 96 }, "weakestDimensions": ["local_specificity", "trust_and_evidence"], "editorialChange": "Отдельный редакторский проход разделил городские и дорожные задачи, убрал обещания покрытия и сделал удаление профиля явным запретом в первой диагностике; короткая QA-правка заменила два неканонических URL на действующие RU/EN-адреса.", "titleCandidatesEvaluated": { "ru": 5, "en": 5 }, "lengthDecision": "RU 723 и EN 848 слов: двухбазовый сценарий, офлайн-набор и четыре диагностические ветки закрыты без общего FAQ." }
+    },
+    {
+      "status": "scheduled",
+      "locales": [
+        "ru",
+        "en"
+      ],
+      "model": {
+        "name": "gpt-5.6-sol",
+        "effort": "high"
+      },
+      "riskReasons": [
+        "catchup_batch_2",
+        "query_cannibalization_checked"
+      ],
+      "generationAttempts": {
+        "ru": 1,
+        "en": 1
+      },
+      "qualityRepairAttempts": 0,
+      "scores": {
+        "utility": 94,
+        "originalValue": 94,
+        "factSupport": 92
+      },
+      "editorialStandardVersion": 2,
+      "editorialPasses": {
+        "ru": 1,
+        "en": 1
+      },
+      "creativeGeneration": {
+        "model": "imagegen-built-in",
+        "attempts": 1
+      },
+      "id": "colombia-medellin-neighbourhood-viewpoints",
+      "topicKey": "medellin-neighbourhood-viewpoint-first-visit",
+      "countryCode": "CO",
+      "region": "south-america",
+      "planKind": "editorial",
+      "searchQuery": {
+        "ru": "Медельин районы и смотровые площадки",
+        "en": "Medellin neighbourhoods and viewpoints"
+      },
+      "workingTitle": {
+        "ru": "Медельин впервые: районы, метро и виды на долину",
+        "en": "First time in Medellín: neighbourhoods, metro rides and valley views"
+      },
+      "intentMap": {
+        "primary": {
+          "ru": "Медельин районы и смотровые площадки для первой поездки",
+          "en": "Medellin neighbourhoods and viewpoints for a first trip"
+        },
+        "neighborIntents": [
+          "medellin-general-guide",
+          "comuna-13-tour",
+          "colombia-country-guide"
+        ],
+        "uniqueReaderOutcome": "Читатель выбирает одну дневную часть города, одну линию подъёма и вечер рядом с жильём.",
+        "cannibalizationDecision": "URL не является общим гидом по городу или Comuna 13: он решает только задачу первого знакомства через две опоры и метро."
+      },
+      "readerPromise": "Выбрать две части города и связать их общественным транспортом без гонки по удалённым точкам.",
+      "internalContextLinks": [
+        "https://yotti.net/esim/colombia",
+        "https://yotti.net/how-it-works"
+      ],
+      "researchSources": [
+        "https://www.medellin.travel/transporte-publico-2/?lang=en",
+        "https://www.medellin.travel/what-to-do-in-medellin-neighborhoods-culture-and-creative-tourism/?lang=en"
+      ],
+      "creative": "assets/covers/colombia-medellin-neighbourhood-viewpoints.webp",
+      "creativeConceptKey": "medellin-cable-car-valley-neighbourhood-afternoon",
+      "creativeBrief": "Кабина канатной дороги над зелёной долиной Медельина, городские кварталы в мягком вечернем свете.",
+      "contentFormat": "destination-inspiration",
+      "schedule": {
+        "ru": "2026-09-05T16:00:00Z",
+        "en": "2026-09-05T16:00:00Z"
+      },
+      "editorialScorecard": {
+        "ru": {
+          "total": 94,
+          "dimensions": {
+            "intent": 15,
+            "utility": 14,
+            "specificity": 14,
+            "trust": 13,
+            "voice": 14,
+            "structure": 9,
+            "technical": 10,
+            "commercialRestraint": 5
+          }
+        },
+        "en": {
+          "total": 94,
+          "dimensions": {
+            "intent": 15,
+            "utility": 14,
+            "specificity": 14,
+            "trust": 13,
+            "voice": 14,
+            "structure": 9,
+            "technical": 10,
+            "commercialRestraint": 5
+          }
+        }
+      },
+      "qualityNotes": {
+        "localeTotals": {
+          "ru": 94,
+          "en": 94
+        },
+        "weakestDimensions": [
+          "trust_and_evidence",
+          "practical_utility"
+        ],
+        "editorialChange": "Редакторский проход сократил перечень районов до двух опор, сделал метро каркасом и выделил Comuna 13 как отдельный осознанный выбор.",
+        "titleCandidatesEvaluated": {
+          "ru": 5,
+          "en": 5
+        },
+        "lengthDecision": "RU 645 и EN 735 слов: материал короче ориентира, потому что задача первого знакомства закрыта двумя опорами и одним транспортным решением без общего каталога достопримечательностей."
+      }
+    },
+    {
+      "status": "scheduled",
+      "locales": [
+        "ru",
+        "en"
+      ],
+      "model": {
+        "name": "gpt-5.6-sol",
+        "effort": "high"
+      },
+      "riskReasons": [
+        "catchup_batch_2",
+        "query_cannibalization_checked"
+      ],
+      "generationAttempts": {
+        "ru": 1,
+        "en": 1
+      },
+      "qualityRepairAttempts": 0,
+      "scores": {
+        "utility": 94,
+        "originalValue": 94,
+        "factSupport": 92
+      },
+      "editorialStandardVersion": 2,
+      "editorialPasses": {
+        "ru": 1,
+        "en": 1
+      },
+      "creativeGeneration": {
+        "model": "imagegen-built-in",
+        "attempts": 1
+      },
+      "id": "germany-leipzig-music-courtyards-weekend",
+      "topicKey": "leipzig-music-courtyards-weekend",
+      "countryCode": "DE",
+      "region": "central-europe",
+      "planKind": "editorial",
+      "searchQuery": {
+        "ru": "Лейпциг музыка дворы выходные",
+        "en": "Leipzig music courtyards weekend"
+      },
+      "workingTitle": {
+        "ru": "Выходные в Лейпциге: музыка, пассажи и спокойные кварталы",
+        "en": "A Leipzig weekend of music, passageways and quiet neighbourhoods"
+      },
+      "intentMap": {
+        "primary": {
+          "ru": "выходные в Лейпциге через музыку и пассажи",
+          "en": "Leipzig weekend through music and passageways"
+        },
+        "neighborIntents": [
+          "leipzig-general-guide",
+          "bach-museum-guide",
+          "leipzig-food-guide"
+        ],
+        "uniqueReaderOutcome": "Читатель строит два компактных культурных дня и выбирает только один жилой район.",
+        "cannibalizationDecision": "Материал не каталогизирует Лейпциг и не заменяет отдельные музейные гиды; уникальная задача — ритм выходных из музыкальных и пространственных контрастов."
+      },
+      "readerPromise": "Собрать два дня вокруг музыкального наследия и городских пассажей, оставив время на один жилой район.",
+      "internalContextLinks": [
+        "https://yotti.net/esim/germany",
+        "https://yotti.net/how-it-works"
+      ],
+      "researchSources": [
+        "https://www.leipzig.travel/en/discover/city-of-music-leipzig",
+        "https://www.leipzig.travel/recherchetext/leipzig-passagen-durchhoefe-und-messehoefe"
+      ],
+      "creative": "assets/covers/germany-leipzig-music-courtyards-weekend.webp",
+      "creativeConceptKey": "leipzig-arcade-record-shop-bicycle-evening",
+      "creativeBrief": "Старый городской пассаж Лейпцига, витрина магазина пластинок и велосипед в вечернем свете.",
+      "contentFormat": "culture-food-or-local-experience",
+      "schedule": {
+        "ru": "2026-09-05T16:30:00Z",
+        "en": "2026-09-05T16:30:00Z"
+      },
+      "editorialScorecard": {
+        "ru": {
+          "total": 94,
+          "dimensions": {
+            "intent": 15,
+            "utility": 14,
+            "specificity": 14,
+            "trust": 13,
+            "voice": 14,
+            "structure": 9,
+            "technical": 10,
+            "commercialRestraint": 5
+          }
+        },
+        "en": {
+          "total": 94,
+          "dimensions": {
+            "intent": 15,
+            "utility": 14,
+            "specificity": 14,
+            "trust": 13,
+            "voice": 14,
+            "structure": 9,
+            "technical": 10,
+            "commercialRestraint": 5
+          }
+        }
+      },
+      "qualityNotes": {
+        "localeTotals": {
+          "ru": 94,
+          "en": 94
+        },
+        "weakestDimensions": [
+          "trust_and_evidence",
+          "structure_and_readability"
+        ],
+        "editorialChange": "Редакторский проход заменил музыкальный каталог двумя связками, развёл концерт и богослужение и оставил один район вместо гонки по двум.",
+        "titleCandidatesEvaluated": {
+          "ru": 5,
+          "en": 5
+        },
+        "lengthDecision": "RU 695 и EN 830 слов: материал короче ориентира, потому что два самостоятельных дня и правила бронирования закрыты без энциклопедического обзора композиторов и пассажей."
+      }
+    },
+    {
+      "status": "scheduled",
+      "locales": [
+        "ru",
+        "en"
+      ],
+      "model": {
+        "name": "gpt-5.6-sol",
+        "effort": "high"
+      },
+      "riskReasons": [
+        "catchup_batch_2",
+        "query_cannibalization_checked"
+      ],
+      "generationAttempts": {
+        "ru": 1,
+        "en": 1
+      },
+      "qualityRepairAttempts": 0,
+      "scores": {
+        "utility": 94,
+        "originalValue": 94,
+        "factSupport": 92
+      },
+      "editorialStandardVersion": 2,
+      "editorialPasses": {
+        "ru": 1,
+        "en": 1
+      },
+      "creativeGeneration": {
+        "model": "imagegen-built-in",
+        "attempts": 1
+      },
+      "id": "kenya-nairobi-museum-forest-city-day",
+      "topicKey": "nairobi-museum-forest-city-day",
+      "countryCode": "KE",
+      "region": "east-africa",
+      "planKind": "editorial",
+      "searchQuery": {
+        "ru": "Найроби музей лес день",
+        "en": "Nairobi museum forest day"
+      },
+      "workingTitle": {
+        "ru": "Один день в Найроби: музей, городской лес и ранний ужин",
+        "en": "One day in Nairobi: a museum, an urban forest and an early dinner"
+      },
+      "intentMap": {
+        "primary": {
+          "ru": "самостоятельный день в Найроби музей и лес",
+          "en": "independent Nairobi museum and forest day"
+        },
+        "neighborIntents": [
+          "nairobi-general-guide",
+          "nairobi-safari-day",
+          "karura-forest-guide"
+        ],
+        "uniqueReaderOutcome": "Читатель проводит день между двумя крупными остановками, выбирает конкретные ворота и возвращается до темноты.",
+        "cannibalizationDecision": "URL не выдаёт город за сафари и не дублирует полный гид по Karura; его задача — безопасно связать музей, одну лесную петлю и ранний финиш."
+      },
+      "readerPromise": "Провести самостоятельный городской день между музеем и зелёной зоной, не выдавая его за замену сафари.",
+      "internalContextLinks": [
+        "https://yotti.net/esim/kenya",
+        "https://yotti.net/how-it-works"
+      ],
+      "researchSources": [
+        "https://museums.or.ke/nairobi-national-museum/",
+        "https://friendsofkarura.org/forest-maps/"
+      ],
+      "creative": "assets/covers/kenya-nairobi-museum-forest-city-day.webp",
+      "creativeConceptKey": "nairobi-forest-path-city-skyline-morning",
+      "creativeBrief": "Тропа в городском лесу Найроби, сквозь деревья виден силуэт города, утренний естественный свет.",
+      "contentFormat": "practical-travel-scenario",
+      "schedule": {
+        "ru": "2026-09-05T18:00:00Z",
+        "en": "2026-09-05T18:00:00Z"
+      },
+      "editorialScorecard": {
+        "ru": {
+          "total": 94,
+          "dimensions": {
+            "intent": 15,
+            "utility": 14,
+            "specificity": 14,
+            "trust": 13,
+            "voice": 14,
+            "structure": 9,
+            "technical": 10,
+            "commercialRestraint": 5
+          }
+        },
+        "en": {
+          "total": 94,
+          "dimensions": {
+            "intent": 15,
+            "utility": 14,
+            "specificity": 14,
+            "trust": 13,
+            "voice": 14,
+            "structure": 9,
+            "technical": 10,
+            "commercialRestraint": 5
+          }
+        }
+      },
+      "qualityNotes": {
+        "localeTotals": {
+          "ru": 94,
+          "en": 94
+        },
+        "weakestDimensions": [
+          "trust_and_evidence",
+          "practical_utility"
+        ],
+        "editorialChange": "Редакторский проход сделал ворота Karura отдельным решением, убрал точное обещание времени в трафике и оставил две полноценные остановки.",
+        "titleCandidatesEvaluated": {
+          "ru": 5,
+          "en": 5
+        },
+        "lengthDecision": "RU 587 и EN 720 слов: материал короче ориентира, потому что один городской день исчерпывающе описан через две остановки, конкретные ворота, одну петлю и ранний финиш без искусственного FAQ."
+      }
+    },
+    {
+      "status": "scheduled",
+      "locales": [
+        "ru",
+        "en"
+      ],
+      "model": {
+        "name": "gpt-5.6-sol",
+        "effort": "high"
+      },
+      "riskReasons": [
+        "catchup_batch_2",
+        "query_cannibalization_checked"
+      ],
+      "generationAttempts": {
+        "ru": 1,
+        "en": 1
+      },
+      "qualityRepairAttempts": 0,
+      "scores": {
+        "utility": 94,
+        "originalValue": 94,
+        "factSupport": 92
+      },
+      "editorialStandardVersion": 2,
+      "editorialPasses": {
+        "ru": 1,
+        "en": 1
+      },
+      "creativeGeneration": {
+        "model": "imagegen-built-in",
+        "attempts": 1
+      },
+      "id": "buy-esim-bolivia-la-paz-uyuni",
+      "topicKey": "bolivia-esim-la-paz-uyuni",
+      "countryCode": "BO",
+      "region": "south-america",
+      "planKind": "buy-esim",
+      "searchQuery": {
+        "ru": "купить есим для Боливии",
+        "en": "buy eSIM for Bolivia"
+      },
+      "workingTitle": {
+        "ru": "Купить есим для Боливии: связь между Ла-Пасом и Уюни",
+        "en": "Buy an eSIM for Bolivia: staying connected from La Paz to Uyuni"
+      },
+      "intentMap": {
+        "primary": {
+          "ru": "купить есим для Боливии для Ла-Паса и Уюни",
+          "en": "buy an eSIM for Bolivia for La Paz and Uyuni"
+        },
+        "neighborIntents": [
+          "bolivia-country-guide",
+          "esim-installation-guide",
+          "travel-data-allowance"
+        ],
+        "uniqueReaderOutcome": "Читатель готовит профиль дома, назначает данным городские задачи и сохраняет автономный набор для Уюни.",
+        "cannibalizationDecision": "Материал не повторяет общий гайд установки или расчёта данных: коммерческий запрос ограничен конкретной страной и разницей между городом и удалённым маршрутом."
+      },
+      "readerPromise": "Разделить городские задачи и участки маршрута, где офлайн-карта важнее обещаний постоянного сигнала.",
+      "internalContextLinks": [
+        "https://yotti.net/esim/bolivia",
+        "https://yotti.net/how-it-works"
+      ],
+      "researchSources": [
+        "https://conocebolivia.turismoyculturas.gob.bo/wp-content/uploads/2025/12/BOLIVIA-TE-ESPERA-34.pdf",
+        "https://yotti.net/esim/bolivia"
+      ],
+      "creative": "assets/covers/buy-esim-bolivia-la-paz-uyuni.webp",
+      "creativeConceptKey": "uyuni-salt-flat-bus-side-dawn-reflection",
+      "creativeBrief": "Небольшой туристический автобус сбоку на солончаке Уюни на рассвете, отражения и широкий горизонт.",
+      "contentFormat": "connectivity-and-esim",
+      "schedule": {
+        "ru": "2026-09-05T18:30:00Z",
+        "en": "2026-09-05T18:30:00Z"
+      },
+      "editorialScorecard": {
+        "ru": {
+          "total": 94,
+          "dimensions": {
+            "intent": 15,
+            "utility": 14,
+            "specificity": 14,
+            "trust": 13,
+            "voice": 14,
+            "structure": 9,
+            "technical": 10,
+            "commercialRestraint": 5
+          }
+        },
+        "en": {
+          "total": 94,
+          "dimensions": {
+            "intent": 15,
+            "utility": 14,
+            "specificity": 14,
+            "trust": 13,
+            "voice": 14,
+            "structure": 9,
+            "technical": 10,
+            "commercialRestraint": 5
+          }
+        }
+      },
+      "qualityNotes": {
+        "localeTotals": {
+          "ru": 94,
+          "en": 94
+        },
+        "weakestDimensions": [
+          "trust_and_evidence",
+          "commercial_restraint"
+        ],
+        "editorialChange": "Редакторский проход разделил город и удалённый маршрут, сделал офлайн-набор обязательным и вынес безопасную диагностику без удаления профиля.",
+        "titleCandidatesEvaluated": {
+          "ru": 5,
+          "en": 5
+        },
+        "lengthDecision": "RU 653 и EN 744 слова: материал короче ориентира, потому что выбор, установка, офлайн-план и диагностика закрыты без повторения общего руководства по есим."
+      }
     }
   ],
   "plannedPublications": [
-  {
+    {
     "planOrder": 1,
-    "id": "colombia-medellin-neighbourhood-viewpoints",
-    "countryCode": "CO",
-    "region": "south-america",
-    "planKind": "editorial",
-    "contentFormat": "destination-inspiration",
-    "searchQuery": { "ru": "Медельин районы и смотровые площадки", "en": "Medellin neighbourhoods and viewpoints" },
-    "semanticIntent": { "primary": "medellin-neighbourhood-viewpoint-first-visit", "secondary": ["что посмотреть в Медельине", "Medellin first trip areas"] },
-    "workingTitle": { "ru": "Медельин впервые: районы, метро и виды на долину", "en": "First time in Medellin: neighbourhoods, metro rides and valley views" },
-    "readerPromise": "Выбрать две части города и связать их общественным транспортом без гонки по удалённым точкам.",
-    "creativeConceptKey": "medellin-cable-car-valley-neighbourhood-afternoon",
-    "creativeBrief": "Кабина канатной дороги над зелёной долиной Медельина, городские кварталы в мягком вечернем свете."
-  },
-  {
-    "planOrder": 2,
-    "id": "germany-leipzig-music-courtyards-weekend",
-    "countryCode": "DE",
-    "region": "central-europe",
-    "planKind": "editorial",
-    "contentFormat": "culture-food-or-local-experience",
-    "searchQuery": { "ru": "Лейпциг музыка дворы выходные", "en": "Leipzig music courtyards weekend" },
-    "semanticIntent": { "primary": "leipzig-music-courtyards-weekend", "secondary": ["что посмотреть в Лейпциге за выходные", "Leipzig cultural weekend"] },
-    "workingTitle": { "ru": "Выходные в Лейпциге: музыка, пассажи и спокойные кварталы", "en": "A Leipzig weekend of music, passageways and quiet neighbourhoods" },
-    "readerPromise": "Собрать два дня вокруг музыкального наследия и городских пассажей, оставив время на один жилой район.",
-    "creativeConceptKey": "leipzig-arcade-record-shop-bicycle-evening",
-    "creativeBrief": "Старый городской пассаж Лейпцига, витрина магазина пластинок и велосипед в вечернем свете."
-  },
-  {
-    "planOrder": 3,
-    "id": "kenya-nairobi-museum-forest-city-day",
-    "countryCode": "KE",
-    "region": "east-africa",
-    "planKind": "editorial",
-    "contentFormat": "practical-travel-scenario",
-    "searchQuery": { "ru": "Найроби музей лес день", "en": "Nairobi museum forest day" },
-    "semanticIntent": { "primary": "nairobi-museum-forest-city-day", "secondary": ["день в Найроби без сафари", "Nairobi city day itinerary"] },
-    "workingTitle": { "ru": "Один день в Найроби: музей, городской лес и ранний ужин", "en": "One day in Nairobi: a museum, an urban forest and an early dinner" },
-    "readerPromise": "Провести самостоятельный городской день между музеем и зелёной зоной, не выдавая его за замену сафари.",
-    "creativeConceptKey": "nairobi-forest-path-city-skyline-morning",
-    "creativeBrief": "Тропа в городском лесу Найроби, сквозь деревья виден силуэт города, утренний естественный свет."
-  },
-  {
-    "planOrder": 4,
-    "id": "buy-esim-bolivia-la-paz-uyuni",
-    "countryCode": "BO",
-    "region": "south-america",
-    "planKind": "buy-esim",
-    "contentFormat": "connectivity-and-esim",
-    "searchQuery": { "ru": "купить есим для Боливии", "en": "buy eSIM for Bolivia" },
-    "semanticIntent": { "primary": "bolivia-esim-la-paz-uyuni", "secondary": ["есим Боливия интернет", "Bolivia travel eSIM"] },
-    "workingTitle": { "ru": "Купить есим для Боливии: связь между Ла-Пасом и Уюни", "en": "Buy an eSIM for Bolivia: staying connected from La Paz to Uyuni" },
-    "readerPromise": "Разделить городские задачи и участки маршрута, где офлайн-карта важнее обещаний постоянного сигнала.",
-    "creativeConceptKey": "uyuni-salt-flat-bus-side-dawn-reflection",
-    "creativeBrief": "Небольшой туристический автобус сбоку на солончаке Уюни на рассвете, отражения и широкий горизонт."
-  },
-  {
-    "planOrder": 5,
     "id": "finland-turku-archipelago-two-day-route",
     "countryCode": "FI",
     "region": "northern-europe",
@@ -3940,8 +4368,8 @@
     "creativeConceptKey": "turku-archipelago-yellow-ferry-bicycles-summer",
     "creativeBrief": "Небольшой жёлтый паром в архипелаге Турку, велосипеды сбоку и низкое северное солнце."
   },
-  {
-    "planOrder": 6,
+    {
+    "planOrder": 2,
     "id": "malaysia-penang-craft-food-afternoon",
     "countryCode": "MY",
     "region": "southeast-asia",
@@ -3954,8 +4382,8 @@
     "creativeConceptKey": "george-town-rattan-workshop-coffee-window",
     "creativeBrief": "Мастерская ротанга в Джорджтауне, руки мастера и окно старого шопхауса в боковом свете."
   },
-  {
-    "planOrder": 7,
+    {
+    "planOrder": 3,
     "id": "canada-halifax-waterfront-rainy-day",
     "countryCode": "CA",
     "region": "north-america",
@@ -3968,8 +4396,8 @@
     "creativeConceptKey": "halifax-harbour-rain-ferry-window-soup",
     "creativeBrief": "Гавань Галифакса через дождливое окно паромного терминала, на переднем плане тёплая миска супа."
   },
-  {
-    "planOrder": 8,
+    {
+    "planOrder": 4,
     "id": "buy-esim-botswana-gaborone-okavango",
     "countryCode": "BW",
     "region": "southern-africa",
@@ -3982,7 +4410,7 @@
     "creativeConceptKey": "okavango-mokoro-side-reeds-evening",
     "creativeBrief": "Мокоро сбоку среди тростника в дельте Окаванго, мягкий вечерний свет и спокойная вода."
   }
-],
+  ],
   "reservePublications": [
     {
       "planOrder": 1,
