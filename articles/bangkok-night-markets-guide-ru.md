@@ -15,14 +15,13 @@ sources:
   - "https://www.tourismthailand.org/Destinations/Provinces/bangkok/219"
   - "https://www.tourismthailand.org/Articles/1-day-trip-boat-journey-in-bangkok-enjoy-a-great-time-alongside-the-river-with-bangkok-s-boat-service"
   - "https://www.tourismthailand.org/Articles/phahurat-see-indian-culture-with-your-own-eye"
-  - "https://publicspace.bangkok.go.th/Spaces/Info/2FBD1377-1BC8-4565-86CA-2C647E59F18A"
   - "https://www.who.int/activities/promoting-safe-food-handling/five-key-to-safer-food/"
   - "https://www.who.int/docs/default-source/wpro---documents/posters/food-safety/guide-safe-food-for-travellers.pdf?sfvrsn=6d0d3448_2"
   - "https://www.who.int/docs/default-source/wpro---documents/posters/food-safety/food-allergens-infographic---digital--english.-wpro.pdf"
   - "https://yotti.net/esim/thailand"
 editorial:
   authorUrl: "https://yotti.net/about"
-  modifiedAt: "2026-09-06T13:07:25.000Z"
+  modifiedAt: "2026-09-06T19:36:00.000Z"
   alternate:
     language: "en"
     url: "https://yotti.net/en/blog/thailand/bangkok-night-markets-a-street-food-evening-with-room-to-explore"
@@ -35,8 +34,6 @@ editorial:
       url: "https://www.tourismthailand.org/Articles/1-day-trip-boat-journey-in-bangkok-enjoy-a-great-time-alongside-the-river-with-bangkok-s-boat-service"
     - title: "Tourism Authority of Thailand: Phahurat"
       url: "https://www.tourismthailand.org/Articles/phahurat-see-indian-culture-with-your-own-eye"
-    - title: "Bangkok Metropolitan Administration: Chatuchak Market"
-      url: "https://publicspace.bangkok.go.th/Spaces/Info/2FBD1377-1BC8-4565-86CA-2C647E59F18A"
     - title: "WHO: Five keys to safer food"
       url: "https://www.who.int/activities/promoting-safe-food-handling/five-key-to-safer-food/"
     - title: "WHO: Guide on safe food for travellers"
@@ -47,6 +44,10 @@ cover:
   url: "https://timostas.github.io/yotti-blog-rss/assets/covers/bangkok-night-markets-guide-remediation.webp"
   type: "image/webp"
   alt: "Повар готовит еду в воке на вечерней улице Яоварата"
+  width: 1600
+  height: 900
+  srcset: "https://timostas.github.io/yotti-blog-rss/assets/covers/bangkok-night-markets-guide-remediation-384w.webp 384w, https://timostas.github.io/yotti-blog-rss/assets/covers/bangkok-night-markets-guide-remediation-720w.webp 720w, https://timostas.github.io/yotti-blog-rss/assets/covers/bangkok-night-markets-guide-remediation-960w.webp 960w, https://timostas.github.io/yotti-blog-rss/assets/covers/bangkok-night-markets-guide-remediation.webp 1600w"
+  sizes: "(max-width: 760px) calc(100vw - 56px), 760px"
 published: true
 ---
 
@@ -54,11 +55,25 @@ published: true
 
 У этого вечера простая логика: заранее сохранить точку начала и место, откуда удобно возвращаться, сначала осмотреть ближайшие улицы, затем чередовать небольшие порции с короткими прогулками. Такой план оставляет свободу выбрать еду на месте и не превращает Яоварат в список обязательных киосков.
 
+План укладывается в четыре шага: сохранить выход, пройти первый отрезок без заказа, выбрать две-три небольшие порции и вернуться к точке встречи.
+
+<figure class="yotti-information-graphic">
+  <img src="https://timostas.github.io/yotti-blog-rss/assets/inline/bangkok-yaowarat-evening-sequence-ru-v1.webp" srcset="https://timostas.github.io/yotti-blog-rss/assets/inline/bangkok-yaowarat-evening-sequence-ru-v1-384w.webp 384w, https://timostas.github.io/yotti-blog-rss/assets/inline/bangkok-yaowarat-evening-sequence-ru-v1-720w.webp 720w, https://timostas.github.io/yotti-blog-rss/assets/inline/bangkok-yaowarat-evening-sequence-ru-v1-960w.webp 960w, https://timostas.github.io/yotti-blog-rss/assets/inline/bangkok-yaowarat-evening-sequence-ru-v1.webp 1440w" sizes="(max-width: 760px) calc(100vw - 56px), 760px" width="1440" height="900" decoding="async" alt="План вечера в Яоварате: сохранить выход, пройти первый отрезок без заказа, выбрать две-три небольшие порции и вернуться к точке встречи.">
+  <figcaption>План задаёт ритм, а не список обязательных киосков.</figcaption>
+</figure>
+
 ## Почему для первого вечера подходит Яоварат
 
-Туристическое управление Таиланда называет Яоварат бангкокским Чайнатауном и описывает район как оживлённое место для вечерней еды. Это не огороженный рынок с одним входом, а торговый городской квартал: основные улицы, переулки, рестораны и уличные кухни работают как единая среда. Поэтому важнее выбрать границы прогулки, чем пытаться «обойти рынок целиком».
+Туристическое управление Таиланда связывает Яоварат с бангкокским Чайнатауном и вечерней едой; в речном маршруте Ratchawong Pier служит географическим ориентиром этой части города. Это не огороженный рынок и не рекомендация текущего способа прибытия: для вечера нужны короткий отрезок улиц и заранее выбранная точка выхода, а фактический маршрут проверяется на дату поездки.
+
+<figure class="yotti-photo">
+  <img src="https://timostas.github.io/yotti-blog-rss/assets/inline/bangkok-yaowarat-wide-street-v1.webp" srcset="https://timostas.github.io/yotti-blog-rss/assets/inline/bangkok-yaowarat-wide-street-v1-384w.webp 384w, https://timostas.github.io/yotti-blog-rss/assets/inline/bangkok-yaowarat-wide-street-v1-720w.webp 720w, https://timostas.github.io/yotti-blog-rss/assets/inline/bangkok-yaowarat-wide-street-v1-960w.webp 960w, https://timostas.github.io/yotti-blog-rss/assets/inline/bangkok-yaowarat-wide-street-v1.webp 1440w" sizes="(max-width: 760px) calc(100vw - 56px), 760px" width="1440" height="960" loading="lazy" decoding="async" alt="Широкий вид вечерней улицы Яоварата с потоком пешеходов и светом витрин.">
+  <figcaption>Яоварат — городской квартал, поэтому важнее границы прогулки, чем воображаемый вход на рынок.</figcaption>
+</figure>
 
 На первый раз полезно оставить в плане только Яоварат. Он даёт и еду, и городскую прогулку, а выход можно назначить рядом с заранее выбранной транспортной точкой. Если компания разделилась, всем проще вернуться к одной сохранённой метке, чем искать друг друга по названию случайного прилавка.
+
+Если точка встречи и сообщения группы завязаны на WhatsApp, до выхода проверьте, [как WhatsApp работает с туристической есим](https://yotti.net/blog/kak-polzovatsya-whatsapp-s-turisticheskoy-esim). Это не заменяет сохранённую офлайн-метку.
 
 ## Вечер в четырёх отрезках
 
@@ -69,6 +84,11 @@ published: true
 Основное блюдо удобно оставить на середину прогулки. К этому моменту уже ясно, насколько людно, хочется ли сидеть или продолжать идти и сколько сил осталось. Последняя часть маршрута ведёт не к ещё одной обязательной покупке, а к сохранённой точке возвращения. Там проще проверить машину в приложении, показать водителю адрес или дойти до выбранного транспорта.
 
 Если толпа стала утомлять раньше, маршрут можно закончить после первой или второй остановки. В Яоварате ценен сам квартал; количество заказов не определяет удачный вечер.
+
+<figure class="yotti-photo">
+  <img src="https://timostas.github.io/yotti-blog-rss/assets/inline/bangkok-yaowarat-small-dishes-v1.webp" srcset="https://timostas.github.io/yotti-blog-rss/assets/inline/bangkok-yaowarat-small-dishes-v1-384w.webp 384w, https://timostas.github.io/yotti-blog-rss/assets/inline/bangkok-yaowarat-small-dishes-v1-720w.webp 720w, https://timostas.github.io/yotti-blog-rss/assets/inline/bangkok-yaowarat-small-dishes-v1-960w.webp 960w, https://timostas.github.io/yotti-blog-rss/assets/inline/bangkok-yaowarat-small-dishes-v1.webp 1440w" sizes="(max-width: 760px) calc(100vw - 56px), 760px" width="1440" height="960" loading="lazy" decoding="async" alt="Несколько небольших блюд на узкой стойке, которыми делится компания во время прогулки.">
+  <figcaption>Небольшая первая порция оставляет выбор следующей остановки открытым.</figcaption>
+</figure>
 
 ## Что действительно можно проверить перед заказом
 
@@ -82,18 +102,33 @@ published: true
 - обращать внимание, не соприкасаются ли готовые продукты с сырыми мясом, птицей или морепродуктами;
 - мыть руки перед едой и пить воду из упаковки с целой крышкой, если безопасность местной воды нельзя подтвердить.
 
-Эти признаки снижают часть риска, но не делают ни один прилавок гарантированно безопасным. При серьёзной пищевой аллергии карточка с переводом помогает задать вопрос, однако не исключает незаявленный ингредиент или перекрёстный контакт. Если продавец не может уверенно объяснить состав и приготовление, разумнее пропустить блюдо. При аллергической реакции нужна экстренная медицинская помощь.
+Эти признаки снижают часть риска, но не делают ни один прилавок гарантированно безопасным. При серьёзной пищевой аллергии переведённая заметка может помочь задать вопрос, но не гарантирует состав блюда и отсутствие перекрёстного контакта. Если продавец не может уверенно объяснить ингредиенты и приготовление, разумнее пропустить блюдо. При аллергической реакции нужна экстренная медицинская помощь.
+
+<figure class="yotti-photo">
+  <img src="https://timostas.github.io/yotti-blog-rss/assets/inline/bangkok-hot-cooked-food-boundary-v1.webp" srcset="https://timostas.github.io/yotti-blog-rss/assets/inline/bangkok-hot-cooked-food-boundary-v1-384w.webp 384w, https://timostas.github.io/yotti-blog-rss/assets/inline/bangkok-hot-cooked-food-boundary-v1-720w.webp 720w, https://timostas.github.io/yotti-blog-rss/assets/inline/bangkok-hot-cooked-food-boundary-v1-960w.webp 960w, https://timostas.github.io/yotti-blog-rss/assets/inline/bangkok-hot-cooked-food-boundary-v1.webp 1440w" sizes="(max-width: 760px) calc(100vw - 56px), 760px" width="1440" height="960" loading="lazy" decoding="async" alt="Горячее приготовленное блюдо подают отдельно от сырых ингредиентов.">
+  <figcaption>Видимый жар и разделение продуктов помогают принять решение, но не гарантируют безопасность точки.</figcaption>
+</figure>
 
 ## Что вынести в отдельный день
 
 Сампенг расположен рядом, но официальный материал TAT отдельно отмечает его дневную торговую роль. Пхахурат интересен как район индийской общины и тканей, однако добавлять его к вечеру стоит только после проверки текущего режима конкретных мест. Эти кварталы можно связать с Яоваратом днём, а вечер оставить для еды без спешки.
 
-Чатучак — рынок выходного дня и самостоятельная большая поездка. Он подходит для долгого шопинга, но не улучшает первый вечер в Яоварате: дорога между районами съест время, которое можно провести пешком. Перед посещением нужно свериться с актуальным официальным расписанием; старые часы из путеводителей быстро теряют смысл.
+<figure class="yotti-photo">
+  <img src="https://timostas.github.io/yotti-blog-rss/assets/inline/bangkok-daytime-textile-lane-v1.webp" srcset="https://timostas.github.io/yotti-blog-rss/assets/inline/bangkok-daytime-textile-lane-v1-384w.webp 384w, https://timostas.github.io/yotti-blog-rss/assets/inline/bangkok-daytime-textile-lane-v1-720w.webp 720w, https://timostas.github.io/yotti-blog-rss/assets/inline/bangkok-daytime-textile-lane-v1-960w.webp 960w, https://timostas.github.io/yotti-blog-rss/assets/inline/bangkok-daytime-textile-lane-v1.webp 1440w" sizes="(max-width: 760px) calc(100vw - 56px), 760px" width="1440" height="960" loading="lazy" decoding="async" alt="Дневной торговый проход с рулонами ткани в старом Бангкоке.">
+  <figcaption>Сампенг и Пхахурат лучше проверять как отдельный дневной план, а не добавлять к ужину.</figcaption>
+</figure>
+
+Чатучак — рынок выходного дня и самостоятельная большая поездка. Он подходит для долгого шопинга, но не улучшает первый вечер в Яоварате: дорога между районами съест время, которое можно провести пешком. Если Чатучак нужен в этой поездке, выделите для него отдельный день; конкретные часы эта статья не фиксирует.
 
 ## Связь нужна для выхода, а не для ленты
 
-До поездки сохраните офлайн адрес отеля и снимок точки возвращения. Мобильный интернет пригодится для текущего маршрута, перевода короткой фразы, связи с попутчиками и заказа машины. Для данных можно заранее подобрать [есим для Таиланда от Yotti](https://yotti.net/esim/thailand), если конкретная модель телефона поддерживает есим. Условия и объём пакета лучше смотреть на странице направления перед покупкой, а порядок установки — в [инструкции Yotti](https://yotti.net/how-it-works).
+До поездки сохраните офлайн адрес отеля и точку возвращения. Мобильный интернет пригодится для текущего маршрута, перевода короткой фразы, сообщений и заказа машины. Для данных можно заранее подобрать [есим для Таиланда от Yotti](https://yotti.net/esim/thailand), если сначала [проверить поддержку есим у точной модели телефона](https://yotti.net/blog/kakie-telefony-podderzhivayut-esim-kak-ne-oshibitsya-s-modelyu). Затем разберите, как [установить есим до поездки без преждевременного запуска пакета](https://yotti.net/blog/kak-ustanovit-esim-pered-poezdkoy-i-ne-zapustit-paket-ranshe-vremeni); живые условия и объём пакета остаются на странице направления.
 
 Фотографии удобнее делать там, где камера не мешает повару и проходящим людям. В сумерках в кадре могут одновременно остаться цвет неба и свет вывесок, но погода и фактическая работа улицы важнее расчётного времени «синего часа». Для близкого портрета нужно понятное согласие; широкий кадр не должен перекрывать проход.
+
+<figure class="yotti-photo">
+  <img src="https://timostas.github.io/yotti-blog-rss/assets/inline/bangkok-respectful-photographer-v1.webp" srcset="https://timostas.github.io/yotti-blog-rss/assets/inline/bangkok-respectful-photographer-v1-384w.webp 384w, https://timostas.github.io/yotti-blog-rss/assets/inline/bangkok-respectful-photographer-v1-720w.webp 720w, https://timostas.github.io/yotti-blog-rss/assets/inline/bangkok-respectful-photographer-v1-960w.webp 960w, https://timostas.github.io/yotti-blog-rss/assets/inline/bangkok-respectful-photographer-v1.webp 1440w" sizes="(max-width: 760px) calc(100vw - 56px), 760px" width="1440" height="960" loading="lazy" decoding="async" alt="Фотограф снимает вечернюю улицу с края пешеходного потока, не перекрывая проход.">
+  <figcaption>Широкий кадр и заранее выбранный выход сохраняют рабочий ритм улицы.</figcaption>
+</figure>
 
 Хороший первый вечер заканчивается там же, где начался его план: в одном районе, с понятным выходом и без попытки вместить весь ночной Бангкок в несколько часов.
