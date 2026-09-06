@@ -22,7 +22,7 @@ sources:
   - "https://yotti.net/how-it-works"
 editorial:
   authorUrl: "https://yotti.net/about"
-  modifiedAt: "2026-09-06T12:49:43.000Z"
+  modifiedAt: "2026-09-06T19:31:00.000Z"
   imageTitle: "Проверка мобильных данных на есим"
   imageDescription: "Путешественник в холле отеля проверяет на телефоне линию мобильных данных"
   alternate:
@@ -37,12 +37,18 @@ editorial:
       url: "https://support.google.com/pixelphone/answer/2926415?hl=en"
     - title: "Samsung Support: SIM manager и основная SIM"
       url: "https://www.samsung.com/us/support/answer/ANS10001619/"
+    - title: "Apple Support: последствия сброса сетевых настроек в общей инструкции"
+      url: "https://support.apple.com/en-us/111786"
     - title: "Yotti: установка, роуминг и одноразовый QR-код"
       url: "https://yotti.net/how-it-works"
 cover:
   url: "https://timostas.github.io/yotti-blog-rss/assets/covers/esim-internet-not-working-remediation.webp"
   type: "image/webp"
   alt: "Путешественник в холле отеля проверяет настройки мобильных данных на телефоне"
+  width: 1600
+  height: 900
+  srcset: "https://timostas.github.io/yotti-blog-rss/assets/covers/esim-internet-not-working-remediation-384w.webp 384w, https://timostas.github.io/yotti-blog-rss/assets/covers/esim-internet-not-working-remediation-720w.webp 720w, https://timostas.github.io/yotti-blog-rss/assets/covers/esim-internet-not-working-remediation-960w.webp 960w, https://timostas.github.io/yotti-blog-rss/assets/covers/esim-internet-not-working-remediation.webp 1600w"
+  sizes: "(max-width: 760px) calc(100vw - 56px), 760px"
 published: true
 ---
 
@@ -52,9 +58,19 @@ published: true
 
 Перед первым изменением зафиксируйте исходное состояние: название оператора на экране, уровень сигнала, выбранную линию данных и статус пакета в заказе. Достаточно короткой заметки или снимков экранов без QR-кода и личных данных. Если связь появилась после одного переключателя, эта запись покажет причину; если нет, поддержке не придётся заново выяснять, что уже проверено. Не меняйте одновременно APN, выбор сети и несколько параметров SIM: результат такого эксперимента невозможно связать с одним действием.
 
+<figure class="yotti-information-graphic">
+  <img src="https://timostas.github.io/yotti-blog-rss/assets/inline/esim-internet-not-working-symptom-splitter-ru-v1.webp" srcset="https://timostas.github.io/yotti-blog-rss/assets/inline/esim-internet-not-working-symptom-splitter-ru-v1-384w.webp 384w, https://timostas.github.io/yotti-blog-rss/assets/inline/esim-internet-not-working-symptom-splitter-ru-v1-720w.webp 720w, https://timostas.github.io/yotti-blog-rss/assets/inline/esim-internet-not-working-symptom-splitter-ru-v1-960w.webp 960w, https://timostas.github.io/yotti-blog-rss/assets/inline/esim-internet-not-working-symptom-splitter-ru-v1.webp 1440w" sizes="(max-width: 760px) calc(100vw - 56px), 760px" width="1440" height="900" decoding="async" alt="Схема диагностики: отдельный сбой приложения, отсутствие данных, медленная связь и отсутствие сети ведут к разным проверкам.">
+  <figcaption>Первый тест выбирает ветку; настройки меняются по одной.</figcaption>
+</figure>
+
 ## Начните с чистого теста мобильных данных
 
 Отключите Wi-Fi и откройте две обычные веб-страницы в браузере. Затем попробуйте отправить сообщение через привычный мессенджер. Такой тест лучше одного приложения: у него может закончиться авторизация, отключиться доступ к мобильным данным или возникнуть собственный сбой.
+
+<figure class="yotti-photo">
+  <img src="https://timostas.github.io/yotti-blog-rss/assets/inline/esim-internet-not-working-controlled-browser-test-v1.webp" srcset="https://timostas.github.io/yotti-blog-rss/assets/inline/esim-internet-not-working-controlled-browser-test-v1-384w.webp 384w, https://timostas.github.io/yotti-blog-rss/assets/inline/esim-internet-not-working-controlled-browser-test-v1-720w.webp 720w, https://timostas.github.io/yotti-blog-rss/assets/inline/esim-internet-not-working-controlled-browser-test-v1-960w.webp 960w, https://timostas.github.io/yotti-blog-rss/assets/inline/esim-internet-not-working-controlled-browser-test-v1.webp 1440w" sizes="(max-width: 760px) calc(100vw - 56px), 760px" width="1440" height="960" loading="lazy" decoding="async" alt="Путешественник у окна отеля сверяет телефон с короткой записью результатов проверки.">
+  <figcaption>Две обычные страницы и одно сообщение отделяют общий сбой данных от проблемы приложения.</figcaption>
+</figure>
 
 Если сайты открываются, общий доступ к мобильным данным есть. Тогда следующая проверка относится к конкретному приложению: разрешён ли ему мобильный трафик, не вмешивается ли VPN и доступен ли сам сервис. Если страницы загружаются, но очень медленно, переходите к инструкции про [медленный интернет на есим](https://yotti.net/blog/esim-rabotaet-medlenno-kak-nayti-prichinu).
 
@@ -70,6 +86,11 @@ published: true
 
 На время диагностики отключите автоматическое переключение мобильных данных. Тогда телефон не перенесёт тестовый трафик на домашнюю SIM. Это временная мера: после восстановления связи режим можно настроить под свою поездку и тариф домашнего оператора.
 
+<figure class="yotti-information-graphic">
+  <img src="https://timostas.github.io/yotti-blog-rss/assets/inline/esim-internet-not-working-dual-sim-roles-ru-v1.webp" srcset="https://timostas.github.io/yotti-blog-rss/assets/inline/esim-internet-not-working-dual-sim-roles-ru-v1-384w.webp 384w, https://timostas.github.io/yotti-blog-rss/assets/inline/esim-internet-not-working-dual-sim-roles-ru-v1-720w.webp 720w, https://timostas.github.io/yotti-blog-rss/assets/inline/esim-internet-not-working-dual-sim-roles-ru-v1-960w.webp 960w, https://timostas.github.io/yotti-blog-rss/assets/inline/esim-internet-not-working-dual-sim-roles-ru-v1.webp 1440w" sizes="(max-width: 760px) calc(100vw - 56px), 760px" width="1440" height="900" loading="lazy" decoding="async" alt="Схема двух SIM: туристическая есим выбрана для данных, домашняя линия остаётся для звонков, автопереключение временно выключено.">
+  <figcaption>Во время теста у каждой линии одна понятная роль.</figcaption>
+</figure>
+
 ## Роуминг относится к конкретной SIM
 
 Для есим Yotti роуминг данных должен быть включён именно в настройках линии Yotti. У другого провайдера действует его инструкция: слово «роуминг» в меню само по себе не говорит, нужен ли переключатель этому тарифу.
@@ -80,9 +101,14 @@ published: true
 
 ## Сверьте пакет в заказе или кабинете
 
-Название оператора может оставаться на экране и после того, как пакет закончился или истёк. Это происходит не всегда, поэтому значок сети сам по себе не подтверждает остаток трафика. Надёжные данные — статус заказа, объём и срок действия в кабинете провайдера.
+Статус пакета нельзя определить по названию оператора или делениям сигнала. Откройте заказ или кабинет провайдера и проверьте остаток трафика, срок действия и дневное правило, если оно есть. Именно данные заказа, а не значок сети, показывают, доступен ли пакет.
 
-Там же проверьте условия дневного лимита, если он есть. Момент обновления пакета зависит от провайдера; местная полночь не является универсальным правилом. При нулевом остатке или истёкшем сроке настройки телефона не помогут — используйте инструкцию [что делать, когда закончился пакет есим](https://yotti.net/blog/zakonchilsya-internet-na-esim-kak-vernut-svyaz-bez-pereustanovki).
+Момент обновления дневного лимита зависит от провайдера; местная полночь не является универсальным правилом. При нулевом остатке или истёкшем сроке настройки телефона не помогут — используйте инструкцию [что делать, когда закончился пакет есим](https://yotti.net/blog/zakonchilsya-internet-na-esim-kak-vernut-svyaz-bez-pereustanovki).
+
+<figure class="yotti-information-graphic">
+  <img src="https://timostas.github.io/yotti-blog-rss/assets/inline/esim-internet-not-working-order-before-apn-ru-v1.webp" srcset="https://timostas.github.io/yotti-blog-rss/assets/inline/esim-internet-not-working-order-before-apn-ru-v1-384w.webp 384w, https://timostas.github.io/yotti-blog-rss/assets/inline/esim-internet-not-working-order-before-apn-ru-v1-720w.webp 720w, https://timostas.github.io/yotti-blog-rss/assets/inline/esim-internet-not-working-order-before-apn-ru-v1-960w.webp 960w, https://timostas.github.io/yotti-blog-rss/assets/inline/esim-internet-not-working-order-before-apn-ru-v1.webp 1440w" sizes="(max-width: 760px) calc(100vw - 56px), 760px" width="1440" height="900" loading="lazy" decoding="async" alt="Карточка проверки заказа: остаток, срок, дневное правило и APN только из инструкции текущего пакета.">
+  <figcaption>Статус пакета проверяется в заказе; значок сети его не подтверждает.</figcaption>
+</figure>
 
 ## APN меняют только по данным из заказа
 
@@ -92,9 +118,19 @@ APN задаёт сетевой путь для мобильного трафи�
 
 ## Если базовые проверки не восстановили интернет
 
-Временно приостановите VPN и режим экономии трафика, затем повторите тест. Это обратимая проверка: её задача — отделить сетевую линию от фильтра или ограничения на телефоне, а не объявить VPN причиной сбоя.
+Временно приостановите VPN и режим экономии трафика, затем повторите тот же тест. Это только способ убрать две переменные; он не доказывает, что VPN или экономия трафика вызвали сбой.
 
-После этого выключите и включите режим полёта, а при необходимости перезагрузите телефон. Полный сброс сетевых настроек оставьте последним шагом и выполняйте только после сверки инструкции для своей модели или по просьбе поддержки. На iPhone такой сброс затрагивает Wi-Fi, сотовые, VPN и APN-параметры; на актуальных Pixel сброс мобильной сети отделён от сброса Wi-Fi и Bluetooth. Универсального описания последствий для всех устройств нет.
+После этого выключите и включите режим полёта, а при необходимости перезагрузите телефон. Полный сброс сетевых настроек оставьте последним шагом и выполняйте только после проверки инструкции для своей модели или по просьбе поддержки. Apple указывает, что такой сброс на iPhone также затрагивает сохранённые сети Wi-Fi, сотовые параметры, VPN и APN; это описание последствий сброса, а не отдельная рекомендация для мобильной диагностики. На актуальных Pixel сброс мобильной сети отделён от сброса Wi-Fi и Bluetooth. Универсального описания последствий для всех устройств нет.
+
+<figure class="yotti-photo">
+  <img src="https://timostas.github.io/yotti-blog-rss/assets/inline/esim-internet-not-working-reversible-recovery-v1.webp" srcset="https://timostas.github.io/yotti-blog-rss/assets/inline/esim-internet-not-working-reversible-recovery-v1-384w.webp 384w, https://timostas.github.io/yotti-blog-rss/assets/inline/esim-internet-not-working-reversible-recovery-v1-720w.webp 720w, https://timostas.github.io/yotti-blog-rss/assets/inline/esim-internet-not-working-reversible-recovery-v1-960w.webp 960w, https://timostas.github.io/yotti-blog-rss/assets/inline/esim-internet-not-working-reversible-recovery-v1.webp 1440w" sizes="(max-width: 760px) calc(100vw - 56px), 760px" width="1440" height="960" loading="lazy" decoding="async" alt="Путешественник перезапускает телефон рядом с багажом и списком уже выполненных проверок.">
+  <figcaption>Обратимые действия идут перед полным сбросом сетевых настроек.</figcaption>
+</figure>
+
+<figure class="yotti-information-graphic">
+  <img src="https://timostas.github.io/yotti-blog-rss/assets/inline/esim-internet-not-working-support-handoff-ru-v1.webp" srcset="https://timostas.github.io/yotti-blog-rss/assets/inline/esim-internet-not-working-support-handoff-ru-v1-384w.webp 384w, https://timostas.github.io/yotti-blog-rss/assets/inline/esim-internet-not-working-support-handoff-ru-v1-720w.webp 720w, https://timostas.github.io/yotti-blog-rss/assets/inline/esim-internet-not-working-support-handoff-ru-v1-960w.webp 960w, https://timostas.github.io/yotti-blog-rss/assets/inline/esim-internet-not-working-support-handoff-ru-v1.webp 1440w" sizes="(max-width: 760px) calc(100vw - 56px), 760px" width="1440" height="900" loading="lazy" decoding="async" alt="Чек-лист для поддержки: заказ, страна, модель, оператор на экране и результат каждого шага без QR-кода и личных данных.">
+  <figcaption>Короткая хронология полезнее списка догадок.</figcaption>
+</figure>
 
 ## Что подготовить для поддержки
 
