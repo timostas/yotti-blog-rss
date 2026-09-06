@@ -222,3 +222,22 @@ Source-ready PASS, GitHub Pages deployment и публичная Yotti-приё�
 transfer и скорость. Недоступный показатель остаётся `UNAVAILABLE` и делает
 страницу `INCOMPLETE`; он не становится `PASS`. Измеренный дефект блокирует
 только соответствующую страницу.
+
+Публичное evidence schema v1 фиксирует для RU и EN один и тот же cold-load
+профиль и viewport 360/390/720 px. Для каждого viewport валидатор проверяет
+HTTP/final/canonical, ровно семь уникальных logical images, alt и шесть inline
+caption, сохранённые `srcset`/`sizes` либо явно измеренный эквивалент
+`{type: "cdn-width-transform", observed: true}`, выбранный
+`currentSrc`, declared/natural/rendered aspect с допуском 1%, oversupply,
+фактический transfer, overflow и запрос below-fold изображений до scroll.
+LCP допускает регрессию не более 15%, CLS — не более 0,02 только против baseline
+с совпадающим profile fingerprint, в который входит точный `viewportWidth`;
+несопоставимый baseline — `UNAVAILABLE`. `telemetryState=UNAVAILABLE` требует
+причину и не может одновременно содержать измеренные поля.
+
+Команда `npm run public-page-check -- --evidence <private-json>` читает capture,
+но не запускает браузер и не меняет сайт. Raw traces, JSON и скриншоты остаются
+в локальной непубличной директории и не попадают в Git или artifacts. Literal
+state важнее exit code: только полный `PASS` допускает `PUBLICLY_VERIFIED`;
+`UNAVAILABLE` оставляет `INCOMPLETE`, а `FAIL`/`CONTRACT_ERROR` возвращают exit 1
+после обработки всех страниц.

@@ -93,6 +93,27 @@ gate, GitHub Pages — сборку и RSS, а публичная Yotti-стра
 после ручной синхронизации. Недоступная публичная telemetry обозначается
 `UNAVAILABLE` и оставляет страницу `INCOMPLETE`, но не становится `PASS`.
 
+После подтверждённой ручной синхронизации публичный capture сохраняется только
+в локальной непубличной директории и проверяется так:
+
+```bash
+npm run public-page-check -- --evidence /private/path/capture.json
+```
+
+Evidence schema v1 связывает `itemId`, RU/EN URL, профиль cold-load и замеры на
+360/390/720 px. Для каждого viewport нужны HTTP/final/canonical, LCP, CLS,
+transfer, overflow и семь DOM-изображений с `currentSrc`, responsive-атрибутами,
+размерами и моментом запроса. Baseline обязан иметь тот же profile fingerprint,
+включая точный `viewportWidth`; baseline другой ширины несопоставим.
+Raw trace, capture и скриншоты не коммитятся и не загружаются workflow artifact.
+
+Результаты буквальны: `PASS` означает полный успешный замер; измеренный дефект —
+`FAIL`; отсутствующий browser/trace/baseline/показатель — `UNAVAILABLE` и общий
+`INCOMPLETE`; испорченная identity/schema — `CONTRACT_ERROR`. `FAIL` или
+`CONTRACT_ERROR` дают exit 1, чистый `PASS` и `INCOMPLETE` без доказанного
+дефекта — exit 0, ошибка CLI/чтения JSON — exit 2. Потребитель обязан читать
+state, а не только exit code; `PUBLICLY_VERIFIED` допустим только для `PASS`.
+
 Workflow `Article review report` ежедневно в 09:15 по Москве проверяет
 `reviewAfter`. Просроченные и приближающиеся сроки отображаются в GitHub Actions
 Summary, но не удаляют статью из RSS. Локально тот же отчёт запускается командой

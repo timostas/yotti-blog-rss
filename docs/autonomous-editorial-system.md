@@ -101,7 +101,19 @@ RU/EN-пары в заданных слотах. Перед исследован
    индексирование, ошибки, актуальность и вклад темы в органический трафик.
    Source-ready и GitHub Pages не доказывают поведение импортёра Yotti.
    `UNAVAILABLE` остаётся page-specific состоянием `INCOMPLETE` и никогда не
-   превращается в `PASS` или `PUBLICLY_VERIFIED`.
+   превращается в `PASS` или `PUBLICLY_VERIFIED`. Capture v1 выполняется одним
+   cold-load профилем на 360/390/720 px, хранится вне Git и проверяется командой
+   `npm run public-page-check -- --evidence <private-json>`.
+
+Public validator обрабатывает все locale и viewports без fail-fast. Полный
+замер без дефектов даёт `PASS`; доказанный HTTP/canonical/visual/responsive/
+lazy/performance defect — `FAIL`; недоступный browser, trace, baseline или
+обязательный показатель — `UNAVAILABLE` и page `INCOMPLETE`; противоречивая
+identity/schema — `CONTRACT_ERROR`. Измеренный `FAIL` блокирует только
+затронутую страницу и не стирает результат другой locale. Exit 0 не означает
+публичный успех: consumer обязан проверить literal state, а не только код.
+Baseline сопоставляется только при fingerprint того же cold-load профиля и той
+же ширины viewport; `UNAVAILABLE` telemetry не смешивается с измеренными полями.
 
 ## Быстрые ворота качества
 
