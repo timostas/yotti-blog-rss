@@ -174,7 +174,20 @@
         "connectivity-and-esim": { "contextualPhotos": 2, "informationGraphics": 4, "routeMaps": 0 }
       },
       "publicAcceptanceViewportWidths": [360, 390, 720],
-      "requirePublicPostSyncPerformanceCheck": true
+      "requirePublicPostSyncPerformanceCheck": true,
+      "publicPostSyncPerformanceGates": {
+        "viewportWidths": [360, 390, 720],
+        "deviceScaleFactor": 1,
+        "maximumInitialViewportTransferBytes": 1572864,
+        "maximumHorizontalOverflowPx": 0,
+        "maximumLcpRegressionRatio": 0.15,
+        "maximumClsRegressionAbsolute": 0.02,
+        "maximumResponsiveOversupplyRatio": 1.25,
+        "requireSevenUniqueRenderedImages": true,
+        "requireResponsiveAttributesOrEquivalent": true,
+        "requireNoDistortedAspectRatio": true,
+        "requireBelowFoldImagesDeferred": true
+      }
     },
     "enhancedRouteGuideGates": {
       "effectiveFrom": "2026-09-03T00:00:00+03:00",
