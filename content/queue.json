@@ -174,6 +174,23 @@
       "creative": "assets/covers/bangkok-night-markets-guide-remediation.webp",
       "creativeConceptKey": "bangkok-yaowarat-blue-hour-wok-street-life-webp-remediation",
       "contentFormat": "culture-food-or-local-experience",
+      "semanticLinkClass": "standard",
+      "publicUrls": {
+        "ru": "https://yotti.net/blog/thailand/nochnye-rynki-bangkoka-marshrut-za-vkusami-i-atmosferoy-goroda",
+        "en": "https://yotti.net/en/blog/thailand/bangkok-night-markets-a-street-food-evening-with-room-to-explore"
+      },
+      "internalArticleLinks": {
+        "ru": [
+          "https://yotti.net/blog/kak-polzovatsya-whatsapp-s-turisticheskoy-esim",
+          "https://yotti.net/blog/kakie-telefony-podderzhivayut-esim-kak-ne-oshibitsya-s-modelyu",
+          "https://yotti.net/blog/kak-ustanovit-esim-pered-poezdkoy-i-ne-zapustit-paket-ranshe-vremeni"
+        ],
+        "en": [
+          "https://yotti.net/en/blog/how-to-use-whatsapp-with-a-travel-esim",
+          "https://yotti.net/en/blog/which-phones-support-esim-how-to-check-before-you-buy",
+          "https://yotti.net/en/blog/how-to-install-an-esim-before-travel-without-starting-it-too-early"
+        ]
+      },
       "schedule": {
         "ru": "2026-08-14T09:44:00Z",
         "en": "2026-08-14T09:44:00Z"
@@ -215,8 +232,8 @@
           "local_specificity_and_original_value",
           "trust_and_evidence"
         ],
-        "editorialChange": "Сохранён Yaowarat-first выбор, удалены зеркальный FAQ и неподтверждённые эвристики очереди и меню; безопасность привязана к WHO, а соседние рынки отделены прямыми источниками TAT и BMA.",
-        "lengthDecision": "RU содержит 783 слова и остаётся ниже планового диапазона, потому что узкая задача одного вечера полностью закрыта без списка заведений и изменчивых часов. EN содержит 927 слов и решает тот же интент в самостоятельной композиции."
+        "editorialChange": "Сохранён Yaowarat-first выбор; Ratchawong оставлен только географическим ориентиром, неподходящий BMA-источник удалён, граница allergy card уточнена, а шесть визуалов и три Blog-перехода на локаль встроены по контексту.",
+        "lengthDecision": "RU содержит 911 слов и полностью закрывает узкую задачу одного вечера без списка заведений и изменчивых часов. EN содержит 1066 слов и решает тот же интент в самостоятельной композиции."
       },
       "remediation": {
         "date": "2026-09-06",
@@ -241,6 +258,38 @@
             "width": 1600,
             "height": 900,
             "bytes": 156794
+          }
+        },
+        "inlineVisuals": {
+          "composition": {
+            "sharedPhotos": 5,
+            "localizedInformationGraphics": 1,
+            "masters": 7
+          },
+          "photoGeneration": {
+            "mode": "built-in-imagegen",
+            "attempts": {
+              "yaowaratWideStreet": 2,
+              "yaowaratSmallDishes": 1,
+              "hotCookedFoodBoundary": 1,
+              "daytimeTextileLane": 1,
+              "respectfulPhotographer": 1
+            }
+          },
+          "informationGraphic": {
+            "mode": "deterministic",
+            "model": "bundled-pillow",
+            "attempts": 1
+          },
+          "responsiveWidths": [
+            384,
+            720,
+            960,
+            1440
+          ],
+          "localeWorstCaseBytes": {
+            "ru": 927336,
+            "en": 920064
           }
         },
         "preserved": {
