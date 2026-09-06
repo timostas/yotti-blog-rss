@@ -522,16 +522,107 @@
       },
       "qualityRepairAttempts": 1,
       "scores": {
-        "utility": 95,
-        "originalValue": 94,
-        "factSupport": 93
+        "utility": 91,
+        "originalValue": 86,
+        "factSupport": 90
       },
-      "creative": "assets/covers/buy-esim-uae-old-new-dubai.png",
-      "creativeConceptKey": "dubai-creek-wooden-abra-glass-skyline-reflection",
+      "editorialStandardVersion": 2,
+      "editorialPasses": {
+        "ru": 1,
+        "en": 1
+      },
+      "intentMap": {
+        "primary": {
+          "ru": "маршрут по Дубаю на один день от Аль-Фахиди через Крик и Дейру к одному современному району",
+          "en": "one day in Dubai from Al Fahidi across the Creek and Deira to one modern district"
+        },
+        "uniqueReaderOutcome": "Читатель выбирает один вечерний район и собирает устойчивый маршрут по четырём сохранённым точкам без неподтверждённых часов, тарифов и транспортных обещаний.",
+        "cannibalizationDecision": "Обновляется существующий URL статьи; продуктовые страницы Yotti сохраняют транзакционный интент, живые планы и условия, а статья отвечает только на практический маршрутный интент. Slug, canonical и исходный publishedAt сохранены."
+      },
+      "internalContextLinks": [
+        "https://yotti.net/esim/uae",
+        "https://yotti.net/how-it-works",
+        "https://yotti.net/en/esim/uae",
+        "https://yotti.net/en/how-it-works"
+      ],
+      "creative": "assets/covers/buy-esim-uae-old-new-dubai-remediation.webp",
+      "creativeConceptKey": "dubai-creek-abra-old-modern-city-webp-remediation",
       "contentFormat": "connectivity-and-esim",
       "schedule": {
         "ru": "2026-08-15T12:12:28Z",
         "en": "2026-08-15T12:12:28Z"
+      },
+      "editorialScorecard": {
+        "ru": {
+          "total": 89,
+          "dimensions": {
+            "intent": 14,
+            "utility": 14,
+            "specificity": 13,
+            "trust": 13,
+            "voice": 13,
+            "structure": 9,
+            "technical": 8,
+            "commercialRestraint": 5
+          }
+        },
+        "en": {
+          "total": 91,
+          "dimensions": {
+            "intent": 14,
+            "utility": 14,
+            "specificity": 13,
+            "trust": 13,
+            "voice": 14,
+            "structure": 10,
+            "technical": 8,
+            "commercialRestraint": 5
+          }
+        }
+      },
+      "qualityNotes": {
+        "localeTotals": {
+          "ru": 89,
+          "en": 91
+        },
+        "weakestDimensions": [
+          "technical_publication_quality",
+          "local_specificity_and_original_value"
+        ],
+        "editorialChange": "Транзакционный buy-intent передан продуктовой странице; существующая статья стала самостоятельным маршрутом Аль-Фахиди — Крик — Дейра — один современный район. RU и EN имеют разную композицию, а изменчивые условия ведут к первичным источникам.",
+        "lengthDecision": "RU содержит 922 слова. EN содержит 821 слово и остаётся короче планового диапазона: четыре самостоятельные читательские задачи закрыты без повторения RU, списков заведений, изменчивых расписаний и FAQ."
+      },
+      "remediation": {
+        "date": "2026-09-06",
+        "model": {
+          "name": "gpt-5.6-sol",
+          "effort": "high"
+        },
+        "textGenerationAttempts": {
+          "ru": 1,
+          "en": 1
+        },
+        "qualityRepairAttempts": 1,
+        "editorialPasses": {
+          "ru": 1,
+          "en": 1
+        },
+        "cover": {
+          "mode": "source-conversion",
+          "model": "bundled-pillow",
+          "attempts": 0,
+          "output": {
+            "width": 1600,
+            "height": 900,
+            "bytes": 179342
+          }
+        },
+        "preserved": {
+          "slug": true,
+          "canonical": true,
+          "publishedAt": true
+        },
+        "urlChange": false
       }
     },
     {
