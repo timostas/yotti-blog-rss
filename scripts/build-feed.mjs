@@ -211,10 +211,28 @@ export function parseArticle(source, sourceName = "article.md", siteUrl = "https
     if (!new Set(["image/jpeg", "image/png", "image/webp"]).has(type)) {
       throw new Error(`${sourceName}: cover.type должен быть image/jpeg, image/png или image/webp`);
     }
+    const hasWidth = metadata.cover.width !== undefined;
+    const hasHeight = metadata.cover.height !== undefined;
+    if (hasWidth !== hasHeight) {
+      throw new Error(`${sourceName}: cover.width и cover.height должны быть указаны вместе`);
+    }
+    if (hasWidth && (!Number.isInteger(metadata.cover.width) || metadata.cover.width <= 0 || !Number.isInteger(metadata.cover.height) || metadata.cover.height <= 0)) {
+      throw new Error(`${sourceName}: cover.width и cover.height должны быть положительными целыми числами`);
+    }
+    const hasSrcset = metadata.cover.srcset !== undefined;
+    const hasSizes = metadata.cover.sizes !== undefined;
+    if (hasSrcset !== hasSizes) {
+      throw new Error(`${sourceName}: cover.srcset и cover.sizes должны быть указаны вместе`);
+    }
+    if (hasSrcset && (typeof metadata.cover.srcset !== "string" || metadata.cover.srcset.trim() === "" || typeof metadata.cover.sizes !== "string" || metadata.cover.sizes.trim() === "")) {
+      throw new Error(`${sourceName}: cover.srcset и cover.sizes должны быть непустыми строками`);
+    }
     cover = {
       url: normalizeUrl(requiredString(metadata.cover, "url", sourceName), siteUrl, "cover.url", sourceName),
       type,
       alt: typeof metadata.cover.alt === "string" ? metadata.cover.alt.trim() : "",
+      ...(hasWidth ? { width: metadata.cover.width, height: metadata.cover.height } : {}),
+      ...(hasSrcset ? { srcset: metadata.cover.srcset.trim(), sizes: metadata.cover.sizes.trim() } : {}),
     };
   }
 
@@ -284,6 +302,20 @@ function articleUrl(config, article) {
 
 export function renderArticleBody(article) {
   return marked.parse(article.body, { async: false }).trim();
+}
+
+export function renderCoverImageAttributes(cover, { legacyDimensions = false } = {}) {
+  if (!cover) return "";
+  const width = cover.width ?? (legacyDimensions ? 1200 : undefined);
+  const height = cover.height ?? (legacyDimensions ? 675 : undefined);
+  return [
+    `alt="${escapeXml(cover.alt)}"`,
+    `src="${escapeXml(cover.url)}"`,
+    width === undefined ? "" : `width="${width}"`,
+    height === undefined ? "" : `height="${height}"`,
+    cover.srcset === undefined ? "" : `srcset="${escapeXml(cover.srcset)}"`,
+    cover.sizes === undefined ? "" : `sizes="${escapeXml(cover.sizes)}"`,
+  ].filter(Boolean).join(" ");
 }
 
 function formatEditorialDate(date, language) {
@@ -361,7 +393,7 @@ export function createFeedXml(configInput, articles, now = new Date()) {
       ? `\n      <enclosure url="${escapeXml(article.cover.url)}" type="${escapeXml(article.cover.type)}"/>`
       : "";
     const coverFigure = article.cover
-      ? `<figure><img alt="${escapeXml(article.cover.alt)}" src="${escapeXml(article.cover.url)}"/></figure>`
+      ? `<figure><img ${renderCoverImageAttributes(article.cover)}/></figure>`
       : "";
     const content = `<header><h1>${escapeXml(article.title)}</h1></header>${coverFigure}${renderEditorialByline(article)}${renderArticleBody(article)}${renderEditorialSources(article)}`;
     const richMetadata = article.editorial ? [
@@ -416,7 +448,7 @@ export function createArticleHtml(configInput, article) {
   const config = validateConfig(configInput);
   const canonicalUrl = articleUrl(config, article);
   const cover = article.cover
-    ? `<figure class="article-cover"><img src="${escapeXml(article.cover.url)}" alt="${escapeXml(article.cover.alt)}" width="1200" height="675"></figure>`
+    ? `<figure class="article-cover"><img ${renderCoverImageAttributes(article.cover, { legacyDimensions: true })}></figure>`
     : "";
 
   return [

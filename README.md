@@ -10,6 +10,9 @@ npm test
 npm run queue-report
 npm run style-check -- articles/<slug>-ru.md articles/<slug>-en.md
 npm run visual-check
+npm run article-check -- --files articles/<slug>-ru.md articles/<slug>-en.md
+# либо для полного diff-scope PR:
+npm run article-check -- --base <git-commit>
 npm run build
 xmllint --noout dist/ru/rss.xml
 xmllint --noout dist/en/rss.xml
@@ -71,6 +74,24 @@ Workflow `.github/workflows/publish-rss.yml` собирает проект и п
 подписи, адаптивные пропорции и общий бюджет загрузки до 1,2 МБ. Правила и
 публичная проверка после синхронизации описаны в
 `docs/rss-rich-article-visual-standard.md`.
+
+Для любой новой или изменённой статьи — независимо от её исходного
+`publishedAt` — change-scoped `article-check` требует ровно семь логических
+изображений, responsive `srcset`/`sizes` и точные intrinsic dimensions. Изменение
+используемого asset включает в scope все статьи-потребители. Производные WebP из
+`srcset` относятся к тому же креативу и не увеличивают exact-7 count.
+
+Смысловая перелинковка задаётся явным `queue.items[].semanticLinkClass` только
+для новой/затронутой единицы: `focused-technical` требует минимум две ссылки,
+`standard` — минимум три. Диапазон 3–5 — редакционная цель, не hard maximum.
+Считаются только фактически присутствующие в body ссылки на другие статьи Yotti
+Blog той же локали; product/site/tag/self links не считаются.
+`internalContextLinks` остаётся planning-only и не доказывает перелинковку.
+
+Три слоя доказательств не взаимозаменяемы: source-ready подтверждает статический
+gate, GitHub Pages — сборку и RSS, а публичная Yotti-страница проверяется только
+после ручной синхронизации. Недоступная публичная telemetry обозначается
+`UNAVAILABLE` и оставляет страницу `INCOMPLETE`, но не становится `PASS`.
 
 Workflow `Article review report` ежедневно в 09:15 по Москве проверяет
 `reviewAfter`. Просроченные и приближающиеся сроки отображаются в GitHub Actions

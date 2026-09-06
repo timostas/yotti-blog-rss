@@ -75,6 +75,30 @@
     "minimumOriginalValueScore": 80,
     "minimumFactSupportScore": 80,
     "minimumInternalContextLinks": 2,
+    "semanticInternalLinkGates": {
+      "enforcementMode": "changed_or_new_article_or_impacted_asset",
+      "allowedClasses": ["focused-technical", "standard"],
+      "focusedTechnicalAllowedFormats": ["connectivity-and-esim"],
+      "minimumByClass": {
+        "focused-technical": 2,
+        "standard": 3
+      },
+      "advisoryTargetMinimum": 3,
+      "advisoryTargetMaximum": 5,
+      "allowedHosts": ["yotti.net", "www.yotti.net"],
+      "localeArticlePathPrefixes": {
+        "ru": "/blog/",
+        "en": "/en/blog/"
+      },
+      "excludedFirstSegments": [
+        "tag", "tags", "category", "categories", "esim", "catalog", "plans",
+        "how-it-works", "about", "support"
+      ],
+      "genericAnchors": {
+        "ru": ["здесь", "читать", "подробнее", "по ссылке", "эта статья"],
+        "en": ["here", "read", "read more", "learn more", "this article"]
+      }
+    },
     "requireIntentMapBeforeDraft": true,
     "requireQueryCannibalizationCheck": true,
     "requireTroubleshootingDecisionTreeWhenRelevant": true,
@@ -125,6 +149,19 @@
       "maximumStaticMapFallbackBytes": 102400,
       "maximumEagerInlineImages": 1,
       "requireAsyncDecoding": true,
+      "requireChangedCoverDimensions": true,
+      "forbidChangedInlineImageStyle": true,
+      "requireChangedResponsiveMarkup": true,
+      "requiredChangedSrcsetDerivativeWidths": [384, 720, 960],
+      "requireChangedSrcsetMasterWidth": true,
+      "srcsetDescriptorMode": "width",
+      "requireChangedSizes": true,
+      "requireChangedSrcCandidateIntrinsicWidthMatch": true,
+      "requireChangedSrcCandidateAspectRatioMatch": true,
+      "minimumChangedCoverAspectRatio": 1.76,
+      "maximumChangedCoverAspectRatio": 1.79,
+      "minimumChangedContextualImageAspectRatio": 1.49,
+      "maximumChangedContextualImageAspectRatio": 1.79,
       "requireInfiniteAnimatedMapLoop": true,
       "requireStaticMapFallback": true,
       "forbidRawTables": true,

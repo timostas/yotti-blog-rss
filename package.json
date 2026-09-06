@@ -9,6 +9,7 @@
     "review-report": "node scripts/check-reviews.mjs",
     "style-check": "node scripts/check-editorial-style.mjs",
     "visual-check": "node scripts/check-article-visuals.mjs",
+    "article-check": "node scripts/check-changed-article-guardrails.mjs",
     "test": "node --test"
   },
   "engines": {
