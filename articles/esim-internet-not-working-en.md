@@ -22,7 +22,7 @@ sources:
   - "https://yotti.net/en/how-it-works"
 editorial:
   authorUrl: "https://yotti.net/en/about"
-  modifiedAt: "2026-09-06T12:49:43.000Z"
+  modifiedAt: "2026-09-06T19:31:00.000Z"
   imageTitle: "Checking an eSIM mobile-data connection"
   imageDescription: "A traveller in a hotel lobby checks the selected mobile-data line on a phone"
   alternate:
@@ -37,65 +37,81 @@ editorial:
       url: "https://support.google.com/pixelphone/answer/2926415?hl=en"
     - title: "Samsung Support: SIM manager and the primary SIM"
       url: "https://www.samsung.com/us/support/answer/ANS10001619/"
+    - title: "Apple Support: network-reset consequences in general guidance"
+      url: "https://support.apple.com/en-us/111786"
     - title: "Yotti: installation, roaming and the single-use QR code"
       url: "https://yotti.net/en/how-it-works"
 cover:
   url: "https://timostas.github.io/yotti-blog-rss/assets/covers/esim-internet-not-working-remediation.webp"
   type: "image/webp"
   alt: "A traveller in a hotel lobby checking mobile-data settings on a phone"
+  width: 1600
+  height: 900
+  srcset: "https://timostas.github.io/yotti-blog-rss/assets/covers/esim-internet-not-working-remediation-384w.webp 384w, https://timostas.github.io/yotti-blog-rss/assets/covers/esim-internet-not-working-remediation-720w.webp 720w, https://timostas.github.io/yotti-blog-rss/assets/covers/esim-internet-not-working-remediation-960w.webp 960w, https://timostas.github.io/yotti-blog-rss/assets/covers/esim-internet-not-working-remediation.webp 1600w"
+  sizes: "(max-width: 760px) calc(100vw - 56px), 760px"
 published: true
 ---
 
-A carrier name and signal bars usually show that the phone can see or has attached to a mobile network. They do not prove that mobile data has a working path to the internet. If Wi-Fi works but cellular pages do not, start with four common checks: the selected data line, the travel line's roaming setting, the plan balance and any APN supplied with the order.
+A carrier name and signal bars narrow the problem: the phone can see, or may have attached to, a mobile network. They do not show whether the travel line has a working data path. Keep the eSIM installed while testing. A Yotti QR code is intended for one installation, so deleting the profile can turn a data fault into a reinstallation case.
 
-Keep the eSIM installed while you investigate. A Yotti QR code is intended for one installation, so deleting the profile can turn a data fault into a reinstallation case. If the carrier name or bars disappear, this guide no longer matches the symptom; use the separate [no-network troubleshooting order](https://yotti.net/en/blog/esim-installed-but-no-network-a-safe-troubleshooting-order).
+<figure class="yotti-information-graphic">
+  <img src="https://timostas.github.io/yotti-blog-rss/assets/inline/esim-internet-not-working-symptom-splitter-en-v1.webp" srcset="https://timostas.github.io/yotti-blog-rss/assets/inline/esim-internet-not-working-symptom-splitter-en-v1-384w.webp 384w, https://timostas.github.io/yotti-blog-rss/assets/inline/esim-internet-not-working-symptom-splitter-en-v1-720w.webp 720w, https://timostas.github.io/yotti-blog-rss/assets/inline/esim-internet-not-working-symptom-splitter-en-v1-960w.webp 960w, https://timostas.github.io/yotti-blog-rss/assets/inline/esim-internet-not-working-symptom-splitter-en-v1.webp 1440w" sizes="(max-width: 760px) calc(100vw - 56px), 760px" width="1440" height="900" decoding="async" alt="Troubleshooting diagram separating one-app failure, no data, slow data and no-network symptoms.">
+  <figcaption>The first controlled test selects the branch; change one variable at a time.</figcaption>
+</figure>
 
-Before changing a setting, record the carrier shown on screen, the signal level, the selected data line and the plan status in the order. A short note or screenshots without the QR code or personal details are enough. If one switch restores service, that record identifies the useful change. If it does not, support can see what has already been tested. Avoid changing the APN, network selection and several SIM controls together; a successful result would not reveal which action mattered.
+## Start with one repeatable test
 
-## Establish what is actually failing
+Turn Wi-Fi off, load two unrelated websites and send one message. Repeat exactly that test after each change. If several settings, the APN and network selection move together, a successful result will not identify what helped.
 
-Turn Wi-Fi off and load two unrelated websites. Try a message as a second type of traffic. If both sites load and only one app fails, general mobile data is available; the next suspects are that app's cellular permission, a VPN or DNS path, regional availability, or the service itself.
+<figure class="yotti-photo">
+  <img src="https://timostas.github.io/yotti-blog-rss/assets/inline/esim-internet-not-working-controlled-browser-test-v1.webp" srcset="https://timostas.github.io/yotti-blog-rss/assets/inline/esim-internet-not-working-controlled-browser-test-v1-384w.webp 384w, https://timostas.github.io/yotti-blog-rss/assets/inline/esim-internet-not-working-controlled-browser-test-v1-720w.webp 720w, https://timostas.github.io/yotti-blog-rss/assets/inline/esim-internet-not-working-controlled-browser-test-v1-960w.webp 960w, https://timostas.github.io/yotti-blog-rss/assets/inline/esim-internet-not-working-controlled-browser-test-v1.webp 1440w" sizes="(max-width: 760px) calc(100vw - 56px), 760px" width="1440" height="960" loading="lazy" decoding="async" alt="A traveller by a hotel window compares a phone with brief connection-test notes.">
+  <figcaption>Two ordinary pages and one message separate a data-path failure from an app problem.</figcaption>
+</figure>
 
-Pages that load slowly belong to a different diagnosis. Test the line in another location and follow the guide to [a slow travel eSIM](https://yotti.net/en/blog/travel-esim-running-slowly-how-to-find-the-cause). The steps below are for a line that shows a network but cannot load ordinary pages at all.
+### If only one app fails
 
-Use the same two-site test after every change. Changing several settings together may restore service, but it leaves no clear cause and makes the problem harder to explain if support is needed.
+When both websites load and another message goes through, general mobile data is available. Check the failed app's cellular-data permission and current service status. Pause a VPN only for one comparison; that isolates a traffic path and does not prove that the VPN caused the failure. Leave the eSIM and APN unchanged in this branch.
 
-## Make the travel eSIM the data line
+### If nothing loads although a carrier is visible
 
-Dual-SIM phones can use one line for calls and another for cellular data. Check the SIM settings and confirm that the travel eSIM owns the data role.
+Confirm first that the travel eSIM is enabled and assigned to mobile data. The home line may remain available for calls and codes, but automatic data switching should be paused during the test. Menu names vary by handset, operating system and carrier.
 
-On an iPhone, Apple places this choice under Settings, Cellular or Mobile Data, then Cellular Data. A Pixel exposes the data-SIM choice under Network & internet and SIMs. Galaxy phones use SIM manager. Exact labels can vary with the OS release, handset and carrier, so use the settings search for “SIM” or “mobile data” if the screen differs from the vendor guide.
+<figure class="yotti-information-graphic">
+  <img src="https://timostas.github.io/yotti-blog-rss/assets/inline/esim-internet-not-working-dual-sim-roles-en-v1.webp" srcset="https://timostas.github.io/yotti-blog-rss/assets/inline/esim-internet-not-working-dual-sim-roles-en-v1-384w.webp 384w, https://timostas.github.io/yotti-blog-rss/assets/inline/esim-internet-not-working-dual-sim-roles-en-v1-720w.webp 720w, https://timostas.github.io/yotti-blog-rss/assets/inline/esim-internet-not-working-dual-sim-roles-en-v1-960w.webp 960w, https://timostas.github.io/yotti-blog-rss/assets/inline/esim-internet-not-working-dual-sim-roles-en-v1.webp 1440w" sizes="(max-width: 760px) calc(100vw - 56px), 760px" width="1440" height="900" loading="lazy" decoding="async" alt="Dual-SIM diagram with the travel eSIM assigned to data, the home line kept for calls and automatic switching paused.">
+  <figcaption>During the test, each line has one unambiguous job.</figcaption>
+</figure>
 
-Disable automatic cellular-data switching for this test. That prevents the phone from silently moving the session to the home line. It is a temporary diagnostic setting, not a recommendation for every trip.
+For a Yotti eSIM, enable data roaming on the Yotti line, not on the home SIM. Another provider's order remains the authority for its plan. The narrower guide explains [when Data Roaming should be on for a travel eSIM](https://yotti.net/en/blog/should-data-roaming-be-on-for-a-travel-esim).
 
-## Treat roaming as a line-specific setting
+Next, read the order or provider account. Check the remaining allowance, expiry and any daily-use rule. The network icon does not prove that the package is active. If the account shows zero data or an expired plan, use the guide for [an eSIM data allowance that has run out](https://yotti.net/en/blog/travel-esim-data-ran-out-how-to-get-back-online-safely); reinstalling the profile will not restore the allowance.
 
-Yotti instructs customers to enable data roaming on the Yotti eSIM. A different provider may give different setup directions, so its order remains the authority for that plan.
+Inspect APN only if the current order supplies a value or support asks for it. Apple notes that some carriers do not allow APN editing, and Android menu locations vary. Copy only the value for the current plan. The complete procedure belongs in the [eSIM APN settings guide](https://yotti.net/en/blog/esim-apn-settings-when-and-how-to-change-them).
 
-Do not enable roaming on the home SIM merely to test the travel line. The two lines have separate controls, and any charge on the home line depends on the home tariff. Once the travel-line setting is correct, wait briefly, switch Wi-Fi off again and rerun the browser test.
+<figure class="yotti-information-graphic">
+  <img src="https://timostas.github.io/yotti-blog-rss/assets/inline/esim-internet-not-working-order-before-apn-en-v1.webp" srcset="https://timostas.github.io/yotti-blog-rss/assets/inline/esim-internet-not-working-order-before-apn-en-v1-384w.webp 384w, https://timostas.github.io/yotti-blog-rss/assets/inline/esim-internet-not-working-order-before-apn-en-v1-720w.webp 720w, https://timostas.github.io/yotti-blog-rss/assets/inline/esim-internet-not-working-order-before-apn-en-v1-960w.webp 960w, https://timostas.github.io/yotti-blog-rss/assets/inline/esim-internet-not-working-order-before-apn-en-v1.webp 1440w" sizes="(max-width: 760px) calc(100vw - 56px), 760px" width="1440" height="900" loading="lazy" decoding="async" alt="Order-check card covering allowance, expiry, any daily rule and an APN only when the current plan supplies one.">
+  <figcaption>The account is the authority for plan status; the network icon is not.</figcaption>
+</figure>
 
-For a closer look at this branch, see [when Data Roaming should be on for a travel eSIM](https://yotti.net/en/blog/should-data-roaming-be-on-for-a-travel-esim).
+### If the outcome changes
 
-## Read the account before changing the phone again
+Use the new symptom instead of continuing the no-data sequence. If the carrier name or bars disappear, follow the [no-network troubleshooting order](https://yotti.net/en/blog/esim-installed-but-no-network-a-safe-troubleshooting-order). If ordinary pages work but remain slow, use the guide to [a slow travel eSIM](https://yotti.net/en/blog/travel-esim-running-slowly-how-to-find-the-cause). If the phone has data but a laptop does not, check [hotspot support and the plan's tethering terms](https://yotti.net/en/blog/can-you-use-hotspot-with-an-esim).
 
-Open the order or provider account and check the remaining allowance, expiry and any daily-use rule. A network indicator may remain after a plan runs out, but that behaviour is not guaranteed. The icon cannot confirm that the package is active.
+## Use reversible recovery before a reset
 
-Reset times are provider-specific. Do not assume that a daily allowance renews at local midnight. If the account shows zero data or an expired plan, follow the narrower guide for [an eSIM data allowance that has run out](https://yotti.net/en/blog/travel-esim-data-ran-out-how-to-get-back-online-safely). Reinstalling the profile will not restore an exhausted package.
+If the same two websites still fail, pause data-saving mode and the VPN for one controlled comparison. Then toggle airplane mode and restart the phone if needed. These are reversible tests; none requires deleting the eSIM.
 
-## Inspect APN only when the order gives you one
+A full network-settings reset belongs last, after checking the exact device guidance or speaking to support. Apple says an iPhone reset also affects saved Wi-Fi networks, cellular settings, VPN and APN; that source describes reset consequences, not a cellular-specific cure. Current Pixel software separates a mobile-network reset from Wi-Fi and Bluetooth. The scope is not universal across devices.
 
-An Access Point Name tells the phone which network path to use for cellular data. Many eSIM profiles supply it automatically. Manual editing is appropriate only when the provider gives an exact value or its support team asks for the change.
+<figure class="yotti-photo">
+  <img src="https://timostas.github.io/yotti-blog-rss/assets/inline/esim-internet-not-working-reversible-recovery-v1.webp" srcset="https://timostas.github.io/yotti-blog-rss/assets/inline/esim-internet-not-working-reversible-recovery-v1-384w.webp 384w, https://timostas.github.io/yotti-blog-rss/assets/inline/esim-internet-not-working-reversible-recovery-v1-720w.webp 720w, https://timostas.github.io/yotti-blog-rss/assets/inline/esim-internet-not-working-reversible-recovery-v1-960w.webp 960w, https://timostas.github.io/yotti-blog-rss/assets/inline/esim-internet-not-working-reversible-recovery-v1.webp 1440w" sizes="(max-width: 760px) calc(100vw - 56px), 760px" width="1440" height="960" loading="lazy" decoding="async" alt="A traveller restarts a phone beside luggage and a note of checks already completed.">
+  <figcaption>Reversible recovery comes before a full network-settings reset.</figcaption>
+</figure>
 
-Apple notes that APN editing is unavailable with some carriers. Android menu locations differ between versions and manufacturers. Copy only the value for the current plan, without adding spaces; an APN borrowed from a forum or another country's plan can break a line that was otherwise configured correctly. The full procedure belongs in the dedicated [eSIM APN guide](https://yotti.net/en/blog/esim-apn-settings-when-and-how-to-change-them).
+<figure class="yotti-information-graphic">
+  <img src="https://timostas.github.io/yotti-blog-rss/assets/inline/esim-internet-not-working-support-handoff-en-v1.webp" srcset="https://timostas.github.io/yotti-blog-rss/assets/inline/esim-internet-not-working-support-handoff-en-v1-384w.webp 384w, https://timostas.github.io/yotti-blog-rss/assets/inline/esim-internet-not-working-support-handoff-en-v1-720w.webp 720w, https://timostas.github.io/yotti-blog-rss/assets/inline/esim-internet-not-working-support-handoff-en-v1-960w.webp 960w, https://timostas.github.io/yotti-blog-rss/assets/inline/esim-internet-not-working-support-handoff-en-v1.webp 1440w" sizes="(max-width: 760px) calc(100vw - 56px), 760px" width="1440" height="900" loading="lazy" decoding="async" alt="Support checklist: order, country, handset, displayed carrier and each test result, excluding the QR code and personal data.">
+  <figcaption>A short test history is more useful than a list of guesses.</figcaption>
+</figure>
 
-## Use reversible recovery before any reset
+## Give support the test history
 
-Pause a VPN and data-saving mode briefly, then repeat the controlled test. This does not assume either feature caused the outage; it removes two variables without changing the eSIM profile.
-
-Next, toggle airplane mode off and on. Restart the phone if the data path still fails. A full network-settings reset belongs near the end, after consulting instructions for the exact device or speaking to support. Its scope is not universal: an iPhone reset affects Wi-Fi, cellular, VPN and APN settings, while current Pixel software separates the mobile-network reset from the Wi-Fi and Bluetooth reset.
-
-## Give support evidence, not a list of guesses
-
-Record the order number, country, handset model, carrier shown on screen and the outcome of each check. Screenshots of the selected data line, roaming control and APN can help, provided they exclude the eSIM QR code and personal identifiers.
-
-The final symptom determines the next route. No carrier or bars means a registration problem. Working but slow pages need a speed diagnosis. If data works on the phone but not on a laptop, check [hotspot support and the plan's tethering terms](https://yotti.net/en/blog/can-you-use-hotspot-with-an-esim). Keeping those cases separate prevents a broad reset from replacing a targeted fix.
+Send the order number, country, handset model, carrier shown and the result of each repeatable test. Screenshots of the selected data line, roaming control and APN may help, but exclude the QR code and personal identifiers. A short sequence of observed results is more useful than several simultaneous setting changes.

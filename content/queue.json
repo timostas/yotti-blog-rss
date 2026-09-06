@@ -2038,16 +2038,72 @@
       "creative": "assets/covers/esim-internet-not-working-remediation.webp",
       "creativeConceptKey": "hotel-lobby-mobile-data-diagnostics",
       "contentFormat": "connectivity-and-esim",
+      "semanticLinkClass": "focused-technical",
+      "publicUrls": {
+        "ru": "https://yotti.net/blog/esim-vidit-set-no-internet-ne-rabotaet-gde-iskat-prichinu",
+        "en": "https://yotti.net/en/blog/esim-has-signal-but-no-internet-what-to-check"
+      },
+      "internalArticleLinks": {
+        "ru": [
+          "https://yotti.net/blog/esim-ustanovlena-no-seti-net-chto-proverit-po-poryadku",
+          "https://yotti.net/blog/esim-rabotaet-medlenno-kak-nayti-prichinu",
+          "https://yotti.net/blog/nuzhno-li-vklyuchat-rouming-dannyh-dlya-esim",
+          "https://yotti.net/blog/zakonchilsya-internet-na-esim-kak-vernut-svyaz-bez-pereustanovki",
+          "https://yotti.net/blog/apn-dlya-esim-kogda-i-kak-ego-nastraivat",
+          "https://yotti.net/blog/mozhno-li-razdavat-internet-s-esim-na-noutbuk-i-drugie-ustroystva"
+        ],
+        "en": [
+          "https://yotti.net/en/blog/esim-installed-but-no-network-a-safe-troubleshooting-order",
+          "https://yotti.net/en/blog/travel-esim-running-slowly-how-to-find-the-cause",
+          "https://yotti.net/en/blog/should-data-roaming-be-on-for-a-travel-esim",
+          "https://yotti.net/en/blog/travel-esim-data-ran-out-how-to-get-back-online-safely",
+          "https://yotti.net/en/blog/esim-apn-settings-when-and-how-to-change-them",
+          "https://yotti.net/en/blog/can-you-use-hotspot-with-an-esim"
+        ]
+      },
       "schedule": {
         "ru": "2026-08-22T09:40:00Z",
         "en": "2026-08-22T09:40:00Z"
       },
+      "editorialScorecard": {
+        "ru": {
+          "total": 90,
+          "dimensions": {
+            "intent": 14,
+            "utility": 15,
+            "specificity": 11,
+            "trust": 13,
+            "voice": 13,
+            "structure": 9,
+            "technical": 10,
+            "commercialRestraint": 5
+          }
+        },
+        "en": {
+          "total": 92,
+          "dimensions": {
+            "intent": 14,
+            "utility": 15,
+            "specificity": 11,
+            "trust": 13,
+            "voice": 14,
+            "structure": 10,
+            "technical": 10,
+            "commercialRestraint": 5
+          }
+        }
+      },
       "qualityNotes": {
+        "localeTotals": {
+          "ru": 90,
+          "en": 92
+        },
         "weakestDimensions": [
-          "technical_publication_quality",
-          "local_specificity_and_original_value"
+          "local_specificity_and_original_value",
+          "trust_and_evidence"
         ],
-        "editorialChange": "Существующий signal-but-no-data URL превращён в диагностический хаб: добавлены прямые первичные источники, безопасные device-specific границы и выходы к узким инструкциям."
+        "editorialChange": "RU сохраняет линейный контролируемый тест, а EN независимо перестроен по исходам. Удалено неподтверждённое обобщение об индикаторе сети, уточнён контекст Apple reset guidance, VPN и data saver оставлены только как isolation test, а шесть соседних интентов вынесены в отдельные same-locale статьи.",
+        "lengthDecision": "Обе локали остаются сфокусированными техническими инструкциями: полный ответ дан без повторения шести соседних руководств и без универсального FAQ."
       },
       "remediation": {
         "date": "2026-09-06",
@@ -2073,6 +2129,48 @@
             "height": 900,
             "bytes": 87202
           }
+        },
+        "inlineVisuals": {
+          "photoGeneration": {
+            "mode": "imagegen-built-in",
+            "model": "imagegen-built-in",
+            "attempts": {
+              "controlledBrowserTest": 1,
+              "reversibleRecovery": 1
+            }
+          },
+          "deterministicRenderer": {
+            "name": "Pillow",
+            "version": "12.3.0"
+          },
+          "composition": {
+            "contextualPhotos": 2,
+            "informationGraphics": 4,
+            "placementsPerLocale": 6,
+            "uniqueMasters": 10
+          },
+          "responsiveWidths": [384, 720, 960, 1440],
+          "localeWorstCaseBytesIncludingCover": {
+            "ru": 498688,
+            "en": 462788
+          },
+          "masters": [
+            {"path": "assets/inline/esim-internet-not-working-symptom-splitter-ru-v1.webp", "width": 1440, "height": 900, "bytes": 70584},
+            {"path": "assets/inline/esim-internet-not-working-symptom-splitter-en-v1.webp", "width": 1440, "height": 900, "bytes": 58704},
+            {"path": "assets/inline/esim-internet-not-working-controlled-browser-test-v1.webp", "width": 1440, "height": 960, "bytes": 63174},
+            {"path": "assets/inline/esim-internet-not-working-dual-sim-roles-ru-v1.webp", "width": 1440, "height": 900, "bytes": 65794},
+            {"path": "assets/inline/esim-internet-not-working-dual-sim-roles-en-v1.webp", "width": 1440, "height": 900, "bytes": 54398},
+            {"path": "assets/inline/esim-internet-not-working-order-before-apn-ru-v1.webp", "width": 1440, "height": 900, "bytes": 67376},
+            {"path": "assets/inline/esim-internet-not-working-order-before-apn-en-v1.webp", "width": 1440, "height": 900, "bytes": 61038},
+            {"path": "assets/inline/esim-internet-not-working-reversible-recovery-v1.webp", "width": 1440, "height": 960, "bytes": 83244},
+            {"path": "assets/inline/esim-internet-not-working-support-handoff-ru-v1.webp", "width": 1440, "height": 900, "bytes": 61314},
+            {"path": "assets/inline/esim-internet-not-working-support-handoff-en-v1.webp", "width": 1440, "height": 900, "bytes": 55028}
+          ],
+          "coverResponsive": [
+            {"path": "assets/covers/esim-internet-not-working-remediation-384w.webp", "width": 384, "height": 216, "bytes": 16240},
+            {"path": "assets/covers/esim-internet-not-working-remediation-720w.webp", "width": 720, "height": 405, "bytes": 35280},
+            {"path": "assets/covers/esim-internet-not-working-remediation-960w.webp", "width": 960, "height": 540, "bytes": 49716}
+          ]
         },
         "preserved": {
           "slug": true,
