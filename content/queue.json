@@ -7016,115 +7016,187 @@
         },
         "lengthDecision": "RU 957 и EN 1123 слова: установка, городская проверка, Маун, офлайн-набор и диагностика раскрыты без обещаний сплошного покрытия."
       }
+    },
+    {
+      "status": "scheduled",
+      "locales": ["ru", "en"],
+      "model": {"name": "gpt-5.6-sol", "effort": "high"},
+      "riskReasons": ["catchup_recovery", "owner_requested_manual_run", "query_cannibalization_checked"],
+      "generationAttempts": {"ru": 1, "en": 1},
+      "qualityRepairAttempts": 0,
+      "scores": {"utility": 96, "originalValue": 95, "factSupport": 95},
+      "editorialStandardVersion": 2,
+      "editorialPasses": {"ru": 1, "en": 1},
+      "creativeGeneration": {"model": "imagegen-built-in", "attempts": 1},
+      "id": "uzbekistan-samarkand-shade-evening-walk",
+      "topicKey": "samarkand-hot-season-evening-walk",
+      "countryCode": "UZ",
+      "region": "central-asia",
+      "planKind": "editorial",
+      "searchQuery": {"ru": "Самарканд летом прогулка вечером", "en": "Samarkand summer evening walk"},
+      "workingTitle": {"ru": "Самарканд в жаркий день: прогулки утром и вечером", "en": "Samarkand on a hot day: walking in the cool hours"},
+      "intentMap": {
+        "primary": {"ru": "Самарканд летом прогулка вечером", "en": "Samarkand summer evening walk"},
+        "neighborIntents": ["uz-general-guide", "samarkand-landmarks-overview"],
+        "uniqueReaderOutcome": "Читатель переносит длинные прогулки на прохладные часы, оставляет полдень для тени и выбирает один вечерний архитектурный блок.",
+        "cannibalizationDecision": "Материал решает сезонную задачу ритма жаркого дня и не заменяет общий гид по Узбекистану или каталог достопримечательностей Самарканда."
+      },
+      "readerPromise": "Перенести главную прогулку на прохладные часы и не потерять день между архитектурными ансамблями.",
+      "internalContextLinks": ["https://yotti.net/esim/uzbekistan", "https://yotti.net/how-it-works"],
+      "researchSources": ["https://uzbekistan.travel/en/o/registan/", "https://gov.uz/en/mfa/sections/view/14509", "https://yotti.net/esim/uzbekistan"],
+      "creative": "assets/covers/uzbekistan-samarkand-shade-evening-walk.webp",
+      "creativeConceptKey": "samarkand-tiled-courtyard-long-shadow-tea",
+      "creativeBrief": "Изразцовый двор Самарканда в длинной вечерней тени, чайник на переднем плане и спокойный поток посетителей.",
+      "contentFormat": "seasonal-trip-ideas",
+      "schedule": {"ru": "2026-09-06T14:00:00Z", "en": "2026-09-06T14:00:00Z"},
+      "editorialScorecard": {
+        "ru": {"total": 96, "dimensions": {"intent": 15, "utility": 15, "specificity": 14, "trust": 14, "voice": 14, "structure": 9, "technical": 10, "commercialRestraint": 5}},
+        "en": {"total": 96, "dimensions": {"intent": 15, "utility": 15, "specificity": 14, "trust": 14, "voice": 14, "structure": 9, "technical": 10, "commercialRestraint": 5}}
+      },
+      "qualityNotes": {
+        "localeTotals": {"ru": 96, "en": 96},
+        "weakestDimensions": ["trust_and_evidence", "structure_and_readability"],
+        "editorialChange": "Самостоятельный редакторский проход развёл утро, полуденную паузу и два разных вечерних выбора; RU и EN сохранены как отдельные тексты.",
+        "titleCandidatesEvaluated": {"ru": 5, "en": 5},
+        "lengthDecision": "RU 880 и EN 984 слова: сезонный ритм, конкретные места и развилки раскрыты без универсального маршрута по часам."
+      }
+    },
+    {
+      "status": "scheduled",
+      "locales": ["ru", "en"],
+      "model": {"name": "gpt-5.6-sol", "effort": "high"},
+      "riskReasons": ["catchup_recovery", "owner_requested_manual_run", "query_cannibalization_checked"],
+      "generationAttempts": {"ru": 1, "en": 1},
+      "qualityRepairAttempts": 1,
+      "scores": {"utility": 95, "originalValue": 95, "factSupport": 95},
+      "editorialStandardVersion": 2,
+      "editorialPasses": {"ru": 1, "en": 1},
+      "creativeGeneration": {"model": "imagegen-built-in", "attempts": 1},
+      "id": "belgium-ghent-canal-craft-weekend",
+      "topicKey": "ghent-canal-craft-weekend",
+      "countryCode": "BE",
+      "region": "western-europe",
+      "planKind": "editorial",
+      "searchQuery": {"ru": "Гент каналы ремесла выходные", "en": "Ghent canals craft weekend"},
+      "workingTitle": {"ru": "Выходные в Генте: каналы, ремесло и вечер в Патерсхоле", "en": "A Ghent weekend of canals, craft and Patershol after dark"},
+      "intentMap": {
+        "primary": {"ru": "Гент каналы ремесла выходные", "en": "Ghent canals craft weekend"},
+        "neighborIntents": ["be-general-guide", "ghent-museum-overview"],
+        "uniqueReaderOutcome": "Читатель связывает набережные с одной ремесленной встречей, Industriemuseum и вечерним кварталом без гонки по музеям.",
+        "cannibalizationDecision": "Материал построен вокруг ремесленного наблюдения и воды, поэтому не конкурирует с общим гидом по Бельгии или обзором всех музеев Гента."
+      },
+      "readerPromise": "Связать исторический центр с одной ремесленной остановкой и вечерней прогулкой без списка всех музеев.",
+      "internalContextLinks": ["https://yotti.net/esim/belgium", "https://yotti.net/how-it-works"],
+      "researchSources": ["https://visit.gent.be/en/see-do/walk-along-water", "https://visit.gent.be/en/tag/made-ghent", "https://www.industriemuseum.be/en/guided-tours", "https://yotti.net/esim/belgium"],
+      "creative": "assets/covers/belgium-ghent-canal-craft-weekend.webp",
+      "creativeConceptKey": "ghent-canal-workshop-window-blue-hour",
+      "creativeBrief": "Окно небольшой мастерской у канала в Генте, велосипед и отражения синего часа без постановочных вывесок.",
+      "contentFormat": "culture-food-or-local-experience",
+      "schedule": {"ru": "2026-09-06T14:30:00Z", "en": "2026-09-06T14:30:00Z"},
+      "editorialScorecard": {
+        "ru": {"total": 95, "dimensions": {"intent": 15, "utility": 15, "specificity": 14, "trust": 14, "voice": 13, "structure": 9, "technical": 10, "commercialRestraint": 5}},
+        "en": {"total": 95, "dimensions": {"intent": 15, "utility": 15, "specificity": 14, "trust": 14, "voice": 13, "structure": 9, "technical": 10, "commercialRestraint": 5}}
+      },
+      "qualityNotes": {
+        "localeTotals": {"ru": 95, "en": 95},
+        "weakestDimensions": ["voice_and_localization", "structure_and_readability"],
+        "editorialChange": "Редакторский проход убрал один абстрактный оборот, оставил проверяемые сцены мастерской и сделал разные переходы между остановками в RU и EN.",
+        "titleCandidatesEvaluated": {"ru": 5, "en": 5},
+        "lengthDecision": "RU 855 и EN 1019 слов после ремонта: каналы, ремесло, индустриальная история и вечерний район раскрыты без музейного каталога."
+      }
+    },
+    {
+      "status": "scheduled",
+      "locales": ["ru", "en"],
+      "model": {"name": "gpt-5.6-sol", "effort": "high"},
+      "riskReasons": ["catchup_recovery", "owner_requested_manual_run", "query_cannibalization_checked"],
+      "generationAttempts": {"ru": 1, "en": 1},
+      "qualityRepairAttempts": 0,
+      "scores": {"utility": 96, "originalValue": 95, "factSupport": 95},
+      "editorialStandardVersion": 2,
+      "editorialPasses": {"ru": 1, "en": 1},
+      "creativeGeneration": {"model": "imagegen-built-in", "attempts": 1},
+      "id": "ghana-accra-market-coast-city-day",
+      "topicKey": "accra-market-museum-memorial-city-day",
+      "countryCode": "GH",
+      "region": "west-africa",
+      "planKind": "editorial",
+      "searchQuery": {"ru": "Аккра рынок побережье один день", "en": "Accra market coast one day"},
+      "workingTitle": {"ru": "Один день в Аккре: рынок, музей и мемориальный парк", "en": "One day in Accra: market, museum and memorial park"},
+      "intentMap": {
+        "primary": {"ru": "Аккра рынок побережье один день", "en": "Accra market coast one day"},
+        "neighborIntents": ["gh-general-guide", "accra-attractions-list"],
+        "uniqueReaderOutcome": "Читатель проводит самостоятельный день в центральной Аккре с короткой рыночной разведкой, музеем и понятным вечерним выходом.",
+        "cannibalizationDecision": "Материал решает задачу порядка и границ одного дня, не заменяя общий гид по Гане или список достопримечательностей Аккры."
+      },
+      "readerPromise": "Собрать самостоятельный городской день с одной рыночной остановкой и понятным вечерним возвращением.",
+      "internalContextLinks": ["https://yotti.net/esim/ghana", "https://yotti.net/how-it-works"],
+      "researchSources": ["https://visitghana.com/attractions/greater-accra-region/", "https://gmmb.gov.gh/the-national-museum-accra-1957/", "https://visitghana.com/kwame-nkrumah-memorial-park-2/", "https://yotti.net/esim/ghana"],
+      "creative": "assets/covers/ghana-accra-market-coast-city-day.webp",
+      "creativeConceptKey": "accra-coastal-road-market-basket-evening",
+      "creativeBrief": "Улица Аккры ближе к побережью, плетёная корзина с рынка и тёплый вечерний свет, живой городской кадр.",
+      "contentFormat": "practical-travel-scenario",
+      "schedule": {"ru": "2026-09-06T15:00:00Z", "en": "2026-09-06T15:00:00Z"},
+      "editorialScorecard": {
+        "ru": {"total": 96, "dimensions": {"intent": 15, "utility": 15, "specificity": 14, "trust": 14, "voice": 14, "structure": 9, "technical": 10, "commercialRestraint": 5}},
+        "en": {"total": 96, "dimensions": {"intent": 15, "utility": 15, "specificity": 14, "trust": 14, "voice": 14, "structure": 9, "technical": 10, "commercialRestraint": 5}}
+      },
+      "qualityNotes": {
+        "localeTotals": {"ru": 96, "en": 96},
+        "weakestDimensions": ["trust_and_evidence", "structure_and_readability"],
+        "editorialChange": "Отдельный редакторский проход уточнил вход и выход из рынка, убрал обещание пляжного финала и развёл русскую и английскую логику переходов.",
+        "titleCandidatesEvaluated": {"ru": 5, "en": 5},
+        "lengthDecision": "RU 866 и EN 984 слова: рыночная граница, музей, мемориальный парк и транспортные решения раскрыты без жёсткого тайминга."
+      }
+    },
+    {
+      "status": "scheduled",
+      "locales": ["ru", "en"],
+      "model": {"name": "gpt-5.6-sol", "effort": "high"},
+      "riskReasons": ["catchup_recovery", "owner_requested_manual_run", "query_cannibalization_checked"],
+      "generationAttempts": {"ru": 1, "en": 1},
+      "qualityRepairAttempts": 0,
+      "scores": {"utility": 97, "originalValue": 95, "factSupport": 95},
+      "editorialStandardVersion": 2,
+      "editorialPasses": {"ru": 1, "en": 1},
+      "creativeGeneration": {"model": "imagegen-built-in", "attempts": 1},
+      "id": "buy-esim-albania-tirana-riviera",
+      "topicKey": "albania-esim-tirana-riviera-offline",
+      "countryCode": "AL",
+      "region": "southern-europe",
+      "planKind": "buy-esim",
+      "searchQuery": {"ru": "купить есим для Албании", "en": "buy eSIM for Albania"},
+      "workingTitle": {"ru": "Купить есим для Албании: связь между Тираной и Ривьерой", "en": "Buy an eSIM for Albania: from Tirana to the Riviera"},
+      "intentMap": {
+        "primary": {"ru": "купить есим для Албании", "en": "buy eSIM for Albania"},
+        "neighborIntents": ["al-general-guide", "al-destination-overview"],
+        "uniqueReaderOutcome": "Читатель проверяет совместимость и travel data в Тиране, готовит офлайн-набор и диагностирует сбой без рискованного удаления профиля.",
+        "cannibalizationDecision": "Статья отделена от тарифной страницы: она решает переход от городской настройки к дороге по Ривьере и безопасной диагностике."
+      },
+      "readerPromise": "Подготовить городские данные и отдельный офлайн-набор для дороги вдоль побережья.",
+      "internalContextLinks": ["https://yotti.net/esim/albania", "https://yotti.net/how-it-works"],
+      "researchSources": ["https://yotti.net/esim/albania", "https://yotti.net/how-it-works", "https://akt.gov.al/en/itineraries/trip-to-visit-the-beautiful-Albanian-Riviera/", "https://akt.gov.al/en/cities/tirane/"],
+      "creative": "assets/covers/buy-esim-albania-tirana-riviera.webp",
+      "creativeConceptKey": "albanian-riviera-bus-stop-sea-morning",
+      "creativeBrief": "Небольшая остановка на Албанской Ривьере, автобус сбоку, море и утренний свет без крупного плана телефона.",
+      "contentFormat": "connectivity-and-esim",
+      "schedule": {"ru": "2026-09-06T15:30:00Z", "en": "2026-09-06T15:30:00Z"},
+      "editorialScorecard": {
+        "ru": {"total": 97, "dimensions": {"intent": 15, "utility": 15, "specificity": 14, "trust": 14, "voice": 14, "structure": 9, "technical": 10, "commercialRestraint": 5}},
+        "en": {"total": 97, "dimensions": {"intent": 15, "utility": 15, "specificity": 14, "trust": 14, "voice": 14, "structure": 9, "technical": 10, "commercialRestraint": 5}}
+      },
+      "qualityNotes": {
+        "localeTotals": {"ru": 97, "en": 97},
+        "weakestDimensions": ["trust_and_evidence", "structure_and_readability"],
+        "editorialChange": "Технический проход проверил совместимость, активацию, роли двух линий, городскую проверку, офлайн-ветку и диагностику без обещаний покрытия.",
+        "titleCandidatesEvaluated": {"ru": 5, "en": 5},
+        "lengthDecision": "RU 854 и EN 978 слов: решение до покупки, установка, Тирана, дорога и четыре ветки отказа раскрыты без рекламного блока."
+      }
     }
   ],
   "plannedPublications": [
     {
       "planOrder": 1,
-      "id": "uzbekistan-samarkand-shade-evening-walk",
-      "countryCode": "UZ",
-      "region": "central-asia",
-      "planKind": "editorial",
-      "contentFormat": "seasonal-trip-ideas",
-      "searchQuery": {
-        "ru": "Самарканд летом прогулка вечером",
-        "en": "Samarkand summer evening walk"
-      },
-      "semanticIntent": {
-        "primary": "samarkand-hot-season-evening-walk",
-        "secondary": [
-          "Самарканд в жару",
-          "Samarkand evening itinerary"
-        ]
-      },
-      "workingTitle": {
-        "ru": "Самарканд в жаркий день: тень, длинный обед и вечерняя прогулка",
-        "en": "Samarkand on a hot day: shade, a long lunch and an evening walk"
-      },
-      "readerPromise": "Перенести главную прогулку на прохладные часы и не потерять день между архитектурными ансамблями.",
-      "creativeConceptKey": "samarkand-tiled-courtyard-long-shadow-tea",
-      "creativeBrief": "Изразцовый двор Самарканда в длинной вечерней тени, чайник на переднем плане и спокойный поток посетителей."
-    },
-    {
-      "planOrder": 2,
-      "id": "belgium-ghent-canal-craft-weekend",
-      "countryCode": "BE",
-      "region": "western-europe",
-      "planKind": "editorial",
-      "contentFormat": "culture-food-or-local-experience",
-      "searchQuery": {
-        "ru": "Гент каналы ремесла выходные",
-        "en": "Ghent canals craft weekend"
-      },
-      "semanticIntent": {
-        "primary": "ghent-canal-craft-weekend",
-        "secondary": [
-          "что посмотреть в Генте",
-          "Ghent cultural weekend"
-        ]
-      },
-      "workingTitle": {
-        "ru": "Выходные в Генте: каналы, мастерские и один вечер у воды",
-        "en": "A weekend in Ghent: canals, workshops and an evening by the water"
-      },
-      "readerPromise": "Связать исторический центр с одной ремесленной остановкой и вечерней прогулкой без списка всех музеев.",
-      "creativeConceptKey": "ghent-canal-workshop-window-blue-hour",
-      "creativeBrief": "Окно небольшой мастерской у канала в Генте, велосипед и отражения синего часа без постановочных вывесок."
-    },
-    {
-      "planOrder": 3,
-      "id": "ghana-accra-market-coast-city-day",
-      "countryCode": "GH",
-      "region": "west-africa",
-      "planKind": "editorial",
-      "contentFormat": "practical-travel-scenario",
-      "searchQuery": {
-        "ru": "Аккра рынок побережье один день",
-        "en": "Accra market coast one day"
-      },
-      "semanticIntent": {
-        "primary": "accra-market-coast-city-day",
-        "secondary": [
-          "день в Аккре",
-          "Accra city itinerary"
-        ]
-      },
-      "workingTitle": {
-        "ru": "Один день в Аккре: рынок, музей и побережье без лишних переездов",
-        "en": "One day in Accra: a market, a museum and the coast without extra transfers"
-      },
-      "readerPromise": "Собрать самостоятельный городской день с одной рыночной остановкой и понятным вечерним возвращением.",
-      "creativeConceptKey": "accra-coastal-road-market-basket-evening",
-      "creativeBrief": "Улица Аккры ближе к побережью, плетёная корзина с рынка и тёплый вечерний свет, живой городской кадр."
-    },
-    {
-      "planOrder": 4,
-      "id": "buy-esim-albania-tirana-riviera",
-      "countryCode": "AL",
-      "region": "southern-europe",
-      "planKind": "buy-esim",
-      "contentFormat": "connectivity-and-esim",
-      "searchQuery": {
-        "ru": "купить есим для Албании",
-        "en": "buy eSIM for Albania"
-      },
-      "semanticIntent": {
-        "primary": "albania-esim-tirana-riviera",
-        "secondary": [
-          "есим Албания интернет",
-          "Albania travel eSIM"
-        ]
-      },
-      "workingTitle": {
-        "ru": "Купить есим для Албании: связь от Тираны до Ривьеры",
-        "en": "Buy an eSIM for Albania: connectivity from Tirana to the Riviera"
-      },
-      "readerPromise": "Подготовить городские данные и отдельный офлайн-набор для дороги вдоль побережья.",
-      "creativeConceptKey": "albanian-riviera-bus-stop-sea-morning",
-      "creativeBrief": "Небольшая остановка на Албанской Ривьере, автобус сбоку, море и утренний свет без крупного плана телефона."
-    },
-    {
-      "planOrder": 5,
       "id": "peru-arequipa-highland-first-day",
       "countryCode": "PE",
       "region": "south-america",
@@ -7150,7 +7222,7 @@
       "creativeBrief": "Белокаменная аркада Арекипы утром, местные прохожие и вулканический силуэт вдалеке."
     },
     {
-      "planOrder": 6,
+      "planOrder": 2,
       "id": "japan-matsumoto-castle-craft-morning",
       "countryCode": "JP",
       "region": "east-asia",
@@ -7176,7 +7248,7 @@
       "creativeBrief": "Витрина ремесленной лавки Мацумото, отражение чёрного замка и спокойный утренний свет."
     },
     {
-      "planOrder": 7,
+      "planOrder": 3,
       "id": "serbia-novi-sad-danube-weekend",
       "countryCode": "RS",
       "region": "southern-europe",
@@ -7202,7 +7274,7 @@
       "creativeBrief": "Велосипедист у Дуная, Петроварадинская крепость на другом берегу и мягкий сумеречный свет."
     },
     {
-      "planOrder": 8,
+      "planOrder": 4,
       "id": "buy-esim-ecuador-quito-galapagos",
       "countryCode": "EC",
       "region": "south-america",
