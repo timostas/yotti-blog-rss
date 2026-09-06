@@ -11,7 +11,8 @@
     "visual-check": "node scripts/check-article-visuals.mjs",
     "article-check": "node scripts/check-changed-article-guardrails.mjs",
     "public-page-check": "node scripts/check-public-page-performance.mjs",
-    "test": "node --test"
+    "test": "node --test",
+    "public-renderer-health": "node scripts/check-public-renderer-health.mjs"
   },
   "engines": {
     "node": ">=24"
