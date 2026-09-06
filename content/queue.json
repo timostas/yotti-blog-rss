@@ -7192,89 +7192,143 @@
         "titleCandidatesEvaluated": {"ru": 5, "en": 5},
         "lengthDecision": "RU 854 и EN 978 слов: решение до покупки, установка, Тирана, дорога и четыре ветки отказа раскрыты без рекламного блока."
       }
+    },
+    {
+      "status": "scheduled",
+      "locales": ["ru", "en"],
+      "model": {"name": "gpt-5.6-sol", "effort": "high"},
+      "riskReasons": ["catchup_recovery", "owner_requested_manual_run", "query_cannibalization_checked", "health_claims_scope_limited"],
+      "generationAttempts": {"ru": 1, "en": 1},
+      "qualityRepairAttempts": 0,
+      "scores": {"utility": 96, "originalValue": 95, "factSupport": 96},
+      "editorialStandardVersion": 2,
+      "editorialPasses": {"ru": 1, "en": 1},
+      "creativeGeneration": {"model": "imagegen-built-in", "attempts": 1},
+      "id": "peru-arequipa-highland-first-day",
+      "topicKey": "arequipa-arrival-day-low-demand-centre",
+      "countryCode": "PE",
+      "region": "south-america",
+      "planKind": "editorial",
+      "searchQuery": {"ru": "Арекипа первый день высота", "en": "Arequipa first day altitude"},
+      "workingTitle": {"ru": "Первый день в Арекипе: короткая прогулка без дальнего выезда", "en": "A first day in Arequipa: a short walk with no distant excursion"},
+      "intentMap": {
+        "primary": {"ru": "Арекипа первый день высота", "en": "Arequipa first day altitude"},
+        "neighborIntents": ["pe-general-guide", "arequipa-attractions-overview", "colca-canyon-itinerary"],
+        "uniqueReaderOutcome": "Читатель оставляет день прибытия внутри исторического центра, принимает решение после каждого блока и не подменяет медицинскую помощь туристическим советом.",
+        "cannibalizationDecision": "Материал отвечает на сценарий первого дня и темпа, не заменяя общий гид по Перу, список мест Арекипы или маршрут в каньон Колька."
+      },
+      "readerPromise": "Освоить центр в спокойном темпе и не привязывать день прибытия к дальнему выезду.",
+      "internalContextLinks": ["https://yotti.net/esim/peru", "https://yotti.net/how-it-works"],
+      "researchSources": ["https://whc.unesco.org/en/list/1016", "https://www.peru.travel/lima2019/complemento/paquetes/paquete32_en.pdf", "https://wwwnc.cdc.gov/travel/page/travel-to-high-altitudes", "https://yotti.net/esim/peru"],
+      "creative": "assets/covers/peru-arequipa-highland-first-day.webp",
+      "creativeConceptKey": "arequipa-white-stone-arcade-morning",
+      "creativeBrief": "Белокаменная аркада Арекипы утром, местные прохожие и вулканический силуэт вдалеке.",
+      "contentFormat": "practical-travel-scenario",
+      "schedule": {"ru": "2026-09-06T16:00:00Z", "en": "2026-09-06T16:00:00Z"},
+      "editorialScorecard": {
+        "ru": {"total": 96, "dimensions": {"intent": 15, "utility": 15, "specificity": 14, "trust": 15, "voice": 13, "structure": 9, "technical": 10, "commercialRestraint": 5}},
+        "en": {"total": 96, "dimensions": {"intent": 15, "utility": 15, "specificity": 14, "trust": 15, "voice": 13, "structure": 9, "technical": 10, "commercialRestraint": 5}}
+      },
+      "qualityNotes": {
+        "localeTotals": {"ru": 96, "en": 96},
+        "weakestDimensions": ["voice_and_localization", "structure_and_readability"],
+        "editorialChange": "Редакторский проход ограничил тему высоты немедицинскими решениями, добавил ясную границу обращения за помощью и сохранил разные RU/EN переходы.",
+        "titleCandidatesEvaluated": {"ru": 5, "en": 5},
+        "lengthDecision": "RU 816 и EN 914 слов: компактный центр, три решения о темпе и перенос дальнего выезда раскрыты без медицинских обещаний."
+      }
+    },
+    {
+      "status": "scheduled",
+      "locales": ["ru", "en"],
+      "model": {"name": "gpt-5.6-sol", "effort": "high"},
+      "riskReasons": ["catchup_recovery", "owner_requested_manual_run", "query_cannibalization_checked"],
+      "generationAttempts": {"ru": 1, "en": 1},
+      "qualityRepairAttempts": 0,
+      "scores": {"utility": 96, "originalValue": 96, "factSupport": 95},
+      "editorialStandardVersion": 2,
+      "editorialPasses": {"ru": 1, "en": 1},
+      "creativeGeneration": {"model": "imagegen-built-in", "attempts": 1},
+      "id": "japan-matsumoto-castle-craft-morning",
+      "topicKey": "matsumoto-castle-craft-material-morning",
+      "countryCode": "JP",
+      "region": "east-asia",
+      "planKind": "editorial",
+      "searchQuery": {"ru": "Мацумото замок ремесла утро", "en": "Matsumoto castle craft morning"},
+      "workingTitle": {"ru": "Утро в Мацумото: замок, ремесленные улицы и ранний обед", "en": "A morning in Matsumoto: castle, craft streets and an early lunch"},
+      "intentMap": {
+        "primary": {"ru": "Мацумото замок ремесла утро", "en": "Matsumoto castle craft morning"},
+        "neighborIntents": ["jp-general-guide", "matsumoto-castle-guide", "japan-craft-shopping"],
+        "uniqueReaderOutcome": "Читатель связывает внешний круг замка с Nawate, Nakamachi и одним материалом, избегая безразборной сувенирной прогулки.",
+        "cannibalizationDecision": "Материал построен вокруг наблюдения за материалом и процессом, поэтому не конкурирует с общим гидом по Японии или отдельной историей замка."
+      },
+      "readerPromise": "Соединить замок с одной ремесленной улицей до прибытия дневных групп.",
+      "internalContextLinks": ["https://yotti.net/esim/japan", "https://yotti.net/how-it-works"],
+      "researchSources": ["https://www.japan.travel/en/spot/1356/", "https://visitmatsumoto.com/en/spot/index_1_2__6___.html", "https://visitmatsumoto.com/en/article/detail_32.html", "https://yotti.net/esim/japan"],
+      "creative": "assets/covers/japan-matsumoto-castle-craft-morning.webp",
+      "creativeConceptKey": "matsumoto-craft-shop-castle-reflection",
+      "creativeBrief": "Витрина ремесленной лавки Мацумото, отражение чёрного замка и спокойный утренний свет.",
+      "contentFormat": "culture-food-or-local-experience",
+      "schedule": {"ru": "2026-09-06T16:30:00Z", "en": "2026-09-06T16:30:00Z"},
+      "editorialScorecard": {
+        "ru": {"total": 96, "dimensions": {"intent": 15, "utility": 15, "specificity": 15, "trust": 14, "voice": 13, "structure": 9, "technical": 10, "commercialRestraint": 5}},
+        "en": {"total": 96, "dimensions": {"intent": 15, "utility": 15, "specificity": 15, "trust": 14, "voice": 13, "structure": 9, "technical": 10, "commercialRestraint": 5}}
+      },
+      "qualityNotes": {
+        "localeTotals": {"ru": 96, "en": 96},
+        "weakestDimensions": ["voice_and_localization", "structure_and_readability"],
+        "editorialChange": "Отдельный редакторский проход заменил сувенирный список одной линией наблюдения — от конструкции замка к материалу, мастерской и еде.",
+        "titleCandidatesEvaluated": {"ru": 5, "en": 5},
+        "lengthDecision": "RU 770 и EN 902 слова: замок, две улицы, один материал и обед раскрыты через разные локальные сцены."
+      }
+    },
+    {
+      "status": "scheduled",
+      "locales": ["ru", "en"],
+      "model": {"name": "gpt-5.6-sol", "effort": "high"},
+      "riskReasons": ["catchup_recovery", "owner_requested_manual_run", "query_cannibalization_checked"],
+      "generationAttempts": {"ru": 1, "en": 1},
+      "qualityRepairAttempts": 0,
+      "scores": {"utility": 95, "originalValue": 95, "factSupport": 95},
+      "editorialStandardVersion": 2,
+      "editorialPasses": {"ru": 1, "en": 1},
+      "creativeGeneration": {"model": "imagegen-built-in", "attempts": 1},
+      "id": "serbia-novi-sad-danube-weekend",
+      "topicKey": "novi-sad-two-bank-weekend-split",
+      "countryCode": "RS",
+      "region": "southern-europe",
+      "planKind": "editorial",
+      "searchQuery": {"ru": "Нови-Сад Дунай выходные", "en": "Novi Sad Danube weekend"},
+      "workingTitle": {"ru": "Выходные в Нови-Саде: центр, Петроварадин и два берега Дуная", "en": "A Novi Sad weekend across the centre, Petrovaradin and the Danube"},
+      "intentMap": {
+        "primary": {"ru": "Нови-Сад Дунай выходные", "en": "Novi Sad Danube weekend"},
+        "neighborIntents": ["rs-general-guide", "petrovaradin-fortress-guide", "novi-sad-attractions-list"],
+        "uniqueReaderOutcome": "Читатель разделяет центр и Петроварадин на два дня, пересекает Дунай один раз с целью и выбирает историю или живую мастерскую на крепости.",
+        "cannibalizationDecision": "Материал решает географию двухдневного уикенда, не заменяя общий гид по Сербии или подробный путеводитель по крепости."
+      },
+      "readerPromise": "Разделить городской центр и Петроварадин на два спокойных блока без поездки ради одного вида.",
+      "internalContextLinks": ["https://yotti.net/esim/serbia", "https://yotti.net/how-it-works"],
+      "researchSources": ["https://novisad.travel/en/tourist-atractions/", "https://novisad.travel/en/novi-sad-za-3-dana-dan-1/", "https://novisad.travel/en/petrovaradin-fortress-galleries/", "https://yotti.net/esim/serbia"],
+      "creative": "assets/covers/serbia-novi-sad-danube-weekend.webp",
+      "creativeConceptKey": "novi-sad-danube-fortress-bicycle-dusk",
+      "creativeBrief": "Велосипедист у Дуная, Петроварадинская крепость на другом берегу и мягкий сумеречный свет.",
+      "contentFormat": "destination-inspiration",
+      "schedule": {"ru": "2026-09-06T17:00:00Z", "en": "2026-09-06T17:00:00Z"},
+      "editorialScorecard": {
+        "ru": {"total": 95, "dimensions": {"intent": 15, "utility": 15, "specificity": 14, "trust": 14, "voice": 13, "structure": 9, "technical": 10, "commercialRestraint": 5}},
+        "en": {"total": 95, "dimensions": {"intent": 15, "utility": 15, "specificity": 14, "trust": 14, "voice": 13, "structure": 9, "technical": 10, "commercialRestraint": 5}}
+      },
+      "qualityNotes": {
+        "localeTotals": {"ru": 95, "en": 95},
+        "weakestDimensions": ["voice_and_localization", "structure_and_readability"],
+        "editorialChange": "Редакторский проход убрал обзорный чек-лист, развёл два берега по дням и оставил доступ к мастерским условным, а не гарантированным.",
+        "titleCandidatesEvaluated": {"ru": 5, "en": 5},
+        "lengthDecision": "RU 817 и EN 950 слов: центр, Gradić, крепость, мастерские и две логики перехода раскрыты без марафона достопримечательностей."
+      }
     }
   ],
   "plannedPublications": [
     {
       "planOrder": 1,
-      "id": "peru-arequipa-highland-first-day",
-      "countryCode": "PE",
-      "region": "south-america",
-      "planKind": "editorial",
-      "contentFormat": "practical-travel-scenario",
-      "searchQuery": {
-        "ru": "Арекипа первый день высота",
-        "en": "Arequipa first day altitude"
-      },
-      "semanticIntent": {
-        "primary": "arequipa-highland-first-day",
-        "secondary": [
-          "первый день в Арекипе",
-          "Arequipa easy first day"
-        ]
-      },
-      "workingTitle": {
-        "ru": "Первый день в Арекипе: короткая прогулка и запас на высоту",
-        "en": "A first day in Arequipa: a short walk with room for altitude"
-      },
-      "readerPromise": "Освоить центр в спокойном темпе и не привязывать день прибытия к дальнему выезду.",
-      "creativeConceptKey": "arequipa-white-stone-arcade-morning",
-      "creativeBrief": "Белокаменная аркада Арекипы утром, местные прохожие и вулканический силуэт вдалеке."
-    },
-    {
-      "planOrder": 2,
-      "id": "japan-matsumoto-castle-craft-morning",
-      "countryCode": "JP",
-      "region": "east-asia",
-      "planKind": "editorial",
-      "contentFormat": "culture-food-or-local-experience",
-      "searchQuery": {
-        "ru": "Мацумото замок ремесла утро",
-        "en": "Matsumoto castle craft morning"
-      },
-      "semanticIntent": {
-        "primary": "matsumoto-castle-craft-morning",
-        "secondary": [
-          "что посмотреть в Мацумото",
-          "Matsumoto cultural morning"
-        ]
-      },
-      "workingTitle": {
-        "ru": "Утро в Мацумото: замок, ремесленная улица и ранний обед",
-        "en": "A morning in Matsumoto: the castle, a craft street and an early lunch"
-      },
-      "readerPromise": "Соединить замок с одной ремесленной улицей до прибытия дневных групп.",
-      "creativeConceptKey": "matsumoto-craft-shop-castle-reflection",
-      "creativeBrief": "Витрина ремесленной лавки Мацумото, отражение чёрного замка и спокойный утренний свет."
-    },
-    {
-      "planOrder": 3,
-      "id": "serbia-novi-sad-danube-weekend",
-      "countryCode": "RS",
-      "region": "southern-europe",
-      "planKind": "editorial",
-      "contentFormat": "destination-inspiration",
-      "searchQuery": {
-        "ru": "Нови-Сад Дунай выходные",
-        "en": "Novi Sad Danube weekend"
-      },
-      "semanticIntent": {
-        "primary": "novi-sad-danube-weekend",
-        "secondary": [
-          "что посмотреть в Нови-Саде",
-          "Novi Sad first weekend"
-        ]
-      },
-      "workingTitle": {
-        "ru": "Выходные в Нови-Саде: центр, крепость и Дунай",
-        "en": "A weekend in Novi Sad: the centre, fortress and Danube"
-      },
-      "readerPromise": "Разделить городской центр и Петроварадин на два спокойных блока без поездки ради одного вида.",
-      "creativeConceptKey": "novi-sad-danube-fortress-bicycle-dusk",
-      "creativeBrief": "Велосипедист у Дуная, Петроварадинская крепость на другом берегу и мягкий сумеречный свет."
-    },
-    {
-      "planOrder": 4,
       "id": "buy-esim-ecuador-quito-galapagos",
       "countryCode": "EC",
       "region": "south-america",
@@ -7298,6 +7352,118 @@
       "readerPromise": "Разделить связь в столице, перелёт и островные участки, где офлайн-план важнее обещаний покрытия.",
       "creativeConceptKey": "galapagos-ferry-pier-sea-lion-morning",
       "creativeBrief": "Небольшой причал на Галапагосах, морской лев у скамьи и паром сбоку в утреннем свете."
+    },
+    {
+      "planOrder": 2,
+      "id": "romania-brasov-autumn-courtyards-day",
+      "countryCode": "RO",
+      "region": "eastern-europe",
+      "planKind": "editorial",
+      "contentFormat": "seasonal-trip-ideas",
+      "searchQuery": {"ru": "Брашов осенью прогулка", "en": "Brasov autumn walking day"},
+      "semanticIntent": {"primary": "brasov-autumn-courtyards-walk", "secondary": ["Брашов в октябре", "Brașov shoulder season"]},
+      "workingTitle": {"ru": "Осенний день в Брашове: дворы, стены и тёплая пауза", "en": "An autumn day in Brașov: courtyards, walls and a warm pause"},
+      "readerPromise": "Собрать короткую прогулку по старому городу с погодной развилкой, не превращая Брашов в транзит к замкам.",
+      "creativeConceptKey": "brasov-courtyard-yellow-leaves-window-steam",
+      "creativeBrief": "Тихий двор Брашова с жёлтыми листьями, паром на оконном стекле и прохожим под зонтом."
+    },
+    {
+      "planOrder": 3,
+      "id": "senegal-dakar-art-market-atelier-afternoon",
+      "countryCode": "SN",
+      "region": "west-africa",
+      "planKind": "editorial",
+      "contentFormat": "culture-food-or-local-experience",
+      "searchQuery": {"ru": "Дакар искусство рынок мастерские", "en": "Dakar art market atelier afternoon"},
+      "semanticIntent": {"primary": "dakar-art-market-atelier-afternoon", "secondary": ["искусство Дакара", "Dakar creative scene"]},
+      "workingTitle": {"ru": "Искусство Дакара: рынок, мастерская и один разговор", "en": "Dakar through art: a market, a studio and one conversation"},
+      "readerPromise": "Увидеть творческий Дакар через одну мастерскую и один рынок, сохранив время на разговор вместо списка галерей.",
+      "creativeConceptKey": "dakar-printmaker-ink-courtyard-afternoon",
+      "creativeBrief": "Печатник раскладывает свежие оттиски во дворе Дакара, тканевые навесы дают цветные тени."
+    },
+    {
+      "planOrder": 4,
+      "id": "south-korea-busan-hillside-coast-weekend",
+      "countryCode": "KR",
+      "region": "east-asia",
+      "planKind": "editorial",
+      "contentFormat": "destination-inspiration",
+      "searchQuery": {"ru": "Пусан выходные холмы побережье", "en": "Busan hillside coast weekend"},
+      "semanticIntent": {"primary": "busan-hillside-coast-weekend", "secondary": ["что посмотреть в Пусане", "Busan first weekend"]},
+      "workingTitle": {"ru": "Выходные в Пусане: холмы, порт и берег без гонки", "en": "A weekend in Busan: hills, harbour and coast without rushing"},
+      "readerPromise": "Разделить вертикальные кварталы и длинный берег на разные дни, чтобы не тратить выходные в переездах.",
+      "creativeConceptKey": "busan-hillside-stairs-laundry-harbour-haze",
+      "creativeBrief": "Лестница жилого квартала Пусана, бельё на ветру и порт в лёгкой утренней дымке."
+    },
+    {
+      "planOrder": 5,
+      "id": "buy-esim-armenia-yerevan-dilijan",
+      "countryCode": "AM",
+      "region": "caucasus",
+      "planKind": "buy-esim",
+      "contentFormat": "connectivity-and-esim",
+      "searchQuery": {"ru": "купить есим для Армении", "en": "buy eSIM for Armenia"},
+      "semanticIntent": {"primary": "armenia-esim-yerevan-dilijan", "secondary": ["есим Армения интернет", "Armenia travel eSIM"]},
+      "workingTitle": {"ru": "Купить есим для Армении: связь между Ереваном и Дилижаном", "en": "Buy an eSIM for Armenia: connectivity from Yerevan to Dilijan"},
+      "readerPromise": "Проверить travel data в Ереване и подготовить офлайн-набор до междугородней дороги и лесных участков.",
+      "creativeConceptKey": "dilijan-rainy-bus-shelter-paper-map",
+      "creativeBrief": "Дождливая остановка у Дилижана, сложенная бумажная карта на лавке и лесная дорога за стеклом."
+    },
+    {
+      "planOrder": 6,
+      "id": "uruguay-montevideo-market-promenade-day",
+      "countryCode": "UY",
+      "region": "south-america",
+      "planKind": "editorial",
+      "contentFormat": "culture-food-or-local-experience",
+      "searchQuery": {"ru": "Монтевидео рынок набережная один день", "en": "Montevideo market promenade day"},
+      "semanticIntent": {"primary": "montevideo-market-promenade-day", "secondary": ["еда в Монтевидео", "Montevideo food and rambla"]},
+      "workingTitle": {"ru": "День в Монтевидео: рынок, тихие кварталы и Рамбла", "en": "A day in Montevideo: market, quiet blocks and the Rambla"},
+      "readerPromise": "Связать один рыночный обед с жилыми кварталами и вечерней набережной без гастрономического марафона.",
+      "creativeConceptKey": "montevideo-market-shutters-mate-rambla-breeze",
+      "creativeBrief": "Приоткрытые ставни рынка Монтевидео, термос и мате на столе, за углом видна ветреная Рамбла."
+    },
+    {
+      "planOrder": 7,
+      "id": "saudi-arabia-jeddah-albalad-corniche-day",
+      "countryCode": "SA",
+      "region": "middle-east",
+      "planKind": "editorial",
+      "contentFormat": "practical-travel-scenario",
+      "searchQuery": {"ru": "Джидда Аль-Балад набережная день", "en": "Jeddah Al-Balad Corniche day"},
+      "semanticIntent": {"primary": "jeddah-albalad-corniche-day", "secondary": ["один день в Джидде", "Jeddah old town and Corniche"]},
+      "workingTitle": {"ru": "Один день в Джидде: Аль-Балад утром и Корниш вечером", "en": "One day in Jeddah: Al-Balad in the morning and the Corniche at dusk"},
+      "readerPromise": "Разнести старый город и набережную по прохладным часам, оставив середину дня для закрытой паузы.",
+      "creativeConceptKey": "jeddah-rawasheen-shadow-water-carrier",
+      "creativeBrief": "Резные равашины Аль-Балада отбрасывают тень на узкую улицу, прохожий несёт кувшин с водой."
+    },
+    {
+      "planOrder": 8,
+      "id": "indonesia-yogyakarta-batik-workshop-morning",
+      "countryCode": "ID",
+      "region": "southeast-asia",
+      "planKind": "editorial",
+      "contentFormat": "culture-food-or-local-experience",
+      "searchQuery": {"ru": "Джокьякарта батик мастерская утро", "en": "Yogyakarta batik workshop morning"},
+      "semanticIntent": {"primary": "yogyakarta-batik-workshop-morning", "secondary": ["батик в Джокьякарте", "Yogyakarta craft morning"]},
+      "workingTitle": {"ru": "Утро батика в Джокьякарте: как выбрать мастерскую", "en": "A batik morning in Yogyakarta: choosing a workshop that fits"},
+      "readerPromise": "Выбрать между наблюдением и практическим занятием, понять рабочий ритм мастерской и не покупать сувенир вслепую.",
+      "creativeConceptKey": "yogyakarta-batik-wax-tool-indigo-cloth",
+      "creativeBrief": "Рука мастера ведёт чантинг над тканью индиго, в кадре видны воск, деревянный стол и естественный свет."
+    },
+    {
+      "planOrder": 9,
+      "id": "buy-esim-iceland-reykjavik-ring-road",
+      "countryCode": "IS",
+      "region": "northern-europe",
+      "planKind": "buy-esim",
+      "contentFormat": "connectivity-and-esim",
+      "searchQuery": {"ru": "купить есим для Исландии", "en": "buy eSIM for Iceland"},
+      "semanticIntent": {"primary": "iceland-esim-reykjavik-ring-road", "secondary": ["есим Исландия интернет", "Iceland road trip eSIM"]},
+      "workingTitle": {"ru": "Купить есим для Исландии: связь в Рейкьявике и на кольцевой дороге", "en": "Buy an eSIM for Iceland: Reykjavík and the Ring Road"},
+      "readerPromise": "Проверить данные в городе, сохранить дорогу и прогноз офлайн и отделить навигационный резерв от обещаний покрытия.",
+      "creativeConceptKey": "iceland-roadside-shelter-wind-paper-route",
+      "creativeBrief": "Путешественник придерживает бумажный маршрут у ветреного придорожного укрытия, за ним чёрная дорога и низкие облака."
     }
   ],
   "reservePublications": [
