@@ -137,7 +137,7 @@
       ],
       "model": {
         "name": "gpt-5.6-sol",
-        "effort": "low"
+        "effort": "high"
       },
       "riskReasons": [
         "owner_requested_manual_run"
@@ -148,16 +148,107 @@
       },
       "qualityRepairAttempts": 0,
       "scores": {
-        "utility": 90,
-        "originalValue": 92,
-        "factSupport": 88
+        "utility": 92,
+        "originalValue": 88,
+        "factSupport": 91
       },
-      "creative": "assets/covers/bangkok-night-markets-guide.png",
-      "creativeConceptKey": "bangkok-blue-hour-wok-street-life",
+      "editorialStandardVersion": 2,
+      "editorialPasses": {
+        "ru": 1,
+        "en": 1
+      },
+      "intentMap": {
+        "primary": {
+          "ru": "вечер в Яоварате: прогулка и уличная еда без переездов между рынками",
+          "en": "a first Yaowarat evening with a practical street-food walk and no cross-city market transfers"
+        },
+        "uniqueReaderOutcome": "Читатель выбирает Яоварат для первого вечера, строит короткую прогулку с понятным выходом и применяет подтверждённые пищевые границы вместо эвристик популярности.",
+        "cannibalizationDecision": "Обновляется существующий редакционный URL о Яоварате, который сохраняет отдельный информационный интент от продуктовой страницы Yotti для Таиланда. Объединение, новый URL, редирект и изменение canonical не требуются."
+      },
+      "internalContextLinks": [
+        "https://yotti.net/esim/thailand",
+        "https://yotti.net/how-it-works",
+        "https://yotti.net/en/esim/thailand",
+        "https://yotti.net/en/how-it-works"
+      ],
+      "creative": "assets/covers/bangkok-night-markets-guide-remediation.webp",
+      "creativeConceptKey": "bangkok-yaowarat-blue-hour-wok-street-life-webp-remediation",
       "contentFormat": "culture-food-or-local-experience",
       "schedule": {
         "ru": "2026-08-14T09:44:00Z",
         "en": "2026-08-14T09:44:00Z"
+      },
+      "editorialScorecard": {
+        "ru": {
+          "total": 90,
+          "dimensions": {
+            "intent": 14,
+            "utility": 14,
+            "specificity": 13,
+            "trust": 13,
+            "voice": 13,
+            "structure": 9,
+            "technical": 9,
+            "commercialRestraint": 5
+          }
+        },
+        "en": {
+          "total": 91,
+          "dimensions": {
+            "intent": 14,
+            "utility": 14,
+            "specificity": 13,
+            "trust": 13,
+            "voice": 14,
+            "structure": 9,
+            "technical": 9,
+            "commercialRestraint": 5
+          }
+        }
+      },
+      "qualityNotes": {
+        "localeTotals": {
+          "ru": 90,
+          "en": 91
+        },
+        "weakestDimensions": [
+          "local_specificity_and_original_value",
+          "trust_and_evidence"
+        ],
+        "editorialChange": "Сохранён Yaowarat-first выбор, удалены зеркальный FAQ и неподтверждённые эвристики очереди и меню; безопасность привязана к WHO, а соседние рынки отделены прямыми источниками TAT и BMA.",
+        "lengthDecision": "RU содержит 783 слова и остаётся ниже планового диапазона, потому что узкая задача одного вечера полностью закрыта без списка заведений и изменчивых часов. EN содержит 927 слов и решает тот же интент в самостоятельной композиции."
+      },
+      "remediation": {
+        "date": "2026-09-06",
+        "model": {
+          "name": "gpt-5.6-sol",
+          "effort": "high"
+        },
+        "textGenerationAttempts": {
+          "ru": 1,
+          "en": 1
+        },
+        "qualityRepairAttempts": 1,
+        "editorialPasses": {
+          "ru": 1,
+          "en": 1
+        },
+        "cover": {
+          "mode": "source-conversion",
+          "model": "bundled-pillow",
+          "attempts": 0,
+          "output": {
+            "width": 1600,
+            "height": 900,
+            "bytes": 156794
+          }
+        },
+        "preserved": {
+          "slug": true,
+          "canonical": true,
+          "publishedAt": true
+        },
+        "urlChange": false
       }
     },
     {
