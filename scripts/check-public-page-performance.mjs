@@ -7,6 +7,8 @@ const ROOT_DIR = resolve(dirname(fileURLToPath(import.meta.url)), "..");
 const STATES = new Set(["PASS", "FAIL", "UNAVAILABLE", "CONTRACT_ERROR"]);
 const DEFAULT_REQUIRED_VIEWPORTS = [360, 390, 720];
 const INLINE_IMAGE_ROLES = new Set(["contextual-photo", "information-graphic", "route-map"]);
+const RESPONSIVE_EQUIVALENT_TYPES = new Set(["cdn-width-transform"]);
+const VIEWPORT_TELEMETRY_FIELDS = ["viewportHeight", "httpStatus", "finalUrl", "canonicalUrl", "metrics", "baseline", "images"];
 
 function result(state, code, message, details = {}) {
   return { state, code, message, ...details };
@@ -35,6 +37,13 @@ function profileFingerprint(profile) {
   const keys = ["tool", "toolVersion", "networkProfile", "cacheMode", "deviceScaleFactor", "rootMarginPx"];
   if (keys.some((key) => !hasOwn(profile, key))) return null;
   return JSON.stringify(Object.fromEntries(keys.map((key) => [key, profile[key]])));
+}
+
+function viewportProfileFingerprint(profile, viewportWidth) {
+  if (!Number.isInteger(viewportWidth)) return null;
+  const fingerprint = profileFingerprint(profile);
+  if (fingerprint === null) return null;
+  return JSON.stringify({ ...JSON.parse(fingerprint), viewportWidth });
 }
 
 function stateFor(results) {
@@ -70,8 +79,7 @@ function queueItems(context) {
 function responsiveEquivalent(image) {
   const value = image.responsiveEquivalent;
   return isObject(value)
-    && typeof value.type === "string"
-    && value.type.trim() !== ""
+    && RESPONSIVE_EQUIVALENT_TYPES.has(value.type)
     && value.observed === true;
 }
 
@@ -228,6 +236,12 @@ export function validateEvidenceContract(evidence, context = {}) {
         seenWidths.add(viewport.width);
         if (!["OK", "UNAVAILABLE"].includes(viewport.telemetryState)) {
           pageResults.push(result("CONTRACT_ERROR", "TELEMETRY_STATE", `${sourceName}: telemetryState must be OK or UNAVAILABLE`, { pageIndex, viewportIndex, locale, viewportWidth: viewport.width }));
+        } else if (viewport.telemetryState === "OK" && viewport.unavailableReason != null) {
+          pageResults.push(result("CONTRACT_ERROR", "TELEMETRY_STATE_CONTRADICTION", `${sourceName}: OK telemetry cannot have unavailableReason`, { pageIndex, viewportIndex, locale, viewportWidth: viewport.width }));
+        } else if (viewport.telemetryState === "UNAVAILABLE" && !(typeof viewport.unavailableReason === "string" && viewport.unavailableReason.trim())) {
+          pageResults.push(result("CONTRACT_ERROR", "TELEMETRY_STATE_CONTRADICTION", `${sourceName}: UNAVAILABLE telemetry requires unavailableReason`, { pageIndex, viewportIndex, locale, viewportWidth: viewport.width }));
+        } else if (viewport.telemetryState === "UNAVAILABLE" && VIEWPORT_TELEMETRY_FIELDS.some((field) => hasOwn(viewport, field))) {
+          pageResults.push(result("CONTRACT_ERROR", "TELEMETRY_STATE_CONTRADICTION", `${sourceName}: UNAVAILABLE telemetry cannot contain measured fields`, { pageIndex, viewportIndex, locale, viewportWidth: viewport.width }));
         }
       }
     }
@@ -342,11 +356,18 @@ export function validatePublicPage(page, context = {}) {
         if (hasOwn(viewport.baseline, "cls") && !finiteNumber(viewport.baseline.cls)) {
           add("CONTRACT_ERROR", "BASELINE_VALUE", `${sourceName}: ${viewportWidth}px baseline.cls is invalid`, { ...detail, field: "cls" });
         }
+        const expectedProfileFingerprint = viewportProfileFingerprint(context.captureProfile, viewportWidth);
+        let comparableProfile = false;
         if (hasOwn(viewport.baseline, "profileFingerprint") && !(typeof viewport.baseline.profileFingerprint === "string" && viewport.baseline.profileFingerprint.trim())) {
           add("CONTRACT_ERROR", "BASELINE_VALUE", `${sourceName}: ${viewportWidth}px baseline.profileFingerprint is invalid`, { ...detail, field: "profileFingerprint" });
-        } else if (hasOwn(viewport.baseline, "profileFingerprint") && viewport.baseline.profileFingerprint !== context.profileFingerprint) {
+        } else if (hasOwn(viewport.baseline, "profileFingerprint") && expectedProfileFingerprint === null) {
+          add("UNAVAILABLE", "BASELINE_PROFILE", `${sourceName}: ${viewportWidth}px capture profile is unavailable for baseline comparison`, detail);
+        } else if (hasOwn(viewport.baseline, "profileFingerprint") && viewport.baseline.profileFingerprint !== expectedProfileFingerprint) {
           add("UNAVAILABLE", "BASELINE_PROFILE", `${sourceName}: ${viewportWidth}px baseline profile does not match capture profile`, detail);
-        } else {
+        } else if (hasOwn(viewport.baseline, "profileFingerprint")) {
+          comparableProfile = true;
+        }
+        if (comparableProfile) {
           if (finiteNumber(metrics.lcpMs, { positive: true }) && finiteNumber(viewport.baseline.lcpMs, { positive: true })
             && metrics.lcpMs > viewport.baseline.lcpMs * (1 + gate.maximumLcpRegressionRatio)) {
             add("FAIL", "LCP_REGRESSION", `${sourceName}: ${viewportWidth}px LCP regression exceeds limit`, { ...detail, actual: metrics.lcpMs, baseline: viewport.baseline.lcpMs });
@@ -403,6 +424,10 @@ export function validatePublicPage(page, context = {}) {
           else if (hasOwn(image, field) && image[field].trim() === "") add("FAIL", "IMAGE_URL_EMPTY", `${sourceName}: ${image.logicalId}.${field} is empty`, { ...imageDetail, field });
         }
         if (gate.requireResponsiveAttributesOrEquivalent) {
+          const hasRecordedEquivalent = hasOwn(image, "responsiveEquivalent") && image.responsiveEquivalent != null;
+          if (hasRecordedEquivalent && !responsiveEquivalent(image)) {
+            add("CONTRACT_ERROR", "RESPONSIVE_EQUIVALENT", `${sourceName}: ${image.logicalId}.responsiveEquivalent is invalid or unsupported`, imageDetail);
+          }
           for (const field of ["srcset", "sizes"]) {
             if (hasOwn(image, field) && typeof image[field] !== "string") {
               add("CONTRACT_ERROR", "RESPONSIVE_ATTRIBUTE_VALUE", `${sourceName}: ${image.logicalId}.${field} must be a string`, { ...imageDetail, field });

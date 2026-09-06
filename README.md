@@ -103,7 +103,8 @@ npm run public-page-check -- --evidence /private/path/capture.json
 Evidence schema v1 связывает `itemId`, RU/EN URL, профиль cold-load и замеры на
 360/390/720 px. Для каждого viewport нужны HTTP/final/canonical, LCP, CLS,
 transfer, overflow и семь DOM-изображений с `currentSrc`, responsive-атрибутами,
-размерами и моментом запроса. Baseline обязан иметь тот же profile fingerprint.
+размерами и моментом запроса. Baseline обязан иметь тот же profile fingerprint,
+включая точный `viewportWidth`; baseline другой ширины несопоставим.
 Raw trace, capture и скриншоты не коммитятся и не загружаются workflow artifact.
 
 Результаты буквальны: `PASS` означает полный успешный замер; измеренный дефект —

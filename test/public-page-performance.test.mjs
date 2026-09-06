@@ -49,9 +49,9 @@ const QUEUE = {
   }],
 };
 
-function fingerprint(profile) {
+function fingerprint(profile, viewportWidth) {
   const keys = ["tool", "toolVersion", "networkProfile", "cacheMode", "deviceScaleFactor", "rootMarginPx"];
-  return JSON.stringify(Object.fromEntries(keys.map((key) => [key, profile[key]])));
+  return JSON.stringify({ ...Object.fromEntries(keys.map((key) => [key, profile[key]])), viewportWidth });
 }
 
 function imageFixture(width, index) {
@@ -112,7 +112,7 @@ function evidenceFixture() {
           scrollWidth: width,
           clientWidth: width,
         },
-        baseline: { lcpMs: 1000, cls: 0.01, profileFingerprint: fingerprint(captureProfile) },
+        baseline: { lcpMs: 1000, cls: 0.01, profileFingerprint: fingerprint(captureProfile, width) },
         images: Array.from({ length: 7 }, (_, index) => imageFixture(width, index)),
       })),
     })),
@@ -241,6 +241,18 @@ test("responsive equivalent requires structured observed evidence", () => {
   assert.ok(resultCodes(report).includes("RESPONSIVE_ATTRIBUTE"));
 });
 
+test("unsupported responsive equivalent type cannot bypass empty attributes", () => {
+  const evidence = evidenceFixture();
+  const image = evidence.pages[0].viewports[0].images[0];
+  image.srcset = "";
+  image.sizes = "";
+  image.responsiveEquivalent = { type: "banana", observed: true };
+  const report = validateFixture(evidence);
+  assert.equal(report.exitCode, 1);
+  assert.ok(resultCodes(report).includes("RESPONSIVE_EQUIVALENT"));
+  assert.ok(resultCodes(report).includes("RESPONSIVE_ATTRIBUTE"));
+});
+
 test("different currentSrc candidates retain the same seven logical images", () => {
   const evidence = evidenceFixture();
   const candidates = evidence.pages[0].viewports.map((viewport) => viewport.images[1].currentSrc);
@@ -325,6 +337,57 @@ test("missing required telemetry or matching baseline is UNAVAILABLE, never fake
   }
 });
 
+test("missing baseline fingerprint prevents LCP and CLS regression verdicts", () => {
+  const evidence = evidenceFixture();
+  const viewport = evidence.pages[0].viewports[0];
+  delete viewport.baseline.profileFingerprint;
+  viewport.metrics.lcpMs = 5000;
+  viewport.metrics.cls = 0.5;
+  const report = validateFixture(evidence);
+  assert.equal(report.overall, "INCOMPLETE");
+  assert.equal(report.exitCode, 0);
+  assert.ok(resultCodes(report).includes("BASELINE_FIELD"));
+  assert.ok(!resultCodes(report).includes("LCP_REGRESSION"));
+  assert.ok(!resultCodes(report).includes("CLS_REGRESSION"));
+});
+
+test("baseline fingerprint is bound to the exact viewport width", () => {
+  const evidence = evidenceFixture();
+  const viewport = evidence.pages[0].viewports.find(({ width }) => width === 720);
+  viewport.baseline.profileFingerprint = fingerprint(evidence.captureProfile, 360);
+  viewport.metrics.lcpMs = 5000;
+  const report = validateFixture(evidence);
+  assert.equal(report.overall, "INCOMPLETE");
+  assert.equal(report.exitCode, 0);
+  assert.ok(resultCodes(report).includes("BASELINE_PROFILE"));
+  assert.ok(!resultCodes(report).includes("LCP_REGRESSION"));
+});
+
+test("UNAVAILABLE viewport telemetry rejects attached measurements", () => {
+  const evidence = evidenceFixture();
+  const viewport = evidence.pages[0].viewports[0];
+  viewport.telemetryState = "UNAVAILABLE";
+  viewport.unavailableReason = "trace missing";
+  viewport.httpStatus = 500;
+  const report = validateFixture(evidence);
+  assert.equal(report.overall, "FAIL");
+  assert.equal(report.exitCode, 1);
+  assert.ok(resultCodes(report).includes("TELEMETRY_STATE_CONTRADICTION"));
+});
+
+test("clean UNAVAILABLE viewport telemetry remains incomplete", () => {
+  const evidence = evidenceFixture();
+  evidence.pages[0].viewports[0] = {
+    width: 360,
+    telemetryState: "UNAVAILABLE",
+    unavailableReason: "trace missing",
+  };
+  const report = validateFixture(evidence);
+  assert.equal(report.overall, "INCOMPLETE");
+  assert.equal(report.exitCode, 0);
+  assert.ok(resultCodes(report).includes("TELEMETRY_UNAVAILABLE"));
+});
+
 test("PASS plus UNAVAILABLE exits 0 incomplete; FAIL plus UNAVAILABLE exits 1 and preserves both", async () => {
   const incomplete = evidenceFixture();
   incomplete.pages[1] = { locale: "en", url: QUEUE.items[0].publicUrls.en, captureState: "UNAVAILABLE", unavailableReason: "browser unavailable", viewports: [] };
@@ -365,7 +428,7 @@ test("contradictory profiles across evidence files are aggregated as CONTRACT_ER
   const second = evidenceFixture();
   second.pages = [second.pages[1]];
   second.captureProfile.toolVersion = "1.56.0";
-  for (const viewport of second.pages[0].viewports) viewport.baseline.profileFingerprint = fingerprint(second.captureProfile);
+  for (const viewport of second.pages[0].viewports) viewport.baseline.profileFingerprint = fingerprint(second.captureProfile, viewport.width);
   const report = await runEvidenceFiles([first, second]);
   assert.equal(report.exitCode, 1);
   assert.ok(resultCodes(report).includes("PROFILE_CONTRADICTION"));

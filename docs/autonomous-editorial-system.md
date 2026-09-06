@@ -112,6 +112,8 @@ lazy/performance defect — `FAIL`; недоступный browser, trace, basel
 identity/schema — `CONTRACT_ERROR`. Измеренный `FAIL` блокирует только
 затронутую страницу и не стирает результат другой locale. Exit 0 не означает
 публичный успех: consumer обязан проверить literal state, а не только код.
+Baseline сопоставляется только при fingerprint того же cold-load профиля и той
+же ширины viewport; `UNAVAILABLE` telemetry не смешивается с измеренными полями.
 
 ## Быстрые ворота качества
 
