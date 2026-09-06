@@ -45,14 +45,80 @@ export function extractVisuals(body) {
   };
 }
 
-function localAssetPath(urlValue, siteUrl = DEFAULT_SITE_URL) {
-  const url = new URL(urlValue);
-  const base = new URL(siteUrl);
-  const basePath = `${base.pathname.replace(/\/$/, "")}/assets/`;
-  if (url.origin !== base.origin || !url.pathname.startsWith(basePath)) return null;
-  const relativePath = decodeURIComponent(url.pathname.slice(base.pathname.replace(/\/$/, "").length + 1));
-  if (!relativePath.startsWith("assets/") || relativePath.includes("..")) return null;
-  return relativePath;
+export function localAssetPath(urlValue, siteUrl = DEFAULT_SITE_URL) {
+  if (typeof urlValue !== "string" || /[\\\0]/u.test(urlValue) || /%(?:00|2e|5c)/iu.test(urlValue)) return null;
+  let url;
+  let base;
+  try {
+    url = new URL(urlValue);
+    base = new URL(siteUrl);
+  } catch {
+    return null;
+  }
+  if (url.username || url.password || url.origin !== base.origin || url.search || url.hash) return null;
+  const repositoryPrefix = base.pathname.replace(/\/$/, "");
+  const basePath = `${repositoryPrefix}/assets/`;
+  if (!url.pathname.startsWith(basePath)) return null;
+  let decodedPath;
+  try {
+    decodedPath = decodeURIComponent(url.pathname.slice(repositoryPrefix.length + 1));
+  } catch {
+    return null;
+  }
+  const segments = decodedPath.split("/");
+  if (!decodedPath.startsWith("assets/") || segments.some((segment) => segment === "" || segment === "." || segment === ".." || segment.includes("\\") || segment.includes("\0"))) return null;
+  return decodedPath;
+}
+
+export function parseSrcsetCandidates(srcset) {
+  if (typeof srcset !== "string" || srcset.trim() === "") throw new Error("srcset должен быть непустой строкой");
+  const candidates = srcset.split(",").map((entry) => entry.trim()).map((entry) => {
+    const parts = entry.split(/\s+/u);
+    if (parts.length !== 2 || !/^[1-9]\d*w$/u.test(parts[1])) {
+      throw new Error(`некорректный width descriptor в srcset: ${entry}`);
+    }
+    return { url: parts[0], width: Number.parseInt(parts[1], 10) };
+  });
+  if (new Set(candidates.map(({ width }) => width)).size !== candidates.length) {
+    throw new Error("srcset содержит повторяющиеся width descriptors");
+  }
+  return candidates;
+}
+
+export function articleAssetPaths(article, siteUrl = DEFAULT_SITE_URL) {
+  const paths = new Set();
+  const addUrl = (value) => {
+    const path = localAssetPath(value, siteUrl);
+    if (path) paths.add(path);
+  };
+  const addSrcset = (value) => {
+    if (!value) return;
+    let candidates;
+    try {
+      candidates = parseSrcsetCandidates(value);
+    } catch {
+      candidates = value.split(",").map((entry) => ({ url: entry.trim().split(/\s+/u)[0] }));
+    }
+    for (const candidate of candidates) addUrl(candidate.url);
+  };
+  if (article.cover) {
+    addUrl(article.cover.url);
+    addSrcset(article.cover.srcset);
+  }
+  const visual = extractVisuals(article.body);
+  for (const figure of visual.figures) {
+    for (const tag of figure.imageTags) {
+      addUrl(attribute(tag, "src"));
+      addSrcset(attribute(tag, "srcset"));
+    }
+    for (const tag of figure.sourceTags) addSrcset(attribute(tag, "srcset"));
+  }
+  for (const tag of visual.outsideHtmlImages) {
+    addUrl(attribute(tag, "src"));
+    addSrcset(attribute(tag, "srcset"));
+  }
+  for (const url of visual.markdownImages) addUrl(url);
+  return [...paths];
 }
 
 export function inspectWebp(buffer, label = "image.webp") {
@@ -103,13 +169,102 @@ async function inspectAsset(rootDir, relativePath, label, errors) {
   }
 }
 
+function byteLimitForRole(role, gate) {
+  if (role === "cover") return gate.maximumCoverBytes;
+  if (role === "information-graphic") return gate.maximumInformationGraphicBytes;
+  if (role === "route-map") return gate.maximumAnimatedMapBytes;
+  if (role === "static-map-fallback") return gate.maximumStaticMapFallbackBytes;
+  return gate.maximumContextualImageBytes;
+}
+
+function validSizes(value) {
+  if (typeof value !== "string" || value.trim() === "" || value.trim().toLowerCase() === "auto") return false;
+  const length = String.raw`(?:calc\([^)]*\)|(?:0|[0-9]*\.?[0-9]+)(?:px|vw|vh|vmin|vmax|rem|em|%))`;
+  return value.split(",").every((clause) => new RegExp(`^(?:\\([^)]*\\)\\s+)?${length}$`, "iu").test(clause.trim()));
+}
+
+async function validateResponsiveImage({
+  src,
+  srcset,
+  sizes,
+  baseAsset,
+  role,
+  gate,
+  rootDir,
+  siteUrl,
+  label,
+  errors,
+  requireSizes = true,
+  requireStatic = false,
+}) {
+  if (!srcset) {
+    errors.push(`${label}: для изменённой статьи обязателен srcset`);
+    return;
+  }
+  if (requireSizes && (!sizes || !validSizes(sizes))) {
+    errors.push(`${label}: для изменённой статьи обязателен корректный sizes`);
+  }
+  let candidates;
+  try {
+    candidates = parseSrcsetCandidates(srcset);
+  } catch (error) {
+    errors.push(`${label}: ${error.message}`);
+    return;
+  }
+  const expectedWidths = [
+    ...(gate.requiredChangedSrcsetDerivativeWidths || []),
+    ...(gate.requireChangedSrcsetMasterWidth && baseAsset ? [baseAsset.width] : []),
+  ].filter((width, index, values) => values.indexOf(width) === index).sort((a, b) => a - b);
+  const actualWidths = candidates.map(({ width }) => width).sort((a, b) => a - b);
+  if (expectedWidths.length > 0 && (
+    expectedWidths.length !== actualWidths.length
+    || expectedWidths.some((width, index) => actualWidths[index] !== width)
+  )) {
+    errors.push(`${label}: srcset должен содержать ровно width-кандидаты ${expectedWidths.map((width) => `${width}w`).join(", ")}; найдено ${actualWidths.map((width) => `${width}w`).join(", ")}`);
+  }
+  const basePath = localAssetPath(src, siteUrl);
+  const inspected = [];
+  for (const candidate of candidates) {
+    const path = localAssetPath(candidate.url, siteUrl);
+    if (!path || extname(path).toLowerCase() !== ".webp") {
+      errors.push(`${label}: каждый srcset-кандидат должен быть локальным WebP из assets/`);
+      continue;
+    }
+    const asset = await inspectAsset(rootDir, path, `${label} srcset ${candidate.width}w`, errors);
+    if (!asset) continue;
+    inspected.push({ ...candidate, path, asset });
+    if (requireStatic && asset.animated) {
+      errors.push(`${label}: srcset-кандидат ${path} для prefers-reduced-motion должен быть статичным WebP`);
+    }
+    if (gate.requireChangedSrcCandidateIntrinsicWidthMatch && asset.width !== candidate.width) {
+      errors.push(`${label}: descriptor ${candidate.width}w не равен intrinsic width ${asset.width}px для ${path}`);
+    }
+    if (gate.requireChangedSrcCandidateAspectRatioMatch && baseAsset) {
+      const expectedHeight = Math.round(baseAsset.height * asset.width / baseAsset.width);
+      if (Math.abs(asset.height - expectedHeight) > 1) {
+        errors.push(`${label}: srcset-кандидат ${path} меняет пропорцию базового изображения`);
+      }
+    }
+    const byteLimit = byteLimitForRole(role, gate);
+    if (asset.size > byteLimit) {
+      errors.push(`${label}: srcset-кандидат ${path} весит ${asset.size} байт и превышает лимит ${byteLimit}`);
+    }
+  }
+  const baseCandidate = inspected.find(({ path }) => path === basePath);
+  if (!baseCandidate || !baseAsset || baseCandidate.width !== baseAsset.width) {
+    errors.push(`${label}: базовый src должен присутствовать в srcset с intrinsic width descriptor`);
+  } else if (baseCandidate.width !== Math.max(...candidates.map(({ width }) => width))) {
+    errors.push(`${label}: базовый src должен быть самым широким srcset-кандидатом`);
+  }
+}
+
 function formatComposition(gate, contentFormat, errors, label) {
   const composition = gate.compositionByFormat?.[contentFormat];
   if (!composition) errors.push(`${label}: для формата ${contentFormat} не задана визуальная композиция`);
   return composition;
 }
 
-export async function validateArticleVisuals({ article, contentFormat, gate, rootDir = ROOT_DIR, siteUrl = DEFAULT_SITE_URL, strict = true, sourceName = "article.md" }) {
+export async function validateArticleVisuals({ article, contentFormat, gate, rootDir = ROOT_DIR, siteUrl = DEFAULT_SITE_URL, strict = true, requireChangedMetadata = false, sourceName = "article.md" }) {
   const errors = [];
   const visual = extractVisuals(article.body);
   if (!article.cover) errors.push(`${sourceName}: обязательна обложка`);
@@ -163,7 +318,14 @@ export async function validateArticleVisuals({ article, contentFormat, gate, roo
     if (strict && gate.requireAsyncDecoding && attribute(tag, "decoding").toLowerCase() !== "async") {
       errors.push(`${label}: требуется decoding="async"`);
     }
-    if (attribute(tag, "loading").toLowerCase() !== "lazy") eagerInlineImages += 1;
+    if (requireChangedMetadata && gate.forbidChangedInlineImageStyle && attribute(tag, "style")) {
+      errors.push(`${label}: inline style изображения запрещён в изменённой статье`);
+    }
+    const lazy = attribute(tag, "loading").toLowerCase() === "lazy";
+    if (!lazy) eagerInlineImages += 1;
+    if (strict && index > 0 && !lazy) {
+      errors.push(`${label}: после первого inline-визуала требуется loading="lazy"`);
+    }
     const relativePath = src ? localAssetPath(src, siteUrl) : null;
     if (gate.requireLocalWebpAssets && (!relativePath || extname(relativePath).toLowerCase() !== ".webp")) {
       errors.push(`${label}: требуется локальный WebP из assets/ этого RSS-репозитория`);
@@ -189,12 +351,29 @@ export async function validateArticleVisuals({ article, contentFormat, gate, roo
         errors.push(`${label}: пропорция ${aspectRatio.toFixed(2)} вне диапазона ${gate.minimumInformationGraphicAspectRatio}-${gate.maximumInformationGraphicAspectRatio}`);
       }
     }
-    const byteLimit = figure.role === "information-graphic"
-      ? gate.maximumInformationGraphicBytes
-      : figure.role === "route-map" && asset.animated
-        ? gate.maximumAnimatedMapBytes
-        : gate.maximumContextualImageBytes;
+    if (requireChangedMetadata && figure.role === "contextual-photo") {
+      const aspectRatio = asset.width / asset.height;
+      if (aspectRatio < gate.minimumChangedContextualImageAspectRatio || aspectRatio > gate.maximumChangedContextualImageAspectRatio) {
+        errors.push(`${label}: пропорция contextual photo ${aspectRatio.toFixed(2)} вне диапазона ${gate.minimumChangedContextualImageAspectRatio}-${gate.maximumChangedContextualImageAspectRatio}`);
+      }
+    }
+    const byteLimit = byteLimitForRole(figure.role, gate);
     if (asset.size > byteLimit) errors.push(`${label}: ${asset.size} байт превышает лимит ${byteLimit}`);
+
+    if (requireChangedMetadata && gate.requireChangedResponsiveMarkup) {
+      await validateResponsiveImage({
+        src,
+        srcset: attribute(tag, "srcset"),
+        sizes: attribute(tag, "sizes"),
+        baseAsset: asset,
+        role: figure.role,
+        gate,
+        rootDir,
+        siteUrl,
+        label,
+        errors,
+      });
+    }
 
     if (figure.role === "route-map") {
       if (!asset.animated) errors.push(`${label}: маршрутная карта должна быть анимированным WebP`);
@@ -203,16 +382,42 @@ export async function validateArticleVisuals({ article, contentFormat, gate, roo
       }
       if (gate.requireStaticMapFallback) {
         const fallbackTag = figure.sourceTags.find((source) => /prefers-reduced-motion\s*:\s*reduce/i.test(attribute(source, "media")));
-        const fallbackUrl = fallbackTag ? attribute(fallbackTag, "srcset").split(/\s+/)[0] : "";
-        const fallbackPath = fallbackUrl ? localAssetPath(fallbackUrl, siteUrl) : null;
-        if (!fallbackPath) {
+        const fallbackSrcset = fallbackTag ? attribute(fallbackTag, "srcset") : "";
+        if (!fallbackTag || !fallbackSrcset) {
           errors.push(`${label}: отсутствует локальный статичный WebP для prefers-reduced-motion`);
+        } else if (requireChangedMetadata && gate.requireChangedResponsiveMarkup) {
+          let fallbackMasterUrl = "";
+          try {
+            fallbackMasterUrl = parseSrcsetCandidates(fallbackSrcset).find(({ width }) => width === asset.width)?.url || "";
+          } catch {
+            // validateResponsiveImage reports the precise parse error below.
+          }
+          await validateResponsiveImage({
+            src: fallbackMasterUrl,
+            srcset: fallbackSrcset,
+            sizes: "",
+            baseAsset: asset,
+            role: "static-map-fallback",
+            gate,
+            rootDir,
+            siteUrl,
+            label: `${label} prefers-reduced-motion source`,
+            errors,
+            requireSizes: false,
+            requireStatic: true,
+          });
         } else {
-          const fallback = await inspectAsset(rootDir, fallbackPath, `${label} static fallback`, errors);
-          if (fallback) {
-            if (fallback.animated) errors.push(`${label}: reduced-motion резерв не должен содержать анимацию`);
-            if (fallback.size > gate.maximumStaticMapFallbackBytes) {
-              errors.push(`${label}: статичный резерв ${fallback.size} байт превышает лимит ${gate.maximumStaticMapFallbackBytes}`);
+          const fallbackUrl = fallbackSrcset.split(/\s+/u)[0];
+          const fallbackPath = localAssetPath(fallbackUrl, siteUrl);
+          if (!fallbackPath) {
+            errors.push(`${label}: отсутствует локальный статичный WebP для prefers-reduced-motion`);
+          } else {
+            const fallback = await inspectAsset(rootDir, fallbackPath, `${label} static fallback`, errors);
+            if (fallback) {
+              if (fallback.animated) errors.push(`${label}: reduced-motion резерв не должен содержать анимацию`);
+              if (fallback.size > gate.maximumStaticMapFallbackBytes) {
+                errors.push(`${label}: статичный резерв ${fallback.size} байт превышает лимит ${gate.maximumStaticMapFallbackBytes}`);
+              }
             }
           }
         }
@@ -236,6 +441,31 @@ export async function validateArticleVisuals({ article, contentFormat, gate, roo
         if (cover.width < gate.minimumCoverWidth || cover.width > gate.maximumCoverWidth) {
           errors.push(`${sourceName}: ширина обложки ${cover.width}px вне диапазона ${gate.minimumCoverWidth}-${gate.maximumCoverWidth}px`);
         }
+        if (requireChangedMetadata && gate.requireChangedCoverDimensions) {
+          if (!Number.isInteger(article.cover.width) || !Number.isInteger(article.cover.height)) {
+            errors.push(`${sourceName}: для изменённой статьи обязательны cover.width и cover.height`);
+          } else if (article.cover.width !== cover.width || article.cover.height !== cover.height) {
+            errors.push(`${sourceName}: cover metadata ${article.cover.width}x${article.cover.height} не равны intrinsic ${cover.width}x${cover.height}`);
+          }
+          const aspectRatio = cover.width / cover.height;
+          if (aspectRatio < gate.minimumChangedCoverAspectRatio || aspectRatio > gate.maximumChangedCoverAspectRatio) {
+            errors.push(`${sourceName}: пропорция cover ${aspectRatio.toFixed(2)} вне диапазона ${gate.minimumChangedCoverAspectRatio}-${gate.maximumChangedCoverAspectRatio}`);
+          }
+        }
+        if (requireChangedMetadata && gate.requireChangedResponsiveMarkup) {
+          await validateResponsiveImage({
+            src: article.cover.url,
+            srcset: article.cover.srcset,
+            sizes: article.cover.sizes,
+            baseAsset: cover,
+            role: "cover",
+            gate,
+            rootDir,
+            siteUrl,
+            label: `${sourceName}: cover`,
+            errors,
+          });
+        }
       }
     }
     if (!article.cover.alt) errors.push(`${sourceName}: у обложки обязателен alt`);
@@ -256,7 +486,7 @@ export async function validateArticleVisuals({ article, contentFormat, gate, roo
   return { errors, summary: { totalImages: (article.cover ? 1 : 0) + imageEntries.length, inlineImages: imageEntries.length, totalBytes, eagerInlineImages } };
 }
 
-export async function checkRepositoryVisuals({ rootDir = ROOT_DIR, now = new Date() } = {}) {
+export async function checkRepositoryVisuals({ rootDir = ROOT_DIR, now = new Date(), forceArticleFiles = [], changedAssetFiles = [] } = {}) {
   const [policy, queue, feedConfig, files] = await Promise.all([
     readFile(join(rootDir, "config", "editorial-policy.json"), "utf8").then(JSON.parse),
     readFile(join(rootDir, "content", "queue.json"), "utf8").then(JSON.parse),
@@ -269,6 +499,8 @@ export async function checkRepositoryVisuals({ rootDir = ROOT_DIR, now = new Dat
   if (Number.isNaN(effectiveFrom.getTime())) return { errors: ["quality.longFormVisualGates.effectiveFrom некорректен"], checked: [] };
   const items = new Map(queue.items.map((item) => [item.id, item]));
   const referenceIds = new Set(gate.referenceArticleIds || []);
+  const forcedArticles = new Set(forceArticleFiles);
+  const changedAssets = new Set(changedAssetFiles);
   const errors = [];
   const checked = [];
   for (const filename of files.filter((file) => file.endsWith(".md")).sort()) {
@@ -286,16 +518,35 @@ export async function checkRepositoryVisuals({ rootDir = ROOT_DIR, now = new Dat
       : basename(filename, ".md").replace(/-(?:ru|en)$/, "");
     const isReference = referenceIds.has(id);
     const isFuture = article.published && article.publishedAt.getTime() >= effectiveFrom.getTime();
-    if (!isReference && !isFuture) continue;
+    const directlyChanged = forcedArticles.has(sourceName);
+    const assetImpacted = articleAssetPaths(article, feedConfig.siteUrl).some((assetPath) => changedAssets.has(assetPath));
+    const changeScoped = directlyChanged || assetImpacted;
+    if (!isReference && !isFuture && !changeScoped) continue;
     const item = items.get(id);
     if (!item) {
       errors.push(`${sourceName}: не найден элемент очереди ${id} для определения contentFormat`);
       continue;
     }
     if (!gate.applicableFormats.includes(item.contentFormat)) continue;
-    const result = await validateArticleVisuals({ article, contentFormat: item.contentFormat, gate, rootDir, siteUrl: feedConfig.siteUrl, strict: isFuture, sourceName });
+    const reasons = [
+      ...(isReference ? ["reference"] : []),
+      ...(isFuture ? ["future"] : []),
+      ...(directlyChanged ? ["article-change"] : []),
+      ...(assetImpacted ? ["asset-change"] : []),
+    ];
+    const strict = isFuture || changeScoped;
+    const result = await validateArticleVisuals({
+      article,
+      contentFormat: item.contentFormat,
+      gate,
+      rootDir,
+      siteUrl: feedConfig.siteUrl,
+      strict,
+      requireChangedMetadata: changeScoped,
+      sourceName,
+    });
     errors.push(...result.errors);
-    checked.push({ sourceName, id, contentFormat: item.contentFormat, reference: isReference, ...result.summary });
+    checked.push({ sourceName, id, contentFormat: item.contentFormat, reference: isReference, reasons, strict, requireChangedMetadata: changeScoped, ...result.summary });
   }
   return { errors, checked, checkedAt: now.toISOString() };
 }

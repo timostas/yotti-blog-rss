@@ -81,6 +81,49 @@ test("создаёт Tilda-совместимый RSS с постоянной с
   assert.ok(xml.indexOf("слово150") < xml.indexOf("<h2>Источники</h2>"));
 });
 
+test("сохраняет точные responsive-атрибуты cover в RSS и technical HTML", () => {
+  const article = parseArticle(articleSource(`cover:
+  url: "https://timostas.github.io/yotti-blog-rss/assets/covers/test-post.webp"
+  type: "image/webp"
+  alt: "Тестовая обложка"
+  width: 1600
+  height: 900
+  srcset: "https://timostas.github.io/yotti-blog-rss/assets/covers/test-post-384w.webp 384w, https://timostas.github.io/yotti-blog-rss/assets/covers/test-post.webp 1600w"
+  sizes: "(max-width: 760px) calc(100vw - 56px), 760px"
+`));
+  const xml = createFeedXml(config, [article], AFTER_PUBLISH);
+  const html = createArticleHtml(config, article);
+
+  for (const output of [xml, html]) {
+    assert.match(output, /width="1600"/);
+    assert.match(output, /height="900"/);
+    assert.match(output, /srcset="[^"]*384w,[^"]*1600w"/);
+    assert.match(output, /sizes="\(max-width: 760px\) calc\(100vw - 56px\), 760px"/);
+  }
+});
+
+test("отвергает односторонние cover dimensions и responsive metadata", () => {
+  const baseCover = `cover:
+  url: "https://timostas.github.io/yotti-blog-rss/assets/covers/test-post.webp"
+  type: "image/webp"
+  alt: "Тестовая обложка"
+`;
+  assert.throws(() => parseArticle(articleSource(`${baseCover}  width: 1600\n`)), /width и cover\.height должны быть указаны вместе/);
+  assert.throws(() => parseArticle(articleSource(`${baseCover}  width: 0\n  height: 900\n`)), /положительными целыми/);
+  assert.throws(() => parseArticle(articleSource(`${baseCover}  srcset: "https:\/\/example.com\/a.webp 384w"\n`)), /srcset и cover\.sizes должны быть указаны вместе/);
+  assert.throws(() => parseArticle(articleSource(`${baseCover}  sizes: "100vw"\n`)), /srcset и cover\.sizes должны быть указаны вместе/);
+});
+
+test("legacy cover сохраняет прежний technical HTML fallback 1200x675", () => {
+  const article = parseArticle(articleSource(`cover:
+  url: "https://timostas.github.io/yotti-blog-rss/assets/covers/test-post.jpg"
+  type: "image/jpeg"
+  alt: "Тестовая обложка"
+`));
+  const html = createArticleHtml(config, article);
+  assert.match(html, /width="1200" height="675"/);
+});
+
 test("добавляет расширенные совместимые метаданные только для статьи-пилота", () => {
   const article = parseArticle(articleSource(`cover:
   url: "https://timostas.github.io/yotti-blog-rss/assets/covers/test-post.jpg"
