@@ -639,6 +639,23 @@
       "creative": "assets/covers/buy-esim-uae-old-new-dubai-remediation.webp",
       "creativeConceptKey": "dubai-creek-abra-old-modern-city-webp-remediation",
       "contentFormat": "connectivity-and-esim",
+      "semanticLinkClass": "standard",
+      "publicUrls": {
+        "ru": "https://yotti.net/blog/uae/kupit-esim-dlya-oae-den-mezhdu-starym-dubaem-i-novym-gorodom",
+        "en": "https://yotti.net/en/blog/uae/buy-an-esim-for-the-uae-one-day-between-old-and-new-dubai"
+      },
+      "internalArticleLinks": {
+        "ru": [
+          "https://yotti.net/blog/nuzhna-li-esim-pri-peresadke-v-aeroportu",
+          "https://yotti.net/blog/kak-ustanovit-esim-pered-poezdkoy-i-ne-zapustit-paket-ranshe-vremeni",
+          "https://yotti.net/blog/kak-sohranit-osnovnoy-nomer-s-turisticheskoy-esim"
+        ],
+        "en": [
+          "https://yotti.net/en/blog/do-you-need-an-esim-for-an-airport-layover",
+          "https://yotti.net/en/blog/how-to-install-an-esim-before-travel-without-starting-it-too-early",
+          "https://yotti.net/en/blog/how-to-keep-your-home-number-while-using-a-travel-esim"
+        ]
+      },
       "schedule": {
         "ru": "2026-08-15T12:12:28Z",
         "en": "2026-08-15T12:12:28Z"
