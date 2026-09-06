@@ -84,6 +84,43 @@ async function responsiveFixture() {
   };
 }
 
+async function legacyForceFixture() {
+  const rootDir = await mkdtemp(join(tmpdir(), "yotti-legacy-force-"));
+  const filler = Array.from({ length: 155 }, (_, index) => `слово${index + 1}`).join(" ");
+  await Promise.all([
+    mkdir(join(rootDir, "articles"), { recursive: true }),
+    mkdir(join(rootDir, "config"), { recursive: true }),
+    mkdir(join(rootDir, "content"), { recursive: true }),
+  ]);
+  await Promise.all([
+    writeFile(join(rootDir, "feed.config.json"), await readFile(join(ROOT, "feed.config.json"))),
+    writeFile(join(rootDir, "config", "editorial-policy.json"), await readFile(join(ROOT, "config", "editorial-policy.json"))),
+    writeFile(join(rootDir, "content", "queue.json"), `${JSON.stringify({
+      items: [{ id: "legacy-force-fixture", contentFormat: "connectivity-and-esim" }],
+    }, null, 2)}\n`),
+    writeFile(join(rootDir, "articles", "legacy-force-fixture-ru.md"), `---
+title: "Legacy fixture"
+slug: "legacy-force-fixture-ru"
+description: "Synthetic pre-effective fixture for force-scope validation."
+publishedAt: "2020-01-01T00:00:00Z"
+author: "Yotti Editorial Team"
+reviewer: "Test reviewer"
+reviewedAt: "2026-09-01"
+reviewAfter: "2026-12-01"
+language: "ru"
+categories: []
+sources:
+  - "https://example.com/source-one"
+  - "https://example.com/source-two"
+published: true
+---
+
+Этот синтетический старый материал намеренно не содержит визуалов. ${filler}
+`),
+  ]);
+  return { rootDir, sourceName: "articles/legacy-force-fixture-ru.md" };
+}
+
 async function reducedMotionFixture() {
   const rootDir = await mkdtemp(join(tmpdir(), "yotti-reduced-motion-"));
   await mkdir(join(rootDir, "assets", "test"), { recursive: true });
@@ -222,11 +259,12 @@ test("local asset и srcset helpers отвергают traversal, external и x 
   assert.throws(() => parseSrcsetCandidates("https://example.com/a.webp 384w, https://example.com/b.webp 384w"), /повторяющиеся/);
 });
 
-test("прямое изменение legacy article включает exact-seven gate", async () => {
-  const sourceName = "articles/esim-internet-not-working-ru.md";
-  const report = await checkRepositoryVisuals({ rootDir: ROOT, forceArticleFiles: [sourceName] });
-  const item = report.checked.find((entry) => entry.sourceName === sourceName);
-  assert.ok(item?.reasons.includes("article-change"));
+test("прямое изменение synthetic legacy article включает exact-seven gate", async (context) => {
+  const fixture = await legacyForceFixture();
+  context.after(() => rm(fixture.rootDir, { recursive: true, force: true }));
+  const report = await checkRepositoryVisuals({ rootDir: fixture.rootDir, forceArticleFiles: [fixture.sourceName] });
+  const item = report.checked.find((entry) => entry.sourceName === fixture.sourceName);
+  assert.ok(item?.reasons.includes("article-change"), report.errors.join("\n"));
   assert.equal(item?.requireChangedMetadata, true);
   assert.match(report.errors.join("\n"), /ровно 6 встроенных изображений/);
 });
