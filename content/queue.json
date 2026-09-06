@@ -1833,9 +1833,9 @@
       },
       "qualityRepairAttempts": 0,
       "scores": {
-        "utility": 92,
-        "originalValue": 89,
-        "factSupport": 90
+        "utility": 94,
+        "originalValue": 87,
+        "factSupport": 93
       },
       "editorialStandardVersion": 2,
       "editorialPasses": {
@@ -1853,8 +1853,8 @@
         "https://yotti.net/",
         "https://yotti.net/blog/tag/%D0%98%D0%BD%D1%82%D0%B5%D1%80%D0%BD%D0%B5%D1%82%20%D0%B2%20%D0%BF%D0%BE%D0%B5%D0%B7%D0%B4%D0%BA%D0%B5"
       ],
-      "creative": "assets/covers/esim-internet-not-working.png",
-      "creativeConceptKey": "hotel-window-diagnostics",
+      "creative": "assets/covers/esim-internet-not-working-remediation.webp",
+      "creativeConceptKey": "hotel-lobby-mobile-data-diagnostics",
       "contentFormat": "connectivity-and-esim",
       "schedule": {
         "ru": "2026-08-22T09:40:00Z",
@@ -1862,10 +1862,42 @@
       },
       "qualityNotes": {
         "weakestDimensions": [
-          "local_specificity_and_original_value",
-          "commercial_restraint"
+          "technical_publication_quality",
+          "local_specificity_and_original_value"
         ],
-        "editorialChange": "Разведены соседние интенты, убраны универсальные выводы, добавлен безопасный порядок действий."
+        "editorialChange": "Существующий signal-but-no-data URL превращён в диагностический хаб: добавлены прямые первичные источники, безопасные device-specific границы и выходы к узким инструкциям."
+      },
+      "remediation": {
+        "date": "2026-09-06",
+        "model": {
+          "name": "gpt-5.6-sol",
+          "effort": "high"
+        },
+        "textGenerationAttempts": {
+          "ru": 1,
+          "en": 1
+        },
+        "qualityRepairAttempts": 1,
+        "editorialPasses": {
+          "ru": 1,
+          "en": 1
+        },
+        "cover": {
+          "mode": "imagegen-edit",
+          "model": "imagegen-built-in",
+          "attempts": 1,
+          "output": {
+            "width": 1600,
+            "height": 900,
+            "bytes": 87202
+          }
+        },
+        "preserved": {
+          "slug": true,
+          "canonical": true,
+          "publishedAt": true
+        },
+        "urlChange": false
       }
     },
     {
