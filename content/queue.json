@@ -9076,12 +9076,48 @@
         "https://yotti.net/en/blog/philippines/manila-or-cebu-where-to-begin-a-first-trip",
         "https://yotti.net/en/blog/japan/a-morning-in-matsumoto-castle-craft-streets-and-an-early-lunch"
       ]
-    }
-  ],
-  "plannedPublications": [
+    },
     {
-      "planOrder": 1,
+      "status": "scheduled",
+      "locales": [
+        "ru",
+        "en"
+      ],
+      "model": {
+        "name": "gpt-6-astra",
+        "effort": "high",
+        "role": "independent_locale_drafting"
+      },
+      "editorialModel": {
+        "name": "gpt-6-astra",
+        "effort": "high",
+        "role": "separate_editorial_acceptance"
+      },
+      "generationAttempts": {
+        "ru": 1,
+        "en": 1
+      },
+      "qualityRepairAttempts": 1,
+      "editorialStandardVersion": 2,
+      "editorialPasses": {
+        "ru": 1,
+        "en": 1
+      },
+      "creativeGeneration": {
+        "model": "imagegen-built-in",
+        "attempts": 1
+      },
+      "riskReasons": [
+        "recovery_2026_09_07_13",
+        "query_cannibalization_checked",
+        "renderer_degraded_site_side_p1"
+      ],
+      "schedule": {
+        "ru": "2026-09-13T14:32:00Z",
+        "en": "2026-09-13T14:32:00Z"
+      },
       "id": "buy-esim-armenia-yerevan-dilijan",
+      "topicKey": "armenia-esim-yerevan-dilijan",
       "countryCode": "AM",
       "region": "caucasus",
       "planKind": "buy-esim",
@@ -9090,24 +9126,163 @@
         "ru": "купить есим для Армении",
         "en": "buy eSIM for Armenia"
       },
-      "semanticIntent": {
-        "primary": "armenia-esim-yerevan-dilijan",
-        "secondary": [
-          "есим Армения интернет",
-          "Armenia travel eSIM"
-        ]
-      },
       "workingTitle": {
         "ru": "Купить есим для Армении: связь между Ереваном и Дилижаном",
         "en": "Buy an eSIM for Armenia: connectivity from Yerevan to Dilijan"
       },
-      "readerPromise": "Проверить travel data в Ереване и подготовить офлайн-набор до междугородней дороги и лесных участков.",
+      "intentMap": {
+        "primary": {
+          "ru": "есим Армения для Еревана и Дилижана",
+          "en": "Armenia eSIM for Yerevan and Dilijan"
+        },
+        "neighborIntents": [
+          "armenia-general-guide",
+          "esim-installation-guide",
+          "travel-data-allowance"
+        ],
+        "uniqueReaderOutcome": "Проверить линию в Ереване и сохранить дорогу в Дилижан офлайн.",
+        "cannibalizationDecision": "Страновой переход город—лес отделён от общей установки и расчёта трафика."
+      },
+      "readerPromise": "Городской тест, дорожный офлайн-набор и резерв данных для Дилижана.",
+      "semanticLinkClass": "focused-technical",
+      "publicUrls": {
+        "ru": "https://yotti.net/blog/armenia/kupit-esim-dlya-armenii-svyaz-mezhdu-erevanom-i-dilizhanom",
+        "en": "https://yotti.net/en/blog/armenia/buy-an-esim-for-armenia-connectivity-from-yerevan-to-dilijan"
+      },
+      "internalArticleLinks": {
+        "ru": [
+          "https://yotti.net/blog/kak-ustanovit-esim-pered-poezdkoy-i-ne-zapustit-paket-ranshe-vremeni",
+          "https://yotti.net/blog/esim-vidit-set-no-internet-ne-rabotaet-gde-iskat-prichinu",
+          "https://yotti.net/blog/skolko-gigabayt-nuzhno-dlya-esim-v-poezdke"
+        ],
+        "en": [
+          "https://yotti.net/en/blog/how-to-install-an-esim-before-travel-without-starting-it-too-early",
+          "https://yotti.net/en/blog/esim-has-signal-but-no-internet-what-to-check",
+          "https://yotti.net/en/blog/how-much-data-do-you-need-for-a-travel-esim"
+        ]
+      },
+      "researchSources": [
+        "https://armenia.travel/articles/spending-a-day-in-dilijan-armenia/",
+        "https://www.yotti.net/esim/armenia"
+      ],
+      "creative": "assets/covers/buy-esim-armenia-yerevan-dilijan.webp",
       "creativeConceptKey": "dilijan-rainy-bus-shelter-paper-map",
-      "creativeBrief": "Дождливая остановка у Дилижана, сложенная бумажная карта на лавке и лесная дорога за стеклом."
+      "creativeBrief": "Мокрая лесная остановка в Дилижане, бумажная карта и проверка телефона.",
+      "scores": {
+        "utility": 95,
+        "originalValue": 94,
+        "factSupport": 94
+      },
+      "editorialScorecard": {
+        "ru": {
+          "total": 94
+        },
+        "en": {
+          "total": 94
+        }
+      },
+      "editorialEvidence": {
+        "ru": {
+          "model": "gpt-6-astra",
+          "effort": "high",
+          "reviewedAt": "2026-09-13",
+          "weakestDimensions": [
+            "trust",
+            "technical"
+          ],
+          "findings": [
+            "coverage: implied continuity -> three distinct connection jobs",
+            "road time: fixed claim -> qualified official estimate and current-provider check"
+          ],
+          "recheck": "PASS after targeted editorial repair; deterministic gates required before PR",
+          "visualInspection": {
+            "result": "PASS",
+            "files": [
+              "cover",
+              "6 RU information graphics"
+            ]
+          }
+        },
+        "en": {
+          "model": "gpt-6-astra",
+          "effort": "high",
+          "reviewedAt": "2026-09-13",
+          "weakestDimensions": [
+            "trust",
+            "voice"
+          ],
+          "findings": [
+            "lead: product-first framing -> arrival/road decision split",
+            "trail safety: connectivity promise -> explicit offline and check-in boundary"
+          ],
+          "recheck": "PASS after targeted editorial repair; deterministic gates required before PR",
+          "visualInspection": {
+            "result": "PASS",
+            "files": [
+              "cover",
+              "6 EN information graphics"
+            ]
+          }
+        }
+      },
+      "qualityNotes": {
+        "titleCandidatesEvaluated": {
+          "ru": 5,
+          "en": 5
+        },
+        "lengthDecision": "Focused country connectivity scenario is complete without repeating generic installation steps.",
+        "redTeam": "No coverage guarantee or fixed transport schedule."
+      },
+      "internalContextLinks": [
+        "https://yotti.net/blog/kak-ustanovit-esim-pered-poezdkoy-i-ne-zapustit-paket-ranshe-vremeni",
+        "https://yotti.net/blog/esim-vidit-set-no-internet-ne-rabotaet-gde-iskat-prichinu",
+        "https://yotti.net/blog/skolko-gigabayt-nuzhno-dlya-esim-v-poezdke",
+        "https://yotti.net/en/blog/how-to-install-an-esim-before-travel-without-starting-it-too-early",
+        "https://yotti.net/en/blog/esim-has-signal-but-no-internet-what-to-check",
+        "https://yotti.net/en/blog/how-much-data-do-you-need-for-a-travel-esim"
+      ]
     },
     {
-      "planOrder": 2,
+      "status": "scheduled",
+      "locales": [
+        "ru",
+        "en"
+      ],
+      "model": {
+        "name": "gpt-6-astra",
+        "effort": "high",
+        "role": "independent_locale_drafting"
+      },
+      "editorialModel": {
+        "name": "gpt-6-astra",
+        "effort": "high",
+        "role": "separate_editorial_acceptance"
+      },
+      "generationAttempts": {
+        "ru": 1,
+        "en": 1
+      },
+      "qualityRepairAttempts": 1,
+      "editorialStandardVersion": 2,
+      "editorialPasses": {
+        "ru": 1,
+        "en": 1
+      },
+      "creativeGeneration": {
+        "model": "imagegen-built-in",
+        "attempts": 1
+      },
+      "riskReasons": [
+        "recovery_2026_09_07_13",
+        "query_cannibalization_checked",
+        "renderer_degraded_site_side_p1"
+      ],
+      "schedule": {
+        "ru": "2026-09-13T14:32:00Z",
+        "en": "2026-09-13T14:32:00Z"
+      },
       "id": "uruguay-montevideo-market-promenade-day",
+      "topicKey": "montevideo-market-promenade-day",
       "countryCode": "UY",
       "region": "south-america",
       "planKind": "editorial",
@@ -9116,75 +9291,456 @@
         "ru": "Монтевидео рынок набережная один день",
         "en": "Montevideo market promenade day"
       },
-      "semanticIntent": {
-        "primary": "montevideo-market-promenade-day",
-        "secondary": [
-          "еда в Монтевидео",
-          "Montevideo food and rambla"
-        ]
-      },
       "workingTitle": {
         "ru": "День в Монтевидео: рынок, тихие кварталы и Рамбла",
         "en": "A day in Montevideo: market, quiet blocks and the Rambla"
       },
-      "readerPromise": "Связать один рыночный обед с жилыми кварталами и вечерней набережной без гастрономического марафона.",
+      "intentMap": {
+        "primary": {
+          "ru": "рынок и Рамбла Монтевидео за день",
+          "en": "Montevideo market and Rambla in one day"
+        },
+        "neighborIntents": [
+          "montevideo-food-guide",
+          "uruguay-city-guide",
+          "rambla-beaches"
+        ],
+        "uniqueReaderOutcome": "Связать один рыночный обед со старым городом и погодной веткой Рамблы.",
+        "cannibalizationDecision": "Это дневная последовательность, а не ресторанный список или полный гид по берегу."
+      },
+      "readerPromise": "Один рыночный обед, спокойный переход и длина Рамблы по ветру.",
+      "semanticLinkClass": "standard",
+      "publicUrls": {
+        "ru": "https://yotti.net/blog/uruguay/den-v-montevideo-rynok-tihie-kvartaly-i-rambla",
+        "en": "https://yotti.net/en/blog/uruguay/a-day-in-montevideo-market-quiet-blocks-and-the-rambla"
+      },
+      "internalArticleLinks": {
+        "ru": [
+          "https://yotti.net/blog/ghana/odin-den-v-akkre-rynok-muzey-i-memorialnyy-park",
+          "https://yotti.net/blog/belgium/vyhodnye-v-gente-kanaly-remeslo-i-patershol",
+          "https://yotti.net/blog/peru/chto-poprobovat-v-lime-rynok-i-peruanskiy-obed"
+        ],
+        "en": [
+          "https://yotti.net/en/blog/ghana/one-day-in-accra-market-museum-and-memorial-park",
+          "https://yotti.net/en/blog/belgium/a-ghent-weekend-of-canals-craft-and-patershol",
+          "https://yotti.net/en/blog/peru/what-to-eat-in-lima-a-market-visit-and-a-peruvian-lunch"
+        ]
+      },
+      "researchSources": [
+        "https://montevideo.gub.uy/areas-tematicas/cultura-y-tiempo-libre/ferias-y-mercados/mercados",
+        "https://www.montevideo.gub.uy/areas-tematicas/cultura-y-tiempo-libre/parques/rambla"
+      ],
+      "creative": "assets/covers/uruguay-montevideo-market-promenade-day.webp",
       "creativeConceptKey": "montevideo-market-shutters-mate-rambla-breeze",
-      "creativeBrief": "Приоткрытые ставни рынка Монтевидео, термос и мате на столе, за углом видна ветреная Рамбла."
+      "creativeBrief": "Портовый рынок и Рамбла в тёплом ветреном свете.",
+      "scores": {
+        "utility": 94,
+        "originalValue": 95,
+        "factSupport": 94
+      },
+      "editorialScorecard": {
+        "ru": {
+          "total": 94
+        },
+        "en": {
+          "total": 94
+        }
+      },
+      "editorialEvidence": {
+        "ru": {
+          "model": "gpt-6-astra",
+          "effort": "high",
+          "reviewedAt": "2026-09-13",
+          "weakestDimensions": [
+            "utility",
+            "structure"
+          ],
+          "findings": [
+            "market: meal prescription -> appetite-led first circuit",
+            "Rambla: distance target -> weather-led branch"
+          ],
+          "recheck": "PASS after targeted editorial repair; deterministic gates required before PR",
+          "visualInspection": {
+            "result": "PASS",
+            "files": [
+              "cover",
+              "6 RU information graphics"
+            ]
+          }
+        },
+        "en": {
+          "model": "gpt-6-astra",
+          "effort": "high",
+          "reviewedAt": "2026-09-13",
+          "weakestDimensions": [
+            "utility",
+            "voice"
+          ],
+          "findings": [
+            "lead: checklist framing -> directional city sequence",
+            "ending: generic sunset language -> explicit return-route decision"
+          ],
+          "recheck": "PASS after targeted editorial repair; deterministic gates required before PR",
+          "visualInspection": {
+            "result": "PASS",
+            "files": [
+              "cover",
+              "6 EN information graphics"
+            ]
+          }
+        }
+      },
+      "qualityNotes": {
+        "titleCandidatesEvaluated": {
+          "ru": 5,
+          "en": 5
+        },
+        "lengthDecision": "One culture-led day is answered without a restaurant directory.",
+        "redTeam": "The 30 km shoreline is context, not a recommended walking distance."
+      },
+      "internalContextLinks": [
+        "https://yotti.net/blog/ghana/odin-den-v-akkre-rynok-muzey-i-memorialnyy-park",
+        "https://yotti.net/blog/belgium/vyhodnye-v-gente-kanaly-remeslo-i-patershol",
+        "https://yotti.net/blog/peru/chto-poprobovat-v-lime-rynok-i-peruanskiy-obed",
+        "https://yotti.net/en/blog/ghana/one-day-in-accra-market-museum-and-memorial-park",
+        "https://yotti.net/en/blog/belgium/a-ghent-weekend-of-canals-craft-and-patershol",
+        "https://yotti.net/en/blog/peru/what-to-eat-in-lima-a-market-visit-and-a-peruvian-lunch"
+      ]
     },
     {
-      "planOrder": 3,
+      "status": "scheduled",
+      "locales": [
+        "ru",
+        "en"
+      ],
+      "model": {
+        "name": "gpt-6-astra",
+        "effort": "high",
+        "role": "independent_locale_drafting"
+      },
+      "editorialModel": {
+        "name": "gpt-6-astra",
+        "effort": "high",
+        "role": "separate_editorial_acceptance"
+      },
+      "generationAttempts": {
+        "ru": 1,
+        "en": 1
+      },
+      "qualityRepairAttempts": 1,
+      "editorialStandardVersion": 2,
+      "editorialPasses": {
+        "ru": 1,
+        "en": 1
+      },
+      "creativeGeneration": {
+        "model": "imagegen-built-in",
+        "attempts": 1
+      },
+      "riskReasons": [
+        "recovery_2026_09_07_13",
+        "query_cannibalization_checked",
+        "renderer_degraded_site_side_p1"
+      ],
+      "schedule": {
+        "ru": "2026-09-13T14:32:00Z",
+        "en": "2026-09-13T14:32:00Z"
+      },
       "id": "saudi-arabia-jeddah-albalad-corniche-day",
+      "topicKey": "jeddah-albalad-corniche-heat-day",
       "countryCode": "SA",
       "region": "middle-east",
       "planKind": "editorial",
       "contentFormat": "practical-travel-scenario",
       "searchQuery": {
-        "ru": "Джидда Аль-Балад набережная день",
-        "en": "Jeddah Al-Balad Corniche day"
-      },
-      "semanticIntent": {
-        "primary": "jeddah-albalad-corniche-day",
-        "secondary": [
-          "один день в Джидде",
-          "Jeddah old town and Corniche"
-        ]
+        "ru": "Джидда Аль-Балад Корниш один день",
+        "en": "Jeddah Al-Balad Corniche one day"
       },
       "workingTitle": {
-        "ru": "Один день в Джидде: Аль-Балад утром и Корниш вечером",
-        "en": "One day in Jeddah: Al-Balad in the morning and the Corniche at dusk"
+        "ru": "День в Джидде: Аль-Балад утром и Корниш после жары",
+        "en": "A day in Jeddah: Al-Balad early and the Corniche after the heat"
       },
-      "readerPromise": "Разнести старый город и набережную по прохладным часам, оставив середину дня для закрытой паузы.",
-      "creativeConceptKey": "jeddah-rawasheen-shadow-water-carrier",
-      "creativeBrief": "Резные равашины Аль-Балада отбрасывают тень на узкую улицу, прохожий несёт кувшин с водой."
+      "intentMap": {
+        "primary": {
+          "ru": "Джидда Аль-Балад и Корниш по жаре",
+          "en": "Jeddah Al-Balad and Corniche in hot weather"
+        },
+        "neighborIntents": [
+          "jeddah-attractions-list",
+          "saudi-etiquette-guide",
+          "jeddah-corniche-guide"
+        ],
+        "uniqueReaderOutcome": "Разделить исторический район и берег защищённой дневной паузой.",
+        "cannibalizationDecision": "Практический тепловой сценарий не повторяет общий список мест или отдельный этикет-гид."
+      },
+      "readerPromise": "Ранний Аль-Балад, дневная тень и один понятный участок Корниша.",
+      "semanticLinkClass": "standard",
+      "publicUrls": {
+        "ru": "https://yotti.net/blog/saudi-arabia/den-v-dzhidde-al-balad-utrom-i-kornish-posle-zhary",
+        "en": "https://yotti.net/en/blog/saudi-arabia/a-day-in-jeddah-al-balad-early-and-the-corniche-after-the-heat"
+      },
+      "internalArticleLinks": {
+        "ru": [
+          "https://yotti.net/blog/uae/dubai-za-odin-den-al-fahidi-buhta-i-odin-sovremennyy-rayon",
+          "https://yotti.net/blog/oman/pervoe-puteshestvie-po-omanu-marshrut-cherez-maskat-i-nizvu",
+          "https://yotti.net/blog/tunisia/tunis-karfagen-i-sidi-bu-said-za-odin-den"
+        ],
+        "en": [
+          "https://yotti.net/en/blog/uae/one-day-in-dubai-al-fahidi-the-creek-and-one-modern-district",
+          "https://yotti.net/en/blog/oman/a-first-trip-to-oman-one-week-in-muscat-and-nizwa",
+          "https://yotti.net/en/blog/tunisia/tunis-carthage-and-sidi-bou-said-in-one-day"
+        ]
+      },
+      "researchSources": [
+        "https://www.visitsaudi.com/en/jeddah",
+        "https://whc.unesco.org/en/list/1361/"
+      ],
+      "creative": "assets/covers/saudi-arabia-jeddah-albalad-corniche-day.webp",
+      "creativeConceptKey": "jeddah-albalad-shadow-corniche-golden-hour",
+      "creativeBrief": "Тенистая улица Аль-Балада, открывающаяся к берегу на закате.",
+      "scores": {
+        "utility": 96,
+        "originalValue": 94,
+        "factSupport": 95
+      },
+      "editorialScorecard": {
+        "ru": {
+          "total": 95
+        },
+        "en": {
+          "total": 95
+        }
+      },
+      "editorialEvidence": {
+        "ru": {
+          "model": "gpt-6-astra",
+          "effort": "high",
+          "reviewedAt": "2026-09-13",
+          "weakestDimensions": [
+            "trust",
+            "utility"
+          ],
+          "findings": [
+            "heat: vague caution -> protected midday reset",
+            "access: assumed buildings -> route independent of entry"
+          ],
+          "recheck": "PASS after targeted editorial repair; deterministic gates required before PR",
+          "visualInspection": {
+            "result": "PASS",
+            "files": [
+              "cover",
+              "6 RU information graphics"
+            ]
+          }
+        },
+        "en": {
+          "model": "gpt-6-astra",
+          "effort": "high",
+          "reviewedAt": "2026-09-13",
+          "weakestDimensions": [
+            "trust",
+            "technical"
+          ],
+          "findings": [
+            "Corniche: broad place name -> exact drop-off and return-pin check",
+            "etiquette: generic wording -> specific clothing and consent boundaries"
+          ],
+          "recheck": "PASS after targeted editorial repair; deterministic gates required before PR",
+          "visualInspection": {
+            "result": "PASS",
+            "files": [
+              "cover",
+              "6 EN information graphics"
+            ]
+          }
+        }
+      },
+      "qualityNotes": {
+        "titleCandidatesEvaluated": {
+          "ru": 5,
+          "en": 5
+        },
+        "lengthDecision": "A heat-aware city day is complete without volatile venue hours.",
+        "redTeam": "Prayer times, entry rules and hours are delegated to same-day checks."
+      },
+      "internalContextLinks": [
+        "https://yotti.net/blog/uae/dubai-za-odin-den-al-fahidi-buhta-i-odin-sovremennyy-rayon",
+        "https://yotti.net/blog/oman/pervoe-puteshestvie-po-omanu-marshrut-cherez-maskat-i-nizvu",
+        "https://yotti.net/blog/tunisia/tunis-karfagen-i-sidi-bu-said-za-odin-den",
+        "https://yotti.net/en/blog/uae/one-day-in-dubai-al-fahidi-the-creek-and-one-modern-district",
+        "https://yotti.net/en/blog/oman/a-first-trip-to-oman-one-week-in-muscat-and-nizwa",
+        "https://yotti.net/en/blog/tunisia/tunis-carthage-and-sidi-bou-said-in-one-day"
+      ]
     },
     {
-      "planOrder": 4,
+      "status": "scheduled",
+      "locales": [
+        "ru",
+        "en"
+      ],
+      "model": {
+        "name": "gpt-6-astra",
+        "effort": "high",
+        "role": "independent_locale_drafting"
+      },
+      "editorialModel": {
+        "name": "gpt-6-astra",
+        "effort": "high",
+        "role": "separate_editorial_acceptance"
+      },
+      "generationAttempts": {
+        "ru": 1,
+        "en": 1
+      },
+      "qualityRepairAttempts": 1,
+      "editorialStandardVersion": 2,
+      "editorialPasses": {
+        "ru": 1,
+        "en": 1
+      },
+      "creativeGeneration": {
+        "model": "imagegen-built-in",
+        "attempts": 1
+      },
+      "riskReasons": [
+        "recovery_2026_09_07_13",
+        "query_cannibalization_checked",
+        "renderer_degraded_site_side_p1"
+      ],
+      "schedule": {
+        "ru": "2026-09-13T14:32:00Z",
+        "en": "2026-09-13T14:32:00Z"
+      },
       "id": "indonesia-yogyakarta-batik-workshop-morning",
+      "topicKey": "yogyakarta-batik-workshop-morning",
       "countryCode": "ID",
       "region": "southeast-asia",
       "planKind": "editorial",
       "contentFormat": "culture-food-or-local-experience",
       "searchQuery": {
-        "ru": "Джокьякарта батик мастерская утро",
-        "en": "Yogyakarta batik workshop morning"
-      },
-      "semanticIntent": {
-        "primary": "yogyakarta-batik-workshop-morning",
-        "secondary": [
-          "батик в Джокьякарте",
-          "Yogyakarta craft morning"
-        ]
+        "ru": "Джокьякарта мастерская батик",
+        "en": "Yogyakarta batik workshop"
       },
       "workingTitle": {
-        "ru": "Утро батика в Джокьякарте: как выбрать мастерскую",
-        "en": "A batik morning in Yogyakarta: choosing a workshop that fits"
+        "ru": "Утро батика в Джокьякарте: мастерская, воск и спокойный выбор ткани",
+        "en": "A batik morning in Yogyakarta: workshop, wax and a considered cloth"
       },
-      "readerPromise": "Выбрать между наблюдением и практическим занятием, понять рабочий ритм мастерской и не покупать сувенир вслепую.",
-      "creativeConceptKey": "yogyakarta-batik-wax-tool-indigo-cloth",
-      "creativeBrief": "Рука мастера ведёт чантинг над тканью индиго, в кадре видны воск, деревянный стол и естественный свет."
-    },
+      "intentMap": {
+        "primary": {
+          "ru": "мастерская батика в Джокьякарте утром",
+          "en": "Yogyakarta batik workshop morning"
+        },
+        "neighborIntents": [
+          "yogyakarta-attractions",
+          "batik-shopping-guide",
+          "indonesia-craft-history"
+        ],
+        "uniqueReaderOutcome": "Подтвердить занятие, увидеть технику и выбрать одну ткань с контекстом.",
+        "cannibalizationDecision": "Фокус на последовательности участия, а не на списке магазинов или полной истории батика."
+      },
+      "readerPromise": "От подтверждённой мастерской к небольшой пробе и осознанной покупке.",
+      "semanticLinkClass": "standard",
+      "publicUrls": {
+        "ru": "https://yotti.net/blog/indonesia/utro-batika-v-dzhokyakarte-masterskaya-vosk-i-vybor-tkani",
+        "en": "https://yotti.net/en/blog/indonesia/a-batik-morning-in-yogyakarta-workshop-wax-and-a-considered-cloth"
+      },
+      "internalArticleLinks": {
+        "ru": [
+          "https://yotti.net/blog/india/remesla-dzhaypura-gde-uvidet-naboyku-i-sinyuyu-keramiku",
+          "https://yotti.net/blog/malaysia/posle-poludnya-v-dzhordzhtaune-masterskie-kopitiam-i-vechernyaya-eda",
+          "https://yotti.net/blog/japan/rynok-omicho-v-kanadzave-kak-provesti-utro"
+        ],
+        "en": [
+          "https://yotti.net/en/blog/india/a-jaipur-craft-route-block-printing-and-blue-pottery",
+          "https://yotti.net/en/blog/malaysia/an-afternoon-in-george-town-workshops-kopitiams-and-supper",
+          "https://yotti.net/en/blog/japan/a-morning-at-omicho-market-in-kanazawa"
+        ]
+      },
+      "researchSources": [
+        "https://www.indonesia.travel/id/en/destination/java/yogyakarta/museum-batik-yogyakarta",
+        "https://www.indonesia.travel/id/en/travel-ideas/adventure/get-the-exciting-adventure-and-cultural-experience-in-central-java-and-yogyakarta"
+      ],
+      "creative": "assets/covers/indonesia-yogyakarta-batik-workshop-morning.webp",
+      "creativeConceptKey": "yogyakarta-batik-canting-wax-open-workshop",
+      "creativeBrief": "Мастерица наносит воск чантингом в открытой мастерской.",
+      "scores": {
+        "utility": 94,
+        "originalValue": 96,
+        "factSupport": 94
+      },
+      "editorialScorecard": {
+        "ru": {
+          "total": 95
+        },
+        "en": {
+          "total": 95
+        }
+      },
+      "editorialEvidence": {
+        "ru": {
+          "model": "gpt-6-astra",
+          "effort": "high",
+          "reviewedAt": "2026-09-13",
+          "weakestDimensions": [
+            "trust",
+            "voice"
+          ],
+          "findings": [
+            "motifs: invented symbolism risk -> instruct reader to ask artisan",
+            "shopping: souvenir-first lead -> process-first morning"
+          ],
+          "recheck": "PASS after targeted editorial repair; deterministic gates required before PR",
+          "visualInspection": {
+            "result": "PASS",
+            "files": [
+              "cover",
+              "6 RU information graphics"
+            ]
+          }
+        },
+        "en": {
+          "model": "gpt-6-astra",
+          "effort": "high",
+          "reviewedAt": "2026-09-13",
+          "weakestDimensions": [
+            "trust",
+            "structure"
+          ],
+          "findings": [
+            "authenticity: price shortcut -> specific method/material/care questions",
+            "ending: generic craft appreciation -> note tied to witnessed process"
+          ],
+          "recheck": "PASS after targeted editorial repair; deterministic gates required before PR",
+          "visualInspection": {
+            "result": "PASS",
+            "files": [
+              "cover",
+              "6 EN information graphics"
+            ]
+          }
+        }
+      },
+      "qualityNotes": {
+        "titleCandidatesEvaluated": {
+          "ru": 5,
+          "en": 5
+        },
+        "lengthDecision": "Workshop decision is complete without a shopping directory.",
+        "redTeam": "No motif meaning, workshop access or authenticity is claimed without confirmation."
+      },
+      "internalContextLinks": [
+        "https://yotti.net/blog/india/remesla-dzhaypura-gde-uvidet-naboyku-i-sinyuyu-keramiku",
+        "https://yotti.net/blog/malaysia/posle-poludnya-v-dzhordzhtaune-masterskie-kopitiam-i-vechernyaya-eda",
+        "https://yotti.net/blog/japan/rynok-omicho-v-kanadzave-kak-provesti-utro",
+        "https://yotti.net/en/blog/india/a-jaipur-craft-route-block-printing-and-blue-pottery",
+        "https://yotti.net/en/blog/malaysia/an-afternoon-in-george-town-workshops-kopitiams-and-supper",
+        "https://yotti.net/en/blog/japan/a-morning-at-omicho-market-in-kanazawa"
+      ]
+    }
+  ],
+  "plannedPublications": [
     {
-      "planOrder": 5,
+      "planOrder": 1,
       "id": "buy-esim-iceland-reykjavik-ring-road",
       "countryCode": "IS",
       "region": "northern-europe",
@@ -9210,7 +9766,7 @@
       "creativeBrief": "Путешественник придерживает бумажный маршрут у ветреного придорожного укрытия, за ним чёрная дорога и низкие облака."
     },
     {
-      "planOrder": 6,
+      "planOrder": 2,
       "id": "portugal-porto-rainy-arcades-day",
       "countryCode": "PT",
       "region": "southern-europe",
@@ -9236,7 +9792,7 @@
       "creativeBrief": "Porto arcades tram window rain"
     },
     {
-      "planOrder": 7,
+      "planOrder": 3,
       "id": "rwanda-kigali-neighbourhood-craft-day",
       "countryCode": "RW",
       "region": "east-africa",
@@ -9262,7 +9818,7 @@
       "creativeBrief": "Kigali basket workshop shaded veranda"
     },
     {
-      "planOrder": 8,
+      "planOrder": 4,
       "id": "argentina-mendoza-shade-city-day",
       "countryCode": "AR",
       "region": "south-america",
@@ -9288,7 +9844,7 @@
       "creativeBrief": "Mendoza irrigation channel plane tree shade"
     },
     {
-      "planOrder": 9,
+      "planOrder": 5,
       "id": "esim-without-physical-sim",
       "scope": "global",
       "region": "global",
@@ -9314,7 +9870,7 @@
       "creativeBrief": "mountain cabin empty SIM tray paper map"
     },
     {
-      "planOrder": 10,
+      "planOrder": 6,
       "id": "netherlands-utrecht-canal-bookshop-day",
       "countryCode": "NL",
       "region": "western-europe",
@@ -9340,7 +9896,7 @@
       "creativeBrief": "Utrecht lower wharf books bicycle morning"
     },
     {
-      "planOrder": 11,
+      "planOrder": 7,
       "id": "madagascar-antananarivo-upper-town-morning",
       "countryCode": "MG",
       "region": "east-africa",
@@ -9366,7 +9922,7 @@
       "creativeBrief": "Antananarivo brick hillside rice baskets"
     },
     {
-      "planOrder": 12,
+      "planOrder": 8,
       "id": "mexico-oaxaca-market-comal-day",
       "countryCode": "MX",
       "region": "north-america",
@@ -9392,7 +9948,7 @@
       "creativeBrief": "Oaxaca market comal blue corn smoke"
     },
     {
-      "planOrder": 13,
+      "planOrder": 9,
       "id": "esim-signal-vs-physical-sim",
       "scope": "global",
       "region": "global",
@@ -9418,7 +9974,7 @@
       "creativeBrief": "coastal weather station traveller signal test"
     },
     {
-      "planOrder": 14,
+      "planOrder": 10,
       "id": "georgia-kutaisi-rainy-city-day",
       "countryCode": "GE",
       "region": "caucasus",
@@ -9444,7 +10000,7 @@
       "creativeBrief": "Kutaisi market awning rain white bridge"
     },
     {
-      "planOrder": 15,
+      "planOrder": 11,
       "id": "thailand-chiang-mai-craft-morning",
       "countryCode": "TH",
       "region": "southeast-asia",
@@ -9470,7 +10026,7 @@
       "creativeBrief": "Chiang Mai saa paper drying racks"
     },
     {
-      "planOrder": 16,
+      "planOrder": 12,
       "id": "new-zealand-dunedin-wind-city-day",
       "countryCode": "NZ",
       "region": "oceania",
@@ -9496,7 +10052,7 @@
       "creativeBrief": "Dunedin stone station coat in wind"
     },
     {
-      "planOrder": 17,
+      "planOrder": 13,
       "id": "esim-on-smartwatch",
       "scope": "global",
       "region": "global",
@@ -9522,7 +10078,7 @@
       "creativeBrief": "forest trail runner paper route water stop"
     },
     {
-      "planOrder": 18,
+      "planOrder": 14,
       "id": "hungary-pecs-ceramic-hillside-afternoon",
       "countryCode": "HU",
       "region": "central-europe",
@@ -9548,7 +10104,7 @@
       "creativeBrief": "Pecs ceramic glaze studio hillside light"
     },
     {
-      "planOrder": 19,
+      "planOrder": 15,
       "id": "morocco-rabat-medina-ocean-day",
       "countryCode": "MA",
       "region": "north-africa",
@@ -9574,7 +10130,7 @@
       "creativeBrief": "Rabat blue gate Atlantic spray"
     },
     {
-      "planOrder": 20,
+      "planOrder": 16,
       "id": "sri-lanka-galle-fort-monsoon-day",
       "countryCode": "LK",
       "region": "south-asia",
@@ -9600,7 +10156,7 @@
       "creativeBrief": "Galle rampart monsoon umbrella lighthouse"
     },
     {
-      "planOrder": 21,
+      "planOrder": 17,
       "id": "esim-in-airplane-mode",
       "scope": "global",
       "region": "global",
@@ -9626,7 +10182,7 @@
       "creativeBrief": "night train cabin paper route reading light"
     },
     {
-      "planOrder": 22,
+      "planOrder": 18,
       "id": "czechia-olomouc-market-square-day",
       "countryCode": "CZ",
       "region": "central-europe",
@@ -9652,7 +10208,7 @@
       "creativeBrief": "Olomouc cheese counter astronomical clock"
     },
     {
-      "planOrder": 23,
+      "planOrder": 19,
       "id": "chile-valdivia-river-market-day",
       "countryCode": "CL",
       "region": "south-america",
@@ -9678,7 +10234,7 @@
       "creativeBrief": "Valdivia riverside market sea lions rain"
     },
     {
-      "planOrder": 24,
+      "planOrder": 20,
       "id": "tunisia-sfax-medina-craft-morning",
       "countryCode": "TN",
       "region": "north-africa",
@@ -9704,7 +10260,7 @@
       "creativeBrief": "Sfax medina copper workshop doorway"
     },
     {
-      "planOrder": 25,
+      "planOrder": 21,
       "id": "esim-wifi-calling",
       "scope": "global",
       "region": "global",
@@ -9730,7 +10286,7 @@
       "creativeBrief": "alpine guesthouse evening window call"
     },
     {
-      "planOrder": 26,
+      "planOrder": 22,
       "id": "italy-bologna-porticoes-rain-day",
       "countryCode": "IT",
       "region": "southern-europe",
@@ -9756,7 +10312,7 @@
       "creativeBrief": "Bologna portico bicycle wet terracotta"
     },
     {
-      "planOrder": 27,
+      "planOrder": 23,
       "id": "kenya-mombasa-old-town-coast-day",
       "countryCode": "KE",
       "region": "east-africa",
@@ -9782,7 +10338,7 @@
       "creativeBrief": "Mombasa carved door ocean lane"
     },
     {
-      "planOrder": 28,
+      "planOrder": 24,
       "id": "taiwan-tainan-temple-market-morning",
       "countryCode": "TW",
       "region": "east-asia",
