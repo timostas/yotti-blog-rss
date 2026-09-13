@@ -39,6 +39,11 @@ Publish only when all statements below are true:
 - each locale reaches 82/100 and every essential score floor;
 - the style checker passes with zero blocking markers.
 
-Use `gpt-5.6-sol / high` for regular drafting and the distinct human editorial
-pass. Use `gpt-5.6-sol / xhigh` for an enhanced route guide. A stronger model
+Use `gpt-6-astra / high` for regular drafting and the distinct human editorial
+pass. Use `gpt-6-astra / xhigh` for an enhanced route guide. A stronger model
 does not replace this workflow.
+
+Before release, read and apply `docs/astra-editorial-acceptance.md` from the
+repository root. Record concrete findings and their resolution for each locale;
+a self-assigned score is not proof. A human editorial pass here means a distinct
+AI editorial review for natural language, not a claim that a human reviewed it.

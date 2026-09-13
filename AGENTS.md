@@ -22,7 +22,10 @@ Before material work, read `README.md`, `config/editorial-policy.json`,
 
 ## Efficiency and quality
 
-- Regular production uses Sol / high for research, drafting and a separate human editorial pass; Luna / low is limited to metadata and deterministic checks.
+- Apply `docs/astra-editorial-acceptance.md` to every new or changed article.
+  Preserve actual historical model records; record Astra editorial review separately.
+
+- Regular production uses Astra / high for research, drafting and a separate human editorial pass; Luna / low is limited to metadata and deterministic checks.
 - Reuse one light research package across RU and EN; avoid risky or volatile topics.
 - Allow one text generation per locale, one short repair and one cover generation.
 - Rotate countries, content formats and cover concepts according to policy.
