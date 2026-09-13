@@ -12,7 +12,8 @@
     "article-check": "node scripts/check-changed-article-guardrails.mjs",
     "public-page-check": "node scripts/check-public-page-performance.mjs",
     "test": "node --test",
-    "public-renderer-health": "node scripts/check-public-renderer-health.mjs"
+    "public-renderer-health": "node scripts/check-public-renderer-health.mjs",
+    "public-renderer-readiness": "node scripts/check-public-renderer-health.mjs --publication-readiness"
   },
   "engines": {
     "node": ">=24"

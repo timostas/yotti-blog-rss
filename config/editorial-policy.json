@@ -16,6 +16,13 @@
     "frequencyLimitEffectiveFrom": "2026-08-22",
     "accelerationReviewAfterUnits": null,
     "publicationGate": "manual_yotti_admin_sync",
+    "prePublicationRendererGate": {
+      "command": "npm run public-renderer-readiness",
+      "blockStates": ["BLOCKED", "UNAVAILABLE"],
+      "continueStates": ["PASS", "DEGRADED"],
+      "strictPublicVerificationRequires": "PASS",
+      "degradedIssueClass": "SITE_SIDE_P1"
+    },
     "publishedCorrectionFlow": {
       "preserveSlugAndFeedLink": true,
       "publishImmediatelyAfterValidation": true,

@@ -105,6 +105,15 @@ RU/EN-пары в заданных слотах. Перед исследован
    cold-load профилем на 360/390/720 px, хранится вне Git и проверяется командой
    `npm run public-page-check -- --evidence <private-json>`.
 
+Перед подготовкой нового выпуска запускается `npm run public-renderer-readiness`.
+Он отделяет целостность публикации от оптимизации публичного рендерера:
+`BLOCKED` (HTTP, canonical, article, exact-7, подписи или alt) и `UNAVAILABLE`
+останавливают выпуск; `DEGRADED` означает, что контент цел, но Yotti удалил
+responsive/lazy/dimensions-атрибуты. Такое состояние регистрируется как
+`SITE_SIDE_P1`, не блокирует следующий source/RSS-релиз и не позволяет назвать
+страницу `PUBLICLY_VERIFIED`. Строгий `npm run public-renderer-health` по-прежнему
+возвращает `FAIL` при любом таком дефекте и используется для контроля долга.
+
 Public validator обрабатывает все locale и viewports без fail-fast. Полный
 замер без дефектов даёт `PASS`; доказанный HTTP/canonical/visual/responsive/
 lazy/performance defect — `FAIL`; недоступный browser, trace, baseline или
