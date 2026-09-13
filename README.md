@@ -23,14 +23,20 @@ xmllint --noout dist/en/rss.xml
 
 ```bash
 npm run public-renderer-health
+npm run public-renderer-readiness
 ```
 
 Команда проверяет стабильную RU/EN-пару на публичном домене: canonical, ровно
 семь изображений статьи, подписи, responsive-атрибуты, intrinsic dimensions,
-приоритет обложки и lazy/async-поведение inline-разметки. `FAIL` или
-`UNAVAILABLE` не позволяют считать импортёр готовым и блокируют новые
-публикационные изменения. Этот быстрый gate не заменяет полный browser capture
-и `public-page-check` после ручной синхронизации.
+приоритет обложки и lazy/async-поведение inline-разметки.
+`public-renderer-health` остаётся строгим диагностическим тестом: любой дефект
+даёт `FAIL`. Перед новым выпуском автоматизация использует
+`public-renderer-readiness`: `BLOCKED` и `UNAVAILABLE` останавливают публикацию,
+а `DEGRADED` фиксирует только известный технический долг доставки изображений
+на стороне Yotti и не останавливает исправный source/RSS-релиз. Страница в
+состоянии `DEGRADED` не может получить статус `PUBLICLY_VERIFIED`. Этот быстрый
+gate не заменяет полный browser capture и `public-page-check` после ручной
+синхронизации.
 
 Результат сборки:
 

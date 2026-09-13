@@ -6,9 +6,11 @@ import { fileURLToPath } from "node:url";
 import {
   checkUrl,
   inspectHtml,
+  overallPublicationReadiness,
   overallState,
   parseAttributes,
   PILOT_URLS,
+  publicationReadiness,
 } from "../scripts/check-public-renderer-health.mjs";
 
 const passFixture = fileURLToPath(new URL("fixtures/public-renderer/pass.html", import.meta.url));
@@ -38,6 +40,26 @@ test("current public shape fails with actionable reason codes", async () => {
   assert.ok(codes.has("COVER_FETCHPRIORITY"));
   assert.ok(codes.has("INLINE_DECODING"));
   assert.ok(codes.has("INLINE_LAZY"));
+  assert.equal(
+    publicationReadiness({ state: "FAIL", reasons }),
+    "DEGRADED",
+    "delivery optimization defects must remain visible without stopping editorial production",
+  );
+});
+
+test("content integrity defects block publication", async () => {
+  const html = (await readFile(passFixture, "utf8")).replace("<article", "<main");
+  const reasons = inspectHtml(html, PILOT_URLS.ru);
+
+  assert.ok(reasons.some(({ code }) => code === "ARTICLE_MISSING"));
+  assert.equal(publicationReadiness({ state: "FAIL", reasons }), "BLOCKED");
+});
+
+test("unknown future reason codes fail closed", () => {
+  assert.equal(
+    publicationReadiness({ state: "FAIL", reasons: [{ code: "NEW_UNCLASSIFIED_DEFECT" }] }),
+    "BLOCKED",
+  );
 });
 
 test("fetch failure is UNAVAILABLE and cannot pass the pair", async () => {
@@ -46,10 +68,28 @@ test("fetch failure is UNAVAILABLE and cannot pass the pair", async () => {
   });
 
   assert.equal(result.state, "UNAVAILABLE");
+  assert.equal(publicationReadiness(result), "UNAVAILABLE");
   assert.equal(result.reasons[0].code, "FETCH_UNAVAILABLE");
   assert.equal(overallState([{ state: "PASS" }, result]), "UNAVAILABLE");
 });
 
 test("a confirmed FAIL is the overall state even if another locale is unavailable", () => {
   assert.equal(overallState([{ state: "UNAVAILABLE" }, { state: "FAIL" }]), "FAIL");
+});
+
+test("publication readiness keeps strict precedence", () => {
+  assert.equal(
+    overallPublicationReadiness([
+      { state: "FAIL", reasons: [{ code: "INLINE_LAZY" }] },
+      { state: "PASS", reasons: [] },
+    ]),
+    "DEGRADED",
+  );
+  assert.equal(
+    overallPublicationReadiness([
+      { state: "UNAVAILABLE", reasons: [{ code: "FETCH_UNAVAILABLE" }] },
+      { state: "FAIL", reasons: [{ code: "ARTICLE_MISSING" }] },
+    ]),
+    "BLOCKED",
+  );
 });

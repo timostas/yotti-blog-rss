@@ -8,6 +8,16 @@ export const PILOT_URLS = {
   en: "https://yotti.net/en/blog/esim-has-signal-but-no-internet-what-to-check",
 };
 
+export const PUBLICATION_ADVISORY_CODES = new Set([
+  "RESPONSIVE_SRCSET_MISSING",
+  "RESPONSIVE_SIZES_MISSING",
+  "DIMENSIONS_MISSING",
+  "COVER_LAZY",
+  "COVER_FETCHPRIORITY",
+  "INLINE_DECODING",
+  "INLINE_LAZY",
+]);
+
 function reason(code, message) {
   return { code, message };
 }
@@ -120,25 +130,66 @@ export function overallState(results) {
   return "PASS";
 }
 
+export function publicationReadiness(result) {
+  if (result.state === "UNAVAILABLE") return "UNAVAILABLE";
+  if (result.reasons.length === 0) return "PASS";
+  if (result.reasons.every(({ code }) => PUBLICATION_ADVISORY_CODES.has(code))) {
+    return "DEGRADED";
+  }
+  return "BLOCKED";
+}
+
+export function overallPublicationReadiness(results) {
+  const states = results.map((result) => result.publicationReadiness ?? publicationReadiness(result));
+  if (states.includes("BLOCKED")) return "BLOCKED";
+  if (states.includes("UNAVAILABLE")) return "UNAVAILABLE";
+  if (states.includes("DEGRADED")) return "DEGRADED";
+  return "PASS";
+}
+
+function allowsPublication(state) {
+  return state === "PASS" || state === "DEGRADED";
+}
+
 async function main() {
+  const readinessMode = process.argv.includes("--publication-readiness");
   const fixtureIndex = process.argv.indexOf("--fixture");
   if (fixtureIndex !== -1) {
     const fixturePath = process.argv[fixtureIndex + 1];
     if (!fixturePath) throw new Error("--fixture requires a file path");
     const html = await readFile(fixturePath, "utf8");
     const reasons = inspectHtml(html, PILOT_URLS.ru);
-    const output = { state: reasons.length ? "FAIL" : "PASS", reasons };
+    const state = reasons.length ? "FAIL" : "PASS";
+    const output = {
+      state,
+      publicationReadiness: publicationReadiness({ state, reasons }),
+      reasons,
+    };
     console.log(JSON.stringify(output, null, 2));
-    process.exitCode = output.state === "PASS" ? 0 : 1;
+    const successful = readinessMode
+      ? allowsPublication(output.publicationReadiness)
+      : output.state === "PASS";
+    process.exitCode = successful ? 0 : 1;
     return;
   }
 
-  const results = await Promise.all(
+  const checkedResults = await Promise.all(
     Object.entries(PILOT_URLS).map(([locale, url]) => checkUrl(locale, url)),
   );
-  const output = { state: overallState(results), results };
+  const results = checkedResults.map((result) => ({
+    ...result,
+    publicationReadiness: publicationReadiness(result),
+  }));
+  const output = {
+    state: overallState(results),
+    publicationReadiness: overallPublicationReadiness(results),
+    results,
+  };
   console.log(JSON.stringify(output, null, 2));
-  process.exitCode = output.state === "PASS" ? 0 : 1;
+  const successful = readinessMode
+    ? allowsPublication(output.publicationReadiness)
+    : output.state === "PASS";
+  process.exitCode = successful ? 0 : 1;
 }
 
 if (process.argv[1] && import.meta.url === pathToFileURL(process.argv[1]).href) {
