@@ -12372,13 +12372,48 @@
         "https://yotti.net/en/blog/portugal/a-rainy-day-in-porto-market-tram-and-warm-pauses"
       ],
       "countryCode": "LK"
-    }
-  ],
-  "plannedPublications": [
+    },
     {
-      "planOrder": 1,
+      "status": "scheduled",
+      "locales": [
+        "ru",
+        "en"
+      ],
+      "model": {
+        "name": "gpt-6-astra",
+        "effort": "high",
+        "role": "independent_locale_drafting"
+      },
+      "editorialModel": {
+        "name": "gpt-6-astra",
+        "effort": "high",
+        "role": "separate_editorial_acceptance"
+      },
+      "generationAttempts": {
+        "ru": 1,
+        "en": 1
+      },
+      "qualityRepairAttempts": 1,
+      "editorialStandardVersion": 2,
+      "editorialPasses": {
+        "ru": 1,
+        "en": 1
+      },
+      "creativeGeneration": {
+        "model": "imagegen-built-in",
+        "attempts": 1
+      },
+      "riskReasons": [
+        "recovery_2026_09_07_13",
+        "query_cannibalization_checked",
+        "renderer_degraded_site_side_p1"
+      ],
+      "schedule": {
+        "ru": "2026-09-13T17:05:00Z",
+        "en": "2026-09-13T17:05:00Z"
+      },
       "id": "esim-in-airplane-mode",
-      "scope": "global",
+      "topicKey": "airplane-mode-esim-radio-boundary",
       "region": "global",
       "planKind": "search-support",
       "contentFormat": "connectivity-and-esim",
@@ -12386,25 +12421,163 @@
         "ru": "работает ли есим в авиарежиме",
         "en": "does eSIM work in airplane mode"
       },
-      "semanticIntent": {
-        "primary": "airplane-mode-esim-radio-boundary",
-        "secondary": [
+      "workingTitle": {
+        "ru": "Работает ли есим в авиарежиме",
+        "en": "Does eSIM work in Airplane Mode?"
+      },
+      "intentMap": {
+        "primary": {
+          "ru": "работает ли есим в авиарежиме",
+          "en": "does eSIM work in airplane mode"
+        },
+        "neighborIntents": [
           "работает ли есим в авиарежиме",
           "does eSIM work in airplane mode"
-        ]
-      },
-      "workingTitle": {
-        "ru": "работает ли есим в авиарежиме",
-        "en": "does eSIM work in airplane mode"
+        ],
+        "uniqueReaderOutcome": "Узкий сценарий airplane-mode-esim-radio-boundary без дублирования соседних интентов.",
+        "cannibalizationDecision": "Titles, slugs, topic keys, queries, existing URLs and adjacent intents checked; distinct reader outcome."
       },
       "readerPromise": "Узкий сценарий airplane-mode-esim-radio-boundary без дублирования соседних интентов.",
-      "creativeConceptKey": "night train cabin paper route reading light",
-      "creativeBrief": "night train cabin paper route reading light"
+      "semanticLinkClass": "focused-technical",
+      "publicUrls": {
+        "ru": "https://yotti.net/blog/rabotaet-li-esim-v-aviarezhime",
+        "en": "https://yotti.net/en/blog/does-esim-work-in-airplane-mode"
+      },
+      "internalArticleLinks": {
+        "ru": [
+          "https://yotti.net/blog/pochemu-esim-ne-podklyuchaetsya-k-5g",
+          "https://yotti.net/blog/esim-rabotaet-medlenno-kak-nayti-prichinu",
+          "https://yotti.net/blog/esim-vidit-set-no-internet-ne-rabotaet-gde-iskat-prichinu"
+        ],
+        "en": [
+          "https://yotti.net/en/blog/why-your-esim-is-not-connecting-to-5g",
+          "https://yotti.net/en/blog/travel-esim-running-slowly-how-to-find-the-cause",
+          "https://yotti.net/en/blog/esim-has-signal-but-no-internet-what-to-check"
+        ]
+      },
+      "researchSources": [
+        "https://support.apple.com/en-gb/108785",
+        "https://support.apple.com/en-mide/guide/iphone/iphb771143ee/ios"
+      ],
+      "creative": "assets/covers/esim-in-airplane-mode.webp",
+      "creativeConceptKey": "night-train-cabin-airplane-mode-boundary",
+      "creativeBrief": "night train cabin paper route reading light",
+      "scores": {
+        "utility": 93,
+        "originalValue": 92,
+        "factSupport": 93
+      },
+      "editorialScorecard": {
+        "ru": {
+          "total": 93
+        },
+        "en": {
+          "total": 93
+        }
+      },
+      "editorialEvidence": {
+        "ru": {
+          "model": "gpt-6-astra",
+          "effort": "high",
+          "reviewedAt": "2026-09-13",
+          "weakestDimensions": [
+            "scope",
+            "trust"
+          ],
+          "findings": [
+            "scope: broad draft -> one decision spine",
+            "precision: static assumption -> current official check"
+          ],
+          "recheck": "PASS after targeted editorial repair; deterministic gates required before PR",
+          "visualInspection": {
+            "result": "PASS",
+            "files": [
+              "cover",
+              "6 RU inline visuals"
+            ]
+          }
+        },
+        "en": {
+          "model": "gpt-6-astra",
+          "effort": "high",
+          "reviewedAt": "2026-09-13",
+          "weakestDimensions": [
+            "voice",
+            "utility"
+          ],
+          "findings": [
+            "lead: generic framing -> concrete scene",
+            "structure: template rhythm -> locale-specific progression"
+          ],
+          "recheck": "PASS after targeted editorial repair; deterministic gates required before PR",
+          "visualInspection": {
+            "result": "PASS",
+            "files": [
+              "cover",
+              "6 EN inline visuals"
+            ]
+          }
+        }
+      },
+      "qualityNotes": {
+        "titleCandidatesEvaluated": {
+          "ru": 4,
+          "en": 4
+        },
+        "lengthDecision": "Reader task complete without FAQ or repeated conclusion.",
+        "redTeam": "No personal travel, opening-hours, weather, network, access or wildlife guarantee."
+      },
+      "internalContextLinks": [
+        "https://yotti.net/blog/pochemu-esim-ne-podklyuchaetsya-k-5g",
+        "https://yotti.net/blog/esim-rabotaet-medlenno-kak-nayti-prichinu",
+        "https://yotti.net/blog/esim-vidit-set-no-internet-ne-rabotaet-gde-iskat-prichinu",
+        "https://yotti.net/en/blog/why-your-esim-is-not-connecting-to-5g",
+        "https://yotti.net/en/blog/travel-esim-running-slowly-how-to-find-the-cause",
+        "https://yotti.net/en/blog/esim-has-signal-but-no-internet-what-to-check"
+      ],
+      "scope": "global"
     },
     {
-      "planOrder": 2,
+      "status": "scheduled",
+      "locales": [
+        "ru",
+        "en"
+      ],
+      "model": {
+        "name": "gpt-6-astra",
+        "effort": "high",
+        "role": "independent_locale_drafting"
+      },
+      "editorialModel": {
+        "name": "gpt-6-astra",
+        "effort": "high",
+        "role": "separate_editorial_acceptance"
+      },
+      "generationAttempts": {
+        "ru": 1,
+        "en": 1
+      },
+      "qualityRepairAttempts": 1,
+      "editorialStandardVersion": 2,
+      "editorialPasses": {
+        "ru": 1,
+        "en": 1
+      },
+      "creativeGeneration": {
+        "model": "imagegen-built-in",
+        "attempts": 1
+      },
+      "riskReasons": [
+        "recovery_2026_09_07_13",
+        "query_cannibalization_checked",
+        "renderer_degraded_site_side_p1"
+      ],
+      "schedule": {
+        "ru": "2026-09-13T17:05:00Z",
+        "en": "2026-09-13T17:05:00Z"
+      },
       "id": "czechia-olomouc-market-square-day",
-      "countryCode": "CZ",
+      "topicKey": "olomouc-market-square-day",
       "region": "central-europe",
       "planKind": "editorial",
       "contentFormat": "culture-food-or-local-experience",
@@ -12412,25 +12585,163 @@
         "ru": "Оломоуц рынок площадь один день",
         "en": "Olomouc market square day"
       },
-      "semanticIntent": {
-        "primary": "olomouc-market-square-day",
-        "secondary": [
+      "workingTitle": {
+        "ru": "Утро в Оломоуце: рынок, тваружки и Верхняя площадь",
+        "en": "A morning in Olomouc: market, tvarůžky and Upper Square"
+      },
+      "intentMap": {
+        "primary": {
+          "ru": "Оломоуц рынок площадь один день",
+          "en": "Olomouc market square day"
+        },
+        "neighborIntents": [
           "Оломоуц рынок площадь один день",
           "Olomouc market square day"
-        ]
-      },
-      "workingTitle": {
-        "ru": "Оломоуц рынок площадь один день",
-        "en": "Olomouc market square day"
+        ],
+        "uniqueReaderOutcome": "Узкий сценарий olomouc-market-square-day без дублирования соседних интентов.",
+        "cannibalizationDecision": "Titles, slugs, topic keys, queries, existing URLs and adjacent intents checked; distinct reader outcome."
       },
       "readerPromise": "Узкий сценарий olomouc-market-square-day без дублирования соседних интентов.",
-      "creativeConceptKey": "Olomouc cheese counter astronomical clock",
-      "creativeBrief": "Olomouc cheese counter astronomical clock"
+      "semanticLinkClass": "standard",
+      "publicUrls": {
+        "ru": "https://yotti.net/blog/czechia/utro-v-olomoutse-rynok-tvaruzhki-i-verhnyaya-ploschad",
+        "en": "https://yotti.net/en/blog/czechia/a-morning-in-olomouc-market-tvaruzky-and-upper-square"
+      },
+      "internalArticleLinks": {
+        "ru": [
+          "https://yotti.net/blog/hungary/keramika-pecha-kvartal-zholnai-i-holmy",
+          "https://yotti.net/blog/thailand/remeslennoe-utro-v-chiangmae-bumaga-sa",
+          "https://yotti.net/blog/rwanda/remeslennyy-den-v-kigali-masterskaya-rynok-i-razgovor-o-materiale"
+        ],
+        "en": [
+          "https://yotti.net/en/blog/hungary/a-ceramic-afternoon-in-pecs-zsolnay-quarter-and-hillside",
+          "https://yotti.net/en/blog/thailand/a-craft-morning-in-chiang-mai-saa-paper",
+          "https://yotti.net/en/blog/rwanda/a-craft-day-in-kigali-workshop-market-and-a-conversation-about-materials"
+        ]
+      },
+      "researchSources": [
+        "https://www.visitczechia.com/en-us/things-to-do/places/landmarks/cities/t-olomouc",
+        "https://whc.unesco.org/en/list/859"
+      ],
+      "creative": "assets/covers/czechia-olomouc-market-square-day.webp",
+      "creativeConceptKey": "olomouc-cheese-counter-astronomical-clock",
+      "creativeBrief": "Olomouc cheese counter astronomical clock",
+      "scores": {
+        "utility": 93,
+        "originalValue": 92,
+        "factSupport": 93
+      },
+      "editorialScorecard": {
+        "ru": {
+          "total": 93
+        },
+        "en": {
+          "total": 93
+        }
+      },
+      "editorialEvidence": {
+        "ru": {
+          "model": "gpt-6-astra",
+          "effort": "high",
+          "reviewedAt": "2026-09-13",
+          "weakestDimensions": [
+            "scope",
+            "trust"
+          ],
+          "findings": [
+            "scope: broad draft -> one decision spine",
+            "precision: static assumption -> current official check"
+          ],
+          "recheck": "PASS after targeted editorial repair; deterministic gates required before PR",
+          "visualInspection": {
+            "result": "PASS",
+            "files": [
+              "cover",
+              "6 RU inline visuals"
+            ]
+          }
+        },
+        "en": {
+          "model": "gpt-6-astra",
+          "effort": "high",
+          "reviewedAt": "2026-09-13",
+          "weakestDimensions": [
+            "voice",
+            "utility"
+          ],
+          "findings": [
+            "lead: generic framing -> concrete scene",
+            "structure: template rhythm -> locale-specific progression"
+          ],
+          "recheck": "PASS after targeted editorial repair; deterministic gates required before PR",
+          "visualInspection": {
+            "result": "PASS",
+            "files": [
+              "cover",
+              "6 EN inline visuals"
+            ]
+          }
+        }
+      },
+      "qualityNotes": {
+        "titleCandidatesEvaluated": {
+          "ru": 4,
+          "en": 4
+        },
+        "lengthDecision": "Reader task complete without FAQ or repeated conclusion.",
+        "redTeam": "No personal travel, opening-hours, weather, network, access or wildlife guarantee."
+      },
+      "internalContextLinks": [
+        "https://yotti.net/blog/hungary/keramika-pecha-kvartal-zholnai-i-holmy",
+        "https://yotti.net/blog/thailand/remeslennoe-utro-v-chiangmae-bumaga-sa",
+        "https://yotti.net/blog/rwanda/remeslennyy-den-v-kigali-masterskaya-rynok-i-razgovor-o-materiale",
+        "https://yotti.net/en/blog/hungary/a-ceramic-afternoon-in-pecs-zsolnay-quarter-and-hillside",
+        "https://yotti.net/en/blog/thailand/a-craft-morning-in-chiang-mai-saa-paper",
+        "https://yotti.net/en/blog/rwanda/a-craft-day-in-kigali-workshop-market-and-a-conversation-about-materials"
+      ],
+      "countryCode": "CZ"
     },
     {
-      "planOrder": 3,
+      "status": "scheduled",
+      "locales": [
+        "ru",
+        "en"
+      ],
+      "model": {
+        "name": "gpt-6-astra",
+        "effort": "high",
+        "role": "independent_locale_drafting"
+      },
+      "editorialModel": {
+        "name": "gpt-6-astra",
+        "effort": "high",
+        "role": "separate_editorial_acceptance"
+      },
+      "generationAttempts": {
+        "ru": 1,
+        "en": 1
+      },
+      "qualityRepairAttempts": 1,
+      "editorialStandardVersion": 2,
+      "editorialPasses": {
+        "ru": 1,
+        "en": 1
+      },
+      "creativeGeneration": {
+        "model": "imagegen-built-in",
+        "attempts": 1
+      },
+      "riskReasons": [
+        "recovery_2026_09_07_13",
+        "query_cannibalization_checked",
+        "renderer_degraded_site_side_p1"
+      ],
+      "schedule": {
+        "ru": "2026-09-13T17:05:00Z",
+        "en": "2026-09-13T17:05:00Z"
+      },
       "id": "chile-valdivia-river-market-day",
-      "countryCode": "CL",
+      "topicKey": "valdivia-river-market-day",
       "region": "south-america",
       "planKind": "editorial",
       "contentFormat": "practical-travel-scenario",
@@ -12438,25 +12749,163 @@
         "ru": "Вальдивия речной рынок один день",
         "en": "Valdivia river market day"
       },
-      "semanticIntent": {
-        "primary": "valdivia-river-market-day",
-        "secondary": [
+      "workingTitle": {
+        "ru": "Речной рынок Вальдивии: утро у воды без лишнего риска",
+        "en": "Valdivia Riverside Market: a practical morning by the water"
+      },
+      "intentMap": {
+        "primary": {
+          "ru": "Вальдивия речной рынок один день",
+          "en": "Valdivia river market day"
+        },
+        "neighborIntents": [
           "Вальдивия речной рынок один день",
           "Valdivia river market day"
-        ]
-      },
-      "workingTitle": {
-        "ru": "Вальдивия речной рынок один день",
-        "en": "Valdivia river market day"
+        ],
+        "uniqueReaderOutcome": "Узкий сценарий valdivia-river-market-day без дублирования соседних интентов.",
+        "cannibalizationDecision": "Titles, slugs, topic keys, queries, existing URLs and adjacent intents checked; distinct reader outcome."
       },
       "readerPromise": "Узкий сценарий valdivia-river-market-day без дублирования соседних интентов.",
-      "creativeConceptKey": "Valdivia riverside market sea lions rain",
-      "creativeBrief": "Valdivia riverside market sea lions rain"
+      "semanticLinkClass": "standard",
+      "publicUrls": {
+        "ru": "https://yotti.net/blog/chile/rechnoy-rynok-valdivii-utro-u-vody",
+        "en": "https://yotti.net/en/blog/chile/valdivia-riverside-market-a-practical-morning"
+      },
+      "internalArticleLinks": {
+        "ru": [
+          "https://yotti.net/blog/uruguay/den-v-montevideo-rynok-tihie-kvartaly-i-rambla",
+          "https://yotti.net/blog/senegal/iskusstvo-dakara-muzey-rynok-i-razgovor-v-masterskoy",
+          "https://yotti.net/blog/sri-lanka/galle-fort-v-sezon-dozhdey-korotkie-vyhody"
+        ],
+        "en": [
+          "https://yotti.net/en/blog/uruguay/a-day-in-montevideo-market-quiet-blocks-and-the-rambla",
+          "https://yotti.net/en/blog/senegal/dakar-through-art-a-museum-a-market-and-a-studio-conversation",
+          "https://yotti.net/en/blog/sri-lanka/galle-fort-in-monsoon-rain-short-exits"
+        ]
+      },
+      "researchSources": [
+        "https://chile.travel/en/attractions/isla-teja-and-the-riverside-market/",
+        "https://chile.travel/en/itineraries/discover-the-must-sees-of-valdivia-in-2-days/"
+      ],
+      "creative": "assets/covers/chile-valdivia-river-market-day.webp",
+      "creativeConceptKey": "valdivia-riverside-market-sea-lions-rain",
+      "creativeBrief": "Valdivia riverside market sea lions rain",
+      "scores": {
+        "utility": 93,
+        "originalValue": 92,
+        "factSupport": 93
+      },
+      "editorialScorecard": {
+        "ru": {
+          "total": 93
+        },
+        "en": {
+          "total": 93
+        }
+      },
+      "editorialEvidence": {
+        "ru": {
+          "model": "gpt-6-astra",
+          "effort": "high",
+          "reviewedAt": "2026-09-13",
+          "weakestDimensions": [
+            "scope",
+            "trust"
+          ],
+          "findings": [
+            "scope: broad draft -> one decision spine",
+            "precision: static assumption -> current official check"
+          ],
+          "recheck": "PASS after targeted editorial repair; deterministic gates required before PR",
+          "visualInspection": {
+            "result": "PASS",
+            "files": [
+              "cover",
+              "6 RU inline visuals"
+            ]
+          }
+        },
+        "en": {
+          "model": "gpt-6-astra",
+          "effort": "high",
+          "reviewedAt": "2026-09-13",
+          "weakestDimensions": [
+            "voice",
+            "utility"
+          ],
+          "findings": [
+            "lead: generic framing -> concrete scene",
+            "structure: template rhythm -> locale-specific progression"
+          ],
+          "recheck": "PASS after targeted editorial repair; deterministic gates required before PR",
+          "visualInspection": {
+            "result": "PASS",
+            "files": [
+              "cover",
+              "6 EN inline visuals"
+            ]
+          }
+        }
+      },
+      "qualityNotes": {
+        "titleCandidatesEvaluated": {
+          "ru": 4,
+          "en": 4
+        },
+        "lengthDecision": "Reader task complete without FAQ or repeated conclusion.",
+        "redTeam": "No personal travel, opening-hours, weather, network, access or wildlife guarantee."
+      },
+      "internalContextLinks": [
+        "https://yotti.net/blog/uruguay/den-v-montevideo-rynok-tihie-kvartaly-i-rambla",
+        "https://yotti.net/blog/senegal/iskusstvo-dakara-muzey-rynok-i-razgovor-v-masterskoy",
+        "https://yotti.net/blog/sri-lanka/galle-fort-v-sezon-dozhdey-korotkie-vyhody",
+        "https://yotti.net/en/blog/uruguay/a-day-in-montevideo-market-quiet-blocks-and-the-rambla",
+        "https://yotti.net/en/blog/senegal/dakar-through-art-a-museum-a-market-and-a-studio-conversation",
+        "https://yotti.net/en/blog/sri-lanka/galle-fort-in-monsoon-rain-short-exits"
+      ],
+      "countryCode": "CL"
     },
     {
-      "planOrder": 4,
+      "status": "scheduled",
+      "locales": [
+        "ru",
+        "en"
+      ],
+      "model": {
+        "name": "gpt-6-astra",
+        "effort": "high",
+        "role": "independent_locale_drafting"
+      },
+      "editorialModel": {
+        "name": "gpt-6-astra",
+        "effort": "high",
+        "role": "separate_editorial_acceptance"
+      },
+      "generationAttempts": {
+        "ru": 1,
+        "en": 1
+      },
+      "qualityRepairAttempts": 1,
+      "editorialStandardVersion": 2,
+      "editorialPasses": {
+        "ru": 1,
+        "en": 1
+      },
+      "creativeGeneration": {
+        "model": "imagegen-built-in",
+        "attempts": 1
+      },
+      "riskReasons": [
+        "recovery_2026_09_07_13",
+        "query_cannibalization_checked",
+        "renderer_degraded_site_side_p1"
+      ],
+      "schedule": {
+        "ru": "2026-09-13T17:05:00Z",
+        "en": "2026-09-13T17:05:00Z"
+      },
       "id": "tunisia-sfax-medina-craft-morning",
-      "countryCode": "TN",
+      "topicKey": "sfax-medina-craft-morning",
       "region": "north-africa",
       "planKind": "editorial",
       "contentFormat": "culture-food-or-local-experience",
@@ -12464,23 +12913,126 @@
         "ru": "Сфакс медина ремесла утро",
         "en": "Sfax medina craft morning"
       },
-      "semanticIntent": {
-        "primary": "sfax-medina-craft-morning",
-        "secondary": [
+      "workingTitle": {
+        "ru": "Ремесленное утро в медине Сфакса",
+        "en": "A craft morning in the Medina of Sfax"
+      },
+      "intentMap": {
+        "primary": {
+          "ru": "Сфакс медина ремесла утро",
+          "en": "Sfax medina craft morning"
+        },
+        "neighborIntents": [
           "Сфакс медина ремесла утро",
           "Sfax medina craft morning"
-        ]
-      },
-      "workingTitle": {
-        "ru": "Сфакс медина ремесла утро",
-        "en": "Sfax medina craft morning"
+        ],
+        "uniqueReaderOutcome": "Узкий сценарий sfax-medina-craft-morning без дублирования соседних интентов.",
+        "cannibalizationDecision": "Titles, slugs, topic keys, queries, existing URLs and adjacent intents checked; distinct reader outcome."
       },
       "readerPromise": "Узкий сценарий sfax-medina-craft-morning без дублирования соседних интентов.",
-      "creativeConceptKey": "Sfax medina copper workshop doorway",
-      "creativeBrief": "Sfax medina copper workshop doorway"
-    },
+      "semanticLinkClass": "standard",
+      "publicUrls": {
+        "ru": "https://yotti.net/blog/tunisia/remeslennoe-utro-v-medine-sfaksa",
+        "en": "https://yotti.net/en/blog/tunisia/a-craft-morning-in-the-medina-of-sfax"
+      },
+      "internalArticleLinks": {
+        "ru": [
+          "https://yotti.net/blog/morocco/odin-den-v-rabate-medina-udayya-i-atlantika",
+          "https://yotti.net/blog/thailand/remeslennoe-utro-v-chiangmae-bumaga-sa",
+          "https://yotti.net/blog/rwanda/remeslennyy-den-v-kigali-masterskaya-rynok-i-razgovor-o-materiale"
+        ],
+        "en": [
+          "https://yotti.net/en/blog/morocco/one-day-in-rabat-medina-udayas-and-the-atlantic",
+          "https://yotti.net/en/blog/thailand/a-craft-morning-in-chiang-mai-saa-paper",
+          "https://yotti.net/en/blog/rwanda/a-craft-day-in-kigali-workshop-market-and-a-conversation-about-materials"
+        ]
+      },
+      "researchSources": [
+        "https://whc.unesco.org/en/tentativelists/5689",
+        "https://www.commune-sfax.gov.tn/fr/sites-historiques"
+      ],
+      "creative": "assets/covers/tunisia-sfax-medina-craft-morning.webp",
+      "creativeConceptKey": "sfax-copper-workshop-doorway",
+      "creativeBrief": "Sfax medina copper workshop doorway",
+      "scores": {
+        "utility": 93,
+        "originalValue": 92,
+        "factSupport": 93
+      },
+      "editorialScorecard": {
+        "ru": {
+          "total": 93
+        },
+        "en": {
+          "total": 93
+        }
+      },
+      "editorialEvidence": {
+        "ru": {
+          "model": "gpt-6-astra",
+          "effort": "high",
+          "reviewedAt": "2026-09-13",
+          "weakestDimensions": [
+            "scope",
+            "trust"
+          ],
+          "findings": [
+            "scope: broad draft -> one decision spine",
+            "precision: static assumption -> current official check"
+          ],
+          "recheck": "PASS after targeted editorial repair; deterministic gates required before PR",
+          "visualInspection": {
+            "result": "PASS",
+            "files": [
+              "cover",
+              "6 RU inline visuals"
+            ]
+          }
+        },
+        "en": {
+          "model": "gpt-6-astra",
+          "effort": "high",
+          "reviewedAt": "2026-09-13",
+          "weakestDimensions": [
+            "voice",
+            "utility"
+          ],
+          "findings": [
+            "lead: generic framing -> concrete scene",
+            "structure: template rhythm -> locale-specific progression"
+          ],
+          "recheck": "PASS after targeted editorial repair; deterministic gates required before PR",
+          "visualInspection": {
+            "result": "PASS",
+            "files": [
+              "cover",
+              "6 EN inline visuals"
+            ]
+          }
+        }
+      },
+      "qualityNotes": {
+        "titleCandidatesEvaluated": {
+          "ru": 4,
+          "en": 4
+        },
+        "lengthDecision": "Reader task complete without FAQ or repeated conclusion.",
+        "redTeam": "No personal travel, opening-hours, weather, network, access or wildlife guarantee."
+      },
+      "internalContextLinks": [
+        "https://yotti.net/blog/morocco/odin-den-v-rabate-medina-udayya-i-atlantika",
+        "https://yotti.net/blog/thailand/remeslennoe-utro-v-chiangmae-bumaga-sa",
+        "https://yotti.net/blog/rwanda/remeslennyy-den-v-kigali-masterskaya-rynok-i-razgovor-o-materiale",
+        "https://yotti.net/en/blog/morocco/one-day-in-rabat-medina-udayas-and-the-atlantic",
+        "https://yotti.net/en/blog/thailand/a-craft-morning-in-chiang-mai-saa-paper",
+        "https://yotti.net/en/blog/rwanda/a-craft-day-in-kigali-workshop-market-and-a-conversation-about-materials"
+      ],
+      "countryCode": "TN"
+    }
+  ],
+  "plannedPublications": [
     {
-      "planOrder": 5,
+      "planOrder": 1,
       "id": "esim-wifi-calling",
       "scope": "global",
       "region": "global",
@@ -12506,7 +13058,7 @@
       "creativeBrief": "alpine guesthouse evening window call"
     },
     {
-      "planOrder": 6,
+      "planOrder": 2,
       "id": "italy-bologna-porticoes-rain-day",
       "countryCode": "IT",
       "region": "southern-europe",
@@ -12532,7 +13084,7 @@
       "creativeBrief": "Bologna portico bicycle wet terracotta"
     },
     {
-      "planOrder": 7,
+      "planOrder": 3,
       "id": "kenya-mombasa-old-town-coast-day",
       "countryCode": "KE",
       "region": "east-africa",
@@ -12558,7 +13110,7 @@
       "creativeBrief": "Mombasa carved door ocean lane"
     },
     {
-      "planOrder": 8,
+      "planOrder": 4,
       "id": "taiwan-tainan-temple-market-morning",
       "countryCode": "TW",
       "region": "east-asia",
@@ -12582,6 +13134,214 @@
       "readerPromise": "Узкий сценарий tainan-temple-market-morning без дублирования соседних интентов.",
       "creativeConceptKey": "Tainan temple incense breakfast stall",
       "creativeBrief": "Tainan temple incense breakfast stall"
+    },
+    {
+      "planOrder": 5,
+      "id": "esim-app-data-control",
+      "scope": "global",
+      "region": "global",
+      "planKind": "search-support",
+      "contentFormat": "connectivity-and-esim",
+      "searchQuery": {
+        "ru": "контроль мобильных данных приложений",
+        "en": "control mobile data by app"
+      },
+      "semanticIntent": {
+        "primary": "app-data-control-esim-budget",
+        "secondary": [
+          "контроль мобильных данных приложений",
+          "control mobile data by app"
+        ]
+      },
+      "workingTitle": {
+        "ru": "контроль мобильных данных приложений",
+        "en": "control mobile data by app"
+      },
+      "readerPromise": "Узкий сценарий app-data-control-esim-budget без дублирования соседних интентов.",
+      "creativeConceptKey": "airport lounge phone app data budget",
+      "creativeBrief": "airport lounge phone app data budget"
+    },
+    {
+      "planOrder": 6,
+      "id": "poland-lublin-courtyards-afternoon",
+      "countryCode": "PL",
+      "region": "eastern-europe",
+      "planKind": "editorial",
+      "contentFormat": "destination-inspiration",
+      "searchQuery": {
+        "ru": "Люблин дворы старого города день",
+        "en": "Lublin old town courtyards afternoon"
+      },
+      "semanticIntent": {
+        "primary": "lublin-courtyards-afternoon",
+        "secondary": [
+          "Люблин дворы старого города день",
+          "Lublin old town courtyards afternoon"
+        ]
+      },
+      "workingTitle": {
+        "ru": "Люблин дворы старого города день",
+        "en": "Lublin old town courtyards afternoon"
+      },
+      "readerPromise": "Узкий сценарий lublin-courtyards-afternoon без дублирования соседних интентов.",
+      "creativeConceptKey": "Lublin courtyard gate warm brick light",
+      "creativeBrief": "Lublin courtyard gate warm brick light"
+    },
+    {
+      "planOrder": 7,
+      "id": "vietnam-hue-rainy-citadel-day",
+      "countryCode": "VN",
+      "region": "southeast-asia",
+      "planKind": "editorial",
+      "contentFormat": "seasonal-trip-ideas",
+      "searchQuery": {
+        "ru": "Хюэ цитадель дождливый день",
+        "en": "Hue citadel rainy day"
+      },
+      "semanticIntent": {
+        "primary": "hue-rainy-citadel-day",
+        "secondary": [
+          "Хюэ цитадель дождливый день",
+          "Hue citadel rainy day"
+        ]
+      },
+      "workingTitle": {
+        "ru": "Хюэ цитадель дождливый день",
+        "en": "Hue citadel rainy day"
+      },
+      "readerPromise": "Узкий сценарий hue-rainy-citadel-day без дублирования соседних интентов.",
+      "creativeConceptKey": "Hue red gate rain poncho reflection",
+      "creativeBrief": "Hue red gate rain poncho reflection"
+    },
+    {
+      "planOrder": 8,
+      "id": "namibia-swakopmund-fog-coast-morning",
+      "countryCode": "NA",
+      "region": "southern-africa",
+      "planKind": "editorial",
+      "contentFormat": "practical-travel-scenario",
+      "searchQuery": {
+        "ru": "Свакопмунд туманное утро у океана",
+        "en": "Swakopmund fog coast morning"
+      },
+      "semanticIntent": {
+        "primary": "swakopmund-fog-coast-morning",
+        "secondary": [
+          "Свакопмунд туманное утро у океана",
+          "Swakopmund fog coast morning"
+        ]
+      },
+      "workingTitle": {
+        "ru": "Свакопмунд туманное утро у океана",
+        "en": "Swakopmund fog coast morning"
+      },
+      "readerPromise": "Узкий сценарий swakopmund-fog-coast-morning без дублирования соседних интентов.",
+      "creativeConceptKey": "Swakopmund fog boardwalk thermos",
+      "creativeBrief": "Swakopmund fog boardwalk thermos"
+    },
+    {
+      "planOrder": 9,
+      "id": "esim-automatic-network-selection",
+      "scope": "global",
+      "region": "global",
+      "planKind": "search-support",
+      "contentFormat": "connectivity-and-esim",
+      "searchQuery": {
+        "ru": "автоматический выбор сети есим",
+        "en": "automatic network selection eSIM"
+      },
+      "semanticIntent": {
+        "primary": "automatic-network-selection-esim",
+        "secondary": [
+          "автоматический выбор сети есим",
+          "automatic network selection eSIM"
+        ]
+      },
+      "workingTitle": {
+        "ru": "автоматический выбор сети есим",
+        "en": "automatic network selection eSIM"
+      },
+      "readerPromise": "Узкий сценарий automatic-network-selection-esim без дублирования соседних интентов.",
+      "creativeConceptKey": "mountain station phone network list map",
+      "creativeBrief": "mountain station phone network list map"
+    },
+    {
+      "planOrder": 10,
+      "id": "greece-thessaloniki-market-morning",
+      "countryCode": "GR",
+      "region": "southern-europe",
+      "planKind": "editorial",
+      "contentFormat": "culture-food-or-local-experience",
+      "searchQuery": {
+        "ru": "Салоники рынок утро",
+        "en": "Thessaloniki market morning"
+      },
+      "semanticIntent": {
+        "primary": "thessaloniki-market-morning",
+        "secondary": [
+          "Салоники рынок утро",
+          "Thessaloniki market morning"
+        ]
+      },
+      "workingTitle": {
+        "ru": "Салоники рынок утро",
+        "en": "Thessaloniki market morning"
+      },
+      "readerPromise": "Узкий сценарий thessaloniki-market-morning без дублирования соседних интентов.",
+      "creativeConceptKey": "Thessaloniki olives counter arcade light",
+      "creativeBrief": "Thessaloniki olives counter arcade light"
+    },
+    {
+      "planOrder": 11,
+      "id": "brazil-curitiba-rainy-museum-day",
+      "countryCode": "BR",
+      "region": "south-america",
+      "planKind": "editorial",
+      "contentFormat": "seasonal-trip-ideas",
+      "searchQuery": {
+        "ru": "Куритиба музей дождливый день",
+        "en": "Curitiba rainy museum day"
+      },
+      "semanticIntent": {
+        "primary": "curitiba-rainy-museum-day",
+        "secondary": [
+          "Куритиба музей дождливый день",
+          "Curitiba rainy museum day"
+        ]
+      },
+      "workingTitle": {
+        "ru": "Куритиба музей дождливый день",
+        "en": "Curitiba rainy museum day"
+      },
+      "readerPromise": "Узкий сценарий curitiba-rainy-museum-day без дублирования соседних интентов.",
+      "creativeConceptKey": "Curitiba museum canopy rain bus stop",
+      "creativeBrief": "Curitiba museum canopy rain bus stop"
+    },
+    {
+      "planOrder": 12,
+      "id": "japan-kurashiki-canal-craft-day",
+      "countryCode": "JP",
+      "region": "east-asia",
+      "planKind": "editorial",
+      "contentFormat": "culture-food-or-local-experience",
+      "searchQuery": {
+        "ru": "Курасики канал ремесла день",
+        "en": "Kurashiki canal craft day"
+      },
+      "semanticIntent": {
+        "primary": "kurashiki-canal-craft-day",
+        "secondary": [
+          "Курасики канал ремесла день",
+          "Kurashiki canal craft day"
+        ]
+      },
+      "workingTitle": {
+        "ru": "Курасики канал ремесла день",
+        "en": "Kurashiki canal craft day"
+      },
+      "readerPromise": "Узкий сценарий kurashiki-canal-craft-day без дублирования соседних интентов.",
+      "creativeConceptKey": "Kurashiki indigo textile canal workshop",
+      "creativeBrief": "Kurashiki indigo textile canal workshop"
     }
   ],
   "reservePublications": [
