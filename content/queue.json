@@ -11056,13 +11056,48 @@
         "https://yotti.net/en/blog/indonesia/a-batik-morning-in-yogyakarta-workshop-wax-and-a-considered-cloth",
         "https://yotti.net/en/blog/senegal/dakar-through-art-a-museum-a-market-and-a-studio-conversation"
       ]
-    }
-  ],
-  "plannedPublications": [
+    },
     {
-      "planOrder": 1,
+      "status": "scheduled",
+      "locales": [
+        "ru",
+        "en"
+      ],
+      "model": {
+        "name": "gpt-6-astra",
+        "effort": "high",
+        "role": "independent_locale_drafting"
+      },
+      "editorialModel": {
+        "name": "gpt-6-astra",
+        "effort": "high",
+        "role": "separate_editorial_acceptance"
+      },
+      "generationAttempts": {
+        "ru": 1,
+        "en": 1
+      },
+      "qualityRepairAttempts": 1,
+      "editorialStandardVersion": 2,
+      "editorialPasses": {
+        "ru": 1,
+        "en": 1
+      },
+      "creativeGeneration": {
+        "model": "imagegen-built-in",
+        "attempts": 1
+      },
+      "riskReasons": [
+        "recovery_2026_09_07_13",
+        "query_cannibalization_checked",
+        "renderer_degraded_site_side_p1"
+      ],
+      "schedule": {
+        "ru": "2026-09-13T16:10:00Z",
+        "en": "2026-09-13T16:10:00Z"
+      },
       "id": "esim-signal-vs-physical-sim",
-      "scope": "global",
+      "topicKey": "esim-form-factor-signal-comparison",
       "region": "global",
       "planKind": "search-support",
       "contentFormat": "connectivity-and-esim",
@@ -11070,25 +11105,164 @@
         "ru": "у есим хуже сигнал чем у обычной сим",
         "en": "does eSIM have worse signal than physical SIM"
       },
-      "semanticIntent": {
-        "primary": "esim-form-factor-signal-comparison",
-        "secondary": [
-          "у есим хуже сигнал чем у обычной сим",
-          "does eSIM have worse signal than physical SIM"
+      "workingTitle": {
+        "ru": "У есим хуже сигнал, чем у обычной сим-карты?",
+        "en": "Does eSIM have worse signal than a physical SIM?"
+      },
+      "intentMap": {
+        "primary": {
+          "ru": "сигнал есим и обычной сим-карты",
+          "en": "eSIM versus physical SIM signal"
+        },
+        "neighborIntents": [
+          "esim-slow-data",
+          "esim-no-data",
+          "esim-5g"
+        ],
+        "uniqueReaderOutcome": "Провести контролируемое сравнение без смешения сети, места и устройства.",
+        "cannibalizationDecision": "Форм-фактор отделён от покрытия, скорости и настройки данных."
+      },
+      "readerPromise": "Четыре постоянные условия, повторный тест и читаемый результат.",
+      "semanticLinkClass": "focused-technical",
+      "publicUrls": {
+        "ru": "https://yotti.net/blog/u-esim-huzhe-signal-chem-u-obychnoy-sim-karty",
+        "en": "https://yotti.net/en/blog/does-esim-have-worse-signal-than-a-physical-sim"
+      },
+      "internalArticleLinks": {
+        "ru": [
+          "https://yotti.net/blog/pochemu-esim-ne-podklyuchaetsya-k-5g",
+          "https://yotti.net/blog/esim-rabotaet-medlenno-kak-nayti-prichinu",
+          "https://yotti.net/blog/esim-vidit-set-no-internet-ne-rabotaet-gde-iskat-prichinu"
+        ],
+        "en": [
+          "https://yotti.net/en/blog/why-your-esim-is-not-connecting-to-5g",
+          "https://yotti.net/en/blog/travel-esim-running-slowly-how-to-find-the-cause",
+          "https://yotti.net/en/blog/esim-has-signal-but-no-internet-what-to-check"
         ]
       },
-      "workingTitle": {
-        "ru": "у есим хуже сигнал чем у обычной сим",
-        "en": "does eSIM have worse signal than physical SIM"
+      "researchSources": [
+        "https://support.apple.com/en-euro/119606",
+        "https://docs.fcc.gov/public/attachments/FCC-19-79A1.pdf"
+      ],
+      "creative": "assets/covers/esim-signal-vs-physical-sim.webp",
+      "creativeConceptKey": "coastal-weather-lookout-controlled-signal-test",
+      "creativeBrief": "Два телефона на ветреной береговой площадке, контролируемое сравнение.",
+      "scores": {
+        "utility": 94,
+        "originalValue": 93,
+        "factSupport": 93
       },
-      "readerPromise": "Узкий сценарий esim-form-factor-signal-comparison без дублирования соседних интентов.",
-      "creativeConceptKey": "coastal weather station traveller signal test",
-      "creativeBrief": "coastal weather station traveller signal test"
+      "editorialScorecard": {
+        "ru": {
+          "total": 93
+        },
+        "en": {
+          "total": 93
+        }
+      },
+      "editorialEvidence": {
+        "ru": {
+          "model": "gpt-6-astra",
+          "effort": "high",
+          "reviewedAt": "2026-09-13",
+          "weakestDimensions": [
+            "trust",
+            "scope"
+          ],
+          "findings": [
+            "scope: generic answer -> one decision spine",
+            "precision: implied guarantee -> explicit conditions"
+          ],
+          "recheck": "PASS after targeted editorial repair; deterministic gates required before PR",
+          "visualInspection": {
+            "result": "PASS",
+            "files": [
+              "cover",
+              "6 RU inline visuals"
+            ]
+          }
+        },
+        "en": {
+          "model": "gpt-6-astra",
+          "effort": "high",
+          "reviewedAt": "2026-09-13",
+          "weakestDimensions": [
+            "voice",
+            "trust"
+          ],
+          "findings": [
+            "lead: broad framing -> direct reader answer",
+            "volatile detail: static claim -> same-day official check"
+          ],
+          "recheck": "PASS after targeted editorial repair; deterministic gates required before PR",
+          "visualInspection": {
+            "result": "PASS",
+            "files": [
+              "cover",
+              "6 EN inline visuals"
+            ]
+          }
+        }
+      },
+      "qualityNotes": {
+        "titleCandidatesEvaluated": {
+          "ru": 4,
+          "en": 4
+        },
+        "lengthDecision": "Reader task is complete without FAQ repetition.",
+        "redTeam": "No personal travel, network, weather, opening-hours or documentary guarantee."
+      },
+      "internalContextLinks": [
+        "https://yotti.net/blog/pochemu-esim-ne-podklyuchaetsya-k-5g",
+        "https://yotti.net/blog/esim-rabotaet-medlenno-kak-nayti-prichinu",
+        "https://yotti.net/blog/esim-vidit-set-no-internet-ne-rabotaet-gde-iskat-prichinu",
+        "https://yotti.net/en/blog/why-your-esim-is-not-connecting-to-5g",
+        "https://yotti.net/en/blog/travel-esim-running-slowly-how-to-find-the-cause",
+        "https://yotti.net/en/blog/esim-has-signal-but-no-internet-what-to-check"
+      ],
+      "scope": "global"
     },
     {
-      "planOrder": 2,
+      "status": "scheduled",
+      "locales": [
+        "ru",
+        "en"
+      ],
+      "model": {
+        "name": "gpt-6-astra",
+        "effort": "high",
+        "role": "independent_locale_drafting"
+      },
+      "editorialModel": {
+        "name": "gpt-6-astra",
+        "effort": "high",
+        "role": "separate_editorial_acceptance"
+      },
+      "generationAttempts": {
+        "ru": 1,
+        "en": 1
+      },
+      "qualityRepairAttempts": 1,
+      "editorialStandardVersion": 2,
+      "editorialPasses": {
+        "ru": 1,
+        "en": 1
+      },
+      "creativeGeneration": {
+        "model": "imagegen-built-in",
+        "attempts": 1
+      },
+      "riskReasons": [
+        "recovery_2026_09_07_13",
+        "query_cannibalization_checked",
+        "renderer_degraded_site_side_p1"
+      ],
+      "schedule": {
+        "ru": "2026-09-13T16:10:00Z",
+        "en": "2026-09-13T16:10:00Z"
+      },
       "id": "georgia-kutaisi-rainy-city-day",
-      "countryCode": "GE",
+      "topicKey": "kutaisi-rainy-city-day",
       "region": "caucasus",
       "planKind": "editorial",
       "contentFormat": "seasonal-trip-ideas",
@@ -11096,25 +11270,164 @@
         "ru": "Кутаиси дождливый день",
         "en": "Kutaisi rainy city day"
       },
-      "semanticIntent": {
-        "primary": "kutaisi-rainy-city-day",
-        "secondary": [
-          "Кутаиси дождливый день",
-          "Kutaisi rainy city day"
+      "workingTitle": {
+        "ru": "Дождливый день в Кутаиси: рынок, бульвар и Белый мост",
+        "en": "A rainy day in Kutaisi: market, boulevard and the White Bridge"
+      },
+      "intentMap": {
+        "primary": {
+          "ru": "маршрут по Кутаиси в дождь",
+          "en": "rainy day in Kutaisi"
+        },
+        "neighborIntents": [
+          "kutaisi-city-guide",
+          "porto-rain-day",
+          "brasov-autumn"
+        ],
+        "uniqueReaderOutcome": "Сохранить городской день с двумя укрытиями и условным мостом.",
+        "cannibalizationDecision": "Центральный погодный сценарий без дальних монастырей и опасной реки."
+      },
+      "readerPromise": "Базар, короткий переход, безопасное решение по мосту.",
+      "semanticLinkClass": "standard",
+      "publicUrls": {
+        "ru": "https://yotti.net/blog/georgia/dozhdlivyy-den-v-kutaisi-rynok-bulvar-i-belyy-most",
+        "en": "https://yotti.net/en/blog/georgia/a-rainy-day-in-kutaisi-market-boulevard-and-the-white-bridge"
+      },
+      "internalArticleLinks": {
+        "ru": [
+          "https://yotti.net/blog/uruguay/den-v-montevideo-rynok-tihie-kvartaly-i-rambla",
+          "https://yotti.net/blog/portugal/dozhdlivyy-den-v-portu-rynok-tramvay-i-teplye-pauzy",
+          "https://yotti.net/blog/romania/osenniy-den-v-brashove-dvory-steny-i-teplaya-pauza"
+        ],
+        "en": [
+          "https://yotti.net/en/blog/uruguay/a-day-in-montevideo-market-quiet-blocks-and-the-rambla",
+          "https://yotti.net/en/blog/portugal/a-rainy-day-in-porto-market-tram-and-warm-pauses",
+          "https://yotti.net/en/blog/romania/an-autumn-day-in-brasov-courtyards-walls-and-a-warm-pause"
         ]
       },
-      "workingTitle": {
-        "ru": "Кутаиси дождливый день",
-        "en": "Kutaisi rainy city day"
+      "researchSources": [
+        "https://georgia.travel/cities-towns/kutaisi",
+        "https://georgia.travel/markets/kutaisi-green-bazaar"
+      ],
+      "creative": "assets/covers/georgia-kutaisi-rainy-city-day.webp",
+      "creativeConceptKey": "kutaisi-market-awning-rain-river",
+      "creativeBrief": "Зелёный базар под дождём и мокрый городской камень.",
+      "scores": {
+        "utility": 94,
+        "originalValue": 93,
+        "factSupport": 93
       },
-      "readerPromise": "Узкий сценарий kutaisi-rainy-city-day без дублирования соседних интентов.",
-      "creativeConceptKey": "Kutaisi market awning rain white bridge",
-      "creativeBrief": "Kutaisi market awning rain white bridge"
+      "editorialScorecard": {
+        "ru": {
+          "total": 93
+        },
+        "en": {
+          "total": 93
+        }
+      },
+      "editorialEvidence": {
+        "ru": {
+          "model": "gpt-6-astra",
+          "effort": "high",
+          "reviewedAt": "2026-09-13",
+          "weakestDimensions": [
+            "trust",
+            "scope"
+          ],
+          "findings": [
+            "scope: generic answer -> one decision spine",
+            "precision: implied guarantee -> explicit conditions"
+          ],
+          "recheck": "PASS after targeted editorial repair; deterministic gates required before PR",
+          "visualInspection": {
+            "result": "PASS",
+            "files": [
+              "cover",
+              "6 RU inline visuals"
+            ]
+          }
+        },
+        "en": {
+          "model": "gpt-6-astra",
+          "effort": "high",
+          "reviewedAt": "2026-09-13",
+          "weakestDimensions": [
+            "voice",
+            "trust"
+          ],
+          "findings": [
+            "lead: broad framing -> direct reader answer",
+            "volatile detail: static claim -> same-day official check"
+          ],
+          "recheck": "PASS after targeted editorial repair; deterministic gates required before PR",
+          "visualInspection": {
+            "result": "PASS",
+            "files": [
+              "cover",
+              "6 EN inline visuals"
+            ]
+          }
+        }
+      },
+      "qualityNotes": {
+        "titleCandidatesEvaluated": {
+          "ru": 4,
+          "en": 4
+        },
+        "lengthDecision": "Reader task is complete without FAQ repetition.",
+        "redTeam": "No personal travel, network, weather, opening-hours or documentary guarantee."
+      },
+      "internalContextLinks": [
+        "https://yotti.net/blog/uruguay/den-v-montevideo-rynok-tihie-kvartaly-i-rambla",
+        "https://yotti.net/blog/portugal/dozhdlivyy-den-v-portu-rynok-tramvay-i-teplye-pauzy",
+        "https://yotti.net/blog/romania/osenniy-den-v-brashove-dvory-steny-i-teplaya-pauza",
+        "https://yotti.net/en/blog/uruguay/a-day-in-montevideo-market-quiet-blocks-and-the-rambla",
+        "https://yotti.net/en/blog/portugal/a-rainy-day-in-porto-market-tram-and-warm-pauses",
+        "https://yotti.net/en/blog/romania/an-autumn-day-in-brasov-courtyards-walls-and-a-warm-pause"
+      ],
+      "countryCode": "GE"
     },
     {
-      "planOrder": 3,
+      "status": "scheduled",
+      "locales": [
+        "ru",
+        "en"
+      ],
+      "model": {
+        "name": "gpt-6-astra",
+        "effort": "high",
+        "role": "independent_locale_drafting"
+      },
+      "editorialModel": {
+        "name": "gpt-6-astra",
+        "effort": "high",
+        "role": "separate_editorial_acceptance"
+      },
+      "generationAttempts": {
+        "ru": 1,
+        "en": 1
+      },
+      "qualityRepairAttempts": 1,
+      "editorialStandardVersion": 2,
+      "editorialPasses": {
+        "ru": 1,
+        "en": 1
+      },
+      "creativeGeneration": {
+        "model": "imagegen-built-in",
+        "attempts": 1
+      },
+      "riskReasons": [
+        "recovery_2026_09_07_13",
+        "query_cannibalization_checked",
+        "renderer_degraded_site_side_p1"
+      ],
+      "schedule": {
+        "ru": "2026-09-13T16:10:00Z",
+        "en": "2026-09-13T16:10:00Z"
+      },
       "id": "thailand-chiang-mai-craft-morning",
-      "countryCode": "TH",
+      "topicKey": "chiang-mai-craft-morning",
       "region": "southeast-asia",
       "planKind": "editorial",
       "contentFormat": "culture-food-or-local-experience",
@@ -11122,25 +11435,164 @@
         "ru": "Чиангмай ремесленные мастерские утро",
         "en": "Chiang Mai craft morning"
       },
-      "semanticIntent": {
-        "primary": "chiang-mai-craft-morning",
-        "secondary": [
-          "Чиангмай ремесленные мастерские утро",
-          "Chiang Mai craft morning"
+      "workingTitle": {
+        "ru": "Ремесленное утро в Чиангмае: бумага са",
+        "en": "A craft morning in Chiang Mai: saa paper"
+      },
+      "intentMap": {
+        "primary": {
+          "ru": "бумага са в мастерской Чиангмая",
+          "en": "saa paper workshop in Chiang Mai"
+        },
+        "neighborIntents": [
+          "chiang-mai-guide",
+          "yogyakarta-batik",
+          "kigali-craft"
+        ],
+        "uniqueReaderOutcome": "Понять один материал от волокна до сушки и выбрать перевозимую вещь.",
+        "cannibalizationDecision": "Узкий процесс бумаги вместо общего списка ремёсел Чиангмая."
+      },
+      "readerPromise": "Материал, процесс, разговор, уход и фиксация авторства.",
+      "semanticLinkClass": "standard",
+      "publicUrls": {
+        "ru": "https://yotti.net/blog/thailand/remeslennoe-utro-v-chiangmae-bumaga-sa",
+        "en": "https://yotti.net/en/blog/thailand/a-craft-morning-in-chiang-mai-saa-paper"
+      },
+      "internalArticleLinks": {
+        "ru": [
+          "https://yotti.net/blog/indonesia/utro-batika-v-dzhokyakarte-masterskaya-vosk-i-vybor-tkani",
+          "https://yotti.net/blog/rwanda/remeslennyy-den-v-kigali-masterskaya-rynok-i-razgovor-o-materiale",
+          "https://yotti.net/blog/senegal/iskusstvo-dakara-muzey-rynok-i-razgovor-v-masterskoy"
+        ],
+        "en": [
+          "https://yotti.net/en/blog/indonesia/a-batik-morning-in-yogyakarta-workshop-wax-and-a-considered-cloth",
+          "https://yotti.net/en/blog/rwanda/a-craft-day-in-kigali-workshop-market-and-a-conversation-about-materials",
+          "https://yotti.net/en/blog/senegal/dakar-through-art-a-museum-a-market-and-a-studio-conversation"
         ]
       },
-      "workingTitle": {
-        "ru": "Чиангмай ремесленные мастерские утро",
-        "en": "Chiang Mai craft morning"
+      "researchSources": [
+        "https://www.tourismthailand.org/Destinations/Provinces/Chiang%20Mai/101",
+        "https://thai.tourismthailand.org/Articles/craft-thailand"
+      ],
+      "creative": "assets/covers/thailand-chiang-mai-craft-morning.webp",
+      "creativeConceptKey": "chiang-mai-saa-paper-drying-racks",
+      "creativeBrief": "Листы бумаги са на деревянных рамах и работа мастера.",
+      "scores": {
+        "utility": 94,
+        "originalValue": 93,
+        "factSupport": 93
       },
-      "readerPromise": "Узкий сценарий chiang-mai-craft-morning без дублирования соседних интентов.",
-      "creativeConceptKey": "Chiang Mai saa paper drying racks",
-      "creativeBrief": "Chiang Mai saa paper drying racks"
+      "editorialScorecard": {
+        "ru": {
+          "total": 93
+        },
+        "en": {
+          "total": 93
+        }
+      },
+      "editorialEvidence": {
+        "ru": {
+          "model": "gpt-6-astra",
+          "effort": "high",
+          "reviewedAt": "2026-09-13",
+          "weakestDimensions": [
+            "trust",
+            "scope"
+          ],
+          "findings": [
+            "scope: generic answer -> one decision spine",
+            "precision: implied guarantee -> explicit conditions"
+          ],
+          "recheck": "PASS after targeted editorial repair; deterministic gates required before PR",
+          "visualInspection": {
+            "result": "PASS",
+            "files": [
+              "cover",
+              "6 RU inline visuals"
+            ]
+          }
+        },
+        "en": {
+          "model": "gpt-6-astra",
+          "effort": "high",
+          "reviewedAt": "2026-09-13",
+          "weakestDimensions": [
+            "voice",
+            "trust"
+          ],
+          "findings": [
+            "lead: broad framing -> direct reader answer",
+            "volatile detail: static claim -> same-day official check"
+          ],
+          "recheck": "PASS after targeted editorial repair; deterministic gates required before PR",
+          "visualInspection": {
+            "result": "PASS",
+            "files": [
+              "cover",
+              "6 EN inline visuals"
+            ]
+          }
+        }
+      },
+      "qualityNotes": {
+        "titleCandidatesEvaluated": {
+          "ru": 4,
+          "en": 4
+        },
+        "lengthDecision": "Reader task is complete without FAQ repetition.",
+        "redTeam": "No personal travel, network, weather, opening-hours or documentary guarantee."
+      },
+      "internalContextLinks": [
+        "https://yotti.net/blog/indonesia/utro-batika-v-dzhokyakarte-masterskaya-vosk-i-vybor-tkani",
+        "https://yotti.net/blog/rwanda/remeslennyy-den-v-kigali-masterskaya-rynok-i-razgovor-o-materiale",
+        "https://yotti.net/blog/senegal/iskusstvo-dakara-muzey-rynok-i-razgovor-v-masterskoy",
+        "https://yotti.net/en/blog/indonesia/a-batik-morning-in-yogyakarta-workshop-wax-and-a-considered-cloth",
+        "https://yotti.net/en/blog/rwanda/a-craft-day-in-kigali-workshop-market-and-a-conversation-about-materials",
+        "https://yotti.net/en/blog/senegal/dakar-through-art-a-museum-a-market-and-a-studio-conversation"
+      ],
+      "countryCode": "TH"
     },
     {
-      "planOrder": 4,
+      "status": "scheduled",
+      "locales": [
+        "ru",
+        "en"
+      ],
+      "model": {
+        "name": "gpt-6-astra",
+        "effort": "high",
+        "role": "independent_locale_drafting"
+      },
+      "editorialModel": {
+        "name": "gpt-6-astra",
+        "effort": "high",
+        "role": "separate_editorial_acceptance"
+      },
+      "generationAttempts": {
+        "ru": 1,
+        "en": 1
+      },
+      "qualityRepairAttempts": 1,
+      "editorialStandardVersion": 2,
+      "editorialPasses": {
+        "ru": 1,
+        "en": 1
+      },
+      "creativeGeneration": {
+        "model": "imagegen-built-in",
+        "attempts": 1
+      },
+      "riskReasons": [
+        "recovery_2026_09_07_13",
+        "query_cannibalization_checked",
+        "renderer_degraded_site_side_p1"
+      ],
+      "schedule": {
+        "ru": "2026-09-13T16:10:00Z",
+        "en": "2026-09-13T16:10:00Z"
+      },
       "id": "new-zealand-dunedin-wind-city-day",
-      "countryCode": "NZ",
+      "topicKey": "dunedin-wind-city-day",
       "region": "oceania",
       "planKind": "editorial",
       "contentFormat": "practical-travel-scenario",
@@ -11148,23 +11600,127 @@
         "ru": "Данидин ветреный день",
         "en": "Dunedin windy city day"
       },
-      "semanticIntent": {
-        "primary": "dunedin-wind-city-day",
-        "secondary": [
-          "Данидин ветреный день",
-          "Dunedin windy city day"
+      "workingTitle": {
+        "ru": "Данидин в ветреный день: вокзал, музей и короткие переходы",
+        "en": "Dunedin on a windy day: station, museum and short transfers"
+      },
+      "intentMap": {
+        "primary": {
+          "ru": "Данидин в сильный ветер",
+          "en": "Dunedin in strong wind"
+        },
+        "neighborIntents": [
+          "dunedin-city-guide",
+          "mendoza-heat-day",
+          "porto-rain-day"
+        ],
+        "uniqueReaderOutcome": "Проверить порывы коротким выходом и перенести основной день в музей.",
+        "cannibalizationDecision": "Центральный сценарий без автоматической поездки на открытое побережье."
+      },
+      "readerPromise": "Вокзал как тест, музей как опора и защищённый возврат.",
+      "semanticLinkClass": "standard",
+      "publicUrls": {
+        "ru": "https://yotti.net/blog/new-zealand/danidin-v-vetrenyy-den-vokzal-muzey-i-korotkie-perehody",
+        "en": "https://yotti.net/en/blog/new-zealand/dunedin-on-a-windy-day-station-museum-and-short-transfers"
+      },
+      "internalArticleLinks": {
+        "ru": [
+          "https://yotti.net/blog/portugal/dozhdlivyy-den-v-portu-rynok-tramvay-i-teplye-pauzy",
+          "https://yotti.net/blog/argentina/mendosa-v-zharkiy-den-ten-ploschadi-i-vechernyaya-ulitsa",
+          "https://yotti.net/blog/saudi-arabia/den-v-dzhidde-al-balad-utrom-i-kornish-posle-zhary"
+        ],
+        "en": [
+          "https://yotti.net/en/blog/portugal/a-rainy-day-in-porto-market-tram-and-warm-pauses",
+          "https://yotti.net/en/blog/argentina/mendoza-on-a-hot-day-shade-plazas-and-an-evening-street",
+          "https://yotti.net/en/blog/saudi-arabia/a-day-in-jeddah-al-balad-early-and-the-corniche-after-the-heat"
         ]
       },
-      "workingTitle": {
-        "ru": "Данидин ветреный день",
-        "en": "Dunedin windy city day"
+      "researchSources": [
+        "https://www.dunedinnz.com/visit/see-and-do/dunedin-highlights",
+        "https://www.dunedinnz.com/visit/see-and-do/tours/qualmark/toit-otago-settlers-museum"
+      ],
+      "creative": "assets/covers/new-zealand-dunedin-wind-city-day.webp",
+      "creativeConceptKey": "dunedin-stone-station-wind-coat",
+      "creativeBrief": "Каменный вокзал Данидина, сильный ветер и короткий внешний переход.",
+      "scores": {
+        "utility": 94,
+        "originalValue": 93,
+        "factSupport": 93
       },
-      "readerPromise": "Узкий сценарий dunedin-wind-city-day без дублирования соседних интентов.",
-      "creativeConceptKey": "Dunedin stone station coat in wind",
-      "creativeBrief": "Dunedin stone station coat in wind"
-    },
+      "editorialScorecard": {
+        "ru": {
+          "total": 93
+        },
+        "en": {
+          "total": 93
+        }
+      },
+      "editorialEvidence": {
+        "ru": {
+          "model": "gpt-6-astra",
+          "effort": "high",
+          "reviewedAt": "2026-09-13",
+          "weakestDimensions": [
+            "trust",
+            "scope"
+          ],
+          "findings": [
+            "scope: generic answer -> one decision spine",
+            "precision: implied guarantee -> explicit conditions"
+          ],
+          "recheck": "PASS after targeted editorial repair; deterministic gates required before PR",
+          "visualInspection": {
+            "result": "PASS",
+            "files": [
+              "cover",
+              "6 RU inline visuals"
+            ]
+          }
+        },
+        "en": {
+          "model": "gpt-6-astra",
+          "effort": "high",
+          "reviewedAt": "2026-09-13",
+          "weakestDimensions": [
+            "voice",
+            "trust"
+          ],
+          "findings": [
+            "lead: broad framing -> direct reader answer",
+            "volatile detail: static claim -> same-day official check"
+          ],
+          "recheck": "PASS after targeted editorial repair; deterministic gates required before PR",
+          "visualInspection": {
+            "result": "PASS",
+            "files": [
+              "cover",
+              "6 EN inline visuals"
+            ]
+          }
+        }
+      },
+      "qualityNotes": {
+        "titleCandidatesEvaluated": {
+          "ru": 4,
+          "en": 4
+        },
+        "lengthDecision": "Reader task is complete without FAQ repetition.",
+        "redTeam": "No personal travel, network, weather, opening-hours or documentary guarantee."
+      },
+      "internalContextLinks": [
+        "https://yotti.net/blog/portugal/dozhdlivyy-den-v-portu-rynok-tramvay-i-teplye-pauzy",
+        "https://yotti.net/blog/argentina/mendosa-v-zharkiy-den-ten-ploschadi-i-vechernyaya-ulitsa",
+        "https://yotti.net/blog/saudi-arabia/den-v-dzhidde-al-balad-utrom-i-kornish-posle-zhary",
+        "https://yotti.net/en/blog/portugal/a-rainy-day-in-porto-market-tram-and-warm-pauses",
+        "https://yotti.net/en/blog/argentina/mendoza-on-a-hot-day-shade-plazas-and-an-evening-street",
+        "https://yotti.net/en/blog/saudi-arabia/a-day-in-jeddah-al-balad-early-and-the-corniche-after-the-heat"
+      ],
+      "countryCode": "NZ"
+    }
+  ],
+  "plannedPublications": [
     {
-      "planOrder": 5,
+      "planOrder": 1,
       "id": "esim-on-smartwatch",
       "scope": "global",
       "region": "global",
@@ -11190,7 +11746,7 @@
       "creativeBrief": "forest trail runner paper route water stop"
     },
     {
-      "planOrder": 6,
+      "planOrder": 2,
       "id": "hungary-pecs-ceramic-hillside-afternoon",
       "countryCode": "HU",
       "region": "central-europe",
@@ -11216,7 +11772,7 @@
       "creativeBrief": "Pecs ceramic glaze studio hillside light"
     },
     {
-      "planOrder": 7,
+      "planOrder": 3,
       "id": "morocco-rabat-medina-ocean-day",
       "countryCode": "MA",
       "region": "north-africa",
@@ -11242,7 +11798,7 @@
       "creativeBrief": "Rabat blue gate Atlantic spray"
     },
     {
-      "planOrder": 8,
+      "planOrder": 4,
       "id": "sri-lanka-galle-fort-monsoon-day",
       "countryCode": "LK",
       "region": "south-asia",
@@ -11268,7 +11824,7 @@
       "creativeBrief": "Galle rampart monsoon umbrella lighthouse"
     },
     {
-      "planOrder": 9,
+      "planOrder": 5,
       "id": "esim-in-airplane-mode",
       "scope": "global",
       "region": "global",
@@ -11294,7 +11850,7 @@
       "creativeBrief": "night train cabin paper route reading light"
     },
     {
-      "planOrder": 10,
+      "planOrder": 6,
       "id": "czechia-olomouc-market-square-day",
       "countryCode": "CZ",
       "region": "central-europe",
@@ -11320,7 +11876,7 @@
       "creativeBrief": "Olomouc cheese counter astronomical clock"
     },
     {
-      "planOrder": 11,
+      "planOrder": 7,
       "id": "chile-valdivia-river-market-day",
       "countryCode": "CL",
       "region": "south-america",
@@ -11346,7 +11902,7 @@
       "creativeBrief": "Valdivia riverside market sea lions rain"
     },
     {
-      "planOrder": 12,
+      "planOrder": 8,
       "id": "tunisia-sfax-medina-craft-morning",
       "countryCode": "TN",
       "region": "north-africa",
@@ -11372,7 +11928,7 @@
       "creativeBrief": "Sfax medina copper workshop doorway"
     },
     {
-      "planOrder": 13,
+      "planOrder": 9,
       "id": "esim-wifi-calling",
       "scope": "global",
       "region": "global",
@@ -11398,7 +11954,7 @@
       "creativeBrief": "alpine guesthouse evening window call"
     },
     {
-      "planOrder": 14,
+      "planOrder": 10,
       "id": "italy-bologna-porticoes-rain-day",
       "countryCode": "IT",
       "region": "southern-europe",
@@ -11424,7 +11980,7 @@
       "creativeBrief": "Bologna portico bicycle wet terracotta"
     },
     {
-      "planOrder": 15,
+      "planOrder": 11,
       "id": "kenya-mombasa-old-town-coast-day",
       "countryCode": "KE",
       "region": "east-africa",
@@ -11450,7 +12006,7 @@
       "creativeBrief": "Mombasa carved door ocean lane"
     },
     {
-      "planOrder": 16,
+      "planOrder": 12,
       "id": "taiwan-tainan-temple-market-morning",
       "countryCode": "TW",
       "region": "east-asia",
