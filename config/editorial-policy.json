@@ -109,7 +109,15 @@
     "requireIntentMapBeforeDraft": true,
     "requireQueryCannibalizationCheck": true,
     "requireTroubleshootingDecisionTreeWhenRelevant": true,
-    "maximumBlockingReviewMinutes": 4,
+    "maximumBlockingReviewMinutes": null,
+    "editorialEvidence": {
+      "effectiveFrom": "2026-09-13",
+      "standard": "docs/astra-editorial-acceptance.md",
+      "requirePerLocaleFindingsAndResolution": true,
+      "selfScoreAloneIsNotAcceptance": true,
+      "requireVisualInspection": true,
+      "preserveHistoricalModelRecords": true
+    },
     "requireNaturalLocalization": true,
     "rejectMechanicalTranslation": true,
     "technicalArticleGates": {
@@ -266,9 +274,9 @@
     ]
   },
   "modelRouting": {
-    "planningAndRoutineDrafts": { "model": "gpt-5.6-sol", "effort": "high" },
-    "mandatoryHumanEditorialPass": { "model": "gpt-5.6-sol", "effort": "high", "scope": "rewrite_voice_structure_no_new_facts" },
-    "enhancedRouteGuide": { "model": "gpt-5.6-sol", "effort": "xhigh", "scope": "route_research_decision_spine_independent_localization_and_final_audit" },
+    "planningAndRoutineDrafts": { "model": "gpt-6-astra", "effort": "high" },
+    "mandatoryHumanEditorialPass": { "model": "gpt-6-astra", "effort": "high", "scope": "rewrite_voice_structure_no_new_facts" },
+    "enhancedRouteGuide": { "model": "gpt-6-astra", "effort": "xhigh", "scope": "route_research_decision_spine_independent_localization_and_final_audit" },
     "metadataAndMechanicalChecks": { "model": "gpt-5.6-luna", "effort": "low" },
     "highRiskResearchAndFinalAudit": { "mode": "exclude_topic_from_daily_flow" },
     "escalateOnlyWhen": []
