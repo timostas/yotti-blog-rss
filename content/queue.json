@@ -2215,27 +2215,97 @@
             "placementsPerLocale": 6,
             "uniqueMasters": 10
           },
-          "responsiveWidths": [384, 720, 960, 1440],
+          "responsiveWidths": [
+            384,
+            720,
+            960,
+            1440
+          ],
           "localeWorstCaseBytesIncludingCover": {
             "ru": 498688,
             "en": 462788
           },
           "masters": [
-            {"path": "assets/inline/esim-internet-not-working-symptom-splitter-ru-v1.webp", "width": 1440, "height": 900, "bytes": 70584},
-            {"path": "assets/inline/esim-internet-not-working-symptom-splitter-en-v1.webp", "width": 1440, "height": 900, "bytes": 58704},
-            {"path": "assets/inline/esim-internet-not-working-controlled-browser-test-v1.webp", "width": 1440, "height": 960, "bytes": 63174},
-            {"path": "assets/inline/esim-internet-not-working-dual-sim-roles-ru-v1.webp", "width": 1440, "height": 900, "bytes": 65794},
-            {"path": "assets/inline/esim-internet-not-working-dual-sim-roles-en-v1.webp", "width": 1440, "height": 900, "bytes": 54398},
-            {"path": "assets/inline/esim-internet-not-working-order-before-apn-ru-v1.webp", "width": 1440, "height": 900, "bytes": 67376},
-            {"path": "assets/inline/esim-internet-not-working-order-before-apn-en-v1.webp", "width": 1440, "height": 900, "bytes": 61038},
-            {"path": "assets/inline/esim-internet-not-working-reversible-recovery-v1.webp", "width": 1440, "height": 960, "bytes": 83244},
-            {"path": "assets/inline/esim-internet-not-working-support-handoff-ru-v1.webp", "width": 1440, "height": 900, "bytes": 61314},
-            {"path": "assets/inline/esim-internet-not-working-support-handoff-en-v1.webp", "width": 1440, "height": 900, "bytes": 55028}
+            {
+              "path": "assets/inline/esim-internet-not-working-symptom-splitter-ru-v1.webp",
+              "width": 1440,
+              "height": 900,
+              "bytes": 70584
+            },
+            {
+              "path": "assets/inline/esim-internet-not-working-symptom-splitter-en-v1.webp",
+              "width": 1440,
+              "height": 900,
+              "bytes": 58704
+            },
+            {
+              "path": "assets/inline/esim-internet-not-working-controlled-browser-test-v1.webp",
+              "width": 1440,
+              "height": 960,
+              "bytes": 63174
+            },
+            {
+              "path": "assets/inline/esim-internet-not-working-dual-sim-roles-ru-v1.webp",
+              "width": 1440,
+              "height": 900,
+              "bytes": 65794
+            },
+            {
+              "path": "assets/inline/esim-internet-not-working-dual-sim-roles-en-v1.webp",
+              "width": 1440,
+              "height": 900,
+              "bytes": 54398
+            },
+            {
+              "path": "assets/inline/esim-internet-not-working-order-before-apn-ru-v1.webp",
+              "width": 1440,
+              "height": 900,
+              "bytes": 67376
+            },
+            {
+              "path": "assets/inline/esim-internet-not-working-order-before-apn-en-v1.webp",
+              "width": 1440,
+              "height": 900,
+              "bytes": 61038
+            },
+            {
+              "path": "assets/inline/esim-internet-not-working-reversible-recovery-v1.webp",
+              "width": 1440,
+              "height": 960,
+              "bytes": 83244
+            },
+            {
+              "path": "assets/inline/esim-internet-not-working-support-handoff-ru-v1.webp",
+              "width": 1440,
+              "height": 900,
+              "bytes": 61314
+            },
+            {
+              "path": "assets/inline/esim-internet-not-working-support-handoff-en-v1.webp",
+              "width": 1440,
+              "height": 900,
+              "bytes": 55028
+            }
           ],
           "coverResponsive": [
-            {"path": "assets/covers/esim-internet-not-working-remediation-384w.webp", "width": 384, "height": 216, "bytes": 16240},
-            {"path": "assets/covers/esim-internet-not-working-remediation-720w.webp", "width": 720, "height": 405, "bytes": 35280},
-            {"path": "assets/covers/esim-internet-not-working-remediation-960w.webp", "width": 960, "height": 540, "bytes": 49716}
+            {
+              "path": "assets/covers/esim-internet-not-working-remediation-384w.webp",
+              "width": 384,
+              "height": 216,
+              "bytes": 16240
+            },
+            {
+              "path": "assets/covers/esim-internet-not-working-remediation-720w.webp",
+              "width": 720,
+              "height": 405,
+              "bytes": 35280
+            },
+            {
+              "path": "assets/covers/esim-internet-not-working-remediation-960w.webp",
+              "width": 960,
+              "height": 540,
+              "bytes": 49716
+            }
           ]
         },
         "preserved": {
@@ -7397,317 +7467,905 @@
     },
     {
       "status": "scheduled",
-      "locales": ["ru", "en"],
-      "model": {"name": "gpt-5.6-sol", "effort": "high"},
-      "riskReasons": ["catchup_recovery", "owner_requested_manual_run", "query_cannibalization_checked"],
-      "generationAttempts": {"ru": 1, "en": 1},
+      "locales": [
+        "ru",
+        "en"
+      ],
+      "model": {
+        "name": "gpt-5.6-sol",
+        "effort": "high"
+      },
+      "riskReasons": [
+        "catchup_recovery",
+        "owner_requested_manual_run",
+        "query_cannibalization_checked"
+      ],
+      "generationAttempts": {
+        "ru": 1,
+        "en": 1
+      },
       "qualityRepairAttempts": 0,
-      "scores": {"utility": 96, "originalValue": 95, "factSupport": 95},
+      "scores": {
+        "utility": 96,
+        "originalValue": 95,
+        "factSupport": 95
+      },
       "editorialStandardVersion": 2,
-      "editorialPasses": {"ru": 1, "en": 1},
-      "creativeGeneration": {"model": "imagegen-built-in", "attempts": 1},
+      "editorialPasses": {
+        "ru": 1,
+        "en": 1
+      },
+      "creativeGeneration": {
+        "model": "imagegen-built-in",
+        "attempts": 1
+      },
       "id": "uzbekistan-samarkand-shade-evening-walk",
       "topicKey": "samarkand-hot-season-evening-walk",
       "countryCode": "UZ",
       "region": "central-asia",
       "planKind": "editorial",
-      "searchQuery": {"ru": "Самарканд летом прогулка вечером", "en": "Samarkand summer evening walk"},
-      "workingTitle": {"ru": "Самарканд в жаркий день: прогулки утром и вечером", "en": "Samarkand on a hot day: walking in the cool hours"},
+      "searchQuery": {
+        "ru": "Самарканд летом прогулка вечером",
+        "en": "Samarkand summer evening walk"
+      },
+      "workingTitle": {
+        "ru": "Самарканд в жаркий день: прогулки утром и вечером",
+        "en": "Samarkand on a hot day: walking in the cool hours"
+      },
       "intentMap": {
-        "primary": {"ru": "Самарканд летом прогулка вечером", "en": "Samarkand summer evening walk"},
-        "neighborIntents": ["uz-general-guide", "samarkand-landmarks-overview"],
+        "primary": {
+          "ru": "Самарканд летом прогулка вечером",
+          "en": "Samarkand summer evening walk"
+        },
+        "neighborIntents": [
+          "uz-general-guide",
+          "samarkand-landmarks-overview"
+        ],
         "uniqueReaderOutcome": "Читатель переносит длинные прогулки на прохладные часы, оставляет полдень для тени и выбирает один вечерний архитектурный блок.",
         "cannibalizationDecision": "Материал решает сезонную задачу ритма жаркого дня и не заменяет общий гид по Узбекистану или каталог достопримечательностей Самарканда."
       },
       "readerPromise": "Перенести главную прогулку на прохладные часы и не потерять день между архитектурными ансамблями.",
-      "internalContextLinks": ["https://yotti.net/esim/uzbekistan", "https://yotti.net/how-it-works"],
-      "researchSources": ["https://uzbekistan.travel/en/o/registan/", "https://gov.uz/en/mfa/sections/view/14509", "https://yotti.net/esim/uzbekistan"],
+      "internalContextLinks": [
+        "https://yotti.net/esim/uzbekistan",
+        "https://yotti.net/how-it-works"
+      ],
+      "researchSources": [
+        "https://uzbekistan.travel/en/o/registan/",
+        "https://gov.uz/en/mfa/sections/view/14509",
+        "https://yotti.net/esim/uzbekistan"
+      ],
       "creative": "assets/covers/uzbekistan-samarkand-shade-evening-walk.webp",
       "creativeConceptKey": "samarkand-tiled-courtyard-long-shadow-tea",
       "creativeBrief": "Изразцовый двор Самарканда в длинной вечерней тени, чайник на переднем плане и спокойный поток посетителей.",
       "contentFormat": "seasonal-trip-ideas",
-      "schedule": {"ru": "2026-09-06T14:00:00Z", "en": "2026-09-06T14:00:00Z"},
+      "schedule": {
+        "ru": "2026-09-06T14:00:00Z",
+        "en": "2026-09-06T14:00:00Z"
+      },
       "editorialScorecard": {
-        "ru": {"total": 96, "dimensions": {"intent": 15, "utility": 15, "specificity": 14, "trust": 14, "voice": 14, "structure": 9, "technical": 10, "commercialRestraint": 5}},
-        "en": {"total": 96, "dimensions": {"intent": 15, "utility": 15, "specificity": 14, "trust": 14, "voice": 14, "structure": 9, "technical": 10, "commercialRestraint": 5}}
+        "ru": {
+          "total": 96,
+          "dimensions": {
+            "intent": 15,
+            "utility": 15,
+            "specificity": 14,
+            "trust": 14,
+            "voice": 14,
+            "structure": 9,
+            "technical": 10,
+            "commercialRestraint": 5
+          }
+        },
+        "en": {
+          "total": 96,
+          "dimensions": {
+            "intent": 15,
+            "utility": 15,
+            "specificity": 14,
+            "trust": 14,
+            "voice": 14,
+            "structure": 9,
+            "technical": 10,
+            "commercialRestraint": 5
+          }
+        }
       },
       "qualityNotes": {
-        "localeTotals": {"ru": 96, "en": 96},
-        "weakestDimensions": ["trust_and_evidence", "structure_and_readability"],
+        "localeTotals": {
+          "ru": 96,
+          "en": 96
+        },
+        "weakestDimensions": [
+          "trust_and_evidence",
+          "structure_and_readability"
+        ],
         "editorialChange": "Самостоятельный редакторский проход развёл утро, полуденную паузу и два разных вечерних выбора; RU и EN сохранены как отдельные тексты.",
-        "titleCandidatesEvaluated": {"ru": 5, "en": 5},
+        "titleCandidatesEvaluated": {
+          "ru": 5,
+          "en": 5
+        },
         "lengthDecision": "RU 880 и EN 984 слова: сезонный ритм, конкретные места и развилки раскрыты без универсального маршрута по часам."
       }
     },
     {
       "status": "scheduled",
-      "locales": ["ru", "en"],
-      "model": {"name": "gpt-5.6-sol", "effort": "high"},
-      "riskReasons": ["catchup_recovery", "owner_requested_manual_run", "query_cannibalization_checked"],
-      "generationAttempts": {"ru": 1, "en": 1},
+      "locales": [
+        "ru",
+        "en"
+      ],
+      "model": {
+        "name": "gpt-5.6-sol",
+        "effort": "high"
+      },
+      "riskReasons": [
+        "catchup_recovery",
+        "owner_requested_manual_run",
+        "query_cannibalization_checked"
+      ],
+      "generationAttempts": {
+        "ru": 1,
+        "en": 1
+      },
       "qualityRepairAttempts": 1,
-      "scores": {"utility": 95, "originalValue": 95, "factSupport": 95},
+      "scores": {
+        "utility": 95,
+        "originalValue": 95,
+        "factSupport": 95
+      },
       "editorialStandardVersion": 2,
-      "editorialPasses": {"ru": 1, "en": 1},
-      "creativeGeneration": {"model": "imagegen-built-in", "attempts": 1},
+      "editorialPasses": {
+        "ru": 1,
+        "en": 1
+      },
+      "creativeGeneration": {
+        "model": "imagegen-built-in",
+        "attempts": 1
+      },
       "id": "belgium-ghent-canal-craft-weekend",
       "topicKey": "ghent-canal-craft-weekend",
       "countryCode": "BE",
       "region": "western-europe",
       "planKind": "editorial",
-      "searchQuery": {"ru": "Гент каналы ремесла выходные", "en": "Ghent canals craft weekend"},
-      "workingTitle": {"ru": "Выходные в Генте: каналы, ремесло и вечер в Патерсхоле", "en": "A Ghent weekend of canals, craft and Patershol after dark"},
+      "searchQuery": {
+        "ru": "Гент каналы ремесла выходные",
+        "en": "Ghent canals craft weekend"
+      },
+      "workingTitle": {
+        "ru": "Выходные в Генте: каналы, ремесло и вечер в Патерсхоле",
+        "en": "A Ghent weekend of canals, craft and Patershol after dark"
+      },
       "intentMap": {
-        "primary": {"ru": "Гент каналы ремесла выходные", "en": "Ghent canals craft weekend"},
-        "neighborIntents": ["be-general-guide", "ghent-museum-overview"],
+        "primary": {
+          "ru": "Гент каналы ремесла выходные",
+          "en": "Ghent canals craft weekend"
+        },
+        "neighborIntents": [
+          "be-general-guide",
+          "ghent-museum-overview"
+        ],
         "uniqueReaderOutcome": "Читатель связывает набережные с одной ремесленной встречей, Industriemuseum и вечерним кварталом без гонки по музеям.",
         "cannibalizationDecision": "Материал построен вокруг ремесленного наблюдения и воды, поэтому не конкурирует с общим гидом по Бельгии или обзором всех музеев Гента."
       },
       "readerPromise": "Связать исторический центр с одной ремесленной остановкой и вечерней прогулкой без списка всех музеев.",
-      "internalContextLinks": ["https://yotti.net/esim/belgium", "https://yotti.net/how-it-works"],
-      "researchSources": ["https://visit.gent.be/en/see-do/walk-along-water", "https://visit.gent.be/en/tag/made-ghent", "https://www.industriemuseum.be/en/guided-tours", "https://yotti.net/esim/belgium"],
+      "internalContextLinks": [
+        "https://yotti.net/esim/belgium",
+        "https://yotti.net/how-it-works"
+      ],
+      "researchSources": [
+        "https://visit.gent.be/en/see-do/walk-along-water",
+        "https://visit.gent.be/en/tag/made-ghent",
+        "https://www.industriemuseum.be/en/guided-tours",
+        "https://yotti.net/esim/belgium"
+      ],
       "creative": "assets/covers/belgium-ghent-canal-craft-weekend.webp",
       "creativeConceptKey": "ghent-canal-workshop-window-blue-hour",
       "creativeBrief": "Окно небольшой мастерской у канала в Генте, велосипед и отражения синего часа без постановочных вывесок.",
       "contentFormat": "culture-food-or-local-experience",
-      "schedule": {"ru": "2026-09-06T14:30:00Z", "en": "2026-09-06T14:30:00Z"},
+      "schedule": {
+        "ru": "2026-09-06T14:30:00Z",
+        "en": "2026-09-06T14:30:00Z"
+      },
       "editorialScorecard": {
-        "ru": {"total": 95, "dimensions": {"intent": 15, "utility": 15, "specificity": 14, "trust": 14, "voice": 13, "structure": 9, "technical": 10, "commercialRestraint": 5}},
-        "en": {"total": 95, "dimensions": {"intent": 15, "utility": 15, "specificity": 14, "trust": 14, "voice": 13, "structure": 9, "technical": 10, "commercialRestraint": 5}}
+        "ru": {
+          "total": 95,
+          "dimensions": {
+            "intent": 15,
+            "utility": 15,
+            "specificity": 14,
+            "trust": 14,
+            "voice": 13,
+            "structure": 9,
+            "technical": 10,
+            "commercialRestraint": 5
+          }
+        },
+        "en": {
+          "total": 95,
+          "dimensions": {
+            "intent": 15,
+            "utility": 15,
+            "specificity": 14,
+            "trust": 14,
+            "voice": 13,
+            "structure": 9,
+            "technical": 10,
+            "commercialRestraint": 5
+          }
+        }
       },
       "qualityNotes": {
-        "localeTotals": {"ru": 95, "en": 95},
-        "weakestDimensions": ["voice_and_localization", "structure_and_readability"],
+        "localeTotals": {
+          "ru": 95,
+          "en": 95
+        },
+        "weakestDimensions": [
+          "voice_and_localization",
+          "structure_and_readability"
+        ],
         "editorialChange": "Редакторский проход убрал один абстрактный оборот, оставил проверяемые сцены мастерской и сделал разные переходы между остановками в RU и EN.",
-        "titleCandidatesEvaluated": {"ru": 5, "en": 5},
+        "titleCandidatesEvaluated": {
+          "ru": 5,
+          "en": 5
+        },
         "lengthDecision": "RU 855 и EN 1019 слов после ремонта: каналы, ремесло, индустриальная история и вечерний район раскрыты без музейного каталога."
       }
     },
     {
       "status": "scheduled",
-      "locales": ["ru", "en"],
-      "model": {"name": "gpt-5.6-sol", "effort": "high"},
-      "riskReasons": ["catchup_recovery", "owner_requested_manual_run", "query_cannibalization_checked"],
-      "generationAttempts": {"ru": 1, "en": 1},
+      "locales": [
+        "ru",
+        "en"
+      ],
+      "model": {
+        "name": "gpt-5.6-sol",
+        "effort": "high"
+      },
+      "riskReasons": [
+        "catchup_recovery",
+        "owner_requested_manual_run",
+        "query_cannibalization_checked"
+      ],
+      "generationAttempts": {
+        "ru": 1,
+        "en": 1
+      },
       "qualityRepairAttempts": 0,
-      "scores": {"utility": 96, "originalValue": 95, "factSupport": 95},
+      "scores": {
+        "utility": 96,
+        "originalValue": 95,
+        "factSupport": 95
+      },
       "editorialStandardVersion": 2,
-      "editorialPasses": {"ru": 1, "en": 1},
-      "creativeGeneration": {"model": "imagegen-built-in", "attempts": 1},
+      "editorialPasses": {
+        "ru": 1,
+        "en": 1
+      },
+      "creativeGeneration": {
+        "model": "imagegen-built-in",
+        "attempts": 1
+      },
       "id": "ghana-accra-market-coast-city-day",
       "topicKey": "accra-market-museum-memorial-city-day",
       "countryCode": "GH",
       "region": "west-africa",
       "planKind": "editorial",
-      "searchQuery": {"ru": "Аккра рынок побережье один день", "en": "Accra market coast one day"},
-      "workingTitle": {"ru": "Один день в Аккре: рынок, музей и мемориальный парк", "en": "One day in Accra: market, museum and memorial park"},
+      "searchQuery": {
+        "ru": "Аккра рынок побережье один день",
+        "en": "Accra market coast one day"
+      },
+      "workingTitle": {
+        "ru": "Один день в Аккре: рынок, музей и мемориальный парк",
+        "en": "One day in Accra: market, museum and memorial park"
+      },
       "intentMap": {
-        "primary": {"ru": "Аккра рынок побережье один день", "en": "Accra market coast one day"},
-        "neighborIntents": ["gh-general-guide", "accra-attractions-list"],
+        "primary": {
+          "ru": "Аккра рынок побережье один день",
+          "en": "Accra market coast one day"
+        },
+        "neighborIntents": [
+          "gh-general-guide",
+          "accra-attractions-list"
+        ],
         "uniqueReaderOutcome": "Читатель проводит самостоятельный день в центральной Аккре с короткой рыночной разведкой, музеем и понятным вечерним выходом.",
         "cannibalizationDecision": "Материал решает задачу порядка и границ одного дня, не заменяя общий гид по Гане или список достопримечательностей Аккры."
       },
       "readerPromise": "Собрать самостоятельный городской день с одной рыночной остановкой и понятным вечерним возвращением.",
-      "internalContextLinks": ["https://yotti.net/esim/ghana", "https://yotti.net/how-it-works"],
-      "researchSources": ["https://visitghana.com/attractions/greater-accra-region/", "https://gmmb.gov.gh/the-national-museum-accra-1957/", "https://visitghana.com/kwame-nkrumah-memorial-park-2/", "https://yotti.net/esim/ghana"],
+      "internalContextLinks": [
+        "https://yotti.net/esim/ghana",
+        "https://yotti.net/how-it-works"
+      ],
+      "researchSources": [
+        "https://visitghana.com/attractions/greater-accra-region/",
+        "https://gmmb.gov.gh/the-national-museum-accra-1957/",
+        "https://visitghana.com/kwame-nkrumah-memorial-park-2/",
+        "https://yotti.net/esim/ghana"
+      ],
       "creative": "assets/covers/ghana-accra-market-coast-city-day.webp",
       "creativeConceptKey": "accra-coastal-road-market-basket-evening",
       "creativeBrief": "Улица Аккры ближе к побережью, плетёная корзина с рынка и тёплый вечерний свет, живой городской кадр.",
       "contentFormat": "practical-travel-scenario",
-      "schedule": {"ru": "2026-09-06T15:00:00Z", "en": "2026-09-06T15:00:00Z"},
+      "schedule": {
+        "ru": "2026-09-06T15:00:00Z",
+        "en": "2026-09-06T15:00:00Z"
+      },
       "editorialScorecard": {
-        "ru": {"total": 96, "dimensions": {"intent": 15, "utility": 15, "specificity": 14, "trust": 14, "voice": 14, "structure": 9, "technical": 10, "commercialRestraint": 5}},
-        "en": {"total": 96, "dimensions": {"intent": 15, "utility": 15, "specificity": 14, "trust": 14, "voice": 14, "structure": 9, "technical": 10, "commercialRestraint": 5}}
+        "ru": {
+          "total": 96,
+          "dimensions": {
+            "intent": 15,
+            "utility": 15,
+            "specificity": 14,
+            "trust": 14,
+            "voice": 14,
+            "structure": 9,
+            "technical": 10,
+            "commercialRestraint": 5
+          }
+        },
+        "en": {
+          "total": 96,
+          "dimensions": {
+            "intent": 15,
+            "utility": 15,
+            "specificity": 14,
+            "trust": 14,
+            "voice": 14,
+            "structure": 9,
+            "technical": 10,
+            "commercialRestraint": 5
+          }
+        }
       },
       "qualityNotes": {
-        "localeTotals": {"ru": 96, "en": 96},
-        "weakestDimensions": ["trust_and_evidence", "structure_and_readability"],
+        "localeTotals": {
+          "ru": 96,
+          "en": 96
+        },
+        "weakestDimensions": [
+          "trust_and_evidence",
+          "structure_and_readability"
+        ],
         "editorialChange": "Отдельный редакторский проход уточнил вход и выход из рынка, убрал обещание пляжного финала и развёл русскую и английскую логику переходов.",
-        "titleCandidatesEvaluated": {"ru": 5, "en": 5},
+        "titleCandidatesEvaluated": {
+          "ru": 5,
+          "en": 5
+        },
         "lengthDecision": "RU 866 и EN 984 слова: рыночная граница, музей, мемориальный парк и транспортные решения раскрыты без жёсткого тайминга."
       }
     },
     {
       "status": "scheduled",
-      "locales": ["ru", "en"],
-      "model": {"name": "gpt-5.6-sol", "effort": "high"},
-      "riskReasons": ["catchup_recovery", "owner_requested_manual_run", "query_cannibalization_checked"],
-      "generationAttempts": {"ru": 1, "en": 1},
+      "locales": [
+        "ru",
+        "en"
+      ],
+      "model": {
+        "name": "gpt-5.6-sol",
+        "effort": "high"
+      },
+      "riskReasons": [
+        "catchup_recovery",
+        "owner_requested_manual_run",
+        "query_cannibalization_checked"
+      ],
+      "generationAttempts": {
+        "ru": 1,
+        "en": 1
+      },
       "qualityRepairAttempts": 0,
-      "scores": {"utility": 97, "originalValue": 95, "factSupport": 95},
+      "scores": {
+        "utility": 97,
+        "originalValue": 95,
+        "factSupport": 95
+      },
       "editorialStandardVersion": 2,
-      "editorialPasses": {"ru": 1, "en": 1},
-      "creativeGeneration": {"model": "imagegen-built-in", "attempts": 1},
+      "editorialPasses": {
+        "ru": 1,
+        "en": 1
+      },
+      "creativeGeneration": {
+        "model": "imagegen-built-in",
+        "attempts": 1
+      },
       "id": "buy-esim-albania-tirana-riviera",
       "topicKey": "albania-esim-tirana-riviera-offline",
       "countryCode": "AL",
       "region": "southern-europe",
       "planKind": "buy-esim",
-      "searchQuery": {"ru": "купить есим для Албании", "en": "buy eSIM for Albania"},
-      "workingTitle": {"ru": "Купить есим для Албании: связь между Тираной и Ривьерой", "en": "Buy an eSIM for Albania: from Tirana to the Riviera"},
+      "searchQuery": {
+        "ru": "купить есим для Албании",
+        "en": "buy eSIM for Albania"
+      },
+      "workingTitle": {
+        "ru": "Купить есим для Албании: связь между Тираной и Ривьерой",
+        "en": "Buy an eSIM for Albania: from Tirana to the Riviera"
+      },
       "intentMap": {
-        "primary": {"ru": "купить есим для Албании", "en": "buy eSIM for Albania"},
-        "neighborIntents": ["al-general-guide", "al-destination-overview"],
+        "primary": {
+          "ru": "купить есим для Албании",
+          "en": "buy eSIM for Albania"
+        },
+        "neighborIntents": [
+          "al-general-guide",
+          "al-destination-overview"
+        ],
         "uniqueReaderOutcome": "Читатель проверяет совместимость и travel data в Тиране, готовит офлайн-набор и диагностирует сбой без рискованного удаления профиля.",
         "cannibalizationDecision": "Статья отделена от тарифной страницы: она решает переход от городской настройки к дороге по Ривьере и безопасной диагностике."
       },
       "readerPromise": "Подготовить городские данные и отдельный офлайн-набор для дороги вдоль побережья.",
-      "internalContextLinks": ["https://yotti.net/esim/albania", "https://yotti.net/how-it-works"],
-      "researchSources": ["https://yotti.net/esim/albania", "https://yotti.net/how-it-works", "https://akt.gov.al/en/itineraries/trip-to-visit-the-beautiful-Albanian-Riviera/", "https://akt.gov.al/en/cities/tirane/"],
+      "internalContextLinks": [
+        "https://yotti.net/esim/albania",
+        "https://yotti.net/how-it-works"
+      ],
+      "researchSources": [
+        "https://yotti.net/esim/albania",
+        "https://yotti.net/how-it-works",
+        "https://akt.gov.al/en/itineraries/trip-to-visit-the-beautiful-Albanian-Riviera/",
+        "https://akt.gov.al/en/cities/tirane/"
+      ],
       "creative": "assets/covers/buy-esim-albania-tirana-riviera.webp",
       "creativeConceptKey": "albanian-riviera-bus-stop-sea-morning",
       "creativeBrief": "Небольшая остановка на Албанской Ривьере, автобус сбоку, море и утренний свет без крупного плана телефона.",
       "contentFormat": "connectivity-and-esim",
-      "schedule": {"ru": "2026-09-06T15:30:00Z", "en": "2026-09-06T15:30:00Z"},
+      "schedule": {
+        "ru": "2026-09-06T15:30:00Z",
+        "en": "2026-09-06T15:30:00Z"
+      },
       "editorialScorecard": {
-        "ru": {"total": 97, "dimensions": {"intent": 15, "utility": 15, "specificity": 14, "trust": 14, "voice": 14, "structure": 9, "technical": 10, "commercialRestraint": 5}},
-        "en": {"total": 97, "dimensions": {"intent": 15, "utility": 15, "specificity": 14, "trust": 14, "voice": 14, "structure": 9, "technical": 10, "commercialRestraint": 5}}
+        "ru": {
+          "total": 97,
+          "dimensions": {
+            "intent": 15,
+            "utility": 15,
+            "specificity": 14,
+            "trust": 14,
+            "voice": 14,
+            "structure": 9,
+            "technical": 10,
+            "commercialRestraint": 5
+          }
+        },
+        "en": {
+          "total": 97,
+          "dimensions": {
+            "intent": 15,
+            "utility": 15,
+            "specificity": 14,
+            "trust": 14,
+            "voice": 14,
+            "structure": 9,
+            "technical": 10,
+            "commercialRestraint": 5
+          }
+        }
       },
       "qualityNotes": {
-        "localeTotals": {"ru": 97, "en": 97},
-        "weakestDimensions": ["trust_and_evidence", "structure_and_readability"],
+        "localeTotals": {
+          "ru": 97,
+          "en": 97
+        },
+        "weakestDimensions": [
+          "trust_and_evidence",
+          "structure_and_readability"
+        ],
         "editorialChange": "Технический проход проверил совместимость, активацию, роли двух линий, городскую проверку, офлайн-ветку и диагностику без обещаний покрытия.",
-        "titleCandidatesEvaluated": {"ru": 5, "en": 5},
+        "titleCandidatesEvaluated": {
+          "ru": 5,
+          "en": 5
+        },
         "lengthDecision": "RU 854 и EN 978 слов: решение до покупки, установка, Тирана, дорога и четыре ветки отказа раскрыты без рекламного блока."
       }
     },
     {
       "status": "scheduled",
-      "locales": ["ru", "en"],
-      "model": {"name": "gpt-5.6-sol", "effort": "high"},
-      "riskReasons": ["catchup_recovery", "owner_requested_manual_run", "query_cannibalization_checked", "health_claims_scope_limited"],
-      "generationAttempts": {"ru": 1, "en": 1},
+      "locales": [
+        "ru",
+        "en"
+      ],
+      "model": {
+        "name": "gpt-5.6-sol",
+        "effort": "high"
+      },
+      "riskReasons": [
+        "catchup_recovery",
+        "owner_requested_manual_run",
+        "query_cannibalization_checked",
+        "health_claims_scope_limited"
+      ],
+      "generationAttempts": {
+        "ru": 1,
+        "en": 1
+      },
       "qualityRepairAttempts": 0,
-      "scores": {"utility": 96, "originalValue": 95, "factSupport": 96},
+      "scores": {
+        "utility": 96,
+        "originalValue": 95,
+        "factSupport": 96
+      },
       "editorialStandardVersion": 2,
-      "editorialPasses": {"ru": 1, "en": 1},
-      "creativeGeneration": {"model": "imagegen-built-in", "attempts": 1},
+      "editorialPasses": {
+        "ru": 1,
+        "en": 1
+      },
+      "creativeGeneration": {
+        "model": "imagegen-built-in",
+        "attempts": 1
+      },
       "id": "peru-arequipa-highland-first-day",
       "topicKey": "arequipa-arrival-day-low-demand-centre",
       "countryCode": "PE",
       "region": "south-america",
       "planKind": "editorial",
-      "searchQuery": {"ru": "Арекипа первый день высота", "en": "Arequipa first day altitude"},
-      "workingTitle": {"ru": "Первый день в Арекипе: короткая прогулка без дальнего выезда", "en": "A first day in Arequipa: a short walk with no distant excursion"},
+      "searchQuery": {
+        "ru": "Арекипа первый день высота",
+        "en": "Arequipa first day altitude"
+      },
+      "workingTitle": {
+        "ru": "Первый день в Арекипе: короткая прогулка без дальнего выезда",
+        "en": "A first day in Arequipa: a short walk with no distant excursion"
+      },
       "intentMap": {
-        "primary": {"ru": "Арекипа первый день высота", "en": "Arequipa first day altitude"},
-        "neighborIntents": ["pe-general-guide", "arequipa-attractions-overview", "colca-canyon-itinerary"],
+        "primary": {
+          "ru": "Арекипа первый день высота",
+          "en": "Arequipa first day altitude"
+        },
+        "neighborIntents": [
+          "pe-general-guide",
+          "arequipa-attractions-overview",
+          "colca-canyon-itinerary"
+        ],
         "uniqueReaderOutcome": "Читатель оставляет день прибытия внутри исторического центра, принимает решение после каждого блока и не подменяет медицинскую помощь туристическим советом.",
         "cannibalizationDecision": "Материал отвечает на сценарий первого дня и темпа, не заменяя общий гид по Перу, список мест Арекипы или маршрут в каньон Колька."
       },
       "readerPromise": "Освоить центр в спокойном темпе и не привязывать день прибытия к дальнему выезду.",
-      "internalContextLinks": ["https://yotti.net/esim/peru", "https://yotti.net/how-it-works"],
-      "researchSources": ["https://whc.unesco.org/en/list/1016", "https://www.peru.travel/lima2019/complemento/paquetes/paquete32_en.pdf", "https://wwwnc.cdc.gov/travel/page/travel-to-high-altitudes", "https://yotti.net/esim/peru"],
+      "internalContextLinks": [
+        "https://yotti.net/esim/peru",
+        "https://yotti.net/how-it-works"
+      ],
+      "researchSources": [
+        "https://whc.unesco.org/en/list/1016",
+        "https://www.peru.travel/lima2019/complemento/paquetes/paquete32_en.pdf",
+        "https://wwwnc.cdc.gov/travel/page/travel-to-high-altitudes",
+        "https://yotti.net/esim/peru"
+      ],
       "creative": "assets/covers/peru-arequipa-highland-first-day.webp",
       "creativeConceptKey": "arequipa-white-stone-arcade-morning",
       "creativeBrief": "Белокаменная аркада Арекипы утром, местные прохожие и вулканический силуэт вдалеке.",
       "contentFormat": "practical-travel-scenario",
-      "schedule": {"ru": "2026-09-06T16:00:00Z", "en": "2026-09-06T16:00:00Z"},
+      "schedule": {
+        "ru": "2026-09-06T16:00:00Z",
+        "en": "2026-09-06T16:00:00Z"
+      },
       "editorialScorecard": {
-        "ru": {"total": 96, "dimensions": {"intent": 15, "utility": 15, "specificity": 14, "trust": 15, "voice": 13, "structure": 9, "technical": 10, "commercialRestraint": 5}},
-        "en": {"total": 96, "dimensions": {"intent": 15, "utility": 15, "specificity": 14, "trust": 15, "voice": 13, "structure": 9, "technical": 10, "commercialRestraint": 5}}
+        "ru": {
+          "total": 96,
+          "dimensions": {
+            "intent": 15,
+            "utility": 15,
+            "specificity": 14,
+            "trust": 15,
+            "voice": 13,
+            "structure": 9,
+            "technical": 10,
+            "commercialRestraint": 5
+          }
+        },
+        "en": {
+          "total": 96,
+          "dimensions": {
+            "intent": 15,
+            "utility": 15,
+            "specificity": 14,
+            "trust": 15,
+            "voice": 13,
+            "structure": 9,
+            "technical": 10,
+            "commercialRestraint": 5
+          }
+        }
       },
       "qualityNotes": {
-        "localeTotals": {"ru": 96, "en": 96},
-        "weakestDimensions": ["voice_and_localization", "structure_and_readability"],
+        "localeTotals": {
+          "ru": 96,
+          "en": 96
+        },
+        "weakestDimensions": [
+          "voice_and_localization",
+          "structure_and_readability"
+        ],
         "editorialChange": "Редакторский проход ограничил тему высоты немедицинскими решениями, добавил ясную границу обращения за помощью и сохранил разные RU/EN переходы.",
-        "titleCandidatesEvaluated": {"ru": 5, "en": 5},
+        "titleCandidatesEvaluated": {
+          "ru": 5,
+          "en": 5
+        },
         "lengthDecision": "RU 816 и EN 914 слов: компактный центр, три решения о темпе и перенос дальнего выезда раскрыты без медицинских обещаний."
       }
     },
     {
       "status": "scheduled",
-      "locales": ["ru", "en"],
-      "model": {"name": "gpt-5.6-sol", "effort": "high"},
-      "riskReasons": ["catchup_recovery", "owner_requested_manual_run", "query_cannibalization_checked"],
-      "generationAttempts": {"ru": 1, "en": 1},
+      "locales": [
+        "ru",
+        "en"
+      ],
+      "model": {
+        "name": "gpt-5.6-sol",
+        "effort": "high"
+      },
+      "riskReasons": [
+        "catchup_recovery",
+        "owner_requested_manual_run",
+        "query_cannibalization_checked"
+      ],
+      "generationAttempts": {
+        "ru": 1,
+        "en": 1
+      },
       "qualityRepairAttempts": 0,
-      "scores": {"utility": 96, "originalValue": 96, "factSupport": 95},
+      "scores": {
+        "utility": 96,
+        "originalValue": 96,
+        "factSupport": 95
+      },
       "editorialStandardVersion": 2,
-      "editorialPasses": {"ru": 1, "en": 1},
-      "creativeGeneration": {"model": "imagegen-built-in", "attempts": 1},
+      "editorialPasses": {
+        "ru": 1,
+        "en": 1
+      },
+      "creativeGeneration": {
+        "model": "imagegen-built-in",
+        "attempts": 1
+      },
       "id": "japan-matsumoto-castle-craft-morning",
       "topicKey": "matsumoto-castle-craft-material-morning",
       "countryCode": "JP",
       "region": "east-asia",
       "planKind": "editorial",
-      "searchQuery": {"ru": "Мацумото замок ремесла утро", "en": "Matsumoto castle craft morning"},
-      "workingTitle": {"ru": "Утро в Мацумото: замок, ремесленные улицы и ранний обед", "en": "A morning in Matsumoto: castle, craft streets and an early lunch"},
+      "searchQuery": {
+        "ru": "Мацумото замок ремесла утро",
+        "en": "Matsumoto castle craft morning"
+      },
+      "workingTitle": {
+        "ru": "Утро в Мацумото: замок, ремесленные улицы и ранний обед",
+        "en": "A morning in Matsumoto: castle, craft streets and an early lunch"
+      },
       "intentMap": {
-        "primary": {"ru": "Мацумото замок ремесла утро", "en": "Matsumoto castle craft morning"},
-        "neighborIntents": ["jp-general-guide", "matsumoto-castle-guide", "japan-craft-shopping"],
+        "primary": {
+          "ru": "Мацумото замок ремесла утро",
+          "en": "Matsumoto castle craft morning"
+        },
+        "neighborIntents": [
+          "jp-general-guide",
+          "matsumoto-castle-guide",
+          "japan-craft-shopping"
+        ],
         "uniqueReaderOutcome": "Читатель связывает внешний круг замка с Nawate, Nakamachi и одним материалом, избегая безразборной сувенирной прогулки.",
         "cannibalizationDecision": "Материал построен вокруг наблюдения за материалом и процессом, поэтому не конкурирует с общим гидом по Японии или отдельной историей замка."
       },
       "readerPromise": "Соединить замок с одной ремесленной улицей до прибытия дневных групп.",
-      "internalContextLinks": ["https://yotti.net/esim/japan", "https://yotti.net/how-it-works"],
-      "researchSources": ["https://www.japan.travel/en/spot/1356/", "https://visitmatsumoto.com/en/spot/index_1_2__6___.html", "https://visitmatsumoto.com/en/article/detail_32.html", "https://yotti.net/esim/japan"],
+      "internalContextLinks": [
+        "https://yotti.net/esim/japan",
+        "https://yotti.net/how-it-works"
+      ],
+      "researchSources": [
+        "https://www.japan.travel/en/spot/1356/",
+        "https://visitmatsumoto.com/en/spot/index_1_2__6___.html",
+        "https://visitmatsumoto.com/en/article/detail_32.html",
+        "https://yotti.net/esim/japan"
+      ],
       "creative": "assets/covers/japan-matsumoto-castle-craft-morning.webp",
       "creativeConceptKey": "matsumoto-craft-shop-castle-reflection",
       "creativeBrief": "Витрина ремесленной лавки Мацумото, отражение чёрного замка и спокойный утренний свет.",
       "contentFormat": "culture-food-or-local-experience",
-      "schedule": {"ru": "2026-09-06T16:30:00Z", "en": "2026-09-06T16:30:00Z"},
+      "schedule": {
+        "ru": "2026-09-06T16:30:00Z",
+        "en": "2026-09-06T16:30:00Z"
+      },
       "editorialScorecard": {
-        "ru": {"total": 96, "dimensions": {"intent": 15, "utility": 15, "specificity": 15, "trust": 14, "voice": 13, "structure": 9, "technical": 10, "commercialRestraint": 5}},
-        "en": {"total": 96, "dimensions": {"intent": 15, "utility": 15, "specificity": 15, "trust": 14, "voice": 13, "structure": 9, "technical": 10, "commercialRestraint": 5}}
+        "ru": {
+          "total": 96,
+          "dimensions": {
+            "intent": 15,
+            "utility": 15,
+            "specificity": 15,
+            "trust": 14,
+            "voice": 13,
+            "structure": 9,
+            "technical": 10,
+            "commercialRestraint": 5
+          }
+        },
+        "en": {
+          "total": 96,
+          "dimensions": {
+            "intent": 15,
+            "utility": 15,
+            "specificity": 15,
+            "trust": 14,
+            "voice": 13,
+            "structure": 9,
+            "technical": 10,
+            "commercialRestraint": 5
+          }
+        }
       },
       "qualityNotes": {
-        "localeTotals": {"ru": 96, "en": 96},
-        "weakestDimensions": ["voice_and_localization", "structure_and_readability"],
+        "localeTotals": {
+          "ru": 96,
+          "en": 96
+        },
+        "weakestDimensions": [
+          "voice_and_localization",
+          "structure_and_readability"
+        ],
         "editorialChange": "Отдельный редакторский проход заменил сувенирный список одной линией наблюдения — от конструкции замка к материалу, мастерской и еде.",
-        "titleCandidatesEvaluated": {"ru": 5, "en": 5},
+        "titleCandidatesEvaluated": {
+          "ru": 5,
+          "en": 5
+        },
         "lengthDecision": "RU 770 и EN 902 слова: замок, две улицы, один материал и обед раскрыты через разные локальные сцены."
       }
     },
     {
       "status": "scheduled",
-      "locales": ["ru", "en"],
-      "model": {"name": "gpt-5.6-sol", "effort": "high"},
-      "riskReasons": ["catchup_recovery", "owner_requested_manual_run", "query_cannibalization_checked"],
-      "generationAttempts": {"ru": 1, "en": 1},
+      "locales": [
+        "ru",
+        "en"
+      ],
+      "model": {
+        "name": "gpt-5.6-sol",
+        "effort": "high"
+      },
+      "riskReasons": [
+        "catchup_recovery",
+        "owner_requested_manual_run",
+        "query_cannibalization_checked"
+      ],
+      "generationAttempts": {
+        "ru": 1,
+        "en": 1
+      },
       "qualityRepairAttempts": 0,
-      "scores": {"utility": 95, "originalValue": 95, "factSupport": 95},
+      "scores": {
+        "utility": 95,
+        "originalValue": 95,
+        "factSupport": 95
+      },
       "editorialStandardVersion": 2,
-      "editorialPasses": {"ru": 1, "en": 1},
-      "creativeGeneration": {"model": "imagegen-built-in", "attempts": 1},
+      "editorialPasses": {
+        "ru": 1,
+        "en": 1
+      },
+      "creativeGeneration": {
+        "model": "imagegen-built-in",
+        "attempts": 1
+      },
       "id": "serbia-novi-sad-danube-weekend",
       "topicKey": "novi-sad-two-bank-weekend-split",
       "countryCode": "RS",
       "region": "southern-europe",
       "planKind": "editorial",
-      "searchQuery": {"ru": "Нови-Сад Дунай выходные", "en": "Novi Sad Danube weekend"},
-      "workingTitle": {"ru": "Выходные в Нови-Саде: центр, Петроварадин и два берега Дуная", "en": "A Novi Sad weekend across the centre, Petrovaradin and the Danube"},
+      "searchQuery": {
+        "ru": "Нови-Сад Дунай выходные",
+        "en": "Novi Sad Danube weekend"
+      },
+      "workingTitle": {
+        "ru": "Выходные в Нови-Саде: центр, Петроварадин и два берега Дуная",
+        "en": "A Novi Sad weekend across the centre, Petrovaradin and the Danube"
+      },
       "intentMap": {
-        "primary": {"ru": "Нови-Сад Дунай выходные", "en": "Novi Sad Danube weekend"},
-        "neighborIntents": ["rs-general-guide", "petrovaradin-fortress-guide", "novi-sad-attractions-list"],
+        "primary": {
+          "ru": "Нови-Сад Дунай выходные",
+          "en": "Novi Sad Danube weekend"
+        },
+        "neighborIntents": [
+          "rs-general-guide",
+          "petrovaradin-fortress-guide",
+          "novi-sad-attractions-list"
+        ],
         "uniqueReaderOutcome": "Читатель разделяет центр и Петроварадин на два дня, пересекает Дунай один раз с целью и выбирает историю или живую мастерскую на крепости.",
         "cannibalizationDecision": "Материал решает географию двухдневного уикенда, не заменяя общий гид по Сербии или подробный путеводитель по крепости."
       },
       "readerPromise": "Разделить городской центр и Петроварадин на два спокойных блока без поездки ради одного вида.",
-      "internalContextLinks": ["https://yotti.net/esim/serbia", "https://yotti.net/how-it-works"],
-      "researchSources": ["https://novisad.travel/en/tourist-atractions/", "https://novisad.travel/en/novi-sad-za-3-dana-dan-1/", "https://novisad.travel/en/petrovaradin-fortress-galleries/", "https://yotti.net/esim/serbia"],
+      "internalContextLinks": [
+        "https://yotti.net/esim/serbia",
+        "https://yotti.net/how-it-works"
+      ],
+      "researchSources": [
+        "https://novisad.travel/en/tourist-atractions/",
+        "https://novisad.travel/en/novi-sad-za-3-dana-dan-1/",
+        "https://novisad.travel/en/petrovaradin-fortress-galleries/",
+        "https://yotti.net/esim/serbia"
+      ],
       "creative": "assets/covers/serbia-novi-sad-danube-weekend.webp",
       "creativeConceptKey": "novi-sad-danube-fortress-bicycle-dusk",
       "creativeBrief": "Велосипедист у Дуная, Петроварадинская крепость на другом берегу и мягкий сумеречный свет.",
       "contentFormat": "destination-inspiration",
-      "schedule": {"ru": "2026-09-06T17:00:00Z", "en": "2026-09-06T17:00:00Z"},
+      "schedule": {
+        "ru": "2026-09-06T17:00:00Z",
+        "en": "2026-09-06T17:00:00Z"
+      },
       "editorialScorecard": {
-        "ru": {"total": 95, "dimensions": {"intent": 15, "utility": 15, "specificity": 14, "trust": 14, "voice": 13, "structure": 9, "technical": 10, "commercialRestraint": 5}},
-        "en": {"total": 95, "dimensions": {"intent": 15, "utility": 15, "specificity": 14, "trust": 14, "voice": 13, "structure": 9, "technical": 10, "commercialRestraint": 5}}
+        "ru": {
+          "total": 95,
+          "dimensions": {
+            "intent": 15,
+            "utility": 15,
+            "specificity": 14,
+            "trust": 14,
+            "voice": 13,
+            "structure": 9,
+            "technical": 10,
+            "commercialRestraint": 5
+          }
+        },
+        "en": {
+          "total": 95,
+          "dimensions": {
+            "intent": 15,
+            "utility": 15,
+            "specificity": 14,
+            "trust": 14,
+            "voice": 13,
+            "structure": 9,
+            "technical": 10,
+            "commercialRestraint": 5
+          }
+        }
       },
       "qualityNotes": {
-        "localeTotals": {"ru": 95, "en": 95},
-        "weakestDimensions": ["voice_and_localization", "structure_and_readability"],
+        "localeTotals": {
+          "ru": 95,
+          "en": 95
+        },
+        "weakestDimensions": [
+          "voice_and_localization",
+          "structure_and_readability"
+        ],
         "editorialChange": "Редакторский проход убрал обзорный чек-лист, развёл два берега по дням и оставил доступ к мастерским условным, а не гарантированным.",
-        "titleCandidatesEvaluated": {"ru": 5, "en": 5},
+        "titleCandidatesEvaluated": {
+          "ru": 5,
+          "en": 5
+        },
         "lengthDecision": "RU 817 и EN 950 слов: центр, Gradić, крепость, мастерские и две логики перехода раскрыты без марафона достопримечательностей."
       }
-    }
-  ],
-  "plannedPublications": [
+    },
     {
-      "planOrder": 1,
+      "status": "scheduled",
+      "locales": [
+        "ru",
+        "en"
+      ],
+      "model": {
+        "name": "gpt-5.6-sol",
+        "effort": "high",
+        "role": "initial_draft_before_rule_migration"
+      },
+      "editorialModel": {
+        "name": "gpt-6-astra",
+        "effort": "high",
+        "role": "independent_editorial_acceptance"
+      },
+      "generationAttempts": {
+        "ru": 1,
+        "en": 1
+      },
+      "qualityRepairAttempts": 1,
+      "editorialStandardVersion": 2,
+      "editorialPasses": {
+        "ru": 1,
+        "en": 1
+      },
+      "creativeGeneration": {
+        "model": "imagegen-built-in",
+        "attempts": 1
+      },
+      "riskReasons": [
+        "recovery_2026_09_07_13",
+        "query_cannibalization_checked",
+        "renderer_degraded_site_side_p1"
+      ],
       "id": "buy-esim-ecuador-quito-galapagos",
+      "topicKey": "ecuador-esim-quito-galapagos",
       "countryCode": "EC",
       "region": "south-america",
       "planKind": "buy-esim",
@@ -7716,137 +8374,921 @@
         "ru": "купить есим для Эквадора",
         "en": "buy eSIM for Ecuador"
       },
-      "semanticIntent": {
-        "primary": "ecuador-esim-quito-galapagos",
-        "secondary": [
-          "есим Эквадор интернет",
-          "Ecuador travel eSIM"
-        ]
-      },
       "workingTitle": {
         "ru": "Купить есим для Эквадора: связь в Кито и на Галапагосах",
         "en": "Buy an eSIM for Ecuador: connectivity in Quito and the Galápagos"
       },
-      "readerPromise": "Разделить связь в столице, перелёт и островные участки, где офлайн-план важнее обещаний покрытия.",
+      "intentMap": {
+        "primary": {
+          "ru": "купить есим для Эквадора для Кито и Галапагосов",
+          "en": "buy an eSIM for Ecuador for Quito and the Galápagos"
+        },
+        "neighborIntents": [
+          "ecuador-country-guide",
+          "esim-installation-guide",
+          "travel-data-allowance"
+        ],
+        "uniqueReaderOutcome": "Проверить линию в Кито и перенести на острова автономный набор.",
+        "cannibalizationDecision": "Страновой сценарий отделён от общих инструкций установки и расчёта трафика."
+      },
+      "readerPromise": "Разделить городскую проверку, перелёт и островной резерв.",
+      "semanticLinkClass": "focused-technical",
+      "publicUrls": {
+        "ru": "https://yotti.net/blog/ecuador/kupit-esim-dlya-ekvadora-svyaz-v-kito-i-na-galapagosah",
+        "en": "https://yotti.net/en/blog/ecuador/buy-an-esim-for-ecuador-connectivity-in-quito-and-the-galapagos"
+      },
+      "internalArticleLinks": {
+        "ru": [
+          "https://yotti.net/blog/kak-ustanovit-esim-pered-poezdkoy-i-ne-zapustit-paket-ranshe-vremeni",
+          "https://yotti.net/blog/esim-vidit-set-no-internet-ne-rabotaet-gde-iskat-prichinu",
+          "https://yotti.net/blog/skolko-gigabayt-nuzhno-dlya-esim-v-poezdke"
+        ],
+        "en": [
+          "https://yotti.net/en/blog/how-to-install-an-esim-before-travel-without-starting-it-too-early",
+          "https://yotti.net/en/blog/esim-has-signal-but-no-internet-what-to-check",
+          "https://yotti.net/en/blog/how-much-data-do-you-need-for-a-travel-esim"
+        ]
+      },
+      "researchSources": [
+        "https://ecuador.travel/galapagos/",
+        "https://www.yotti.net/esim/ecuador"
+      ],
+      "creative": "assets/covers/buy-esim-ecuador-quito-galapagos.webp",
       "creativeConceptKey": "galapagos-ferry-pier-sea-lion-morning",
-      "creativeBrief": "Небольшой причал на Галапагосах, морской лев у скамьи и паром сбоку в утреннем свете."
+      "creativeBrief": "Галапагосский причал, морской лев и пассажирский катер утром.",
+      "schedule": {
+        "ru": "2026-09-13T14:22:00Z",
+        "en": "2026-09-13T14:22:00Z"
+      },
+      "scores": {
+        "utility": 94,
+        "originalValue": 93,
+        "factSupport": 94
+      },
+      "editorialScorecard": {
+        "ru": {
+          "total": 94,
+          "dimensions": {
+            "intent": 15,
+            "utility": 15,
+            "specificity": 14,
+            "trust": 14,
+            "voice": 13,
+            "structure": 9,
+            "technical": 9,
+            "commercialRestraint": 5
+          }
+        },
+        "en": {
+          "total": 94,
+          "dimensions": {
+            "intent": 15,
+            "utility": 15,
+            "specificity": 14,
+            "trust": 14,
+            "voice": 13,
+            "structure": 9,
+            "technical": 9,
+            "commercialRestraint": 5
+          }
+        }
+      },
+      "editorialEvidence": {
+        "ru": {
+          "model": "gpt-6-astra",
+          "effort": "high",
+          "reviewedAt": "2026-09-13",
+          "weakestDimensions": [
+            "voice",
+            "structure"
+          ],
+          "findings": [
+            "lead: generic product framing -> split into Quito test and island offline task",
+            "diagnostics: multiple simultaneous changes -> explicit one-variable safe order"
+          ],
+          "recheck": "PASS after targeted editorial repair; deterministic gates run before PR",
+          "visualInspection": {
+            "result": "PASS",
+            "files": [
+              "cover",
+              "2 contextual photos",
+              "4 RU graphics"
+            ]
+          }
+        },
+        "en": {
+          "model": "gpt-6-astra",
+          "effort": "high",
+          "reviewedAt": "2026-09-13",
+          "weakestDimensions": [
+            "voice",
+            "structure"
+          ],
+          "findings": [
+            "lead: mirrored wording -> independently recast around arrival and crossing jobs",
+            "failure path: deletion risk -> explicit non-destructive sequence"
+          ],
+          "recheck": "PASS after targeted editorial repair; deterministic gates run before PR",
+          "visualInspection": {
+            "result": "PASS",
+            "files": [
+              "cover",
+              "2 contextual photos",
+              "4 EN graphics"
+            ]
+          }
+        }
+      },
+      "qualityNotes": {
+        "titleCandidatesEvaluated": {
+          "ru": 5,
+          "en": 5
+        },
+        "lengthDecision": "Focused country connectivity scenario is complete without repeating the general installation guide.",
+        "redTeam": "No operator coverage guarantee; island availability is deliberately uncertain."
+      },
+      "internalContextLinks": [
+        "https://yotti.net/blog/kak-ustanovit-esim-pered-poezdkoy-i-ne-zapustit-paket-ranshe-vremeni",
+        "https://yotti.net/blog/esim-vidit-set-no-internet-ne-rabotaet-gde-iskat-prichinu",
+        "https://yotti.net/blog/skolko-gigabayt-nuzhno-dlya-esim-v-poezdke",
+        "https://yotti.net/en/blog/how-to-install-an-esim-before-travel-without-starting-it-too-early",
+        "https://yotti.net/en/blog/esim-has-signal-but-no-internet-what-to-check",
+        "https://yotti.net/en/blog/how-much-data-do-you-need-for-a-travel-esim"
+      ]
     },
     {
-      "planOrder": 2,
+      "status": "scheduled",
+      "locales": [
+        "ru",
+        "en"
+      ],
+      "model": {
+        "name": "gpt-5.6-sol",
+        "effort": "high",
+        "role": "initial_draft_before_rule_migration"
+      },
+      "editorialModel": {
+        "name": "gpt-6-astra",
+        "effort": "high",
+        "role": "independent_editorial_acceptance"
+      },
+      "generationAttempts": {
+        "ru": 1,
+        "en": 1
+      },
+      "qualityRepairAttempts": 1,
+      "editorialStandardVersion": 2,
+      "editorialPasses": {
+        "ru": 1,
+        "en": 1
+      },
+      "creativeGeneration": {
+        "model": "imagegen-built-in",
+        "attempts": 1
+      },
+      "riskReasons": [
+        "recovery_2026_09_07_13",
+        "query_cannibalization_checked",
+        "renderer_degraded_site_side_p1"
+      ],
       "id": "romania-brasov-autumn-courtyards-day",
+      "topicKey": "brasov-autumn-courtyards-walk",
       "countryCode": "RO",
       "region": "eastern-europe",
       "planKind": "editorial",
       "contentFormat": "seasonal-trip-ideas",
-      "searchQuery": {"ru": "Брашов осенью прогулка", "en": "Brasov autumn walking day"},
-      "semanticIntent": {"primary": "brasov-autumn-courtyards-walk", "secondary": ["Брашов в октябре", "Brașov shoulder season"]},
-      "workingTitle": {"ru": "Осенний день в Брашове: дворы, стены и тёплая пауза", "en": "An autumn day in Brașov: courtyards, walls and a warm pause"},
-      "readerPromise": "Собрать короткую прогулку по старому городу с погодной развилкой, не превращая Брашов в транзит к замкам.",
+      "searchQuery": {
+        "ru": "Брашов осенью прогулка",
+        "en": "Brașov autumn walking day"
+      },
+      "workingTitle": {
+        "ru": "Осенний день в Брашове: дворы, стены и тёплая пауза",
+        "en": "An autumn day in Brașov: courtyards, walls and a warm pause"
+      },
+      "intentMap": {
+        "primary": {
+          "ru": "Брашов осенью прогулка",
+          "en": "Brașov autumn walking day"
+        },
+        "neighborIntents": [
+          "romania-general-guide",
+          "brasov-castles-day-trip",
+          "carpathian-hike"
+        ],
+        "uniqueReaderOutcome": "Собрать короткий городской круг с погодной развилкой.",
+        "cannibalizationDecision": "Материал остаётся внутри Брашова и не конкурирует с замками или горным маршрутом."
+      },
+      "readerPromise": "Старый город и Шкей в одном погодоустойчивом дне.",
+      "semanticLinkClass": "standard",
+      "publicUrls": {
+        "ru": "https://yotti.net/blog/romania/osenniy-den-v-brashove-dvory-steny-i-teplaya-pauza",
+        "en": "https://yotti.net/en/blog/romania/an-autumn-day-in-brasov-courtyards-walls-and-a-warm-pause"
+      },
+      "internalArticleLinks": {
+        "ru": [
+          "https://yotti.net/blog/austria/vinogradniki-veny-osenyu-progulka-iz-nussdorfa-cherez-kalenberg",
+          "https://yotti.net/blog/estonia/tallinn-staryy-gorod-kalamaya-i-noblessner-peshkom",
+          "https://yotti.net/blog/belgium/vyhodnye-v-gente-kanaly-remeslo-i-patershol"
+        ],
+        "en": [
+          "https://yotti.net/en/blog/austria/vienna-vineyards-in-autumn-a-walk-from-nussdorf-to-kahlenberg",
+          "https://yotti.net/en/blog/estonia/walk-from-tallinn-old-town-to-kalamaja-and-noblessner",
+          "https://yotti.net/en/blog/belgium/a-ghent-weekend-of-canals-craft-and-patershol"
+        ]
+      },
+      "researchSources": [
+        "https://brasovtourism.app/en/",
+        "https://bisericaneagra.ro/en/"
+      ],
+      "creative": "assets/covers/romania-brasov-autumn-courtyards-day.webp",
       "creativeConceptKey": "brasov-courtyard-yellow-leaves-window-steam",
-      "creativeBrief": "Тихий двор Брашова с жёлтыми листьями, паром на оконном стекле и прохожим под зонтом."
+      "creativeBrief": "Дождливый осенний двор Брашова у тёплого окна.",
+      "schedule": {
+        "ru": "2026-09-13T14:22:00Z",
+        "en": "2026-09-13T14:22:00Z"
+      },
+      "scores": {
+        "utility": 93,
+        "originalValue": 94,
+        "factSupport": 92
+      },
+      "editorialScorecard": {
+        "ru": {
+          "total": 93,
+          "dimensions": {
+            "intent": 15,
+            "utility": 14,
+            "specificity": 14,
+            "trust": 13,
+            "voice": 14,
+            "structure": 9,
+            "technical": 9,
+            "commercialRestraint": 5
+          }
+        },
+        "en": {
+          "total": 93,
+          "dimensions": {
+            "intent": 15,
+            "utility": 14,
+            "specificity": 14,
+            "trust": 13,
+            "voice": 14,
+            "structure": 9,
+            "technical": 9,
+            "commercialRestraint": 5
+          }
+        }
+      },
+      "editorialEvidence": {
+        "ru": {
+          "model": "gpt-6-astra",
+          "effort": "high",
+          "reviewedAt": "2026-09-13",
+          "weakestDimensions": [
+            "trust",
+            "technical"
+          ],
+          "findings": [
+            "heading: abstract scale language -> named old-wall section",
+            "weather advice: broad claim -> limited to wet stone and route choice"
+          ],
+          "recheck": "PASS after targeted editorial repair; deterministic gates run before PR",
+          "visualInspection": {
+            "result": "PASS",
+            "files": [
+              "cover",
+              "4 contextual photos",
+              "2 RU graphics"
+            ]
+          }
+        },
+        "en": {
+          "model": "gpt-6-astra",
+          "effort": "high",
+          "reviewedAt": "2026-09-13",
+          "weakestDimensions": [
+            "trust",
+            "technical"
+          ],
+          "findings": [
+            "heading: abstract scale language -> direct gate-to-walls heading",
+            "duplicate word Gate -> corrected and re-read"
+          ],
+          "recheck": "PASS after targeted editorial repair; deterministic gates run before PR",
+          "visualInspection": {
+            "result": "PASS",
+            "files": [
+              "cover",
+              "4 contextual photos",
+              "2 EN graphics"
+            ]
+          }
+        }
+      },
+      "qualityNotes": {
+        "titleCandidatesEvaluated": {
+          "ru": 5,
+          "en": 5
+        },
+        "lengthDecision": "One compact city-day decision is fully answered below 900 words.",
+        "redTeam": "Hours remain dynamic and are delegated to the Black Church official site."
+      },
+      "internalContextLinks": [
+        "https://yotti.net/blog/austria/vinogradniki-veny-osenyu-progulka-iz-nussdorfa-cherez-kalenberg",
+        "https://yotti.net/blog/estonia/tallinn-staryy-gorod-kalamaya-i-noblessner-peshkom",
+        "https://yotti.net/blog/belgium/vyhodnye-v-gente-kanaly-remeslo-i-patershol",
+        "https://yotti.net/en/blog/austria/vienna-vineyards-in-autumn-a-walk-from-nussdorf-to-kahlenberg",
+        "https://yotti.net/en/blog/estonia/walk-from-tallinn-old-town-to-kalamaja-and-noblessner",
+        "https://yotti.net/en/blog/belgium/a-ghent-weekend-of-canals-craft-and-patershol"
+      ]
     },
     {
-      "planOrder": 3,
+      "status": "scheduled",
+      "locales": [
+        "ru",
+        "en"
+      ],
+      "model": {
+        "name": "gpt-5.6-sol",
+        "effort": "high",
+        "role": "initial_draft_before_rule_migration"
+      },
+      "editorialModel": {
+        "name": "gpt-6-astra",
+        "effort": "high",
+        "role": "independent_editorial_acceptance"
+      },
+      "generationAttempts": {
+        "ru": 1,
+        "en": 1
+      },
+      "qualityRepairAttempts": 1,
+      "editorialStandardVersion": 2,
+      "editorialPasses": {
+        "ru": 1,
+        "en": 1
+      },
+      "creativeGeneration": {
+        "model": "imagegen-built-in",
+        "attempts": 1
+      },
+      "riskReasons": [
+        "recovery_2026_09_07_13",
+        "query_cannibalization_checked",
+        "renderer_degraded_site_side_p1"
+      ],
       "id": "senegal-dakar-art-market-atelier-afternoon",
+      "topicKey": "dakar-art-market-atelier-afternoon",
       "countryCode": "SN",
       "region": "west-africa",
       "planKind": "editorial",
       "contentFormat": "culture-food-or-local-experience",
-      "searchQuery": {"ru": "Дакар искусство рынок мастерские", "en": "Dakar art market atelier afternoon"},
-      "semanticIntent": {"primary": "dakar-art-market-atelier-afternoon", "secondary": ["искусство Дакара", "Dakar creative scene"]},
-      "workingTitle": {"ru": "Искусство Дакара: рынок, мастерская и один разговор", "en": "Dakar through art: a market, a studio and one conversation"},
-      "readerPromise": "Увидеть творческий Дакар через одну мастерскую и один рынок, сохранив время на разговор вместо списка галерей.",
+      "searchQuery": {
+        "ru": "Дакар искусство рынок мастерские",
+        "en": "Dakar art market atelier afternoon"
+      },
+      "workingTitle": {
+        "ru": "Искусство Дакара: музей, рынок и разговор в мастерской",
+        "en": "Dakar through art: a museum, a market and a studio conversation"
+      },
+      "intentMap": {
+        "primary": {
+          "ru": "искусство Дакара музей рынок мастерская",
+          "en": "Dakar art museum market studio"
+        },
+        "neighborIntents": [
+          "dakar-attractions-list",
+          "goree-day-trip",
+          "senegal-shopping-guide"
+        ],
+        "uniqueReaderOutcome": "Связать музейную коллекцию, один рынок и только подтверждённый визит к автору.",
+        "cannibalizationDecision": "Это последовательность художественного наблюдения, а не общий список мест или шопинг-гид."
+      },
+      "readerPromise": "Один художественный день с уважительной логикой визита.",
+      "semanticLinkClass": "standard",
+      "publicUrls": {
+        "ru": "https://yotti.net/blog/senegal/iskusstvo-dakara-muzey-rynok-i-razgovor-v-masterskoy",
+        "en": "https://yotti.net/en/blog/senegal/dakar-through-art-a-museum-a-market-and-a-studio-conversation"
+      },
+      "internalArticleLinks": {
+        "ru": [
+          "https://yotti.net/blog/ghana/odin-den-v-akkre-rynok-muzey-i-memorialnyy-park",
+          "https://yotti.net/blog/tunisia/tunis-karfagen-i-sidi-bu-said-za-odin-den",
+          "https://yotti.net/blog/south-africa/keyptaun-tri-utra-ritualy-goroda"
+        ],
+        "en": [
+          "https://yotti.net/en/blog/ghana/one-day-in-accra-market-museum-and-memorial-park",
+          "https://yotti.net/en/blog/tunisia/tunis-carthage-and-sidi-bou-said-in-one-day",
+          "https://yotti.net/en/blog/south-africa/cape-town-three-local-mornings"
+        ]
+      },
+      "researchSources": [
+        "https://mcat.gouv.sn/service/dakar/",
+        "https://musee-monod.sn/venir-au-musee"
+      ],
+      "creative": "assets/covers/senegal-dakar-art-market-atelier-afternoon.webp",
       "creativeConceptKey": "dakar-printmaker-ink-courtyard-afternoon",
-      "creativeBrief": "Печатник раскладывает свежие оттиски во дворе Дакара, тканевые навесы дают цветные тени."
+      "creativeBrief": "Печатная мастерская Дакара под тканевыми навесами.",
+      "schedule": {
+        "ru": "2026-09-13T14:22:00Z",
+        "en": "2026-09-13T14:22:00Z"
+      },
+      "scores": {
+        "utility": 92,
+        "originalValue": 95,
+        "factSupport": 93
+      },
+      "editorialScorecard": {
+        "ru": {
+          "total": 94,
+          "dimensions": {
+            "intent": 14,
+            "utility": 14,
+            "specificity": 15,
+            "trust": 14,
+            "voice": 14,
+            "structure": 9,
+            "technical": 9,
+            "commercialRestraint": 5
+          }
+        },
+        "en": {
+          "total": 94,
+          "dimensions": {
+            "intent": 14,
+            "utility": 14,
+            "specificity": 15,
+            "trust": 14,
+            "voice": 14,
+            "structure": 9,
+            "technical": 9,
+            "commercialRestraint": 5
+          }
+        }
+      },
+      "editorialEvidence": {
+        "ru": {
+          "model": "gpt-6-astra",
+          "effort": "high",
+          "reviewedAt": "2026-09-13",
+          "weakestDimensions": [
+            "intent",
+            "utility"
+          ],
+          "findings": [
+            "lead: generic contrast -> direct museum-market-studio sequence",
+            "studio access: implied availability -> explicit advance confirmation and fallback"
+          ],
+          "recheck": "PASS after targeted editorial repair; deterministic gates run before PR",
+          "visualInspection": {
+            "result": "PASS",
+            "files": [
+              "cover",
+              "5 contextual photos",
+              "1 RU graphic"
+            ]
+          }
+        },
+        "en": {
+          "model": "gpt-6-astra",
+          "effort": "high",
+          "reviewedAt": "2026-09-13",
+          "weakestDimensions": [
+            "intent",
+            "utility"
+          ],
+          "findings": [
+            "lead: gallery-directory contrast -> direct reader sequence",
+            "ending: abstract seafront metaphor -> plain description of the Corniche pause"
+          ],
+          "recheck": "PASS after targeted editorial repair; deterministic gates run before PR",
+          "visualInspection": {
+            "result": "PASS",
+            "files": [
+              "cover",
+              "5 contextual photos",
+              "1 EN graphic"
+            ]
+          }
+        }
+      },
+      "qualityNotes": {
+        "titleCandidatesEvaluated": {
+          "ru": 5,
+          "en": 5
+        },
+        "lengthDecision": "Focused culture day is complete without a citywide gallery directory.",
+        "redTeam": "No studio access, opening time or interview is claimed without confirmation."
+      },
+      "internalContextLinks": [
+        "https://yotti.net/blog/ghana/odin-den-v-akkre-rynok-muzey-i-memorialnyy-park",
+        "https://yotti.net/blog/tunisia/tunis-karfagen-i-sidi-bu-said-za-odin-den",
+        "https://yotti.net/blog/south-africa/keyptaun-tri-utra-ritualy-goroda",
+        "https://yotti.net/en/blog/ghana/one-day-in-accra-market-museum-and-memorial-park",
+        "https://yotti.net/en/blog/tunisia/tunis-carthage-and-sidi-bou-said-in-one-day",
+        "https://yotti.net/en/blog/south-africa/cape-town-three-local-mornings"
+      ]
     },
     {
-      "planOrder": 4,
+      "status": "scheduled",
+      "locales": [
+        "ru",
+        "en"
+      ],
+      "model": {
+        "name": "gpt-5.6-sol",
+        "effort": "high",
+        "role": "initial_draft_before_rule_migration"
+      },
+      "editorialModel": {
+        "name": "gpt-6-astra",
+        "effort": "high",
+        "role": "independent_editorial_acceptance"
+      },
+      "generationAttempts": {
+        "ru": 1,
+        "en": 1
+      },
+      "qualityRepairAttempts": 1,
+      "editorialStandardVersion": 2,
+      "editorialPasses": {
+        "ru": 1,
+        "en": 1
+      },
+      "creativeGeneration": {
+        "model": "imagegen-built-in",
+        "attempts": 1
+      },
+      "riskReasons": [
+        "recovery_2026_09_07_13",
+        "query_cannibalization_checked",
+        "renderer_degraded_site_side_p1"
+      ],
       "id": "south-korea-busan-hillside-coast-weekend",
+      "topicKey": "busan-hillside-coast-weekend",
       "countryCode": "KR",
       "region": "east-asia",
       "planKind": "editorial",
       "contentFormat": "destination-inspiration",
-      "searchQuery": {"ru": "Пусан выходные холмы побережье", "en": "Busan hillside coast weekend"},
-      "semanticIntent": {"primary": "busan-hillside-coast-weekend", "secondary": ["что посмотреть в Пусане", "Busan first weekend"]},
-      "workingTitle": {"ru": "Выходные в Пусане: холмы, порт и берег без гонки", "en": "A weekend in Busan: hills, harbour and coast without rushing"},
-      "readerPromise": "Разделить вертикальные кварталы и длинный берег на разные дни, чтобы не тратить выходные в переездах.",
+      "searchQuery": {
+        "ru": "Пусан выходные холмы побережье",
+        "en": "Busan hillside coast weekend"
+      },
+      "workingTitle": {
+        "ru": "Выходные в Пусане: холмы, порт и берег без гонки",
+        "en": "A weekend in Busan: hills, harbour and coast without rushing"
+      },
+      "intentMap": {
+        "primary": {
+          "ru": "Пусан выходные холмы побережье",
+          "en": "Busan hillside coast weekend"
+        },
+        "neighborIntents": [
+          "busan-attractions-list",
+          "south-korea-first-trip",
+          "busan-beach-guide"
+        ],
+        "uniqueReaderOutcome": "Разделить западные холмы и восточный берег на два дня.",
+        "cannibalizationDecision": "Географический выбор выходных не повторяет общий список мест или отдельный пляжный гид."
+      },
+      "readerPromise": "Сократить пересечения города и сохранить силы на лестницы.",
+      "semanticLinkClass": "standard",
+      "publicUrls": {
+        "ru": "https://yotti.net/blog/south-korea/vyhodnye-v-pusane-holmy-port-i-bereg-bez-gonki",
+        "en": "https://yotti.net/en/blog/south-korea/a-weekend-in-busan-hills-harbour-and-coast-without-rushing"
+      },
+      "internalArticleLinks": {
+        "ru": [
+          "https://yotti.net/blog/south-korea/kupit-esim-dlya-yuzhnoy-korei-pervye-dni-v-seule",
+          "https://yotti.net/blog/philippines/manila-ili-sebu-s-kakogo-goroda-nachat-poezdku",
+          "https://yotti.net/blog/japan/utro-v-matsumoto-zamok-remeslennye-ulitsy-i-ranniy-obed"
+        ],
+        "en": [
+          "https://yotti.net/en/blog/south-korea/buy-an-esim-for-south-korea-first-days-in-seoul",
+          "https://yotti.net/en/blog/philippines/manila-or-cebu-where-to-begin-a-first-trip",
+          "https://yotti.net/en/blog/japan/a-morning-in-matsumoto-castle-craft-streets-and-an-early-lunch"
+        ]
+      },
+      "researchSources": [
+        "https://www.visitbusan.net/en/index.do?lang_cd=en&menuCd=DOM_000000301001001000&uc_seq=365",
+        "https://www.visitbusan.net/en/index.do?lang_cd=en&menuCd=DOM_000000302002001000&uc_seq=1023"
+      ],
+      "creative": "assets/covers/south-korea-busan-hillside-coast-weekend.webp",
       "creativeConceptKey": "busan-hillside-stairs-laundry-harbour-haze",
-      "creativeBrief": "Лестница жилого квартала Пусана, бельё на ветру и порт в лёгкой утренней дымке."
-    },
+      "creativeBrief": "Жилая лестница, бельё и порт Пусана в утренней дымке.",
+      "schedule": {
+        "ru": "2026-09-13T14:22:00Z",
+        "en": "2026-09-13T14:22:00Z"
+      },
+      "scores": {
+        "utility": 94,
+        "originalValue": 94,
+        "factSupport": 93
+      },
+      "editorialScorecard": {
+        "ru": {
+          "total": 94,
+          "dimensions": {
+            "intent": 15,
+            "utility": 15,
+            "specificity": 14,
+            "trust": 13,
+            "voice": 14,
+            "structure": 9,
+            "technical": 9,
+            "commercialRestraint": 5
+          }
+        },
+        "en": {
+          "total": 94,
+          "dimensions": {
+            "intent": 15,
+            "utility": 15,
+            "specificity": 14,
+            "trust": 13,
+            "voice": 14,
+            "structure": 9,
+            "technical": 9,
+            "commercialRestraint": 5
+          }
+        }
+      },
+      "editorialEvidence": {
+        "ru": {
+          "model": "gpt-6-astra",
+          "effort": "high",
+          "reviewedAt": "2026-09-13",
+          "weakestDimensions": [
+            "trust",
+            "technical"
+          ],
+          "findings": [
+            "scope: cross-city list -> two geographic days",
+            "neighbourhood ethics: photo route -> explicit residential etiquette"
+          ],
+          "recheck": "PASS after targeted editorial repair; deterministic gates run before PR",
+          "visualInspection": {
+            "result": "PASS",
+            "files": [
+              "cover",
+              "4 contextual photos",
+              "2 RU graphics"
+            ]
+          }
+        },
+        "en": {
+          "model": "gpt-6-astra",
+          "effort": "high",
+          "reviewedAt": "2026-09-13",
+          "weakestDimensions": [
+            "trust",
+            "technical"
+          ],
+          "findings": [
+            "heading: rhetorical harbour phrase -> direct Harbour and Nampo heading",
+            "scope: beach collection -> one coherent eastern shore"
+          ],
+          "recheck": "PASS after targeted editorial repair; deterministic gates run before PR",
+          "visualInspection": {
+            "result": "PASS",
+            "files": [
+              "cover",
+              "4 contextual photos",
+              "2 EN graphics"
+            ]
+          }
+        }
+      },
+      "qualityNotes": {
+        "titleCandidatesEvaluated": {
+          "ru": 5,
+          "en": 5
+        },
+        "lengthDecision": "A two-day geographic choice is complete without transport timetables.",
+        "redTeam": "Current hours are omitted; Gamcheon etiquette is sourced to Visit Busan."
+      },
+      "internalContextLinks": [
+        "https://yotti.net/blog/south-korea/kupit-esim-dlya-yuzhnoy-korei-pervye-dni-v-seule",
+        "https://yotti.net/blog/philippines/manila-ili-sebu-s-kakogo-goroda-nachat-poezdku",
+        "https://yotti.net/blog/japan/utro-v-matsumoto-zamok-remeslennye-ulitsy-i-ranniy-obed",
+        "https://yotti.net/en/blog/south-korea/buy-an-esim-for-south-korea-first-days-in-seoul",
+        "https://yotti.net/en/blog/philippines/manila-or-cebu-where-to-begin-a-first-trip",
+        "https://yotti.net/en/blog/japan/a-morning-in-matsumoto-castle-craft-streets-and-an-early-lunch"
+      ]
+    }
+  ],
+  "plannedPublications": [
     {
-      "planOrder": 5,
+      "planOrder": 1,
       "id": "buy-esim-armenia-yerevan-dilijan",
       "countryCode": "AM",
       "region": "caucasus",
       "planKind": "buy-esim",
       "contentFormat": "connectivity-and-esim",
-      "searchQuery": {"ru": "купить есим для Армении", "en": "buy eSIM for Armenia"},
-      "semanticIntent": {"primary": "armenia-esim-yerevan-dilijan", "secondary": ["есим Армения интернет", "Armenia travel eSIM"]},
-      "workingTitle": {"ru": "Купить есим для Армении: связь между Ереваном и Дилижаном", "en": "Buy an eSIM for Armenia: connectivity from Yerevan to Dilijan"},
+      "searchQuery": {
+        "ru": "купить есим для Армении",
+        "en": "buy eSIM for Armenia"
+      },
+      "semanticIntent": {
+        "primary": "armenia-esim-yerevan-dilijan",
+        "secondary": [
+          "есим Армения интернет",
+          "Armenia travel eSIM"
+        ]
+      },
+      "workingTitle": {
+        "ru": "Купить есим для Армении: связь между Ереваном и Дилижаном",
+        "en": "Buy an eSIM for Armenia: connectivity from Yerevan to Dilijan"
+      },
       "readerPromise": "Проверить travel data в Ереване и подготовить офлайн-набор до междугородней дороги и лесных участков.",
       "creativeConceptKey": "dilijan-rainy-bus-shelter-paper-map",
       "creativeBrief": "Дождливая остановка у Дилижана, сложенная бумажная карта на лавке и лесная дорога за стеклом."
     },
     {
-      "planOrder": 6,
+      "planOrder": 2,
       "id": "uruguay-montevideo-market-promenade-day",
       "countryCode": "UY",
       "region": "south-america",
       "planKind": "editorial",
       "contentFormat": "culture-food-or-local-experience",
-      "searchQuery": {"ru": "Монтевидео рынок набережная один день", "en": "Montevideo market promenade day"},
-      "semanticIntent": {"primary": "montevideo-market-promenade-day", "secondary": ["еда в Монтевидео", "Montevideo food and rambla"]},
-      "workingTitle": {"ru": "День в Монтевидео: рынок, тихие кварталы и Рамбла", "en": "A day in Montevideo: market, quiet blocks and the Rambla"},
+      "searchQuery": {
+        "ru": "Монтевидео рынок набережная один день",
+        "en": "Montevideo market promenade day"
+      },
+      "semanticIntent": {
+        "primary": "montevideo-market-promenade-day",
+        "secondary": [
+          "еда в Монтевидео",
+          "Montevideo food and rambla"
+        ]
+      },
+      "workingTitle": {
+        "ru": "День в Монтевидео: рынок, тихие кварталы и Рамбла",
+        "en": "A day in Montevideo: market, quiet blocks and the Rambla"
+      },
       "readerPromise": "Связать один рыночный обед с жилыми кварталами и вечерней набережной без гастрономического марафона.",
       "creativeConceptKey": "montevideo-market-shutters-mate-rambla-breeze",
       "creativeBrief": "Приоткрытые ставни рынка Монтевидео, термос и мате на столе, за углом видна ветреная Рамбла."
     },
     {
-      "planOrder": 7,
+      "planOrder": 3,
       "id": "saudi-arabia-jeddah-albalad-corniche-day",
       "countryCode": "SA",
       "region": "middle-east",
       "planKind": "editorial",
       "contentFormat": "practical-travel-scenario",
-      "searchQuery": {"ru": "Джидда Аль-Балад набережная день", "en": "Jeddah Al-Balad Corniche day"},
-      "semanticIntent": {"primary": "jeddah-albalad-corniche-day", "secondary": ["один день в Джидде", "Jeddah old town and Corniche"]},
-      "workingTitle": {"ru": "Один день в Джидде: Аль-Балад утром и Корниш вечером", "en": "One day in Jeddah: Al-Balad in the morning and the Corniche at dusk"},
+      "searchQuery": {
+        "ru": "Джидда Аль-Балад набережная день",
+        "en": "Jeddah Al-Balad Corniche day"
+      },
+      "semanticIntent": {
+        "primary": "jeddah-albalad-corniche-day",
+        "secondary": [
+          "один день в Джидде",
+          "Jeddah old town and Corniche"
+        ]
+      },
+      "workingTitle": {
+        "ru": "Один день в Джидде: Аль-Балад утром и Корниш вечером",
+        "en": "One day in Jeddah: Al-Balad in the morning and the Corniche at dusk"
+      },
       "readerPromise": "Разнести старый город и набережную по прохладным часам, оставив середину дня для закрытой паузы.",
       "creativeConceptKey": "jeddah-rawasheen-shadow-water-carrier",
       "creativeBrief": "Резные равашины Аль-Балада отбрасывают тень на узкую улицу, прохожий несёт кувшин с водой."
     },
     {
-      "planOrder": 8,
+      "planOrder": 4,
       "id": "indonesia-yogyakarta-batik-workshop-morning",
       "countryCode": "ID",
       "region": "southeast-asia",
       "planKind": "editorial",
       "contentFormat": "culture-food-or-local-experience",
-      "searchQuery": {"ru": "Джокьякарта батик мастерская утро", "en": "Yogyakarta batik workshop morning"},
-      "semanticIntent": {"primary": "yogyakarta-batik-workshop-morning", "secondary": ["батик в Джокьякарте", "Yogyakarta craft morning"]},
-      "workingTitle": {"ru": "Утро батика в Джокьякарте: как выбрать мастерскую", "en": "A batik morning in Yogyakarta: choosing a workshop that fits"},
+      "searchQuery": {
+        "ru": "Джокьякарта батик мастерская утро",
+        "en": "Yogyakarta batik workshop morning"
+      },
+      "semanticIntent": {
+        "primary": "yogyakarta-batik-workshop-morning",
+        "secondary": [
+          "батик в Джокьякарте",
+          "Yogyakarta craft morning"
+        ]
+      },
+      "workingTitle": {
+        "ru": "Утро батика в Джокьякарте: как выбрать мастерскую",
+        "en": "A batik morning in Yogyakarta: choosing a workshop that fits"
+      },
       "readerPromise": "Выбрать между наблюдением и практическим занятием, понять рабочий ритм мастерской и не покупать сувенир вслепую.",
       "creativeConceptKey": "yogyakarta-batik-wax-tool-indigo-cloth",
       "creativeBrief": "Рука мастера ведёт чантинг над тканью индиго, в кадре видны воск, деревянный стол и естественный свет."
     },
     {
-      "planOrder": 9,
+      "planOrder": 5,
       "id": "buy-esim-iceland-reykjavik-ring-road",
       "countryCode": "IS",
       "region": "northern-europe",
       "planKind": "buy-esim",
       "contentFormat": "connectivity-and-esim",
-      "searchQuery": {"ru": "купить есим для Исландии", "en": "buy eSIM for Iceland"},
-      "semanticIntent": {"primary": "iceland-esim-reykjavik-ring-road", "secondary": ["есим Исландия интернет", "Iceland road trip eSIM"]},
-      "workingTitle": {"ru": "Купить есим для Исландии: связь в Рейкьявике и на кольцевой дороге", "en": "Buy an eSIM for Iceland: Reykjavík and the Ring Road"},
+      "searchQuery": {
+        "ru": "купить есим для Исландии",
+        "en": "buy eSIM for Iceland"
+      },
+      "semanticIntent": {
+        "primary": "iceland-esim-reykjavik-ring-road",
+        "secondary": [
+          "есим Исландия интернет",
+          "Iceland road trip eSIM"
+        ]
+      },
+      "workingTitle": {
+        "ru": "Купить есим для Исландии: связь в Рейкьявике и на кольцевой дороге",
+        "en": "Buy an eSIM for Iceland: Reykjavík and the Ring Road"
+      },
       "readerPromise": "Проверить данные в городе, сохранить дорогу и прогноз офлайн и отделить навигационный резерв от обещаний покрытия.",
       "creativeConceptKey": "iceland-roadside-shelter-wind-paper-route",
       "creativeBrief": "Путешественник придерживает бумажный маршрут у ветреного придорожного укрытия, за ним чёрная дорога и низкие облака."
-    }
-  ],
-  "reservePublications": [
+    },
     {
-      "planOrder": 1,
+      "planOrder": 6,
+      "id": "portugal-porto-rainy-arcades-day",
+      "countryCode": "PT",
+      "region": "southern-europe",
+      "planKind": "editorial",
+      "contentFormat": "seasonal-trip-ideas",
+      "searchQuery": {
+        "ru": "Порту осенью дождливый день",
+        "en": "Porto rainy autumn day"
+      },
+      "semanticIntent": {
+        "primary": "porto-rain-arcades-river-day",
+        "secondary": [
+          "Порту осенью дождливый день",
+          "Porto rainy autumn day"
+        ]
+      },
+      "workingTitle": {
+        "ru": "Порту осенью дождливый день",
+        "en": "Porto rainy autumn day"
+      },
+      "readerPromise": "Узкий сценарий porto-rain-arcades-river-day без дублирования соседних интентов.",
+      "creativeConceptKey": "Porto arcades tram window rain",
+      "creativeBrief": "Porto arcades tram window rain"
+    },
+    {
+      "planOrder": 7,
+      "id": "rwanda-kigali-neighbourhood-craft-day",
+      "countryCode": "RW",
+      "region": "east-africa",
+      "planKind": "editorial",
+      "contentFormat": "culture-food-or-local-experience",
+      "searchQuery": {
+        "ru": "Кигали ремесла районы день",
+        "en": "Kigali craft neighbourhood day"
+      },
+      "semanticIntent": {
+        "primary": "kigali-craft-neighbourhood-day",
+        "secondary": [
+          "Кигали ремесла районы день",
+          "Kigali craft neighbourhood day"
+        ]
+      },
+      "workingTitle": {
+        "ru": "Кигали ремесла районы день",
+        "en": "Kigali craft neighbourhood day"
+      },
+      "readerPromise": "Узкий сценарий kigali-craft-neighbourhood-day без дублирования соседних интентов.",
+      "creativeConceptKey": "Kigali basket workshop shaded veranda",
+      "creativeBrief": "Kigali basket workshop shaded veranda"
+    },
+    {
+      "planOrder": 8,
+      "id": "argentina-mendoza-shade-city-day",
+      "countryCode": "AR",
+      "region": "south-america",
+      "planKind": "editorial",
+      "contentFormat": "practical-travel-scenario",
+      "searchQuery": {
+        "ru": "Мендоса город тень один день",
+        "en": "Mendoza shaded city day"
+      },
+      "semanticIntent": {
+        "primary": "mendoza-shade-plaza-city-day",
+        "secondary": [
+          "Мендоса город тень один день",
+          "Mendoza shaded city day"
+        ]
+      },
+      "workingTitle": {
+        "ru": "Мендоса город тень один день",
+        "en": "Mendoza shaded city day"
+      },
+      "readerPromise": "Узкий сценарий mendoza-shade-plaza-city-day без дублирования соседних интентов.",
+      "creativeConceptKey": "Mendoza irrigation channel plane tree shade",
+      "creativeBrief": "Mendoza irrigation channel plane tree shade"
+    },
+    {
+      "planOrder": 9,
       "id": "esim-without-physical-sim",
       "scope": "global",
       "region": "global",
@@ -7859,20 +9301,98 @@
       "semanticIntent": {
         "primary": "esim-independent-of-physical-sim",
         "secondary": [
-          "телефон только с есим в поездке",
-          "use eSIM with no SIM card inserted"
+          "работает ли есим без физической сим карты",
+          "does eSIM work without a physical SIM"
         ]
       },
       "workingTitle": {
-        "ru": "Работает ли есим без физической сим-карты",
-        "en": "Does an eSIM work without a physical SIM?"
+        "ru": "работает ли есим без физической сим карты",
+        "en": "does eSIM work without a physical SIM"
       },
-      "readerPromise": "Отделить цифровой профиль от физического слота, проверить совместимость и подготовить резервный доступ к заказу до поездки.",
-      "creativeConceptKey": "mountain-cabin-empty-card-tray-map",
-      "creativeBrief": "Путешественник собирает маршрут у окна горной хижины; рядом закрытый пустой футляр для SIM и бумажная карта, без крупного плана телефона."
+      "readerPromise": "Узкий сценарий esim-independent-of-physical-sim без дублирования соседних интентов.",
+      "creativeConceptKey": "mountain cabin empty SIM tray paper map",
+      "creativeBrief": "mountain cabin empty SIM tray paper map"
     },
     {
-      "planOrder": 2,
+      "planOrder": 10,
+      "id": "netherlands-utrecht-canal-bookshop-day",
+      "countryCode": "NL",
+      "region": "western-europe",
+      "planKind": "editorial",
+      "contentFormat": "culture-food-or-local-experience",
+      "searchQuery": {
+        "ru": "Утрехт каналы книжные магазины день",
+        "en": "Utrecht canals bookshops day"
+      },
+      "semanticIntent": {
+        "primary": "utrecht-canal-bookshop-day",
+        "secondary": [
+          "Утрехт каналы книжные магазины день",
+          "Utrecht canals bookshops day"
+        ]
+      },
+      "workingTitle": {
+        "ru": "Утрехт каналы книжные магазины день",
+        "en": "Utrecht canals bookshops day"
+      },
+      "readerPromise": "Узкий сценарий utrecht-canal-bookshop-day без дублирования соседних интентов.",
+      "creativeConceptKey": "Utrecht lower wharf books bicycle morning",
+      "creativeBrief": "Utrecht lower wharf books bicycle morning"
+    },
+    {
+      "planOrder": 11,
+      "id": "madagascar-antananarivo-upper-town-morning",
+      "countryCode": "MG",
+      "region": "east-africa",
+      "planKind": "editorial",
+      "contentFormat": "destination-inspiration",
+      "searchQuery": {
+        "ru": "Антананариву верхний город утро",
+        "en": "Antananarivo upper town morning"
+      },
+      "semanticIntent": {
+        "primary": "antananarivo-upper-town-morning",
+        "secondary": [
+          "Антананариву верхний город утро",
+          "Antananarivo upper town morning"
+        ]
+      },
+      "workingTitle": {
+        "ru": "Антананариву верхний город утро",
+        "en": "Antananarivo upper town morning"
+      },
+      "readerPromise": "Узкий сценарий antananarivo-upper-town-morning без дублирования соседних интентов.",
+      "creativeConceptKey": "Antananarivo brick hillside rice baskets",
+      "creativeBrief": "Antananarivo brick hillside rice baskets"
+    },
+    {
+      "planOrder": 12,
+      "id": "mexico-oaxaca-market-comal-day",
+      "countryCode": "MX",
+      "region": "north-america",
+      "planKind": "editorial",
+      "contentFormat": "culture-food-or-local-experience",
+      "searchQuery": {
+        "ru": "Оахака рынок комаль один день",
+        "en": "Oaxaca market comal day"
+      },
+      "semanticIntent": {
+        "primary": "oaxaca-market-comal-day",
+        "secondary": [
+          "Оахака рынок комаль один день",
+          "Oaxaca market comal day"
+        ]
+      },
+      "workingTitle": {
+        "ru": "Оахака рынок комаль один день",
+        "en": "Oaxaca market comal day"
+      },
+      "readerPromise": "Узкий сценарий oaxaca-market-comal-day без дублирования соседних интентов.",
+      "creativeConceptKey": "Oaxaca market comal blue corn smoke",
+      "creativeBrief": "Oaxaca market comal blue corn smoke"
+    },
+    {
+      "planOrder": 13,
       "id": "esim-signal-vs-physical-sim",
       "scope": "global",
       "region": "global",
@@ -7885,20 +9405,98 @@
       "semanticIntent": {
         "primary": "esim-form-factor-signal-comparison",
         "secondary": [
-          "есим и качество связи",
-          "eSIM reception compared with SIM card"
+          "у есим хуже сигнал чем у обычной сим",
+          "does eSIM have worse signal than physical SIM"
         ]
       },
       "workingTitle": {
-        "ru": "Влияет ли есим на качество сигнала",
-        "en": "Does eSIM affect signal strength?"
+        "ru": "у есим хуже сигнал чем у обычной сим",
+        "en": "does eSIM have worse signal than physical SIM"
       },
-      "readerPromise": "Отделить формат профиля от сети, диапазонов, покрытия и настроек телефона, затем провести сравнимый тест без переустановки.",
-      "creativeConceptKey": "coastal-cliff-weather-station-traveller",
-      "creativeBrief": "Путешественник у небольшой метеостанции на прибрежной тропе смотрит на далёкий город; сюжет о радиосвязи без экранов и логотипов."
+      "readerPromise": "Узкий сценарий esim-form-factor-signal-comparison без дублирования соседних интентов.",
+      "creativeConceptKey": "coastal weather station traveller signal test",
+      "creativeBrief": "coastal weather station traveller signal test"
     },
     {
-      "planOrder": 3,
+      "planOrder": 14,
+      "id": "georgia-kutaisi-rainy-city-day",
+      "countryCode": "GE",
+      "region": "caucasus",
+      "planKind": "editorial",
+      "contentFormat": "seasonal-trip-ideas",
+      "searchQuery": {
+        "ru": "Кутаиси дождливый день",
+        "en": "Kutaisi rainy city day"
+      },
+      "semanticIntent": {
+        "primary": "kutaisi-rainy-city-day",
+        "secondary": [
+          "Кутаиси дождливый день",
+          "Kutaisi rainy city day"
+        ]
+      },
+      "workingTitle": {
+        "ru": "Кутаиси дождливый день",
+        "en": "Kutaisi rainy city day"
+      },
+      "readerPromise": "Узкий сценарий kutaisi-rainy-city-day без дублирования соседних интентов.",
+      "creativeConceptKey": "Kutaisi market awning rain white bridge",
+      "creativeBrief": "Kutaisi market awning rain white bridge"
+    },
+    {
+      "planOrder": 15,
+      "id": "thailand-chiang-mai-craft-morning",
+      "countryCode": "TH",
+      "region": "southeast-asia",
+      "planKind": "editorial",
+      "contentFormat": "culture-food-or-local-experience",
+      "searchQuery": {
+        "ru": "Чиангмай ремесленные мастерские утро",
+        "en": "Chiang Mai craft morning"
+      },
+      "semanticIntent": {
+        "primary": "chiang-mai-craft-morning",
+        "secondary": [
+          "Чиангмай ремесленные мастерские утро",
+          "Chiang Mai craft morning"
+        ]
+      },
+      "workingTitle": {
+        "ru": "Чиангмай ремесленные мастерские утро",
+        "en": "Chiang Mai craft morning"
+      },
+      "readerPromise": "Узкий сценарий chiang-mai-craft-morning без дублирования соседних интентов.",
+      "creativeConceptKey": "Chiang Mai saa paper drying racks",
+      "creativeBrief": "Chiang Mai saa paper drying racks"
+    },
+    {
+      "planOrder": 16,
+      "id": "new-zealand-dunedin-wind-city-day",
+      "countryCode": "NZ",
+      "region": "oceania",
+      "planKind": "editorial",
+      "contentFormat": "practical-travel-scenario",
+      "searchQuery": {
+        "ru": "Данидин ветреный день",
+        "en": "Dunedin windy city day"
+      },
+      "semanticIntent": {
+        "primary": "dunedin-wind-city-day",
+        "secondary": [
+          "Данидин ветреный день",
+          "Dunedin windy city day"
+        ]
+      },
+      "workingTitle": {
+        "ru": "Данидин ветреный день",
+        "en": "Dunedin windy city day"
+      },
+      "readerPromise": "Узкий сценарий dunedin-wind-city-day без дублирования соседних интентов.",
+      "creativeConceptKey": "Dunedin stone station coat in wind",
+      "creativeBrief": "Dunedin stone station coat in wind"
+    },
+    {
+      "planOrder": 17,
       "id": "esim-on-smartwatch",
       "scope": "global",
       "region": "global",
@@ -7911,20 +9509,98 @@
       "semanticIntent": {
         "primary": "smartwatch-esim-plan-compatibility",
         "secondary": [
-          "туристическая есим на часах",
-          "travel eSIM on cellular watch"
+          "есим для умных часов",
+          "eSIM for smartwatch"
         ]
       },
       "workingTitle": {
-        "ru": "Можно ли установить туристическую есим на умные часы",
-        "en": "Can you use a travel eSIM on a smartwatch?"
+        "ru": "есим для умных часов",
+        "en": "eSIM for smartwatch"
       },
-      "readerPromise": "Различить cellular-модель, операторский companion-план и самостоятельный профиль, не покупать телефонный travel-план по одному признаку eSIM.",
-      "creativeConceptKey": "forest-trail-runner-water-stop",
-      "creativeBrief": "Бегун делает паузу у лесного питьевого фонтанчика и сверяет бумажный маршрут; часы видны естественно, но не становятся рекламным крупным планом."
+      "readerPromise": "Узкий сценарий smartwatch-esim-plan-compatibility без дублирования соседних интентов.",
+      "creativeConceptKey": "forest trail runner paper route water stop",
+      "creativeBrief": "forest trail runner paper route water stop"
     },
     {
-      "planOrder": 4,
+      "planOrder": 18,
+      "id": "hungary-pecs-ceramic-hillside-afternoon",
+      "countryCode": "HU",
+      "region": "central-europe",
+      "planKind": "editorial",
+      "contentFormat": "culture-food-or-local-experience",
+      "searchQuery": {
+        "ru": "Печ керамика холмы день",
+        "en": "Pécs ceramics hillside afternoon"
+      },
+      "semanticIntent": {
+        "primary": "pecs-ceramic-hillside-afternoon",
+        "secondary": [
+          "Печ керамика холмы день",
+          "Pécs ceramics hillside afternoon"
+        ]
+      },
+      "workingTitle": {
+        "ru": "Печ керамика холмы день",
+        "en": "Pécs ceramics hillside afternoon"
+      },
+      "readerPromise": "Узкий сценарий pecs-ceramic-hillside-afternoon без дублирования соседних интентов.",
+      "creativeConceptKey": "Pecs ceramic glaze studio hillside light",
+      "creativeBrief": "Pecs ceramic glaze studio hillside light"
+    },
+    {
+      "planOrder": 19,
+      "id": "morocco-rabat-medina-ocean-day",
+      "countryCode": "MA",
+      "region": "north-africa",
+      "planKind": "editorial",
+      "contentFormat": "destination-inspiration",
+      "searchQuery": {
+        "ru": "Рабат медина океан один день",
+        "en": "Rabat medina ocean day"
+      },
+      "semanticIntent": {
+        "primary": "rabat-medina-ocean-day",
+        "secondary": [
+          "Рабат медина океан один день",
+          "Rabat medina ocean day"
+        ]
+      },
+      "workingTitle": {
+        "ru": "Рабат медина океан один день",
+        "en": "Rabat medina ocean day"
+      },
+      "readerPromise": "Узкий сценарий rabat-medina-ocean-day без дублирования соседних интентов.",
+      "creativeConceptKey": "Rabat blue gate Atlantic spray",
+      "creativeBrief": "Rabat blue gate Atlantic spray"
+    },
+    {
+      "planOrder": 20,
+      "id": "sri-lanka-galle-fort-monsoon-day",
+      "countryCode": "LK",
+      "region": "south-asia",
+      "planKind": "editorial",
+      "contentFormat": "seasonal-trip-ideas",
+      "searchQuery": {
+        "ru": "Галле форт дождливый день",
+        "en": "Galle Fort monsoon day"
+      },
+      "semanticIntent": {
+        "primary": "galle-fort-monsoon-day",
+        "secondary": [
+          "Галле форт дождливый день",
+          "Galle Fort monsoon day"
+        ]
+      },
+      "workingTitle": {
+        "ru": "Галле форт дождливый день",
+        "en": "Galle Fort monsoon day"
+      },
+      "readerPromise": "Узкий сценарий galle-fort-monsoon-day без дублирования соседних интентов.",
+      "creativeConceptKey": "Galle rampart monsoon umbrella lighthouse",
+      "creativeBrief": "Galle rampart monsoon umbrella lighthouse"
+    },
+    {
+      "planOrder": 21,
       "id": "esim-in-airplane-mode",
       "scope": "global",
       "region": "global",
@@ -7937,20 +9613,98 @@
       "semanticIntent": {
         "primary": "airplane-mode-esim-radio-boundary",
         "secondary": [
-          "есим и вай фай в самолёте",
-          "eSIM after turning off airplane mode"
+          "работает ли есим в авиарежиме",
+          "does eSIM work in airplane mode"
         ]
       },
       "workingTitle": {
-        "ru": "Что происходит с есим в авиарежиме",
-        "en": "What happens to an eSIM in Airplane Mode?"
+        "ru": "работает ли есим в авиарежиме",
+        "en": "does eSIM work in airplane mode"
       },
-      "readerPromise": "Понять разницу между установленным профилем, выключенной сотовой радиосвязью и отдельно включённым Wi-Fi, затем безопасно вернуть travel-линию после посадки.",
-      "creativeConceptKey": "night-train-cabin-reading-light-window",
-      "creativeBrief": "Ночная поездка в купе: путешественник читает бумажный маршрут у окна под локальным светом, за стеклом огни; без самолётного клише и интерфейсов."
+      "readerPromise": "Узкий сценарий airplane-mode-esim-radio-boundary без дублирования соседних интентов.",
+      "creativeConceptKey": "night train cabin paper route reading light",
+      "creativeBrief": "night train cabin paper route reading light"
     },
     {
-      "planOrder": 5,
+      "planOrder": 22,
+      "id": "czechia-olomouc-market-square-day",
+      "countryCode": "CZ",
+      "region": "central-europe",
+      "planKind": "editorial",
+      "contentFormat": "culture-food-or-local-experience",
+      "searchQuery": {
+        "ru": "Оломоуц рынок площадь один день",
+        "en": "Olomouc market square day"
+      },
+      "semanticIntent": {
+        "primary": "olomouc-market-square-day",
+        "secondary": [
+          "Оломоуц рынок площадь один день",
+          "Olomouc market square day"
+        ]
+      },
+      "workingTitle": {
+        "ru": "Оломоуц рынок площадь один день",
+        "en": "Olomouc market square day"
+      },
+      "readerPromise": "Узкий сценарий olomouc-market-square-day без дублирования соседних интентов.",
+      "creativeConceptKey": "Olomouc cheese counter astronomical clock",
+      "creativeBrief": "Olomouc cheese counter astronomical clock"
+    },
+    {
+      "planOrder": 23,
+      "id": "chile-valdivia-river-market-day",
+      "countryCode": "CL",
+      "region": "south-america",
+      "planKind": "editorial",
+      "contentFormat": "practical-travel-scenario",
+      "searchQuery": {
+        "ru": "Вальдивия речной рынок один день",
+        "en": "Valdivia river market day"
+      },
+      "semanticIntent": {
+        "primary": "valdivia-river-market-day",
+        "secondary": [
+          "Вальдивия речной рынок один день",
+          "Valdivia river market day"
+        ]
+      },
+      "workingTitle": {
+        "ru": "Вальдивия речной рынок один день",
+        "en": "Valdivia river market day"
+      },
+      "readerPromise": "Узкий сценарий valdivia-river-market-day без дублирования соседних интентов.",
+      "creativeConceptKey": "Valdivia riverside market sea lions rain",
+      "creativeBrief": "Valdivia riverside market sea lions rain"
+    },
+    {
+      "planOrder": 24,
+      "id": "tunisia-sfax-medina-craft-morning",
+      "countryCode": "TN",
+      "region": "north-africa",
+      "planKind": "editorial",
+      "contentFormat": "culture-food-or-local-experience",
+      "searchQuery": {
+        "ru": "Сфакс медина ремесла утро",
+        "en": "Sfax medina craft morning"
+      },
+      "semanticIntent": {
+        "primary": "sfax-medina-craft-morning",
+        "secondary": [
+          "Сфакс медина ремесла утро",
+          "Sfax medina craft morning"
+        ]
+      },
+      "workingTitle": {
+        "ru": "Сфакс медина ремесла утро",
+        "en": "Sfax medina craft morning"
+      },
+      "readerPromise": "Узкий сценарий sfax-medina-craft-morning без дублирования соседних интентов.",
+      "creativeConceptKey": "Sfax medina copper workshop doorway",
+      "creativeBrief": "Sfax medina copper workshop doorway"
+    },
+    {
+      "planOrder": 25,
       "id": "esim-wifi-calling",
       "scope": "global",
       "region": "global",
@@ -7963,20 +9717,100 @@
       "semanticIntent": {
         "primary": "wifi-calling-esim-operator-dependency",
         "secondary": [
-          "звонки домашнего номера через интернет есим",
-          "Wi-Fi Calling over travel eSIM data"
+          "работают ли звонки по wifi с есим",
+          "does Wi-Fi Calling work with eSIM"
         ]
       },
       "workingTitle": {
-        "ru": "Работают ли звонки по Wi-Fi с есим",
-        "en": "Does Wi-Fi Calling work with an eSIM?"
+        "ru": "работают ли звонки по wifi с есим",
+        "en": "does Wi-Fi Calling work with eSIM"
       },
-      "readerPromise": "Проверить поддержку у устройства и домашнего оператора, отделить обычный Wi-Fi от мобильных данных второй линии и избежать обещаний бесплатных звонков.",
-      "creativeConceptKey": "alpine-guesthouse-window-evening-call",
-      "creativeBrief": "Путешественник разговаривает у окна альпийского гостевого дома вечером; на столе ключ и бумажная карта, телефон не показан экраном."
+      "readerPromise": "Узкий сценарий wifi-calling-esim-operator-dependency без дублирования соседних интентов.",
+      "creativeConceptKey": "alpine guesthouse evening window call",
+      "creativeBrief": "alpine guesthouse evening window call"
     },
     {
-      "planOrder": 6,
+      "planOrder": 26,
+      "id": "italy-bologna-porticoes-rain-day",
+      "countryCode": "IT",
+      "region": "southern-europe",
+      "planKind": "editorial",
+      "contentFormat": "seasonal-trip-ideas",
+      "searchQuery": {
+        "ru": "Болонья портики дождливый день",
+        "en": "Bologna porticoes rainy day"
+      },
+      "semanticIntent": {
+        "primary": "bologna-porticoes-rain-day",
+        "secondary": [
+          "Болонья портики дождливый день",
+          "Bologna porticoes rainy day"
+        ]
+      },
+      "workingTitle": {
+        "ru": "Болонья портики дождливый день",
+        "en": "Bologna porticoes rainy day"
+      },
+      "readerPromise": "Узкий сценарий bologna-porticoes-rain-day без дублирования соседних интентов.",
+      "creativeConceptKey": "Bologna portico bicycle wet terracotta",
+      "creativeBrief": "Bologna portico bicycle wet terracotta"
+    },
+    {
+      "planOrder": 27,
+      "id": "kenya-mombasa-old-town-coast-day",
+      "countryCode": "KE",
+      "region": "east-africa",
+      "planKind": "editorial",
+      "contentFormat": "destination-inspiration",
+      "searchQuery": {
+        "ru": "Момбаса старый город побережье день",
+        "en": "Mombasa old town coast day"
+      },
+      "semanticIntent": {
+        "primary": "mombasa-old-town-coast-day",
+        "secondary": [
+          "Момбаса старый город побережье день",
+          "Mombasa old town coast day"
+        ]
+      },
+      "workingTitle": {
+        "ru": "Момбаса старый город побережье день",
+        "en": "Mombasa old town coast day"
+      },
+      "readerPromise": "Узкий сценарий mombasa-old-town-coast-day без дублирования соседних интентов.",
+      "creativeConceptKey": "Mombasa carved door ocean lane",
+      "creativeBrief": "Mombasa carved door ocean lane"
+    },
+    {
+      "planOrder": 28,
+      "id": "taiwan-tainan-temple-market-morning",
+      "countryCode": "TW",
+      "region": "east-asia",
+      "planKind": "editorial",
+      "contentFormat": "culture-food-or-local-experience",
+      "searchQuery": {
+        "ru": "Тайнань храм рынок утро",
+        "en": "Tainan temple market morning"
+      },
+      "semanticIntent": {
+        "primary": "tainan-temple-market-morning",
+        "secondary": [
+          "Тайнань храм рынок утро",
+          "Tainan temple market morning"
+        ]
+      },
+      "workingTitle": {
+        "ru": "Тайнань храм рынок утро",
+        "en": "Tainan temple market morning"
+      },
+      "readerPromise": "Узкий сценарий tainan-temple-market-morning без дублирования соседних интентов.",
+      "creativeConceptKey": "Tainan temple incense breakfast stall",
+      "creativeBrief": "Tainan temple incense breakfast stall"
+    }
+  ],
+  "reservePublications": [
+    {
+      "planOrder": 1,
       "id": "esim-with-imessage-facetime",
       "scope": "global",
       "region": "global",
@@ -8002,7 +9836,7 @@
       "creativeBrief": "Путешественница отправляет сообщение семье с открытой палубы небольшого парома; лицо вполоборота, море и берег важнее устройства."
     },
     {
-      "planOrder": 7,
+      "planOrder": 2,
       "id": "lost-phone-with-esim",
       "scope": "global",
       "region": "global",
@@ -8028,7 +9862,7 @@
       "creativeBrief": "Путешественник у стойки находок на железнодорожном вокзале раскладывает билет и ключи; тревога читается по ситуации, без крупного плана телефона."
     },
     {
-      "planOrder": 8,
+      "planOrder": 3,
       "id": "erase-phone-with-esim-before-sale",
       "scope": "global",
       "region": "global",
