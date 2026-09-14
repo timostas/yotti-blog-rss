@@ -8537,7 +8537,7 @@
             "title",
             "publishedAt"
           ],
-          "sourceStatus": "REVIEW",
+          "sourceStatus": "SOURCE_READY",
           "siteStatus": "AWAITING_OWNER_SYNC",
           "audit": "docs/remediation/ecuador-2026-09-14.md"
         }
