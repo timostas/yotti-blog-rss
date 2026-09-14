@@ -26,7 +26,7 @@ cover:
 published: true
 editorial:
   authorUrl: "https://yotti.net/blog"
-  modifiedAt: "2026-09-14T04:21:39.000Z"
+  modifiedAt: "2026-09-14T05:07:28.000Z"
   imageTitle: "Иллюстрация поездки на Галапагосы"
   imageDescription: "Созданная с помощью ИИ иллюстрация: морской лев и пассажирское судно у причала"
   sourceNotes:
@@ -126,7 +126,7 @@ editorial:
 На Галапагосах важно не перепутать аэропорт прилёта и остров проживания. Для прибытия через Бальтру в Пуэрто-Айору предстоит пересечь канал Итабака и продолжить путь по Санта-Крус. При прилёте на Сан-Кристобаль Пуэрто-Бакерисо-Морено находится на том же острове. Эти варианты описаны на [сайте национального парка Галапагос](https://galapagos.gob.ec/informacion-de-interes-para-la-llegada-a-las-islas/).
 
 <figure class="yotti-information-graphic">
-  <img src="https://timostas.github.io/yotti-blog-rss/assets/inline/ecuador-v2-arrivals-ru.webp" srcset="https://timostas.github.io/yotti-blog-rss/assets/inline/ecuador-v2-arrivals-ru-384w.webp 384w, https://timostas.github.io/yotti-blog-rss/assets/inline/ecuador-v2-arrivals-ru-720w.webp 720w, https://timostas.github.io/yotti-blog-rss/assets/inline/ecuador-v2-arrivals-ru-960w.webp 960w, https://timostas.github.io/yotti-blog-rss/assets/inline/ecuador-v2-arrivals-ru.webp 1200w" sizes="(max-width: 760px) calc(100vw - 56px), 760px" width="1200" height="800" loading="lazy" decoding="async" alt="Бальтра: переправа через Итабаку на Санта-Крус; Сан-Кристобаль: прибытие на остров Пуэрто-Бакерисо-Морено">
+  <img src="https://timostas.github.io/yotti-blog-rss/assets/inline/ecuador-v2-arrivals-ru.webp" srcset="https://timostas.github.io/yotti-blog-rss/assets/inline/ecuador-v2-arrivals-ru-384w.webp 384w, https://timostas.github.io/yotti-blog-rss/assets/inline/ecuador-v2-arrivals-ru-720w.webp 720w, https://timostas.github.io/yotti-blog-rss/assets/inline/ecuador-v2-arrivals-ru-960w.webp 960w, https://timostas.github.io/yotti-blog-rss/assets/inline/ecuador-v2-arrivals-ru.webp 1200w" sizes="(max-width: 760px) calc(100vw - 56px), 760px" width="1200" height="800" loading="lazy" decoding="async" alt="Бальтра: переправа через Итабаку на Санта-Крус; Сан-Кристобаль: город Пуэрто-Бакерисо-Морено находится на том же острове">
   <figcaption>При прилёте через Бальтру сохраните инструкции на весь путь до Пуэрто-Айоры, включая переправу.</figcaption>
 </figure>
 

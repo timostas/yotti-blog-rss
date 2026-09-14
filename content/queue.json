@@ -8396,7 +8396,7 @@
       "semanticLinkClass": "standard",
       "publicUrls": {
         "ru": "https://yotti.net/blog/ecuador/kupit-esim-dlya-ekvadora-svyaz-v-kito-i-na-galapagosah",
-        "en": "https://yotti.net/en/blog/ecuador/buy-an-esim-for-ecuador-connectivity-in-quito-and-the-galapagos"
+        "en": "https://yotti.net/en/blog/ecuador/buy-an-esim-for-ecuador-connectivity-in-quito-and-the-gal-pagos"
       },
       "internalArticleLinks": {
         "ru": [
@@ -8538,7 +8538,15 @@
             "publishedAt"
           ],
           "sourceStatus": "SOURCE_READY",
-          "siteStatus": "AWAITING_OWNER_SYNC",
+          "siteStatus": "SYNC_CONFIRMED_CONTENT_PRESENT_SITE_SIDE_P1",
+          "ownerSyncConfirmedAt": "2026-09-14",
+          "postSyncQa": {
+            "contentPresent": ["ru", "en"],
+            "viewportWidthsChecked": [360, 390, 720, 1440],
+            "siteIssues": ["responsive_attrs_stripped", "inline_lazy_async_stripped", "reduced_motion_source_stripped"],
+            "correctionAwaitingResync": "ru_arrivals_alt_city_not_island",
+            "publiclyVerified": false
+          },
           "audit": "docs/remediation/ecuador-2026-09-14.md"
         }
       },
