@@ -8343,7 +8343,7 @@
       "editorialModel": {
         "name": "gpt-6-astra",
         "effort": "xhigh",
-        "role": "single_pair_substantive_remediation"
+        "role": "owner_authorized_literary_revision"
       },
       "generationAttempts": {
         "ru": 1,
@@ -8471,15 +8471,17 @@
             "technical"
           ],
           "findings": [
-            "Лид: искусственная городская линия с островным резервом -> прямой вопрос о включении островов в тариф.",
-            "Повторы и четыре одинаковые схемы -> отдельные задачи покрытия, расчёта, установки и прибытия.",
-            "Подпись теста обещала четыре проверки, рисунок показывал три -> новая анимация из трёх полных этапов.",
-            "Бальтра и Сан-Кристобаль -> разные пути прибытия подтверждены сайтом нацпарка.",
-            "Генерированные фото не подтверждают географию -> не выдаются за документальные; раскрыто происхождение."
+            "Лид «одну вещь, которую легко упустить» -> «Если после Кито вы летите на Галапагосы…»: действие сразу, без искусственной интриги; неопределённость покрытия сохранена.",
+            "«От фактического события активации» -> «с какого момента отсчитывается этот срок»: простое действие вместо канцеляризма, условия конкретного заказа не заменены универсальным правилом.",
+            "Повторные оговорки сгруппированы по решениям: отсутствие собственных замеров в лиде, пределы проверки в Кито рядом с тестом, выбор для подтверждённой материковой части перед оплатой.",
+            "«Для подготовки телефона различие вполне конкретное» удалено: раздел сразу объясняет путь через Бальтру и сохранение деталей встречи; новые цены или время пути не добавлены.",
+            "Финал «обосновать обещанием связи» заменён конкретным условным решением, без заявления, что есим на островах не заработает.",
+            "Отдельное перечитывание исправило новые обороты «разные запросы к связи», «К имени встречающего пригодятся» и «закладывать связь в рабочие планы».",
+            "Удачные фрагменты про Бальтру/Санта-Крус и авиарежим сохранены; три ветви диагностики, условный расчёт, четыре внутренние ссылки и шесть подписей на месте."
           ],
-          "recheck": "Editorial source review complete; tests and browser results in docs/remediation/ecuador-2026-09-14.md. Public Yotti acceptance PENDING.",
+          "recheck": "Distinct editorial read-through complete; tests and viewport findings in docs/remediation/ecuador-literary-pass-2026-09-14.md. Awaiting owner RSS sync; no independent human review claimed.",
           "visualInspection": {
-            "result": "Reviewed; per-file findings in audit",
+            "result": "All seven existing images viewed again and captions checked against them; no asset edits or regeneration.",
             "files": [
               "assets/covers/buy-esim-ecuador-quito-galapagos.webp",
               "assets/inline/ecuador-quito-morning.webp",
@@ -8488,7 +8490,8 @@
               "assets/inline/ecuador-v2-coverage-ru.webp",
               "assets/inline/ecuador-v2-data-ru.webp",
               "assets/inline/ecuador-v2-arrivals-ru.webp"
-            ]
+            ],
+            "reviewedAt": "2026-09-14"
           }
         },
         "en": {
@@ -8500,15 +8503,17 @@
             "technical"
           ],
           "findings": [
-            "Abstract product lead -> specific purchase decision for the selected island and plan.",
-            "Repeated offline paragraphs and visual templates -> separate coverage, arithmetic, setup and arrival functions.",
-            "Four-check caption versus three-row graphic -> replaced with a consistent three-stage animation.",
-            "General island arrival -> Baltra/Santa Cruz versus San Cristobal explained with a primary source.",
-            "Generated scenes -> explicitly disclosed illustrations, not documentary location or signal evidence."
+            "Lead «This guide is for… It covers…» replaced by a direct purchase question and practical preparation in Quito; no field test claimed.",
+            "«network geography» becomes «where the operator provides service»; carrier coverage and access through a travel package remain distinct.",
+            "«The arithmetic is reliable» removed: use personal daily usage and a buffer. The 300 MB figure remains a worked assumption, not a travel allowance recommendation.",
+            "«For this guide, the useful distinction…» removed in favour of actual Baltra/San Cristobal arrival preparation; no current fare or journey-time claims added.",
+            "«Make the purchase on confirmed terms» becomes «Before you buy»; ending is a mainland-only conditional decision, not a disclaimer aphorism.",
+            "Second read repaired the new awkward status-bar comparison. Regional device support, home-SIM charges, validity, failure branches and offline-map limits remain.",
+            "Independently edited: network explanation stays with island questions and device checks in setup; four same-locale internal links are preserved."
           ],
-          "recheck": "Editorial source review complete; tests and browser results in docs/remediation/ecuador-2026-09-14.md. Public Yotti acceptance PENDING.",
+          "recheck": "Distinct editorial read-through complete; tests and viewport findings in docs/remediation/ecuador-literary-pass-2026-09-14.md. Awaiting owner RSS sync; no independent human review claimed.",
           "visualInspection": {
-            "result": "Reviewed; per-file findings in audit",
+            "result": "All seven existing images viewed again and captions checked against them; no asset edits or regeneration.",
             "files": [
               "assets/covers/buy-esim-ecuador-quito-galapagos.webp",
               "assets/inline/ecuador-quito-morning.webp",
@@ -8517,7 +8522,8 @@
               "assets/inline/ecuador-v2-coverage-en.webp",
               "assets/inline/ecuador-v2-data-en.webp",
               "assets/inline/ecuador-v2-arrivals-en.webp"
-            ]
+            ],
+            "reviewedAt": "2026-09-14"
           }
         }
       },
@@ -8541,13 +8547,56 @@
           "siteStatus": "SYNC_CONFIRMED_CONTENT_PRESENT_SITE_SIDE_P1",
           "ownerSyncConfirmedAt": "2026-09-14",
           "postSyncQa": {
-            "contentPresent": ["ru", "en"],
-            "viewportWidthsChecked": [360, 390, 720, 1440],
-            "siteIssues": ["responsive_attrs_stripped", "inline_lazy_async_stripped", "reduced_motion_source_stripped"],
+            "contentPresent": [
+              "ru",
+              "en"
+            ],
+            "viewportWidthsChecked": [
+              360,
+              390,
+              720,
+              1440
+            ],
+            "siteIssues": [
+              "responsive_attrs_stripped",
+              "inline_lazy_async_stripped",
+              "reduced_motion_source_stripped"
+            ],
             "correctionAwaitingResync": "ru_arrivals_alt_city_not_island",
             "publiclyVerified": false
           },
           "audit": "docs/remediation/ecuador-2026-09-14.md"
+        },
+        "literaryRevision": {
+          "date": "2026-09-14",
+          "modifiedAt": "2026-09-14T05:54:50.000Z",
+          "ownerApproved": true,
+          "sourceBase": "653cf0be2c52c00007c10229d1a99a1f92b6f793",
+          "model": "gpt-6-astra",
+          "effort": "xhigh",
+          "effortReason": "Current owner task runs at xhigh; no additional agent or escalation.",
+          "scope": "Targeted literary revision of both Ecuador locales; assets and stable publication identity retained.",
+          "attempts": {
+            "textRevisionPerLocale": 1,
+            "separateEditorialReadPerLocale": 1,
+            "targetedRepairPerLocale": 1,
+            "newImageGenerations": 0
+          },
+          "audit": "docs/remediation/ecuador-literary-pass-2026-09-14.md",
+          "sourceStatus": "SOURCE_READY",
+          "siteStatus": "AWAITING_OWNER_SYNC_OF_LITERARY_REVISION",
+          "preserves": [
+            "title",
+            "slug",
+            "publishedAt",
+            "description",
+            "categories",
+            "sources",
+            "cover",
+            "image_markup",
+            "internal_link_destinations"
+          ],
+          "factualLimits": "No field measurements or confirmed package-by-island coverage; no unsupported rates, prices, speeds or firsthand narrative added."
         }
       },
       "internalContextLinks": [
@@ -8657,6 +8706,104 @@
             }
           },
           "disposition": "Superseded after owner rejected depth, voice and repetitive graphics. HTTP acceptance was not editorial acceptance."
+        },
+        {
+          "date": "2026-09-14",
+          "sourceCommit": "653cf0be2c52c00007c10229d1a99a1f92b6f793",
+          "editorialModel": {
+            "name": "gpt-6-astra",
+            "effort": "xhigh",
+            "role": "single_pair_substantive_remediation"
+          },
+          "editorialEvidence": {
+            "ru": {
+              "model": "gpt-6-astra",
+              "effort": "xhigh",
+              "reviewedAt": "2026-09-14",
+              "weakestDimensions": [
+                "specificity",
+                "technical"
+              ],
+              "findings": [
+                "Лид: искусственная городская линия с островным резервом -> прямой вопрос о включении островов в тариф.",
+                "Повторы и четыре одинаковые схемы -> отдельные задачи покрытия, расчёта, установки и прибытия.",
+                "Подпись теста обещала четыре проверки, рисунок показывал три -> новая анимация из трёх полных этапов.",
+                "Бальтра и Сан-Кристобаль -> разные пути прибытия подтверждены сайтом нацпарка.",
+                "Генерированные фото не подтверждают географию -> не выдаются за документальные; раскрыто происхождение."
+              ],
+              "recheck": "Editorial source review complete; tests and browser results in docs/remediation/ecuador-2026-09-14.md. Public Yotti acceptance PENDING.",
+              "visualInspection": {
+                "result": "Reviewed; per-file findings in audit",
+                "files": [
+                  "assets/covers/buy-esim-ecuador-quito-galapagos.webp",
+                  "assets/inline/ecuador-quito-morning.webp",
+                  "assets/inline/ecuador-galapagos-pier-preparation.webp",
+                  "assets/inline/ecuador-v2-activation-ru.webp",
+                  "assets/inline/ecuador-v2-coverage-ru.webp",
+                  "assets/inline/ecuador-v2-data-ru.webp",
+                  "assets/inline/ecuador-v2-arrivals-ru.webp"
+                ]
+              }
+            },
+            "en": {
+              "model": "gpt-6-astra",
+              "effort": "xhigh",
+              "reviewedAt": "2026-09-14",
+              "weakestDimensions": [
+                "specificity",
+                "technical"
+              ],
+              "findings": [
+                "Abstract product lead -> specific purchase decision for the selected island and plan.",
+                "Repeated offline paragraphs and visual templates -> separate coverage, arithmetic, setup and arrival functions.",
+                "Four-check caption versus three-row graphic -> replaced with a consistent three-stage animation.",
+                "General island arrival -> Baltra/Santa Cruz versus San Cristobal explained with a primary source.",
+                "Generated scenes -> explicitly disclosed illustrations, not documentary location or signal evidence."
+              ],
+              "recheck": "Editorial source review complete; tests and browser results in docs/remediation/ecuador-2026-09-14.md. Public Yotti acceptance PENDING.",
+              "visualInspection": {
+                "result": "Reviewed; per-file findings in audit",
+                "files": [
+                  "assets/covers/buy-esim-ecuador-quito-galapagos.webp",
+                  "assets/inline/ecuador-quito-morning.webp",
+                  "assets/inline/ecuador-galapagos-pier-preparation.webp",
+                  "assets/inline/ecuador-v2-activation-en.webp",
+                  "assets/inline/ecuador-v2-coverage-en.webp",
+                  "assets/inline/ecuador-v2-data-en.webp",
+                  "assets/inline/ecuador-v2-arrivals-en.webp"
+                ]
+              }
+            }
+          },
+          "editorialScorecard": {
+            "ru": {
+              "total": 88,
+              "dimensions": {
+                "intent": 14,
+                "utility": 14,
+                "specificity": 12,
+                "trust": 13,
+                "voice": 13,
+                "structure": 9,
+                "technical": 8,
+                "commercialRestraint": 5
+              }
+            },
+            "en": {
+              "total": 88,
+              "dimensions": {
+                "intent": 14,
+                "utility": 14,
+                "specificity": 12,
+                "trust": 13,
+                "voice": 13,
+                "structure": 9,
+                "technical": 8,
+                "commercialRestraint": 5
+              }
+            }
+          },
+          "disposition": "Preserved before the owner-authorized literary pass. Earlier self-scores did not establish literary quality; weaknesses are recorded in docs/remediation/ecuador-literary-review-2026-09-14.md."
         }
       ]
     },

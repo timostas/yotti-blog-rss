@@ -26,7 +26,7 @@ cover:
 published: true
 editorial:
   authorUrl: "https://yotti.net/en/blog"
-  modifiedAt: "2026-09-14T04:21:39.000Z"
+  modifiedAt: "2026-09-14T05:54:50.000Z"
   imageTitle: "Galápagos travel illustration"
   imageDescription: "AI-created editorial illustration of a sea lion and passenger vessel beside a pier"
   sourceNotes:
@@ -42,72 +42,72 @@ editorial:
       url: "https://support.google.com/maps/answer/6291838?hl=en"
 ---
 
-Buying an Ecuador eSIM for a trip through Quito and the Galápagos takes one extra check: does the particular plan support the islands you will visit? A country name on a product page is not a confirmation for every island. Nor does a successful connection in Quito prove what will happen after the next flight.
+Before buying an Ecuador eSIM, tell the provider if your trip includes the Galápagos. Ask about the particular islands and the plan you intend to buy. A product listed under “Ecuador” may tell you too little about the island part of your trip, especially if you will spend some nights aboard a vessel.
 
-This guide is for travellers combining mainland Ecuador with an island stay. It covers the questions to ask before paying, a sensible data estimate, the first connection in Quito and the information to save for arrival. We have not tested mobile reception in the Galápagos. Where plan availability is unconfirmed, we say so.
+Quito is a useful place to test your setup before the next flight: you can get back onto Wi-Fi, open the order and contact support if necessary. It is also worth downloading the documents for arrival while you have a connection. We have not measured mobile reception in the Galápagos.
 
 <figure class="yotti-information-graphic">
   <picture>
     <source media="(prefers-reduced-motion: reduce)" srcset="https://timostas.github.io/yotti-blog-rss/assets/inline/ecuador-v2-activation-static-en-384w.webp 384w, https://timostas.github.io/yotti-blog-rss/assets/inline/ecuador-v2-activation-static-en-720w.webp 720w, https://timostas.github.io/yotti-blog-rss/assets/inline/ecuador-v2-activation-static-en-960w.webp 960w, https://timostas.github.io/yotti-blog-rss/assets/inline/ecuador-v2-activation-static-en.webp 1200w" sizes="(max-width: 760px) calc(100vw - 56px), 760px">
   <img src="https://timostas.github.io/yotti-blog-rss/assets/inline/ecuador-v2-activation-en.webp" srcset="https://timostas.github.io/yotti-blog-rss/assets/inline/ecuador-v2-activation-en-384w.webp 384w, https://timostas.github.io/yotti-blog-rss/assets/inline/ecuador-v2-activation-en-720w.webp 720w, https://timostas.github.io/yotti-blog-rss/assets/inline/ecuador-v2-activation-en-960w.webp 960w, https://timostas.github.io/yotti-blog-rss/assets/inline/ecuador-v2-activation-en.webp 1200w" sizes="(max-width: 760px) calc(100vw - 56px), 760px" width="1200" height="800" decoding="async" alt="Three eSIM preparation stages: install at home, test in Quito and save documents before the island flight">
   </picture>
-  <figcaption>The repeating highlight shows the order of preparation. Every step remains visible; this is not a coverage map.</figcaption>
+  <figcaption>Prepare the profile, test it in Quito and download the arrival documents before flying to the islands. Follow the plan's installation terms.</figcaption>
 </figure>
 
-## Start with your island, not the country selector
+## What to ask about the islands
 
-Give the provider a specific itinerary. A stay in Puerto Ayora, nights on San Cristóbal and a trip aboard a vessel raise different connectivity questions. If you will also visit Isabela, include it in the request.
+The provider needs more than “Quito and the Galápagos”. Give the island names and the places where you will stay. A few nights in Puerto Ayora, a hotel on San Cristóbal and nights aboard a vessel raise different questions. Include Isabela too if it is part of your itinerary.
 
-Ask whether the exact plan includes the Galápagos, which local network it can use and whether availability has been confirmed for your destinations. Include the plan name or a product link. Otherwise, an answer about the provider's Ecuador products in general may not answer your question.
+Send the plan name or product link with a short question: “Does this package work in these places, and which local network does it use?” Look for an answer about that package and those islands. A description of the company's Ecuador products in general is less useful, particularly if you need to arrange work calls during the trip.
 
-There are two separate things to establish: that the local network reaches the area, and that your travel plan has access there. If the provider confirms only mainland Ecuador, the sensible purchase is a mainland connection. The island portion still needs a separate answer.
+Network coverage and access through your travel plan both matter. A local network may serve an area without every travel eSIM having access to it. “It should work” leaves that question open; ask the provider to clarify what has been confirmed for your destinations before relying on it for work.
 
 <figure class="yotti-information-graphic">
   <img src="https://timostas.github.io/yotti-blog-rss/assets/inline/ecuador-v2-coverage-en.webp" srcset="https://timostas.github.io/yotti-blog-rss/assets/inline/ecuador-v2-coverage-en-384w.webp 384w, https://timostas.github.io/yotti-blog-rss/assets/inline/ecuador-v2-coverage-en-720w.webp 720w, https://timostas.github.io/yotti-blog-rss/assets/inline/ecuador-v2-coverage-en-960w.webp 960w, https://timostas.github.io/yotti-blog-rss/assets/inline/ecuador-v2-coverage-en.webp 1200w" sizes="(max-width: 760px) calc(100vw - 56px), 760px" width="1200" height="800" loading="lazy" decoding="async" alt="Three checks before buying: plan inclusion, partner network and availability on the destination island">
   <figcaption>Name both the plan and the island when asking the provider about availability.</figcaption>
 </figure>
 
-When checked on 14 September 2026, Yotti's Ecuador page listed Claro. Read the selected plan's current details before paying. Claro's own [coverage map](https://www.claro.com.ec/personas/servicios/servicios-moviles/cobertura/) can help you investigate its network geography, but it does not confirm your travel plan's access or measure reception inside your hotel.
+Yotti's Ecuador page listed Claro when checked on 14 September 2026. The selected package's details give the relevant network list. Claro's [coverage map](https://www.claro.com.ec/personas/servicios/servicios-moviles/cobertura/) helps you check where the operator provides service; the eSIM seller can answer questions about access through its plan. For reception in a particular hotel room, ask the accommodation as well.
 
-If your holiday includes nights aboard a vessel, ask the operator about onboard internet. Wi-Fi supplied by the vessel, where available, is a separate service. An Ecuador mobile-data plan should not be treated as a promise of internet throughout a sea crossing.
+For nights aboard a vessel, ask the trip operator about onboard internet and its terms. Any Wi-Fi supplied on board is a separate service, not part of your Ecuador eSIM. Explain what you need it for: exchanging messages and holding a work video call are different demands. Do not schedule an important call during a crossing on the strength of “Wi-Fi available” alone.
 
 ## Choose data for what you actually do
 
-A week of messages and saved maps is a different purchase from a week of video calls, uploads and laptop work. Trip length alone is a poor way to choose an allowance.
+Think about what you will do online over the week. Messages and occasional address checks call for a different allowance from video calls, uploads and laptop work. Counting the days is only part of the calculation.
 
-Look at your phone's recent usage for days that resemble your travel routine. Check cloud photo backups, app updates and tethering separately. Those background tasks can make a light-looking day surprisingly expensive in data. Our guide to [how much data a travel eSIM needs](https://yotti.net/en/blog/how-much-data-do-you-need-for-a-travel-esim) explains how to break down the estimate.
+Your phone's recent usage is a useful starting point, provided those days resemble how you expect to use it abroad. Look at cloud photo backups, app updates and tethering separately; they are easy to overlook when you are thinking about maps and messages. Our guide to [how much data a travel eSIM needs](https://yotti.net/en/blog/how-much-data-do-you-need-for-a-travel-esim) explains how to work through the estimate.
 
-Here is a worked example, not a claim about typical usage. If you budget 300 MB a day for seven days, the total is 2.1 GB before a buffer. Add your own allowance for calls, uploads or other tasks. The arithmetic is reliable; the 300 MB assumption is useful only if it reflects your habits. It is not a recommendation that every traveller buy the nearest package above 2.1 GB.
+For a simple example, allow 300 MB a day for seven days: that comes to 2.1 GB before a buffer. Replace 300 MB with your own daily figure, then add anything your usual routine does not include, such as extra calls, photo uploads or work on a laptop. The example shows how to calculate an allowance, not how much every traveller will use.
 
 <figure class="yotti-information-graphic">
   <img src="https://timostas.github.io/yotti-blog-rss/assets/inline/ecuador-v2-data-en.webp" srcset="https://timostas.github.io/yotti-blog-rss/assets/inline/ecuador-v2-data-en-384w.webp 384w, https://timostas.github.io/yotti-blog-rss/assets/inline/ecuador-v2-data-en-720w.webp 720w, https://timostas.github.io/yotti-blog-rss/assets/inline/ecuador-v2-data-en-960w.webp 960w, https://timostas.github.io/yotti-blog-rss/assets/inline/ecuador-v2-data-en.webp 1200w" sizes="(max-width: 760px) calc(100vw - 56px), 760px" width="1200" height="800" loading="lazy" decoding="async" alt="Worked example: seven days at 300 megabytes a day equals 2.1 gigabytes before a personal buffer">
-  <figcaption>The 300 MB figure is an assumption for the example. Replace it with your own daily usage.</figcaption>
+  <figcaption>A seven-day example: 300 MB per day adds up to 2.1 GB before a buffer.</figcaption>
 </figure>
 
-Validity is a separate limit. A plan can expire with data still unused. Include your time in Quito as well as the island stay, and check which event starts the validity period. For an unlimited product, read any speed-reduction threshold, hotspot restriction and daily allowance. Extra data cannot solve an unavailable network.
+A plan can also expire with data left unused. Check when its validity starts and count the days in Quito as well as the island stay. With an unlimited plan, read the speed-reduction thresholds, hotspot restrictions and daily limits before comparing prices. Those terms tell you more about what you are buying than the word “unlimited”.
 
-## Prepare the phone while you still have time
+## Set up the phone before departure
 
-Confirm the exact device model and regional variant before buying. On an iPhone, also check whether the handset is carrier-locked; Apple explains the requirement in its [international eSIM guidance](https://support.apple.com/en-gb/118227). Android compatibility should be checked against the manufacturer and provider's information for that particular model.
+Check the exact phone model and regional variant before paying. An iPhone can support eSIM and still be locked to a carrier; Apple's [international eSIM guidance](https://support.apple.com/en-gb/118227) explains where to check. For Android, use the manufacturer and provider's information for your particular model rather than the brand name alone.
 
-Install the profile over dependable Wi-Fi before departure if the plan's instructions allow it. Downloading a profile and starting its validity are not necessarily the same event. The distinction is covered in our guide to [installing an eSIM before travel](https://yotti.net/en/blog/how-to-install-an-esim-before-travel-without-starting-it-too-early). Follow the purchased plan's terms rather than assuming it behaves like the last eSIM you used.
+If the plan allows advance installation, download the profile over dependable Wi-Fi before departure and save the instructions. Installation does not always start the validity period; that depends on the service you bought. Our guide to [installing an eSIM before travel](https://yotti.net/en/blog/how-to-install-an-esim-before-travel-without-starting-it-too-early) explains the distinction. The order details should settle the timing for this package, even if your last travel eSIM worked differently.
 
-Name the lines clearly, for example “Home” and “Ecuador”. During the trip, assign mobile data to the travel line and check whether automatic data switching is enabled. Your home line should not silently become the fallback for internet access.
+Names such as “Home” and “Ecuador” make the two lines easier to recognise in settings. Select “Ecuador” for mobile data during the trip. Also check automatic data switching, if your phone offers it: you do not want the home line taking over internet access when you intended to use the travel package.
 
-Yotti's Ecuador product page describes data service without a local number for ordinary calls and SMS. Messaging apps can use the internet connection, while the home number remains subject to the home carrier's service and charges. If you need that number for messages or codes, review [how to keep your home number with a travel eSIM](https://yotti.net/en/blog/how-to-keep-your-home-number-while-using-a-travel-esim). Turning off data roaming does not make every other use of the home SIM free.
+Yotti's Ecuador plans provide mobile data, without a local number for ordinary calls or SMS. Messaging apps use the data connection; your home number remains with your home carrier, under its terms and charges. If you need that number for messages or codes, read [how to keep your home number with a travel eSIM](https://yotti.net/en/blog/how-to-keep-your-home-number-while-using-a-travel-esim). Disabling data roaming does not make other services on the home SIM free.
 
 ## Use Quito to check the connection
 
-Test the eSIM before the island flight, somewhere you can return to Wi-Fi and open the order details. You are checking that the phone can use the intended line for internet access, not trying to prove coverage for the whole trip.
+Before the island flight, find somewhere with Wi-Fi to test the eSIM. If the mobile connection fails, you can get back online to read the instructions or contact support. Keep the order details available while you do the check.
 
-Enable the travel line, select it for mobile data and follow the plan's roaming instructions. Yotti's instructions require data roaming on its travel line. Then switch off Wi-Fi and load an ordinary web page. The network name in the status bar is not enough.
+Enable the travel line, select it for mobile data and follow the plan's roaming instructions. Yotti requires data roaming on its travel line. Switch off Wi-Fi and open an ordinary web page to check that data is getting through. The network name alone does not tell you whether the internet is working.
 
 <figure class="yotti-photo">
   <img src="https://timostas.github.io/yotti-blog-rss/assets/inline/ecuador-quito-morning.webp" srcset="https://timostas.github.io/yotti-blog-rss/assets/inline/ecuador-quito-morning-384w.webp 384w, https://timostas.github.io/yotti-blog-rss/assets/inline/ecuador-quito-morning-720w.webp 720w, https://timostas.github.io/yotti-blog-rss/assets/inline/ecuador-quito-morning-960w.webp 960w, https://timostas.github.io/yotti-blog-rss/assets/inline/ecuador-quito-morning.webp 1440w" sizes="(max-width: 760px) calc(100vw - 56px), 760px" width="1440" height="960" loading="lazy" decoding="async" alt="Editorial illustration of a pedestrian on a stone square with colonial-style buildings and hills">
-  <figcaption>An illustration for the mainland part of the journey. Test the connection before the island flight, with Wi-Fi available if needed.</figcaption>
+  <figcaption>For the first connection test, choose somewhere you can return to Wi-Fi and open the instructions.</figcaption>
 </figure>
 
-If the page loads, send a short message and check the accommodation address. Those small tasks test the apps you are likely to need. There is no need to spend data on a speed test merely to confirm that a message can be sent.
+Once the page loads, send a short message and open the accommodation address. This tests the apps you are likely to need on arrival, without spending data on a speed test. A successful check establishes that your setup works in Quito; it does not test reception on the islands.
 
 If it fails, separate the symptoms before changing settings:
 
@@ -115,9 +115,9 @@ If it fails, separate the symptoms before changing settings:
 - **A network name appears, but pages do not load:** check the mobile-data line, roaming setting and package status.
 - **One app fails while another works:** investigate the app before resetting the eSIM configuration.
 
-Our [signal-but-no-internet troubleshooting guide](https://yotti.net/en/blog/esim-has-signal-but-no-internet-what-to-check) gives a more detailed sequence. Avoid deleting the profile while support is investigating; reinstalling it may require a separate process. Send the location, device model and results of your checks, without publishing the installation QR code, passwords or banking codes.
+Follow our [signal-but-no-internet troubleshooting guide](https://yotti.net/en/blog/esim-has-signal-but-no-internet-what-to-check) for the next checks. Keep the profile installed while support investigates, because restoring it may require a separate process. Tell support where you are, which phone you use and what happened during the test. Do not publish the installation QR code, passwords or banking codes.
 
-## Your arrival airport changes what to save
+## Arriving on Baltra or San Cristóbal
 
 Baltra and San Cristóbal are not interchangeable arrival points. Travellers continuing from Baltra to Puerto Ayora cross the Itabaca Channel and travel onward on Santa Cruz. Puerto Baquerizo Moreno is on San Cristóbal itself. The [Galápagos National Park arrival information](https://galapagos.gob.ec/informacion-de-interes-para-la-llegada-a-las-islas/) describes both options.
 
@@ -126,27 +126,27 @@ Baltra and San Cristóbal are not interchangeable arrival points. Travellers con
   <figcaption>For a Baltra arrival, save the whole transfer to Puerto Ayora, including the channel crossing.</figcaption>
 </figure>
 
-For this guide, the useful distinction is the information you need on the phone. From Baltra, save the complete transfer sequence, including the crossing. On San Cristóbal, save the address and the agreed meeting details for that island. A flight ticket naming Baltra and accommodation on Santa Cruz can belong to the same journey; the different island names should not catch you by surprise at arrival.
+A ticket naming Baltra and accommodation on Santa Cruz can belong to the same journey. Save the full transfer sequence, including the crossing, so the different island names make sense when you arrive. For San Cristóbal, keep the address and the agreed meeting details for that island ready to open.
 
-This is not a timetable or a price guide. Confirm the current transfer arrangements with your accommodation or operator. Ask for the meeting point in writing and as a map pin, along with the company name and a contact if the flight is delayed. An instruction already stored on the phone can be shown to someone even when the conversation will not reload.
+Your accommodation or trip operator can confirm current transfer arrangements and costs. Ask for the meeting point in writing and as a map pin, the meeting time, the company name and a contact for delays. Download the message before the flight. You can then show the instructions to an airport employee even if the chat will not load.
 
-## Make one small folder you can open offline
+## Keep the arrival documents available offline
 
 Put the flight ticket, accommodation confirmation, transfer instructions and organiser's contact in one place. Then turn on Airplane Mode and open them. A link to a cloud document is not the same as a downloaded copy.
 
-Do the same with the map. Where supported, Google Maps allows an area to be saved, but offline use has limits: walking directions and current public-transport information are unavailable. [Google's documentation](https://support.google.com/maps/answer/6291838?hl=en) sets out those limits. Save the accommodation and meeting locations before the flight; a downloaded map is not a substitute for boat-boarding instructions.
+Open the map without a connection too. Google Maps lets you download areas where the feature is supported, but it cannot provide walking directions or current public-transport information offline. [Google's documentation](https://support.google.com/maps/answer/6291838?hl=en) explains the limits. Save the accommodation and meeting locations before the flight, with any boat-boarding instructions alongside them. A pin alone may not tell you where to find the person meeting you.
 
 <figure class="yotti-photo">
   <img src="https://timostas.github.io/yotti-blog-rss/assets/inline/ecuador-galapagos-pier-preparation.webp" srcset="https://timostas.github.io/yotti-blog-rss/assets/inline/ecuador-galapagos-pier-preparation-384w.webp 384w, https://timostas.github.io/yotti-blog-rss/assets/inline/ecuador-galapagos-pier-preparation-720w.webp 720w, https://timostas.github.io/yotti-blog-rss/assets/inline/ecuador-galapagos-pier-preparation-960w.webp 960w, https://timostas.github.io/yotti-blog-rss/assets/inline/ecuador-galapagos-pier-preparation.webp 1440w" sizes="(max-width: 760px) calc(100vw - 56px), 760px" width="1440" height="960" loading="lazy" decoding="async" alt="Editorial illustration of a traveller putting papers into a blue bag beside a pier">
-  <figcaption>Save the documents before boarding. The illustration does not identify a particular departure point.</figcaption>
+  <figcaption>The ticket and boarding instructions should open without a connection. This illustration shows no specific meeting point.</figcaption>
 </figure>
 
-If you plan to work from the islands, ask about internet in the place where you will actually sit. A connection at reception does not establish its quality in the room. For a call that must happen at a fixed time, confirm a usable arrangement beforehand. An untested alternative network is not a dependable backup simply because it appears in a list.
+If you plan to work on the islands, ask the accommodation about internet where you will sit with your laptop. Reception and the room may not offer the same experience. For a call at a fixed time, agree on a suitable place beforehand rather than hoping to find another network after arrival.
 
-## Make the purchase on confirmed terms
+## Before you buy
 
-Once the handset is compatible, the plan's conditions are clear and the destinations have been checked, compare the options on [Yotti's Ecuador eSIM page](https://yotti.net/en/esim/ecuador). Read the total allowance, validity and restrictions together rather than choosing by the advertised daily price.
+With a compatible phone and a data estimate, you can compare the packages on [Yotti's Ecuador eSIM page](https://yotti.net/en/esim/ecuador). Read the allowance, validity and restrictions together, alongside the provider's answers about your destinations. The advertised daily price is only useful once you know the package suits the trip.
 
-If island availability remains unanswered, separate the purchase into what is known and what still needs checking. You may have enough information to buy for Quito without having enough to rely on it in the Galápagos. An unanswered question is not evidence that the eSIM will fail; it is a reason not to promise that it will work.
+If the provider has confirmed only mainland access, choose a plan for that part of your trip. Check island access separately before relying on the same eSIM in the Galápagos.
 
 *The photo-style images are AI-created editorial illustrations, not documentary photographs of particular buildings or piers. They are not evidence of network coverage. The information graphics illustrate the conditions and worked examples discussed in the text.*
