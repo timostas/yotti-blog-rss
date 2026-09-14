@@ -106,3 +106,79 @@ During the separate editorial pass:
 4. Check that adjacent paragraphs do not have the same length and rhetorical shape by habit.
 5. Verify that the final paragraph ends the subject rather than delivering a motivational lesson.
 6. Run the deterministic style check. Passing it is necessary but not sufficient; editorial judgement remains responsible for the result.
+
+## Literary review of service prose
+
+Added after the Ecuador RU/EN review on 14 September 2026. Apply within the
+existing editorial pass, not as another generation stage or article template.
+The target is prose worth reading, not a promise that nobody can identify AI
+involvement. Do not use detector scores, deliberate mistakes, invented memories
+or concealed image provenance as quality goals. Preserve truthful attribution.
+
+### Choose the voice for the job
+
+A connectivity guide needs clear service journalism; a city walk may support
+more description. Neither needs a fictional traveller at an airport. Treat the
+Hemingway reference as restraint, concrete verbs and selective detail, not a
+rule to make every sentence short or to imitate the writer's experiences.
+Warmth comes from understandable language and useful judgement, not invented
+weather, smells, dialogue, crowds or emotions.
+
+### Review the language, not just the absence of banned phrases
+
+- **Enter directly.** Compare the lead with a version starting at its first
+  useful fact. Cut “one thing easily missed” and “below we will discuss” when
+  they only delay it. Keep orientation when it helps a complex article.
+- **Find the actor and action.** Replace “the event of activation” with “when
+  the plan starts”; name the actual place and consequence instead of saying a
+  result cannot be extrapolated. Keep and explain necessary technical terms.
+- **Map repeated propositions.** Mark where the lead, body, caption and ending
+  make the same claim. Rephrase only when a new decision requires it, not to
+  disguise repetition. Keep warnings beside independent risky procedures.
+- **Make caution proportionate.** Clearly state what was not tested. Preserve
+  material safety, financial and plan-specific limits where relevant. Do not
+  attach a disclaimer to every paragraph, or remove uncertainty to sound more
+  confident. Label a worked assumption without repeatedly defending it.
+- **Reduce supervision outside instructions.** Imperatives help a setup
+  sequence. Elsewhere compare a command with an explanation of its consequence.
+  Do not ban “check”, “не” or “not X but Y”: real distinctions can be clearer
+  than their alternatives. Judge the passage, not a word count or blacklist.
+- **Vary the work paragraphs do.** Check adjacent claim–explanation–qualification
+  patterns. Let an example end when its meaning is clear. Do not prescribe
+  sentence-length ratios or insert random fragments to simulate human rhythm.
+- **Use headings and endings for the reader.** Name the next question or place,
+  not a philosophy. End at the last useful decision rather than repeating the
+  lead or adding a polished maxim. Neither a conclusion nor a final CTA is
+  universally required.
+- **Give captions a job.** Prefer a useful detail, key or assumption to
+  commentary about assembling the article. Alt describes the image. Necessary
+  AI-illustration disclosure stays clear; editing repetitive caveats must not
+  turn artwork into documentary evidence.
+
+### Preserve substance
+
+“Better style” does not mean “shorter”. Preserve distinct answers, examples,
+sources, local names, useful links and the reasons behind advice. Delete
+redundancy, not the evidence needed to act. If a section only says to ask
+somebody else, improve the precise question, decision branches or verified
+information. Missing research cannot be replaced with elegant certainty.
+
+Review RU and EN independently. English abstractions such as “network geography”
+or a purchase described as “a mainland connection” may need a concrete network,
+area or data plan. In Russian, examine nominal chains and forced collocations
+such as “подтвердить места” and “обосновать покупку обещанием”. These examples
+illustrate judgement; they are not an expanding universal list of banned words.
+
+### Evidence of improvement
+
+Use existing `editorialEvidence.findings` for the important passages in each
+locale: excerpt → effect on the reader → proposed/applied revision → preserved
+facts and limits. Do not call a proposal fixed. Identify a strong passage worth
+keeping, the ending's purpose and unresolved factual gaps. No minimum quote
+count or additional numerical score is required.
+
+Read the revision beside the original. A synonym swap is not proof of better
+writing. Review the lead, adjacent paragraphs, captions and ending together.
+An AI read-through is not evidence of a human reviewer or a spoken recording.
+Scores and style-check remain supporting signals, not proof of literary quality
+or search rankings.

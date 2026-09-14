@@ -22,7 +22,7 @@ in full.
    drafting.
 4. Draft with concrete nouns and verbs. Let facts, places, choices, and observed details carry the prose. Do not manufacture a cinematic opening when a direct opening is stronger.
 5. Localize independently. Write RU as contemporary edited Russian and EN as idiomatic English travel journalism; never mirror sentences or headings line by line.
-6. Perform a separate human editorial pass after the draft. Re-read without defending the original wording. Rewrite the title, lead, headings, transitions, and endings that feel composed for effect. Remove repeated conclusions, moralising, staged contrasts, and unnecessary instructions to the reader. Do not add new facts during this pass.
+6. Perform a separate human editorial pass after the draft. Apply **Literary review of service prose** in `references/human-editorial-standard.md`: reader distance, repeated caveats, abstract wording, paragraph movement and the ending. Record excerpts, proposed/applied changes and a meaning-preservation check in existing editorial evidence. Re-read without defending the draft; do not invent facts or scenes. For an audit-only request, label rewrites as proposals and do not silently edit the published article.
 7. Score both locales with the competitor-informed scorecard. Require at least 82/100 and every dimension floor. Record the score, two weakest dimensions, and the editorial change in the brief or queue quality notes. Use the single allowed repair when the score is 76–81; stop at 75 or below.
 8. Run `npm run style-check -- <RU file> <EN file>`. Treat every reported error as blocking. If the single allowed repair has not already been used, it may address a style failure; then run the check and score again.
 

@@ -23,6 +23,16 @@
       "strictPublicVerificationRequires": "PASS",
       "degradedIssueClass": "SITE_SIDE_P1"
     },
+    "knownImporterDebtPolicy": {
+      "ownerDecisionDate": "2026-09-14",
+      "scope": "previously_confirmed_site_side_responsive_lazy_async_reduced_motion_losses",
+      "repeatDedicatedAudit": false,
+      "repeatOwnerNotification": false,
+      "blocksEditorialContinuation": false,
+      "reopenWhen": "owner_request_or_new_content_integrity_regression",
+      "preserveSourceQualityGates": true,
+      "reportAsFixed": false
+    },
     "publishedCorrectionFlow": {
       "preserveSlugAndFeedLink": true,
       "publishImmediatelyAfterValidation": true,
@@ -116,7 +126,9 @@
       "requirePerLocaleFindingsAndResolution": true,
       "selfScoreAloneIsNotAcceptance": true,
       "requireVisualInspection": true,
-      "preserveHistoricalModelRecords": true
+      "preserveHistoricalModelRecords": true,
+      "literaryReviewReference": ".codex/skills/yotti-editorial-voice/references/human-editorial-standard.md#literary-review-of-service-prose",
+      "requireExcerptBasedLanguageReview": true
     },
     "requireNaturalLocalization": true,
     "rejectMechanicalTranslation": true,
@@ -189,7 +201,8 @@
         "connectivity-and-esim": { "contextualPhotos": 2, "informationGraphics": 4, "routeMaps": 0 }
       },
       "publicAcceptanceViewportWidths": [360, 390, 720],
-      "requirePublicPostSyncPerformanceCheck": true,
+      "requirePublicPostSyncPerformanceCheck": false,
+      "publicPerformanceAuditMode": "owner_request_or_new_observed_regression",
       "publicPostSyncPerformanceGates": {
         "viewportWidths": [360, 390, 720],
         "deviceScaleFactor": 1,
