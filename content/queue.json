@@ -13319,11 +13319,8 @@
         "https://yotti.net/en/blog/rwanda/a-craft-day-in-kigali-workshop-market-and-a-conversation-about-materials"
       ],
       "countryCode": "TN"
-    }
-  ],
-  "plannedPublications": [
+    },
     {
-      "planOrder": 1,
       "id": "esim-wifi-calling",
       "scope": "global",
       "region": "global",
@@ -13333,23 +13330,226 @@
         "ru": "работают ли звонки по wifi с есим",
         "en": "does Wi-Fi Calling work with eSIM"
       },
-      "semanticIntent": {
-        "primary": "wifi-calling-esim-operator-dependency",
-        "secondary": [
-          "работают ли звонки по wifi с есим",
-          "does Wi-Fi Calling work with eSIM"
+      "workingTitle": {
+        "ru": "Работают ли звонки по Wi-Fi с есим",
+        "en": "Does Wi-Fi Calling work with an eSIM?"
+      },
+      "readerPromise": "Пройти проверку конкретного номера и отделить операторский звонок от работы приложения и туристического интернета.",
+      "creativeConceptKey": "alpine guesthouse evening window call",
+      "creativeBrief": "alpine guesthouse evening window call",
+      "status": "scheduled",
+      "topicKey": "wifi-calling-esim-operator-dependency",
+      "locales": [
+        "ru",
+        "en"
+      ],
+      "model": {
+        "name": "gpt-6-astra",
+        "effort": "high",
+        "role": "independent_locale_drafting"
+      },
+      "editorialModel": {
+        "name": "gpt-6-astra",
+        "effort": "high",
+        "role": "separate_ai_editorial_acceptance"
+      },
+      "generationAttempts": {
+        "ru": 1,
+        "en": 1
+      },
+      "qualityRepairAttempts": 0,
+      "editorialStandardVersion": 2,
+      "editorialPasses": {
+        "ru": 1,
+        "en": 1
+      },
+      "creativeGeneration": {
+        "model": "imagegen-built-in",
+        "attempts": 1
+      },
+      "researchSources": [
+        "https://support.apple.com/en-ca/108066",
+        "https://support.google.com/phoneapp/answer/2811843?hl=en"
+      ],
+      "semanticLinkClass": "focused-technical",
+      "publicUrls": {
+        "ru": "https://yotti.net/blog/rabotayut-li-zvonki-po-wi-fi-s-esim",
+        "en": "https://yotti.net/en/blog/does-wi-fi-calling-work-with-an-esim"
+      },
+      "internalArticleLinks": {
+        "ru": [
+          "https://yotti.net/blog/est-li-u-esim-nomer-telefona",
+          "https://yotti.net/blog/sms-ne-prihodyat-na-esim-chto-proverit-v-tarife-i-nastroykah"
+        ],
+        "en": [
+          "https://yotti.net/en/blog/does-an-esim-have-a-phone-number",
+          "https://yotti.net/en/blog/sms-not-working-on-esim-what-to-check-first"
         ]
       },
-      "workingTitle": {
-        "ru": "работают ли звонки по wifi с есим",
-        "en": "does Wi-Fi Calling work with eSIM"
+      "intentMap": {
+        "primary": {
+          "ru": "работают ли звонки по wifi с есим",
+          "en": "does Wi-Fi Calling work with eSIM"
+        },
+        "neighborIntents": [
+          "does-esim-have-phone-number",
+          "esim-in-airplane-mode",
+          "esim-sms-not-working"
+        ],
+        "uniqueReaderOutcome": "Пройти проверку конкретного номера и отделить операторский звонок от работы приложения и туристического интернета.",
+        "cannibalizationDecision": "Checked current titles, slugs, topic keys, intent maps, body mentions and both public feeds. Test a specific phone number and distinguish carrier Wi-Fi calls from app calls and travel mobile data."
       },
-      "readerPromise": "Узкий сценарий wifi-calling-esim-operator-dependency без дублирования соседних интентов.",
-      "creativeConceptKey": "alpine guesthouse evening window call",
-      "creativeBrief": "alpine guesthouse evening window call"
+      "creative": "assets/covers/esim-wifi-calling.webp",
+      "scores": {
+        "utility": 86,
+        "originalValue": 84,
+        "factSupport": 90
+      },
+      "editorialScorecard": {
+        "ru": {
+          "total": 87,
+          "intent": 14,
+          "utility": 13,
+          "specificity": 12,
+          "trust": 14,
+          "voice": 13,
+          "structure": 8,
+          "technical": 8,
+          "commercialRestraint": 5
+        },
+        "en": {
+          "total": 87,
+          "intent": 14,
+          "utility": 13,
+          "specificity": 12,
+          "trust": 14,
+          "voice": 13,
+          "structure": 8,
+          "technical": 8,
+          "commercialRestraint": 5
+        }
+      },
+      "editorialEvidence": {
+        "ru": {
+          "model": "gpt-6-astra",
+          "effort": "high",
+          "reviewedAt": "2026-09-14",
+          "weakestDimensions": [
+            "scope",
+            "structure"
+          ],
+          "findings": [
+            "«домашняя линия хранит привычный номер» → линия не хранилище: исправлено на «используется для привычного номера»; разделение голосовой линии и данных сохранено.",
+            "«проверяйте услугу и её регистрацию» → убран необъяснённый термин: «доступность услуги на выбранной линии».",
+            "Сохранён конкретный тест: выбранная линия → индикатор → исходящий → входящий; финал ограничивает проверку Wi-Fi и не обещает звонок через данные второй SIM."
+          ],
+          "recheck": "Text re-read after editorial changes. Source and browser acceptance recorded separately before release.",
+          "visualInspection": {
+            "result": "PASS",
+            "files": [
+              "assets/covers/esim-wifi-calling.webp",
+              "assets/inline/daily14-wifi-path-ru.webp",
+              "assets/inline/daily14-wifi-line.webp",
+              "assets/inline/daily14-wifi-carrier-ru.webp",
+              "assets/inline/daily14-wifi-indicator-ru.webp",
+              "assets/inline/daily14-wifi-test.webp",
+              "assets/inline/daily14-wifi-triage-ru.webp"
+            ],
+            "widths": [
+              360,
+              720
+            ],
+            "findings": "Every final scene inspected at 360/720 widths: anatomy, objects, built forms, crops and legible diagram labels. Specific-place reconstruction is not claimed. Mombasa texture recompressed to meet per-image budget; revised RU diagram headings rechecked."
+          },
+          "sourceBrowserInspection": {
+            "state": "PASS",
+            "viewportWidths": [
+              360,
+              390,
+              720,
+              1440
+            ],
+            "imageCount": 7,
+            "captionCount": 6,
+            "overflowPx": 0,
+            "brokenImages": 0,
+            "ratioFailures": 0,
+            "scope": "Generated source HTML; not Yotti public acceptance"
+          }
+        },
+        "en": {
+          "model": "gpt-6-astra",
+          "effort": "high",
+          "reviewedAt": "2026-09-14",
+          "weakestDimensions": [
+            "scope",
+            "structure"
+          ],
+          "findings": [
+            "“investigate service registration” → “check service availability for the selected line”; removed unexplained network jargon without broadening compatibility.",
+            "Kept “An outgoing call alone does not test ... receiving calls”: distinct reader need, not repetition. Ending explicitly separates another SIM’s data from the tested Wi-Fi path."
+          ],
+          "recheck": "Text re-read after editorial changes. Source and browser acceptance recorded separately before release.",
+          "visualInspection": {
+            "result": "PASS",
+            "files": [
+              "assets/covers/esim-wifi-calling.webp",
+              "assets/inline/daily14-wifi-path-en.webp",
+              "assets/inline/daily14-wifi-line.webp",
+              "assets/inline/daily14-wifi-carrier-en.webp",
+              "assets/inline/daily14-wifi-indicator-en.webp",
+              "assets/inline/daily14-wifi-test.webp",
+              "assets/inline/daily14-wifi-triage-en.webp"
+            ],
+            "widths": [
+              360,
+              720
+            ],
+            "findings": "Every final scene inspected at 360/720 widths: anatomy, objects, built forms, crops and legible diagram labels. Specific-place reconstruction is not claimed. Mombasa texture recompressed to meet per-image budget; revised RU diagram headings rechecked."
+          },
+          "sourceBrowserInspection": {
+            "state": "PASS",
+            "viewportWidths": [
+              360,
+              390,
+              720,
+              1440
+            ],
+            "imageCount": 7,
+            "captionCount": 6,
+            "overflowPx": 0,
+            "brokenImages": 0,
+            "ratioFailures": 0,
+            "scope": "Generated source HTML; not Yotti public acceptance"
+          }
+        }
+      },
+      "riskReasons": [
+        "query_cannibalization_checked",
+        "known_importer_SITE_SIDE_P1"
+      ],
+      "qualityNotes": {
+        "lengthDecision": "Bounded single-neighbourhood or service decision; all named choices, source limitations, fallback and useful links are answered below 900 words without adding a generic FAQ.",
+        "redTeam": "No invented visit, guaranteed shop hours, network coverage, free calls, dietary suitability or documentary image claim. Public URLs checked independently of queue metadata."
+      },
+      "internalContextLinks": [
+        "https://yotti.net/blog/est-li-u-esim-nomer-telefona",
+        "https://yotti.net/blog/sms-ne-prihodyat-na-esim-chto-proverit-v-tarife-i-nastroykah",
+        "https://yotti.net/en/blog/does-an-esim-have-a-phone-number",
+        "https://yotti.net/en/blog/sms-not-working-on-esim-what-to-check-first"
+      ],
+      "schedule": {
+        "ru": "2026-09-14T14:05:00Z",
+        "en": "2026-09-14T14:05:00Z"
+      },
+      "publicationAccounting": {
+        "scheduledDay": "2026-09-14",
+        "plannedSlotMsk": "10:00",
+        "recoveryBatch": null,
+        "lateRelease": true
+      }
     },
     {
-      "planOrder": 2,
       "id": "italy-bologna-porticoes-rain-day",
       "countryCode": "IT",
       "region": "southern-europe",
@@ -13359,23 +13559,230 @@
         "ru": "Болонья портики дождливый день",
         "en": "Bologna porticoes rainy day"
       },
-      "semanticIntent": {
-        "primary": "bologna-porticoes-rain-day",
-        "secondary": [
-          "Болонья портики дождливый день",
-          "Bologna porticoes rainy day"
+      "workingTitle": {
+        "ru": "Болонья в дождь: какую прогулку под портиками выбрать",
+        "en": "Bologna in the rain: choosing a portico walk"
+      },
+      "readerPromise": "Выбрать один тип портика и масштаб выхода в дождь, не принимая городские галереи за непрерывный крытый маршрут.",
+      "creativeConceptKey": "Bologna portico bicycle wet terracotta",
+      "creativeBrief": "Bologna portico bicycle wet terracotta",
+      "status": "scheduled",
+      "topicKey": "bologna-porticoes-rain-day",
+      "locales": [
+        "ru",
+        "en"
+      ],
+      "model": {
+        "name": "gpt-6-astra",
+        "effort": "high",
+        "role": "independent_locale_drafting"
+      },
+      "editorialModel": {
+        "name": "gpt-6-astra",
+        "effort": "high",
+        "role": "separate_ai_editorial_acceptance"
+      },
+      "generationAttempts": {
+        "ru": 1,
+        "en": 1
+      },
+      "qualityRepairAttempts": 0,
+      "editorialStandardVersion": 2,
+      "editorialPasses": {
+        "ru": 1,
+        "en": 1
+      },
+      "creativeGeneration": {
+        "model": "imagegen-built-in",
+        "attempts": 1
+      },
+      "researchSources": [
+        "https://www.bolognawelcome.com/en/blog/los-porticos-de-bolonia-",
+        "https://whc.unesco.org/en/list/1650/"
+      ],
+      "semanticLinkClass": "standard",
+      "publicUrls": {
+        "ru": "https://yotti.net/blog/italy/bolonya-v-dozhd-kakuyu-progulku-pod-portikami-vybrat",
+        "en": "https://yotti.net/en/blog/italy/bologna-in-the-rain-choosing-a-portico-walk"
+      },
+      "internalArticleLinks": {
+        "ru": [
+          "https://yotti.net/blog/portugal/dozhdlivyy-den-v-portu-rynok-tramvay-i-teplye-pauzy",
+          "https://yotti.net/blog/romania/osenniy-den-v-brashove-dvory-steny-i-teplaya-pauza",
+          "https://yotti.net/blog/sri-lanka/galle-fort-v-sezon-dozhdey-marshrut-s-korotkimi-vyhodami"
+        ],
+        "en": [
+          "https://yotti.net/en/blog/portugal/a-rainy-day-in-porto-market-tram-and-warm-pauses",
+          "https://yotti.net/en/blog/romania/an-autumn-day-in-bra-ov-courtyards-walls-and-a-warm-pause",
+          "https://yotti.net/en/blog/sri-lanka/galle-fort-in-monsoon-rain-a-route-built-from-short-exits"
         ]
       },
-      "workingTitle": {
-        "ru": "Болонья портики дождливый день",
-        "en": "Bologna porticoes rainy day"
+      "intentMap": {
+        "primary": {
+          "ru": "Болонья портики дождливый день",
+          "en": "Bologna porticoes rainy day"
+        },
+        "neighborIntents": [
+          "portugal-porto-rainy-arcades-day",
+          "romania-brasov-autumn-courtyards-day"
+        ],
+        "uniqueReaderOutcome": "Выбрать один тип портика и масштаб выхода в дождь, не принимая городские галереи за непрерывный крытый маршрут.",
+        "cannibalizationDecision": "Checked current titles, slugs, topic keys, intent maps, body mentions and both public feeds. Choose a portico and a manageable rainy-day outing without assuming continuous shelter."
       },
-      "readerPromise": "Узкий сценарий bologna-porticoes-rain-day без дублирования соседних интентов.",
-      "creativeConceptKey": "Bologna portico bicycle wet terracotta",
-      "creativeBrief": "Bologna portico bicycle wet terracotta"
+      "creative": "assets/covers/italy-bologna-porticoes-rain-day.webp",
+      "scores": {
+        "utility": 86,
+        "originalValue": 84,
+        "factSupport": 90
+      },
+      "editorialScorecard": {
+        "ru": {
+          "total": 87,
+          "intent": 14,
+          "utility": 13,
+          "specificity": 12,
+          "trust": 14,
+          "voice": 13,
+          "structure": 8,
+          "technical": 8,
+          "commercialRestraint": 5
+        },
+        "en": {
+          "total": 87,
+          "intent": 14,
+          "utility": 13,
+          "specificity": 12,
+          "trust": 14,
+          "voice": 13,
+          "structure": 8,
+          "technical": 8,
+          "commercialRestraint": 5
+        }
+      },
+      "editorialEvidence": {
+        "ru": {
+          "model": "gpt-6-astra",
+          "effort": "high",
+          "reviewedAt": "2026-09-14",
+          "weakestDimensions": [
+            "local_specificity",
+            "structure"
+          ],
+          "findings": [
+            "«я бы начал» → «удобно начать»; удалена ненужная авторская фигура без заявления о личной поездке.",
+            "«я бы оставил Сан-Луку» → выбор окончания короткого плана; подъём и расстояние сохранены.",
+            "В проверке источников сохранено различие: ЮНЕСКО перечисляет 12 ансамблей, а не всю сеть как единый крытый коридор. Число не добавлено ради объёма."
+          ],
+          "recheck": "Text re-read after editorial changes. Source and browser acceptance recorded separately before release.",
+          "visualInspection": {
+            "result": "PASS",
+            "files": [
+              "assets/covers/italy-bologna-porticoes-rain-day.webp",
+              "assets/inline/daily14-bologna-choice-ru.webp",
+              "assets/inline/daily14-bologna-brick.webp",
+              "assets/inline/daily14-bologna-wood.webp",
+              "assets/inline/daily14-bologna-edge.webp",
+              "assets/inline/daily14-bologna-pause.webp",
+              "assets/inline/daily14-bologna-stop-ru.webp"
+            ],
+            "widths": [
+              360,
+              720
+            ],
+            "findings": "Every final scene inspected at 360/720 widths: anatomy, objects, built forms, crops and legible diagram labels. Specific-place reconstruction is not claimed. Mombasa texture recompressed to meet per-image budget; revised RU diagram headings rechecked."
+          },
+          "sourceBrowserInspection": {
+            "state": "PASS",
+            "viewportWidths": [
+              360,
+              390,
+              720,
+              1440
+            ],
+            "imageCount": 7,
+            "captionCount": 6,
+            "overflowPx": 0,
+            "brokenImages": 0,
+            "ratioFailures": 0,
+            "scope": "Generated source HTML; not Yotti public acceptance"
+          }
+        },
+        "en": {
+          "model": "gpt-6-astra",
+          "effort": "high",
+          "reviewedAt": "2026-09-14",
+          "weakestDimensions": [
+            "local_specificity",
+            "structure"
+          ],
+          "findings": [
+            "Kept the Pavaglione exterior/interior distinction: a sheltered walkway does not prove museum admission.",
+            "Reviewed “A long roof overhead does not remove the distance involved”: literal explanation of the nearly 4 km San Luca choice, not an invented travel maxim. No timetable or firsthand claim.",
+            "Internal Brașov/Galle URLs corrected to the literal sitemap paths; destination meaning retained."
+          ],
+          "recheck": "Text re-read after editorial changes. Source and browser acceptance recorded separately before release.",
+          "visualInspection": {
+            "result": "PASS",
+            "files": [
+              "assets/covers/italy-bologna-porticoes-rain-day.webp",
+              "assets/inline/daily14-bologna-choice-en.webp",
+              "assets/inline/daily14-bologna-brick.webp",
+              "assets/inline/daily14-bologna-wood.webp",
+              "assets/inline/daily14-bologna-edge.webp",
+              "assets/inline/daily14-bologna-pause.webp",
+              "assets/inline/daily14-bologna-stop-en.webp"
+            ],
+            "widths": [
+              360,
+              720
+            ],
+            "findings": "Every final scene inspected at 360/720 widths: anatomy, objects, built forms, crops and legible diagram labels. Specific-place reconstruction is not claimed. Mombasa texture recompressed to meet per-image budget; revised RU diagram headings rechecked."
+          },
+          "sourceBrowserInspection": {
+            "state": "PASS",
+            "viewportWidths": [
+              360,
+              390,
+              720,
+              1440
+            ],
+            "imageCount": 7,
+            "captionCount": 6,
+            "overflowPx": 0,
+            "brokenImages": 0,
+            "ratioFailures": 0,
+            "scope": "Generated source HTML; not Yotti public acceptance"
+          }
+        }
+      },
+      "riskReasons": [
+        "query_cannibalization_checked",
+        "known_importer_SITE_SIDE_P1"
+      ],
+      "qualityNotes": {
+        "lengthDecision": "Bounded single-neighbourhood or service decision; all named choices, source limitations, fallback and useful links are answered below 900 words without adding a generic FAQ.",
+        "redTeam": "No invented visit, guaranteed shop hours, network coverage, free calls, dietary suitability or documentary image claim. Public URLs checked independently of queue metadata."
+      },
+      "internalContextLinks": [
+        "https://yotti.net/blog/portugal/dozhdlivyy-den-v-portu-rynok-tramvay-i-teplye-pauzy",
+        "https://yotti.net/blog/romania/osenniy-den-v-brashove-dvory-steny-i-teplaya-pauza",
+        "https://yotti.net/blog/sri-lanka/galle-fort-v-sezon-dozhdey-marshrut-s-korotkimi-vyhodami",
+        "https://yotti.net/en/blog/portugal/a-rainy-day-in-porto-market-tram-and-warm-pauses",
+        "https://yotti.net/en/blog/romania/an-autumn-day-in-bra-ov-courtyards-walls-and-a-warm-pause",
+        "https://yotti.net/en/blog/sri-lanka/galle-fort-in-monsoon-rain-a-route-built-from-short-exits"
+      ],
+      "schedule": {
+        "ru": "2026-09-14T14:06:00Z",
+        "en": "2026-09-14T14:06:00Z"
+      },
+      "publicationAccounting": {
+        "scheduledDay": "2026-09-14",
+        "plannedSlotMsk": "10:30",
+        "recoveryBatch": null,
+        "lateRelease": true
+      }
     },
     {
-      "planOrder": 3,
       "id": "kenya-mombasa-old-town-coast-day",
       "countryCode": "KE",
       "region": "east-africa",
@@ -13385,23 +13792,230 @@
         "ru": "Момбаса старый город побережье день",
         "en": "Mombasa old town coast day"
       },
-      "semanticIntent": {
-        "primary": "mombasa-old-town-coast-day",
-        "secondary": [
-          "Момбаса старый город побережье день",
-          "Mombasa old town coast day"
+      "workingTitle": {
+        "ru": "Один день в Момбасе: форт, Старый город и гавань",
+        "en": "One day in Mombasa: Fort Jesus, Old Town and the harbour"
+      },
+      "readerPromise": "Выбрать исторический городской день вместо неопределённого сочетания музея, жилых улиц и пляжа.",
+      "creativeConceptKey": "Mombasa carved door ocean lane",
+      "creativeBrief": "Mombasa carved door ocean lane",
+      "status": "scheduled",
+      "topicKey": "mombasa-old-town-coast-day",
+      "locales": [
+        "ru",
+        "en"
+      ],
+      "model": {
+        "name": "gpt-6-astra",
+        "effort": "high",
+        "role": "independent_locale_drafting"
+      },
+      "editorialModel": {
+        "name": "gpt-6-astra",
+        "effort": "high",
+        "role": "separate_ai_editorial_acceptance"
+      },
+      "generationAttempts": {
+        "ru": 1,
+        "en": 1
+      },
+      "qualityRepairAttempts": 0,
+      "editorialStandardVersion": 2,
+      "editorialPasses": {
+        "ru": 1,
+        "en": 1
+      },
+      "creativeGeneration": {
+        "model": "imagegen-built-in",
+        "attempts": 1
+      },
+      "researchSources": [
+        "https://whc.unesco.org/en/list/1295/",
+        "https://www.museums.or.ke/wp-content/uploads/2020/05/old-town-map.pdf"
+      ],
+      "semanticLinkClass": "standard",
+      "publicUrls": {
+        "ru": "https://yotti.net/blog/kenya/odin-den-v-mombase-fort-staryy-gorod-i-gavan",
+        "en": "https://yotti.net/en/blog/kenya/one-day-in-mombasa-fort-jesus-old-town-and-the-harbour"
+      },
+      "internalArticleLinks": {
+        "ru": [
+          "https://yotti.net/blog/tunisia/remeslennoe-utro-v-medine-sfaksa",
+          "https://yotti.net/blog/morocco/odin-den-v-rabate-medina-udayya-i-atlantika",
+          "https://yotti.net/blog/sri-lanka/galle-fort-v-sezon-dozhdey-marshrut-s-korotkimi-vyhodami"
+        ],
+        "en": [
+          "https://yotti.net/en/blog/tunisia/a-craft-morning-in-the-medina-of-sfax",
+          "https://yotti.net/en/blog/morocco/one-day-in-rabat-medina-udayas-and-the-atlantic",
+          "https://yotti.net/en/blog/sri-lanka/galle-fort-in-monsoon-rain-a-route-built-from-short-exits"
         ]
       },
-      "workingTitle": {
-        "ru": "Момбаса старый город побережье день",
-        "en": "Mombasa old town coast day"
+      "intentMap": {
+        "primary": {
+          "ru": "Момбаса старый город побережье день",
+          "en": "Mombasa old town coast day"
+        },
+        "neighborIntents": [
+          "morocco-rabat-medina-ocean-day",
+          "oman-muscat-nizwa-two-bases"
+        ],
+        "uniqueReaderOutcome": "Выбрать исторический городской день вместо неопределённого сочетания музея, жилых улиц и пляжа.",
+        "cannibalizationDecision": "Checked current titles, slugs, topic keys, intent maps, body mentions and both public feeds. Allocate a historical city visit between the fort, residential details and harbour without assuming a beach circuit."
       },
-      "readerPromise": "Узкий сценарий mombasa-old-town-coast-day без дублирования соседних интентов.",
-      "creativeConceptKey": "Mombasa carved door ocean lane",
-      "creativeBrief": "Mombasa carved door ocean lane"
+      "creative": "assets/covers/kenya-mombasa-old-town-coast-day.webp",
+      "scores": {
+        "utility": 86,
+        "originalValue": 84,
+        "factSupport": 90
+      },
+      "editorialScorecard": {
+        "ru": {
+          "total": 87,
+          "intent": 14,
+          "utility": 13,
+          "specificity": 12,
+          "trust": 14,
+          "voice": 13,
+          "structure": 8,
+          "technical": 8,
+          "commercialRestraint": 5
+        },
+        "en": {
+          "total": 87,
+          "intent": 14,
+          "utility": 13,
+          "specificity": 12,
+          "trust": 14,
+          "voice": 13,
+          "structure": 8,
+          "technical": 8,
+          "commercialRestraint": 5
+        }
+      },
+      "editorialEvidence": {
+        "ru": {
+          "model": "gpt-6-astra",
+          "effort": "high",
+          "reviewedAt": "2026-09-14",
+          "weakestDimensions": [
+            "local_specificity",
+            "structure"
+          ],
+          "findings": [
+            "Сложное «Карта помогает ... но её издание 2004 года ...» разделено на дату карты и допустимое использование; ограничения актуальности сохранены.",
+            "Инфографика «Куда отдать время?» → «Что посмотреть дольше?»; естественный вопрос о выборе осмотра.",
+            "Сохранены 1593–1596 и коралловая скала по ЮНЕСКО; наличие рыбного рынка на старой карте не превращено в обещание сегодняшней торговли."
+          ],
+          "recheck": "Text re-read after editorial changes. Source and browser acceptance recorded separately before release.",
+          "visualInspection": {
+            "result": "PASS",
+            "files": [
+              "assets/covers/kenya-mombasa-old-town-coast-day.webp",
+              "assets/inline/daily14-mombasa-choice-ru.webp",
+              "assets/inline/daily14-mombasa-stone.webp",
+              "assets/inline/daily14-mombasa-balcony.webp",
+              "assets/inline/daily14-mombasa-door-detail.webp",
+              "assets/inline/daily14-mombasa-harbour.webp",
+              "assets/inline/daily14-mombasa-time-ru.webp"
+            ],
+            "widths": [
+              360,
+              720
+            ],
+            "findings": "Every final scene inspected at 360/720 widths: anatomy, objects, built forms, crops and legible diagram labels. Specific-place reconstruction is not claimed. Mombasa texture recompressed to meet per-image budget; revised RU diagram headings rechecked."
+          },
+          "sourceBrowserInspection": {
+            "state": "PASS",
+            "viewportWidths": [
+              360,
+              390,
+              720,
+              1440
+            ],
+            "imageCount": 7,
+            "captionCount": 6,
+            "overflowPx": 0,
+            "brokenImages": 0,
+            "ratioFailures": 0,
+            "scope": "Generated source HTML; not Yotti public acceptance"
+          }
+        },
+        "en": {
+          "model": "gpt-6-astra",
+          "effort": "high",
+          "reviewedAt": "2026-09-14",
+          "weakestDimensions": [
+            "local_specificity",
+            "structure"
+          ],
+          "findings": [
+            "Kept “The map is a 2004 edition”: essential limitation attached to map use, not repeated under every photo.",
+            "Reviewed fort/harbour/streets sections against the source map; the text deliberately does not offer a turn-by-turn beach circuit.",
+            "Galle link corrected to the public sitemap URL, with a weather-comparison anchor."
+          ],
+          "recheck": "Text re-read after editorial changes. Source and browser acceptance recorded separately before release.",
+          "visualInspection": {
+            "result": "PASS",
+            "files": [
+              "assets/covers/kenya-mombasa-old-town-coast-day.webp",
+              "assets/inline/daily14-mombasa-choice-en.webp",
+              "assets/inline/daily14-mombasa-stone.webp",
+              "assets/inline/daily14-mombasa-balcony.webp",
+              "assets/inline/daily14-mombasa-door-detail.webp",
+              "assets/inline/daily14-mombasa-harbour.webp",
+              "assets/inline/daily14-mombasa-time-en.webp"
+            ],
+            "widths": [
+              360,
+              720
+            ],
+            "findings": "Every final scene inspected at 360/720 widths: anatomy, objects, built forms, crops and legible diagram labels. Specific-place reconstruction is not claimed. Mombasa texture recompressed to meet per-image budget; revised RU diagram headings rechecked."
+          },
+          "sourceBrowserInspection": {
+            "state": "PASS",
+            "viewportWidths": [
+              360,
+              390,
+              720,
+              1440
+            ],
+            "imageCount": 7,
+            "captionCount": 6,
+            "overflowPx": 0,
+            "brokenImages": 0,
+            "ratioFailures": 0,
+            "scope": "Generated source HTML; not Yotti public acceptance"
+          }
+        }
+      },
+      "riskReasons": [
+        "query_cannibalization_checked",
+        "known_importer_SITE_SIDE_P1"
+      ],
+      "qualityNotes": {
+        "lengthDecision": "Bounded single-neighbourhood or service decision; all named choices, source limitations, fallback and useful links are answered below 900 words without adding a generic FAQ.",
+        "redTeam": "No invented visit, guaranteed shop hours, network coverage, free calls, dietary suitability or documentary image claim. Public URLs checked independently of queue metadata."
+      },
+      "internalContextLinks": [
+        "https://yotti.net/blog/tunisia/remeslennoe-utro-v-medine-sfaksa",
+        "https://yotti.net/blog/morocco/odin-den-v-rabate-medina-udayya-i-atlantika",
+        "https://yotti.net/blog/sri-lanka/galle-fort-v-sezon-dozhdey-marshrut-s-korotkimi-vyhodami",
+        "https://yotti.net/en/blog/tunisia/a-craft-morning-in-the-medina-of-sfax",
+        "https://yotti.net/en/blog/morocco/one-day-in-rabat-medina-udayas-and-the-atlantic",
+        "https://yotti.net/en/blog/sri-lanka/galle-fort-in-monsoon-rain-a-route-built-from-short-exits"
+      ],
+      "schedule": {
+        "ru": "2026-09-14T17:00:00Z",
+        "en": "2026-09-14T17:00:00Z"
+      },
+      "publicationAccounting": {
+        "scheduledDay": "2026-09-14",
+        "plannedSlotMsk": "20:00",
+        "recoveryBatch": null,
+        "lateRelease": false
+      }
     },
     {
-      "planOrder": 4,
       "id": "taiwan-tainan-temple-market-morning",
       "countryCode": "TW",
       "region": "east-asia",
@@ -13411,23 +14025,234 @@
         "ru": "Тайнань храм рынок утро",
         "en": "Tainan temple market morning"
       },
-      "semanticIntent": {
-        "primary": "tainan-temple-market-morning",
-        "secondary": [
-          "Тайнань храм рынок утро",
-          "Tainan temple market morning"
+      "workingTitle": {
+        "ru": "Утро в Тайнане: храм Шуэйсянь, рынок и улица Шэньнун",
+        "en": "A Tainan morning: Shuixian Temple, the market and Shennong Street"
+      },
+      "readerPromise": "Связать храм с историей рынка и выбрать завтрак, учитывая разные часы храма, прилавков и лавок.",
+      "creativeConceptKey": "Tainan temple incense breakfast stall",
+      "creativeBrief": "Tainan temple incense breakfast stall",
+      "status": "scheduled",
+      "topicKey": "tainan-temple-market-morning",
+      "locales": [
+        "ru",
+        "en"
+      ],
+      "model": {
+        "name": "gpt-6-astra",
+        "effort": "high",
+        "role": "independent_locale_drafting"
+      },
+      "editorialModel": {
+        "name": "gpt-6-astra",
+        "effort": "high",
+        "role": "separate_ai_editorial_acceptance"
+      },
+      "generationAttempts": {
+        "ru": 1,
+        "en": 1
+      },
+      "qualityRepairAttempts": 0,
+      "editorialStandardVersion": 2,
+      "editorialPasses": {
+        "ru": 1,
+        "en": 1
+      },
+      "creativeGeneration": {
+        "model": "imagegen-built-in",
+        "attempts": 1
+      },
+      "researchSources": [
+        "https://www.twtainan.net/en/attractions/detail/4363",
+        "https://www.twtainan.net/en/attractions/detail/4420"
+      ],
+      "semanticLinkClass": "standard",
+      "publicUrls": {
+        "ru": "https://yotti.net/blog/taiwan/utro-v-taynane-hram-shueysyan-rynok-i-ulitsa-shennun",
+        "en": "https://yotti.net/en/blog/taiwan/a-tainan-morning-shuixian-temple-the-market-and-shennong-street"
+      },
+      "internalArticleLinks": {
+        "ru": [
+          "https://yotti.net/blog/japan/rynok-omicho-v-kanadzave-kak-provesti-utro",
+          "https://yotti.net/blog/thailand/nochnye-rynki-bangkoka-marshrut-za-vkusami-i-atmosferoy-goroda",
+          "https://yotti.net/blog/taiwan/chaynyy-den-za-predelami-taybeya-kak-vybrat-odin-gornyy-gorod"
+        ],
+        "en": [
+          "https://yotti.net/en/blog/japan/a-morning-at-omicho-market-in-kanazawa",
+          "https://yotti.net/en/blog/thailand/bangkok-night-markets-a-street-food-evening-with-room-to-explore",
+          "https://yotti.net/en/blog/taiwan/a-tea-day-beyond-taipei-choosing-one-mountain-town-instead-of-rushing-through-th"
         ]
       },
-      "workingTitle": {
-        "ru": "Тайнань храм рынок утро",
-        "en": "Tainan temple market morning"
+      "intentMap": {
+        "primary": {
+          "ru": "Тайнань храм рынок утро",
+          "en": "Tainan temple market morning"
+        },
+        "neighborIntents": [
+          "taiwan-tea-town-day-trip",
+          "kanazawa-omicho-market-morning",
+          "bangkok-night-markets-guide"
+        ],
+        "uniqueReaderOutcome": "Связать храм с историей рынка и выбрать завтрак, учитывая разные часы храма, прилавков и лавок.",
+        "cannibalizationDecision": "Checked current titles, slugs, topic keys, intent maps, body mentions and both public feeds. Connect temple and market history while keeping breakfast and shop availability separate."
       },
-      "readerPromise": "Узкий сценарий tainan-temple-market-morning без дублирования соседних интентов.",
-      "creativeConceptKey": "Tainan temple incense breakfast stall",
-      "creativeBrief": "Tainan temple incense breakfast stall"
-    },
+      "creative": "assets/covers/taiwan-tainan-temple-market-morning.webp",
+      "scores": {
+        "utility": 86,
+        "originalValue": 84,
+        "factSupport": 90
+      },
+      "editorialScorecard": {
+        "ru": {
+          "total": 87,
+          "intent": 14,
+          "utility": 13,
+          "specificity": 12,
+          "trust": 14,
+          "voice": 13,
+          "structure": 8,
+          "technical": 8,
+          "commercialRestraint": 5
+        },
+        "en": {
+          "total": 87,
+          "intent": 14,
+          "utility": 13,
+          "specificity": 12,
+          "trust": 14,
+          "voice": 13,
+          "structure": 8,
+          "technical": 8,
+          "commercialRestraint": 5
+        }
+      },
+      "editorialEvidence": {
+        "ru": {
+          "model": "gpt-6-astra",
+          "effort": "high",
+          "reviewedAt": "2026-09-14",
+          "weakestDimensions": [
+            "local_specificity",
+            "structure"
+          ],
+          "findings": [
+            "«торговая история сохранилась в устройстве квартала» → «храм и рынок связаны с прошлым торгового квартала»; конкретнее и без заявления о неизменности застройки.",
+            "Инфографика «Утро можно переставить» → «Если планы меняются»; убрана неестественная сочетаемость.",
+            "Ссылка на Пинлин заменена на действующий URL; прочитан целевой текст: он действительно описывает Пинлин."
+          ],
+          "recheck": "Text re-read after editorial changes. Source and browser acceptance recorded separately before release.",
+          "visualInspection": {
+            "result": "PASS",
+            "files": [
+              "assets/covers/taiwan-tainan-temple-market-morning.webp",
+              "assets/inline/daily14-tainan-market.webp",
+              "assets/inline/daily14-tainan-temple.webp",
+              "assets/inline/daily14-tainan-bowl.webp",
+              "assets/inline/daily14-tainan-choice-ru.webp",
+              "assets/inline/daily14-tainan-order.webp",
+              "assets/inline/daily14-tainan-lane.webp"
+            ],
+            "widths": [
+              360,
+              720
+            ],
+            "findings": "Every final scene inspected at 360/720 widths: anatomy, objects, built forms, crops and legible diagram labels. Specific-place reconstruction is not claimed. Mombasa texture recompressed to meet per-image budget; revised RU diagram headings rechecked."
+          },
+          "sourceBrowserInspection": {
+            "state": "PASS",
+            "viewportWidths": [
+              360,
+              390,
+              720,
+              1440
+            ],
+            "imageCount": 7,
+            "captionCount": 6,
+            "overflowPx": 0,
+            "brokenImages": 0,
+            "ratioFailures": 0,
+            "scope": "Generated source HTML; not Yotti public acceptance"
+          }
+        },
+        "en": {
+          "model": "gpt-6-astra",
+          "effort": "high",
+          "reviewedAt": "2026-09-14",
+          "weakestDimensions": [
+            "local_specificity",
+            "structure"
+          ],
+          "findings": [
+            "Kept the temple / market counter / shop-hours distinction and the Chinese place names as usable navigation data.",
+            "Reviewed the final Pinglin paragraph against the live target: a separate Taipei excursion, not a Tainan extension. Public URL corrected without changing the existing page.",
+            "No food name, price, ritual instruction or stall schedule inferred from generated pictures."
+          ],
+          "recheck": "Text re-read after editorial changes. Source and browser acceptance recorded separately before release.",
+          "visualInspection": {
+            "result": "PASS",
+            "files": [
+              "assets/covers/taiwan-tainan-temple-market-morning.webp",
+              "assets/inline/daily14-tainan-market.webp",
+              "assets/inline/daily14-tainan-temple.webp",
+              "assets/inline/daily14-tainan-bowl.webp",
+              "assets/inline/daily14-tainan-choice-en.webp",
+              "assets/inline/daily14-tainan-order.webp",
+              "assets/inline/daily14-tainan-lane.webp"
+            ],
+            "widths": [
+              360,
+              720
+            ],
+            "findings": "Every final scene inspected at 360/720 widths: anatomy, objects, built forms, crops and legible diagram labels. Specific-place reconstruction is not claimed. Mombasa texture recompressed to meet per-image budget; revised RU diagram headings rechecked."
+          },
+          "sourceBrowserInspection": {
+            "state": "PASS",
+            "viewportWidths": [
+              360,
+              390,
+              720,
+              1440
+            ],
+            "imageCount": 7,
+            "captionCount": 6,
+            "overflowPx": 0,
+            "brokenImages": 0,
+            "ratioFailures": 0,
+            "scope": "Generated source HTML; not Yotti public acceptance"
+          }
+        }
+      },
+      "riskReasons": [
+        "query_cannibalization_checked",
+        "known_importer_SITE_SIDE_P1"
+      ],
+      "qualityNotes": {
+        "lengthDecision": "Bounded single-neighbourhood or service decision; all named choices, source limitations, fallback and useful links are answered below 900 words without adding a generic FAQ.",
+        "redTeam": "No invented visit, guaranteed shop hours, network coverage, free calls, dietary suitability or documentary image claim. Public URLs checked independently of queue metadata."
+      },
+      "internalContextLinks": [
+        "https://yotti.net/blog/japan/rynok-omicho-v-kanadzave-kak-provesti-utro",
+        "https://yotti.net/blog/thailand/nochnye-rynki-bangkoka-marshrut-za-vkusami-i-atmosferoy-goroda",
+        "https://yotti.net/blog/taiwan/chaynyy-den-za-predelami-taybeya-kak-vybrat-odin-gornyy-gorod",
+        "https://yotti.net/en/blog/japan/a-morning-at-omicho-market-in-kanazawa",
+        "https://yotti.net/en/blog/thailand/bangkok-night-markets-a-street-food-evening-with-room-to-explore",
+        "https://yotti.net/en/blog/taiwan/a-tea-day-beyond-taipei-choosing-one-mountain-town-instead-of-rushing-through-th"
+      ],
+      "schedule": {
+        "ru": "2026-09-14T17:30:00Z",
+        "en": "2026-09-14T17:30:00Z"
+      },
+      "publicationAccounting": {
+        "scheduledDay": "2026-09-14",
+        "plannedSlotMsk": "20:30",
+        "recoveryBatch": null,
+        "lateRelease": false
+      }
+    }
+  ],
+  "plannedPublications": [
     {
-      "planOrder": 5,
+      "planOrder": 1,
       "id": "esim-app-data-control",
       "scope": "global",
       "region": "global",
@@ -13453,7 +14278,7 @@
       "creativeBrief": "airport lounge phone app data budget"
     },
     {
-      "planOrder": 6,
+      "planOrder": 2,
       "id": "poland-lublin-courtyards-afternoon",
       "countryCode": "PL",
       "region": "eastern-europe",
@@ -13479,7 +14304,7 @@
       "creativeBrief": "Lublin courtyard gate warm brick light"
     },
     {
-      "planOrder": 7,
+      "planOrder": 3,
       "id": "vietnam-hue-rainy-citadel-day",
       "countryCode": "VN",
       "region": "southeast-asia",
@@ -13505,7 +14330,7 @@
       "creativeBrief": "Hue red gate rain poncho reflection"
     },
     {
-      "planOrder": 8,
+      "planOrder": 4,
       "id": "namibia-swakopmund-fog-coast-morning",
       "countryCode": "NA",
       "region": "southern-africa",
@@ -13531,7 +14356,7 @@
       "creativeBrief": "Swakopmund fog boardwalk thermos"
     },
     {
-      "planOrder": 9,
+      "planOrder": 5,
       "id": "esim-automatic-network-selection",
       "scope": "global",
       "region": "global",
@@ -13557,7 +14382,7 @@
       "creativeBrief": "mountain station phone network list map"
     },
     {
-      "planOrder": 10,
+      "planOrder": 6,
       "id": "greece-thessaloniki-market-morning",
       "countryCode": "GR",
       "region": "southern-europe",
@@ -13583,7 +14408,7 @@
       "creativeBrief": "Thessaloniki olives counter arcade light"
     },
     {
-      "planOrder": 11,
+      "planOrder": 7,
       "id": "brazil-curitiba-rainy-museum-day",
       "countryCode": "BR",
       "region": "south-america",
@@ -13609,7 +14434,7 @@
       "creativeBrief": "Curitiba museum canopy rain bus stop"
     },
     {
-      "planOrder": 12,
+      "planOrder": 8,
       "id": "japan-kurashiki-canal-craft-day",
       "countryCode": "JP",
       "region": "east-asia",
