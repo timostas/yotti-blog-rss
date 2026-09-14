@@ -8342,8 +8342,8 @@
       },
       "editorialModel": {
         "name": "gpt-6-astra",
-        "effort": "high",
-        "role": "independent_editorial_acceptance"
+        "effort": "xhigh",
+        "role": "single_pair_substantive_remediation"
       },
       "generationAttempts": {
         "ru": 1,
@@ -8384,34 +8384,42 @@
           "en": "buy an eSIM for Ecuador for Quito and the Galápagos"
         },
         "neighborIntents": [
-          "ecuador-country-guide",
           "esim-installation-guide",
-          "travel-data-allowance"
+          "travel-data-allowance",
+          "keep-home-number",
+          "galapagos-itinerary"
         ],
-        "uniqueReaderOutcome": "Проверить линию в Кито и перенести на острова автономный набор.",
+        "uniqueReaderOutcome": "Проверить доступность конкретного тарифа на нужных островах, рассчитать пакет и подготовить прибытие через Бальтру или Сан-Кристобаль.",
         "cannibalizationDecision": "Страновой сценарий отделён от общих инструкций установки и расчёта трафика."
       },
-      "readerPromise": "Разделить городскую проверку, перелёт и островной резерв.",
-      "semanticLinkClass": "focused-technical",
+      "readerPromise": "Проверить доступность конкретного тарифа на нужных островах, рассчитать пакет и подготовить прибытие через Бальтру или Сан-Кристобаль.",
+      "semanticLinkClass": "standard",
       "publicUrls": {
         "ru": "https://yotti.net/blog/ecuador/kupit-esim-dlya-ekvadora-svyaz-v-kito-i-na-galapagosah",
         "en": "https://yotti.net/en/blog/ecuador/buy-an-esim-for-ecuador-connectivity-in-quito-and-the-galapagos"
       },
       "internalArticleLinks": {
         "ru": [
+          "https://yotti.net/blog/skolko-gigabayt-nuzhno-dlya-esim-v-poezdke",
           "https://yotti.net/blog/kak-ustanovit-esim-pered-poezdkoy-i-ne-zapustit-paket-ranshe-vremeni",
-          "https://yotti.net/blog/esim-vidit-set-no-internet-ne-rabotaet-gde-iskat-prichinu",
-          "https://yotti.net/blog/skolko-gigabayt-nuzhno-dlya-esim-v-poezdke"
+          "https://yotti.net/blog/kak-sohranit-osnovnoy-nomer-s-turisticheskoy-esim",
+          "https://yotti.net/blog/esim-vidit-set-no-internet-ne-rabotaet-gde-iskat-prichinu"
         ],
         "en": [
+          "https://yotti.net/en/blog/how-much-data-do-you-need-for-a-travel-esim",
           "https://yotti.net/en/blog/how-to-install-an-esim-before-travel-without-starting-it-too-early",
-          "https://yotti.net/en/blog/esim-has-signal-but-no-internet-what-to-check",
-          "https://yotti.net/en/blog/how-much-data-do-you-need-for-a-travel-esim"
+          "https://yotti.net/en/blog/how-to-keep-your-home-number-while-using-a-travel-esim",
+          "https://yotti.net/en/blog/esim-has-signal-but-no-internet-what-to-check"
         ]
       },
       "researchSources": [
-        "https://ecuador.travel/galapagos/",
-        "https://www.yotti.net/esim/ecuador"
+        "https://www.yotti.net/esim/ecuador",
+        "https://www.claro.com.ec/personas/servicios/servicios-moviles/cobertura/",
+        "https://galapagos.gob.ec/informacion-de-interes-para-la-llegada-a-las-islas/",
+        "https://support.apple.com/en-gb/118227",
+        "https://support.google.com/maps/answer/6291838?hl=ru",
+        "https://yotti.net/en/esim/ecuador",
+        "https://support.google.com/maps/answer/6291838?hl=en"
       ],
       "creative": "assets/covers/buy-esim-ecuador-quito-galapagos.webp",
       "creativeConceptKey": "galapagos-ferry-pier-sea-lion-morning",
@@ -8421,34 +8429,34 @@
         "en": "2026-09-13T14:22:00Z"
       },
       "scores": {
-        "utility": 94,
-        "originalValue": 93,
-        "factSupport": 94
+        "utility": 88,
+        "originalValue": 85,
+        "factSupport": 88
       },
       "editorialScorecard": {
         "ru": {
-          "total": 94,
+          "total": 88,
           "dimensions": {
-            "intent": 15,
-            "utility": 15,
-            "specificity": 14,
-            "trust": 14,
+            "intent": 14,
+            "utility": 14,
+            "specificity": 12,
+            "trust": 13,
             "voice": 13,
             "structure": 9,
-            "technical": 9,
+            "technical": 8,
             "commercialRestraint": 5
           }
         },
         "en": {
-          "total": 94,
+          "total": 88,
           "dimensions": {
-            "intent": 15,
-            "utility": 15,
-            "specificity": 14,
-            "trust": 14,
+            "intent": 14,
+            "utility": 14,
+            "specificity": 12,
+            "trust": 13,
             "voice": 13,
             "structure": 9,
-            "technical": 9,
+            "technical": 8,
             "commercialRestraint": 5
           }
         }
@@ -8456,45 +8464,59 @@
       "editorialEvidence": {
         "ru": {
           "model": "gpt-6-astra",
-          "effort": "high",
-          "reviewedAt": "2026-09-13",
+          "effort": "xhigh",
+          "reviewedAt": "2026-09-14",
           "weakestDimensions": [
-            "voice",
-            "structure"
+            "specificity",
+            "technical"
           ],
           "findings": [
-            "lead: generic product framing -> split into Quito test and island offline task",
-            "diagnostics: multiple simultaneous changes -> explicit one-variable safe order"
+            "Лид: искусственная городская линия с островным резервом -> прямой вопрос о включении островов в тариф.",
+            "Повторы и четыре одинаковые схемы -> отдельные задачи покрытия, расчёта, установки и прибытия.",
+            "Подпись теста обещала четыре проверки, рисунок показывал три -> новая анимация из трёх полных этапов.",
+            "Бальтра и Сан-Кристобаль -> разные пути прибытия подтверждены сайтом нацпарка.",
+            "Генерированные фото не подтверждают географию -> не выдаются за документальные; раскрыто происхождение."
           ],
-          "recheck": "PASS after targeted editorial repair; deterministic gates run before PR",
+          "recheck": "Editorial source review complete; tests and browser results in docs/remediation/ecuador-2026-09-14.md. Public Yotti acceptance PENDING.",
           "visualInspection": {
-            "result": "PASS",
+            "result": "Reviewed; per-file findings in audit",
             "files": [
-              "cover",
-              "2 contextual photos",
-              "4 RU graphics"
+              "assets/covers/buy-esim-ecuador-quito-galapagos.webp",
+              "assets/inline/ecuador-quito-morning.webp",
+              "assets/inline/ecuador-galapagos-pier-preparation.webp",
+              "assets/inline/ecuador-v2-activation-ru.webp",
+              "assets/inline/ecuador-v2-coverage-ru.webp",
+              "assets/inline/ecuador-v2-data-ru.webp",
+              "assets/inline/ecuador-v2-arrivals-ru.webp"
             ]
           }
         },
         "en": {
           "model": "gpt-6-astra",
-          "effort": "high",
-          "reviewedAt": "2026-09-13",
+          "effort": "xhigh",
+          "reviewedAt": "2026-09-14",
           "weakestDimensions": [
-            "voice",
-            "structure"
+            "specificity",
+            "technical"
           ],
           "findings": [
-            "lead: mirrored wording -> independently recast around arrival and crossing jobs",
-            "failure path: deletion risk -> explicit non-destructive sequence"
+            "Abstract product lead -> specific purchase decision for the selected island and plan.",
+            "Repeated offline paragraphs and visual templates -> separate coverage, arithmetic, setup and arrival functions.",
+            "Four-check caption versus three-row graphic -> replaced with a consistent three-stage animation.",
+            "General island arrival -> Baltra/Santa Cruz versus San Cristobal explained with a primary source.",
+            "Generated scenes -> explicitly disclosed illustrations, not documentary location or signal evidence."
           ],
-          "recheck": "PASS after targeted editorial repair; deterministic gates run before PR",
+          "recheck": "Editorial source review complete; tests and browser results in docs/remediation/ecuador-2026-09-14.md. Public Yotti acceptance PENDING.",
           "visualInspection": {
-            "result": "PASS",
+            "result": "Reviewed; per-file findings in audit",
             "files": [
-              "cover",
-              "2 contextual photos",
-              "4 EN graphics"
+              "assets/covers/buy-esim-ecuador-quito-galapagos.webp",
+              "assets/inline/ecuador-quito-morning.webp",
+              "assets/inline/ecuador-galapagos-pier-preparation.webp",
+              "assets/inline/ecuador-v2-activation-en.webp",
+              "assets/inline/ecuador-v2-coverage-en.webp",
+              "assets/inline/ecuador-v2-data-en.webp",
+              "assets/inline/ecuador-v2-arrivals-en.webp"
             ]
           }
         }
@@ -8504,16 +8526,130 @@
           "ru": 5,
           "en": 5
         },
-        "lengthDecision": "Focused country connectivity scenario is complete without repeating the general installation guide.",
-        "redTeam": "No operator coverage guarantee; island availability is deliberately uncertain."
+        "lengthDecision": "Owner-authorized substantive revision: approximately 1,400 words per locale, five sources; distinct reader jobs, not a ranking target.",
+        "redTeam": "No Galapagos coverage guarantee; carrier map is not travel-plan access; no current fares or field-test claim; animation has full static equivalent.",
+        "singlePairCorrection": {
+          "date": "2026-09-14",
+          "ownerApproved": true,
+          "preserve": [
+            "slug",
+            "RSS link",
+            "title",
+            "publishedAt"
+          ],
+          "sourceStatus": "SOURCE_READY",
+          "siteStatus": "AWAITING_OWNER_SYNC",
+          "audit": "docs/remediation/ecuador-2026-09-14.md"
+        }
       },
       "internalContextLinks": [
-        "https://yotti.net/blog/kak-ustanovit-esim-pered-poezdkoy-i-ne-zapustit-paket-ranshe-vremeni",
-        "https://yotti.net/blog/esim-vidit-set-no-internet-ne-rabotaet-gde-iskat-prichinu",
         "https://yotti.net/blog/skolko-gigabayt-nuzhno-dlya-esim-v-poezdke",
+        "https://yotti.net/blog/kak-ustanovit-esim-pered-poezdkoy-i-ne-zapustit-paket-ranshe-vremeni",
+        "https://yotti.net/blog/kak-sohranit-osnovnoy-nomer-s-turisticheskoy-esim",
+        "https://yotti.net/blog/esim-vidit-set-no-internet-ne-rabotaet-gde-iskat-prichinu",
+        "https://yotti.net/en/blog/how-much-data-do-you-need-for-a-travel-esim",
         "https://yotti.net/en/blog/how-to-install-an-esim-before-travel-without-starting-it-too-early",
-        "https://yotti.net/en/blog/esim-has-signal-but-no-internet-what-to-check",
-        "https://yotti.net/en/blog/how-much-data-do-you-need-for-a-travel-esim"
+        "https://yotti.net/en/blog/how-to-keep-your-home-number-while-using-a-travel-esim",
+        "https://yotti.net/en/blog/esim-has-signal-but-no-internet-what-to-check"
+      ],
+      "editorialHistory": [
+        {
+          "date": "2026-09-13",
+          "editorialModel": {
+            "name": "gpt-6-astra",
+            "effort": "high",
+            "role": "independent_editorial_acceptance"
+          },
+          "editorialEvidence": {
+            "ru": {
+              "model": "gpt-6-astra",
+              "effort": "xhigh",
+              "reviewedAt": "2026-09-14",
+              "weakestDimensions": [
+                "specificity",
+                "technical"
+              ],
+              "findings": [
+                "Лид: искусственная городская линия с островным резервом -> прямой вопрос о включении островов в тариф.",
+                "Повторы и четыре одинаковые схемы -> отдельные задачи покрытия, расчёта, установки и прибытия.",
+                "Подпись теста обещала четыре проверки, рисунок показывал три -> новая анимация из трёх полных этапов.",
+                "Бальтра и Сан-Кристобаль -> разные пути прибытия подтверждены сайтом нацпарка.",
+                "Генерированные фото не подтверждают географию -> не выдаются за документальные; раскрыто происхождение."
+              ],
+              "recheck": "Editorial source review complete; tests and browser results in docs/remediation/ecuador-2026-09-14.md. Public Yotti acceptance PENDING.",
+              "visualInspection": {
+                "result": "Reviewed; per-file findings in audit",
+                "files": [
+                  "assets/covers/buy-esim-ecuador-quito-galapagos.webp",
+                  "assets/inline/ecuador-quito-morning.webp",
+                  "assets/inline/ecuador-galapagos-pier-preparation.webp",
+                  "assets/inline/ecuador-v2-activation-ru.webp",
+                  "assets/inline/ecuador-v2-coverage-ru.webp",
+                  "assets/inline/ecuador-v2-data-ru.webp",
+                  "assets/inline/ecuador-v2-arrivals-ru.webp"
+                ]
+              }
+            },
+            "en": {
+              "model": "gpt-6-astra",
+              "effort": "xhigh",
+              "reviewedAt": "2026-09-14",
+              "weakestDimensions": [
+                "specificity",
+                "technical"
+              ],
+              "findings": [
+                "Abstract product lead -> specific purchase decision for the selected island and plan.",
+                "Repeated offline paragraphs and visual templates -> separate coverage, arithmetic, setup and arrival functions.",
+                "Four-check caption versus three-row graphic -> replaced with a consistent three-stage animation.",
+                "General island arrival -> Baltra/Santa Cruz versus San Cristobal explained with a primary source.",
+                "Generated scenes -> explicitly disclosed illustrations, not documentary location or signal evidence."
+              ],
+              "recheck": "Editorial source review complete; tests and browser results in docs/remediation/ecuador-2026-09-14.md. Public Yotti acceptance PENDING.",
+              "visualInspection": {
+                "result": "Reviewed; per-file findings in audit",
+                "files": [
+                  "assets/covers/buy-esim-ecuador-quito-galapagos.webp",
+                  "assets/inline/ecuador-quito-morning.webp",
+                  "assets/inline/ecuador-galapagos-pier-preparation.webp",
+                  "assets/inline/ecuador-v2-activation-en.webp",
+                  "assets/inline/ecuador-v2-coverage-en.webp",
+                  "assets/inline/ecuador-v2-data-en.webp",
+                  "assets/inline/ecuador-v2-arrivals-en.webp"
+                ]
+              }
+            }
+          },
+          "editorialScorecard": {
+            "ru": {
+              "total": 88,
+              "dimensions": {
+                "intent": 14,
+                "utility": 14,
+                "specificity": 12,
+                "trust": 13,
+                "voice": 13,
+                "structure": 9,
+                "technical": 8,
+                "commercialRestraint": 5
+              }
+            },
+            "en": {
+              "total": 88,
+              "dimensions": {
+                "intent": 14,
+                "utility": 14,
+                "specificity": 12,
+                "trust": 13,
+                "voice": 13,
+                "structure": 9,
+                "technical": 8,
+                "commercialRestraint": 5
+              }
+            }
+          },
+          "disposition": "Superseded after owner rejected depth, voice and repetitive graphics. HTTP acceptance was not editorial acceptance."
+        }
       ]
     },
     {
