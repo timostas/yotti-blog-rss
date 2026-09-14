@@ -12,7 +12,11 @@ for (const locale of ['ru', 'en']) {
     const article = parseArticle(source, `${id}-${locale}.md`);
     assert.equal(article.slug, `${id}-${locale}`);
     assert.equal(article.publishedAt.toISOString(), '2026-09-13T14:22:00.000Z');
-    assert.equal(article.editorial.modifiedAt.toISOString(), locale === 'ru' ? '2026-09-14T05:07:28.000Z' : '2026-09-14T04:21:39.000Z');
+    const previousRevision = new Date(locale === 'ru' ? '2026-09-14T05:07:28.000Z' : '2026-09-14T04:21:39.000Z');
+    assert.ok(article.editorial.modifiedAt > previousRevision, 'literary revision has a later modifiedAt, not a new publishedAt');
+    const queue = JSON.parse(await readFile(new URL('content/queue.json', root), 'utf8'));
+    const revision = queue.items.find(item => item.id === id).qualityNotes.literaryRevision;
+    assert.equal(article.editorial.modifiedAt.toISOString(), revision.modifiedAt);
     assert.equal((source.match(/<figure /g) || []).length, 6);
     assert.match(source, /prefers-reduced-motion: reduce/);
     assert.match(source, /galapagos\.gob\.ec/);
